@@ -564,6 +564,34 @@ export default function Home() {
   </div>
 
 </section>
+{/* フッターリンク */}
+<section className="max-w-6xl mx-auto px-6 pb-10">
+
+  <div className="text-center text-sm text-gray-500 space-x-4">
+
+    <a href="/about" className="hover:underline">
+      わくたんについて
+    </a>
+
+    <a href="/privacy" className="hover:underline">
+      プライバシーポリシー
+    </a>
+
+    <a href="/terms" className="hover:underline">
+      利用規約
+    </a>
+
+    <a href="/contact" className="hover:underline">
+      お問い合わせ
+    </a>
+
+  </div>
+
+  <p className="text-center text-xs text-gray-400 mt-4">
+    © わくたん
+  </p>
+
+</section>
     </main>
   );
 }
