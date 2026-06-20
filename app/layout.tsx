@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,46 +54,24 @@ export default function RootLayout({
           {children}
         </main>
 
-        {/* フッター（AdSense強化版） */}
+        {/* フッター */}
         <footer className="bg-white border-t mt-20">
           <div className="max-w-6xl mx-auto px-6 py-10">
 
             <div className="grid md:grid-cols-2 gap-8">
 
               <div>
-                <h3 className="text-xl font-bold mb-2">
-                  🌈 わくたん
-                </h3>
-
-                <p className="text-gray-600">
-                  わくわくたんけんたい
-                </p>
-
-                <p className="text-gray-600">
-                  4〜6歳向け無料知育ドリル
-                </p>
+                <h3 className="text-xl font-bold mb-2">🌈 わくたん</h3>
+                <p className="text-gray-600">わくわくたんけんたい</p>
+                <p className="text-gray-600">4〜6歳向け無料知育ドリル</p>
               </div>
 
               <div className="flex flex-col gap-2 text-sm">
-                <Link href="/about" className="hover:underline">
-                  わくたんについて
-                </Link>
-
-                <Link href="/articles" className="hover:underline">
-                  記事一覧
-                </Link>
-
-                <Link href="/privacy-policy" className="hover:underline">
-                  プライバシーポリシー
-                </Link>
-
-                <Link href="/terms" className="hover:underline">
-                  利用規約
-                </Link>
-
-                <Link href="/contact" className="hover:underline">
-                  お問い合わせ
-                </Link>
+                <Link href="/about">わくたんについて</Link>
+                <Link href="/articles">記事一覧</Link>
+                <Link href="/privacy-policy">プライバシーポリシー</Link>
+                <Link href="/terms">利用規約</Link>
+                <Link href="/contact">お問い合わせ</Link>
               </div>
 
             </div>
@@ -106,13 +83,6 @@ export default function RootLayout({
           </div>
         </footer>
 
-
-
-      <Script
-  strategy="afterInteractive"
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-  data-ad-client="ca-pub-4630812027939211"
-/>
       </body>
     </html>
   );
