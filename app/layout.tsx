@@ -83,7 +83,7 @@ export default function RootLayout({
                   記事一覧
                 </Link>
 
-                <Link href="/privacy" className="hover:underline">
+                <Link href="/privacy-policy" className="hover:underline">
                   プライバシーポリシー
                 </Link>
 
