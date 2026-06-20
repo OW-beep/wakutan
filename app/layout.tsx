@@ -24,50 +24,29 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="ja"
-      className={`${geistSans.variable} ${geistMono.variable}`}
-    >
+    <html lang="ja" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="bg-yellow-50 text-gray-800 min-h-screen flex flex-col">
 
         {/* ヘッダー */}
         <header className="bg-white border-b shadow-sm">
-
           <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-            <Link
-              href="/"
-              className="text-2xl font-extrabold text-orange-600"
-            >
+            <Link href="/" className="text-2xl font-extrabold text-orange-600">
               🌈 わくたん
             </Link>
 
             <nav className="flex gap-4 text-sm font-semibold">
-
-              <Link href="/4">
-                4さい
-              </Link>
-
-              <Link href="/5">
-                5さい
-              </Link>
-
-              <Link href="/6">
-                6さい
-              </Link>
-
-              <Link href="/articles">
-                記事一覧
-              </Link>
-
+              <Link href="/4">4さい</Link>
+              <Link href="/5">5さい</Link>
+              <Link href="/6">6さい</Link>
+              <Link href="/articles">記事一覧</Link>
             </nav>
 
           </div>
-
         </header>
 
         {/* メイン */}
@@ -75,15 +54,13 @@ export default function RootLayout({
           {children}
         </main>
 
-        {/* フッター */}
+        {/* フッター（AdSense強化版） */}
         <footer className="bg-white border-t mt-20">
-
           <div className="max-w-6xl mx-auto px-6 py-10">
 
             <div className="grid md:grid-cols-2 gap-8">
 
               <div>
-
                 <h3 className="text-xl font-bold mb-2">
                   🌈 わくたん
                 </h3>
@@ -95,27 +72,28 @@ export default function RootLayout({
                 <p className="text-gray-600">
                   4〜6歳向け無料知育ドリル
                 </p>
-
               </div>
 
-              <div className="flex flex-col gap-2">
-
-                <Link href="/about">
+              <div className="flex flex-col gap-2 text-sm">
+                <Link href="/about" className="hover:underline">
                   わくたんについて
                 </Link>
 
-                <Link href="/articles">
+                <Link href="/articles" className="hover:underline">
                   記事一覧
                 </Link>
 
-                <Link href="/privacy-policy">
+                <Link href="/privacy" className="hover:underline">
                   プライバシーポリシー
                 </Link>
 
-                <Link href="/contact">
-                  お問い合わせ
+                <Link href="/terms" className="hover:underline">
+                  利用規約
                 </Link>
 
+                <Link href="/contact" className="hover:underline">
+                  お問い合わせ
+                </Link>
               </div>
 
             </div>
@@ -125,7 +103,6 @@ export default function RootLayout({
             </div>
 
           </div>
-
         </footer>
 
       </body>
