@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <Script
+  strategy="afterInteractive"
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  data-ad-client="ca-pub-4630812027939211"
+/>
       <body className="bg-yellow-50 text-gray-800 min-h-screen flex flex-col">
 
         {/* ヘッダー */}
