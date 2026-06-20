@@ -30,14 +30,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <Script
-  strategy="afterInteractive"
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-  data-ad-client="ca-pub-4630812027939211"
-/>
       <body className="bg-yellow-50 text-gray-800 min-h-screen flex flex-col">
 
-        {/* ヘッダー */}
+  <Script
+    strategy="afterInteractive"
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4630812027939211"
+    crossOrigin="anonymous"
+  />
+
+  {/* ヘッダー */}
         <header className="bg-white border-b shadow-sm">
           <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
