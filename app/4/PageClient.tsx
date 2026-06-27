@@ -1,18 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import Link from "next/link";
 import { generate4Questions } from "../data/generate4";
 
 export default function PageClient() {
   const [showAnswer, setShowAnswer] = useState(false);
 
-  const data = generate4Questions();
+  const data = useMemo(() => generate4Questions(), []);
 
-  const seed =
-    Math.floor(
+  const seed = useMemo(() => {
+    return Math.floor(
       Date.now() /
       (1000 * 60 * 60 * 24)
     );
+  }, []);
 
   const questions = [
 
@@ -75,9 +77,28 @@ export default function PageClient() {
 
       <div className="max-w-5xl mx-auto px-6 py-10">
 
-        {/* ヘッダー */}
 
-        <div className="bg-gradient-to-r from-yellow-200 to-orange-200 rounded-3xl p-8 shadow-lg mb-8">
+  {/* パンくず */}
+  <nav className="text-sm text-gray-500 mb-6">
+
+    <Link
+      href="/"
+      className="hover:underline"
+    >
+      ホーム
+    </Link>
+
+    {" > "}
+
+    <span>
+      4さいドリル
+    </span>
+
+  </nav>
+
+
+  {/* ヘッダー */}
+  <div className="bg-gradient-to-r from-yellow-200 to-orange-200 rounded-3xl p-8 shadow-lg mb-8">
 
           <div className="text-6xl mb-4">
             🧸

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { generate5Questions } from "../data/generate5";
 import { getDailyQuestions } from "../data/getDailyQuestions";
 
@@ -35,7 +36,27 @@ export default function PageClient() {
 
       <div className="max-w-5xl mx-auto px-6 py-10">
 
-        <div className="bg-gradient-to-r from-sky-200 to-blue-200 rounded-3xl p-8 shadow-lg mb-8">
+
+  {/* パンくず */}
+  <nav className="text-sm text-gray-500 mb-6">
+
+    <Link
+      href="/"
+      className="hover:underline"
+    >
+      ホーム
+    </Link>
+
+    {" > "}
+
+    <span>
+      5さいドリル
+    </span>
+
+  </nav>
+
+
+  <div className="bg-gradient-to-r from-sky-200 to-blue-200 rounded-3xl p-8 shadow-lg mb-8">
           <div className="text-6xl mb-4">🚀</div>
 
           <h1 className="text-4xl font-extrabold text-blue-700 mb-3">
