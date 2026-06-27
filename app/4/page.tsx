@@ -17,15 +17,6 @@ export default function Page() {
 
       <div className="max-w-5xl mx-auto px-6 pt-8">
 
-        <Breadcrumb
-          items={[
-            {
-              name: "4歳ドリル",
-              href: "/4",
-            },
-          ]}
-        />
-
       </div>
 
       <PageClient />
