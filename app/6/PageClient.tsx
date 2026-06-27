@@ -32,6 +32,18 @@ export default function PageClient() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-purple-50 to-indigo-50">
 
+      <style jsx global>{`
+        @media print {
+          button {
+            display: none;
+          }
+
+          .print-hide {
+            display: none;
+          }
+        }
+      `}</style>
+
       <div className="max-w-5xl mx-auto px-6 py-10">
 
 
