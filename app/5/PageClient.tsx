@@ -1,20 +1,10 @@
 "use client";
 
-import type { Metadata } from "next";
 import { useMemo, useState } from "react";
 import { generate5Questions } from "../data/generate5";
 import { getDailyQuestions } from "../data/getDailyQuestions";
 
-export const metadata: Metadata = {
-  title: "5歳向け無料知育ドリル",
-  description:
-    "5歳向け無料知育ドリル。算数・論理・ひらがな・仲間分けなど毎日10問。印刷OK。",
-  alternates: {
-    canonical: "/5",
-  },
-};
-
-export default function FivePage() {
+export default function PageClient() {
 
   const [showAnswer, setShowAnswer] = useState(false);
 

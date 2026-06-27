@@ -1,20 +1,10 @@
 "use client";
 
-import type { Metadata } from "next";
 import { useMemo, useState } from "react";
 import { generate6Questions } from "../data/generate6";
 import { getDailyQuestions } from "../data/getDailyQuestions";
 
-export const metadata: Metadata = {
-  title: "6歳向け無料知育ドリル",
-  description:
-    "6歳向け無料知育ドリル。小学校入学準備におすすめ。毎日10問・無料・印刷OK。",
-  alternates: {
-    canonical: "/6",
-  },
-};
-
-export default function Page() {
+export default function PageClient() {
 
   const [showAnswer, setShowAnswer] = useState(false);
 

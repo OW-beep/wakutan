@@ -15,7 +15,6 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // ★追加
   metadataBase: new URL("https://wakutan.vercel.app"),
 
   title: {
@@ -26,12 +25,10 @@ export const metadata: Metadata = {
   description:
     "4歳〜6歳向け無料知育ドリル。毎日10問・無料・印刷OK。",
 
-  // ★追加
   alternates: {
     canonical: "/",
   },
 
-  // ★追加
   openGraph: {
     title: "わくたん",
     description: "4歳〜6歳向け無料知育ドリル",
@@ -41,10 +38,13 @@ export const metadata: Metadata = {
     type: "website",
   },
 
-  // ★追加
   robots: {
     index: true,
     follow: true,
+  },
+
+  verification: {
+    google: "KYZp6leIoJkmXQipodIUtUhXTopgEfgqFiQ7eJZuRZA",
   },
 };
 
