@@ -60,10 +60,39 @@ export default function RootLayout({
     >
       <body className="bg-yellow-50 text-gray-800 min-h-screen flex flex-col">
 
+        {/* AdSense */}
         <Script
           strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4630812027939211"
           crossOrigin="anonymous"
+        />
+
+        {/* Organization 構造化データ */}
+        <Script
+          id="organization-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "わくたん",
+              url: "https://wakutan.vercel.app",
+            }),
+          }}
+        />
+
+        {/* WebSite 構造化データ */}
+        <Script
+          id="website-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "わくたん",
+              url: "https://wakutan.vercel.app",
+            }),
+          }}
         />
 
         {/* ヘッダー */}
