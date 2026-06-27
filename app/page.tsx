@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "4歳〜6歳向け無料知育ドリル",
+  description:
+    "4歳〜6歳向け無料知育ドリル。毎日10問・印刷OK。算数・論理・ひらがな・パターン認識を楽しく学べます。",
+
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://wakutan.com/sitemap.xml",
+    sitemap: "https://wakutan.vercel.app/sitemap.xml",
   };
 }

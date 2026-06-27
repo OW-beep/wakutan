@@ -15,12 +15,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // ★追加
+  metadataBase: new URL("https://wakutan.vercel.app"),
+
   title: {
     default: "わくたん",
     template: "%s｜わくたん",
   },
+
   description:
-    "4歳〜6歳向け無料知育ドリル。毎日3問で楽しく学ぼう。",
+    "4歳〜6歳向け無料知育ドリル。毎日10問・無料・印刷OK。",
+
+  // ★追加
+  alternates: {
+    canonical: "/",
+  },
+
+  // ★追加
+  openGraph: {
+    title: "わくたん",
+    description: "4歳〜6歳向け無料知育ドリル",
+    url: "https://wakutan.vercel.app",
+    siteName: "わくたん",
+    locale: "ja_JP",
+    type: "website",
+  },
+
+  // ★追加
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -29,20 +54,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="ja"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
       <body className="bg-yellow-50 text-gray-800 min-h-screen flex flex-col">
 
-  <Script
-    strategy="afterInteractive"
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4630812027939211"
-    crossOrigin="anonymous"
-  />
+        <Script
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4630812027939211"
+          crossOrigin="anonymous"
+        />
 
-  {/* ヘッダー */}
+        {/* ヘッダー */}
         <header className="bg-white border-b shadow-sm">
           <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-            <Link href="/" className="text-2xl font-extrabold text-orange-600">
+            <Link
+              href="/"
+              className="text-2xl font-extrabold text-orange-600"
+            >
               🌈 わくたん
             </Link>
 
@@ -56,7 +87,6 @@ export default function RootLayout({
           </div>
         </header>
 
-        {/* メイン */}
         <main className="flex-1">
           {children}
         </main>
@@ -68,9 +98,17 @@ export default function RootLayout({
             <div className="grid md:grid-cols-2 gap-8">
 
               <div>
-                <h3 className="text-xl font-bold mb-2">🌈 わくたん</h3>
-                <p className="text-gray-600">わくわくたんけんたい</p>
-                <p className="text-gray-600">4〜6歳向け無料知育ドリル</p>
+                <h3 className="text-xl font-bold mb-2">
+                  🌈 わくたん
+                </h3>
+
+                <p className="text-gray-600">
+                  わくわくたんけんたい
+                </p>
+
+                <p className="text-gray-600">
+                  4〜6歳向け無料知育ドリル
+                </p>
               </div>
 
               <div className="flex flex-col gap-2 text-sm">

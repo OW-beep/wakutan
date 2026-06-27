@@ -1,6 +1,13 @@
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "お問い合わせ",
-  description: "わくたんへのお問い合わせ",
+  description:
+    "わくたんへのお問い合わせはこちら。",
+
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function Page() {

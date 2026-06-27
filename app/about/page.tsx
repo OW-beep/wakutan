@@ -1,6 +1,13 @@
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "わくたんについて",
-  description: "わくわくたんけんたい『わくたん』の紹介ページ",
+  description:
+    "4歳〜6歳向け無料知育ドリルサイト『わくたん』の紹介ページです。",
+
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function Page() {

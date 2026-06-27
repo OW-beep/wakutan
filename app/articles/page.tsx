@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "記事一覧",
   description:
-    "わくたんの記事一覧です。家庭学習、知育、入学準備に役立つ情報を紹介しています。",
+    "家庭学習・知育・入学準備に役立つ記事一覧です。",
+
+  alternates: {
+    canonical: "/articles",
+  },
 };
 
 const articles = [
