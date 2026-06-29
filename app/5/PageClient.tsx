@@ -1,18 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import { generate5Questions } from "../data/generate5";
 import { getDailyQuestions } from "../data/getDailyQuestions";
 
 export default function PageClient() {
-
   const [showAnswer, setShowAnswer] = useState(false);
 
-  // ★ここ重要：毎回生成しない
   const data = useMemo(() => generate5Questions(), []);
 
-  // ★seedを固定（1日単位）
   const seed = useMemo(() => {
     return Math.floor(Date.now() / (1000 * 60 * 60 * 24));
   }, []);
@@ -32,44 +28,15 @@ export default function PageClient() {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-sky-50 to-blue-50">
+    <>
+      <div className="max-w-5xl mx-auto px-6 pb-10">
 
-      <style jsx global>{`
-        @media print {
-          button {
-            display: none;
-          }
+        {/* ヘッダー */}
+        <div className="bg-gradient-to-r from-sky-200 to-blue-200 rounded-3xl p-8 shadow-lg mb-8">
 
-          .print-hide {
-            display: none;
-          }
-        }
-      `}</style>
-
-      <div className="max-w-5xl mx-auto px-6 py-10">
-
-
-  {/* パンくず */}
-  <nav className="text-sm text-gray-500 mb-6">
-
-    <Link
-      href="/"
-      className="hover:underline"
-    >
-      ホーム
-    </Link>
-
-    {" > "}
-
-    <span>
-      5さいドリル
-    </span>
-
-  </nav>
-
-
-  <div className="bg-gradient-to-r from-sky-200 to-blue-200 rounded-3xl p-8 shadow-lg mb-8">
-          <div className="text-6xl mb-4">🚀</div>
+          <div className="text-6xl mb-4">
+            🚀
+          </div>
 
           <h1 className="text-4xl font-extrabold text-blue-700 mb-3">
             5さいドリル
@@ -78,12 +45,18 @@ export default function PageClient() {
           <p className="text-lg">
             きょうの10もんにちょうせん！
           </p>
+
         </div>
 
+        {/* 問題 */}
         <div className="grid gap-5">
 
           {questions.map((q, index) => (
-            <div key={index} className="bg-white rounded-3xl shadow p-6">
+
+            <div
+              key={index}
+              className="bg-white rounded-3xl shadow p-6"
+            >
 
               <div className="text-lg font-bold mb-2 text-blue-600">
                 {q.genre}
@@ -94,24 +67,34 @@ export default function PageClient() {
               </div>
 
               {showAnswer && (
+
                 <div className="mt-4 text-green-700 font-bold text-lg">
                   こたえ：{q.answer}
                 </div>
+
               )}
 
             </div>
+
           ))}
 
         </div>
 
-        <button
-          onClick={() => setShowAnswer(!showAnswer)}
-          className="mt-8 w-full bg-blue-500 text-white p-4 rounded-2xl font-bold text-lg"
-        >
-          {showAnswer ? "こたえをかくす" : "こたえを見る"}
-        </button>
+        {/* ボタン */}
+        <div className="mt-8">
+
+          <button
+            onClick={() => setShowAnswer(!showAnswer)}
+            className="w-full bg-blue-500 text-white p-4 rounded-2xl font-bold text-lg"
+          >
+            {showAnswer
+              ? "こたえをかくす"
+              : "こたえを見る"}
+          </button>
+
+        </div>
 
       </div>
-    </main>
+    </>
   );
 }

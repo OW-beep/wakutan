@@ -14,13 +14,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange-50">
-
       <div className="max-w-5xl mx-auto px-6 pt-8">
-
+        <Breadcrumb
+          items={[
+            {
+              name: "4歳ドリル",
+              href: "/4",
+            },
+          ]}
+        />
       </div>
 
       <PageClient />
-
     </main>
   );
 }
