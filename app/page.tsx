@@ -62,14 +62,14 @@ export default function Home() {
               </h3>
 
               <p className="mt-2 text-gray-600">
-  はじめての知育ドリル
-</p>
+                はじめての知育ドリル
+              </p>
 
-<div className="mt-4 text-xs text-gray-500 space-y-1">
-  <p>✅ 500問以上収録</p>
-  <p>📅 毎日更新</p>
-  <p>🖨️ 無料で印刷OK</p>
-</div>
+              <div className="mt-4 text-xs text-gray-500 space-y-1">
+                <p>✅ 500問以上収録</p>
+                <p>📅 毎日更新</p>
+                <p>🖨️ 無料で印刷OK</p>
+              </div>
 
             </div>
 
@@ -91,11 +91,12 @@ export default function Home() {
                 考える力を伸ばそう
               </p>
 
-<div className="mt-4 text-xs text-gray-500 space-y-1">
-  <p>✅ 500問以上収録</p>
-  <p>📅 毎日更新</p>
-  <p>🖨️ 無料で印刷OK</p>
-</div>
+              <div className="mt-4 text-xs text-gray-500 space-y-1">
+                <p>✅ 500問以上収録</p>
+                <p>📅 毎日更新</p>
+                <p>🖨️ 無料で印刷OK</p>
+              </div>
+
             </div>
 
           </Link>
@@ -116,11 +117,11 @@ export default function Home() {
                 小学校準備ドリル
               </p>
 
-<div className="mt-4 text-xs text-gray-500 space-y-1">
-  <p>✅ 500問以上収録</p>
-  <p>📅 毎日更新</p>
-  <p>🖨️ 無料で印刷OK</p>
-</div>
+              <div className="mt-4 text-xs text-gray-500 space-y-1">
+                <p>✅ 500問以上収録</p>
+                <p>📅 毎日更新</p>
+                <p>🖨️ 無料で印刷OK</p>
+              </div>
 
             </div>
 
@@ -128,7 +129,7 @@ export default function Home() {
 
         </div>
 
-      </section>
+      </section>      
 
       {/* おすすめ記事 */}
       <section className="max-w-6xl mx-auto px-6 mb-14">
@@ -137,445 +138,503 @@ export default function Home() {
           🔥 おすすめ記事
         </h2>
 
-<div className="grid gap-4">
+        <div className="grid gap-4">
 
-  <Link
-    href="/blog/how-4year-learn"
-    className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
-  >
-    🧸 4歳の学び方
-  </Link>
+          <Link
+            href="/blog/how-4year-learn"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            🧸 4歳の学び方
+          </Link>
 
-  <Link
-    href="/blog/how-5year-learn"
-    className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
-  >
-    🚀 5歳の学び方
-  </Link>
+          <Link
+            href="/blog/how-5year-learn"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            🚀 5歳の学び方
+          </Link>
 
-  <Link
-    href="/blog/school-preparation"
-    className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
-  >
-    🎒 小学校入学前に身につけたい力
-  </Link>
+          <Link
+            href="/blog/how-6year-learn"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            🎓 6歳の学び方
+          </Link>
 
-  <Link
-    href="/blog/print-learning"
-    className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
-  >
-    📚 プリント学習のメリット
-  </Link>
+          <Link
+            href="/blog/school-preparation"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            🎒 小学校入学前に身につけたい力
+          </Link>
 
-  <Link
-    href="/blog/why-drill"
-    className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
-  >
-    🧠 なぜドリル学習が効果的？
-  </Link>
+          <Link
+            href="/blog/print-learning"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            📚 プリント学習のメリット
+          </Link>
 
-  <Link
-    href="/blog/5min-study"
-    className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
-  >
-    ⏰ 毎日5分学習の効果
-  </Link>
+          <Link
+            href="/blog/why-drill"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            🧠 なぜドリル学習が効果的？
+          </Link>
 
-</div>
+          <Link
+            href="/blog/5min-study"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            ⏰ 毎日5分学習の効果
+          </Link>
+
+        </div>
 
       </section>
 
+      {/* 新着記事 */}
+      <section className="max-w-6xl mx-auto px-6 mb-14">
 
-{/* 新着記事 */}
-<section className="max-w-6xl mx-auto px-6 mb-14">
+        <h2 className="text-3xl font-bold mb-6">
+          🆕 新着記事
+        </h2>
 
-  <h2 className="text-3xl font-bold mb-6">
-    🆕 新着記事
-  </h2>
+        <div className="grid md:grid-cols-2 gap-4">
 
-  <div className="grid md:grid-cols-2 gap-4">
+          <Link
+            href="/blog/how-6year-learn"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-sm text-orange-600 font-bold mb-2">
+              NEW
+            </div>
 
-    <Link
-      href="/blog/how-6year-learn"
-      className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
-    >
-      <div className="text-sm text-orange-600 font-bold mb-2">
-        NEW
-      </div>
+            <h3 className="text-xl font-bold mb-2">
+              🎓 6歳の学び方
+            </h3>
 
-      <h3 className="text-xl font-bold mb-2">
-        🎓 6歳の学び方
-      </h3>
+            <p className="text-gray-600 text-sm">
+              小学校入学前に育てたい力を解説
+            </p>
 
-      <p className="text-gray-600 text-sm">
-        小学校入学前に育てたい力を解説
-      </p>
+          </Link>
 
-    </Link>
+          <Link
+            href="/blog/school-preparation"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-sm text-orange-600 font-bold mb-2">
+              NEW
+            </div>
 
-    <Link
-      href="/blog/school-preparation"
-      className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
-    >
-      <div className="text-sm text-orange-600 font-bold mb-2">
-        NEW
-      </div>
+            <h3 className="text-xl font-bold mb-2">
+              🎒 小学校入学前に身につけたい力
+            </h3>
 
-      <h3 className="text-xl font-bold mb-2">
-        🎒 小学校入学前に身につけたい力
-      </h3>
+            <p className="text-gray-600 text-sm">
+              入学準備で本当に大切なこと
+            </p>
 
-      <p className="text-gray-600 text-sm">
-        入学準備で本当に大切なこと
-      </p>
+          </Link>
 
-    </Link>
+          <Link
+            href="/blog/how-5year-learn"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <h3 className="text-xl font-bold mb-2">
+              🚀 5歳の学び方
+            </h3>
 
-    <Link
-      href="/blog/how-5year-learn"
-      className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
-    >
-      <h3 className="text-xl font-bold mb-2">
-        🚀 5歳の学び方
-      </h3>
+            <p className="text-gray-600 text-sm">
+              5歳におすすめの家庭学習方法
+            </p>
 
-      <p className="text-gray-600 text-sm">
-        5歳におすすめの家庭学習方法
-      </p>
+          </Link>
 
-    </Link>
+          <Link
+            href="/blog/how-4year-learn"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <h3 className="text-xl font-bold mb-2">
+              🧸 4歳の学び方
+            </h3>
 
-    <Link
-      href="/blog/how-4year-learn"
-      className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
-    >
-      <h3 className="text-xl font-bold mb-2">
-        🧸 4歳の学び方
-      </h3>
+            <p className="text-gray-600 text-sm">
+              4歳の好奇心を伸ばす学び方
+            </p>
 
-      <p className="text-gray-600 text-sm">
-        4歳の好奇心を伸ばす学び方
-      </p>
+          </Link>
 
-    </Link>
+        </div>
 
-  </div>
+        <div className="text-center mt-8">
 
-  <div className="text-center mt-8">
+          <Link
+            href="/articles"
+            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90"
+          >
+            記事一覧を見る →
+          </Link>
 
-  <Link
-    href="/articles"
-    className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90"
-  >
-    記事一覧を見る →
-  </Link>
+        </div>
 
-</div>
+      </section>
 
-</section>
+      {/* 人気のドリルカテゴリ */}
+      <section className="max-w-6xl mx-auto px-6 mb-14">
 
-{/* 4歳向けドリル一覧 */}
-<section className="max-w-6xl mx-auto px-6 mb-14">
+        <h2 className="text-3xl font-bold mb-6">
+          📚 人気のドリルカテゴリ
+        </h2>
 
-  <h2 className="text-3xl font-bold mb-6">
-    📚 人気のドリルカテゴリ
-  </h2>
+        <p className="text-gray-600 mb-6">
+          算数・論理・パターン認識・ひらがな・仲間分けなど、
+          学びたい内容に合わせてドリルを選べます。
+        </p>
 
-  <p className="text-gray-600 mb-6">
-    算数・論理・パターン認識・ひらがな・仲間分けなど、
-    年齢や学びたい内容に合わせてドリルを選べます。
-  </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Link
+            href="/4/sansu"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-2">🔢</div>
 
-    <Link
-      href="/4/sansu"
-      className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
-    >
-      <div className="text-4xl mb-2">
-        🔢
-      </div>
+            <h3 className="font-bold text-xl mb-2">
+              4歳向け算数ドリル
+            </h3>
 
-      <h3 className="font-bold text-xl mb-2">
-        4歳向け算数ドリル
-      </h3>
+            <p className="text-gray-600 text-sm">
+              数を数える・足し算の基礎を学ぼう
+            </p>
 
-      <p className="text-gray-600 text-sm">
-        数を数える・足し算の基礎を学ぼう
-      </p>
-    </Link>
+          </Link>
 
-    <Link
-      href="/4/ronri"
-      className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
-    >
-      <div className="text-4xl mb-2">
-        🧠
-      </div>
+          <Link
+            href="/4/ronri"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-2">🧠</div>
 
-      <h3 className="font-bold text-xl mb-2">
-        4歳向け論理問題
-      </h3>
+            <h3 className="font-bold text-xl mb-2">
+              4歳向け論理問題
+            </h3>
 
-      <p className="text-gray-600 text-sm">
-        考える力を楽しく育てよう
-      </p>
-    </Link>
+            <p className="text-gray-600 text-sm">
+              考える力を楽しく育てよう
+            </p>
 
-    <Link
-      href="/4/pattern"
-      className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
-    >
-      <div className="text-4xl mb-2">
-        🔷
-      </div>
+          </Link>
 
-      <h3 className="font-bold text-xl mb-2">
-        4歳向けパターン問題
-      </h3>
+          <Link
+            href="/4/pattern"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-2">🔷</div>
 
-      <p className="text-gray-600 text-sm">
-        規則性を見つける力を育てよう
-      </p>
-    </Link>
+            <h3 className="font-bold text-xl mb-2">
+              4歳向けパターン問題
+            </h3>
 
-    <Link
-      href="/4/hiragana"
-      className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
-    >
-      <div className="text-4xl mb-2">
-        🔤
-      </div>
+            <p className="text-gray-600 text-sm">
+              規則性を見つける力を育てよう
+            </p>
 
-      <h3 className="font-bold text-xl mb-2">
-        4歳向けひらがな
-      </h3>
+          </Link>
 
-      <p className="text-gray-600 text-sm">
-        文字への興味を育てよう
-      </p>
-    </Link>
+          <Link
+            href="/4/hiragana"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-2">🔤</div>
 
-    <Link
-      href="/4/nakamawake"
-      className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
-    >
-      <div className="text-4xl mb-2">
-        📦
-      </div>
+            <h3 className="font-bold text-xl mb-2">
+              4歳向けひらがな
+            </h3>
 
-      <h3 className="font-bold text-xl mb-2">
-        4歳向け仲間分け問題
-      </h3>
+            <p className="text-gray-600 text-sm">
+              文字への興味を育てよう
+            </p>
 
-      <p className="text-gray-600 text-sm">
-        分類する力を育てよう
-      </p>
-    </Link>
+          </Link>
 
-  </div>
+          <Link
+            href="/4/nakamawake"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-2">📦</div>
 
-</section>
+            <h3 className="font-bold text-xl mb-2">
+              4歳向け仲間分け問題
+            </h3>
+
+            <p className="text-gray-600 text-sm">
+              分類する力を育てよう
+            </p>
+
+          </Link>
+
+        </div>
+
+      </section>      
 
       {/* 人気記事 */}
-<section className="max-w-6xl mx-auto px-6 mb-14">
+      <section className="max-w-6xl mx-auto px-6 mb-14">
 
- <h2 className="text-3xl font-bold mb-2">
-  ⭐ 人気記事
-</h2>
+        <h2 className="text-3xl font-bold mb-2">
+          ⭐ 人気記事
+        </h2>
 
-<p className="text-gray-600 mb-6">
-  多くの保護者に読まれている記事です
-</p>
+        <p className="text-gray-600 mb-6">
+          多くの保護者に読まれている記事です
+        </p>
 
-  <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
 
-  <Link
-    href="/blog/school-preparation"
-    className="bg-white rounded-2xl shadow p-5"
-  >
-    🎒 小学校入学前に身につけたい力
-  </Link>
+          <Link
+            href="/blog/school-preparation"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
+          >
+            🎒 小学校入学前に身につけたい力
+          </Link>
 
-  <Link
-    href="/blog/how-5year-learn"
-    className="bg-white rounded-2xl shadow p-5"
-  >
-    🚀 5歳の学び方
-  </Link>
+          <Link
+            href="/blog/how-5year-learn"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
+          >
+            🚀 5歳の学び方
+          </Link>
 
-  <Link
-    href="/blog/study-habit"
-    className="bg-white rounded-2xl shadow p-5"
-  >
-    🌱 家庭学習を続けるコツ
-  </Link>
+          <Link
+            href="/blog/study-habit"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
+          >
+            🌱 家庭学習を続けるコツ
+          </Link>
 
-  <Link
-    href="/blog/5min-study"
-    className="bg-white rounded-2xl shadow p-5"
-  >
-    ⏰ 毎日5分学習の効果
-  </Link>
+          <Link
+            href="/blog/5min-study"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
+          >
+            ⏰ 毎日5分学習の効果
+          </Link>
 
-</div>
-
+        </div>
 
       </section>
-{/* わくたんとは？ */}
-<section className="max-w-4xl mx-auto px-6 pb-20">
 
-  <div className="bg-white rounded-3xl shadow p-8">
+      {/* わくたんとは？ */}
+      <section className="max-w-4xl mx-auto px-6 pb-20">
 
-    <h2 className="text-3xl font-bold mb-4">
-      🌈 わくたんとは？
-    </h2>
+        <div className="bg-white rounded-3xl shadow p-8">
 
-    <p className="leading-8">
-      わくたん（わくわくたんけんたい）は、
-      4歳から6歳向けの無料知育ドリルサイトです。
-    </p>
+          <h2 className="text-3xl font-bold mb-4">
+            🌈 わくたんとは？
+          </h2>
 
-    <p className="leading-8 mt-4">
-      算数・論理・パターン認識の問題を通して、
-      子どもたちの「考える力」を育てることを目的としています。
-    </p>
+          <p className="leading-8">
+            わくたん（わくわくたんけんたい）は、
+            4歳から6歳向けの無料知育ドリルサイトです。
+          </p>
 
-    <p className="leading-8 mt-4">
-      毎日3問のドリルに取り組むことで、
-      無理なく学習習慣を身につけることができます。
-    </p>
+          <p className="leading-8 mt-4">
+            算数・論理・パターン認識などを通して、
+            子どもたちの「考える力」を育てます。
+          </p>
 
-    <p className="leading-8 mt-4">
-      印刷にも対応しているため、
-      ご家庭で気軽に学習プリントとして活用できます。
-    </p>
+          <p className="leading-8 mt-4">
+            毎日少しずつ学ぶことで、
+            無理なく学習習慣を身につけられます。
+          </p>
 
-  </div>
+          <p className="leading-8 mt-4">
+            すべて無料で利用でき、
+            ご家庭で印刷して学習プリントとしても活用できます。
+          </p>
 
-</section>
-<section className="max-w-6xl mx-auto px-6 mb-14">
+        </div>
 
-  <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl shadow p-8">
+      </section>
 
-    <h2 className="text-3xl font-bold mb-6">
-      🚀 わくたんで身につく力
-    </h2>
+      {/* 身につく力 */}
+      <section className="max-w-6xl mx-auto px-6 mb-14">
 
-    <div className="grid md:grid-cols-2 gap-6">
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl shadow p-8">
 
-      <div className="bg-white rounded-2xl p-5">
-        <h3 className="font-bold text-xl mb-2">
-          🔢 数の感覚
-        </h3>
+          <h2 className="text-3xl font-bold mb-6">
+            🚀 わくたんで身につく力
+          </h2>
 
-        <p>
-          数を数える・比べる・順番を考える力を育てます。
-        </p>
-      </div>
+          <div className="grid md:grid-cols-2 gap-6">
 
-      <div className="bg-white rounded-2xl p-5">
-        <h3 className="font-bold text-xl mb-2">
-          🧠 論理的思考
-        </h3>
+            <div className="bg-white rounded-2xl p-5">
+              <h3 className="font-bold text-xl mb-2">
+                🔢 数の感覚
+              </h3>
 
-        <p>
-          なかまはずれや仲間分け問題を通して考える力を伸ばします。
-        </p>
-      </div>
+              <p>
+                数を数える・比べる・順番を考える力を育てます。
+              </p>
+            </div>
 
-      <div className="bg-white rounded-2xl p-5">
-        <h3 className="font-bold text-xl mb-2">
-          🔷 パターン認識
-        </h3>
+            <div className="bg-white rounded-2xl p-5">
+              <h3 className="font-bold text-xl mb-2">
+                🧠 論理的思考
+              </h3>
 
-        <p>
-          規則性を見つける力を遊びながら育てます。
-        </p>
-      </div>
+              <p>
+                仲間分けや論理問題を通して考える力を育てます。
+              </p>
+            </div>
 
-      <div className="bg-white rounded-2xl p-5">
-        <h3 className="font-bold text-xl mb-2">
-          ✏️ 学習習慣
-        </h3>
+            <div className="bg-white rounded-2xl p-5">
+              <h3 className="font-bold text-xl mb-2">
+                🔷 パターン認識
+              </h3>
 
-        <p>
-          毎日少しずつ学ぶことで継続する力を育てます。
-        </p>
-      </div>
+              <p>
+                規則性を見つける力を遊びながら伸ばします。
+              </p>
+            </div>
 
-    </div>
+            <div className="bg-white rounded-2xl p-5">
+              <h3 className="font-bold text-xl mb-2">
+                ✏️ 学習習慣
+              </h3>
 
-  </div>
+              <p>
+                毎日少しずつ続けることで学習習慣が身につきます。
+              </p>
+            </div>
 
-</section>
+          </div>
 
-<section className="max-w-4xl mx-auto px-6 pb-20">
+        </div>
 
-  <div className="bg-white rounded-3xl shadow p-8">
+      </section>
 
-    <h2 className="text-3xl font-bold mb-6">
-      ❓ よくある質問
-    </h2>
+      {/* 年齢別ドリル */}
+      <section className="max-w-6xl mx-auto px-6 mb-14">
 
-    <div className="space-y-4">
+        <h2 className="text-3xl font-bold mb-6">
+          🎯 年齢別ドリル
+        </h2>
 
-      <div>
-        <h3 className="bg-gray-50 rounded-xl p-4">
-          Q. わくたんは無料ですか？
-        </h3>
+        <div className="grid md:grid-cols-3 gap-6">
 
-        <p className="text-gray-700">
-          はい。すべて無料でご利用いただけます。
-        </p>
-      </div>
+          <Link
+            href="/4"
+            className="bg-white rounded-2xl shadow p-6 hover:shadow-lg"
+          >
+            <div className="text-5xl mb-3">🧸</div>
+            <h3 className="text-2xl font-bold mb-2">
+              4歳向けドリル
+            </h3>
+            <p className="text-gray-600">
+              はじめての知育におすすめ
+            </p>
+          </Link>
 
-      <div>
-        <h3 className="bg-gray-50 rounded-xl p-4">
-          Q. 印刷できますか？
-        </h3>
+          <Link
+            href="/5"
+            className="bg-white rounded-2xl shadow p-6 hover:shadow-lg"
+          >
+            <div className="text-5xl mb-3">🚀</div>
+            <h3 className="text-2xl font-bold mb-2">
+              5歳向けドリル
+            </h3>
+            <p className="text-gray-600">
+              考える力をぐんぐん伸ばそう
+            </p>
+          </Link>
 
-        <p className="text-gray-700">
-          ご家庭での学習用として印刷して利用できます。
-        </p>
-      </div>
+          <Link
+            href="/6"
+            className="bg-white rounded-2xl shadow p-6 hover:shadow-lg"
+          >
+            <div className="text-5xl mb-3">🎓</div>
+            <h3 className="text-2xl font-bold mb-2">
+              6歳向けドリル
+            </h3>
+            <p className="text-gray-600">
+              小学校入学準備に
+            </p>
+          </Link>
 
-      <div>
-        <h3 className="bg-gray-50 rounded-xl p-4">
-          Q. 対象年齢は何歳ですか？
-        </h3>
+        </div>
 
-        <p className="text-gray-700">
-          主に4歳〜6歳のお子さま向けに作られています。
-        </p>
-      </div>
+      </section>
 
-      <div>
-        <h3 className="bg-gray-50 rounded-xl p-4">
-          Q. 毎日取り組む必要がありますか？
-        </h3>
+      {/* FAQ */}
+      <section className="max-w-4xl mx-auto px-6 pb-20">
 
-        <p className="text-gray-700">
-          毎日でなくても大丈夫です。短時間でも継続することを大切にしています。
-        </p>
-      </div>
+        <div className="bg-white rounded-3xl shadow p-8">
 
-      <div>
-        <h3 className="bg-gray-50 rounded-xl p-4">
-          Q. 小学校入学準備にも使えますか？
-        </h3>
+          <h2 className="text-3xl font-bold mb-6">
+            ❓ よくある質問
+          </h2>
 
-        <p className="text-gray-700">
-          はい。考える力や学習習慣づくりに役立つ内容を掲載しています。
-        </p>
-      </div>
+          <div className="space-y-4">
 
-    </div>
+            <div>
+              <h3 className="bg-gray-50 rounded-xl p-4">
+                Q. わくたんは無料ですか？
+              </h3>
 
-  </div>
+              <p className="text-gray-700 mt-2">
+                はい。すべて無料でご利用いただけます。
+              </p>
+            </div>
 
-</section>
+            <div>
+              <h3 className="bg-gray-50 rounded-xl p-4">
+                Q. 印刷できますか？
+              </h3>
+
+              <p className="text-gray-700 mt-2">
+                ご家庭で印刷して学習プリントとしてご利用いただけます。
+              </p>
+            </div>
+
+            <div>
+              <h3 className="bg-gray-50 rounded-xl p-4">
+                Q. 対象年齢は何歳ですか？
+              </h3>
+
+              <p className="text-gray-700 mt-2">
+                主に4歳・5歳・6歳のお子さま向けです。
+              </p>
+            </div>
+
+            <div>
+              <h3 className="bg-gray-50 rounded-xl p-4">
+                Q. 毎日取り組む必要がありますか？
+              </h3>
+
+              <p className="text-gray-700 mt-2">
+                毎日でなくても大丈夫です。短時間でも継続することを大切にしています。
+              </p>
+            </div>
+
+            <div>
+              <h3 className="bg-gray-50 rounded-xl p-4">
+                Q. 小学校入学準備にも使えますか？
+              </h3>
+
+              <p className="text-gray-700 mt-2">
+                はい。考える力や学習習慣づくりに役立つ内容になっています。
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
 
     </main>
   );
 }
+
+

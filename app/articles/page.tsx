@@ -2,84 +2,180 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "記事一覧",
+  title: "記事一覧 | わくたん",
   description:
-    "家庭学習・知育・入学準備に役立つ記事一覧です。",
+    "4歳〜6歳向け家庭学習・知育・小学校準備に役立つ記事一覧です。",
 
   alternates: {
     canonical: "/articles",
   },
 };
 
-const articles = [
-  
+const ageArticles = [
+  {
+    href: "/blog/how-4year-learn",
+    emoji: "🧸",
+    title: "4歳の学び方",
+    desc: "4歳の好奇心を伸ばす家庭学習",
+  },
+  {
+    href: "/blog/how-5year-learn",
+    emoji: "🚀",
+    title: "5歳の学び方",
+    desc: "5歳におすすめの家庭学習方法",
+  },
   {
     href: "/blog/how-6year-learn",
     emoji: "🎓",
     title: "6歳の学び方",
-    desc: "小学校入学前に育てたい力を解説",
+    desc: "小学校入学前に育てたい力",
   },
-  {
-    href: "/blog/school-preparation",
-    emoji: "🎒",
-    title: "小学校入学前に身につけたい力",
-    desc: "入学準備で本当に大切なことを解説",
-  },
-  {
-    href: "/blog/how-5year-learn",
-    emoji: "🚀",
-    title: "5歳の学び方",
-    desc: "5歳におすすめの家庭学習方法",
-  },
-  {
-    href: "/blog/how-4year-learn",
-    emoji: "🧸",
-    title: "4歳の学び方",
-    desc: "4歳の好奇心を伸ばす学び方",
-  },
-  {
-    href: "/blog/school-preparation",
-    emoji: "🎒",
-    title: "小学校入学前に身につけたい力",
-    desc: "入学準備で本当に大切なことを解説",
-  },
-  {
-    href: "/blog/how-5year-learn",
-    emoji: "🚀",
-    title: "5歳の学び方",
-    desc: "5歳におすすめの家庭学習方法",
-  },
-  {
-    href: "/blog/how-4year-learn",
-    emoji: "🧸",
-    title: "4歳の学び方",
-    desc: "4歳の好奇心を伸ばす学び方",
-  },
+];
+
+const learningArticles = [
   {
     href: "/blog/study-habit",
     emoji: "🌱",
     title: "家庭学習を続けるコツ",
-    desc: "学習習慣を無理なく身につける方法",
+    desc: "毎日続けるための工夫",
   },
   {
     href: "/blog/5min-study",
     emoji: "⏰",
     title: "毎日5分学習の効果",
-    desc: "短時間学習を継続するメリット",
+    desc: "短時間学習を続けるメリット",
   },
   {
     href: "/blog/print-learning",
     emoji: "📚",
     title: "プリント学習のメリット",
-    desc: "紙で学ぶことの良さを紹介",
+    desc: "紙で学ぶことの良さ",
   },
   {
     href: "/blog/why-drill",
     emoji: "🧠",
     title: "なぜドリル学習が効果的？",
-    desc: "幼児期の学習にドリルがおすすめな理由",
+    desc: "幼児期におすすめの理由",
   },
 ];
+
+const japaneseArticles = [
+  {
+    href: "/blog/when-start-hiragana",
+    emoji: "🔤",
+    title: "ひらがなは何歳から？",
+    desc: "始めるタイミングを解説",
+  },
+  {
+    href: "/blog/when-start-numbers",
+    emoji: "🔢",
+    title: "数字は何歳から覚える？",
+    desc: "数字学習の進め方",
+  },
+];
+
+const playArticles = [
+  {
+    href: "/blog/educational-play",
+    emoji: "🧩",
+    title: "幼児におすすめの知育遊び10選",
+    desc: "遊びながら楽しく学ぼう",
+  },
+  {
+    href: "/blog/toys-vs-drills",
+    emoji: "⚖️",
+    title: "知育玩具とドリルどっち？",
+    desc: "それぞれのメリットを比較",
+  },
+  {
+    href: "/blog/maze-benefits",
+    emoji: "🌀",
+    title: "迷路遊びで育つ5つの力",
+    desc: "考える力・集中力アップ",
+  },
+  {
+    href: "/blog/puzzle-benefits",
+    emoji: "🧠",
+    title: "パズル遊びで育つ力",
+    desc: "論理的思考を育てよう",
+  },
+];
+
+const parentArticles = [
+  {
+    href: "/blog/school-preparation",
+    emoji: "🎒",
+    title: "小学校入学前に身につけたい力",
+    desc: "入学準備で本当に大切なこと",
+  },
+  {
+    href: "/blog/improve-concentration",
+    emoji: "🎯",
+    title: "幼児の集中力を伸ばす方法",
+    desc: "家庭でできるトレーニング",
+  },
+  {
+    href: "/blog/child-hates-study",
+    emoji: "😊",
+    title: "子どもが勉強を嫌がるときは？",
+    desc: "無理なく続けるコツ",
+  },
+  {
+    href: "/blog/reward-for-study",
+    emoji: "🏅",
+    title: "幼児にごほうびは必要？",
+    desc: "やる気を育てる褒め方",
+  },
+];
+
+function ArticleSection({
+  title,
+  articles,
+}: {
+  title: string;
+  articles: {
+    href: string;
+    emoji: string;
+    title: string;
+    desc: string;
+  }[];
+}) {
+  return (
+    <>
+      <h2 className="text-3xl font-bold mt-12 mb-6">
+        {title}
+      </h2>
+
+      <div className="grid md:grid-cols-2 gap-6">
+
+        {articles.map((article) => (
+
+          <Link
+            key={article.href}
+            href={article.href}
+            className="bg-white rounded-3xl shadow p-6 hover:shadow-xl transition"
+          >
+
+            <div className="text-5xl mb-3">
+              {article.emoji}
+            </div>
+
+            <h3 className="text-2xl font-bold mb-2">
+              {article.title}
+            </h3>
+
+            <p className="text-gray-600">
+              {article.desc}
+            </p>
+
+          </Link>
+
+        ))}
+
+      </div>
+    </>
+  );
+}
 
 export default function ArticlesPage() {
   return (
@@ -94,38 +190,37 @@ export default function ArticlesPage() {
           </h1>
 
           <p className="text-lg leading-8">
-            家庭学習や知育、入学準備に役立つ記事をまとめています。
-            気になるテーマから読んでみてください。
+            家庭学習・知育・小学校入学準備に役立つ記事を、
+            カテゴリごとにまとめています。
           </p>
 
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <ArticleSection
+          title="🧸 年齢別の学び方"
+          articles={ageArticles}
+        />
 
-          {articles.map((article) => (
-            <Link
-              key={article.href}
-              href={article.href}
-              className="bg-white rounded-3xl shadow p-6 hover:shadow-xl transition"
-            >
-              <div className="text-5xl mb-3">
-                {article.emoji}
-              </div>
+        <ArticleSection
+          title="📚 家庭学習"
+          articles={learningArticles}
+        />
 
-              <h2 className="text-2xl font-bold mb-2">
-                {article.title}
-              </h2>
+        <ArticleSection
+          title="🔤 ひらがな・数字"
+          articles={japaneseArticles}
+        />
 
-              <p className="text-gray-600">
-                {article.desc}
-              </p>
+        <ArticleSection
+          title="🧩 知育・遊び"
+          articles={playArticles}
+        />
 
-            </Link>
-          ))}
-
-        </div>
-
-        <div className="mt-12 bg-white rounded-3xl shadow p-8">
+        <ArticleSection
+          title="👨‍👩‍👧 保護者向け"
+          articles={parentArticles}
+        />
+        <div className="mt-16 bg-white rounded-3xl shadow p-8">
 
           <h2 className="text-3xl font-bold mb-4">
             🌈 わくたんについて
@@ -137,14 +232,54 @@ export default function ArticlesPage() {
           </p>
 
           <p className="leading-8 mt-4">
-            算数・論理・パターン認識などの問題を通して、
-            子どもたちの考える力を育てます。
+            算数・論理・ひらがな・パターン認識など、
+            幼児期に育てたい力を楽しく学べる問題を毎日公開しています。
           </p>
 
           <p className="leading-8 mt-4">
-            毎日少しずつ学ぶことで、
-            小学校につながる学習習慣づくりを応援しています。
+            ドリルだけでなく、家庭学習・知育・小学校入学準備に役立つ記事も掲載し、
+            保護者の皆さまの子育てを応援しています。
           </p>
+
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mt-10">
+
+          <Link
+            href="/category/age"
+            className="bg-orange-100 rounded-3xl p-8 hover:bg-orange-200 transition"
+          >
+            <div className="text-5xl mb-4">
+              🎂
+            </div>
+
+            <h2 className="text-2xl font-bold mb-2">
+              年齢別の記事を見る
+            </h2>
+
+            <p className="text-gray-700">
+              4歳・5歳・6歳それぞれに合った学び方を紹介しています。
+            </p>
+
+          </Link>
+
+          <Link
+            href="/category/parent"
+            className="bg-blue-100 rounded-3xl p-8 hover:bg-blue-200 transition"
+          >
+            <div className="text-5xl mb-4">
+              👨‍👩‍👧
+            </div>
+
+            <h2 className="text-2xl font-bold mb-2">
+              保護者向けの記事を見る
+            </h2>
+
+            <p className="text-gray-700">
+              家庭学習・知育・入学準備など役立つ情報をまとめています。
+            </p>
+
+          </Link>
 
         </div>
 
