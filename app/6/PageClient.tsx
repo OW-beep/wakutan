@@ -29,6 +29,18 @@ export default function PageClient() {
 
   return (
     <>
+      <style jsx global>{`
+        @media print {
+          button {
+            display: none;
+          }
+
+          .print-hide {
+            display: none;
+          }
+        }
+      `}</style>
+
       <div className="max-w-5xl mx-auto px-6 pb-10">
 
         {/* ヘッダー */}
@@ -81,7 +93,7 @@ export default function PageClient() {
         </div>
 
         {/* ボタン */}
-        <div className="mt-8">
+        <div className="mt-8 print-hide">
 
           <button
             onClick={() => setShowAnswer(!showAnswer)}
@@ -91,6 +103,28 @@ export default function PageClient() {
               ? "こたえをかくす"
               : "こたえを見る"}
           </button>
+
+          <button
+            onClick={() => window.print()}
+            className="w-full mt-4 bg-green-500 text-white p-4 rounded-2xl font-bold text-lg"
+          >
+            🖨 印刷する
+          </button>
+
+        </div>
+
+        {/* 保護者向け */}
+        <div className="mt-10 bg-white rounded-3xl shadow p-8">
+
+          <h2 className="text-2xl font-bold mb-4">
+            👨‍👩‍👧 保護者の方へ
+          </h2>
+
+          <p className="leading-8">
+            6歳は小学校入学に向けて、考える力や学習習慣を身につける大切な時期です。
+            数や文字だけでなく、論理的に考える力や集中して取り組む力も少しずつ育てていきましょう。
+            毎日5〜10分程度の学習を続けることで、自信を持って入学を迎える準備につながります。
+          </p>
 
         </div>
 
