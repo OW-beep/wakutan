@@ -60,6 +60,12 @@ const articles = [
     title: "数字は何歳から覚える？",
     desc: "数字遊びの始め方",
   },
+  {
+    href: "/blog/skills-by-age",
+    emoji: "🌱",
+    title: "4歳・5歳・6歳の発達段階別 「今」伸ばしたい力",
+    desc: "年齢に合わせた関わり方のヒント",
+  },
 ];
 
 export default function Page() {

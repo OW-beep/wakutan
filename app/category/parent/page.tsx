@@ -120,6 +120,36 @@ const articles = [
     title: "忙しいママ・パパ向け 1日5分ルーティン",
     desc: "無理なく続けるコツ",
   },
+  {
+    href: "/blog/summer-study-schedule",
+    emoji: "🌻",
+    title: "夏休みの家庭学習スケジュール例",
+    desc: "1週間の無料ドリル活用プラン",
+  },
+  {
+    href: "/blog/rainy-day-play",
+    emoji: "☔",
+    title: "雨の日・室内遊びで育つ10のアイデア",
+    desc: "おうちの中でも学びはたくさん",
+  },
+  {
+    href: "/blog/outing-learning-games",
+    emoji: "🛒",
+    title: "お出かけ先で自然に学べる声かけ＆ゲーム",
+    desc: "スーパーや公園が学びの場に",
+  },
+  {
+    href: "/blog/drill-vs-print",
+    emoji: "📝",
+    title: "市販ドリル vs 無料プリント どっちがいい？",
+    desc: "特徴を知って上手に使い分ける",
+  },
+  {
+    href: "/blog/study-mistakes",
+    emoji: "🙅",
+    title: "幼児の家庭学習でやってはいけないこと5つ",
+    desc: "よくある失敗パターンから学ぼう",
+  },
 ];
 
 export default function Page() {

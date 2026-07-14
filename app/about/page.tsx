@@ -52,6 +52,96 @@ export default function Page() {
 
         </div>
 
+        {/* サイトを作った想い */}
+        <div className="bg-white rounded-3xl shadow p-8 mt-8">
+
+          <h2 className="text-2xl font-bold mb-4">💭 わくたんを作った理由</h2>
+
+          <p className="leading-8 mb-4">
+            市販の幼児向けドリルは、1冊が終わると新しいものを買い足す必要があり、
+            家庭によっては費用や置き場所の負担になることがあります。
+          </p>
+
+          <p className="leading-8 mb-4">
+            また、同じ問題を繰り返すだけでは子どもが飽きてしまい、
+            「今日は何をやろうか」と保護者の方が毎回悩んでしまうという声もよく耳にします。
+          </p>
+
+          <p className="leading-8">
+            わくたんは、こうした負担をできるだけ減らし、
+            「今日はこれをやればいい」と迷わず取り組める無料の学習の場を作りたいという思いから始めました。
+          </p>
+
+        </div>
+
+        {/* 問題づくりの方針 */}
+        <div className="bg-white rounded-3xl shadow p-8 mt-8">
+
+          <h2 className="text-2xl font-bold mb-4">📐 問題づくりで大切にしていること</h2>
+
+          <p className="leading-8 mb-4">
+            わくたんの問題は、以下の考え方をもとに作成しています。
+          </p>
+
+          <ul className="space-y-3">
+            <li className="leading-7">
+              <span className="font-bold">・年齢ごとの発達段階に合わせる：</span>
+              4歳は数の基礎と好奇心、5歳は考える力とルール理解、6歳は小学校入学を意識した内容というように、
+              年齢ごとに難易度と出題の狙いを分けています。
+            </li>
+            <li className="leading-7 mt-3">
+              <span className="font-bold">・1日で終わる分量にする：</span>
+              長時間の学習を求めるのではなく、5〜10分程度で取り組める10問構成を基本にしています。
+            </li>
+            <li className="leading-7 mt-3">
+              <span className="font-bold">・同じ問題文の単純な繰り返しを避ける：</span>
+              同じ形式の問題でも、題材（くだもの・どうぶつ・のりものなど）を複数用意し、
+              できるだけ多くの表現パターンで出題するようにしています。
+            </li>
+            <li className="leading-7 mt-3">
+              <span className="font-bold">・答えだけでなく考え方を大切にする：</span>
+              正解・不正解だけでなく、「なぜそうなるか」を保護者の方と一緒に考えられるような出題を意識しています。
+            </li>
+          </ul>
+
+        </div>
+
+        {/* 記事コンテンツの方針 */}
+        <div className="bg-white rounded-3xl shadow p-8 mt-8">
+
+          <h2 className="text-2xl font-bold mb-4">📝 記事コンテンツについて</h2>
+
+          <p className="leading-8 mb-4">
+            わくたんの記事は、幼児教育に関する一般的な考え方や、
+            家庭学習でよくある悩みをもとに、運営者が独自にまとめたものです。
+          </p>
+
+          <p className="leading-8">
+            特定の研究機関・専門家による監修を受けたものではなく、
+            医学的・専門的な助言に代わるものではありません。
+            お子さんの発達や学習について気になることがある場合は、
+            自治体の窓口や専門機関にもご相談ください。
+          </p>
+
+        </div>
+
+        {/* 更新について */}
+        <div className="bg-white rounded-3xl shadow p-8 mt-8">
+
+          <h2 className="text-2xl font-bold mb-4">🔄 サイトの更新について</h2>
+
+          <p className="leading-8 mb-4">
+            ドリルの問題は日替わりで表示が切り替わる仕組みになっています。
+            記事コンテンツについても、内容の見直しや追加を継続的に行っています。
+          </p>
+
+          <p className="leading-8">
+            誤字脱字や、わかりにくい表現に気づかれた場合は、
+            お問い合わせフォームから遠慮なくご連絡ください。
+          </p>
+
+        </div>
+
         {/* 運営者情報（AdSense重要） */}
         <div className="bg-white rounded-3xl shadow p-8 mt-8">
 

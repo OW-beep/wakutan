@@ -35,6 +35,17 @@ export default function Page() {
 
         </div>
 
+        <div className="bg-white border-2 border-dashed border-purple-200 rounded-2xl p-6 mb-8">
+          <p className="font-bold text-purple-700 mb-2">
+            📋 この記事でわかること
+          </p>
+          <ul className="list-disc ml-6 space-y-1 text-gray-700">
+            <li>6歳の発達段階に合った学び方の考え方</li>
+            <li>小学校入学前に育てておきたい土台の力</li>
+            <li>焦らず学習習慣を身につけるための工夫</li>
+          </ul>
+        </div>
+
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
           <h2 className="text-3xl font-bold mb-6 text-purple-600">
@@ -186,6 +197,13 @@ export default function Page() {
           </p>
 
         </section>
+
+        <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
+          <p>最終更新日：2026年7月</p>
+          <p className="mt-1">
+            本記事はわくたん運営者が、日々の問題作成を通じて感じたことをもとにまとめています。
+          </p>
+        </div>
 
         <div className="bg-purple-100 rounded-3xl p-8 text-center">
 

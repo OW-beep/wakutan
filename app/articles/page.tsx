@@ -48,6 +48,12 @@ const ageArticles = [
     title: "6歳で算数が苦手でも大丈夫！",
     desc: "小学校でつまずかない土台の作り方",
   },
+  {
+    href: "/blog/skills-by-age",
+    emoji: "🌱",
+    title: "4歳・5歳・6歳の発達段階別 「今」伸ばしたい力",
+    desc: "年齢に合わせた関わり方のヒント",
+  },
 ];
 
 const learningArticles = [
@@ -74,6 +80,12 @@ const learningArticles = [
     emoji: "🧠",
     title: "なぜドリル学習が効果的？",
     desc: "幼児期におすすめの理由",
+  },
+  {
+    href: "/blog/drill-vs-print",
+    emoji: "📝",
+    title: "市販ドリル vs 無料プリント どっちがいい？",
+    desc: "特徴を知って上手に使い分ける",
   },
 ];
 
@@ -161,6 +173,33 @@ const parentArticles = [
     emoji: "⏰",
     title: "忙しいママ・パパ向け 1日5分ルーティン",
     desc: "無理なく続けるコツ",
+  },
+  {
+    href: "/blog/study-mistakes",
+    emoji: "🙅",
+    title: "幼児の家庭学習でやってはいけないこと5つ",
+    desc: "よくある失敗パターンから学ぼう",
+  },
+];
+
+const seasonalArticles = [
+  {
+    href: "/blog/summer-study-schedule",
+    emoji: "🌻",
+    title: "夏休みの家庭学習スケジュール例",
+    desc: "1週間の無料ドリル活用プラン",
+  },
+  {
+    href: "/blog/rainy-day-play",
+    emoji: "☔",
+    title: "雨の日・室内遊びで育つ10のアイデア",
+    desc: "おうちの中でも学びはたくさん",
+  },
+  {
+    href: "/blog/outing-learning-games",
+    emoji: "🛒",
+    title: "お出かけ先で自然に学べる声かけ＆ゲーム",
+    desc: "スーパーや公園が学びの場に",
   },
 ];
 
@@ -250,6 +289,11 @@ export default function ArticlesPage() {
         <ArticleSection
           title="🧩 知育・遊び"
           articles={playArticles}
+        />
+
+        <ArticleSection
+          title="🌻 季節・お出かけ"
+          articles={seasonalArticles}
         />
 
         <ArticleSection

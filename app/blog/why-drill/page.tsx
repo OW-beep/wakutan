@@ -28,6 +28,18 @@ export default function Page() {
 
         </div>
 
+        <div className="bg-white border-2 border-dashed border-orange-200 rounded-2xl p-6 mb-8">
+          <p className="font-bold text-orange-700 mb-2">
+            📋 この記事でわかること
+          </p>
+          <ul className="list-disc ml-6 space-y-1 text-gray-700">
+            <li>幼児期のドリル学習が「考える力」につながる理由</li>
+            <li>集中力・学習習慣がどのように育つか</li>
+            <li>間違いを前向きな学びに変えるための関わり方</li>
+            <li>遊びとドリルを無理なく両立させるコツ</li>
+          </ul>
+        </div>
+
         <p className="text-lg leading-8 mb-6">
           「幼児にドリルは必要なの？」
           「遊びだけではだめ？」
@@ -203,6 +215,13 @@ export default function Page() {
             <li>遊び感覚で取り組める</li>
           </ul>
 
+        </div>
+
+        <div className="bg-gray-50 rounded-2xl p-6 mt-8 text-sm text-gray-500">
+          <p>最終更新日：2026年7月</p>
+          <p className="mt-1">
+            本記事はわくたん運営者が、日々の問題作成を通じて感じたことをもとにまとめています。
+          </p>
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

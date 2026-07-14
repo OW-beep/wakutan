@@ -69,6 +69,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/school-checklist",
     "/blog/busy-parent-5min",
 
+    "/blog/summer-study-schedule",
+    "/blog/rainy-day-play",
+    "/blog/outing-learning-games",
+    "/blog/drill-vs-print",
+    "/blog/study-mistakes",
+    "/blog/skills-by-age",
+
     "/blog/4year-hiragana",
     "/blog/4year-number",
     "/blog/4year-study-time",

@@ -31,6 +31,17 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
     </div>
 
+    <div className="bg-white border-2 border-dashed border-orange-200 rounded-2xl p-6 mb-8">
+      <p className="font-bold text-orange-700 mb-2">
+        📋 この記事でわかること
+      </p>
+      <ul className="list-disc ml-6 space-y-1 text-gray-700">
+        <li>4歳の発達段階に合った学び方の考え方</li>
+        <li>遊びと学習を両立させるための関わり方</li>
+        <li>家庭で取り組みやすい工夫のポイント</li>
+      </ul>
+    </div>
+
     <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
       <h2 className="text-3xl font-bold mb-6 text-orange-600">
@@ -214,6 +225,13 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
           </p>
 
         </section>
+
+        <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
+          <p>最終更新日：2026年7月</p>
+          <p className="mt-1">
+            本記事はわくたん運営者が、日々の問題作成を通じて感じたことをもとにまとめています。
+          </p>
+        </div>
 
         <div className="bg-yellow-100 rounded-3xl p-8 text-center">
 

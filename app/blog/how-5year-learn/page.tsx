@@ -30,6 +30,17 @@ export default function Page() {
 
         </div>
 
+        <div className="bg-white border-2 border-dashed border-indigo-200 rounded-2xl p-6 mb-8">
+          <p className="font-bold text-indigo-700 mb-2">
+            📋 この記事でわかること
+          </p>
+          <ul className="list-disc ml-6 space-y-1 text-gray-700">
+            <li>5歳の発達段階に合った学び方の考え方</li>
+            <li>考える力・ルール理解を伸ばす関わり方</li>
+            <li>小学校入学に向けて意識したいポイント</li>
+          </ul>
+        </div>
+
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
           <h2 className="text-3xl font-bold mb-6 text-indigo-600">
@@ -210,6 +221,13 @@ export default function Page() {
           </p>
 
         </section>
+
+        <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
+          <p>最終更新日：2026年7月</p>
+          <p className="mt-1">
+            本記事はわくたん運営者が、日々の問題作成を通じて感じたことをもとにまとめています。
+          </p>
+        </div>
 
         <div className="bg-indigo-100 rounded-3xl p-8 text-center">
 

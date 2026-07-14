@@ -43,7 +43,7 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-green-600 font-bold">
-            500問以上収録・毎日更新・無料で印刷OK
+            毎日10問を自動で更新・無料で印刷OK
           </p>
 
         </div>

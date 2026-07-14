@@ -35,6 +35,17 @@ export default function Page() {
 
         </div>
 
+        <div className="bg-white border-2 border-dashed border-green-200 rounded-2xl p-6 mb-8">
+          <p className="font-bold text-green-700 mb-2">
+            📋 この記事でわかること
+          </p>
+          <ul className="list-disc ml-6 space-y-1 text-gray-700">
+            <li>入学前に本当に大切な力は「先取り学習」だけではないこと</li>
+            <li>話を聞く力・自分で考える力を育てる関わり方</li>
+            <li>生活リズムや持ち物準備で気をつけたいポイント</li>
+          </ul>
+        </div>
+
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
           <h2 className="text-3xl font-bold mb-6 text-green-600">
@@ -280,6 +291,13 @@ export default function Page() {
           </p>
 
         </section>
+
+        <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
+          <p>最終更新日：2026年7月</p>
+          <p className="mt-1">
+            本記事はわくたん運営者が、家庭学習に関する一般的な考え方をもとにまとめています。
+          </p>
+        </div>
 
         <div className="bg-green-100 rounded-3xl p-8 text-center">
 
