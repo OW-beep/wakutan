@@ -19,16 +19,34 @@ const articles = [
     desc: "4歳におすすめの家庭学習と知育の進め方",
   },
   {
+    href: "/blog/concentration-4year",
+    emoji: "🎯",
+    title: "4歳なのに集中できない…",
+    desc: "1日5分から始める集中力の育て方",
+  },
+  {
     href: "/blog/how-5year-learn",
     emoji: "🚀",
     title: "5歳の学び方",
     desc: "考える力を育てる5歳向け学習法",
   },
   {
+    href: "/blog/hiragana-worry-5year",
+    emoji: "🔤",
+    title: "5歳でひらがなが読めない…",
+    desc: "無理強いせず興味を持たせるステップ",
+  },
+  {
     href: "/blog/how-6year-learn",
     emoji: "🎓",
     title: "6歳の学び方",
     desc: "小学校入学前に身につけたい力",
+  },
+  {
+    href: "/blog/sansu-weak-6year",
+    emoji: "🔢",
+    title: "6歳で算数が苦手でも大丈夫！",
+    desc: "小学校でつまずかない土台の作り方",
   },
   {
     href: "/blog/when-start-hiragana",

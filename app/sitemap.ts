@@ -62,6 +62,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/child-hates-study",
     "/blog/reward-for-study",
 
+    "/blog/concentration-4year",
+    "/blog/hiragana-worry-5year",
+    "/blog/sansu-weak-6year",
+    "/blog/kakekoe-collection",
+    "/blog/school-checklist",
+    "/blog/busy-parent-5min",
+
     "/blog/4year-hiragana",
     "/blog/4year-number",
     "/blog/4year-study-time",

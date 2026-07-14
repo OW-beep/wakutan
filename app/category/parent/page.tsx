@@ -84,6 +84,42 @@ const articles = [
     title: "パズル遊びで育つ力",
     desc: "論理的思考を楽しく伸ばそう",
   },
+  {
+    href: "/blog/concentration-4year",
+    emoji: "🎯",
+    title: "4歳なのに集中できない…",
+    desc: "1日5分から始める集中力の育て方",
+  },
+  {
+    href: "/blog/hiragana-worry-5year",
+    emoji: "🔤",
+    title: "5歳でひらがなが読めない…",
+    desc: "無理強いせず興味を持たせるステップ",
+  },
+  {
+    href: "/blog/sansu-weak-6year",
+    emoji: "🔢",
+    title: "6歳で算数が苦手でも大丈夫！",
+    desc: "小学校でつまずかない土台の作り方",
+  },
+  {
+    href: "/blog/kakekoe-collection",
+    emoji: "💬",
+    title: "勉強嫌いにならないための声かけ集",
+    desc: "「頑張れ」だけじゃない伝え方",
+  },
+  {
+    href: "/blog/school-checklist",
+    emoji: "🎒",
+    title: "小学校入学準備チェックリスト",
+    desc: "学用品だけじゃない本当に大切な準備",
+  },
+  {
+    href: "/blog/busy-parent-5min",
+    emoji: "⏰",
+    title: "忙しいママ・パパ向け 1日5分ルーティン",
+    desc: "無理なく続けるコツ",
+  },
 ];
 
 export default function Page() {

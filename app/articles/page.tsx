@@ -19,16 +19,34 @@ const ageArticles = [
     desc: "4歳の好奇心を伸ばす家庭学習",
   },
   {
+    href: "/blog/concentration-4year",
+    emoji: "🎯",
+    title: "4歳なのに集中できない…",
+    desc: "1日5分から始める集中力の育て方",
+  },
+  {
     href: "/blog/how-5year-learn",
     emoji: "🚀",
     title: "5歳の学び方",
     desc: "5歳におすすめの家庭学習方法",
   },
   {
+    href: "/blog/hiragana-worry-5year",
+    emoji: "🔤",
+    title: "5歳でひらがなが読めない…",
+    desc: "親の不安解消法",
+  },
+  {
     href: "/blog/how-6year-learn",
     emoji: "🎓",
     title: "6歳の学び方",
     desc: "小学校入学前に育てたい力",
+  },
+  {
+    href: "/blog/sansu-weak-6year",
+    emoji: "🔢",
+    title: "6歳で算数が苦手でも大丈夫！",
+    desc: "小学校でつまずかない土台の作り方",
   },
 ];
 
@@ -109,6 +127,12 @@ const parentArticles = [
     desc: "入学準備で本当に大切なこと",
   },
   {
+    href: "/blog/school-checklist",
+    emoji: "🎒",
+    title: "小学校入学準備チェックリスト",
+    desc: "学用品だけじゃない本当に大切な準備",
+  },
+  {
     href: "/blog/improve-concentration",
     emoji: "🎯",
     title: "幼児の集中力を伸ばす方法",
@@ -121,10 +145,22 @@ const parentArticles = [
     desc: "無理なく続けるコツ",
   },
   {
+    href: "/blog/kakekoe-collection",
+    emoji: "💬",
+    title: "勉強嫌いにならないための声かけ集",
+    desc: "「頑張れ」だけじゃない伝え方",
+  },
+  {
     href: "/blog/reward-for-study",
     emoji: "🏅",
     title: "幼児にごほうびは必要？",
     desc: "やる気を育てる褒め方",
+  },
+  {
+    href: "/blog/busy-parent-5min",
+    emoji: "⏰",
+    title: "忙しいママ・パパ向け 1日5分ルーティン",
+    desc: "無理なく続けるコツ",
   },
 ];
 

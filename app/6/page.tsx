@@ -102,7 +102,8 @@ export default function Page() {
         ]}
         relatedArticles={[
           { href: "/blog/how-6year-learn", emoji: "🎓", title: "6歳の学び方" },
-          { href: "/blog/school-preparation", emoji: "🎒", title: "小学校入学前に身につけたい力" },
+          { href: "/blog/sansu-weak-6year", emoji: "🔢", title: "6歳で算数が苦手でも大丈夫！" },
+          { href: "/blog/school-checklist", emoji: "🎒", title: "小学校入学準備チェックリスト" },
           { href: "/blog/study-habit", emoji: "🌱", title: "家庭学習を続けるコツ" },
           { href: "/blog/print-learning", emoji: "📚", title: "プリント学習のメリット" },
         ]}

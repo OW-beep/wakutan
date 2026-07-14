@@ -102,6 +102,7 @@ export default function Page() {
         ]}
         relatedArticles={[
           { href: "/blog/how-5year-learn", emoji: "🚀", title: "5歳の学び方" },
+          { href: "/blog/hiragana-worry-5year", emoji: "🔤", title: "5歳でひらがなが読めない…" },
           { href: "/blog/school-preparation", emoji: "🎒", title: "小学校入学前に身につけたい力" },
           { href: "/blog/study-habit", emoji: "🌱", title: "家庭学習を続けるコツ" },
           { href: "/blog/5min-study", emoji: "⏰", title: "毎日5分学習の効果" },

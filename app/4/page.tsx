@@ -99,6 +99,7 @@ export default function Page() {
         ]}
         relatedArticles={[
           { href: "/blog/how-4year-learn", emoji: "🧸", title: "4歳の学び方" },
+          { href: "/blog/concentration-4year", emoji: "🎯", title: "4歳なのに集中できない…" },
           { href: "/blog/when-start-hiragana", emoji: "🔤", title: "ひらがなは何歳から？" },
           { href: "/blog/when-start-numbers", emoji: "🔢", title: "数字は何歳から覚える？" },
           { href: "/blog/why-drill", emoji: "🧠", title: "なぜドリル学習が効果的？" },
