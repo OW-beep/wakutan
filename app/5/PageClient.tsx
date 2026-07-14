@@ -80,8 +80,13 @@ export default function PageClient() {
 
               {showAnswer && (
 
-                <div className="mt-4 text-green-700 font-bold text-lg">
-                  こたえ：{q.answer}
+                <div className="mt-4">
+                  <div className="text-green-700 font-bold text-lg">
+                    こたえ：{q.answer}
+                  </div>
+                  <div className="text-gray-600 text-sm mt-1">
+                    🔍 かいせつ：{q.explanation}
+                  </div>
                 </div>
 
               )}

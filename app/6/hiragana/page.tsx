@@ -1,3 +1,4 @@
+import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate6Questions } from "../../data/generate6";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
@@ -48,28 +49,11 @@ export default function Page() {
 
         </div>
 
-        <div className="space-y-4">
-
-          {questions.map((q, index) => (
-
-            <div
-              key={index}
-              className="bg-white p-5 rounded-2xl shadow"
-            >
-
-              <div className="font-bold text-pink-600 mb-2">
-                問題 {index + 1}
-              </div>
-
-              <div className="text-lg">
-                {q.question}
-              </div>
-
-            </div>
-
-          ))}
-
-        </div>
+        <QuestionList
+          questions={questions}
+          accentText="text-pink-600"
+          accentButton="bg-pink-500"
+        />
 
         <div className="mt-10 bg-white rounded-3xl shadow p-8">
 

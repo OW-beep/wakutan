@@ -1,3 +1,4 @@
+import QuestionList from "../../components/QuestionList";
 import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
@@ -36,28 +37,11 @@ export default function Page() {
 
         </div>
 
-        <div className="space-y-4">
-
-          {questions.map((q, index) => (
-
-            <div
-              key={index}
-              className="bg-white p-5 rounded-2xl shadow"
-            >
-
-              <div className="font-bold text-blue-600 mb-2">
-                問題 {index + 1}
-              </div>
-
-              <div className="text-lg">
-                {q.question}
-              </div>
-
-            </div>
-
-          ))}
-
-        </div>
+        <QuestionList
+          questions={questions}
+          accentText="text-blue-600"
+          accentButton="bg-blue-500"
+        />
 
       </div>
 
