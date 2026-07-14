@@ -16,18 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/4/hiragana",
     "/4/nakamawake",
 
-    "/5/sansu",
-    "/5/ronri",
-    "/5/pattern",
-    "/5/hiragana",
-    "/5/nakamawake",
-
-    "/6/sansu",
-    "/6/ronri",
-    "/6/pattern",
-    "/6/hiragana",
-    "/6/nakamawake",
-
     "/about",
     "/articles",
     "/categories",
@@ -61,19 +49,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/improve-concentration",
     "/blog/child-hates-study",
     "/blog/reward-for-study",
-
-    "/blog/4year-hiragana",
-    "/blog/4year-number",
-    "/blog/4year-study-time",
-    "/blog/dot-to-dot-benefits",
-    "/blog/find-differences-benefits",
-    "/blog/hiragana-fun",
-    "/blog/how-read-clock",
-    "/blog/katakana-start",
-    "/blog/number-play",
-    "/blog/scissors-practice",
-    "/blog/shape-learning",
-    "/blog/unpitsu-practice",
   ];
 
   return pages.map((page) => ({

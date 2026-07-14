@@ -290,82 +290,92 @@ export default function Home() {
 
         <p className="text-gray-600 mb-6">
           算数・論理・パターン認識・ひらがな・仲間分けなど、
-          学びたい内容や年齢に合わせてドリルを選べます。
+          学びたい内容に合わせてドリルを選べます。
         </p>
 
-        {[
-          {
-            age: "4",
-            label: "4歳向け",
-            emoji: "🧸",
-            categories: [
-              { href: "/4/sansu", emoji: "🔢", title: "算数ドリル", desc: "数を数える・足し算の基礎を学ぼう" },
-              { href: "/4/ronri", emoji: "🧠", title: "論理問題", desc: "考える力を楽しく育てよう" },
-              { href: "/4/pattern", emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう" },
-              { href: "/4/hiragana", emoji: "🔤", title: "ひらがな", desc: "文字への興味を育てよう" },
-              { href: "/4/nakamawake", emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう" },
-            ],
-          },
-          {
-            age: "5",
-            label: "5歳向け",
-            emoji: "🚀",
-            categories: [
-              { href: "/5/sansu", emoji: "🔢", title: "算数ドリル", desc: "たし算の基礎・数の感覚を伸ばそう" },
-              { href: "/5/ronri", emoji: "🧠", title: "論理問題", desc: "きまりを見つけて考えよう" },
-              { href: "/5/pattern", emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう" },
-              { href: "/5/hiragana", emoji: "🔤", title: "ひらがな", desc: "言葉の理解を深めよう" },
-              { href: "/5/nakamawake", emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう" },
-            ],
-          },
-          {
-            age: "6",
-            label: "6歳向け",
-            emoji: "🎓",
-            categories: [
-              { href: "/6/sansu", emoji: "🔢", title: "算数ドリル", desc: "たし算・ひきざんの基礎を学ぼう" },
-              { href: "/6/ronri", emoji: "🧠", title: "論理問題", desc: "筋道立てて考える力を育てよう" },
-              { href: "/6/pattern", emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう" },
-              { href: "/6/hiragana", emoji: "🔤", title: "ひらがな", desc: "読み書きの力を育てよう" },
-              { href: "/6/nakamawake", emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう" },
-            ],
-          },
-        ].map((group) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-          <div key={group.age} className="mb-10">
+          <Link
+            href="/4/sansu"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-2">🔢</div>
 
-            <h3 className="text-xl font-bold mb-4">
-              {group.emoji} {group.label}カテゴリ
+            <h3 className="font-bold text-xl mb-2">
+              4歳向け算数ドリル
             </h3>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <p className="text-gray-600 text-sm">
+              数を数える・足し算の基礎を学ぼう
+            </p>
 
-              {group.categories.map((c) => (
+          </Link>
 
-                <Link
-                  key={c.href}
-                  href={c.href}
-                  className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
-                >
-                  <div className="text-4xl mb-2">{c.emoji}</div>
+          <Link
+            href="/4/ronri"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-2">🧠</div>
 
-                  <h4 className="font-bold text-xl mb-2">
-                    {group.label}{c.title}
-                  </h4>
+            <h3 className="font-bold text-xl mb-2">
+              4歳向け論理問題
+            </h3>
 
-                  <p className="text-gray-600 text-sm">
-                    {c.desc}
-                  </p>
+            <p className="text-gray-600 text-sm">
+              考える力を楽しく育てよう
+            </p>
 
-                </Link>
+          </Link>
 
-              ))}
+          <Link
+            href="/4/pattern"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-2">🔷</div>
 
-            </div>
+            <h3 className="font-bold text-xl mb-2">
+              4歳向けパターン問題
+            </h3>
 
-          </div>
+            <p className="text-gray-600 text-sm">
+              規則性を見つける力を育てよう
+            </p>
 
-        ))}
+          </Link>
+
+          <Link
+            href="/4/hiragana"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-2">🔤</div>
+
+            <h3 className="font-bold text-xl mb-2">
+              4歳向けひらがな
+            </h3>
+
+            <p className="text-gray-600 text-sm">
+              文字への興味を育てよう
+            </p>
+
+          </Link>
+
+          <Link
+            href="/4/nakamawake"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+          >
+            <div className="text-4xl mb-2">📦</div>
+
+            <h3 className="font-bold text-xl mb-2">
+              4歳向け仲間分け問題
+            </h3>
+
+            <p className="text-gray-600 text-sm">
+              分類する力を育てよう
+            </p>
+
+          </Link>
+
+        </div>
 
       </section>      
 
