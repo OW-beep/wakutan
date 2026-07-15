@@ -1,117 +1,153 @@
-import type { Metadata } from "next";
-import Breadcrumb from "../../components/Breadcrumb";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "はさみの練習はいつから？4〜6歳向けの始め方",
+export const metadata = {
+  title: "はさみの練習はいつから？4〜6歳向けの始め方｜わくたん",
   description:
-    "4〜6歳向けに、はさみの練習を始めるタイミングや安全な進め方を紹介。遊びながら手先の器用さを育てるコツを解説します。",
-  alternates: {
-    canonical: "/blog/scissors-practice",
-  },
+    "4〜6歳向けに、はさみの練習を始めるタイミングと安全な進め方を紹介。手先の器用さを育てるコツと、安全対策も解説します。",
 };
 
 export default function Page() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-10">
+    <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
 
-      <Breadcrumb
-        items={[
-          { name: "記事一覧", href: "/articles" },
-          { name: "はさみの練習はいつから？" },
-        ]}
-      />
+      <article className="max-w-4xl mx-auto">
 
-      <article className="bg-white rounded-3xl shadow p-8">
+        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-8 rounded-3xl shadow-md mb-8">
 
-        <h1 className="text-4xl font-bold mb-6">
-          はさみの練習はいつから？4〜6歳向けの始め方
-        </h1>
+          <div className="text-5xl mb-3">✂️</div>
 
-        <p className="leading-8 mb-6">
-          はさみを使うことは、手先の器用さや集中力を育てる大切な遊びです。
-          小学校での工作にもつながるため、幼児期から少しずつ経験しておくと安心です。
-        </p>
+          <h1 className="text-4xl font-extrabold text-orange-700 mb-3">
+            はさみの練習はいつから？4〜6歳向けの始め方
+          </h1>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          最初は一回切りから
-        </h2>
-
-        <p className="leading-8">
-          細長い紙を用意し、
-          「1回だけチョキン」と切る練習がおすすめです。
-          成功体験を積むことで、自信につながります。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          慣れたら直線を切ってみよう
-        </h2>
-
-        <p className="leading-8">
-          線に沿って切る練習をすると、
-          目と手を協調させる力が育ちます。
-          焦らずゆっくり進めましょう。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          曲線や丸にも挑戦
-        </h2>
-
-        <p className="leading-8">
-          直線が上手になったら、
-          曲線や円を切る遊びにも挑戦してみましょう。
-          少し難しい課題が集中力アップにつながります。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          安全第一で練習する
-        </h2>
-
-        <p className="leading-8">
-          幼児用の先が丸いはさみを使い、
-          必ず保護者が見守りながら練習しましょう。
-          正しい持ち方も少しずつ教えることが大切です。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          毎日少しずつ続けよう
-        </h2>
-
-        <p className="leading-8">
-          長時間練習する必要はありません。
-          5〜10分程度を目安に続けることで、
-          自然と手先が器用になっていきます。
-        </p>
-
-        <div className="bg-green-100 rounded-xl p-6 mt-10">
-
-          <h2 className="text-xl font-bold mb-4">
-            わくたんの無料ドリル
-          </h2>
-
-          <p className="mb-4">
-            手先を使う問題や考える問題を毎日10問ずつ楽しめます。
+          <p className="text-lg text-gray-700">
+            安全に、少しずつステップアップ
           </p>
 
-          <ul className="space-y-2">
-            <li>
-              <Link href="/4" className="text-blue-600 hover:underline">
-                4歳向け無料ドリル
-              </Link>
-            </li>
+        </div>
+        <p className="text-lg leading-8 mb-6">
+          はさみを使えるようになると、工作の幅がぐっと広がります。「いつから練習を始めればいいの？」と迷う保護者の方も多いのではないでしょうか。
+        </p>
 
-            <li>
-              <Link href="/5" className="text-blue-600 hover:underline">
-                5歳向け無料ドリル
-              </Link>
-            </li>
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          始める目安は3〜4歳ごろから
+        </h2>
 
-            <li>
-              <Link href="/6" className="text-blue-600 hover:underline">
-                6歳向け無料ドリル
-              </Link>
-            </li>
+        <p className="leading-8 mb-4">
+          手先の発達には個人差がありますが、多くの場合3〜4歳ごろから、大人と一緒に少しずつ練習を始められます。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            📊 発達の目安として知っておきたいこと
+          </p>
+          <p>
+            発達に関する資料の中には、はさみや箸の扱いが3〜4歳ごろの一つの目安として挙げられているものもあります。
+            ただしこれはあくまで目安であり、この時期にできないからといって心配しすぎる必要はありません。
+            手先の発達には個人差が大きいことが、多くの発達研究で共通して指摘されています。気になる場合は、自治体の乳幼児健診などで相談するのも一つの方法です。
+          </p>
+        </div>
+
+        <p className="leading-8 mb-4">
+          最初から上手に切れる必要はなく、「持ち方に慣れる」ことから始めましょう。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          安全に始めるための準備
+        </h2>
+
+        <p className="leading-8 mb-4">
+          刃先が丸くなっている子ども用はさみを用意し、必ず大人が近くで見守りながら練習しましょう。
+        </p>
+
+        <p className="leading-8 mb-4">
+          「はさみは座って使う」「人に向けない」など、基本的なルールも最初に伝えておくと安心です。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            💡 ポイント
+          </p>
+          <p>
+            紙を持つ手の位置も意識して教えてあげると、より安全に練習できます。
+          </p>
+        </div>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ステップ①：一回切り
+        </h2>
+
+        <p className="leading-8 mb-4">
+          紙の端を一回のはさみの動きで切り落とす練習から始めます。まっすぐな線に沿って切る必要はありません。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ステップ②：連続切り・曲線切り
+        </h2>
+
+        <p className="leading-8 mb-4">
+          一回切りに慣れてきたら、はさみを開閉しながら連続して切る練習、直線に沿って切る練習へと進めていきましょう。
+        </p>
+
+        <p className="leading-8 mb-4">
+          慣れてきたら、ゆるやかな曲線に沿って切る練習にも挑戦してみましょう。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          はさみ以外の手先トレーニング
+        </h2>
+
+        <p className="leading-8 mb-4">
+          洗濯ばさみでものをつまむ遊びや、ちぎり紙、シール貼りなども、はさみを使うために必要な指先の力を育てる練習になります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          はさみに苦手意識がある子は、こうした遊びから始めてみるのもおすすめです。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          誤飲・怪我を防ぐ収納の工夫
+        </h2>
+
+        <p className="leading-8 mb-4">
+          使い終わったはさみは、子どもの手の届かない場所や、キャップをつけた状態で保管しましょう。
+        </p>
+
+        <p className="leading-8 mb-4">
+          小さな紙くずの誤飲にも注意し、練習後は一緒に片付ける習慣をつけると安心です。
+        </p>
+
+        <div className="bg-green-50 p-6 rounded-2xl border mt-10">
+
+          <h3 className="font-bold text-xl mb-3">
+            🌱 この記事のまとめ
+          </h3>
+
+          <ul className="list-disc ml-6 space-y-2">
+            <li>はさみの練習は3〜4歳ごろから少しずつ始められる</li>
+            <li>子ども用はさみを使い、大人が近くで見守りながら練習する</li>
+            <li>最初は一回切りから、慣れてきたら連続切り・曲線切りへ</li>
+            <li>洗濯ばさみやちぎり紙など、はさみ以外の手先トレーニングも有効</li>
           </ul>
+
+        </div>
+
+        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+
+          <h3 className="font-bold text-xl mb-3">
+            🚀 今日のドリルに挑戦しよう
+          </h3>
+
+          <p className="mb-3">
+            手先を使う練習とあわせて、今日のドリルにも挑戦してみませんか？
+          </p>
+
+          <Link
+            href="/4"
+            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold"
+          >
+            4歳向けドリルを見る
+          </Link>
 
         </div>
 

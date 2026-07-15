@@ -49,6 +49,11 @@ export default function Page() {
 
         </div>
 
+        <div className="bg-purple-50 border border-purple-200 rounded-2xl p-5 mb-8 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+          <p><span className="font-bold">🌱 この問題について：</span>規則性を見つける力・観察力</p>
+          <p><span className="font-bold">⏱ めやす時間：</span>10〜15分</p>
+        </div>
+
         <QuestionList
           questions={questions}
           accentText="text-purple-700"

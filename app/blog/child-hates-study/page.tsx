@@ -1,130 +1,118 @@
-import type { Metadata } from "next";
-import Breadcrumb from "../../components/Breadcrumb";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "子どもが勉強を嫌がるときは？無理なく続ける5つのコツ",
+export const metadata = {
+  title: "子どもが勉強を嫌がるときは？無理なく続ける5つのコツ｜わくたん",
   description:
-    "幼児が勉強を嫌がる理由と、家庭で無理なく学習を続けるコツを紹介します。4〜6歳向けの家庭学習にも役立ちます。",
-  alternates: {
-    canonical: "/blog/child-hates-study",
-  },
+    "子どもが勉強を嫌がる理由と、無理なく学習を続けるための5つのコツを解説。動機づけの考え方もふまえて紹介します。",
 };
 
 export default function Page() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-10">
+    <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
 
-      <Breadcrumb
-        items={[
-          { name: "記事一覧", href: "/articles" },
-          { name: "子どもが勉強を嫌がるときは？" },
-        ]}
-      />
+      <article className="max-w-4xl mx-auto">
 
-      <article className="bg-white rounded-3xl shadow p-8">
+        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-8 rounded-3xl shadow-md mb-8">
 
-        <h1 className="text-4xl font-bold mb-6">
-          子どもが勉強を嫌がるときは？無理なく続ける5つのコツ
-        </h1>
+          <div className="text-5xl mb-3">😊</div>
 
-        <p className="leading-8 mb-6">
-          「机に向かってくれない」「ドリルを嫌がる」と悩む家庭は少なくありません。
-          しかし、多くの場合は勉強そのものが嫌いなのではなく、
-          やり方や環境を少し変えるだけで楽しく取り組めるようになります。
-        </p>
+          <h1 className="text-4xl font-extrabold text-orange-700 mb-3">
+            子どもが勉強を嫌がるときは？無理なく続ける5つのコツ
+          </h1>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          ① まずは5分だけ
-        </h2>
-
-        <p className="leading-8">
-          「全部やろう」ではなく、
-          「5分だけやってみよう」と声をかけると始めやすくなります。
-          短時間でも毎日続けることが大切です。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          ② 簡単な問題から始める
-        </h2>
-
-        <p className="leading-8">
-          最初から難しい問題だとやる気を失います。
-          すぐ解ける問題で「できた！」を積み重ねましょう。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          ③ 結果より頑張りを褒める
-        </h2>
-
-        <p className="leading-8">
-          「全部正解」よりも、
-          「最後まで頑張ったね」
-          「昨日より早くできたね」
-          と努力を認めることで自信につながります。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          ④ 勉強を遊びに変える
-        </h2>
-
-        <p className="leading-8">
-          数字探し、しりとり、迷路、パズルなど、
-          遊びながら学べる内容なら自然と集中できます。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          ⑤ 無理に続けさせない
-        </h2>
-
-        <p className="leading-8">
-          泣いてしまうほど嫌がる日は休むことも大切です。
-          「また明日やろうね」と前向きに終えることで、
-          勉強への苦手意識を減らせます。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          毎日少しずつが成功の秘訣
-        </h2>
-
-        <p className="leading-8">
-          幼児期の家庭学習は長時間必要ありません。
-          5〜10分を毎日続けるだけでも、
-          学習習慣や考える力は少しずつ育っていきます。
-        </p>
-
-        <div className="bg-orange-100 rounded-xl p-6 mt-10">
-
-          <h2 className="text-xl font-bold mb-4">
-            わくたんの無料知育ドリル
-          </h2>
-
-          <p className="mb-4">
-            わくたんでは、
-            4〜6歳向けに毎日10問の無料知育ドリルを公開しています。
-            印刷にも対応しているので、
-            家庭学習の第一歩としてぜひご活用ください。
+          <p className="text-lg text-gray-700">
+            「嫌い」の裏にある理由を見つけてあげよう
           </p>
 
-          <ul className="space-y-2">
-            <li>
-              <Link href="/4" className="text-blue-600 hover:underline">
-                4歳向けドリル
-              </Link>
-            </li>
+        </div>
+        <p className="text-lg leading-8 mb-6">
+          「さっきまで元気だったのに、ドリルを出したとたん嫌がる」——多くの家庭で見られる光景です。無理に続けさせる前に、まず理由を考えてみましょう。
+        </p>
 
-            <li>
-              <Link href="/5" className="text-blue-600 hover:underline">
-                5歳向けドリル
-              </Link>
-            </li>
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ① 難易度が合っていないのかも
+        </h2>
 
-            <li>
-              <Link href="/6" className="text-blue-600 hover:underline">
-                6歳向けドリル
-              </Link>
-            </li>
+        <p className="leading-8 mb-4">
+          難しすぎる問題は「できない」という経験の積み重ねになり、嫌悪感につながります。少し簡単なレベルに戻してみるのも一つの方法です。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ② タイミングが合っていないのかも
+        </h2>
+
+        <p className="leading-8 mb-4">
+          眠い時間、お腹が空いている時間、外遊びの直後など、集中しにくいタイミングだと嫌がりやすくなります。機嫌の良い時間帯を見つけてみましょう。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            💡 ポイント
+          </p>
+          <p>
+            「今日はやりたくない」と言われたら、無理強いせずその日は休むのも大切な選択です。
+          </p>
+        </div>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ③ 「やらされている」感覚があるのかも
+        </h2>
+
+        <p className="leading-8 mb-4">
+          心理学でいう「外発的動機づけ」（ごほうびや命令で行動させること）に偏りすぎると、自分から取り組む意欲が育ちにくくなるといわれています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          「どっちからやる？」のように、小さな選択肢を与えるだけでも、「やらされている」感覚が和らぐことがあります。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ④ 成功体験が不足しているのかも
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「できた」という経験が少ないと、取り組む前から苦手意識を持ってしまうことがあります。簡単な問題から始めて、成功体験を積み重ねましょう。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ⑤ 完璧を求めすぎているのかも
+        </h2>
+
+        <p className="leading-8 mb-4">
+          保護者の方が無意識のうちに完璧を求めてしまうと、子どもはそのプレッシャーを敏感に感じ取ります。「間違えても大丈夫」という空気づくりが大切です。
+        </p>
+
+        <div className="bg-green-50 p-6 rounded-2xl border mt-10">
+
+          <h3 className="font-bold text-xl mb-3">
+            🌱 この記事のまとめ
+          </h3>
+
+          <ul className="list-disc ml-6 space-y-2">
+            <li>勉強を嫌がる背景には、難易度・タイミング・動機づけなど様々な理由がある</li>
+            <li>「やらされている」感覚を減らすには、小さな選択肢を与えるのも効果的</li>
+            <li>簡単な問題からの成功体験の積み重ねが、苦手意識を減らす</li>
+            <li>「間違えても大丈夫」という空気づくりがプレッシャーを和らげる</li>
           </ul>
+
+        </div>
+
+        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+
+          <h3 className="font-bold text-xl mb-3">
+            🚀 今日のドリルに挑戦しよう
+          </h3>
+
+          <p className="mb-3">
+            無理のないペースで、今日のドリルから少しずつ試してみませんか？
+          </p>
+
+          <Link
+            href="/category/parent"
+            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold"
+          >
+            保護者向け記事をもっと見る
+          </Link>
 
         </div>
 

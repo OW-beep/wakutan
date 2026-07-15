@@ -49,6 +49,11 @@ export default function Page() {
 
         </div>
 
+        <div className="bg-pink-50 border border-pink-200 rounded-2xl p-5 mb-8 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+          <p><span className="font-bold">🌱 この問題について：</span>言葉の理解・読み書きへの興味</p>
+          <p><span className="font-bold">⏱ めやす時間：</span>10〜15分</p>
+        </div>
+
         <QuestionList
           questions={questions}
           accentText="text-pink-600"

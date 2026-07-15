@@ -125,6 +125,26 @@ export default function Page() {
 
         </div>
 
+        {/* 参考にした考え方 */}
+        <div className="bg-white rounded-3xl shadow p-8 mt-8">
+
+          <h2 className="text-2xl font-bold mb-4">📚 参考にした考え方</h2>
+
+          <p className="leading-8 mb-4">
+            問題や記事を作成するにあたり、文部科学省が示す
+            「幼児期の終わりまでに育ってほしい姿」（幼稚園教育要領などで示されている、
+            健康な心と体・自立心・数量や図形への関心・感覚など10の視点）を、
+            考え方の参考にしています。
+          </p>
+
+          <p className="leading-8">
+            専門家による監修を受けているものではなく、
+            あくまで運営者が一般に公開されている情報を参考に取り入れている段階です。
+            より正確な情報については、文部科学省や自治体などの公式情報もあわせてご確認ください。
+          </p>
+
+        </div>
+
         {/* 更新について */}
         <div className="bg-white rounded-3xl shadow p-8 mt-8">
 

@@ -37,6 +37,11 @@ export default function Page() {
 
         </div>
 
+        <div className="bg-blue-50 border border-blue-200 rounded-2xl p-5 mb-8 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+          <p><span className="font-bold">🌱 この問題について：</span>論理的思考・順序立てて考える力</p>
+          <p><span className="font-bold">⏱ めやす時間：</span>5〜10分</p>
+        </div>
+
         <QuestionList
           questions={questions}
           accentText="text-blue-600"

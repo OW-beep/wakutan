@@ -1,126 +1,114 @@
-import type { Metadata } from "next";
-import Breadcrumb from "../../components/Breadcrumb";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "幼児にごほうびは必要？やる気を育てる上手な褒め方",
+export const metadata = {
+  title: "幼児にごほうびは必要？やる気を育てる上手な褒め方｜わくたん",
   description:
-    "幼児の家庭学習でごほうびは必要？やる気を育てる褒め方や、ごほうびとの上手な付き合い方を紹介します。",
-  alternates: {
-    canonical: "/blog/reward-for-study",
-  },
+    "幼児学習でのごほうびの使い方を、心理学の考え方もふまえて解説。やる気を長く育てる褒め方のコツを紹介します。",
 };
 
 export default function Page() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-10">
+    <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
 
-      <Breadcrumb
-        items={[
-          { name: "記事一覧", href: "/articles" },
-          { name: "幼児にごほうびは必要？" },
-        ]}
-      />
+      <article className="max-w-4xl mx-auto">
 
-      <article className="bg-white rounded-3xl shadow p-8">
+        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-8 rounded-3xl shadow-md mb-8">
 
-        <h1 className="text-4xl font-bold mb-6">
-          幼児にごほうびは必要？やる気を育てる上手な褒め方
-        </h1>
+          <div className="text-5xl mb-3">🏅</div>
 
-        <p className="leading-8 mb-6">
-          「ドリルをやったらお菓子をあげる」
-          「シールを貼ると頑張る」
-          といったごほうびを使っている家庭も多いでしょう。
-          ごほうびは使い方次第で、子どものやる気を伸ばすことも、
-          逆に勉強嫌いにつながることもあります。
-        </p>
+          <h1 className="text-4xl font-extrabold text-orange-700 mb-3">
+            幼児にごほうびは必要？やる気を育てる上手な褒め方
+          </h1>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          ごほうびが悪いわけではない
-        </h2>
-
-        <p className="leading-8">
-          幼児は目の前の楽しみで行動しやすい時期です。
-          シールやスタンプなど小さな達成感は、
-          学習を続けるきっかけになります。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          高価なごほうびは避けよう
-        </h2>
-
-        <p className="leading-8">
-          毎回おもちゃやお菓子を約束すると、
-          「ごほうびがないとやらない」
-          という状態になりやすくなります。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          一番効果があるのは言葉
-        </h2>
-
-        <p className="leading-8">
-          「最後までできたね」
-          「昨日より速かったね」
-          「よく考えたね」
-          など努力を具体的に褒めることで、
-          子どもの自信が育ちます。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          ごほうびは少しずつ卒業する
-        </h2>
-
-        <p className="leading-8">
-          学習習慣が身についてきたら、
-          シールの回数を減らしたり、
-          「できて嬉しい」という気持ちを大切にしていきましょう。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          毎日続けることが何より大切
-        </h2>
-
-        <p className="leading-8">
-          幼児期は1回30分より、
-          毎日5〜10分続けるほうが効果的です。
-          無理なく楽しめる環境を作ることが、
-          学ぶことを好きになる第一歩です。
-        </p>
-
-        <div className="bg-yellow-100 rounded-xl p-6 mt-10">
-
-          <h2 className="text-xl font-bold mb-4">
-            わくたんの無料知育ドリル
-          </h2>
-
-          <p className="mb-4">
-            わくたんでは、
-            毎日10問の無料知育ドリルを公開しています。
-            印刷もできるので、
-            ご家庭での学習習慣づくりにぜひご活用ください。
+          <p className="text-lg text-gray-700">
+            「ごほうびがないとやらない」を防ぐには
           </p>
 
-          <ul className="space-y-2">
-            <li>
-              <Link href="/4" className="text-blue-600 hover:underline">
-                4歳向けドリル
-              </Link>
-            </li>
+        </div>
+        <p className="text-lg leading-8 mb-6">
+          「ドリルを頑張ったらシールをあげる」「できたらお菓子」——ごほうびを使うこと自体は悪いことではありませんが、使い方によっては逆効果になることもあります。
+        </p>
 
-            <li>
-              <Link href="/5" className="text-blue-600 hover:underline">
-                5歳向けドリル
-              </Link>
-            </li>
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ごほうび（外発的動機づけ）の効果と注意点
+        </h2>
 
-            <li>
-              <Link href="/6" className="text-blue-600 hover:underline">
-                6歳向けドリル
-              </Link>
-            </li>
+        <p className="leading-8 mb-4">
+          心理学では、ごほうびによってやる気を引き出すことを「外発的動機づけ」と呼びます。すぐに効果が出やすい一方で、ごほうびがないと行動しなくなってしまうリスクも指摘されています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          心理学者エドワード・デシの実験では、もともと興味を持って取り組んでいた活動に報酬を与えると、報酬がなくなった後の取り組み意欲がかえって下がる現象が確認されており、「アンダーマイニング効果」と呼ばれています。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          内側から育つやる気（内発的動機づけ）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          一方、「できた」「わかった」という達成感そのものから生まれるやる気は「内発的動機づけ」と呼ばれ、長く続きやすいとされています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          自分で選ぶ・自分の力でできたと感じる・認められる、という3つの要素が、内発的動機づけを支えると考えられています。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            💡 ポイント
+          </p>
+          <p>
+            結果ではなく「頑張った過程」を具体的に褒めることが、内側からのやる気につながります。
+          </p>
+        </div>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ごほうびを使うなら「頻度」に注意
+        </h2>
+
+        <p className="leading-8 mb-4">
+          ごほうびを絶対に使ってはいけないわけではありません。毎回ではなく、特別な達成のときだけにするなど、頻度を抑えることでリスクを減らせます。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          言葉のごほうびを活用する
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「最後まで頑張ったね」「よく考えたね」という具体的な言葉がけも、立派なごほうびです。物より言葉の方が、内側からのやる気を育てやすいとされています。
+        </p>
+
+        <div className="bg-green-50 p-6 rounded-2xl border mt-10">
+
+          <h3 className="font-bold text-xl mb-3">
+            🌱 この記事のまとめ
+          </h3>
+
+          <ul className="list-disc ml-6 space-y-2">
+            <li>ごほうび（外発的動機づけ）は即効性がある一方、頼りすぎると逆効果になることがある</li>
+            <li>デシの実験では、報酬がやる気を下げる「アンダーマイニング効果」が確認されている</li>
+            <li>「できた」という達成感から生まれる内発的動機づけの方が長続きしやすい</li>
+            <li>結果より過程を具体的に褒める言葉がけを大切にする</li>
           </ul>
+
+        </div>
+
+        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+
+          <h3 className="font-bold text-xl mb-3">
+            🚀 今日のドリルに挑戦しよう
+          </h3>
+
+          <p className="mb-3">
+            褒め方を意識しながら、今日のドリルにも一緒に取り組んでみませんか？
+          </p>
+
+          <Link
+            href="/category/parent"
+            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold"
+          >
+            保護者向け記事をもっと見る
+          </Link>
 
         </div>
 

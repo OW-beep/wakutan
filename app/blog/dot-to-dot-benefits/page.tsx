@@ -1,117 +1,130 @@
-import type { Metadata } from "next";
-import Breadcrumb from "../../components/Breadcrumb";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "点つなぎ遊びの効果｜集中力・数字・運筆力が育つ",
+export const metadata = {
+  title: "点つなぎ遊びの効果｜集中力・数字・運筆力が育つ｜わくたん",
   description:
-    "点つなぎ遊びは数字を覚えながら集中力や運筆力を育てられる知育遊びです。4〜6歳向けに効果や遊び方を紹介します。",
-  alternates: {
-    canonical: "/blog/dot-to-dot-benefits",
-  },
+    "点つなぎ遊びは数字を覚えながら集中力や運筆力を育てられる知育遊びです。4〜6歳向けに効果や、数字が苦手な子への配慮も紹介します。",
 };
 
 export default function Page() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-10">
+    <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
 
-      <Breadcrumb
-        items={[
-          { name: "記事一覧", href: "/articles" },
-          { name: "点つなぎ遊びの効果" },
-        ]}
-      />
+      <article className="max-w-4xl mx-auto">
 
-      <article className="bg-white rounded-3xl shadow p-8">
+        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-8 rounded-3xl shadow-md mb-8">
 
-        <h1 className="text-4xl font-bold mb-6">
-          点つなぎ遊びの効果｜集中力・数字・運筆力が育つ
-        </h1>
+          <div className="text-5xl mb-3">🔢</div>
 
-        <p className="leading-8 mb-6">
-          点つなぎは、数字を順番につないで絵を完成させる人気の知育遊びです。
-          遊びながら数字への興味が育ち、集中力や鉛筆を動かす力も自然と身につきます。
-        </p>
+          <h1 className="text-4xl font-extrabold text-orange-700 mb-3">
+            点つなぎ遊びの効果｜集中力・数字・運筆力が育つ
+          </h1>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          数字を楽しく覚えられる
-        </h2>
-
-        <p className="leading-8">
-          「1、2、3…」と順番を確認しながら進めるため、
-          数字の並びを無理なく覚えられます。
-          数字が苦手なお子さんでも、遊び感覚で取り組めます。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          集中力が育つ
-        </h2>
-
-        <p className="leading-8">
-          ゴールまで一つずつ点をつないでいくため、
-          最後まで集中して取り組む力が身につきます。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          運筆力アップにつながる
-        </h2>
-
-        <p className="leading-8">
-          点から点へまっすぐ線を引くことで、
-          鉛筆をコントロールする力が育ちます。
-          文字を書く準備にもぴったりです。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          達成感が自信になる
-        </h2>
-
-        <p className="leading-8">
-          最後に絵が完成すると、
-          「できた！」という達成感を味わえます。
-          小さな成功体験を積み重ねることで、
-          学習への意欲も高まります。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          毎日少しずつ楽しもう
-        </h2>
-
-        <p className="leading-8">
-          1日5〜10分程度でも十分です。
-          毎日続けることで、数字や運筆への自信が少しずつ育っていきます。
-        </p>
-
-        <div className="bg-blue-100 rounded-xl p-6 mt-10">
-
-          <h2 className="text-xl font-bold mb-4">
-            わくたんの無料ドリル
-          </h2>
-
-          <p className="mb-4">
-            わくたんでは、数字・ひらがな・論理・パターン認識など、
-            毎日10問の無料ドリルを公開しています。
+          <p className="text-lg text-gray-700">
+            点と点をつなぐだけで、こんなに力がつく
           </p>
 
-          <ul className="space-y-2">
-            <li>
-              <Link href="/4" className="text-blue-600 hover:underline">
-                4歳向け無料ドリル
-              </Link>
-            </li>
+        </div>
+        <p className="text-lg leading-8 mb-6">
+          数字の順番に点をつないでいくと絵が現れる「点つなぎ」。シンプルながら、複数の力を同時に育てられる遊びです。
+        </p>
 
-            <li>
-              <Link href="/5" className="text-blue-600 hover:underline">
-                5歳向け無料ドリル
-              </Link>
-            </li>
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          数字の順番に親しめる
+        </h2>
 
-            <li>
-              <Link href="/6" className="text-blue-600 hover:underline">
-                6歳向け無料ドリル
-              </Link>
-            </li>
+        <p className="leading-8 mb-4">
+          1から順に点をたどることで、数字の並び方を自然に覚えることができます。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          運筆力が育つ
+        </h2>
+
+        <p className="leading-8 mb-4">
+          点から点へ線を引く動作は、鉛筆を思い通りに動かす練習になります。文字を書くための土台づくりにもつながります。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            💡 ポイント
+          </p>
+          <p>
+            線がまっすぐでなくても大丈夫。最後まで線をつなげられたことをほめてあげましょう。
+          </p>
+        </div>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          集中力・最後までやりきる力
+        </h2>
+
+        <p className="leading-8 mb-4">
+          絵が完成するまで集中して取り組む経験は、達成感とともに「最後までやりきる」力を育てます。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          数字が苦手な子への配慮
+        </h2>
+
+        <p className="leading-8 mb-4">
+          数字を読むこと自体に苦手意識がある子には、点の数を少なくした簡単なものから始めましょう。
+        </p>
+
+        <p className="leading-8 mb-4">
+          「1、2、3…」と一緒に声に出しながら進めると、数字と点のつながりを確認しながら取り組めます。無理に一人でやらせず、最初は隣で見守ってあげるのがおすすめです。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          完成した絵で会話が広がる
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「何の絵が出てくるかな？」とワクワクしながら取り組めるのも点つなぎの魅力です。完成した絵について話すことで、会話も広がります。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          完成後の活用法
+        </h2>
+
+        <p className="leading-8 mb-4">
+          完成した絵に色を塗ったり、壁に飾ったりすると、達成感がより形として残ります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          「これ、頑張って完成させたんだよね」と後から振り返ることで、自信の積み重ねにもつながります。
+        </p>
+
+        <div className="bg-green-50 p-6 rounded-2xl border mt-10">
+
+          <h3 className="font-bold text-xl mb-3">
+            🌱 この記事のまとめ
+          </h3>
+
+          <ul className="list-disc ml-6 space-y-2">
+            <li>点つなぎは数字の順番に自然に親しめる遊び</li>
+            <li>線を引く動作が運筆力・文字学習の土台になる</li>
+            <li>数字が苦手な子は点の数が少ないものから、声に出しながら進める</li>
+            <li>完成後に色を塗ったり飾ったりすると達成感が形に残る</li>
           </ul>
+
+        </div>
+
+        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+
+          <h3 className="font-bold text-xl mb-3">
+            🚀 今日のドリルに挑戦しよう
+          </h3>
+
+          <p className="mb-3">
+            数字への理解を活かして、今日の算数ドリルにも挑戦してみませんか？
+          </p>
+
+          <Link
+            href="/4/sansu"
+            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold"
+          >
+            算数ドリルを見る
+          </Link>
 
         </div>
 

@@ -1,124 +1,114 @@
-import type { Metadata } from "next";
-import Breadcrumb from "../../components/Breadcrumb";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "ひらがなは何歳から？無理なく始めるタイミングを解説",
+export const metadata = {
+  title: "ひらがなは何歳から？無理なく始めるタイミングを解説｜わくたん",
   description:
-    "ひらがなは何歳から始めればいいのでしょうか。4〜6歳の発達に合わせた練習方法や家庭でできる教え方を紹介します。",
-  alternates: {
-    canonical: "/blog/when-start-hiragana",
-  },
+    "ひらがなを教え始める年齢の目安を、公的な調査データもふまえて解説。無理なく始めるためのサインの見つけ方を紹介します。",
 };
 
 export default function Page() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-10">
+    <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
 
-      <Breadcrumb
-        items={[
-          { name: "記事一覧", href: "/articles" },
-          { name: "ひらがなは何歳から？" },
-        ]}
-      />
+      <article className="max-w-4xl mx-auto">
 
-      <article className="bg-white rounded-3xl shadow p-8">
+        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-8 rounded-3xl shadow-md mb-8">
 
-        <h1 className="text-4xl font-bold mb-6">
-          ひらがなは何歳から？無理なく始めるタイミングを解説
-        </h1>
+          <div className="text-5xl mb-3">🔤</div>
 
-        <p className="leading-8 mb-6">
-          「ひらがなの練習は何歳から始めればいいの？」
-          と悩む保護者は多くいます。
-          実は決まった年齢はありませんが、
-          子どもの興味や発達に合わせて始めることが大切です。
-        </p>
+          <h1 className="text-4xl font-extrabold text-orange-700 mb-3">
+            ひらがなは何歳から？無理なく始めるタイミングを解説
+          </h1>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          4歳頃は文字に親しむ時期
-        </h2>
-
-        <p className="leading-8">
-          4歳頃は、文字を読んだり自分の名前を見つけたりすることに
-          興味を持ち始めます。
-          この時期は無理に書かせるより、
-          絵本や看板などで文字に触れることがおすすめです。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          5歳頃から書く練習を始める子が増える
-        </h2>
-
-        <p className="leading-8">
-          鉛筆を持つ力が育ち、
-          線を書くことにも慣れてきます。
-          なぞり書きや短い言葉を書く練習から始めると、
-          楽しく続けやすくなります。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          6歳頃は小学校入学の準備
-        </h2>
-
-        <p className="leading-8">
-          小学校入学前には、
-          自分の名前を書いたり、
-          簡単なひらがなが読めたり書けたりすると安心です。
-          ただし、個人差があるため焦る必要はありません。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          楽しく続けることが一番大切
-        </h2>
-
-        <p className="leading-8">
-          「勉強」と考えるより、
-          遊びの延長として取り組むことが長続きします。
-          1日5〜10分程度でも十分な効果があります。
-        </p>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4">
-          無理に教えなくても大丈夫
-        </h2>
-
-        <p className="leading-8">
-          子どもによって興味を持つ時期は違います。
-          「できない」よりも「できた！」を増やすことで、
-          学ぶことが好きになります。
-        </p>
-
-        <div className="bg-blue-100 rounded-xl p-6 mt-10">
-
-          <h2 className="text-xl font-bold mb-4">
-            わくたんの無料ひらがなドリル
-          </h2>
-
-          <p className="mb-4">
-            わくたんでは4〜6歳向けに、
-            毎日10問の無料知育ドリルを公開しています。
-            ひらがな・算数・論理・図形などを楽しく学べます。
+          <p className="text-lg text-gray-700">
+            データで見る習得の目安と、始めどきのサイン
           </p>
 
-          <ul className="space-y-2">
-            <li>
-              <Link href="/4" className="text-blue-600 hover:underline">
-                4歳向け無料ドリル
-              </Link>
-            </li>
+        </div>
+        <p className="text-lg leading-8 mb-6">
+          「ひらがなはいつから教えればいいの？」という疑問に対して、ここではデータをもとにした目安と、始めどきのサインを紹介します。
+        </p>
 
-            <li>
-              <Link href="/5" className="text-blue-600 hover:underline">
-                5歳向け無料ドリル
-              </Link>
-            </li>
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          データで見るひらがな習得の目安
+        </h2>
 
-            <li>
-              <Link href="/6" className="text-blue-600 hover:underline">
-                6歳向け無料ドリル
-              </Link>
-            </li>
+        <p className="leading-8 mb-4">
+          文部科学省の「幼児教育、幼小接続に関する現状について」という資料では、年少（3〜4歳）から年中（4〜5歳）にかけてひらがなを読める子どもの割合が大きく伸び、年長（5〜6歳）ではほとんどの子が読めるようになる傾向が示されています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          一方で、書くことについては読むことよりも遅れて発達するというのが、多くの専門家に共通する見解です。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          なぜ4〜5歳で伸びるのか
+        </h2>
+
+        <p className="leading-8 mb-4">
+          背景にあるとされるのが「音韻認識」の発達です。「りんご」が「り・ん・ご」という音でできていると気づく力が、4〜5歳ごろに育ってくることが、ひらがな習得と関係していると考えられています。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            💡 ポイント
+          </p>
+          <p>
+            音韻認識は、しりとりや手遊び歌など、音を意識する遊びの中でも育まれると考えられています。
+          </p>
+        </div>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          始めどきのサイン
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「絵本の文字を指差す」「自分の名前の文字に反応する」「本を読むふりをする」といった様子が見られたら、興味が育ってきているサインです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          こうしたサインが出てから取り組み始めると、無理なくスムーズに進みやすくなります。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          読めなくても焦らない理由
+        </h2>
+
+        <p className="leading-8 mb-4">
+          小学校では1年生の国語の授業で、全員がひらがなを読めるように丁寧に指導するカリキュラムが組まれています。就学前に読めていなくても、入学後にしっかり追いつける仕組みがあることを知っておくと、気持ちが楽になります。
+        </p>
+
+        <div className="bg-green-50 p-6 rounded-2xl border mt-10">
+
+          <h3 className="font-bold text-xl mb-3">
+            🌱 この記事のまとめ
+          </h3>
+
+          <ul className="list-disc ml-6 space-y-2">
+            <li>文部科学省の資料でも、4〜5歳にかけてひらがなの習得が大きく進むことが示されている</li>
+            <li>背景には「音韻認識」という力の発達があるとされる</li>
+            <li>文字を指差す・名前に反応するなどのサインが始めどきの目安</li>
+            <li>就学前に読めなくても、小学校で丁寧に教わるため心配しすぎなくてよい</li>
           </ul>
+
+        </div>
+
+        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+
+          <h3 className="font-bold text-xl mb-3">
+            🚀 今日のドリルに挑戦しよう
+          </h3>
+
+          <p className="mb-3">
+            興味のサインが見えたら、今日のひらがなドリルにも挑戦してみませんか？
+          </p>
+
+          <Link
+            href="/4/hiragana"
+            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold"
+          >
+            ひらがなドリルを見る
+          </Link>
 
         </div>
 
