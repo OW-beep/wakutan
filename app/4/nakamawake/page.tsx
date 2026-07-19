@@ -1,10 +1,16 @@
 import QuestionList from "../../components/QuestionList";
+import Link from "next/link";
+import Breadcrumb from "../../components/Breadcrumb";
 import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "4歳向け仲間分け問題",
-  description: "4歳向け無料仲間分けドリル",
+  title: "4歳向け仲間分け問題｜わくたん",
+  description:
+    "4歳向け無料仲間分けドリル。分類する力を育てる問題を毎日更新。無料で印刷OK。",
+  alternates: {
+    canonical: "/4/nakamawake",
+  },
 };
 
 export default function Page() {
@@ -20,9 +26,16 @@ export default function Page() {
 
       <div className="max-w-4xl mx-auto p-6">
 
+        <Breadcrumb
+          items={[
+            { name: "4歳ドリル", href: "/4" },
+            { name: "仲間分け問題" },
+          ]}
+        />
+
         <div className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl font-bold mb-4 text-green-600">
             📦 4歳向け仲間分け問題
           </h1>
 
@@ -62,6 +75,16 @@ export default function Page() {
             物事を分類する力は、心理学で「カテゴリー化」と呼ばれ、情報を整理して考えるための基礎的な認知能力の一つとされています。間違えた分類も、その子なりの理由があることが多いので、理由を聞いてみるのもおすすめです。
           </p>
 
+        </div>
+
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/4"
+            className="inline-block bg-green-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
+          >
+            ← 4歳向けドリル一覧に戻る
+          </Link>
         </div>
 
       </div>

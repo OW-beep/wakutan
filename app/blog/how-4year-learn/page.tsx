@@ -241,7 +241,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
           <Link
             href="/4"
-            className="inline-block bg-orange-500 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90"
+            className="inline-block bg-orange-500 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition wt-btn-pop"
           >
             4さいドリルに挑戦する →
           </Link>

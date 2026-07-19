@@ -108,7 +108,7 @@ export default function PageClient() {
 
           <button
             onClick={() => setShowAnswer(!showAnswer)}
-            className="w-full bg-blue-500 text-white p-4 rounded-2xl font-bold text-lg"
+            className="w-full bg-blue-500 text-white p-4 rounded-2xl font-bold text-lg transition wt-btn-pop"
           >
             {showAnswer
               ? "こたえをかくす"
@@ -117,7 +117,7 @@ export default function PageClient() {
 
           <button
             onClick={() => window.print()}
-            className="w-full mt-4 bg-green-500 text-white p-4 rounded-2xl font-bold text-lg"
+            className="w-full mt-4 bg-green-500 text-white p-4 rounded-2xl font-bold text-lg transition wt-btn-pop"
           >
             🖨 印刷する
           </button>

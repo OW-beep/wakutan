@@ -81,7 +81,7 @@ export default function QuestionList({
       <div className="mt-6 print-hide">
         <button
           onClick={() => setShowAnswer(!showAnswer)}
-          className={`w-full text-white p-4 rounded-2xl font-bold text-lg ${accentButton}`}
+          className={`w-full text-white p-4 rounded-2xl font-bold text-lg transition wt-btn-pop ${accentButton}`}
         >
           {showAnswer ? "こたえをかくす" : "こたえ・かいせつを見る"}
         </button>

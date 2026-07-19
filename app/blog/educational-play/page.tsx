@@ -153,7 +153,7 @@ export default function Page() {
 
           <Link
             href="/4"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold"
+            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
           >
             年齢別ドリルを見る
           </Link>

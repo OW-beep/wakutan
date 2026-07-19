@@ -65,21 +65,21 @@ export default function BlogArticle({
 
             <Link
               href="/4"
-              className="bg-white rounded-xl p-4 text-center font-bold hover:bg-orange-50"
+              className="bg-white rounded-xl p-4 text-center font-bold hover:bg-orange-50 transition"
             >
               4歳ドリル
             </Link>
 
             <Link
               href="/5"
-              className="bg-white rounded-xl p-4 text-center font-bold hover:bg-orange-50"
+              className="bg-white rounded-xl p-4 text-center font-bold hover:bg-orange-50 transition"
             >
               5歳ドリル
             </Link>
 
             <Link
               href="/6"
-              className="bg-white rounded-xl p-4 text-center font-bold hover:bg-orange-50"
+              className="bg-white rounded-xl p-4 text-center font-bold hover:bg-orange-50 transition"
             >
               6歳ドリル
             </Link>

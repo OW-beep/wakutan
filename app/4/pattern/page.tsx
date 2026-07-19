@@ -1,10 +1,16 @@
 import QuestionList from "../../components/QuestionList";
+import Link from "next/link";
+import Breadcrumb from "../../components/Breadcrumb";
 import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "4歳向けパターン問題",
-  description: "4歳向け規則性ドリル",
+  title: "4歳向けパターン問題｜わくたん",
+  description:
+    "4歳向け規則性ドリル。繰り返しのパターンを考える問題を毎日更新。無料で印刷OK。",
+  alternates: {
+    canonical: "/4/pattern",
+  },
 };
 
 export default function Page() {
@@ -20,9 +26,16 @@ export default function Page() {
 
       <div className="max-w-4xl mx-auto p-6">
 
+        <Breadcrumb
+          items={[
+            { name: "4歳ドリル", href: "/4" },
+            { name: "パターン問題" },
+          ]}
+        />
+
         <div className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl font-bold mb-4 text-purple-700">
             🔷 4歳向けパターン問題
           </h1>
 
@@ -64,6 +77,16 @@ export default function Page() {
             繰り返しのパターンに気づく力は、予測する力や論理的に考える力の基礎になるといわれています。答えを急がせず、「次はどうなりそう?」と一緒に考える過程を楽しんでみてください。
           </p>
 
+        </div>
+
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/4"
+            className="inline-block bg-purple-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
+          >
+            ← 4歳向けドリル一覧に戻る
+          </Link>
         </div>
 
       </div>

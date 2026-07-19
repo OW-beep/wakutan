@@ -149,7 +149,7 @@ export default function AgeInfoSection({
             <Link
               key={a.href}
               href={a.href}
-              className="bg-gray-50 rounded-2xl p-5 hover:shadow-lg transition"
+              className="bg-gray-50 rounded-2xl p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
             >
               <span className="mr-2">{a.emoji}</span>
               {a.title}

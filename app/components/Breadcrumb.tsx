@@ -38,7 +38,7 @@ export default function Breadcrumb({ items }: Props) {
 
         <Link
           href="/"
-          className="hover:text-orange-600"
+          className="hover:text-orange-600 transition-colors"
         >
           ホーム
         </Link>
@@ -57,7 +57,7 @@ export default function Breadcrumb({ items }: Props) {
 
               <Link
                 href={item.href}
-                className="hover:text-orange-600"
+                className="hover:text-orange-600 transition-colors"
               >
                 {item.name}
               </Link>

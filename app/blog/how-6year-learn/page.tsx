@@ -213,7 +213,7 @@ export default function Page() {
 
           <Link
             href="/6"
-            className="inline-block bg-purple-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90"
+            className="inline-block bg-purple-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition wt-btn-pop"
           >
             6さいドリルに挑戦する →
           </Link>

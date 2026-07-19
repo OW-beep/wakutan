@@ -19,10 +19,18 @@ export default function Home() {
       {/* ヒーロー */}
       <section className="max-w-6xl mx-auto px-6 py-12">
 
-        <div className="bg-gradient-to-r from-yellow-100 to-orange-100 rounded-3xl p-10 shadow-lg">
+        <div className="relative bg-gradient-to-r from-yellow-100 to-orange-100 rounded-3xl p-10 shadow-lg overflow-hidden">
+
+          <span className="wt-sparkle absolute top-6 right-10 text-3xl select-none" aria-hidden="true">✨</span>
+          <span className="wt-sparkle absolute top-20 right-24 text-xl select-none" aria-hidden="true">⭐</span>
+          <span className="wt-sparkle absolute bottom-8 right-14 text-2xl select-none" aria-hidden="true">✨</span>
+
+          <div className="wt-float inline-block wt-icon-badge bg-white w-20 h-20 text-5xl shadow-md mb-4">
+            🌈
+          </div>
 
           <h1 className="text-5xl font-extrabold text-orange-700 mb-4">
-            🌈 わくたん
+            わくたん
           </h1>
 
           <p className="text-2xl mb-4">
@@ -206,7 +214,7 @@ export default function Home() {
 
           <Link
             href="/blog/how-4year-learn"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               🧸 4歳の学び方
@@ -219,7 +227,7 @@ export default function Home() {
 
           <Link
             href="/blog/how-5year-learn"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               🚀 5歳の学び方
@@ -232,7 +240,7 @@ export default function Home() {
 
           <Link
             href="/blog/how-6year-learn"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               🎓 6歳の学び方
@@ -245,7 +253,7 @@ export default function Home() {
 
           <Link
             href="/blog/school-preparation"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               🎒 小学校入学前に身につけたい力
@@ -258,7 +266,7 @@ export default function Home() {
 
           <Link
             href="/blog/print-learning"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               📚 プリント学習のメリット
@@ -271,7 +279,7 @@ export default function Home() {
 
           <Link
             href="/blog/why-drill"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               🧠 なぜドリル学習が効果的？
@@ -284,7 +292,7 @@ export default function Home() {
 
           <Link
             href="/blog/5min-study"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               ⏰ 毎日5分学習の効果
@@ -310,7 +318,7 @@ export default function Home() {
 
           <Link
             href="/blog/school-checklist"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <div className="text-sm text-orange-600 font-bold mb-2">
               NEW
@@ -329,7 +337,7 @@ export default function Home() {
 
           <Link
             href="/blog/sansu-weak-6year"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <div className="text-sm text-orange-600 font-bold mb-2">
               NEW
@@ -348,7 +356,7 @@ export default function Home() {
 
           <Link
             href="/blog/hiragana-worry-5year"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="text-xl font-bold mb-2">
               🔤 5歳でひらがなが読めない…
@@ -363,7 +371,7 @@ export default function Home() {
 
           <Link
             href="/blog/concentration-4year"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="text-xl font-bold mb-2">
               🎯 4歳なのに集中できない…
@@ -382,7 +390,7 @@ export default function Home() {
 
           <Link
             href="/articles"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90"
+            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
           >
             記事一覧を見る →
           </Link>
@@ -464,9 +472,9 @@ export default function Home() {
                 <Link
                   key={c.href}
                   href={c.href}
-                  className="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition"
+                  className="group bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
                 >
-                  <div className="text-4xl mb-2">{c.emoji}</div>
+                  <div className="wt-icon-badge bg-gradient-to-br from-yellow-100 to-orange-100 w-16 h-16 text-3xl mb-3">{c.emoji}</div>
 
                   <h4 className="font-bold text-xl mb-2">
                     {group.label}{c.title}
@@ -503,7 +511,7 @@ export default function Home() {
 
           <Link
             href="/blog/study-habit"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               🌱 家庭学習を続けるコツ
@@ -516,7 +524,7 @@ export default function Home() {
 
           <Link
             href="/blog/drill-vs-print"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               📝 市販ドリル vs 無料プリント どっちがいい？
@@ -529,7 +537,7 @@ export default function Home() {
 
           <Link
             href="/blog/busy-parent-5min"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               ⏰ 忙しいママ・パパ向け 1日5分ルーティン
@@ -542,7 +550,7 @@ export default function Home() {
 
           <Link
             href="/blog/outing-learning-games"
-            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg"
+            className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
               🛒 お出かけ先で自然に学べる声かけ＆ゲーム

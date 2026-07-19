@@ -35,7 +35,7 @@ export default function Page() {
 
         <div className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl font-bold mb-4 text-teal-700">
             ⚖️ 6歳向けくらべっこ問題
           </h1>
 
@@ -79,7 +79,7 @@ export default function Page() {
         <div className="mt-8 text-center">
           <Link
             href="/6"
-            className="inline-block bg-indigo-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90"
+            className="inline-block bg-indigo-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
           >
             ← 6歳向けドリル一覧に戻る
           </Link>

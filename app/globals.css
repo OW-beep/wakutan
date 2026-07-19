@@ -24,3 +24,80 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ==========================
+   わくたん かわいいUIパーツ
+   ========================== */
+
+@keyframes wt-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+}
+
+@keyframes wt-bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes wt-pop-in {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes wt-sparkle {
+  0%, 100% { opacity: 0.4; transform: scale(0.85) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.15) rotate(15deg); }
+}
+
+.wt-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  transition: transform 0.2s ease;
+}
+
+.group:hover .wt-icon-badge,
+.wt-icon-badge:hover {
+  animation: wt-wiggle 0.5s ease-in-out;
+}
+
+.wt-float {
+  animation: wt-bounce-slow 3s ease-in-out infinite;
+}
+
+.wt-sparkle {
+  display: inline-block;
+  animation: wt-sparkle 2.4s ease-in-out infinite;
+}
+
+.wt-sparkle:nth-of-type(2) { animation-delay: 0.6s; }
+.wt-sparkle:nth-of-type(3) { animation-delay: 1.2s; }
+
+/* ぷにっとした「押せる」ボタン */
+.wt-btn-pop {
+  position: relative;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 5px 0 0 var(--wt-btn-shadow, rgba(0,0,0,0.25));
+}
+
+.wt-btn-pop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 0 var(--wt-btn-shadow, rgba(0,0,0,0.25));
+}
+
+.wt-btn-pop:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 0 var(--wt-btn-shadow, rgba(0,0,0,0.25));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wt-icon-badge:hover,
+  .wt-float,
+  .wt-sparkle,
+  .wt-btn-pop {
+    animation: none !important;
+    transition: none !important;
+  }
+}

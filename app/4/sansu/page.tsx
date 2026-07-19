@@ -1,10 +1,16 @@
 import QuestionList from "../../components/QuestionList";
+import Link from "next/link";
+import Breadcrumb from "../../components/Breadcrumb";
 import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "4歳向け算数ドリル",
-  description: "4歳向け無料算数ドリル",
+  title: "4歳向け算数ドリル｜わくたん",
+  description:
+    "4歳向け無料算数ドリル。算数・論理・パターン認識・ひらがな・仲間分けなど毎日10問。無料・印刷OK。",
+  alternates: {
+    canonical: "/4/sansu",
+  },
 };
 
 export default function Page() {
@@ -20,9 +26,16 @@ export default function Page() {
 
       <div className="max-w-4xl mx-auto p-6">
 
+        <Breadcrumb
+          items={[
+            { name: "4歳ドリル", href: "/4" },
+            { name: "算数ドリル" },
+          ]}
+        />
+
         <div className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl font-bold mb-4 text-yellow-700">
             🔢 4歳向け算数ドリル
           </h1>
 
@@ -63,6 +76,16 @@ export default function Page() {
             算数的な考え方は、いきなり得意になるものではなく、具体物を数えたり比べたりする経験の積み重ねで少しずつ育っていくとされています。答えの正確さよりも、「どう考えたか」を聞いてあげることが理解を深めます。
           </p>
 
+        </div>
+
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/4"
+            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
+          >
+            ← 4歳向けドリル一覧に戻る
+          </Link>
         </div>
 
       </div>

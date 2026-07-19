@@ -237,7 +237,7 @@ export default function Page() {
 
           <Link
             href="/5"
-            className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90"
+            className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition wt-btn-pop"
           >
             5さいドリルに挑戦する →
           </Link>

@@ -1,10 +1,16 @@
 import QuestionList from "../../components/QuestionList";
+import Link from "next/link";
+import Breadcrumb from "../../components/Breadcrumb";
 import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "4歳向けひらがなドリル",
-  description: "4歳向け無料ひらがな練習",
+  title: "4歳向けひらがな｜わくたん",
+  description:
+    "4歳向け無料ひらがな練習。なかま分けを通して読み書きの力を育てます。無料で印刷OK。",
+  alternates: {
+    canonical: "/4/hiragana",
+  },
 };
 
 export default function Page() {
@@ -20,9 +26,16 @@ export default function Page() {
 
       <div className="max-w-4xl mx-auto p-6">
 
+        <Breadcrumb
+          items={[
+            { name: "4歳ドリル", href: "/4" },
+            { name: "ひらがな" },
+          ]}
+        />
+
         <div className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl font-bold mb-4 text-pink-600">
             🔤 4歳向けひらがな
           </h1>
 
@@ -62,6 +75,16 @@ export default function Page() {
             文字の読み書きは、音と文字を結びつける「音韻認識」という力の発達と関わりが深いとされています。読めない・書けない時期があっても、それは発達の途中段階であることがほとんどです。
           </p>
 
+        </div>
+
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/4"
+            className="inline-block bg-pink-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
+          >
+            ← 4歳向けドリル一覧に戻る
+          </Link>
         </div>
 
       </div>

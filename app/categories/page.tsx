@@ -20,7 +20,7 @@ export default function CategoriesPage() {
 
           <Link
             href="/category/age"
-            className="bg-white rounded-3xl shadow p-8 hover:shadow-xl"
+            className="bg-white rounded-3xl shadow p-8 hover:shadow-xl transition"
           >
             <div className="text-5xl mb-4">🎂</div>
 
@@ -36,7 +36,7 @@ export default function CategoriesPage() {
 
           <Link
             href="/category/parent"
-            className="bg-white rounded-3xl shadow p-8 hover:shadow-xl"
+            className="bg-white rounded-3xl shadow p-8 hover:shadow-xl transition"
           >
             <div className="text-5xl mb-4">👨‍👩‍👧</div>
 

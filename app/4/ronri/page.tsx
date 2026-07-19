@@ -1,10 +1,16 @@
 import QuestionList from "../../components/QuestionList";
+import Link from "next/link";
+import Breadcrumb from "../../components/Breadcrumb";
 import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "4歳向け論理問題",
-  description: "4歳向け無料論理ドリル",
+  title: "4歳向け論理問題｜わくたん",
+  description:
+    "4歳向け無料論理ドリル。順番やきまりを考える問題を毎日更新。無料で印刷OK。",
+  alternates: {
+    canonical: "/4/ronri",
+  },
 };
 
 export default function Page() {
@@ -20,9 +26,16 @@ export default function Page() {
 
       <div className="max-w-4xl mx-auto p-6">
 
+        <Breadcrumb
+          items={[
+            { name: "4歳ドリル", href: "/4" },
+            { name: "論理問題" },
+          ]}
+        />
+
         <div className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl font-bold mb-4 text-blue-600">
             🧠 4歳向け論理問題
           </h1>
 
@@ -63,6 +76,16 @@ export default function Page() {
             規則性を見つける力は、心理学でいう「パターン認識」の一種で、算数だけでなく読み書きなど幅広い学習の土台になるとされています。すぐに答えが浮かばなくても、声に出して規則を確認する時間を大切にしてください。
           </p>
 
+        </div>
+
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/4"
+            className="inline-block bg-blue-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
+          >
+            ← 4歳向けドリル一覧に戻る
+          </Link>
         </div>
 
       </div>
