@@ -27,6 +27,9 @@ export default function PageClient() {
 
     data.nakamawake[seed % data.nakamawake.length],
     data.nakamawake[(seed + 1) % data.nakamawake.length],
+
+    data.kurabekko[seed % data.kurabekko.length],
+    data.nakamahazure[seed % data.nakamahazure.length],
   ];
 
   return (

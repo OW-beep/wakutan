@@ -414,6 +414,8 @@ export default function Home() {
               { href: "/4/pattern", emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう" },
               { href: "/4/hiragana", emoji: "🔤", title: "ひらがな", desc: "文字への興味を育てよう" },
               { href: "/4/nakamawake", emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう" },
+              { href: "/4/kurabekko", emoji: "⚖️", title: "くらべっこ問題", desc: "大小・多い少ないを比べよう" },
+              { href: "/4/nakamahazure", emoji: "🔀", title: "なかまはずれ問題", desc: "ちがうものを見つけよう" },
             ],
           },
           {
@@ -426,6 +428,9 @@ export default function Home() {
               { href: "/5/pattern", emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう" },
               { href: "/5/hiragana", emoji: "🔤", title: "ひらがな", desc: "言葉の理解を深めよう" },
               { href: "/5/nakamawake", emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう" },
+              { href: "/5/kurabekko", emoji: "⚖️", title: "くらべっこ問題", desc: "3つを比べる力を育てよう" },
+              { href: "/5/nakamahazure", emoji: "🔀", title: "なかまはずれ問題", desc: "ちがうものを見つけよう" },
+              { href: "/5/moji", emoji: "📖", title: "もじの読み解き問題", desc: "文章を読んで答えよう" },
             ],
           },
           {
@@ -438,6 +443,10 @@ export default function Home() {
               { href: "/6/pattern", emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう" },
               { href: "/6/hiragana", emoji: "🔤", title: "ひらがな", desc: "読み書きの力を育てよう" },
               { href: "/6/nakamawake", emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう" },
+              { href: "/6/kurabekko", emoji: "⚖️", title: "くらべっこ問題", desc: "数の差や単位を考えよう" },
+              { href: "/6/nakamahazure", emoji: "🔀", title: "なかまはずれ問題", desc: "理由を考えて見つけよう" },
+              { href: "/6/moji", emoji: "📖", title: "もじの読み解き問題", desc: "文章題を読んで答えよう" },
+              { href: "/6/tokei", emoji: "🕐", title: "とけいの問題", desc: "時計の読み方を学ぼう" },
             ],
           },
         ].map((group) => (

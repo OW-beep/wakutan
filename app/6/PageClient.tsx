@@ -18,6 +18,10 @@ export default function PageClient() {
   const pattern = getDailyQuestions(data.pattern, 2, seed + 200);
   const hiragana = getDailyQuestions(data.hiragana, 2, seed + 300);
   const nakamawake = getDailyQuestions(data.nakamawake, 2, seed + 400);
+  const kurabekko = getDailyQuestions(data.kurabekko, 1, seed + 500);
+  const nakamahazure = getDailyQuestions(data.nakamahazure, 1, seed + 600);
+  const moji = getDailyQuestions(data.moji, 1, seed + 700);
+  const tokei = getDailyQuestions(data.tokei, 1, seed + 800);
 
   const questions = [
     ...sansu,
@@ -25,6 +29,10 @@ export default function PageClient() {
     ...pattern,
     ...hiragana,
     ...nakamawake,
+    ...kurabekko,
+    ...nakamahazure,
+    ...moji,
+    ...tokei,
   ];
 
   return (
