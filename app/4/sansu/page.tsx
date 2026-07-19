@@ -48,6 +48,23 @@ export default function Page() {
           accentButton="bg-orange-500"
         />
 
+
+        <div className="mt-10 bg-white rounded-3xl shadow p-8">
+
+          <h2 className="text-2xl font-bold mb-4">
+            👨‍👩‍👧 保護者の方へ
+          </h2>
+
+          <p className="leading-8">
+            数を数える経験や、簡単なたし算に触れることは、算数の土台となる「数の感覚」を育てます。正解できるかどうかより、指を使って数えたり、絵を見て考えたりする過程を大切にしてあげてください。
+          </p>
+
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            算数的な考え方は、いきなり得意になるものではなく、具体物を数えたり比べたりする経験の積み重ねで少しずつ育っていくとされています。答えの正確さよりも、「どう考えたか」を聞いてあげることが理解を深めます。
+          </p>
+
+        </div>
+
       </div>
 
     </main>

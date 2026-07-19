@@ -47,6 +47,23 @@ export default function Page() {
           accentButton="bg-pink-500"
         />
 
+
+        <div className="mt-10 bg-white rounded-3xl shadow p-8">
+
+          <h2 className="text-2xl font-bold mb-4">
+            👨‍👩‍👧 保護者の方へ
+          </h2>
+
+          <p className="leading-8">
+            ひらがなへの興味は、子どもによって芽生えるタイミングが大きく異なります。読めなくても焦らず、絵本や身の回りの文字に触れる機会を増やしてあげましょう。
+          </p>
+
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            文字の読み書きは、音と文字を結びつける「音韻認識」という力の発達と関わりが深いとされています。読めない・書けない時期があっても、それは発達の途中段階であることがほとんどです。
+          </p>
+
+        </div>
+
       </div>
 
     </main>

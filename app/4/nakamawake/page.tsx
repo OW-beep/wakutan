@@ -47,6 +47,23 @@ export default function Page() {
           accentButton="bg-green-500"
         />
 
+
+        <div className="mt-10 bg-white rounded-3xl shadow p-8">
+
+          <h2 className="text-2xl font-bold mb-4">
+            👨‍👩‍👧 保護者の方へ
+          </h2>
+
+          <p className="leading-8">
+            仲間分けの問題は、物事を分類して整理する力を育てます。間違えた分類も、その子なりの理由があることが多いので、「どうしてそう思ったの？」と聞いてみるのもおすすめです。
+          </p>
+
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            物事を分類する力は、心理学で「カテゴリー化」と呼ばれ、情報を整理して考えるための基礎的な認知能力の一つとされています。間違えた分類も、その子なりの理由があることが多いので、理由を聞いてみるのもおすすめです。
+          </p>
+
+        </div>
+
       </div>
 
     </main>

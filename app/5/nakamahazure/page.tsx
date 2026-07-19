@@ -70,6 +70,10 @@ export default function Page() {
             まぎらわしい問題も出てきますが、間違えても「どうしてそう思ったの？」と一緒に考える時間を大切にしましょう。
           </p>
 
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            仲間はずれを見つける力は、複数の情報を同時に比較して判断する「実行機能」という力とも関わりがあるとされています。すぐに正解が出なくても、選択肢を一つずつ確認していく過程が力になります。
+          </p>
+
         </div>
 
         <div className="mt-8 text-center">

@@ -70,6 +70,10 @@ export default function Page() {
             5歳はひらがなの読み書きが伸びる時期です。焦らず、絵本や生活の中の文字にも一緒に注目してみましょう。
           </p>
 
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            文字の読み書きは、音と文字を結びつける「音韻認識」という力の発達と関わりが深いとされています。読めない・書けない時期があっても、それは発達の途中段階であることがほとんどです。
+          </p>
+
         </div>
 
         <div className="mt-8 text-center">

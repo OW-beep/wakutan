@@ -70,6 +70,10 @@ export default function Page() {
             6歳は読み書きへの自信がつく時期です。間違いを指摘しすぎず、「読めたね」「書けたね」と成功体験を積み重ねましょう。
           </p>
 
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            文字の読み書きは、音と文字を結びつける「音韻認識」という力の発達と関わりが深いとされています。読めない・書けない時期があっても、それは発達の途中段階であることがほとんどです。
+          </p>
+
         </div>
 
         <div className="mt-8 text-center">

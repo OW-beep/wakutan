@@ -75,6 +75,10 @@ export default function Page() {
             「考えようとする姿勢」を大切にほめてあげてください。
           </p>
 
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            算数的な考え方は、いきなり得意になるものではなく、具体物を数えたり比べたりする経験の積み重ねで少しずつ育っていくとされています。答えの正確さよりも、「どう考えたか」を聞いてあげることが理解を深めます。
+          </p>
+
         </div>
 
         <div className="mt-8 text-center">

@@ -48,6 +48,23 @@ export default function Page() {
           accentButton="bg-blue-500"
         />
 
+
+        <div className="mt-10 bg-white rounded-3xl shadow p-8">
+
+          <h2 className="text-2xl font-bold mb-4">
+            👨‍👩‍👧 保護者の方へ
+          </h2>
+
+          <p className="leading-8">
+            順番やきまりを考える問題は、論理的に考える力の土台になります。すぐに答えが浮かばなくても、一緒に声に出して確認しながら、考える過程を楽しんでみてください。
+          </p>
+
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            規則性を見つける力は、心理学でいう「パターン認識」の一種で、算数だけでなく読み書きなど幅広い学習の土台になるとされています。すぐに答えが浮かばなくても、声に出して規則を確認する時間を大切にしてください。
+          </p>
+
+        </div>
+
       </div>
 
     </main>

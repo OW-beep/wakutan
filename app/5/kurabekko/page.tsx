@@ -70,6 +70,10 @@ export default function Page() {
             3つを比べる問題は少し難しく感じるかもしれません。1つずつ順番に比べていく方法を一緒に確認してあげましょう。
           </p>
 
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            比べる力は、算数における「量の保存」や「順序」の理解につながる重要な力です。実際にものを並べて数えたり、手で触れて確かめたりする経験が、こうした感覚を育てる助けになります。
+          </p>
+
         </div>
 
         <div className="mt-8 text-center">

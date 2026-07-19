@@ -49,6 +49,23 @@ export default function Page() {
           accentButton="bg-purple-500"
         />
 
+
+        <div className="mt-10 bg-white rounded-3xl shadow p-8">
+
+          <h2 className="text-2xl font-bold mb-4">
+            👨‍👩‍👧 保護者の方へ
+          </h2>
+
+          <p className="leading-8">
+            繰り返しのパターンを見つける問題は、規則性に気づく力を育てます。「次はどうなるかな？」と一緒に予想しながら取り組むと、より楽しく学べます。
+          </p>
+
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            繰り返しのパターンに気づく力は、予測する力や論理的に考える力の基礎になるといわれています。答えを急がせず、「次はどうなりそう?」と一緒に考える過程を楽しんでみてください。
+          </p>
+
+        </div>
+
       </div>
 
     </main>

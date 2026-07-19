@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import ClockFace from "./ClockFace";
 
 type Question = {
   genre: string;
   question: string;
   answer: string;
   explanation: string;
+  clock?: { hour: number; minute: number };
 };
 
 type Props = {
@@ -48,6 +50,12 @@ export default function QuestionList({
             <div className={`font-bold mb-2 ${accentText}`}>
               問題 {index + 1}
             </div>
+
+            {q.clock && (
+              <div className="flex justify-center mb-3">
+                <ClockFace hour={q.clock.hour} minute={q.clock.minute} />
+              </div>
+            )}
 
             <div className="text-lg mb-2">
               {q.question}

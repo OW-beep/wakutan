@@ -70,6 +70,10 @@ export default function Page() {
             単位の変換（1m=100cmなど）が出てくる問題もあります。難しい場合は一緒に確認しながら進めましょう。
           </p>
 
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            比べる力は、算数における「量の保存」や「順序」の理解につながる重要な力です。実際にものを並べて数えたり、手で触れて確かめたりする経験が、こうした感覚を育てる助けになります。
+          </p>
+
         </div>
 
         <div className="mt-8 text-center">

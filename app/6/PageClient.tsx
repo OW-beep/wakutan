@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { generate6Questions } from "../data/generate6";
 import { getDailyQuestions } from "../data/getDailyQuestions";
+import ClockFace from "../components/ClockFace";
 
 export default function PageClient() {
   const [showAnswer, setShowAnswer] = useState(false);
@@ -81,6 +82,12 @@ export default function PageClient() {
               <div className="text-lg font-bold mb-2 text-indigo-600">
                 {q.genre}
               </div>
+
+              {q.clock && (
+                <div className="flex justify-center mb-2">
+                  <ClockFace hour={q.clock.hour} minute={q.clock.minute} />
+                </div>
+              )}
 
               <div className="text-xl leading-8">
                 {index + 1}. {q.question}

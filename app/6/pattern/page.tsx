@@ -70,6 +70,10 @@ export default function Page() {
             パターン問題に慣れてきたら、「自分でも問題を作ってみる」のもおすすめです。理解がより深まります。
           </p>
 
+          <p className="leading-8 mt-3 text-sm text-gray-600">
+            繰り返しのパターンに気づく力は、予測する力や論理的に考える力の基礎になるといわれています。答えを急がせず、「次はどうなりそう?」と一緒に考える過程を楽しんでみてください。
+          </p>
+
         </div>
 
         <div className="mt-8 text-center">
