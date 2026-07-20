@@ -247,6 +247,10 @@ export default function Page() {
 
         </div>
 
+        <div className="text-xs text-gray-400 mt-4 text-right">
+          公開日：2026年3月
+        </div>
+
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">

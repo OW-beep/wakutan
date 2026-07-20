@@ -17,38 +17,35 @@ export default function Home() {
     <main>
 
       {/* ヒーロー */}
-      <section className="max-w-6xl mx-auto px-6 py-12">
+      <section className="max-w-6xl mx-auto px-6 py-6">
 
-        <div className="relative bg-gradient-to-r from-yellow-100 to-orange-100 rounded-3xl p-10 shadow-lg overflow-hidden">
+        <div className="relative bg-gradient-to-r from-yellow-100 to-orange-100 rounded-3xl px-8 py-6 shadow-lg overflow-hidden">
 
-          <span className="wt-sparkle absolute top-6 right-10 text-3xl select-none" aria-hidden="true">✨</span>
-          <span className="wt-sparkle absolute top-20 right-24 text-xl select-none" aria-hidden="true">⭐</span>
-          <span className="wt-sparkle absolute bottom-8 right-14 text-2xl select-none" aria-hidden="true">✨</span>
+          <span className="wt-sparkle absolute top-4 right-8 text-2xl select-none" aria-hidden="true">✨</span>
+          <span className="wt-sparkle absolute top-14 right-20 text-lg select-none" aria-hidden="true">⭐</span>
+          <span className="wt-sparkle absolute bottom-4 right-10 text-xl select-none" aria-hidden="true">✨</span>
 
-          <div className="wt-float inline-block wt-icon-badge bg-white w-20 h-20 text-5xl shadow-md mb-4">
-            🌈
+          <div className="flex items-center gap-4 mb-3">
+            <div className="wt-float wt-icon-badge bg-white w-12 h-12 text-2xl shadow-md shrink-0">
+              🌈
+            </div>
+
+            <div>
+              <h1 className="text-3xl font-extrabold text-orange-700 leading-tight">
+                わくたん
+              </h1>
+              <p className="text-base text-orange-800">
+                ～わくわくたんけんたい👷～
+              </p>
+            </div>
           </div>
 
-          <h1 className="text-5xl font-extrabold text-orange-700 mb-4">
-            わくたん
-          </h1>
-
-          <p className="text-2xl mb-4">
-            ～わくわくたんけんたい👷～
+          <p className="text-xl font-bold leading-snug mb-2">
+            4〜6歳の「考える力」を育てる無料知育ドリル
           </p>
 
-          <p className="text-2xl font-bold leading-relaxed mb-4">
-            4〜6歳の「考える力」を育てる<br />
-            無料知育ドリル
-          </p>
-
-          <p className="text-lg leading-8">
-            算数・論理・パターン認識・ひらがなを、
-            毎日10問、印刷して楽しく学べます。
-          </p>
-
-          <p className="text-lg leading-8 mt-2">
-            家庭学習を無理なく続けられるよう、
+          <p className="text-base leading-7">
+            算数・論理・パターン認識・ひらがなを毎日10問、印刷して楽しく学べます。
             年齢別・カテゴリ別に幅広いジャンルのオリジナル問題を無料で公開しています。
           </p>
 
@@ -630,7 +627,7 @@ export default function Home() {
       {/* 保護者の方へ */}
       <section className="max-w-4xl mx-auto px-6 pb-20">
 
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl shadow p-8">
+        <div className="bg-white rounded-3xl shadow p-8 border-t-4 border-blue-300">
 
           <h2 className="text-3xl font-bold mb-4">
             👨‍👩‍👧 保護者の方へ

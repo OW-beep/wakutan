@@ -150,6 +150,30 @@ const articles = [
     title: "幼児の家庭学習でやってはいけないこと5つ",
     desc: "よくある失敗パターンから学ぼう",
   },
+  {
+    href: "/blog/morning-routine",
+    emoji: "🌅",
+    title: "幼児の朝の準備をスムーズにする工夫",
+    desc: "バタバタの朝を少しでも穏やかに",
+  },
+  {
+    href: "/blog/age-gap-siblings",
+    emoji: "👨‍👩‍👧‍👦",
+    title: "きょうだいで学年差がある場合の家庭学習",
+    desc: "それぞれのペースを大切に両立する",
+  },
+  {
+    href: "/blog/tablet-vs-paper",
+    emoji: "📱",
+    title: "タブレット学習と紙のドリル、どう使い分ける？",
+    desc: "それぞれの良さを知って使い分けよう",
+  },
+  {
+    href: "/blog/almost-can-do",
+    emoji: "🎯",
+    title: "「あと少しでできそう」を見極めるコツ",
+    desc: "ちょうどいい難易度の選び方",
+  },
 ];
 
 export default function Page() {

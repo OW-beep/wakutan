@@ -85,6 +85,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/study-mistakes",
     "/blog/skills-by-age",
 
+    "/blog/morning-routine",
+    "/blog/age-gap-siblings",
+    "/blog/tablet-vs-paper",
+    "/blog/almost-can-do",
+
     "/blog/4year-hiragana",
     "/blog/4year-number",
     "/blog/4year-study-time",

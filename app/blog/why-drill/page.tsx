@@ -218,7 +218,7 @@ export default function Page() {
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 mt-8 text-sm text-gray-500">
-          <p>最終更新日：2026年7月</p>
+          <p>公開日：2026年3月　/　最終更新日：2026年7月</p>
           <p className="mt-1">
             本記事はわくたん運営者が、日々の問題作成を通じて感じたことをもとにまとめています。
           </p>
