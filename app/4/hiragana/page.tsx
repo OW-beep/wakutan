@@ -7,7 +7,7 @@ import { getDailyQuestions } from "../../data/getDailyQuestions";
 export const metadata = {
   title: "4歳向けひらがな｜わくたん",
   description:
-    "4歳向け無料ひらがな練習。なかま分けを通して読み書きの力を育てます。無料で印刷OK。",
+    "4歳向け無料ひらがな練習。絵を見て正しい言葉を選ぶ、読みの力を育てる問題です。無料で印刷OK。",
   alternates: {
     canonical: "/4/hiragana",
   },
@@ -40,7 +40,7 @@ export default function Page() {
           </h1>
 
           <p className="leading-8">
-            ひらがなの読み・形の認識・言葉の理解を育てる問題です。
+            絵を見て、正しい言葉を選ぶ問題です。ひらがなを読む力を育てます。
           </p>
 
           <p className="leading-8 mt-3 text-pink-600 font-bold">
