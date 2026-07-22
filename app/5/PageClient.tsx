@@ -21,6 +21,7 @@ export default function PageClient() {
   const kurabekko = getDailyQuestions(data.kurabekko, 1, seed + 500);
   const nakamahazure = getDailyQuestions(data.nakamahazure, 1, seed + 600);
   const moji = getDailyQuestions(data.moji, 1, seed + 700);
+  const nazonazo = getDailyQuestions(data.nazonazo, 1, seed + 900);
 
   const questions = [
     ...sansu,
@@ -31,6 +32,7 @@ export default function PageClient() {
     ...kurabekko,
     ...nakamahazure,
     ...moji,
+    ...nazonazo,
   ];
 
   return (

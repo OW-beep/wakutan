@@ -30,6 +30,7 @@ export default function PageClient() {
 
     data.kurabekko[seed % data.kurabekko.length],
     data.nakamahazure[seed % data.nakamahazure.length],
+    data.nazonazo[seed % data.nazonazo.length],
   ];
 
   return (
