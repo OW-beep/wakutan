@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-title: "4歳の学び方",
+title: "4歳の学び方・勉強のコツ｜わくたん",
 description:
-"4歳児におすすめの学び方を解説。遊びと学習を両立しながら考える力を育てるコツを紹介します。",
+  "4歳児の勉強・学び方のコツを解説。遊びと学習を両立しながら考える力を育てる関わり方を紹介します。",
 };
 
 export default function Page() {

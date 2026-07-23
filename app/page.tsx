@@ -566,7 +566,7 @@ export default function Home() {
       </section>
 
       {/* わくたんとは？ */}
-      <section className="max-w-4xl mx-auto px-6 pb-10">
+      <section className="max-w-4xl mx-auto px-6 mb-14">
 
         <div className="bg-white rounded-3xl shadow p-8">
 
@@ -628,7 +628,7 @@ export default function Home() {
       </section>
 
       {/* 保護者の方へ */}
-      <section className="max-w-4xl mx-auto px-6 pb-20">
+      <section className="max-w-4xl mx-auto px-6 mb-14">
 
         <div className="bg-white rounded-3xl shadow p-8 border-t-4 border-blue-300">
 
@@ -691,7 +691,7 @@ export default function Home() {
       </section>
 
       {/* 身につく力 */}
-      <section className="max-w-6xl mx-auto px-6 mb-14">
+      <section className="max-w-4xl mx-auto px-6 mb-14">
 
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl shadow p-8">
 

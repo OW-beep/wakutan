@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "5歳の学び方",
+  title: "5歳の学び方・勉強のコツ｜わくたん",
   description:
-    "5歳児におすすめの学び方を解説。考える力や集中力を育てながら楽しく学習するコツを紹介します。",
+    "5歳児の勉強・学び方のコツを解説。考える力や集中力を育てながら楽しく学習する関わり方を紹介します。",
 };
 
 export default function Page() {
