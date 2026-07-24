@@ -90,6 +90,38 @@ export default function Page() {
           保護者の方が隣にいてくれるだけで、子どもは安心して挑戦できるものです。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          シーン別・声かけの言い換え例
+        </h2>
+
+        <p className="leading-8 mb-4">
+          実際の生活の場面で使いやすい、言い換えの例をいくつか紹介します。
+        </p>
+
+        <div className="bg-white border rounded-2xl p-5 mb-4">
+          <p className="font-bold mb-2">🏠 ドリルになかなか取りかからないとき</p>
+          <p className="text-red-600">NG例：「早くやって！何回言わせるの」</p>
+          <p className="text-green-700 mt-1">OK例：「あと1問だけ、一緒にやろうか」</p>
+        </div>
+
+        <div className="bg-white border rounded-2xl p-5 mb-4">
+          <p className="font-bold mb-2">🛒 スーパーでお菓子を選んでいるとき</p>
+          <p className="text-red-600">NG例：「早く決めて、他のお客さんの迷惑でしょ」</p>
+          <p className="text-green-700 mt-1">OK例：「どっちにするか、2つから選んでみようか」</p>
+        </div>
+
+        <div className="bg-white border rounded-2xl p-5 mb-4">
+          <p className="font-bold mb-2">✏️ 問題を間違えたとき</p>
+          <p className="text-red-600">NG例：「なんでこんな簡単なのが分からないの」</p>
+          <p className="text-green-700 mt-1">OK例：「どこまで考えたか、一緒に見てみようか」</p>
+        </div>
+
+        <div className="bg-white border rounded-2xl p-5 mb-6">
+          <p className="font-bold mb-2">🍪 おやつの時間に「もっと食べたい」と言われたとき</p>
+          <p className="text-red-600">NG例：「ダメって言ったらダメ！」</p>
+          <p className="text-green-700 mt-1">OK例：「今日はここまで。明日もあるから楽しみにしようね」</p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

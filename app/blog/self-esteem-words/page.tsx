@@ -70,6 +70,22 @@ export default function Page() {
           他の子と比べるのではなく、「前よりできるようになったね」とその子自身の成長に注目することが、自己肯定感を育てる声かけの基本です。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          場面別の声かけ例
+        </h2>
+
+        <div className="bg-white border rounded-2xl p-5 mb-4">
+          <p className="font-bold mb-2">🛒 スーパーでお菓子を1つだけ選べたとき</p>
+          <p className="text-red-600">NG例：「ちゃんと選べて当たり前でしょ」</p>
+          <p className="text-green-700 mt-1">OK例：「1つだけって、自分でちゃんと決められたね」</p>
+        </div>
+
+        <div className="bg-white border rounded-2xl p-5 mb-6">
+          <p className="font-bold mb-2">✏️ ドリルで間違えてしまったとき</p>
+          <p className="text-red-600">NG例：「なんで間違えたの、もっとよく見て」</p>
+          <p className="text-green-700 mt-1">OK例：「ここまで自分で考えられたね。ここだけ一緒に見てみようか」</p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

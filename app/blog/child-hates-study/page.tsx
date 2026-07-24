@@ -82,6 +82,22 @@ export default function Page() {
           保護者の方が無意識のうちに完璧を求めてしまうと、子どもはそのプレッシャーを敏感に感じ取ります。「間違えても大丈夫」という空気づくりが大切です。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          場面別の声かけ例
+        </h2>
+
+        <div className="bg-white border rounded-2xl p-5 mb-4">
+          <p className="font-bold mb-2">✏️ ドリルを嫌がって泣いてしまったとき</p>
+          <p className="text-red-600">NG例：「泣いてもやるものはやるの」</p>
+          <p className="text-green-700 mt-1">OK例：「今日はここまでにしようか。また明日やってみよう」</p>
+        </div>
+
+        <div className="bg-white border rounded-2xl p-5 mb-6">
+          <p className="font-bold mb-2">🍪 おやつの前にドリルをやりたがらないとき</p>
+          <p className="text-red-600">NG例：「終わらせないとおやつなし」</p>
+          <p className="text-green-700 mt-1">OK例：「おやつの前に1問だけ挑戦してみる？」</p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

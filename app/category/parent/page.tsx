@@ -198,6 +198,24 @@ const articles = [
     title: "自己肯定感を育てる声かけ",
     desc: "「すごいね」だけじゃない伝え方",
   },
+  {
+    href: "/blog/4year-drill-refusal",
+    emoji: "😣",
+    title: "4歳児がドリルを嫌がるときの対処法",
+    desc: "この時期ならではの理由と工夫",
+  },
+  {
+    href: "/blog/5year-number-weak",
+    emoji: "🔢",
+    title: "5歳で数が苦手なとき、家庭でできること",
+    desc: "数の「感覚」から育てよう",
+  },
+  {
+    href: "/blog/6year-prep-timeline",
+    emoji: "🗓️",
+    title: "小学校入学準備、いつ何をすればいい？",
+    desc: "月ごとの目安をタイムラインで紹介",
+  },
 ];
 
 export default function Page() {

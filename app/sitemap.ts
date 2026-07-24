@@ -101,6 +101,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/shopping-play-benefits",
     "/blog/self-esteem-words",
 
+    "/blog/4year-drill-refusal",
+    "/blog/5year-number-weak",
+    "/blog/6year-prep-timeline",
+
     "/blog/4year-hiragana",
     "/blog/4year-number",
     "/blog/4year-study-time",
