@@ -99,6 +99,18 @@ const learningArticles = [
     title: "「あと少しでできそう」を見極めるコツ",
     desc: "ちょうどいい難易度の選び方",
   },
+  {
+    href: "/blog/money-education-age",
+    emoji: "💰",
+    title: "子どものお金の教育は何歳から？",
+    desc: "まずは「見せる」ことから始めよう",
+  },
+  {
+    href: "/blog/allowance-timing",
+    emoji: "👛",
+    title: "お小遣い、いつから始める？",
+    desc: "幼児期にできる準備段階",
+  },
 ];
 
 const japaneseArticles = [
@@ -140,6 +152,12 @@ const playArticles = [
     emoji: "🧠",
     title: "パズル遊びで育つ力",
     desc: "論理的思考を育てよう",
+  },
+  {
+    href: "/blog/shopping-play-benefits",
+    emoji: "🛒",
+    title: "買い物ごっこで育つ力",
+    desc: "算数とコミュニケーションの練習に",
   },
 ];
 
@@ -203,6 +221,12 @@ const parentArticles = [
     emoji: "👨‍👩‍👧‍👦",
     title: "きょうだいで学年差がある場合の家庭学習",
     desc: "それぞれのペースを大切に両立する",
+  },
+  {
+    href: "/blog/self-esteem-words",
+    emoji: "🌼",
+    title: "自己肯定感を育てる声かけ",
+    desc: "「すごいね」だけじゃない伝え方",
   },
 ];
 

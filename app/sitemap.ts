@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/4/kurabekko",
     "/4/nakamahazure",
     "/4/nazonazo",
+    "/4/okane",
 
     "/5/sansu",
     "/5/ronri",
@@ -28,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/5/nakamahazure",
     "/5/moji",
     "/5/nazonazo",
+    "/5/okane",
 
     "/6/sansu",
     "/6/ronri",
@@ -39,6 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/6/moji",
     "/6/tokei",
     "/6/nazonazo",
+    "/6/okane",
 
     "/about",
     "/articles",
@@ -92,6 +95,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/age-gap-siblings",
     "/blog/tablet-vs-paper",
     "/blog/almost-can-do",
+
+    "/blog/money-education-age",
+    "/blog/allowance-timing",
+    "/blog/shopping-play-benefits",
+    "/blog/self-esteem-words",
 
     "/blog/4year-hiragana",
     "/blog/4year-number",

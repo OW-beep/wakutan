@@ -174,6 +174,30 @@ const articles = [
     title: "「あと少しでできそう」を見極めるコツ",
     desc: "ちょうどいい難易度の選び方",
   },
+  {
+    href: "/blog/money-education-age",
+    emoji: "💰",
+    title: "子どものお金の教育は何歳から？",
+    desc: "まずは「見せる」ことから始めよう",
+  },
+  {
+    href: "/blog/allowance-timing",
+    emoji: "👛",
+    title: "お小遣い、いつから始める？",
+    desc: "幼児期にできる準備段階",
+  },
+  {
+    href: "/blog/shopping-play-benefits",
+    emoji: "🛒",
+    title: "買い物ごっこで育つ力",
+    desc: "算数とコミュニケーションの練習に",
+  },
+  {
+    href: "/blog/self-esteem-words",
+    emoji: "🌼",
+    title: "自己肯定感を育てる声かけ",
+    desc: "「すごいね」だけじゃない伝え方",
+  },
 ];
 
 export default function Page() {
