@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ClockFace from "./ClockFace";
+import MoneyIllustration from "./MoneyIllustration";
 
 type Question = {
   genre: string;
@@ -9,6 +10,7 @@ type Question = {
   answer: string;
   explanation: string;
   clock?: { hour: number; minute: number };
+  money?: { value: number; count: number }[];
 };
 
 type Props = {
@@ -56,6 +58,8 @@ export default function QuestionList({
                 <ClockFace hour={q.clock.hour} minute={q.clock.minute} />
               </div>
             )}
+
+            {q.money && <MoneyIllustration items={q.money} />}
 
             <div className="text-lg mb-2">
               {q.question}

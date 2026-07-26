@@ -1,8 +1,11 @@
+import { parseMoney } from "./moneyParser";
+
 type Question = {
   genre: string;
   question: string;
   answer: string;
   explanation: string;
+  money?: { value: number; count: number }[];
 };
 
 export function generate4Questions() {
@@ -119,7 +122,7 @@ export function generate4Questions() {
   }
 
   // ====================
-  // ひらがな（なかま）－ たんごをきいてカテゴリをこたえる（もっともやさしい形）
+  // ひらがな（なかま）－ たんごをきいてカテゴリをこたえる（もっともやさしいかたち）
   // ====================
   const words = [
     { w: "りんご", emoji: "🍎", choices: ["りんご", "ばなな", "ねこ"] },
@@ -336,6 +339,7 @@ export function generate4Questions() {
         question: t[0],
         answer: t[1],
         explanation: t[2],
+        money: parseMoney(t[0]),
       });
     });
   }
