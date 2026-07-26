@@ -1,55 +1,62 @@
+/**
+ * 1日ぶんの問題をきまった数だけえらぶ。
+ *
+ * もんだいの元データは「20問ぶんのベースを何周も繰り返してかさ増し」した配列に
+ * なっていることが多いので、そのまま固定の間隔（jump）でインデックスを拾うと
+ * 同じ問題文が1ページの中に何度も出てきてしまう（例: 6歳おかね問題で
+ * 「120円のパンを4つ…」が1ページに4回出る、など）。
+ *
+ * そこで、まず問題文（question があればそれ、なければ内容全体）で重複を取りのぞき、
+ * そのユニークな配列を「日付をシードにした乱数」でシャッフルしてから先頭 count 件を返す。
+ * 同じ日なら常に同じ並びになり、日が変われば並びが変わる。
+ */
 export function getDailyQuestions<T>(
   items: T[],
   count = 20,
   offset = 0
 ): T[] {
-
   const seed =
-    Math.floor(
-      Date.now() /
-      (1000 * 60 * 60 * 24)
-    ) + offset;
+    Math.floor(Date.now() / (1000 * 60 * 60 * 24)) + offset;
 
-  const jumps = [
-    0,
-    17,
-    31,
-    53,
-    71,
-    97,
-    113,
-    137,
-    151,
-    173,
-    191,
-    211,
-    233,
-    257,
-    281,
-    307,
-    331,
-    353,
-    379,
-    401,
-    431,
-    457,
-    487,
-    521,
-    557,
-    593,
-    631,
-    673,
-    719,
-    761,
-  ];
+  // 内容が同じ問題は1つにまとめる
+  const seen = new Set<string>();
+  const unique: T[] = [];
+  for (const item of items) {
+    const key =
+      item && typeof item === "object" && "question" in (item as object)
+        ? String((item as unknown as { question: unknown }).question)
+        : JSON.stringify(item);
 
-  return jumps
-    .slice(0, count)
-    .map(
-      jump =>
-        items[
-          (seed + jump) %
-          items.length
-        ]
-    );
+    if (!seen.has(key)) {
+      seen.add(key);
+      unique.push(item);
+    }
+  }
+
+  const pool = unique.length > 0 ? unique : items;
+
+  // シード付きの簡易な乱数（同じ seed なら毎回同じ結果になる）
+  let state = seed;
+  const nextRandom = () => {
+    state = (state * 9301 + 49297) % 233280;
+    return state / 233280;
+  };
+
+  // Fisher–Yatesシャッフル
+  const shuffled = [...pool];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(nextRandom() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  if (shuffled.length >= count) {
+    return shuffled.slice(0, count);
+  }
+
+  // ユニークな問題数が足りないときだけ、シャッフル済みの並びを繰り返して埋める
+  const result: T[] = [];
+  for (let i = 0; i < count; i++) {
+    result.push(shuffled[i % shuffled.length]);
+  }
+  return result;
 }
