@@ -84,11 +84,17 @@ function Bill({ value, size = 70 }: { value: number; size?: number }) {
   );
 }
 
+// 実在する硬貨・お札ならその形、そうでなければ安全なフォールバック表示にする
+// （役割の判定に関わらず、金額の表示はすべてここを通す）
+function MoneyShape({ value }: { value: number }) {
+  if (REAL_COIN_VALUES.has(value)) return <Coin value={value} />;
+  if (REAL_BILL_VALUES.has(value)) return <Bill value={value} />;
+  return <GenericAmount value={value} count={1} />;
+}
+
 // 「はらう お金」は、コイン／お札の上に手のイラストと矢印を added して、
 // 「これを だす」という動きが伝わるようにする。
 function PaidMoney({ value, count }: { value: number; count: number }) {
-  const isBill = REAL_BILL_VALUES.has(value);
-
   return (
     <div className="flex items-center gap-1">
       <span className="text-2xl" role="img" aria-label="てで だす">
@@ -97,7 +103,9 @@ function PaidMoney({ value, count }: { value: number; count: number }) {
       <span className="text-xl text-gray-400">→</span>
       <div className="flex flex-wrap justify-center gap-1">
         {Array.from({ length: count }).map((_, j) => (
-          <div key={j}>{isBill ? <Bill value={value} /> : <Coin value={value} />}</div>
+          <div key={j}>
+            <MoneyShape value={value} />
+          </div>
         ))}
       </div>
     </div>
@@ -178,31 +186,13 @@ export default function MoneyIllustration({ items }: Props) {
 
         // 役割がはっきりしない（単純な合計・比較など）ときは、
         // 実在する硬貨・お札ならそのまま、そうでなければ安全なフォールバック表示にする
-        if (REAL_COIN_VALUES.has(item.value)) {
-          return (
-            <div key={i} className="flex flex-wrap justify-center gap-1">
-              {Array.from({ length: item.count }).map((_, j) => (
-                <div key={j}>
-                  <Coin value={item.value} />
-                </div>
-              ))}
-            </div>
-          );
-        }
-        if (REAL_BILL_VALUES.has(item.value)) {
-          return (
-            <div key={i} className="flex flex-wrap justify-center gap-1">
-              {Array.from({ length: item.count }).map((_, j) => (
-                <div key={j}>
-                  <Bill value={item.value} />
-                </div>
-              ))}
-            </div>
-          );
-        }
         return (
-          <div key={i}>
-            <GenericAmount value={item.value} count={item.count} />
+          <div key={i} className="flex flex-wrap justify-center gap-1">
+            {Array.from({ length: item.count }).map((_, j) => (
+              <div key={j}>
+                <MoneyShape value={item.value} />
+              </div>
+            ))}
           </div>
         );
       })}
