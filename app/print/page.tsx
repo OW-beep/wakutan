@@ -1,5 +1,12 @@
 import Link from "next/link";
 
+export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
 export default function PrintPage() {
   return (
     <main className="min-h-screen p-6">

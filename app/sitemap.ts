@@ -50,7 +50,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/category/parent",
 
     "/contact",
-    "/print",
     "/privacy-policy",
     "/terms",
 
