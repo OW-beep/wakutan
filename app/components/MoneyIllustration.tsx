@@ -1,7 +1,10 @@
+import { ITEM_EMOJI } from "../data/moneyParser";
+
 type MoneyChip = {
   value: number;
   count: number;
   role?: "price" | "paid";
+  item?: string;
 };
 
 type Props = {
@@ -27,8 +30,9 @@ const BILL_STYLE: Record<number, { fill: string; band: string }> = {
 
 const REAL_COIN_VALUES = new Set(Object.keys(COIN_STYLE).map(Number));
 const REAL_BILL_VALUES = new Set(Object.keys(BILL_STYLE).map(Number));
+const DEFAULT_ITEM_EMOJI = "🎁";
 
-function Coin({ value, size = 56 }: { value: number; size?: number }) {
+function Coin({ value, size = 52 }: { value: number; size?: number }) {
   const c = COIN_STYLE[value];
 
   return (
@@ -52,7 +56,7 @@ function Coin({ value, size = 56 }: { value: number; size?: number }) {
   );
 }
 
-function Bill({ value, size = 76 }: { value: number; size?: number }) {
+function Bill({ value, size = 70 }: { value: number; size?: number }) {
   const style = BILL_STYLE[value];
   const width = size;
   const height = size * 0.5;
@@ -80,67 +84,125 @@ function Bill({ value, size = 76 }: { value: number; size?: number }) {
   );
 }
 
-// じっさいの硬貨・お札の金種ではない金額（品物のねだん）は、コインやお札の形にせず
-// 「ねふだ（値札）」の形で表示する。丸い形にしてしまうと「250円玉」のような
-// 実在しない硬貨があるように見えてしまうため、形からはっきり区別する。
-function PriceTag({ value, size = 64 }: { value: number; size?: number }) {
-  const width = size;
-  const height = size * 0.62;
+// 「はらう お金」は、コイン／お札の上に手のイラストと矢印を added して、
+// 「これを だす」という動きが伝わるようにする。
+function PaidMoney({ value, count }: { value: number; count: number }) {
+  const isBill = REAL_BILL_VALUES.has(value);
 
   return (
-    <svg width={width} height={width * 0.62} viewBox="0 0 130 80" role="img" aria-label={`${value}円のねだん`}>
-      <polygon
-        points="45,6 122,6 122,74 45,74 8,40"
-        fill="#eef1f5"
-        stroke="#7c8794"
-        strokeWidth={4}
-        strokeLinejoin="round"
-      />
-      <circle cx={45} cy={40} r={7} fill="white" stroke="#7c8794" strokeWidth={3} />
-      <text x={86} y={35} textAnchor="middle" fontSize={13} fontWeight={700} fill="#4b5563">
-        ¥
-      </text>
-      <text x={86} y={58} textAnchor="middle" fontSize={19} fontWeight={700} fill="#4b5563">
-        {value}
-      </text>
-    </svg>
+    <div className="flex items-center gap-1">
+      <span className="text-2xl" role="img" aria-label="てで だす">
+        ✋
+      </span>
+      <span className="text-xl text-gray-400">→</span>
+      <div className="flex flex-wrap justify-center gap-1">
+        {Array.from({ length: count }).map((_, j) => (
+          <div key={j}>{isBill ? <Bill value={value} /> : <Coin value={value} />}</div>
+        ))}
+      </div>
+    </div>
   );
 }
 
-const ROLE_LABEL: Record<NonNullable<MoneyChip["role"]>, string> = {
+// 品物の「ねだん」は、コインの形にせず、品物そのものの絵文字＋名前＋ねだんで表示する。
+// コインの形にしてしまうと「250円玉」のような実在しない硬貨に見えてしまうため。
+function PriceItem({ value, count, item }: { value: number; count: number; item?: string }) {
+  const emoji = (item && ITEM_EMOJI[item]) || DEFAULT_ITEM_EMOJI;
+
+  return (
+    <div className="flex flex-col items-center">
+      <div className="flex flex-wrap justify-center gap-1 text-4xl leading-none">
+        {Array.from({ length: count }).map((_, j) => (
+          <span key={j} role="img" aria-label={item ?? "しなもの"}>
+            {emoji}
+          </span>
+        ))}
+      </div>
+      {item && <span className="text-xs text-gray-500 mt-1">{item}</span>}
+      <span className="text-sm font-bold text-gray-700">{value}円</span>
+    </div>
+  );
+}
+
+// 役割がはっきりしない金額（実在する硬貨・お札でもない場合）のための、
+// くずれない安全な表示。丸/四角どちらの形にも寄せず、ニュートラルな見た目にする。
+function GenericAmount({ value, count }: { value: number; count: number }) {
+  return (
+    <div className="flex flex-wrap justify-center gap-1">
+      {Array.from({ length: count }).map((_, j) => (
+        <span
+          key={j}
+          className="inline-flex items-center justify-center px-2 py-1 rounded-lg bg-gray-100 border border-gray-300 text-sm font-bold text-gray-600"
+        >
+          {value}円
+        </span>
+      ))}
+    </div>
+  );
+}
+
+const ROLE_LABEL = {
   price: "ねだん",
   paid: "だす おかね",
-};
+} as const;
 
 export default function MoneyIllustration({ items }: Props) {
   if (!items || items.length === 0) return null;
 
   return (
-    <div className="flex flex-wrap justify-center items-stretch gap-3 mb-3">
+    <div className="flex flex-wrap justify-center items-end gap-3 mb-3">
       {items.map((item, i) => {
-        const Shape = REAL_COIN_VALUES.has(item.value)
-          ? Coin
-          : REAL_BILL_VALUES.has(item.value)
-          ? Bill
-          : PriceTag;
+        if (item.role === "price") {
+          return (
+            <div
+              key={i}
+              className="flex flex-col items-center gap-1 px-3 py-2 rounded-xl bg-gray-50 border border-gray-200"
+            >
+              <span className="text-xs font-bold text-gray-500">{ROLE_LABEL.price}</span>
+              <PriceItem value={item.value} count={item.count} item={item.item} />
+            </div>
+          );
+        }
 
-        return (
-          <div
-            key={i}
-            className="flex flex-col items-center gap-1 px-3 py-2 rounded-xl bg-gray-50 border border-gray-200"
-          >
-            {item.role && (
-              <span className="text-xs font-bold text-gray-500">
-                {ROLE_LABEL[item.role]}
-              </span>
-            )}
-            <div className="flex flex-wrap justify-center gap-1">
+        if (item.role === "paid") {
+          return (
+            <div
+              key={i}
+              className="flex flex-col items-center gap-1 px-3 py-2 rounded-xl bg-gray-50 border border-gray-200"
+            >
+              <span className="text-xs font-bold text-gray-500">{ROLE_LABEL.paid}</span>
+              <PaidMoney value={item.value} count={item.count} />
+            </div>
+          );
+        }
+
+        // 役割がはっきりしない（単純な合計・比較など）ときは、
+        // 実在する硬貨・お札ならそのまま、そうでなければ安全なフォールバック表示にする
+        if (REAL_COIN_VALUES.has(item.value)) {
+          return (
+            <div key={i} className="flex flex-wrap justify-center gap-1">
               {Array.from({ length: item.count }).map((_, j) => (
                 <div key={j}>
-                  <Shape value={item.value} />
+                  <Coin value={item.value} />
                 </div>
               ))}
             </div>
+          );
+        }
+        if (REAL_BILL_VALUES.has(item.value)) {
+          return (
+            <div key={i} className="flex flex-wrap justify-center gap-1">
+              {Array.from({ length: item.count }).map((_, j) => (
+                <div key={j}>
+                  <Bill value={item.value} />
+                </div>
+              ))}
+            </div>
+          );
+        }
+        return (
+          <div key={i}>
+            <GenericAmount value={item.value} count={item.count} />
           </div>
         );
       })}

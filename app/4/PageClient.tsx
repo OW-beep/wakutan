@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { generate4Questions } from "../data/generate4";
+import MoneyIllustration from "../components/MoneyIllustration";
+import CubeStack from "../components/CubeStack";
 
 export default function PageClient() {
   const [showAnswer, setShowAnswer] = useState(false);
@@ -32,6 +34,7 @@ export default function PageClient() {
     data.nakamahazure[seed % data.nakamahazure.length],
     data.nazonazo[seed % data.nazonazo.length],
     data.okane[seed % data.okane.length],
+    data.tsumiki[seed % data.tsumiki.length],
   ];
 
   return (
@@ -72,6 +75,14 @@ export default function PageClient() {
               <div className="text-lg font-bold mb-3">
                 {q.genre}
               </div>
+
+              {q.money && <MoneyIllustration items={q.money} />}
+
+              {q.cubes && (
+                <div className="flex justify-center mb-3">
+                  <CubeStack heights={q.cubes} />
+                </div>
+              )}
 
               <div className="text-xl leading-8">
                 {q.question}

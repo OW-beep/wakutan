@@ -1,4 +1,5 @@
 import { parseMoney } from "./moneyParser";
+import { CubeShape, totalCubes, describeCubes } from "./cubeShapes";
 
 type Question = {
   genre: string;
@@ -6,6 +7,7 @@ type Question = {
   answer: string;
   explanation: string;
   money?: { value: number; count: number }[];
+  cubes?: CubeShape;
 };
 
 export function generate4Questions() {
@@ -344,5 +346,32 @@ export function generate4Questions() {
     });
   }
 
-  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, nazonazo, okane };
+  // ====================
+  // つみき（りったいを かぞえる くうかん認知）
+  // 1れつにならんだ タワーだけを使うので、かくれて見えないつみきは出てこない
+  // ====================
+  const tsumikiShapes: CubeShape[] = [];
+  for (let a = 1; a <= 4; a++) {
+    for (let b = 1; b <= 4; b++) {
+      if (a === b) continue;
+      tsumikiShapes.push([[a, b]]);
+    }
+  }
+  for (let a = 1; a <= 2; a++) {
+    for (let b = 1; b <= 2; b++) {
+      for (let c = 1; c <= 2; c++) {
+        tsumikiShapes.push([[a, b, c]]);
+      }
+    }
+  }
+
+  const tsumiki: Question[] = tsumikiShapes.map(shape => ({
+    genre: "🧊 つみき",
+    question: "つみきは ぜんぶで なんこ？",
+    answer: `${totalCubes(shape)}こ`,
+    explanation: describeCubes(shape),
+    cubes: shape,
+  }));
+
+  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, nazonazo, okane, tsumiki };
 }

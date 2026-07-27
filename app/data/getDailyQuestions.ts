@@ -6,9 +6,13 @@
  * 同じ問題文が1ページの中に何度も出てきてしまう（例: 6歳おかね問題で
  * 「120円のパンを4つ…」が1ページに4回出る、など）。
  *
- * そこで、まず問題文（question があればそれ、なければ内容全体）で重複を取りのぞき、
- * そのユニークな配列を「日付をシードにした乱数」でシャッフルしてから先頭 count 件を返す。
+ * そこで、まず問題の中身（オブジェクト全体）で重複を取りのぞき、そのユニークな配列を
+ * 「日付をシードにした乱数」でシャッフルしてから先頭 count 件を返す。
  * 同じ日なら常に同じ並びになり、日が変われば並びが変わる。
+ *
+ * 重複判定はオブジェクト全体のJSONで行う（問題文だけで判定しない）。
+ * 「つみき」問題のように、問題文は同じでもイラストのデータ（cubes など）が
+ * 違えば別問題として扱いたいケースがあるため。
  */
 export function getDailyQuestions<T>(
   items: T[],
@@ -22,10 +26,7 @@ export function getDailyQuestions<T>(
   const seen = new Set<string>();
   const unique: T[] = [];
   for (const item of items) {
-    const key =
-      item && typeof item === "object" && "question" in (item as object)
-        ? String((item as unknown as { question: unknown }).question)
-        : JSON.stringify(item);
+    const key = JSON.stringify(item);
 
     if (!seen.has(key)) {
       seen.add(key);

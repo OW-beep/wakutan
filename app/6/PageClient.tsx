@@ -4,6 +4,8 @@ import { useMemo, useState } from "react";
 import { generate6Questions } from "../data/generate6";
 import { getDailyQuestions } from "../data/getDailyQuestions";
 import ClockFace from "../components/ClockFace";
+import MoneyIllustration from "../components/MoneyIllustration";
+import CubeStack from "../components/CubeStack";
 
 export default function PageClient() {
   const [showAnswer, setShowAnswer] = useState(false);
@@ -25,6 +27,7 @@ export default function PageClient() {
   const tokei = getDailyQuestions(data.tokei, 1, seed + 800);
   const nazonazo = getDailyQuestions(data.nazonazo, 1, seed + 900);
   const okane = getDailyQuestions(data.okane, 1, seed + 1000);
+  const tsumiki = getDailyQuestions(data.tsumiki, 1, seed + 1100);
 
   const questions = [
     ...sansu,
@@ -38,6 +41,7 @@ export default function PageClient() {
     ...tokei,
     ...nazonazo,
     ...okane,
+    ...tsumiki,
   ];
 
   return (
@@ -90,6 +94,14 @@ export default function PageClient() {
               {q.clock && (
                 <div className="flex justify-center mb-2">
                   <ClockFace hour={q.clock.hour} minute={q.clock.minute} />
+                </div>
+              )}
+
+              {q.money && <MoneyIllustration items={q.money} />}
+
+              {q.cubes && (
+                <div className="flex justify-center mb-3">
+                  <CubeStack heights={q.cubes} />
                 </div>
               )}
 

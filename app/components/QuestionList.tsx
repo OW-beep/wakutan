@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ClockFace from "./ClockFace";
 import MoneyIllustration from "./MoneyIllustration";
+import CubeStack from "./CubeStack";
 
 type Question = {
   genre: string;
@@ -11,6 +12,7 @@ type Question = {
   explanation: string;
   clock?: { hour: number; minute: number };
   money?: { value: number; count: number }[];
+  cubes?: number[][];
 };
 
 type Props = {
@@ -60,6 +62,12 @@ export default function QuestionList({
             )}
 
             {q.money && <MoneyIllustration items={q.money} />}
+
+            {q.cubes && (
+              <div className="flex justify-center mb-3">
+                <CubeStack heights={q.cubes} />
+              </div>
+            )}
 
             <div className="text-lg mb-2">
               {q.question}

@@ -3,6 +3,8 @@
 import { useMemo, useState } from "react";
 import { generate5Questions } from "../data/generate5";
 import { getDailyQuestions } from "../data/getDailyQuestions";
+import MoneyIllustration from "../components/MoneyIllustration";
+import CubeStack from "../components/CubeStack";
 
 export default function PageClient() {
   const [showAnswer, setShowAnswer] = useState(false);
@@ -23,6 +25,7 @@ export default function PageClient() {
   const moji = getDailyQuestions(data.moji, 1, seed + 700);
   const nazonazo = getDailyQuestions(data.nazonazo, 1, seed + 900);
   const okane = getDailyQuestions(data.okane, 1, seed + 1000);
+  const tsumiki = getDailyQuestions(data.tsumiki, 1, seed + 1100);
 
   const questions = [
     ...sansu,
@@ -35,6 +38,7 @@ export default function PageClient() {
     ...moji,
     ...nazonazo,
     ...okane,
+    ...tsumiki,
   ];
 
   return (
@@ -83,6 +87,14 @@ export default function PageClient() {
               <div className="text-lg font-bold mb-2 text-blue-600">
                 {q.genre}
               </div>
+
+              {q.money && <MoneyIllustration items={q.money} />}
+
+              {q.cubes && (
+                <div className="flex justify-center mb-3">
+                  <CubeStack heights={q.cubes} />
+                </div>
+              )}
 
               <div className="text-xl leading-8">
                 {index + 1}. {q.question}

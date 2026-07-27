@@ -10,7 +10,39 @@ export type MoneyChip = {
    *  - なし    : ただ数えるだけの金額（単純な合計など）。ラベルは付けない。
    */
   role?: MoneyRole;
+  /** role が "price" のとき、もんだい文から読み取れた品物の名前（絵文字のもとになる） */
+  item?: string;
 };
+
+// 品物の名前 -> 絵文字（もんだい文に出てくる品物のバリエーションぶん）
+// 実在しない/ふさわしい絵文字がないものは呼び出し側でフォールバック絵文字にする
+export const ITEM_EMOJI: Record<string, string> = {
+  あめ: "🍬",
+  ガム: "🍬",
+  えほん: "📖",
+  ほん: "📕",
+  おかし: "🍪",
+  ジュース: "🧃",
+  パン: "🍞",
+  えんぴつ: "✏️",
+  ノート: "📓",
+  シール: "🏷️",
+  おりがみ: "🎨",
+  クレヨン: "🖍️",
+  ラムネ: "🥤",
+  ふうせん: "🎈",
+  おもちゃ: "🧸",
+  おべんとう: "🍱",
+  べんとう: "🍱",
+  みかん: "🍊",
+  ケーキ: "🍰",
+  セット: "🎁",
+  おちゃ: "🍵",
+  けしごむ: "🎁",
+  おにぎり: "🍙",
+};
+
+const ITEM_NAMES = Object.keys(ITEM_EMOJI).sort((a, b) => b.length - a.length);
 
 /**
  * もんだい文から「◯円」の金額と、その枚数（まい／こ／つ／本／さつ／羽など）を
@@ -19,16 +51,19 @@ export type MoneyChip = {
  * 「ねだん」と「だす お金」がどちらも出てくる問題（おつりの問題など）は、
  * アイコンだけだと何を表しているのか分かりにくいため、直後の文脈
  * （「円の」→ねだん／「円玉を だす」→だすお金）から役割も判定する。
+ * 「ねだん」のときは、続く品物の名前も読み取って絵文字表示に使う。
  *
  * 例:
  *  "10円玉が 2まいと 5円玉が 1まい" -> [{value:10,count:2},{value:5,count:1}]
+ *  "60円の あめと 30円の ガムを かいます" ->
+ *    [{value:60,count:1,role:"price",item:"あめ"},{value:30,count:1,role:"price",item:"ガム"}]
  *  "200円の えほんを かいます。500円玉を だすと" ->
- *    [{value:200,count:1,role:"price"},{value:500,count:1,role:"paid"}]
+ *    [{value:200,count:1,role:"price",item:"えほん"},{value:500,count:1,role:"paid"}]
  */
 export function parseMoney(question: string): MoneyChip[] {
   const amountRe = /(\d+)円(?:玉|さつ)?/g;
   const countRe = /(\d+)\s*(?:まい|こ|つ|ほん|本|さつ|わ)/;
-  const paidRe = /^(?:玉|さつ)?を\s*だ/;
+  const paidRe = /^(?:(?:玉|さつ)?を)?\s*だ/;
   const priceRe = /^の/;
 
   const amounts: { value: number; start: number; end: number }[] = [];
@@ -53,13 +88,17 @@ export function parseMoney(question: string): MoneyChip[] {
     const count = cm ? Math.min(parseInt(cm[1], 10), 12) : 1;
 
     let role: MoneyRole | undefined;
+    let item: string | undefined;
+
     if (paidRe.test(trimmed)) {
       role = "paid";
     } else if (priceRe.test(trimmed)) {
       role = "price";
+      const afterNo = trimmed.slice(1).trimStart();
+      item = ITEM_NAMES.find(name => afterNo.startsWith(name));
     }
 
-    chips.push({ value: cur.value, count, role });
+    chips.push({ value: cur.value, count, role, item });
   }
   return chips;
 }
