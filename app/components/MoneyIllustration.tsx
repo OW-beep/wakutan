@@ -1,6 +1,7 @@
 type MoneyChip = {
   value: number;
   count: number;
+  role?: "price" | "paid";
 };
 
 type Props = {
@@ -106,11 +107,16 @@ function PriceTag({ value, size = 64 }: { value: number; size?: number }) {
   );
 }
 
+const ROLE_LABEL: Record<NonNullable<MoneyChip["role"]>, string> = {
+  price: "ねだん",
+  paid: "だす おかね",
+};
+
 export default function MoneyIllustration({ items }: Props) {
   if (!items || items.length === 0) return null;
 
   return (
-    <div className="flex flex-wrap justify-center items-center gap-2 mb-3">
+    <div className="flex flex-wrap justify-center items-stretch gap-3 mb-3">
       {items.map((item, i) => {
         const Shape = REAL_COIN_VALUES.has(item.value)
           ? Coin
@@ -118,11 +124,25 @@ export default function MoneyIllustration({ items }: Props) {
           ? Bill
           : PriceTag;
 
-        return Array.from({ length: item.count }).map((_, j) => (
-          <div key={`${i}-${j}`}>
-            <Shape value={item.value} />
+        return (
+          <div
+            key={i}
+            className="flex flex-col items-center gap-1 px-3 py-2 rounded-xl bg-gray-50 border border-gray-200"
+          >
+            {item.role && (
+              <span className="text-xs font-bold text-gray-500">
+                {ROLE_LABEL[item.role]}
+              </span>
+            )}
+            <div className="flex flex-wrap justify-center gap-1">
+              {Array.from({ length: item.count }).map((_, j) => (
+                <div key={j}>
+                  <Shape value={item.value} />
+                </div>
+              ))}
+            </div>
           </div>
-        ));
+        );
       })}
     </div>
   );
