@@ -1,5 +1,6 @@
 import { parseMoney } from "./moneyParser";
 import { CubeShape, totalCubes, describeCubes } from "./cubeShapes";
+import { DotFigure, dotFiguresSize4 } from "./dotFigures";
 
 type Question = {
   genre: string;
@@ -9,6 +10,9 @@ type Question = {
   clock?: { hour: number; minute: number };
   money?: { value: number; count: number }[];
   cubes?: CubeShape;
+  /** 1（やさしい）〜 数字が大きいほど むずかしい。同じ日の中で かんたん→むずかしい の じゅんに ならべるために使う */
+  difficulty?: number;
+  dotFigure?: DotFigure;
 };
 
 type RonriTemplate = [string, string, string];
@@ -30,6 +34,8 @@ export function generate6Questions() {
 
   // ====================
   // さんすう（たしざん・ひきざん・ぶんしょうだい）
+  // 10までの かず → 20までの かず（くり上がり・くり下がり）→ 30までの かず の
+  // 3だんかいで difficulty をつけて、やさしい→むずかしい の じゅんに ならぶようにする
   // ====================
 
   const addTemplates = [
@@ -46,6 +52,13 @@ export function generate6Questions() {
     (a: number, b: number) => `おかしが ${a} こあります。ともだちに ${b} こあげました。のこりはいくつ？`,
   ];
 
+  function sansuDifficulty(a: number, b: number): number {
+    const m = Math.max(a, b);
+    if (m <= 10) return 1;
+    if (m <= 20) return 2;
+    return 3;
+  }
+
   let addIndex = 0;
   let subIndex = 0;
 
@@ -58,6 +71,7 @@ export function generate6Questions() {
         question: addTpl(a, b),
         answer: `${a + b}`,
         explanation: `${a} と ${b} を たすと ${a + b} です。`,
+        difficulty: sansuDifficulty(a, b),
       });
       addIndex++;
 
@@ -68,6 +82,7 @@ export function generate6Questions() {
           question: subTpl(a, b),
           answer: `${a - b}`,
           explanation: `${a} から ${b} を ひくと ${a - b} です。`,
+          difficulty: sansuDifficulty(a, b),
         });
         subIndex++;
       }
@@ -486,6 +501,17 @@ export function generate6Questions() {
     cubes: shape,
   }));
 
+  // ====================
+  // おなじかたち（てんをむすんだ ずけいを かきうつす）
+  // ====================
+  const onajikatachi: Question[] = dotFiguresSize4.map(figure => ({
+    genre: "✏️ おなじかたち",
+    question: "みぎの てんを せんで むすんで、ひだりと おなじ かたちを かいてね。",
+    answer: "てほんと おなじ かたちに なったかな？",
+    explanation: "てんを じゅんばんに たどりながら かくと、きれいに かけるよ。",
+    dotFigure: figure,
+  }));
+
   return {
     sansu,
     ronri,
@@ -499,5 +525,6 @@ export function generate6Questions() {
     nazonazo,
     okane,
     tsumiki,
+    onajikatachi,
   };
 }

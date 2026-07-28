@@ -13,7 +13,19 @@
  * 重複判定はオブジェクト全体のJSONで行う（問題文だけで判定しない）。
  * 「つみき」問題のように、問題文は同じでもイラストのデータ（cubes など）が
  * 違えば別問題として扱いたいケースがあるため。
+ *
+ * 選ばれた問題に difficulty（1〜の数字、大きいほどむずかしい）がついている場合は、
+ * 「どの問題が選ばれるか」は日替わりでシャッフルしたまま、「並び順」だけ
+ * かんたん→むずかしい の順に並べ替える。difficulty が無いジャンルには影響しない。
  */
+function getDifficulty(item: unknown): number | undefined {
+  if (item && typeof item === "object" && "difficulty" in item) {
+    const d = (item as { difficulty?: unknown }).difficulty;
+    return typeof d === "number" ? d : undefined;
+  }
+  return undefined;
+}
+
 export function getDailyQuestions<T>(
   items: T[],
   count = 20,
@@ -50,14 +62,25 @@ export function getDailyQuestions<T>(
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
 
+  let selected: T[];
   if (shuffled.length >= count) {
-    return shuffled.slice(0, count);
+    selected = shuffled.slice(0, count);
+  } else {
+    // ユニークな問題数が足りないときだけ、シャッフル済みの並びを繰り返して埋める
+    selected = [];
+    for (let i = 0; i < count; i++) {
+      selected.push(shuffled[i % shuffled.length]);
+    }
   }
 
-  // ユニークな問題数が足りないときだけ、シャッフル済みの並びを繰り返して埋める
-  const result: T[] = [];
-  for (let i = 0; i < count; i++) {
-    result.push(shuffled[i % shuffled.length]);
+  // difficulty がついている問題だけ、かんたん→むずかしい の順に並べ替える
+  // (Array.prototype.sort は安定ソートなので、同じ difficulty 同士のシャッフル順は保たれる)
+  const hasDifficulty = selected.some(item => getDifficulty(item) !== undefined);
+  if (hasDifficulty) {
+    selected = [...selected].sort(
+      (a, b) => (getDifficulty(a) ?? 0) - (getDifficulty(b) ?? 0)
+    );
   }
-  return result;
+
+  return selected;
 }

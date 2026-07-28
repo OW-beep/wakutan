@@ -5,6 +5,7 @@ import { generate5Questions } from "../data/generate5";
 import { getDailyQuestions } from "../data/getDailyQuestions";
 import MoneyIllustration from "../components/MoneyIllustration";
 import CubeStack from "../components/CubeStack";
+import DotFigureCopy from "../components/DotFigureCopy";
 
 export default function PageClient() {
   const [showAnswer, setShowAnswer] = useState(false);
@@ -26,6 +27,7 @@ export default function PageClient() {
   const nazonazo = getDailyQuestions(data.nazonazo, 1, seed + 900);
   const okane = getDailyQuestions(data.okane, 1, seed + 1000);
   const tsumiki = getDailyQuestions(data.tsumiki, 1, seed + 1100);
+  const onajikatachi = getDailyQuestions(data.onajikatachi, 1, seed + 1200);
 
   const questions = [
     ...sansu,
@@ -39,6 +41,7 @@ export default function PageClient() {
     ...nazonazo,
     ...okane,
     ...tsumiki,
+    ...onajikatachi,
   ];
 
   return (
@@ -95,6 +98,8 @@ export default function PageClient() {
                   <CubeStack heights={q.cubes} />
                 </div>
               )}
+
+              {q.dotFigure && <DotFigureCopy figure={q.dotFigure} />}
 
               <div className="text-xl leading-8">
                 {index + 1}. {q.question}

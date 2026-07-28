@@ -1,5 +1,6 @@
 import { parseMoney } from "./moneyParser";
 import { CubeShape, totalCubes, describeCubes } from "./cubeShapes";
+import { DotFigure, dotFiguresSize2 } from "./dotFigures";
 
 type Question = {
   genre: string;
@@ -8,6 +9,9 @@ type Question = {
   explanation: string;
   money?: { value: number; count: number }[];
   cubes?: CubeShape;
+  /** 1（やさしい）〜 数字が大きいほど むずかしい。同じ日の中で かんたん→むずかしい の じゅんに ならべるために使う */
+  difficulty?: number;
+  dotFigure?: DotFigure;
 };
 
 export function generate4Questions() {
@@ -373,5 +377,16 @@ export function generate4Questions() {
     cubes: shape,
   }));
 
-  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, nazonazo, okane, tsumiki };
+  // ====================
+  // おなじかたち（てんをむすんだ ずけいを かきうつす）
+  // ====================
+  const onajikatachi: Question[] = dotFiguresSize2.map(figure => ({
+    genre: "✏️ おなじかたち",
+    question: "みぎの てんを せんで むすんで、ひだりと おなじ かたちを かいてね。",
+    answer: "てほんと おなじ かたちに なったかな？",
+    explanation: "てんを じゅんばんに たどりながら かくと、きれいに かけるよ。",
+    dotFigure: figure,
+  }));
+
+  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, nazonazo, okane, tsumiki, onajikatachi };
 }

@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { generate4Questions } from "../data/generate4";
 import MoneyIllustration from "../components/MoneyIllustration";
 import CubeStack from "../components/CubeStack";
+import DotFigureCopy from "../components/DotFigureCopy";
 
 export default function PageClient() {
   const [showAnswer, setShowAnswer] = useState(false);
@@ -35,6 +36,7 @@ export default function PageClient() {
     data.nazonazo[seed % data.nazonazo.length],
     data.okane[seed % data.okane.length],
     data.tsumiki[seed % data.tsumiki.length],
+    data.onajikatachi[seed % data.onajikatachi.length],
   ];
 
   return (
@@ -83,6 +85,8 @@ export default function PageClient() {
                   <CubeStack heights={q.cubes} />
                 </div>
               )}
+
+              {q.dotFigure && <DotFigureCopy figure={q.dotFigure} />}
 
               <div className="text-xl leading-8">
                 {q.question}

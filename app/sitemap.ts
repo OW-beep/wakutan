@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/4/nazonazo",
     "/4/okane",
     "/4/tsumiki",
+    "/4/onajikatachi",
 
     "/5/sansu",
     "/5/ronri",
@@ -32,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/5/nazonazo",
     "/5/okane",
     "/5/tsumiki",
+    "/5/onajikatachi",
 
     "/6/sansu",
     "/6/ronri",
@@ -45,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/6/nazonazo",
     "/6/okane",
     "/6/tsumiki",
+    "/6/onajikatachi",
 
     "/about",
     "/articles",

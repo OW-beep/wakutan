@@ -4,6 +4,7 @@ import { useState } from "react";
 import ClockFace from "./ClockFace";
 import MoneyIllustration from "./MoneyIllustration";
 import CubeStack from "./CubeStack";
+import DotFigureCopy from "./DotFigureCopy";
 
 type Question = {
   genre: string;
@@ -13,6 +14,7 @@ type Question = {
   clock?: { hour: number; minute: number };
   money?: { value: number; count: number }[];
   cubes?: number[][];
+  dotFigure?: { gridSize: number; lines: [[number, number], [number, number]][] };
 };
 
 type Props = {
@@ -68,6 +70,8 @@ export default function QuestionList({
                 <CubeStack heights={q.cubes} />
               </div>
             )}
+
+            {q.dotFigure && <DotFigureCopy figure={q.dotFigure} />}
 
             <div className="text-lg mb-2">
               {q.question}

@@ -1,5 +1,6 @@
 import { parseMoney } from "./moneyParser";
 import { CubeShape, totalCubes, describeCubes } from "./cubeShapes";
+import { DotFigure, dotFiguresSize3 } from "./dotFigures";
 
 type Question = {
   genre: string;
@@ -8,6 +9,9 @@ type Question = {
   explanation: string;
   money?: { value: number; count: number }[];
   cubes?: CubeShape;
+  /** 1（やさしい）〜 数字が大きいほど むずかしい。同じ日の中で かんたん→むずかしい の じゅんに ならべるために使う */
+  difficulty?: number;
+  dotFigure?: DotFigure;
 };
 
 export function generate5Questions() {
@@ -24,7 +28,9 @@ export function generate5Questions() {
   const okane: Question[] = [];
 
   // ====================
-  // さんすう（たしざん・ぶんしょうだい）
+  // さんすう（たしざん・ひきざん・ぶんしょうだい）
+  // かんたん（10までの かず）→ すこしむずかしい（20までの かず）の 2だんかいで
+  // difficulty をつけて、印刷したときに やさしい→むずかしい の じゅんに ならぶようにする
   // ====================
   const sansuTemplates = [
     (a: number, b: number) => `${a} + ${b} = ?`,
@@ -33,6 +39,13 @@ export function generate5Questions() {
     (a: number, b: number) => `おりがみが ${a} まいと ${b} まい。あわせてなんまい？`,
     (a: number, b: number) => `シールが ${a} まいと ${b} まい。ぜんぶでなんまい？`,
     (a: number, b: number) => `クッキーが ${a} こと ${b} こ。あわせていくつ？`,
+  ];
+
+  const subTemplates = [
+    (a: number, b: number) => `${a} - ${b} = ?`,
+    (a: number, b: number) => `あめが ${a} こ ありました。${b} こ たべました。のこりは いくつ？`,
+    (a: number, b: number) => `シールが ${a} まい あります。${b} まい つかいました。のこりは なんまい？`,
+    (a: number, b: number) => `どんぐりが ${a} こ ありました。${b} こ あげました。のこりは いくつ？`,
   ];
 
   let sansuIndex = 0;
@@ -44,8 +57,24 @@ export function generate5Questions() {
         question: tpl(a, b),
         answer: `${a + b}`,
         explanation: `${a} と ${b} を あわせると ${a + b} だよ。`,
+        difficulty: Math.max(a, b) <= 10 ? 1 : 2,
       });
       sansuIndex++;
+    }
+  }
+
+  let subIndex = 0;
+  for (let a = 2; a <= 20; a++) {
+    for (let b = 1; b < a; b++) {
+      const tpl = subTemplates[subIndex % subTemplates.length];
+      sansu.push({
+        genre: "さんすう",
+        question: tpl(a, b),
+        answer: `${a - b}`,
+        explanation: `${a} から ${b} を とると ${a - b} だよ。`,
+        difficulty: Math.max(a, b) <= 10 ? 1 : 2,
+      });
+      subIndex++;
     }
   }
 
@@ -406,5 +435,16 @@ export function generate5Questions() {
     cubes: shape,
   }));
 
-  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, moji, nazonazo, okane, tsumiki };
+  // ====================
+  // おなじかたち（てんをむすんだ ずけいを かきうつす）
+  // ====================
+  const onajikatachi: Question[] = dotFiguresSize3.map(figure => ({
+    genre: "✏️ おなじかたち",
+    question: "みぎの てんを せんで むすんで、ひだりと おなじ かたちを かいてね。",
+    answer: "てほんと おなじ かたちに なったかな？",
+    explanation: "てんを じゅんばんに たどりながら かくと、きれいに かけるよ。",
+    dotFigure: figure,
+  }));
+
+  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, moji, nazonazo, okane, tsumiki, onajikatachi };
 }
