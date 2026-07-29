@@ -415,14 +415,11 @@ export default function Home() {
             emoji: "🧸",
             categories: [
               { href: "/4/sansu", emoji: "🔢", title: "算数ドリル", desc: "数を数える・足し算の基礎を学ぼう" },
-              { href: "/4/ronri", emoji: "🧠", title: "論理問題", desc: "考える力を楽しく育てよう" },
-              { href: "/4/pattern", emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう" },
               { href: "/4/hiragana", emoji: "🔤", title: "ひらがな", desc: "文字への興味を育てよう" },
-              { href: "/4/nakamawake", emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう" },
-              { href: "/4/kurabekko", emoji: "⚖️", title: "くらべっこ問題", desc: "大小・多い少ないを比べよう" },
-              { href: "/4/nakamahazure", emoji: "🔀", title: "なかまはずれ問題", desc: "ちがうものを見つけよう" },
-              { href: "/4/nazonazo", emoji: "🧩", title: "なぞなぞ問題", desc: "ヒントから答えを考えよう" },
               { href: "/4/okane", emoji: "💰", title: "おかね問題", desc: "硬貨を数えてみよう" },
+              { href: "/4/tsumiki", emoji: "🧊", title: "つみき問題", desc: "つみきの数をかぞえよう" },
+              { href: "/4/onajikatachi", emoji: "✏️", title: "おなじかたち問題", desc: "点をむすんで図形をかきうつそう" },
+              { href: "/4/nazonazo", emoji: "🧩", title: "なぞなぞ問題", desc: "ヒントから答えを考えよう" },
             ],
           },
           {
@@ -430,16 +427,12 @@ export default function Home() {
             label: "5歳向け",
             emoji: "🚀",
             categories: [
-              { href: "/5/sansu", emoji: "🔢", title: "算数ドリル", desc: "たし算の基礎・数の感覚を伸ばそう" },
-              { href: "/5/ronri", emoji: "🧠", title: "論理問題", desc: "きまりを見つけて考えよう" },
-              { href: "/5/pattern", emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう" },
-              { href: "/5/hiragana", emoji: "🔤", title: "ひらがな", desc: "言葉の理解を深めよう" },
-              { href: "/5/nakamawake", emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう" },
-              { href: "/5/kurabekko", emoji: "⚖️", title: "くらべっこ問題", desc: "3つを比べる力を育てよう" },
-              { href: "/5/nakamahazure", emoji: "🔀", title: "なかまはずれ問題", desc: "ちがうものを見つけよう" },
+              { href: "/5/sansu", emoji: "🔢", title: "算数ドリル", desc: "たし算・ひきざんの基礎を学ぼう" },
               { href: "/5/moji", emoji: "📖", title: "もじの読み解き問題", desc: "文章を読んで答えよう" },
-              { href: "/5/nazonazo", emoji: "🧩", title: "なぞなぞ問題", desc: "ヒントを組み合わせて考えよう" },
               { href: "/5/okane", emoji: "💰", title: "おかね問題", desc: "お買い物のたし算に挑戦しよう" },
+              { href: "/5/tsumiki", emoji: "🧊", title: "つみき問題", desc: "つみきの数をかぞえよう" },
+              { href: "/5/onajikatachi", emoji: "✏️", title: "おなじかたち問題", desc: "点をむすんで図形をかきうつそう" },
+              { href: "/5/nazonazo", emoji: "🧩", title: "なぞなぞ問題", desc: "ヒントを組み合わせて考えよう" },
             ],
           },
           {
@@ -448,16 +441,11 @@ export default function Home() {
             emoji: "🎓",
             categories: [
               { href: "/6/sansu", emoji: "🔢", title: "算数ドリル", desc: "たし算・ひきざんの基礎を学ぼう" },
-              { href: "/6/ronri", emoji: "🧠", title: "論理問題", desc: "筋道立てて考える力を育てよう" },
-              { href: "/6/pattern", emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう" },
-              { href: "/6/hiragana", emoji: "🔤", title: "ひらがな", desc: "読み書きの力を育てよう" },
-              { href: "/6/nakamawake", emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう" },
-              { href: "/6/kurabekko", emoji: "⚖️", title: "くらべっこ問題", desc: "数の差や単位を考えよう" },
-              { href: "/6/nakamahazure", emoji: "🔀", title: "なかまはずれ問題", desc: "理由を考えて見つけよう" },
-              { href: "/6/moji", emoji: "📖", title: "もじの読み解き問題", desc: "文章題を読んで答えよう" },
               { href: "/6/tokei", emoji: "🕐", title: "とけいの問題", desc: "時計の読み方を学ぼう" },
-              { href: "/6/nazonazo", emoji: "🧩", title: "なぞなぞ問題", desc: "推理して答えを導こう" },
               { href: "/6/okane", emoji: "💰", title: "おかね問題", desc: "おつりの計算に挑戦しよう" },
+              { href: "/6/tsumiki", emoji: "🧊", title: "つみき問題", desc: "つみきの数をかぞえよう" },
+              { href: "/6/onajikatachi", emoji: "✏️", title: "おなじかたち問題", desc: "点をむすんで図形をかきうつそう" },
+              { href: "/6/moji", emoji: "📖", title: "もじの読み解き問題", desc: "文章題を読んで答えよう" },
             ],
           },
         ].map((group) => (
@@ -491,6 +479,15 @@ export default function Home() {
 
               ))}
 
+            </div>
+
+            <div className="text-center mt-5">
+              <Link
+                href={`/${group.age}`}
+                className="inline-block text-orange-600 font-bold hover:underline"
+              >
+                {group.label}のもんだいを すべて見る →
+              </Link>
             </div>
 
           </div>
