@@ -397,7 +397,7 @@ export default function Home() {
       </section>
 
       {/* 人気のドリルカテゴリ */}
-      <section className="max-w-6xl mx-auto px-6 mb-14">
+      <section className="max-w-4xl mx-auto px-6 mb-14">
 
         <h2 className="text-3xl font-bold mb-6">
           📚 人気のドリルカテゴリ
@@ -405,94 +405,62 @@ export default function Home() {
 
         <p className="text-gray-600 mb-6">
           算数・論理・パターン認識・ひらがな・仲間分けなど、
-          学びたい内容や年齢に合わせてドリルを選べます。
+          学びたい内容から選んで、対象の年齢をタップしてください。
         </p>
 
-        {[
-          {
-            age: "4",
-            label: "4歳向け",
-            emoji: "🧸",
-            categories: [
-              { href: "/4/sansu", emoji: "🔢", title: "算数ドリル", desc: "数を数える・足し算の基礎を学ぼう" },
-              { href: "/4/hiragana", emoji: "🔤", title: "ひらがな", desc: "文字への興味を育てよう" },
-              { href: "/4/okane", emoji: "💰", title: "おかね問題", desc: "硬貨を数えてみよう" },
-              { href: "/4/tsumiki", emoji: "🧊", title: "つみき問題", desc: "つみきの数をかぞえよう" },
-              { href: "/4/onajikatachi", emoji: "✏️", title: "おなじかたち問題", desc: "点をむすんで図形をかきうつそう" },
-              { href: "/4/nazonazo", emoji: "🧩", title: "なぞなぞ問題", desc: "ヒントから答えを考えよう" },
-            ],
-          },
-          {
-            age: "5",
-            label: "5歳向け",
-            emoji: "🚀",
-            categories: [
-              { href: "/5/sansu", emoji: "🔢", title: "算数ドリル", desc: "たし算・ひきざんの基礎を学ぼう" },
-              { href: "/5/moji", emoji: "📖", title: "もじの読み解き問題", desc: "文章を読んで答えよう" },
-              { href: "/5/okane", emoji: "💰", title: "おかね問題", desc: "お買い物のたし算に挑戦しよう" },
-              { href: "/5/tsumiki", emoji: "🧊", title: "つみき問題", desc: "つみきの数をかぞえよう" },
-              { href: "/5/onajikatachi", emoji: "✏️", title: "おなじかたち問題", desc: "点をむすんで図形をかきうつそう" },
-              { href: "/5/nazonazo", emoji: "🧩", title: "なぞなぞ問題", desc: "ヒントを組み合わせて考えよう" },
-            ],
-          },
-          {
-            age: "6",
-            label: "6歳向け",
-            emoji: "🎓",
-            categories: [
-              { href: "/6/sansu", emoji: "🔢", title: "算数ドリル", desc: "たし算・ひきざんの基礎を学ぼう" },
-              { href: "/6/tokei", emoji: "🕐", title: "とけいの問題", desc: "時計の読み方を学ぼう" },
-              { href: "/6/okane", emoji: "💰", title: "おかね問題", desc: "おつりの計算に挑戦しよう" },
-              { href: "/6/tsumiki", emoji: "🧊", title: "つみき問題", desc: "つみきの数をかぞえよう" },
-              { href: "/6/onajikatachi", emoji: "✏️", title: "おなじかたち問題", desc: "点をむすんで図形をかきうつそう" },
-              { href: "/6/moji", emoji: "📖", title: "もじの読み解き問題", desc: "文章題を読んで答えよう" },
-            ],
-          },
-        ].map((group) => (
+        <div className="space-y-3">
+          {[
+            { emoji: "🔢", title: "算数ドリル", desc: "数を数える・たし算/ひきざんの基礎を学ぼう", key: "sansu", ages: [4, 5, 6] },
+            { emoji: "🧠", title: "論理問題", desc: "きまりを見つけて考える力を育てよう", key: "ronri", ages: [4, 5, 6] },
+            { emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう", key: "pattern", ages: [4, 5, 6] },
+            { emoji: "🔤", title: "ひらがな", desc: "文字への興味・読み書きの力を育てよう", key: "hiragana", ages: [4, 5, 6] },
+            { emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう", key: "nakamawake", ages: [4, 5, 6] },
+            { emoji: "⚖️", title: "くらべっこ問題", desc: "大小・多い少ないを比べよう", key: "kurabekko", ages: [4, 5, 6] },
+            { emoji: "🔀", title: "なかまはずれ問題", desc: "ちがうものを見つけよう", key: "nakamahazure", ages: [4, 5, 6] },
+            { emoji: "📖", title: "もじの読み解き問題", desc: "文章を読んで答えよう", key: "moji", ages: [5, 6] },
+            { emoji: "🕐", title: "とけいの問題", desc: "時計の読み方を学ぼう", key: "tokei", ages: [6] },
+            { emoji: "🧩", title: "なぞなぞ問題", desc: "ヒントから答えを考えよう", key: "nazonazo", ages: [4, 5, 6] },
+            { emoji: "💰", title: "おかね問題", desc: "硬貨を数えたり、おつりの計算に挑戦しよう", key: "okane", ages: [4, 5, 6] },
+            { emoji: "🧊", title: "つみき問題", desc: "つみきの数をかぞえよう", key: "tsumiki", ages: [4, 5, 6] },
+            { emoji: "✏️", title: "おなじかたち問題", desc: "点をむすんで図形をかきうつそう", key: "onajikatachi", ages: [4, 5, 6] },
+          ].map((c) => (
 
-          <div key={group.age} className="mb-10">
+            <div
+              key={c.key}
+              className="flex flex-wrap items-center gap-4 bg-white rounded-2xl shadow p-4"
+            >
+              <div className="wt-icon-badge bg-gradient-to-br from-yellow-100 to-orange-100 w-12 h-12 text-2xl shrink-0">{c.emoji}</div>
 
-            <h3 className="text-xl font-bold mb-4">
-              {group.emoji} {group.label}カテゴリ
-            </h3>
+              <div className="flex-1 min-w-[180px]">
+                <h3 className="font-bold text-lg">{c.title}</h3>
+                <p className="text-gray-600 text-sm">{c.desc}</p>
+              </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-              {group.categories.map((c) => (
-
-                <Link
-                  key={c.href}
-                  href={c.href}
-                  className="group bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
-                >
-                  <div className="wt-icon-badge bg-gradient-to-br from-yellow-100 to-orange-100 w-16 h-16 text-3xl mb-3">{c.emoji}</div>
-
-                  <h4 className="font-bold text-xl mb-2">
-                    {group.label}{c.title}
-                  </h4>
-
-                  <p className="text-gray-600 text-sm">
-                    {c.desc}
-                  </p>
-
-                </Link>
-
-              ))}
+              <div className="flex gap-2 shrink-0">
+                {[4, 5, 6].map((age) => (
+                  c.ages.includes(age) ? (
+                    <Link
+                      key={age}
+                      href={`/${age}/${c.key}`}
+                      className="px-3 py-1.5 rounded-full bg-orange-50 text-orange-700 font-bold text-sm hover:bg-orange-100 transition"
+                    >
+                      {age}歳
+                    </Link>
+                  ) : (
+                    <span
+                      key={age}
+                      className="px-3 py-1.5 rounded-full bg-gray-50 text-gray-300 font-bold text-sm"
+                    >
+                      {age}歳
+                    </span>
+                  )
+                ))}
+              </div>
 
             </div>
 
-            <div className="text-center mt-5">
-              <Link
-                href={`/${group.age}`}
-                className="inline-block text-orange-600 font-bold hover:underline"
-              >
-                {group.label}のもんだいを すべて見る →
-              </Link>
-            </div>
-
-          </div>
-
-        ))}
+          ))}
+        </div>
 
       </section>      
 

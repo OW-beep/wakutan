@@ -75,8 +75,30 @@ export default function Page() {
             「考えようとする姿勢」を大切にほめてあげてください。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            算数的な考え方は、いきなり得意になるものではなく、具体物を数えたり比べたりする経験の積み重ねで少しずつ育っていくとされています。答えの正確さよりも、「どう考えたか」を聞いてあげることが理解を深めます。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>20くらいまでの数を、実感をともなって数えられる力</li>
+            <li>「あわせていくつ？」というたし算の考え方</li>
+            <li>「のこりはいくつ？」というひきざんの考え方（このサイトでは5歳から登場します）</li>
+            <li>頭の中だけでなく、指や絵を使いながら答えを確かめる習慣</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>おやつを「3こ食べたら、のこりは何こ？」とひきざんの形で聞いてみる</li>
+            <li>すごろくやボードゲームで、コマを進めながら数の感覚を養う</li>
+            <li>買い物ごっこで「2つと3つでいくつ？」と声に出して確認する</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            たし算はできてもひきざんになると急に手が止まる子は多くいます。「ひく」という操作が頭の中でイメージしにくいためです。おはじきなどを実際に取り除きながら「のこりはいくつ？」と一緒に数えると、感覚がつかみやすくなります。間違えたときも、答えを教える前に「どうやって考えたか」を聞いてあげると、次に自分で気づく力につながります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            数と計算に慣れてきたら、
+            <Link href="/6/sansu" className="text-yellow-700 font-bold hover:underline">6歳向け算数ドリル</Link>
+            では30までの数のたし算・ひきざんに挑戦します。
           </p>
 
         </div>

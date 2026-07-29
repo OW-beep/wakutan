@@ -72,8 +72,30 @@ export default function Page() {
             数を数える経験や、簡単なたし算に触れることは、算数の土台となる「数の感覚」を育てます。正解できるかどうかより、指を使って数えたり、絵を見て考えたりする過程を大切にしてあげてください。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            指を使って数えたり、身の回りのものを数えたりする経験の一つひとつが、算数の土台になります。数えまちがえても大丈夫、数える楽しさを大切にしてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>ものと数字を1つずつ対応させて数える「一対一対応」</li>
+            <li>「1、2、3…」と正しい順番で数を唱える力</li>
+            <li>2つのグループを見て、どちらが多い・少ないかを判断する力</li>
+            <li>「あわせていくつ？」という、たし算の考え方の芽生え</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>おやつを配るときに「1つ、2つ…」と声に出しながら数える</li>
+            <li>階段の上り下りで、1段ごとに数を数えてみる</li>
+            <li>おもちゃを2つのグループに分けて、「どっちが多いかな？」と聞いてみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            10より大きい数になると、指だけでは数えきれずに混乱することがあります。そんなときは、おはじきやブロックなど、実際に手で動かせるものを使って数えてみると理解しやすくなります。また、同じ数でも並べ方によって「多く見える／少なく見える」と感じるのは、この時期の発達として自然なことです。焦らず、実際に1つずつ数えて確かめる経験を積み重ねていきましょう。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            数える力が安定してきたら、
+            <Link href="/5/sansu" className="text-yellow-700 font-bold hover:underline">5歳向け算数ドリル</Link>
+            では、たし算に加えてひきざんの練習も始まります。
           </p>
 
         </div>
