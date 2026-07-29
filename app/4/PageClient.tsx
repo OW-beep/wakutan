@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { generate4Questions } from "../data/generate4";
+import { pickDailyPreview } from "../data/dailyPreview";
 import MoneyIllustration from "../components/MoneyIllustration";
 import CubeStack from "../components/CubeStack";
 import DotFigureCopy from "../components/DotFigureCopy";
@@ -11,33 +12,28 @@ export default function PageClient() {
 
   const data = useMemo(() => generate4Questions(), []);
 
-  const seed = useMemo(() => {
-    return Math.floor(Date.now() / (1000 * 60 * 60 * 24));
-  }, []);
-
-  const questions = [
-    data.sansu[seed % data.sansu.length],
-    data.sansu[(seed + 1) % data.sansu.length],
-
-    data.ronri[seed % data.ronri.length],
-    data.ronri[(seed + 1) % data.ronri.length],
-
-    data.pattern[seed % data.pattern.length],
-    data.pattern[(seed + 1) % data.pattern.length],
-
-    data.hiragana[seed % data.hiragana.length],
-    data.hiragana[(seed + 1) % data.hiragana.length],
-
-    data.nakamawake[seed % data.nakamawake.length],
-    data.nakamawake[(seed + 1) % data.nakamawake.length],
-
-    data.kurabekko[seed % data.kurabekko.length],
-    data.nakamahazure[seed % data.nakamahazure.length],
-    data.nazonazo[seed % data.nazonazo.length],
-    data.okane[seed % data.okane.length],
-    data.tsumiki[seed % data.tsumiki.length],
-    data.onajikatachi[seed % data.onajikatachi.length],
-  ];
+  // 「毎日10問」の表記どおり、その日ごとにジャンルをローテーションしながら
+  // ちょうど10問だけをえらぶ（ジャンルが増えても表示件数は10問のまま）
+  const questions = useMemo(
+    () =>
+      pickDailyPreview(
+        {
+          sansu: data.sansu,
+          ronri: data.ronri,
+          pattern: data.pattern,
+          hiragana: data.hiragana,
+          nakamawake: data.nakamawake,
+          kurabekko: data.kurabekko,
+          nakamahazure: data.nakamahazure,
+          nazonazo: data.nazonazo,
+          okane: data.okane,
+          tsumiki: data.tsumiki,
+          onajikatachi: data.onajikatachi,
+        },
+        10
+      ),
+    [data]
+  );
 
   return (
     <>

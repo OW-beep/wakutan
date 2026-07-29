@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 import Breadcrumb from "../components/Breadcrumb";
 import AgeInfoSection from "../components/AgeInfoSection";
+import GenreNav from "../components/GenreNav";
 
 export const metadata: Metadata = {
   title: "6歳向け無料知育ドリル",
@@ -30,6 +31,27 @@ export default function Page() {
       </div>
 
       <PageClient />
+
+      <GenreNav
+        accentText="text-indigo-700"
+        accentBorder="border-indigo-200"
+        accentBg="bg-indigo-50"
+        items={[
+          { href: "/6/sansu", emoji: "🔢", label: "さんすう" },
+          { href: "/6/ronri", emoji: "🧠", label: "ろんり" },
+          { href: "/6/pattern", emoji: "🔷", label: "パターン" },
+          { href: "/6/hiragana", emoji: "🔤", label: "ひらがな" },
+          { href: "/6/nakamawake", emoji: "📦", label: "なかまわけ" },
+          { href: "/6/kurabekko", emoji: "⚖️", label: "くらべっこ" },
+          { href: "/6/nakamahazure", emoji: "🔀", label: "なかまはずれ" },
+          { href: "/6/moji", emoji: "📖", label: "もじのよみとき" },
+          { href: "/6/tokei", emoji: "🕐", label: "とけい" },
+          { href: "/6/nazonazo", emoji: "🧩", label: "なぞなぞ" },
+          { href: "/6/okane", emoji: "💰", label: "おかね" },
+          { href: "/6/tsumiki", emoji: "🧊", label: "つみき" },
+          { href: "/6/onajikatachi", emoji: "✏️", label: "おなじかたち" },
+        ]}
+      />
 
       <AgeInfoSection
         age="6"

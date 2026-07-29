@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { generate5Questions } from "../data/generate5";
-import { getDailyQuestions } from "../data/getDailyQuestions";
+import { pickDailyPreview } from "../data/dailyPreview";
 import MoneyIllustration from "../components/MoneyIllustration";
 import CubeStack from "../components/CubeStack";
 import DotFigureCopy from "../components/DotFigureCopy";
@@ -12,37 +12,29 @@ export default function PageClient() {
 
   const data = useMemo(() => generate5Questions(), []);
 
-  const seed = useMemo(() => {
-    return Math.floor(Date.now() / (1000 * 60 * 60 * 24));
-  }, []);
-
-  const sansu = getDailyQuestions(data.sansu, 2, seed + 0);
-  const ronri = getDailyQuestions(data.ronri, 2, seed + 100);
-  const pattern = getDailyQuestions(data.pattern, 2, seed + 200);
-  const hiragana = getDailyQuestions(data.hiragana, 2, seed + 300);
-  const nakamawake = getDailyQuestions(data.nakamawake, 2, seed + 400);
-  const kurabekko = getDailyQuestions(data.kurabekko, 1, seed + 500);
-  const nakamahazure = getDailyQuestions(data.nakamahazure, 1, seed + 600);
-  const moji = getDailyQuestions(data.moji, 1, seed + 700);
-  const nazonazo = getDailyQuestions(data.nazonazo, 1, seed + 900);
-  const okane = getDailyQuestions(data.okane, 1, seed + 1000);
-  const tsumiki = getDailyQuestions(data.tsumiki, 1, seed + 1100);
-  const onajikatachi = getDailyQuestions(data.onajikatachi, 1, seed + 1200);
-
-  const questions = [
-    ...sansu,
-    ...ronri,
-    ...pattern,
-    ...hiragana,
-    ...nakamawake,
-    ...kurabekko,
-    ...nakamahazure,
-    ...moji,
-    ...nazonazo,
-    ...okane,
-    ...tsumiki,
-    ...onajikatachi,
-  ];
+  // 「毎日10問」の表記どおり、その日ごとにジャンルをローテーションしながら
+  // ちょうど10問だけをえらぶ（ジャンルが増えても表示件数は10問のまま）
+  const questions = useMemo(
+    () =>
+      pickDailyPreview(
+        {
+          sansu: data.sansu,
+          ronri: data.ronri,
+          pattern: data.pattern,
+          hiragana: data.hiragana,
+          nakamawake: data.nakamawake,
+          kurabekko: data.kurabekko,
+          nakamahazure: data.nakamahazure,
+          moji: data.moji,
+          nazonazo: data.nazonazo,
+          okane: data.okane,
+          tsumiki: data.tsumiki,
+          onajikatachi: data.onajikatachi,
+        },
+        10
+      ),
+    [data]
+  );
 
   return (
     <>
