@@ -70,8 +70,29 @@ export default function Page() {
             4歳のなぞなぞは、身近などうぶつや食べ物など、答えやすいテーマを中心にしています。正解できなくても「もう一つヒントを出すね」と、考える過程を一緒に楽しんでください。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            なぞなぞは「言葉」と「イメージ」を結びつける遊びです。答えが分からなくても、一緒に声に出しながら考える時間そのものを楽しんでみてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>言葉の意味やイメージを頭の中で思い浮かべる力</li>
+            <li>ヒントから答えを予想する、簡単な推論の芽生え</li>
+            <li>答えが合っていても間違っていても、考えること自体を楽しむ気持ち</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>お出かけ中や車の中など、すきま時間に口頭でなぞなぞを出し合う</li>
+            <li>子どもが作ったオリジナルなぞなぞにも付き合ってあげる</li>
+            <li>正解を急がせず、「どうしてそう思ったの？」と考えを聞いてみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            なぞなぞは、言葉の意味を知っていても、それを問題文の中から思い出すのに時間がかかることがあります。すぐに答えが出なくても、「もう一つヒントを出すね」と気長に付き合ってあげると、考える楽しさが育ちます。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            考える力がついてきたら、
+            <Link href="/5/nazonazo" className="text-fuchsia-700 font-bold hover:underline">5歳向けなぞなぞ問題</Link>
+            で、ヒントが2つ以上ある少し難しい問題にも挑戦してみましょう。
           </p>
 
         </div>

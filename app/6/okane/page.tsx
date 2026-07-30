@@ -70,8 +70,23 @@ export default function Page() {
             お金の学習は「生きた算数」です。実際にお買い物のときにおつりを一緒に確認してみると、ドリルで学んだ力を実感しやすくなります。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            おつりの計算は、ひき算の実践的な練習になります。実際のお買い物で「おつりはいくら？」と聞いてみると、ドリルで学んだ力を実感しやすくなります。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>「支払った金額－ねだん＝おつり」という、ひき算の実践的な使い方</li>
+            <li>複数の硬貨・お札を組み合わせて、合計金額を素早く計算する力</li>
+            <li>日常生活の中で算数がどう使われているかを実感する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>実際のお買い物で「おつりはいくらになるかな？」と先に予想してもらう</li>
+            <li>レシートを見ながら、合計金額の計算があっているか確認してみる</li>
+            <li>お小遣い帳をつけて、もらったお金と使ったお金を記録する習慣をつける</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            おつりの計算は「支払った金額からねだんを引く」という、ひきざんの中でも一段階抽象的な考え方が必要です。「500円出して380円のものを買ったら、おつりはいくら？」のような問題でつまずく場合は、まず「500-380」の筆算・暗算そのものを別途練習してから、お金の文脈に戻すと理解しやすくなります。
           </p>
 
         </div>

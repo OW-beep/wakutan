@@ -70,8 +70,29 @@ export default function Page() {
             ヒントが2つ以上になると、一度に覚えるのが難しいこともあります。「さいしょのヒントは覚えてるかな？」と振り返りながら進めるのもおすすめです。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            なぞなぞは、複数の手がかりを頭の中で組み合わせて1つの答えにたどり着く「推論する力」を育てます。すぐに答えが浮かばなくても、ヒントを1つずつ確認しながら一緒に考えてみてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>複数のヒントを頭の中に保ちながら考える記憶力</li>
+            <li>ヒントどうしを組み合わせて、1つの答えを絞りこむ推論力</li>
+            <li>間違えても、別の可能性を考え直す柔軟さ</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>ヒントを1つずつ紙に書き出して、目で見て整理できるようにする</li>
+            <li>「さいしょのヒントは何だったっけ？」と振り返る質問をはさむ</li>
+            <li>親子で交互になぞなぞを出し合い、ヒントの出し方も工夫してみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            ヒントが2つ以上あると、後半のヒントに気を取られて最初のヒントを忘れてしまうことがあります。すべてのヒントを一度に処理しようとせず、1つずつ「これはどんな意味かな？」と確認しながら進めると、混乱しにくくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            推理する力がついてきたら、
+            <Link href="/6/nazonazo" className="text-fuchsia-700 font-bold hover:underline">6歳向けなぞなぞ問題</Link>
+            にも挑戦してみましょう。
           </p>
 
         </div>

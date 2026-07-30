@@ -70,8 +70,29 @@ export default function Page() {
             お買い物ごっこと組み合わせると、より実感を持って取り組めます。実際のお菓子の値段を見ながら計算してみるのもおすすめです。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            お金の学習は、実際の硬貨やお買い物ごっこと組み合わせると理解が深まりやすいテーマです。可能であれば、本物の硬貨を並べながら一緒に数えてみるのもおすすめです。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>複数の硬貨をあわせて、合計金額を計算する力</li>
+            <li>「1こ〇円のものを2こ買うといくら？」という、かけ算につながる考え方</li>
+            <li>お金という具体物を通して、たし算・ひきざんを実感する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>実際のお菓子のパッケージに書かれた値段を見て、合計を計算してみる</li>
+            <li>おもちゃのお金で、お店屋さんごっこをして支払いの練習をする</li>
+            <li>お小遣いを渡すときに、硬貨の組み合わせを一緒に確認する</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            「100円玉は10円玉の10倍」のような、硬貨どうしの関係を理解するのはこの時期にはまだ難しいことがあります。無理に暗記させようとせず、実際に10円玉を10枚並べて100円玉と見比べるなど、目で見て確かめる経験を重視してあげてください。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            合計金額の計算に慣れてきたら、
+            <Link href="/6/okane" className="text-lime-700 font-bold hover:underline">6歳向けおかね問題</Link>
+            では、おつりの計算にも挑戦します。
           </p>
 
         </div>

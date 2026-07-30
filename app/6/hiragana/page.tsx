@@ -70,8 +70,29 @@ export default function Page() {
             6歳は読み書きへの自信がつく時期です。間違いを指摘しすぎず、「読めたね」「書けたね」と成功体験を積み重ねましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            小学校入学が近づくと読み書きが気になりますが、大切なのは正確さより「読もうとする意欲」です。読めた喜びを重ねることが、その後の学習意欲につながります。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>拗音・促音・長音を含む、より複雑な言葉の読み書き</li>
+            <li>短い文章を、意味のまとまりを意識しながら読む力</li>
+            <li>簡単な作文（日記や手紙）で自分の考えを書く力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>毎日短い日記をつけて、書く習慣を作る</li>
+            <li>音読の練習に付き合い、つっかえずに読めた部分をほめる</li>
+            <li>家族への手紙やメモを書いてもらい、実際に使う楽しさを味わう</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            「わたしは学校へ行く」のように、助詞の「は」「を」「へ」の使い分けは、小学校入学後もつまずきやすいポイントです。また、句読点（「、」「。」）をどこに打つかも、最初はなかなか身につきません。読み聞かせのときに句読点で少し間を取って読んで見せると、感覚がつかみやすくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            読み書きが安定してきたら、
+            <Link href="/6/moji" className="text-pink-600 font-bold hover:underline">もじの読み解き問題</Link>
+            で文章を読んで答える力にも挑戦してみましょう。
           </p>
 
         </div>

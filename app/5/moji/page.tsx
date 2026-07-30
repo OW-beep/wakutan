@@ -70,8 +70,29 @@ export default function Page() {
             文章が読めなくても、読み聞かせながら一緒に考えれば大丈夫です。「文章のどこに書いてあるかな？」と一緒に探してみましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            文章を読んで理解する力は、語彙力だけでなく、状況をイメージする想像力とも関わっています。文章を読み聞かせながら、「ここで何が起きているかな？」と一緒に確認してあげると、理解が深まりやすくなります。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>短い文章を読んで、「だれが」「なにをした」を読み取る力</li>
+            <li>文章から得た情報をもとに、質問に答える力</li>
+            <li>場面をイメージしながら文章を理解する想像力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>絵本を読んだあとに「さっきの話、だれが出てきたっけ？」と聞いてみる</li>
+            <li>文章の中の答えの部分を指でさし示す練習をする</li>
+            <li>読み終わったら「どんな気持ちだったと思う？」と想像を広げる質問をする</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            文字は読めても、文章全体の意味を理解するのはまた別の力です。一文字ずつ読むことに必死で、内容が頭に入ってこないことはよくあります。急がず、1文ずつ「今、何がわかった？」と確認しながら読み進めると、理解が定着しやすくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            読み解く力がついてきたら、
+            <Link href="/6/moji" className="text-indigo-700 font-bold hover:underline">6歳向けもじの読み解き問題</Link>
+            で、もう少し長い文章にも挑戦してみましょう。
           </p>
 
         </div>

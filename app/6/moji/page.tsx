@@ -70,8 +70,29 @@ export default function Page() {
             2段階の計算は難しく感じることがあります。「まず何をする？」「次は？」と順番に整理してあげましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            文章題を正確に読み取る力は、算数の文章題や国語の読解にも直結します。「だれが」「なにを」「どうした」を一緒に確認しながら読む習慣をつけてみましょう。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>文章から必要な数字と、たし算・ひきざんのどちらを使うかを読み取る力</li>
+            <li>「もらう→たべる」のような、2つの出来事を順番どおりに計算する力</li>
+            <li>文章題を最後まで読んでから答えを考える、落ち着いた読み方</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>問題文を声に出して読み、出てくる数字に丸をつけながら整理する</li>
+            <li>「最初はいくつ？」「増えた？減った？」と、出来事の順番を一緒に確認する</li>
+            <li>途中式（5+3=8、8-2=6など）を紙に書き出す習慣をつける</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            2段階の文章題では、1回目の計算結果を使わずに、問題文の数字をそのまま2回目の計算に使ってしまう間違いがよく見られます。「今、何こになった？」と一度立ち止まって確認する習慣をつけると、こうした間違いを防ぎやすくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            文章題に慣れてきたら、
+            <Link href="/6/sansu" className="text-indigo-700 font-bold hover:underline">6歳向け算数ドリル</Link>
+            で計算そのもののスピードや正確さも鍛えていきましょう。
           </p>
 
         </div>

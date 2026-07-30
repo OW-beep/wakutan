@@ -70,8 +70,29 @@ export default function Page() {
             複数のヒントを整理して1つの答えにたどり着く経験は、文章題や理科の学習にもつながります。正解よりも、どのヒントに注目したかを聞いてあげるのもおすすめです。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            なぞなぞで手がかりを整理して答えにたどり着く力は、算数の文章題を読み解く力にも通じます。答え合わせのときに「なぜそう考えたか」を話してもらうのもおすすめです。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>複数の手がかりを整理し、矛盾がないか確かめながら答えを絞る力</li>
+            <li>「なぜその答えだと思ったか」を、自分の言葉で説明する力</li>
+            <li>間違えたときに、どこで考え方がずれたかを振り返る力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>答え合わせのとき「どのヒントが決め手だった？」と聞いてみる</li>
+            <li>間違えた問題は、どのヒントを見落としたかを一緒に確認する</li>
+            <li>子どもになぞなぞを作ってもらい、ヒントの順番を工夫させてみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            最初に思いついた答えに固執してしまい、あとから出てきたヒントと矛盾していても気づかないことがあります。「今の答えは、さっきのヒントとも合っているかな？」と確認する習慣が、筋道立てて考える力につながります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            考える力をさらに伸ばしたい場合は、
+            <Link href="/6/moji" className="text-fuchsia-700 font-bold hover:underline">もじの読み解き問題</Link>
+            もおすすめです。
           </p>
 
         </div>

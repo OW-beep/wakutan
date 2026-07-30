@@ -71,8 +71,29 @@ export default function Page() {
             ひらがなへの興味は、子どもによって芽生えるタイミングが大きく異なります。読めなくても焦らず、絵本や身の回りの文字に触れる機会を増やしてあげましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            4歳ごろは、文字そのものより「音」への気づきが育つ時期です。しりとりや言葉遊びを通して、文字と音がつながる土台を少しずつ作っていきましょう。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>言葉が「音のかたまり」でできていると気づく「音韻認識」の芽生え</li>
+            <li>自分の名前など、身近な文字への関心</li>
+            <li>文字の形と、その文字が表す音を少しずつ結びつける力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>しりとりで、言葉の最初と最後の「音」に注目する練習をする</li>
+            <li>自分の名前の文字を指さしながら、一緒に読んでみる</li>
+            <li>絵本の読み聞かせのとき、ときどき文字を指でなぞりながら読む</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            「あ」と「お」、「ぬ」と「め」のように、形が似ている文字を混同するのはこの時期によくあることです。また、文字を左右反転させて書く「鏡文字」も、発達の途中でよく見られる自然な現象なので、厳しく直そうとせず、気長に見守ってあげてください。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            音への気づきが育ってきたら、
+            <Link href="/5/hiragana" className="text-pink-600 font-bold hover:underline">5歳向けひらがなドリル</Link>
+            で読み書きそのものに挑戦していきます。
           </p>
 
         </div>

@@ -70,8 +70,31 @@ export default function Page() {
             5歳はひらがなの読み書きが伸びる時期です。焦らず、絵本や生活の中の文字にも一緒に注目してみましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            文字の読み書きは、音と文字を結びつける「音韻認識」という力の発達と関わりが深いとされています。読めない・書けない時期があっても、それは発達の途中段階であることがほとんどです。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>清音（あ・い・う・え・お、など）の読み書き</li>
+            <li>自分の名前や、身近な単語を読んだり書いたりする力</li>
+            <li>文字を音に変換して読む「デコーディング」の基礎</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>お手紙ごっこで、短い言葉を書いて渡し合う</li>
+            <li>絵日記を書いて、今日あったことをひらがなで表現してみる</li>
+            <li>単語カードを作って、読む練習をゲームのように楽しむ</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            「わたしは」の「は」を「わ」と発音するなど、助詞の読み方でつまずく子は多くいます。また、「きゃ」「しゅ」のような拗音や、「がっこう」の「っ」のような促音は、音と文字の対応が複雑なため理解に時間がかかりやすいところです。焦らず、声に出しながら繰り返し練習することが大切です。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            読み書きに慣れてきたら、
+            <Link href="/6/hiragana" className="text-pink-600 font-bold hover:underline">6歳向けひらがなドリル</Link>
+            や
+            <Link href="/5/moji" className="text-pink-600 font-bold hover:underline">もじの読み解き問題</Link>
+            にも挑戦してみましょう。
           </p>
 
         </div>

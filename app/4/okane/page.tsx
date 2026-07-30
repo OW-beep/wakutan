@@ -70,8 +70,29 @@ export default function Page() {
             4歳のうちは、正確な計算よりも「硬貨には種類がある」「数を合わせると増える」という感覚を育てることを大切にしています。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            はじめてのお金の学習では、硬貨の形や大きさに興味を持つことからで十分です。「これは何円かな？」と一緒に眺めてみるところから始めてみましょう。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>1円・5円・10円など、硬貨の見た目のちがいへの気づき</li>
+            <li>硬貨を並べて「あわせるといくつ」という、たし算の考え方の土台</li>
+            <li>「お金を払うと物が買える」という、社会のしくみへの興味</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>実際の硬貨を並べて、「これは何円かな？」と一緒に眺めてみる</li>
+            <li>お財布の中の小銭を、種類ごとに分けてみる遊びをする</li>
+            <li>お買い物ごっこで、おもちゃのお金をやりとりしてみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            この時期は、硬貨の大きさと金額が比例しない（1円玉より5円玉の方が価値は高いなど）ことに混乱しやすい時期です。「大きい＝たくさん」ではないことは、実際に硬貨を触りながら少しずつ理解していくもので、今すぐ完璧に覚える必要はありません。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            硬貨に慣れてきたら、
+            <Link href="/5/okane" className="text-lime-700 font-bold hover:underline">5歳向けおかね問題</Link>
+            で、お買い物の場面での計算に挑戦していきます。
           </p>
 
         </div>
