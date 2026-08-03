@@ -77,3 +77,67 @@ export const dotFiguresSize4: DotFigure[] = [
   { gridSize: 4, lines: [[[0, 0], [0, 4]], [[0, 4], [4, 4]], [[4, 4], [4, 0]], [[4, 0], [0, 0]], [[0, 0], [4, 4]]] }, // 四角＋対角線1本
   { gridSize: 4, lines: [[[0, 4], [4, 4]], [[4, 4], [4, 0]], [[4, 0], [0, 0]], [[0, 0], [0, 4]], [[4, 0], [0, 4]]] }, // 四角＋対角線1本（逆）
 ];
+
+/**
+ * 手作りの見本だけでは数が足りない（1つ1つ人の手でデザインしているため）ので、
+ * 決まった手順で「それっぽい」点つなぎの図形を追加生成して、プールの数を増やす。
+ *
+ * Math.random() は使わない（サーバーの起動やリクエストのたびに結果が変わってしまい、
+ * 日替わり選出の仕組みと噛み合わなくなるため）。同じ seed なら必ず同じ図形になる、
+ * 簡易な疑似乱数（LCG）を使う。
+ */
+function seededRandom(seed: number): () => number {
+  let state = (seed % 2147483647 + 2147483647) % 2147483647;
+  if (state === 0) state = 1;
+  return () => {
+    state = (state * 16807) % 2147483647;
+    return (state - 1) / 2147483646;
+  };
+}
+
+export function generateFigure(gridSize: number, seed: number, numPoints: number): DotFigure {
+  const rand = seededRandom(seed);
+  const lattice = gridSize + 1;
+  const points: Point[] = [];
+  const used = new Set<string>();
+  const maxAttempts = numPoints * 50;
+  let attempts = 0;
+
+  while (points.length < numPoints && attempts < maxAttempts) {
+    attempts++;
+    const r = Math.floor(rand() * lattice);
+    const c = Math.floor(rand() * lattice);
+    const key = `${r},${c}`;
+    if (!used.has(key)) {
+      used.add(key);
+      points.push([r, c]);
+    }
+  }
+
+  const lines: [Point, Point][] = [];
+  for (let i = 0; i < points.length - 1; i++) {
+    lines.push([points[i], points[i + 1]]);
+  }
+
+  return { gridSize, lines };
+}
+
+/**
+ * 手作りの見本 + 自動生成の図形をあわせて、目標数ぶんのプールを作る。
+ * 自動生成ぶんは、点の数（3〜6個）を少しずつ変えてバリエーションを出す。
+ */
+export function buildDotFigurePool(
+  curated: DotFigure[],
+  gridSize: number,
+  targetCount: number,
+  seedOffset: number
+): DotFigure[] {
+  const pool = [...curated];
+  let i = 0;
+  while (pool.length < targetCount) {
+    const numPoints = 3 + (i % 4); // 3,4,5,6 と繰り返す
+    pool.push(generateFigure(gridSize, seedOffset + i, numPoints));
+    i++;
+  }
+  return pool;
+}

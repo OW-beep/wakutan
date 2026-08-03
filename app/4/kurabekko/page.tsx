@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.kurabekko,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-teal-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.kurabekko.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             くらべっこは、日常のさまざまな場面でも取り入れやすいテーマです。「どっちが多いかな？」と生活の中でも聞いてみましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            「どっちが おおい？」と考える経験は、数や量の感覚を育てる第一歩です。実際におもちゃやお菓子を並べながら、目で見て比べる体験を大切にしてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>2つのものを見比べて、多い・少ない、大きい・小さいを判断する力</li>
+            <li>見た目の印象だけでなく、実際に並べて確かめる習慣</li>
+            <li>「同じ数」という感覚の芽生え</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>おやつを配るときに「どっちが多いかな？」と聞いてから配る</li>
+            <li>兄弟姉妹やぬいぐるみと背比べをして、大きさを比べる</li>
+            <li>コップに入れた水の量を見比べて、どちらが多いか話し合う</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            同じ数のおはじきでも、広く並べると多く見え、狭く並べると少なく見えることがあります。これは「量の保存」という概念がまだ発達の途中にあるためで、自然なことです。実際に1つずつ数えて確かめる経験を重ねることで、少しずつ感覚が育っていきます。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            比べる力がついてきたら、
+            <Link href="/5/kurabekko" className="text-teal-700 font-bold hover:underline">5歳向けくらべっこ問題</Link>
+            で、3つを比べる問題にも挑戦してみましょう。
           </p>
 
         </div>

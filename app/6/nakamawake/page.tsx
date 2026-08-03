@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.nakamawake,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-green-600 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.nakamawake.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,23 @@ export default function Page() {
             仲間分けは日常生活の中でも実践しやすいテーマです。おもちゃの片付けや食材の分類など、生活と結びつけて楽しんでみましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            分類する力は、算数の「集合」の考え方や、文章題を整理する力にもつながっていきます。分け方に迷ったときは、どんな基準で分けたのか話し合ってみましょう。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>複数の分類基準を比べて、最も適切なものを選ぶ力</li>
+            <li>算数の「集合」（グループ分け）の考え方の土台</li>
+            <li>「なぜその分け方にしたか」を筋道立てて説明する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>冷蔵庫の中身を「野菜」「飲み物」などに分けて整理してもらう</li>
+            <li>同じものでも、違う基準（色・大きさ・用途）で分け直せることを一緒に試す</li>
+            <li>分け方に迷ったときは「どんな基準で分けたか」を話し合う</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            1つのものが複数のグループに属しうる場合（例：トマトは野菜でもあり赤いものでもある）、どちらの基準を優先すべきか迷うことがあります。「今回は何を基準に分けているのか」を先に確認する習慣が、算数の集合の考え方にもつながっていきます。
           </p>
 
         </div>

@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.nazonazo,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-fuchsia-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.nazonazo.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 

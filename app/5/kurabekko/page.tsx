@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.kurabekko,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-teal-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.kurabekko.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             3つを比べる問題は少し難しく感じるかもしれません。1つずつ順番に比べていく方法を一緒に確認してあげましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            比べる力は、算数における「量の保存」や「順序」の理解につながる重要な力です。実際にものを並べて数えたり、手で触れて確かめたりする経験が、こうした感覚を育てる助けになります。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>3つ以上のものを比べて、一番多い・一番少ないを見つける力</li>
+            <li>「AはBより多いが、Cより少ない」のような、順序で考える力</li>
+            <li>実際に数えたり並べたりして、比較を確かめる習慣</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>3種類のお菓子を並べて「一番多いのはどれ？」とクイズを出す</li>
+            <li>家族の中で背の順番を一緒に確認してみる</li>
+            <li>比べるときは、2つずつ順番に見ていくコツを一緒に練習する</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            3つ以上を一度に比べようとすると、頭の中がごちゃごちゃになりやすいものです。「まずAとBを比べる」「次にその勝った方とCを比べる」というように、2つずつ順番に比べる方法を教えてあげると整理しやすくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            比べる力がついてきたら、
+            <Link href="/6/kurabekko" className="text-teal-700 font-bold hover:underline">6歳向けくらべっこ問題</Link>
+            では、単位を使った比較にも挑戦します。
           </p>
 
         </div>

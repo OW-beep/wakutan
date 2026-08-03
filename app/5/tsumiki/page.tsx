@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.tsumiki,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-cyan-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.tsumiki.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             ななめから見た絵を頭の中で立体としてイメージする力は、算数の図形問題にもつながっていきます。数えまちがえたときは、どのタワーを数え忘れたか一緒に確認してあげてください。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            1れつにならんだタワーだけを使っているので、かくれて見えないつみきは出てきません。見えている数を、指でひとつずつ確認しながら数える習慣を大切にしてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>タワーの数が増えても、順序よく数えていく力</li>
+            <li>「高いタワー」「低いタワー」を見比べる力</li>
+            <li>数えた結果を、合計として正しく足し合わせる力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>数えるときは、左から順番に指でなぞりながら数える習慣をつける</li>
+            <li>「一番高いタワーはどれ？」「一番低いのは？」と聞いてみる</li>
+            <li>実際の積み木で、絵と同じ数のタワーを作って答え合わせをする</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            タワーの数が増えると、どこまで数えたか分からなくなり、同じタワーを2回数えたり、1つ飛ばしてしまったりすることがあります。数え終えたタワーに指で軽くチェックを入れながら進める、あるいは声に出しながら数えることで、こうしたミスを減らせます。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            数える力がついてきたら、
+            <Link href="/6/tsumiki" className="text-cyan-700 font-bold hover:underline">6歳向けつみき問題</Link>
+            に挑戦してみましょう。
           </p>
 
         </div>

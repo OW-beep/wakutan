@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.onajikatachi,
-    10
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-violet-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.onajikatachi.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             点図形の模写は、小学校受験の分野でもよく使われる、図形をよく見て正確に再現する力を育てる練習です。まちがえたときは「どの点とどの点がつながっていたかな？」と、見本をもう一度いっしょに確認してあげてください。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            9マス四方（4×4のてん）を使っています。線の数が多い形は、はしっこから順番に書き進めると迷いにくくなります。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>複数の線からなる図形全体を、バランスよく捉える力</li>
+            <li>お手本と自分が書いたものを見比べて、違いに気づく力</li>
+            <li>どこから書き始めるか、自分なりに順序を考える力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>書き始める前に「まず外側の形から書こうか」と方針を一緒に決める</li>
+            <li>書き終わったら、お手本と並べて「同じ形になったかな？」と見比べる</li>
+            <li>間違えた線は消しゴムで直すより、もう一度全体を書き直す練習も取り入れる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            9マス四方（4×4のてん）になると線の数も増え、どこから書き始めればよいか迷いやすくなります。はしっこ（角）から順番に書き進めると、途中で迷子になりにくくなります。一気に完成させようとせず、1本ずつ確実に書く習慣をつけましょう。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            模写に慣れてきたら、
+            <Link href="/6/onajikatachi" className="text-violet-700 font-bold hover:underline">6歳向けおなじかたち問題</Link>
+            で、さらに複雑な形にも挑戦してみましょう。
           </p>
 
         </div>

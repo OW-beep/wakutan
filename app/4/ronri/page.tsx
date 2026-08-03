@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.ronri,
-    20
+    30
   );
 
   return (
@@ -45,8 +45,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-blue-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.ronri.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -72,8 +74,29 @@ export default function Page() {
             順番やきまりを考える問題は、論理的に考える力の土台になります。すぐに答えが浮かばなくても、一緒に声に出して確認しながら、考える過程を楽しんでみてください。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            順番やきまりを考える経験は、論理的に考える力の芽生えです。難しく感じたら、指や絵を使って一緒に確認しながら進めてみてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>「あか・あお・あか・あお」のような、繰り返しのきまりに気づく力</li>
+            <li>「あさ・ひる・よる」のような、順番を理解する力</li>
+            <li>次に何が来るかを、声に出しながら予想する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>おもちゃやブロックを色ごとに繰り返し並べて、続きを予想してもらう</li>
+            <li>1日の流れ（朝ごはん→着替え→出発など）を一緒に声に出して確認する</li>
+            <li>絵本の中の繰り返しのフレーズを一緒に声に出して読む</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            きまりが2つ以上のパターンで組み合わさると、どこで区切ればいいか分からなくなることがあります。指で1つずつ区切りながら「あか、あお、あか、あお、つぎは？」と声に出すと、きまりが見えやすくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            きまりを見つける力がついてきたら、
+            <Link href="/5/ronri" className="text-blue-600 font-bold hover:underline">5歳向けろんり問題</Link>
+            に挑戦してみましょう。
           </p>
 
         </div>

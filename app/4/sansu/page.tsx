@@ -7,7 +7,7 @@ import { getDailyQuestions } from "../../data/getDailyQuestions";
 export const metadata = {
   title: "4歳向け算数ドリル｜わくたん",
   description:
-    "4歳向け無料算数ドリル。算数・論理・パターン認識・ひらがな・仲間分けなど毎日10問。無料・印刷OK。",
+    "4歳向け無料算数ドリル。算数・論理・パターン認識・ひらがな・仲間分けなど毎日30問。無料・印刷OK。",
   alternates: {
     canonical: "/4/sansu",
   },
@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.sansu,
-    20
+    30
   );
 
   return (
@@ -45,8 +45,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-yellow-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.sansu.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 

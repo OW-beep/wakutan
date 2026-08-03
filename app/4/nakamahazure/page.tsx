@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.nakamahazure,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-rose-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.nakamahazure.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             なかまわけと似ていますが、こちらは「ちがうもの」を見つける問題です。理由も一緒に確認してあげましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            「なにが ちがうかな？」と考える遊びは、観察する力と考える力を同時に育てます。正解を急がず、一緒に理由を言葉にしてみましょう。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>複数のものを見比べて、仲間はずれの1つを見つける観察力</li>
+            <li>「みんな動物だけど、これだけ鳥じゃない」のような共通点への気づき</li>
+            <li>正解・不正解にかかわらず、理由を考えようとする姿勢</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>おもちゃを4つ並べて、「1つだけ違うのはどれ？」とクイズを出す</li>
+            <li>間違えても正解を先に言わず、「どうしてそう思ったの？」と聞いてみる</li>
+            <li>答え合わせのときに「みんなは何の仲間だったかな？」と振り返る</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            大人が想定した「正解」とは違う理由で選んでしまうことがよくあります（例：色が違うから選んだ、など）。それも観察している証拠なので、頭ごなしに否定せず、「そういう見方もあるね、他にはどんな共通点があるかな？」と別の視点も一緒に探してあげましょう。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            見つける力がついてきたら、
+            <Link href="/5/nakamahazure" className="text-rose-700 font-bold hover:underline">5歳向けなかまはずれ問題</Link>
+            に挑戦してみましょう。
           </p>
 
         </div>

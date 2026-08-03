@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.nazonazo,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-fuchsia-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.nazonazo.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -74,7 +76,7 @@ export default function Page() {
           <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
             <li>複数の手がかりを整理し、矛盾がないか確かめながら答えを絞る力</li>
             <li>「なぜその答えだと思ったか」を、自分の言葉で説明する力</li>
-            <li>間違えたときに、どこで考え方がずれたかを振り返る力</li>
+            <li>思いついた答えを、ヒントに照らして自分で確かめ直す力</li>
           </ul>
 
           <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>

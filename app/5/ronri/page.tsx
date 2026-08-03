@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.ronri,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-blue-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.ronri.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             5歳は「きまり」を理解する力が伸びる時期です。すぐに答えが出なくても、一緒に順番を声に出して確認するなど、考えるプロセスを楽しんでみましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            規則性を見つける力は、心理学でいう「パターン認識」の一種で、算数だけでなく読み書きなど幅広い学習の土台になるとされています。すぐに答えが浮かばなくても、声に出して規則を確認する時間を大切にしてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>数の並び（1→3→5→7のような）の中にあるきまりを見つける力</li>
+            <li>複数の要素が交互に並ぶパターンを理解する力</li>
+            <li>「次はどうなりそう？」と、きまりから未来を予想する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>階段を上りながら「2、4、6…」と数のきまりを声に出してみる</li>
+            <li>洗濯物を色や種類で交互に並べて、続きを予想してもらう</li>
+            <li>間違えても正解を先に言わず、「もう一回きまりを見てみよう」と促す</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            数の並びの問題では、「1つ増える」「2つ増える」のように増え方そのものに注目する必要があります。並んでいる数字を指でなぞりながら「いくつ増えてるかな？」と一緒に確認すると、規則性に気づきやすくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            規則性を見つける力がついてきたら、
+            <Link href="/6/ronri" className="text-blue-700 font-bold hover:underline">6歳向けろんり問題</Link>
+            で、理由を説明する練習にも挑戦してみましょう。
           </p>
 
         </div>

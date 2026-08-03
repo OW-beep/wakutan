@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.pattern,
-    20
+    30
   );
 
   return (
@@ -46,8 +46,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-purple-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.pattern.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -73,8 +75,29 @@ export default function Page() {
             繰り返しのパターンを見つける問題は、規則性に気づく力を育てます。「次はどうなるかな？」と一緒に予想しながら取り組むと、より楽しく学べます。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            パターンに気づく遊びは、色や形をよく見る観察力から育っていきます。「あか・あお・あか・あお…つぎは？」と声に出しながら一緒に楽しんでみてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>色や形、大きさのちがいを見分ける観察力</li>
+            <li>「あか・あお・あか・あお」のような、目で見てわかる繰り返しに気づく力</li>
+            <li>並んでいるものをよく見て、次を予想する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>おはじきやブロックを色違いで交互に並べて、続きを予想してもらう</li>
+            <li>洋服や食器の柄の中にある繰り返しの模様を一緒に探す</li>
+            <li>お散歩中に、街路樹やタイルの並び方に注目してみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            色や形が2種類以上混ざると、どこが繰り返しの区切りか分からなくなることがあります。指で1つずつ指しながら「あか、あお、あか、あお」と声に出して確認すると、繰り返しのまとまりが見えやすくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            パターンを見つける力がついてきたら、
+            <Link href="/5/pattern" className="text-purple-700 font-bold hover:underline">5歳向けパターン問題</Link>
+            に挑戦してみましょう。
           </p>
 
         </div>

@@ -90,8 +90,8 @@ export default function Page() {
               年齢ごとに難易度と出題の狙いを分けています。
             </li>
             <li className="leading-7 mt-3">
-              <span className="font-bold">・1日で終わる分量にする：</span>
-              長時間の学習を求めるのではなく、5〜10分程度で取り組める10問構成を基本にしています。
+              <span className="font-bold">・1回で終わる分量にする：</span>
+              各ジャンルのドリルページは30問構成にしています。長時間の学習を求めるのではなく、1回のプリントで完結する分量です。トップページの「今日のドリル」では、複数ジャンルから10問のサンプルをすぐに試せるようにしています。
             </li>
             <li className="leading-7 mt-3">
               <span className="font-bold">・同じ問題文の単純な繰り返しを避ける：</span>

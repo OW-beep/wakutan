@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.nakamahazure,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-rose-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.nakamahazure.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             まぎらわしい問題も出てきますが、間違えても「どうしてそう思ったの？」と一緒に考える時間を大切にしましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            仲間はずれを見つける力は、複数の情報を同時に比較して判断する「実行機能」という力とも関わりがあるとされています。すぐに正解が出なくても、選択肢を一つずつ確認していく過程が力になります。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>複数の選択肢を同時に見比べながら判断する力</li>
+            <li>1つの基準にとらわれず、いろいろな共通点に気づく力</li>
+            <li>選んだ理由を、自分の言葉で伝えようとする力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>「季節」「曜日」など、目に見えない仲間分けにもチャレンジしてみる</li>
+            <li>選択肢を1つずつ指さしながら「これは仲間、これは違う」と確認する</li>
+            <li>正解した問題でも「どうしてわかったの？」と理由を聞いてみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            選択肢すべてを一度に比べようとして混乱することがあります。「まず1つ目と2つ目を比べる」「次に3つ目を確認する」というように、順番に1つずつ見ていく方法を教えてあげると、落ち着いて取り組めるようになります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            観察して考える力がついてきたら、
+            <Link href="/6/nakamahazure" className="text-rose-700 font-bold hover:underline">6歳向けなかまはずれ問題</Link>
+            に挑戦してみましょう。
           </p>
 
         </div>

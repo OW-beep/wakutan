@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.nakamawake,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-green-600 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.nakamawake.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             仲間分けの問題は、身の回りのもので実践するとより理解が深まります。お買い物や片付けの際に「これは何の仲間かな？」と聞いてみるのもおすすめです。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            物事を分類する力は、心理学で「カテゴリー化」と呼ばれ、情報を整理して考えるための基礎的な認知能力の一つとされています。間違えた分類も、その子なりの理由があることが多いので、理由を聞いてみるのもおすすめです。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>「水にうかぶもの」「空をとぶもの」のような、少し抽象的な基準での分類</li>
+            <li>複数の候補の中から、共通する特徴を見つける力</li>
+            <li>分類の理由を、簡単な言葉で説明する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>スーパーで買い物をしながら「これは何コーナーの仲間？」とクイズを出す</li>
+            <li>おもちゃ箱の中身を、「動くもの」「音が出るもの」など基準を決めて分類する</li>
+            <li>間違えたときは「どうしてそう思った？」と理由をまず聞いてみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            「魚は水の中の生き物だけど、泳ぐから乗り物じゃない」のように、複数の特徴を持つものの分類は混乱しやすいポイントです。「今回はどの特徴に注目して分けるのか」を先に確認してから取り組むと、迷いにくくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            分類する力がついてきたら、
+            <Link href="/6/nakamawake" className="text-green-600 font-bold hover:underline">6歳向けなかまわけ問題</Link>
+            に挑戦してみましょう。
           </p>
 
         </div>

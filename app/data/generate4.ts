@@ -1,6 +1,13 @@
 import { parseMoney } from "./moneyParser";
 import { CubeShape, totalCubes, describeCubes } from "./cubeShapes";
-import { DotFigure, dotFiguresSize2 } from "./dotFigures";
+import { DotFigure, dotFiguresSize2, buildDotFigurePool } from "./dotFigures";
+import { generateCoinSumQuestions, generateItemSumQuestions } from "./okaneQuestions";
+import { generateNumberSequenceQuestions, generateAlternatingQuestions, generateCycle3Questions } from "./ronriQuestions";
+import { generateAlternatingPatternQuestions, generateTriplePatternQuestions } from "./patternQuestions";
+import { generateQuantityCompareQuestions, generateSameQuantityQuestions } from "./kurabekkoQuestions";
+import { generateNakamawakeQuestions, generateNakamahazureQuestions } from "./categoryQuestions";
+import { generateWordChoiceQuestions } from "./hiraganaQuestions";
+import { generateRiddleQuestions } from "./nazonazoQuestions";
 
 type Question = {
   genre: string;
@@ -41,14 +48,15 @@ export function generate4Questions() {
   let sansuIndex = 0;
   for (let a = 1; a <= 10; a++) {
     for (let b = 1; b <= 10; b++) {
-      const tpl = sansuTemplates[sansuIndex % sansuTemplates.length];
-      sansu.push({
-        genre: "さんすう",
-        question: tpl(a, b),
-        answer: `${a + b}`,
-        explanation: `${a} と ${b} を あわせると ${a + b} だよ。`,
-      });
-      sansuIndex++;
+      for (const tpl of sansuTemplates) {
+        sansu.push({
+          genre: "さんすう",
+          question: tpl(a, b),
+          answer: `${a + b}`,
+          explanation: `${a} と ${b} を あわせると ${a + b} だよ。`,
+        });
+        sansuIndex++;
+      }
     }
   }
 
@@ -78,17 +86,30 @@ export function generate4Questions() {
     ["【きまり】あける → しめる → あける → □", "しめる", "あけると しめるが こうごに ならんでいるよ。"],
   ];
 
-  for (let i = 0; i < 20; i++) {
-    ronriBase.forEach(t => {
-      const alreadyComplete = t[0].endsWith("？");
-      ronri.push({
-        genre: "ろんり",
-        question: alreadyComplete ? t[0] : `${t[0]} つぎはどれかな？`,
-        answer: t[1],
-        explanation: t[2],
-      });
+  ronriBase.forEach(t => {
+    const alreadyComplete = t[0].endsWith("？");
+    ronri.push({
+      genre: "ろんり",
+      question: alreadyComplete ? t[0] : `${t[0]} つぎはどれかな？`,
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  const ronriStarts: number[] = [];
+  for (let s = 1; s <= 25; s++) ronriStarts.push(s);
+  [
+    ...generateNumberSequenceQuestions(ronriStarts, [1, 2, 3, 4]),
+    ...generateAlternatingQuestions(),
+    ...generateCycle3Questions(),
+  ].forEach(q => {
+    ronri.push({
+      genre: "ろんり",
+      question: `${q.question} つぎはどれかな？`,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // パターン
@@ -116,16 +137,26 @@ export function generate4Questions() {
     ["6 7 6 7 □", "6", "6と 7が こうごに ならんでいるよ。"],
   ];
 
-  for (let i = 0; i < 20; i++) {
-    patternBase.forEach(t => {
-      pattern.push({
-        genre: "パターン",
-        question: `${t[0]} つぎはどれかな？`,
-        answer: t[1],
-        explanation: t[2],
-      });
+  patternBase.forEach(t => {
+    pattern.push({
+      genre: "パターン",
+      question: `${t[0]} つぎはどれかな？`,
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  [
+    ...generateAlternatingPatternQuestions(),
+    ...generateTriplePatternQuestions(),
+  ].forEach(q => {
+    pattern.push({
+      genre: "パターン",
+      question: `${q.question} つぎはどれかな？`,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // ひらがな（なかま）－ たんごをきいてカテゴリをこたえる（もっともやさしいかたち）
@@ -153,16 +184,23 @@ export function generate4Questions() {
     { w: "ほし", emoji: "⭐", choices: ["ほし", "ぼうし", "いぬ"] },
   ];
 
-  for (let i = 0; i < 15; i++) {
-    words.forEach(w => {
-      hiragana.push({
-        genre: "ことば",
-        question: `${w.emoji} は どれ かな？（${w.choices.join("・")}）`,
-        answer: w.w,
-        explanation: `${w.emoji}は「${w.w}」だよ。`,
-      });
+  words.forEach(w => {
+    hiragana.push({
+      genre: "ことば",
+      question: `${w.emoji} は どれ かな？（${w.choices.join("・")}）`,
+      answer: w.w,
+      explanation: `${w.emoji}は「${w.w}」だよ。`,
     });
-  }
+  });
+
+  generateWordChoiceQuestions(4800, 8).forEach(q => {
+    hiragana.push({
+      genre: "ことば",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // なかまわけ（4つから3つのなかまをえらぶ・わかりやすいちがい）
@@ -190,16 +228,23 @@ export function generate4Questions() {
     { c: "はな", items: ["さくら", "ちゅーりっぷ", "ひまわり", "ばす"], a: "さくら ちゅーりっぷ ひまわり" },
   ];
 
-  for (let i = 0; i < 15; i++) {
-    groups.forEach(g => {
-      nakamawake.push({
-        genre: "なかまわけ",
-        question: `【${g.c}】${g.items.join("・")} どれがなかまかな？`,
-        answer: g.a,
-        explanation: `${g.c}の なかまは 「${g.a}」だよ。`,
-      });
+  groups.forEach(g => {
+    nakamawake.push({
+      genre: "なかまわけ",
+      question: `【${g.c}】${g.items.join("・")} どれがなかまかな？`,
+      answer: g.a,
+      explanation: `${g.c}の なかまは 「${g.a}」だよ。`,
     });
-  }
+  });
+
+  generateNakamawakeQuestions(4600, 10).forEach(q => {
+    nakamawake.push({
+      genre: "なかまわけ",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // くらべっこ（おおい・すくない／おおきい・ちいさい）
@@ -227,16 +272,26 @@ export function generate4Questions() {
     ["🎁プレゼント 4こ と 🎁プレゼント 4こ、どちらが おおい？", "おなじ", "どちらも 4こで おなじ かずだよ。"],
   ];
 
-  for (let i = 0; i < 15; i++) {
-    kurabekkoBase.forEach(t => {
-      kurabekko.push({
-        genre: "くらべっこ",
-        question: t[0],
-        answer: t[1],
-        explanation: t[2],
-      });
+  kurabekkoBase.forEach(t => {
+    kurabekko.push({
+      genre: "くらべっこ",
+      question: t[0],
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  [
+    ...generateQuantityCompareQuestions(4400, 220),
+    ...generateSameQuantityQuestions(4500, 20),
+  ].forEach(q => {
+    kurabekko.push({
+      genre: "くらべっこ",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // なかまはずれ（4つのうち1つだけちがうものをえらぶ）
@@ -264,16 +319,23 @@ export function generate4Questions() {
     ["まる・さんかく・しかく・いぬ", "いぬ", "まる・さんかく・しかくは かたち。いぬだけ ちがうよ。"],
   ];
 
-  for (let i = 0; i < 15; i++) {
-    hazureBase.forEach(t => {
-      nakamahazure.push({
-        genre: "なかまはずれ",
-        question: `${t[0]}　このなかで なかまはずれは どれ？`,
-        answer: t[1],
-        explanation: t[2],
-      });
+  hazureBase.forEach(t => {
+    nakamahazure.push({
+      genre: "なかまはずれ",
+      question: `${t[0]}　このなかで なかまはずれは どれ？`,
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  generateNakamahazureQuestions(4700, 10).forEach(q => {
+    nakamahazure.push({
+      genre: "なかまはずれ",
+      question: `${q.question}　このなかで なかまはずれは どれ？`,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // なぞなぞ（ヒントから こたえを かんがえる）
@@ -301,16 +363,23 @@ export function generate4Questions() {
     ["みみが ながくて ぴょんぴょん はねる どうぶつ。なあに？", "うさぎ", "みみが ながくて はねる どうぶつは うさぎだよ。"],
   ];
 
-  for (let i = 0; i < 15; i++) {
-    nazonazoBase.forEach(t => {
-      nazonazo.push({
-        genre: "なぞなぞ",
-        question: t[0],
-        answer: t[1],
-        explanation: t[2],
-      });
+  nazonazoBase.forEach(t => {
+    nazonazo.push({
+      genre: "なぞなぞ",
+      question: t[0],
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  generateRiddleQuestions(4900, 2, 10).forEach(q => {
+    nazonazo.push({
+      genre: "なぞなぞ",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // おかね（こうかを かぞえる）
@@ -338,33 +407,61 @@ export function generate4Questions() {
     ["1円玉が 9まい。あわせて いくら？", "9円", "1円が 9まいで 9円だよ。"],
   ];
 
-  for (let i = 0; i < 15; i++) {
-    okaneBase.forEach(t => {
-      okane.push({
-        genre: "おかね",
-        question: t[0],
-        answer: t[1],
-        explanation: t[2],
-        money: parseMoney(t[0]),
-      });
+  okaneBase.forEach(t => {
+    okane.push({
+      genre: "おかね",
+      question: t[0],
+      answer: t[1],
+      explanation: t[2],
+      money: parseMoney(t[0]),
     });
-  }
+  });
+
+  [...generateCoinSumQuestions(4100, 120), ...generateItemSumQuestions(4200, 120)].forEach(q => {
+    okane.push({
+      genre: "おかね",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+      money: parseMoney(q.question),
+    });
+  });
 
   // ====================
   // つみき（りったいを かぞえる くうかん認知）
   // 1れつにならんだ タワーだけを使うので、かくれて見えないつみきは出てこない
   // ====================
   const tsumikiShapes: CubeShape[] = [];
-  for (let a = 1; a <= 4; a++) {
-    for (let b = 1; b <= 4; b++) {
+  for (let a = 1; a <= 6; a++) {
+    for (let b = 1; b <= 6; b++) {
       if (a === b) continue;
       tsumikiShapes.push([[a, b]]);
+    }
+  }
+  for (let a = 1; a <= 4; a++) {
+    for (let b = 1; b <= 4; b++) {
+      for (let c = 1; c <= 4; c++) {
+        tsumikiShapes.push([[a, b, c]]);
+      }
+    }
+  }
+  for (let a = 1; a <= 3; a++) {
+    for (let b = 1; b <= 3; b++) {
+      for (let c = 1; c <= 3; c++) {
+        for (let d = 1; d <= 3; d++) {
+          tsumikiShapes.push([[a, b, c, d]]);
+        }
+      }
     }
   }
   for (let a = 1; a <= 2; a++) {
     for (let b = 1; b <= 2; b++) {
       for (let c = 1; c <= 2; c++) {
-        tsumikiShapes.push([[a, b, c]]);
+        for (let d = 1; d <= 2; d++) {
+          for (let e = 1; e <= 2; e++) {
+            tsumikiShapes.push([[a, b, c, d, e]]);
+          }
+        }
       }
     }
   }
@@ -380,7 +477,7 @@ export function generate4Questions() {
   // ====================
   // おなじかたち（てんをむすんだ ずけいを かきうつす）
   // ====================
-  const onajikatachi: Question[] = dotFiguresSize2.map(figure => ({
+  const onajikatachi: Question[] = buildDotFigurePool(dotFiguresSize2, 2, 220, 4000).map(figure => ({
     genre: "✏️ おなじかたち",
     question: "みぎの てんを せんで むすんで、ひだりと おなじ かたちを かいてね。",
     answer: "てほんと おなじ かたちに なったかな？",

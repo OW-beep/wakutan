@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.ronri,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-blue-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.ronri.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             6歳は理由を説明する力も伸びてきます。「どうしてそう思ったの？」と聞いてあげることで、考える力がさらに育ちます。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            筋道立てて考える力は、小学校の算数の文章題でも欠かせない力です。間違えたときこそ「どこで考え方がずれたか」を一緒に振り返るチャンスです。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>複数のきまりを見比べて、正しいものを選び出す力</li>
+            <li>答えだけでなく、「なぜそうなるか」を言葉で説明する力</li>
+            <li>間違えたときに、どこで考え方がずれたかを振り返る力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>正解したときも「どうしてそう思ったの？」と理由を聞いてみる</li>
+            <li>間違えたときは、どのきまりを見落としたか一緒に確認する</li>
+            <li>身の回りのきまり（信号の色の順番など）を一緒に探してみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            なんとなく「こんな感じかな」で答えを選び、理由を聞かれると答えられないことがあります。これは筋道立てて考える力がまだ育っている途中だからで、自然なことです。答え合わせのときに理由を言葉にする練習を重ねることで、少しずつ身についていきます。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            論理的に考える力をさらに伸ばしたい場合は、
+            <Link href="/6/nazonazo" className="text-blue-700 font-bold hover:underline">なぞなぞ問題</Link>
+            もおすすめです。
           </p>
 
         </div>

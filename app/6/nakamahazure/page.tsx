@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.nakamahazure,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-rose-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.nakamahazure.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,23 @@ export default function Page() {
             正解だけでなく「なぜそう思ったのか」を説明してもらうと、より深い理解につながります。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            仲間はずれを見つける問題は、小学校の「理由を説明する」学習にもつながります。答えだけでなく「なぜそう思ったか」を聞いてあげると、思考力がさらに育ちます。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>複数の分類基準（見た目・用途・仲間など）を使い分ける力</li>
+            <li>「なぜ仲間はずれなのか」を筋道立てて説明する力</li>
+            <li>他の人の考え方を聞いて、自分の考えと比べる力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>正解した問題も「他にも理由はあるかな？」と別の視点を探してもらう</li>
+            <li>家族でそれぞれ理由を発表し合い、考え方の違いを楽しむ</li>
+            <li>間違えたときは、どの共通点を見落としていたか一緒に確認する</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            答えは合っていても、理由をうまく言葉にできないことがあります。これは「わかっている」ことと「説明できる」ことが別の力だからで、自然な発達の過程です。「まず何に気づいたの？」と、考えたプロセスを引き出す聞き方をしてあげましょう。
           </p>
 
         </div>

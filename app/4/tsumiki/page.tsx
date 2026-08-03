@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.tsumiki,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-cyan-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.tsumiki.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             4歳のうちは、ななめから見た絵を立体として理解すること自体がまだ発展途中です。むずかしそうにしていたら、実際の積み木やブロックを使って、絵と同じ形を一緒に作ってみるのもおすすめです。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            1れつにならんだタワーだけを使っているので、見えている数がそのまま答えになります。指でひとつずつ数える練習にもなります。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>平面の絵を見て、立体的な積み木の形をイメージする力</li>
+            <li>1つずつ、数え忘れや重複なく数える力</li>
+            <li>絵と実物（積み木）を結びつけて理解する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>実際の積み木やブロックで、絵と同じ高さのタワーを作ってみる</li>
+            <li>数えるときは、数えたものに指で軽く触れながら進める</li>
+            <li>1つのタワーを数え終えるごとに「ここまでで〇こ」と声に出す</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            平面の絵を見て「これは積み木が重なっている」と立体的に理解すること自体が、4歳児にはまだ難しい場合があります。絵だけで分かりにくいときは、無理に絵で理解させようとせず、実物の積み木を使って「絵の中のこれは、実際にはこう積んである」と対応させて見せてあげると理解が進みます。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            数える力がついてきたら、
+            <Link href="/5/tsumiki" className="text-cyan-700 font-bold hover:underline">5歳向けつみき問題</Link>
+            に挑戦してみましょう。
           </p>
 
         </div>

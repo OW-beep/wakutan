@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.pattern,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-purple-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.pattern.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             パターン問題に慣れてきたら、「自分でも問題を作ってみる」のもおすすめです。理解がより深まります。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            規則性を見抜く力は、算数の数列や図形の学習の土台になります。パターンが分かったときの「わかった！」という感覚を大切にしてあげてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>図形が回転・反転しながら変化していく規則性を見抜く力</li>
+            <li>複数のきまりが組み合わさったパターンを整理して考える力</li>
+            <li>自分で規則を作り、他の人に説明する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>子どもに簡単なパターン問題を作ってもらい、大人が答える役をやってみる</li>
+            <li>折り紙や積み木で、自分だけのオリジナルパターンを作ってもらう</li>
+            <li>正解した理由を「どこに注目したの？」と言葉で説明してもらう</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            図形が回転したり形が変わったりするパターンは、頭の中でイメージする力が必要で、大人が思う以上に難しく感じることがあります。実際に紙を回転させて見せるなど、目で見て確かめられる形でサポートしてあげると理解が進みます。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            規則性を見抜く力をさらに伸ばしたい場合は、
+            <Link href="/6/onajikatachi" className="text-purple-700 font-bold hover:underline">おなじかたち問題</Link>
+            もおすすめです。
           </p>
 
         </div>

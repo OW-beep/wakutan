@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.nakamawake,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-green-600 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.nakamawake.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -71,8 +73,29 @@ export default function Page() {
             仲間分けの問題は、物事を分類して整理する力を育てます。間違えた分類も、その子なりの理由があることが多いので、「どうしてそう思ったの？」と聞いてみるのもおすすめです。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            仲間分けは「これとこれは似ている」という気づきから始まります。まずは身近なものを一緒に分けながら、分類する楽しさを味わってみてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>「どうぶつ」「たべもの」のような、身近なグループへの気づき</li>
+            <li>見た目や種類で、ものをグループ分けする力</li>
+            <li>「これとこれは似ている」という共通点を見つける力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>おもちゃを片付けるときに、種類ごとに分けてもらう</li>
+            <li>絵本に出てくるものを「どうぶつ」「のりもの」などに分けてみる</li>
+            <li>食事のときに「これは野菜の仲間かな？」と話しかけてみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            大人が想定していない基準（色が同じ、大きさが似ている、など）で分けることがありますが、それも立派な分類の力です。「正解」を急がず、まずは子どもなりの理由を聞いて、そのあとで「こういう分け方もあるよ」と別の視点を紹介してあげましょう。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            分類する力がついてきたら、
+            <Link href="/5/nakamawake" className="text-green-600 font-bold hover:underline">5歳向けなかまわけ問題</Link>
+            に挑戦してみましょう。
           </p>
 
         </div>

@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.kurabekko,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-teal-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.kurabekko.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,23 @@ export default function Page() {
             単位の変換（1m=100cmなど）が出てくる問題もあります。難しい場合は一緒に確認しながら進めましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            比べる力は、算数の「大小」「順序」の理解の土台になります。単位（cmなど）を使った比較にも挑戦しながら、実感を伴った量感覚を育てていきましょう。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>cmやmといった単位を使って、長さや量を比べる力</li>
+            <li>数字だけでなく、実際の大きさや量を実感する力</li>
+            <li>異なる単位（cmとm）の関係を理解する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>定規やメジャーを使って、身の回りのものの長さを一緒に測ってみる</li>
+            <li>「1m=100cm」を、実際にメジャーを伸ばしながら確認する</li>
+            <li>料理のときに、計量カップで水の量を比べてみる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            「1m30cmと125cm、どちらが長い？」のように、単位が混ざった比較は多くの子がつまずくポイントです。すべて同じ単位（cmならcm）にそろえてから比べる、という手順を、実際にメジャーを使いながら体験的に理解させてあげましょう。
           </p>
 
         </div>

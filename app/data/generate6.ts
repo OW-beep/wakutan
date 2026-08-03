@@ -1,6 +1,25 @@
 import { parseMoney } from "./moneyParser";
 import { CubeShape, totalCubes, describeCubes } from "./cubeShapes";
-import { DotFigure, dotFiguresSize4 } from "./dotFigures";
+import { DotFigure, dotFiguresSize4, buildDotFigurePool } from "./dotFigures";
+import { generateClockQuestions } from "./clockQuestions";
+import { generateCoinSumQuestions, generateItemSumQuestions, generateChangeQuestions } from "./okaneQuestions";
+import {
+  generateNumberSequenceQuestions,
+  generateDoublingQuestions,
+  generateAlternatingQuestions,
+  generateCycle3Questions,
+} from "./ronriQuestions";
+import {
+  generateNumberSequenceQuestions4,
+  generateAlternatingPattern5Questions,
+  generateTriplePatternQuestions,
+  generateQuadPatternQuestions,
+} from "./patternQuestions";
+import { generateQuantityCompareQuestions, generateDifferenceQuestions, generateSameQuantityQuestions } from "./kurabekkoQuestions";
+import { generateNakamawakeQuestions, generateNakamahazureQuestions } from "./categoryQuestions";
+import { generateAntonymQuestions, generateKatakanaQuestions } from "./hiraganaQuestions";
+import { generateRiddleQuestions } from "./nazonazoQuestions";
+import { generateTwoStepWordProblems } from "./mojiQuestions";
 
 type Question = {
   genre: string;
@@ -116,16 +135,40 @@ export function generate6Questions() {
     ["1がつ→3がつ→5がつ→□", "7がつ", "2かげつずつ すすんでいます。"],
   ];
 
-  for (let i = 0; i < 14; i++) {
-    ronriTemplates.forEach(t => {
-      ronri.push({
-        genre: "🧠 ろんり",
-        question: t[0],
-        answer: t[1],
-        explanation: t[2],
-      });
+  ronriTemplates.forEach(t => {
+    ronri.push({
+      genre: "🧠 ろんり",
+      question: t[0],
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  // age6は「1→3→5→7→□」のようにブラケット無し・スペース無しの表記なので、
+  // 生成した問題も同じ書式にそろえる
+  const toAge6Style = (q: string) =>
+    q.replace(/【[^】]*】/, "").replace(/ /g, "");
+
+  const ronriStarts6Up: number[] = [];
+  for (let s = 1; s <= 30; s++) ronriStarts6Up.push(s);
+  const ronriStarts6Down: number[] = [];
+  for (let s = 20; s <= 100; s++) ronriStarts6Down.push(s);
+  const doublingStarts6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  [
+    ...generateNumberSequenceQuestions(ronriStarts6Up, [1, 2, 3, 4, 5, 6, 7]),
+    ...generateNumberSequenceQuestions(ronriStarts6Down, [-1, -2, -3, -5, -10]),
+    ...generateDoublingQuestions(doublingStarts6),
+    ...generateAlternatingQuestions(),
+    ...generateCycle3Questions(),
+  ].forEach(q => {
+    ronri.push({
+      genre: "🧠 ろんり",
+      question: toAge6Style(q.question),
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // パターン
@@ -154,16 +197,30 @@ export function generate6Questions() {
     ["6 12 18 24 □", "30", "6ずつ ふえています。"],
   ];
 
-  for (let i = 0; i < 14; i++) {
-    patternTemplates.forEach(t => {
-      pattern.push({
-        genre: "🔷 パターン",
-        question: `${t[0]} → □にはいるのは？`,
-        answer: t[1],
-        explanation: t[2],
-      });
+  patternTemplates.forEach(t => {
+    pattern.push({
+      genre: "🔷 パターン",
+      question: `${t[0]} → □にはいるのは？`,
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  const patternStarts6: number[] = [];
+  for (let s = 1; s <= 30; s++) patternStarts6.push(s);
+  [
+    ...generateNumberSequenceQuestions4(patternStarts6, [1, 2, 3, 5, 10]),
+    ...generateAlternatingPattern5Questions(),
+    ...generateTriplePatternQuestions(),
+    ...generateQuadPatternQuestions(),
+  ].forEach(q => {
+    pattern.push({
+      genre: "🔷 パターン",
+      question: `${q.question} → □にはいるのは？`,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // ひらがな・カタカナ（ぶんのなかでのいみをかんがえる）
@@ -194,16 +251,26 @@ export function generate6Questions() {
     { sentence: "「うれしいきもち」のはんたいのいみにちかいのは？", a: "かなしい", hint: "「うれしい」のはんたいにちかいのは「かなしい」だよ。" },
   ];
 
-  for (let i = 0; i < 10; i++) {
-    contextWords.forEach(w => {
-      hiragana.push({
-        genre: "🔤 ことば",
-        question: w.sentence,
-        answer: w.a,
-        explanation: w.hint,
-      });
+  contextWords.forEach(w => {
+    hiragana.push({
+      genre: "🔤 ことば",
+      question: w.sentence,
+      answer: w.a,
+      explanation: w.hint,
     });
-  }
+  });
+
+  [
+    ...generateAntonymQuestions(),
+    ...generateKatakanaQuestions(6900, 200),
+  ].forEach(q => {
+    hiragana.push({
+      genre: "🔤 ことば",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // なかまわけ（きのう・はたらきでグループ分けする、たいしょうカテゴリをまたぐ）
@@ -232,16 +299,27 @@ export function generate6Questions() {
     { q: "「あきにみられるもの」をえらぼう：もみじ・どんぐり・きのこ・さくら", a: "もみじ どんぐり きのこ", hint: "さくらは はるにさくはなだよ。" },
   ];
 
-  for (let i = 0; i < 12; i++) {
-    groups.forEach(g => {
-      nakamawake.push({
-        genre: "📦 なかまわけ",
-        question: g.q,
-        answer: g.a,
-        explanation: g.hint,
-      });
+  groups.forEach(g => {
+    nakamawake.push({
+      genre: "📦 なかまわけ",
+      question: g.q,
+      answer: g.a,
+      explanation: g.hint,
     });
-  }
+  });
+
+  generateNakamawakeQuestions(6700, 10).forEach(q => {
+    // 「【category】a・b・c・odd どれがなかまかな？」→ 6歳のスタイル「「category」をえらぼう：a・b・c・odd」に変換
+    const m = q.question.match(/^【(.+?)】(.+) どれがなかまかな？$/);
+    const category = m ? m[1] : "";
+    const items = m ? m[2] : q.question;
+    nakamawake.push({
+      genre: "📦 なかまわけ",
+      question: `「${category}」をえらぼう：${items}`,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // くらべっこ（3つのさ・わりあいてきなかんがえかた）
@@ -270,16 +348,27 @@ export function generate6Questions() {
     ["Aのはこに12こ、Bのはこに8このみかんがはいっています。おなじかずにするには、AからBへなんこうつせばいい？", "2こ", "12と8のさは4。はんぶんの2こをAからBにうつすと、どちらも10こになります。"],
   ];
 
-  for (let i = 0; i < 14; i++) {
-    kurabekkoBase.forEach(t => {
-      kurabekko.push({
-        genre: "⚖️ くらべっこ",
-        question: t[0],
-        answer: t[1],
-        explanation: t[2],
-      });
+  kurabekkoBase.forEach(t => {
+    kurabekko.push({
+      genre: "⚖️ くらべっこ",
+      question: t[0],
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  [
+    ...generateQuantityCompareQuestions(6400, 100),
+    ...generateDifferenceQuestions(6500, 100),
+    ...generateSameQuantityQuestions(6600, 20),
+  ].forEach(q => {
+    kurabekko.push({
+      genre: "⚖️ くらべっこ",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // なかまはずれ（りゆうをかんがえる、すこしちゅうしょうてき）
@@ -308,16 +397,23 @@ export function generate6Questions() {
     ["さんかくけい・しかくけい・ごかくけい・たま", "たま", "さんかくけい・しかくけい・ごかくけいは ちょくせんでできたへいめんずけいです。たまは りったいずけいです。"],
   ];
 
-  for (let i = 0; i < 14; i++) {
-    hazureBase.forEach(t => {
-      nakamahazure.push({
-        genre: "🔀 なかまはずれ",
-        question: `${t[0]}　このなかで なかまはずれは どれ？`,
-        answer: t[1],
-        explanation: t[2],
-      });
+  hazureBase.forEach(t => {
+    nakamahazure.push({
+      genre: "🔀 なかまはずれ",
+      question: `${t[0]}　このなかで なかまはずれは どれ？`,
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  generateNakamahazureQuestions(6800, 10).forEach(q => {
+    nakamahazure.push({
+      genre: "🔀 なかまはずれ",
+      question: `${q.question}　このなかで なかまはずれは どれ？`,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // もじのよみとき（2だんかいのすいろん）
@@ -346,16 +442,23 @@ export function generate6Questions() {
     ["1クラス30にんのうち、めがねをかけているにんが9にんいます。かけていないにんはなんにん？", "21にん", "30-9=21にんです。"],
   ];
 
-  for (let i = 0; i < 14; i++) {
-    mojiBase.forEach(t => {
-      moji.push({
-        genre: "📖 もじのよみとき",
-        question: t[0],
-        answer: t[1],
-        explanation: t[2],
-      });
+  mojiBase.forEach(t => {
+    moji.push({
+      genre: "📖 もじのよみとき",
+      question: t[0],
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  generateTwoStepWordProblems(6910, 220).forEach(q => {
+    moji.push({
+      genre: "📖 もじのよみとき",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // とけい（とけいのよみかた）
@@ -384,17 +487,25 @@ export function generate6Questions() {
     ["この とけいから 20分たつと、なんじなんぷん？", "7じ10分", "6時50分から20分あとは 7時10分です。", 6, 50],
   ];
 
-  for (let i = 0; i < 14; i++) {
-    tokeiBase.forEach(t => {
-      tokei.push({
-        genre: "🕐 とけい",
-        question: t[0],
-        answer: t[1],
-        explanation: t[2],
-        clock: { hour: t[3], minute: t[4] },
-      });
+  tokeiBase.forEach(t => {
+    tokei.push({
+      genre: "🕐 とけい",
+      question: t[0],
+      answer: t[1],
+      explanation: t[2],
+      clock: { hour: t[3], minute: t[4] },
     });
-  }
+  });
+
+  generateClockQuestions().forEach(q => {
+    tokei.push({
+      genre: "🕐 とけい",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+      clock: { hour: q.hour, minute: q.minute },
+    });
+  });
 
   // ====================
   // なぞなぞ（3ついじょうの ヒントから すいりして こたえる）
@@ -422,16 +533,26 @@ export function generate6Questions() {
     ["あか・きいろ・あおの3いろで、みちの わたりかたを おしえてくれる もの。なあに？", "しんごう", "3いろで みちを あんぜんに わたる じゅんばんを おしえるのは しんごうだよ。"],
   ];
 
-  for (let i = 0; i < 14; i++) {
-    nazonazoBase.forEach(t => {
-      nazonazo.push({
-        genre: "🧩 なぞなぞ",
-        question: t[0],
-        answer: t[1],
-        explanation: t[2],
-      });
+  nazonazoBase.forEach(t => {
+    nazonazo.push({
+      genre: "🧩 なぞなぞ",
+      question: t[0],
+      answer: t[1],
+      explanation: t[2],
     });
-  }
+  });
+
+  [
+    ...generateRiddleQuestions(6950, 2, 6),
+    ...generateRiddleQuestions(6960, 3, 8),
+  ].forEach(q => {
+    nazonazo.push({
+      genre: "🧩 なぞなぞ",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+    });
+  });
 
   // ====================
   // おかね（かいもの・おつりの けいさん）
@@ -465,27 +586,39 @@ export function generate6Questions() {
     ["250円の ケーキを かいます。300円 だすと、おつりは いくら？", "50円", "300-250=50円です。"],
   ];
 
-  for (let i = 0; i < 14; i++) {
-    okaneBase.forEach(t => {
-      okane.push({
-        genre: "💰 おかね",
-        question: t[0],
-        answer: t[1],
-        explanation: t[2],
-        money: parseMoney(t[0]),
-      });
+  okaneBase.forEach(t => {
+    okane.push({
+      genre: "💰 おかね",
+      question: t[0],
+      answer: t[1],
+      explanation: t[2],
+      money: parseMoney(t[0]),
     });
-  }
+  });
+
+  [
+    ...generateCoinSumQuestions(6100, 80),
+    ...generateItemSumQuestions(6200, 80),
+    ...generateChangeQuestions(6300, 80),
+  ].forEach(q => {
+    okane.push({
+      genre: "💰 おかね",
+      question: q.question,
+      answer: q.answer,
+      explanation: q.explanation,
+      money: parseMoney(q.question),
+    });
+  });
 
   // ====================
   // つみき（りったいを かぞえる くうかん認知）
   // 1れつにならんだ タワーだけを使うので、かくれて見えないつみきは出てこない
   // ====================
   const tsumikiShapes: CubeShape[] = [];
-  for (let a = 1; a <= 3; a++) {
-    for (let b = 1; b <= 3; b++) {
-      for (let c = 1; c <= 3; c++) {
-        for (let d = 1; d <= 3; d++) {
+  for (let a = 1; a <= 4; a++) {
+    for (let b = 1; b <= 4; b++) {
+      for (let c = 1; c <= 4; c++) {
+        for (let d = 1; d <= 4; d++) {
           if (a === b && b === c && c === d) continue;
           tsumikiShapes.push([[a, b, c, d]]);
         }
@@ -504,7 +637,7 @@ export function generate6Questions() {
   // ====================
   // おなじかたち（てんをむすんだ ずけいを かきうつす）
   // ====================
-  const onajikatachi: Question[] = dotFiguresSize4.map(figure => ({
+  const onajikatachi: Question[] = buildDotFigurePool(dotFiguresSize4, 4, 220, 6000).map(figure => ({
     genre: "✏️ おなじかたち",
     question: "みぎの てんを せんで むすんで、ひだりと おなじ かたちを かいてね。",
     answer: "てほんと おなじ かたちに なったかな？",

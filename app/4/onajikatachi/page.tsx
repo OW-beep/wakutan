@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.onajikatachi,
-    10
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-violet-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.onajikatachi.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             4歳のうちは、線がまっすぐ引けなかったり、点の場所を間違えたりして当たり前です。きれいに書けたかどうかより、見本をよく見て、自分でまねしようとする姿勢を認めてあげてください。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            4マス四方（3×3のてん）の、いちばんやさしい大きさから始まります。むずかしそうなときは、指で見本の線をなぞってから鉛筆で書いてみるのもおすすめです。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>お手本をじっと見て、形の特徴をとらえる観察力</li>
+            <li>鉛筆を思い通りにコントロールする、手先の細かい動き</li>
+            <li>点から点へ、目で追った通りに線を引く目と手の連動</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>鉛筆で書く前に、指でお手本の線をなぞってみる</li>
+            <li>「まず、どの点からどの点までかな？」と声に出して確認してから書く</li>
+            <li>うまく書けなくても、線を引こうとした過程をたくさんほめる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            4マス四方（3×3のてん）の、いちばんやさしい大きさから始まりますが、それでも点と点の間の距離感をつかむのは難しいものです。むずかしそうなときは、指で見本の線をなぞってから鉛筆で書いてみると、線の方向や長さのイメージがつかみやすくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            線を引く力がついてきたら、
+            <Link href="/5/onajikatachi" className="text-violet-700 font-bold hover:underline">5歳向けおなじかたち問題</Link>
+            で、もう少し複雑な形にも挑戦してみましょう。
           </p>
 
         </div>

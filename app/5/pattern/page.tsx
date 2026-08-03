@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.pattern,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-purple-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.pattern.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             パターン問題は「発見する楽しさ」がポイントです。答えを教える前に、「次はどうなるかな？」と一緒に考える時間を作ってあげましょう。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            繰り返しのパターンに気づく力は、予測する力や論理的に考える力の基礎になるといわれています。答えを急がせず、「次はどうなりそう?」と一緒に考える過程を楽しんでみてください。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>3つ以上の要素からなる、少し複雑な繰り返しに気づく力</li>
+            <li>形や大きさが少しずつ変化していく規則性を見つける力</li>
+            <li>見つけたきまりを使って、次に来るものを予測する力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>積み木を「大・中・小、大・中・小」のように並べて続きを考えてもらう</li>
+            <li>折り紙を使って、色の並び方のパターンを一緒に作ってみる</li>
+            <li>正解を急がず、「どこが繰り返しになってるかな？」とヒントを出す</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            繰り返しの単位が3つ以上になると、どこからどこまでが1つのまとまりか見失いやすくなります。声に出しながら指で区切ってグループ分けすると、繰り返しの単位が視覚的にわかりやすくなります。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            規則性を見つける力がついてきたら、
+            <Link href="/6/pattern" className="text-purple-700 font-bold hover:underline">6歳向けパターン問題</Link>
+            にも挑戦してみましょう。
           </p>
 
         </div>

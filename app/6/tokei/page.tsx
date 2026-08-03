@@ -18,7 +18,7 @@ export default function Page() {
 
   const questions = getDailyQuestions(
     data.tokei,
-    20
+    30
   );
 
   return (
@@ -44,8 +44,10 @@ export default function Page() {
           </p>
 
           <p className="leading-8 mt-3 text-amber-700 font-bold">
-            毎日10問を自動で更新・無料で印刷OK
+            毎日30問を自動で更新・無料で印刷OK
           </p>
+
+          <p className="leading-6 mt-2 text-xs text-gray-500">（{data.tokei.length}問のストックから、日替わりで30問を選んでいます）</p>
 
         </div>
 
@@ -70,8 +72,29 @@ export default function Page() {
             おうちの時計を見ながら一緒に確認すると、より理解が深まります。デジタル時計と見比べるのもおすすめです。
           </p>
 
-          <p className="leading-8 mt-3 text-sm text-gray-600">
-            時計の理解は、数字の読み方だけでなく「12進法」と「60進法」という2つの数え方が混ざる、幼児期にはやや複雑な学習内容です。おうちの時計を指しながら一緒に確認すると、抽象的な内容が具体的にイメージしやすくなります。
+          <h3 className="text-lg font-bold mt-6 mb-2">この時期に育つ力</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>「〇時」「〇時30分」のような、区切りのよい時刻を読む力</li>
+            <li>長い針・短い針がそれぞれ何を表しているかの理解</li>
+            <li>「〇時から20分後」のような、時間の経過を考える力</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">おうちでできる工夫</h3>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 leading-7">
+            <li>朝の支度のときに「今は何時？」と実際の時計を読んでもらう</li>
+            <li>「あと何分でごはんだよ」のように、生活の中で時間を意識させる</li>
+            <li>アナログ時計とデジタル時計を並べて、同じ時刻を見比べる</li>
+          </ul>
+
+          <h3 className="text-lg font-bold mt-6 mb-2">つまずきやすいポイント</h3>
+          <p className="leading-7 text-gray-700">
+            時計の理解は、数字の読み方だけでなく「12進法」と「60進法」という2つの数え方が混ざる、幼児期にはやや複雑な学習内容です。特に「長い針が6のときは30分」のように、目盛りの数字と実際の分数が一致しない点でつまずきやすいので、おうちの時計を指しながら「ここが6だけど、30分だよ」と具体的に確認してあげましょう。
+          </p>
+
+          <p className="leading-7 mt-6 text-sm text-gray-500 border-t pt-4">
+            時計に慣れてきたら、
+            <Link href="/6/sansu" className="text-amber-700 font-bold hover:underline">算数ドリル</Link>
+            で時間の計算にもつなげてみましょう。
           </p>
 
         </div>
