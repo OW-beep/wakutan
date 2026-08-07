@@ -26,7 +26,7 @@ export default function Page() {
 
         </div>
         <p className="text-lg leading-8 mb-6">
-          「さっきまで楽しく遊んでいたのに、ドリルを出したとたん嫌がる」——4歳の時期によく見られる光景です。
+          遊んでいる姿は活き活きしているのに、ドリルを取り出したとたん表情が曇る——4歳のお子さんによく見られる反応です。
         </p>
 
         <p className="text-lg leading-8 mb-6">
@@ -81,6 +81,15 @@ export default function Page() {
         <p className="leading-8 mb-4">
           「10問全部」ではなく「今日は1問だけ」から始めるのもおすすめです。わくたんのドリルも、一部だけ取り組む使い方で問題ありません。
         </p>
+
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            問題を作る中で気づいたのですが、同じ力を試す問題でも、同じ形式をただ繰り返すだけだと子どもはすぐに飽きてしまいます。大人からすると「定着のために繰り返しが必要」に思えるのですが、子どもにとっては単調さの方が先に立ってしまうようでした。そこで、題材や見せ方を少しずつ変える工夫を重ねるようにしています。
+          </p>
+        </div>
 
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 

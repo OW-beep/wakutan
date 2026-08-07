@@ -82,6 +82,29 @@ export default function Page() {
           発達のスピードには個人差があります。年齢はあくまで目安として捉え、その子自身の興味や得意なことを大切にしてあげましょう。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          年齢ごとの具体的な目安
+        </h2>
+
+        <p className="leading-8 mb-4">
+          <span className="font-bold">4歳ごろ</span>は、1〜10までの数を順番に唱えられる、身の回りのものを2〜3個のグループに分けられる、といったあたりが1つの目安です。<span className="font-bold">5歳ごろ</span>は、10までのたし算に触れ始める、しりとりや簡単な言葉遊びを楽しめる、3つのものを比べて順番をつけられる、といった力が育ってきます。<span className="font-bold">6歳ごろ</span>になると、繰り上がりのある計算に挑戦できる、ひらがな・カタカナを読んで簡単な文章の意味を理解できる、時計の「〇時」「〇時半」を読めるようになる、といった小学校入学に向けた力が伸びてきます。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            📚 年齢ごとの学び方をもっと詳しく
+          </p>
+          <p>
+            それぞれの年齢での関わり方をより詳しく知りたい方は、
+            <Link href="/blog/how-4year-learn" className="text-orange-600 font-bold hover:underline">4歳の学び方</Link>
+            ・
+            <Link href="/blog/how-5year-learn" className="text-orange-600 font-bold hover:underline">5歳の学び方</Link>
+            ・
+            <Link href="/blog/how-6year-learn" className="text-orange-600 font-bold hover:underline">6歳の学び方</Link>
+            もあわせてご覧ください。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

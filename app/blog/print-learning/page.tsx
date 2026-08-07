@@ -169,7 +169,7 @@ export default function Page() {
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            🎯 大切なポイント
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -190,12 +190,11 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            🌟 実践してみよう
           </h3>
 
           <p className="mb-3">
-            わくわくたんけんたい「わくたん」で、
-            今日の3問にチャレンジ！
+            印刷してすぐ使えるドリルを、今日はどれか1枚だけ試してみてください。
           </p>
 
           <Link

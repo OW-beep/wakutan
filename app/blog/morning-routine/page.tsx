@@ -78,6 +78,34 @@ export default function Page() {
           工夫をしても、うまくいかない朝はあります。「今日はこういう日だった」と割り切ることも、保護者自身の気持ちを守るためには大切です。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          見える化リストの作り方の具体例
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「起きる → トイレ → 着替え → 朝ごはん → 歯みがき → 持ち物チェック」のように、5〜6項目程度の短いリストを紙に書き、それぞれにイラストや写真を添えるだけで十分です。終わった項目にシールを貼れるようにすると、達成感も加わってやる気につながります。項目を細かくしすぎると逆に分かりにくくなるので、まずは5個前後から始めてみるのがおすすめです。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          時計が読めると朝の見通しが立ちやすくなる
+        </h2>
+
+        <p className="leading-8 mb-4">
+          6歳ごろになり時計が読めるようになると、「長い針が6になったら家を出るよ」のように、具体的な時刻で見通しを伝えられるようになります。時計の読み方に興味を持ち始めたら、
+          <Link href="/6/tokei" className="text-orange-600 font-bold hover:underline">わくたんのとけい問題</Link>
+          で楽しく練習してみるのもおすすめです。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ❓ よくある質問
+          </p>
+          <p>
+            <span className="font-bold">Q. 毎日リストを見てくれません</span><br />
+            A. 最初のうちは一緒に指差ししながら確認する時間が必要です。1〜2週間続けると、少しずつ自分で見る習慣がついてくることが多いので、すぐに結果を求めすぎないようにしましょう。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

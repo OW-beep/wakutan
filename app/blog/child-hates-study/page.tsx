@@ -26,7 +26,7 @@ export default function Page() {
 
         </div>
         <p className="text-lg leading-8 mb-6">
-          「さっきまで元気だったのに、ドリルを出したとたん嫌がる」——多くの家庭で見られる光景です。無理に続けさせる前に、まず理由を考えてみましょう。
+          机に向かうことそのものへの抵抗感は、多くの家庭が一度は経験する壁です。無理に続けさせる前に、まずは理由を考えてみましょう。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -101,7 +101,7 @@ export default function Page() {
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            🪴 育てたい力
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -120,7 +120,7 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            🧭 次にやってみること
           </h3>
 
           <p className="mb-3">

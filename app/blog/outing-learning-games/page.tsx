@@ -86,10 +86,37 @@ export default function Page() {
           正解を教え込むのではなく、「あ、本当だね」「よく気づいたね」と、子どもの発見に共感してあげることが一番の学びにつながります。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          長い車移動・電車移動での工夫
+        </h2>
+
+        <p className="leading-8 mb-4">
+          長時間の移動は、集中して言葉遊びに取り組める貴重な時間でもあります。「あ」から始まる言葉を交代で言い合う、通り過ぎる看板の中からひらがなを見つける、駅の数を一緒に数えるなど、窓の外の景色を使った遊びは飽きにくいのが特徴です。ぐずってしまいそうなときほど、「次の信号が青になるまで何秒かな？」のような短い集中ゲームに切り替えると、気分転換にもなります。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          年齢別の声かけの工夫
+        </h2>
+
+        <p className="leading-8 mb-4">
+          4歳ごろは「りんごはどっち？」のように、2択で答えられる質問から始めると答えやすくなります。5歳になったら「あわせていくつ持ってる？」のように簡単な計算を混ぜ、6歳ごろには「さっき見た赤い車、今何台になった？」のように記憶と計算を組み合わせた質問に挑戦してみるとよいでしょう。年齢に応じて質問の難易度を少しずつ上げていくことで、無理なく力を伸ばせます。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            💡 雨の日や室内での代わりの遊びは？
+          </p>
+          <p>
+            外出できない日は、室内でも似たような遊びができます。詳しくは
+            <Link href="/blog/rainy-day-play" className="text-orange-600 font-bold hover:underline">雨の日でも楽しく学べる室内遊び</Link>
+            もあわせてご覧ください。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            📝 まとめ
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -108,7 +135,7 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            📖 今日の学びにつなげよう
           </h3>
 
           <p className="mb-3">

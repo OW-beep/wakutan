@@ -70,10 +70,49 @@ export default function Page() {
           きょうだいがいると、どうしても一人ひとりと向き合う時間が減りがちです。短時間でも「今日はあなたの番」という1対1の時間を意識的に作ると、それぞれの自己肯定感につながります。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「ずるい」を防ぐ工夫
+        </h2>
+
+        <p className="leading-8 mb-4">
+          年齢差があると、下の子が「お兄ちゃん（お姉ちゃん）ばっかり」、上の子が「〇〇は簡単な問題でずるい」と感じてしまうことがあります。そんなときは、内容ではなく「かかる時間」を揃えるのがおすすめです。上の子は6歳向けの問題を10分、下の子は4歳向けの問題を10分、というように時間を基準にすれば、「同じだけがんばった」という納得感が生まれやすくなります。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          年齢差別の組み合わせ例
+        </h2>
+
+        <p className="leading-8 mb-4">
+          年齢差が2歳程度（4歳と6歳など）なら、同じジャンルの問題を別の年齢ページで並行して取り組むのがやりやすい方法です。たとえば
+          <Link href="/4/sansu" className="text-orange-600 font-bold hover:underline">4歳向けさんすう</Link>
+          と
+          <Link href="/6/sansu" className="text-orange-600 font-bold hover:underline">6歳向けさんすう</Link>
+          を同じタイミングで開けば、「今日はさんすうの日」という一体感を保ちながら、それぞれのレベルに合わせられます。年齢差が3歳以上ある場合は、上の子には文章題やつみきのような考える系の問題、下の子にはひらがなや絵合わせのような直感的な問題を選ぶと、興味の差も埋まりやすくなります。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ❓ よくある質問
+          </p>
+          <p>
+            <span className="font-bold">Q. けんかになってしまうときは？</span><br />
+            A. 無理に同じ場所・同じ時間にこだわらなくても大丈夫です。片方は朝、片方は夕方など、時間帯をずらすだけで落ち着いて取り組めることもあります。うまくいく形は家庭によって違うので、いくつか試しながら見つけていくのがおすすめです。
+          </p>
+        </div>
+
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            わが家にも幼児〜小学校低学年の子どもが3人おり、実際にきょうだいで取り組ませる中で気づいたことがあります。同じ問題でも役割を分けたり、順番に答えたりする形にすると、競争ではなく「一緒にやる楽しさ」を感じられるようになりました。競わせるより、協力する場面を作る方が、きょうだい間の関わり方としてはうまくいくことが多いと感じています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            🌈 まとめてみると
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -92,7 +131,7 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            🐣 はじめの一歩
           </h3>
 
           <p className="mb-3">

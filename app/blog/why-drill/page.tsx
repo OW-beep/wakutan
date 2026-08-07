@@ -201,10 +201,19 @@ export default function Page() {
           続ければ大きな成長につながります。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            わが家の子どもたちを見ていると、なぞなぞや仲間分け、間違い探しのような、少しゲーム性のある問題には自分から進んで取り組む姿がありました。「勉強」というより「遊び」に近い形にすると、声をかけなくても手が伸びる——この気づきが、わくたんの問題づくりの方向性に大きく影響しています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            ⭐ ここがポイント
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -227,12 +236,11 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            🎪 遊びながら試そう
           </h3>
 
           <p className="mb-3">
-            わくわくたんけんたい「わくたん」で、
-            今日の3問にチャレンジ！
+            まずは今日の3問から、わくたんで試してみませんか？
           </p>
 
           <Link

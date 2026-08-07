@@ -57,6 +57,15 @@ export default function Page() {
           「どこまで考えたか」を一緒に振り返る姿勢を大切にしましょう。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-6">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            わが家では、正解・不正解だけで終わらせず、「なんでそう思ったの？」と聞くことを意識しています。「やらせる」のではなく「一緒に考える」という姿勢に変えただけで、子ども自身が考える時間が増えたように感じています。
+          </p>
+        </div>
+
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
           <p className="font-bold mb-2">
             💡 ヒント
@@ -101,7 +110,7 @@ export default function Page() {
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            📝 まとめ
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -120,7 +129,7 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            📖 今日の学びにつなげよう
           </h3>
 
           <p className="mb-3">

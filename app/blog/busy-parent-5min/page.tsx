@@ -86,10 +86,37 @@ export default function Page() {
           忙しい日は無理に取り組まなくても大丈夫です。「今日はお休み」と割り切ることも、長く続けるためには大切です。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          共働き家庭の1週間の組み込み例
+        </h2>
+
+        <p className="leading-8 mb-4">
+          平日は「朝ごはんを待つ間の3問だけ」、週末は「土曜の朝に少し多めに」というように、曜日ごとに強弱をつけると無理なく続けられます。例えば月・水・金は朝食前の3分、火・木はお休み、土曜は10分でまとめて取り組む、というリズムなら、週3〜4回のペースを保ちながら保護者の負担も分散できます。同じ曜日・同じタイミングを繰り返すことで、子ども自身も「次は何をする時間か」を覚えやすくなります。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          すでにある習慣にくっつける「習慣の連結」
+        </h2>
+
+        <p className="leading-8 mb-4">
+          新しい習慣は、単独で始めるより「すでにある習慣の直後」にくっつけると定着しやすいといわれています。「歯みがきの後に1問」「お風呂上がりに1問」のように、すでに毎日必ずやっていることの直後に組み込むと、わざわざ思い出す必要がなくなります。
+          <Link href="/blog/5min-study" className="text-orange-600 font-bold hover:underline">5分でできる学習法</Link>
+          もあわせてご覧いただくと、さらに具体的なアイデアが見つかります。
+        </p>
+
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            問題作りをしていて実感したのですが、「たくさんやらせた方がいい」と量を増やしたときほど、途中で集中が切れて続かなくなりました。反対に、1回で終わる分量に絞ったところ、「今日はこれだけやればOK」という安心感が生まれ、家庭でも自然と続けやすくなりました。忙しい日ほど、分量を削ることを迷わないようにしています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            🧭 今日の要点
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -108,7 +135,7 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            🍭 今日のごほうびドリル
           </h3>
 
           <p className="mb-3">

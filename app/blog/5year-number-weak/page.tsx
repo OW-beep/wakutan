@@ -78,10 +78,36 @@ export default function Page() {
           5歳で数が苦手でも、多くの場合は発達のペースの違いです。周りと比べず、日々の生活の中で数に触れる機会を増やしていきましょう。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          つまずきの原因を見分けるチェックポイント
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「数える」のどの部分でつまずいているかを観察すると、対応がしやすくなります。①「いち、に、さん」と順番に唱えられるか、②唱えながら物を1つずつ指させるか（数唱と対象がずれる子は多くいます）、③「ぜんぶでいくつ？」と聞かれて最後に数えた数を答えられるか、の3段階を意識して見てみましょう。①はできるが②でずれる場合は、ゆっくり指させながら数える練習を、③でつまずく場合は「数える」と「量を表す」がまだ結びついていない段階なので、具体物を使った練習がより効果的です。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          おすすめの数遊び3選
+        </h2>
+
+        <p className="leading-8 mb-4">
+          <span className="font-bold">すごろく</span>はサイコロの目の数だけコマを動かすので、数と移動量が自然に結びつきます。<span className="font-bold">トランプの神経衰弱</span>は数字を覚えながら遊べ、数字への抵抗感を減らすのに役立ちます。<span className="font-bold">おやつの取り分けごっこ</span>は「3人で6個のクッキーを分けると、1人何個？」のような、割り算の考え方の芽生えにもつながる遊びです。どれもドリルのような堅さがないので、苦手意識のある子でも取り組みやすいのが特徴です。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ❓ よくある質問
+          </p>
+          <p>
+            <span className="font-bold">Q. どのくらいで効果が出ますか？</span><br />
+            A. 個人差が大きく、数週間で変化が見える子もいれば、数ヶ月かかる子もいます。焦らず、まずは「数に対する抵抗感を減らす」ことを目標に、毎日少しずつ触れる機会を作ることを優先しましょう。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            🔑 おさえておきたいこと
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -100,7 +126,7 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            🎨 一緒にやってみよう
           </h3>
 
           <p className="mb-3">

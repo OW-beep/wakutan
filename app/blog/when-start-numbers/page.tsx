@@ -26,7 +26,7 @@ export default function Page() {
 
         </div>
         <p className="text-lg leading-8 mb-6">
-          「うちの子、まだ数字が言えない…」と焦る前に知っておきたいのが、数字の理解には「唱える」「数える」「意味がわかる」という段階があるということです。
+          数字の理解には「唱える」「数える」「意味がわかる」という段階があります。まだ数字が言えないと焦る前に、この順番を知っておくと安心です。
         </p>
 
         <p className="text-lg leading-8 mb-6">
@@ -93,7 +93,7 @@ export default function Page() {
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            🍀 今日学んだこと
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -112,7 +112,7 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            🎁 今日のおすすめ
           </h3>
 
           <p className="mb-3">

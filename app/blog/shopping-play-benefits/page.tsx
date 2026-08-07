@@ -63,6 +63,26 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          年齢によって遊び方を変える
+        </h2>
+
+        <p className="leading-8 mb-4">
+          3〜4歳ごろは、まだ細かい金額のやりとりは難しい時期です。この年齢では「これください」「はい、どうぞ」というシンプルな受け渡しだけでも十分に楽しめます。数を意識させたい場合は「りんごを2つください」のように、個数を指定するところから始めるのがおすすめです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          5〜6歳になると、実際に硬貨を使ったやりとりに挑戦できるようになります。「100円のジュースを買うのに、10円玉を何枚出せばいい？」のように、少しずつ計算の要素を混ぜていくと、遊びながら自然に数の感覚が深まっていきます。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          はじめかたの具体例
+        </h2>
+
+        <p className="leading-8 mb-4">
+          特別な道具がなくても、身の回りのもので今すぐ始められます。空き箱やペットボトルのキャップを商品に見立てたり、折り紙を切っておもちゃのお金を手作りしたりするだけで、立派な「お店」が完成します。最初は親が店員役になって見本を見せ、次に子どもと役を交代してみましょう。両方の立場を経験することで、会話のパターンがより自然に身についていきます。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           家庭でできる工夫
         </h2>
 
@@ -70,10 +90,26 @@ export default function Page() {
           本物の商品パッケージを空き箱で用意したり、手作りのお金を使ったりすると、より本格的な買い物ごっこが楽しめます。わくたんのおかね問題と組み合わせるのもおすすめです。
         </p>
 
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ❓ よくある質問
+          </p>
+          <p className="mb-2">
+            <span className="font-bold">Q. おつりの計算までさせるべき？</span><br />
+            A. 無理に正確さを求める必要はありません。「だいたい」の感覚を楽しむ段階でも十分効果があります。正確なおつり計算は、わくたんの
+            <Link href="/6/okane" className="text-orange-600 font-bold hover:underline">6歳向けおかね問題</Link>
+            のような、ひきざんを学んだあとの練習で少しずつ身につけていけば大丈夫です。
+          </p>
+          <p>
+            <span className="font-bold">Q. 兄弟で年齢差があるときは？</span><br />
+            A. 年上の子に店員役、年下の子にお客さん役を任せると、それぞれのレベルに合った関わり方ができます。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            🔍 振り返りポイント
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -92,7 +128,7 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            🎵 今日のステップ
           </h3>
 
           <p className="mb-3">

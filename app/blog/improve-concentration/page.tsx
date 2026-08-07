@@ -26,7 +26,7 @@ export default function Page() {
 
         </div>
         <p className="text-lg leading-8 mb-6">
-          「うちの子、集中力がなくて心配」という声はよく聞かれますが、実は幼児の集中力には年齢なりの目安があり、多くの場合は心配しすぎる必要はありません。
+          集中力の心配は多くの保護者に共通する悩みですが、幼児の集中力には年齢なりの目安があり、多くの場合は心配しすぎる必要はありません。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -85,7 +85,7 @@ export default function Page() {
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            ⭐ ここがポイント
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -104,7 +104,7 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            🎪 遊びながら試そう
           </h3>
 
           <p className="mb-3">

@@ -26,11 +26,7 @@ export default function Page() {
 
         </div>
         <p className="text-lg leading-8 mb-6">
-          「うちの子、すぐ飽きちゃって全然集中できない…」多くの保護者の方が一度は感じる悩みです。
-        </p>
-
-        <p className="text-lg leading-8 mb-6">
-          実は4歳ごろは、集中できる時間がまだ5〜10分程度なのが自然な発達段階です。焦る必要はありません。
+          4歳ごろ集中が続くのは、平均するとまだ5〜10分ほど。それが自然な発達段階だと知っているだけで、見え方が変わってきます。焦る必要はありません。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -90,10 +86,30 @@ export default function Page() {
           結果よりも過程をほめることで、次も挑戦してみようという気持ちが育ちます。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          最初に取り組むジャンル選びのコツ
+        </h2>
+
+        <p className="leading-8 mb-4">
+          集中力を育てる練習の入り口としては、正解・不正解がはっきりしていて、達成感を得やすいジャンルから始めるのがおすすめです。
+          <Link href="/4/kurabekko" className="text-orange-600 font-bold hover:underline">くらべっこ</Link>
+          や
+          <Link href="/4/nazonazo" className="text-orange-600 font-bold hover:underline">なぞなぞ</Link>
+          は直感的に取り組みやすく、1問ごとの達成感も得やすいため、集中する経験を積む最初の一歩として向いています。逆に、文章を読む問題や複雑な図形の問題は、集中力そのものより読解力・空間認知力が試されるので、集中力づくりの段階では後回しにしても構いません。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          こんなときは無理をさせない
+        </h2>
+
+        <p className="leading-8 mb-4">
+          目をこすっている、あくびが増えている、体を頻繁に動かしているといったサインが見えたら、集中力の問題というより疲れのサインです。そのようなときは潔く切り上げて、また元気なタイミングで再挑戦する方が、結果的に集中する力の育ちにつながります。無理に続けさせると、「机に向かうこと＝つらいこと」という印象がついてしまうことがあるので注意しましょう。
+        </p>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
-            🌱 この記事のまとめ
+            🎒 持ち帰りたいこと
           </h3>
 
           <ul className="list-disc ml-6 space-y-2">
@@ -112,7 +128,7 @@ export default function Page() {
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
 
           <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
+            🌻 今日の実践
           </h3>
 
           <p className="mb-3">
