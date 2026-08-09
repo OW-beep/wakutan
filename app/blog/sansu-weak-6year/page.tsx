@@ -90,6 +90,34 @@ export default function Page() {
           わくたんの6歳向け算数ドリルも、基礎的な内容から少しずつ取り組める構成にしています。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          くり上がりのつまずきには「10のかたまり」
+        </h2>
+
+        <p className="leading-8 mb-4">
+          8+5のようなくり上がりの計算でつまずく場合は、「8はあと2で10になる」という感覚が育っていないことが多いです。おはじきを10個ずつのお皿に分けて並べ、「あと何個で10になる？」と繰り返し問いかけると、10のまとまりを意識する感覚が少しずつ身についていきます。この感覚があると、繰り上がりの計算がぐっと楽になります。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          文章題は「絵に描く」練習から
+        </h2>
+
+        <p className="leading-8 mb-4">
+          文章題が苦手な場合、いきなり式を立てさせるのではなく、まず状況を絵に描かせてみましょう。「りんごが3個あって、2個もらった」であれば、りんごの絵を3個描いて、そこに2個足すという作業を通じて、文章と計算のつながりが見えやすくなります。
+          <Link href="/6/moji" className="text-orange-600 font-bold hover:underline">わくたんのもじの読み解き問題</Link>
+          も、この力を養う練習になります。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ❓ よくある質問
+          </p>
+          <p>
+            <span className="font-bold">Q. 小学校入学までに何ができればいい？</span><br />
+            A. 完璧な計算力よりも、「わからないときに自分で工夫して考えようとする姿勢」の方が大切だといわれています。指で数える、絵に描く、声に出すなど、自分なりの方法を持っていること自体が土台になります。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

@@ -102,6 +102,15 @@ export default function Page() {
           間違えても焦らず、「もう一回一緒に見てみようか」と繰り返し確認する姿勢が大切です。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            わが家の長女は、計算問題は得意な一方、時計を読むのは今でも少し苦手です。同じ子でも、分野によって得意・不得意がはっきり分かれることを実感しています。計算ができるからといって時計もすぐ読めるとは限らないので、「これは別のスキル」と割り切って、焦らず個別に付き合うようにしています。
+          </p>
+        </div>
+
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           時計クイズを日常に取り入れる
         </h2>
