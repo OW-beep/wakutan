@@ -100,6 +100,15 @@ export default function Page() {
           ここで紹介した年齢はあくまで一般的な目安です。個人差が大きいことが、多くの発達に関する解説で共通して指摘されています。焦らず、その子のペースを大切にしましょう。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            「いつから数字を」と考えたとき、わが家では特別なタイミングを決めたわけではありませんでした。むしろ、ひらがなより先に興味を持ち始めた印象です。エレベーターの階数ボタンや車のナンバーなど、生活のあちこちに数字があるので、意識しなくても自然と触れる機会が多かったのだと思います。ドリルを始める前から「3階だね」「お菓子何個ある？」といった会話をしていたので、「ドリルで数字を学ぶ」というより「ドリルで生活の中の感覚を整理する」くらいの感覚で始めました。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

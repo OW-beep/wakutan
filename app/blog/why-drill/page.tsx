@@ -196,9 +196,9 @@ export default function Page() {
         </h2>
 
         <p className="leading-8 mb-4">
-          わくたんでは、
-          「たくさん解く」よりも
-          「毎日少し考える」を大切にしています。
+          「たくさん解けるかどうか」よりも、
+          「今日も少し考えられたかどうか」を大切にしたい。
+          わくたんはそんな思いで問題を作っています。
         </p>
 
         <p className="leading-8 mb-4">
@@ -239,7 +239,7 @@ export default function Page() {
         <div className="bg-gray-50 rounded-2xl p-6 mt-8 text-sm text-gray-500">
           <p>公開日：2026年3月　/　最終更新日：2026年7月</p>
           <p className="mt-1">
-            本記事はわくたん運営者が、日々の問題作成を通じて感じたことをもとにまとめています。
+            本記事は、わくたん運営者が「なぜドリル形式にしているか」を実際の運営経験をもとにまとめています。
           </p>
         </div>
 

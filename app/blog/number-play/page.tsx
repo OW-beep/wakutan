@@ -128,6 +128,15 @@ export default function Page() {
           「さっきサイコロでやったのと同じだね」と結びつけてあげると、子どもも学びのつながりを感じやすくなります。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            数字への興味は、やはり日常生活の中から出てきました。エレベーターの階数や電車の番号、車のナンバーなど、数字を見つけると「これ何？」と聞くようになります。家の中でも「お菓子何個ある？」「あと何個食べたらなくなる？」といったちょっとした数のやり取りをしていて、上の子（5歳）は「5個あるよ」と数えるだけでなく、「じゃあ2個あげたら残りはいくつ？」というような会話もできるようになってきました。ドリルで数字を教えるというより、まず生活の中で「数字って面白い」と思ってもらうことが大切だと感じています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

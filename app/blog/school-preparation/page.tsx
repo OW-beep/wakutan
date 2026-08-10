@@ -302,6 +302,15 @@ export default function Page() {
 
         </section>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            「特に小学校に入るまでに◯◯を完璧にできるようにする」というより、「分からないことがあっても先生に聞ける」「座って話を聞ける」「自分で準備しようとする」といった力を大事にしたいと思っています。5歳の今からできることとして、朝の準備を少しずつ自分でやってもらったり、ドリルも「親が全部教える」のではなく「まず自分で考えてみる」という時間を作ったりしています。
+          </p>
+        </div>
+
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
           <p>公開日：2026年3月　/　最終更新日：2026年7月</p>
           <p className="mt-1">

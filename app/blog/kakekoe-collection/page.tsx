@@ -132,6 +132,15 @@ export default function Page() {
           <p className="text-green-700 mt-1">OK例：「今日はここまで。明日もあるから楽しみにしようね」</p>
         </div>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家でよく使う声かけ
+          </p>
+          <p className="leading-7">
+            よく使うのは「どう思う？」という言葉です。「これが答えだよ」と教えてしまうのではなく、「どう思う？」と聞くと、子どもが自分の考えを話してくれます。他には「どこまでは分かった？」もよく使います。難しい問題で全部分からなくなっているように見えても、実際には途中までは理解していることがあり、そう聞くと自分で整理し直せることがあります。あとは「間違ってても大丈夫」という言葉も意識しています。特に5歳くらいになると間違えることを嫌がるようになってくるので、「間違えた＝ダメ」ではなく「間違えたから分かったことがある」という雰囲気を作るようにしています。個人的には、「どうして？」を連発するより「どう思う？」の方が子どもが話しやすいと感じています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

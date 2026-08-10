@@ -135,6 +135,15 @@ export default function Page() {
           焦りは禁物です。興味のタイミングは子どもによって本当にさまざまです。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            ひらがなは、ドリルだけで覚えさせようとしないことを意識しました。特に効果を感じたのは、子ども宛てに簡単なメモを書くことです。「おやつあるよ」「おはよう」など短い言葉を書いて、「これ何て書いてある？」と聞いていました。自分に関係する言葉だと興味を持ちやすく、「勉強だから読まなきゃ」ではなく「何て書いてあるんだろう？」という気持ちになります。絵本を読むときも全部の文字を読ませるのではなく、知っている文字を見つけてもらうようにしました。「この文字知ってる！」という瞬間を増やすと、ひらがなに対する抵抗感がかなり減ったと思います。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

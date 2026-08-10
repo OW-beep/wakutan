@@ -160,9 +160,8 @@ export default function Page() {
         </h2>
 
         <p className="leading-8 mb-4">
-          わくたんでは、
-          「たくさん解く」よりも
-          「毎日続ける」ことを大切にしています。
+          解く量を競うより、
+          「無理なく続けられているか」を大事な基準にしています。
         </p>
 
         <p className="leading-8 mb-4">
@@ -176,6 +175,15 @@ export default function Page() {
         </p>
 
         {/* まとめ */}
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            プリントは、最初から大量に印刷しないようにしています。以前は「せっかく無料なんだから」とまとめて印刷していたのですが、どんどん溜まっていって「どれをやればいいの？」となってしまいました。今はその日に使う分だけ、あるいは数日分だけ印刷するようにしています。保管も、年齢やジャンルごとに細かく整理しすぎると管理が大変なので、「これからやるもの」「終わったもの」くらいの簡単な分け方にしています。終わったプリントは全部残すのではなく、特に頑張ったものだけ残すこともあります。「前はここができなかったけど、今はできるね」と振り返る材料になるからです。無料でたくさん使えることよりも、「必要な分だけ気軽に使えること」を大切にしています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
