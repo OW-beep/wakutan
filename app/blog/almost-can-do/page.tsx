@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "「あと少しでできそう」を見極めるコツ｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="「あと少しでできそう」を見極めるコツ｜わくたん"
+        description="子どもにとって「ちょっと頑張ればできる」難易度を見極めるコツを紹介。発達心理学の考え方をふまえ、無理なく力を伸ばす問題の選び方を解説します。"
+        slug="almost-can-do"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -82,6 +92,15 @@ export default function Page() {
           正解率だけでなく、「うーん」と考え込む時間があるか、集中して取り組めているかといった反応を見ることが、ちょうどいい難易度を見極めるヒントになります。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            一番悩むのがここでした。5歳の子が「少し考えればできそう」な問題で止まっていたとき、待ちきれずにヒントを出しすぎてしまったことがあります。その結果、「自分でできた」という感覚が残らず、すぐに「教えて」と言うようになってしまいました。それ以降は「30秒〜1分は見守る」と決め、試行錯誤している様子があれば基本は待ち、どうしても止まったときだけ「ここまでは合ってるね」「何を比べてるんだっけ？」とヒントを出すようにしています。2歳の子に対しては、そもそも“できるかどうか”より「やってみる」ことを優先し、0歳の子は横で見ているだけですが、上の子たちの様子を真似しようとするのも大事な学びだと感じています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -98,7 +117,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -119,6 +138,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="almost-can-do" />
 
       </article>
 

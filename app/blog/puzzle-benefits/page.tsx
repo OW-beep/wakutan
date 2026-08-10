@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "パズル遊びの効果｜考える力・集中力・空間認識力が育つ｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="パズル遊びの効果｜考える力・集中力・空間認識力が育つ｜わくたん"
+        description="パズル遊びが育てる力を解説。考える力・集中力・空間認識力を伸ばすパズルの選び方や取り入れ方も紹介します。"
+        slug="puzzle-benefits"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -86,6 +96,15 @@ export default function Page() {
           完成したパズルは、しばらく飾っておくのもおすすめです。「これ、頑張って完成させたね」と振り返ることで、自信の積み重ねにつながります。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            下の子（2歳）は、簡単な形合わせや大きめのパズルに夢中になることがあり、手先の使い方や集中する時間が少しずつ伸びてきたと感じます。ドリルとは違って「遊び」として取り入れることで、無理なく考える力が育つ実感があります。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -123,6 +142,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="puzzle-benefits" />
 
       </article>
 

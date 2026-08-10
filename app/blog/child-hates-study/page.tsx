@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "子どもが勉強を嫌がるときは？無理なく続ける5つのコツ｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="子どもが勉強を嫌がるときは？無理なく続ける5つのコツ｜わくたん"
+        description="子どもが勉強を嫌がる理由と、無理なく学習を続けるための5つのコツを解説。動機づけの考え方もふまえて紹介します。"
+        slug="child-hates-study"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -98,6 +108,15 @@ export default function Page() {
           <p className="text-green-700 mt-1">OK例：「おやつの前に1問だけ挑戦してみる？」</p>
         </div>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            「勉強やだ」と言われたときに、一番やらないようにしているのは「でもやらないとダメでしょ」と正面から説得することです。以前は「あと少しだからやろう」と言っていたのですが、そうすると親子ともにどんどん嫌な雰囲気になっていました。今はまず「今日はやりたくないんだね」と受け止め、そのうえで「じゃあ1問だけやる？」「今日は迷路にする？」など量や内容を変え、それでも嫌なら一度やめることもあります。「勉強をさせる」ことより「勉強嫌いにしない」ことを優先するようになってから、家庭の雰囲気も楽になりました。わくたんの1回分の量を多くしすぎない設計にも、この経験がかなり影響しています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -135,6 +154,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="child-hates-study" />
 
       </article>
 

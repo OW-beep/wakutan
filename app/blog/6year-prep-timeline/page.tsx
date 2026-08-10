@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "小学校入学準備、いつ何をすればいい？月ごとの目安｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="小学校入学準備、いつ何をすればいい？月ごとの目安｜わくたん"
+        description="小学校入学準備を月ごとに整理して解説。いつ・何をすればいいか迷う保護者向けに、無理のないタイムラインを紹介します。"
+        slug="6year-prep-timeline"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -106,7 +116,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -127,6 +137,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="6year-prep-timeline" />
 
       </article>
 

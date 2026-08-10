@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "6歳で算数が苦手でも大丈夫！小学校でつまずかない土台の作り方｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="6歳で算数が苦手でも大丈夫！小学校でつまずかない土台の作り方｜わくたん"
+        description="6歳で算数が苦手な子でも安心できる、小学校の算数につまずかないための土台づくりのポイントを紹介します。"
+        slug="sansu-weak-6year"
+        datePublished="2026-06-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -134,7 +144,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月
+          公開日：2026年6月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -155,6 +165,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="sansu-weak-6year" />
 
       </article>
 

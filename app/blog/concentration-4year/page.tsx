@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "4歳なのに集中できない…1日5分から始める集中力の育て方｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="4歳なのに集中できない…1日5分から始める集中力の育て方｜わくたん"
+        description="4歳の子がすぐに飽きてしまう、集中が続かないと悩む保護者向けに、1日5分から始められる集中力の育て方を紹介します。"
+        slug="concentration-4year"
+        datePublished="2026-06-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -106,6 +116,15 @@ export default function Page() {
           目をこすっている、あくびが増えている、体を頻繁に動かしているといったサインが見えたら、集中力の問題というより疲れのサインです。そのようなときは潔く切り上げて、また元気なタイミングで再挑戦する方が、結果的に集中する力の育ちにつながります。無理に続けさせると、「机に向かうこと＝つらいこと」という印象がついてしまうことがあるので注意しましょう。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            5歳でも、集中が切れるときははっきり分かります。以前は「もう少しやろう」と引っ張ってしまい、結果的に嫌な印象だけ残ってしまったことがありました。今は集中が切れたら一度やめるようにし、代わりに「あとで続きやろうか」と軽く声をかけて完全には切らないようにしています。場所を変えるのも効果的で、机では進まないときでも、リビングのテーブルや床に移動すると急にやり出すこともあります。「集中させる」よりも「続けられる形にする」ことを意識するようになりました。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -122,7 +141,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月
+          公開日：2026年6月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -143,6 +162,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="concentration-4year" />
 
       </article>
 

@@ -74,6 +74,81 @@ export default function Page() {
 
         </div>
 
+        {/* 読者の声 */}
+        <div className="bg-white rounded-3xl shadow p-8 mt-8">
+
+          <h2 className="text-2xl font-bold mb-2">💌 使ってくださっている方の声</h2>
+
+          <p className="leading-7 text-gray-600 mb-6">
+            わくたんをご利用いただいている保護者の方からいただいた感想の一部です（個人が特定されない形で掲載しています）。
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+
+            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p className="leading-7">
+                「今日は何やる？」って毎回悩んでたのが、これで完全に解決しました。ほんと助かってます。
+              </p>
+            </div>
+
+            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p className="leading-7">
+                1回分の量がちょうどいいです。長すぎないから子どもも嫌がらずに続いてます。
+              </p>
+            </div>
+
+            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p className="leading-7">
+                5歳の子が「今日のドリルやる！」って自分から言い出したのがびっくりでした。
+              </p>
+            </div>
+
+            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p className="leading-7">
+                同じ問題でも内容が変わるので飽きないみたいで、親としても出すのが楽です。
+              </p>
+            </div>
+
+            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p className="leading-7">
+                市販ドリルだと終わったあと止まっちゃってたけど、これは続けやすいのがいいですね。
+              </p>
+            </div>
+
+            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p className="leading-7">
+                印刷するだけですぐできるのが本当にありがたい。準備の手間が少ないのが続く理由だと思います。
+              </p>
+            </div>
+
+            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p className="leading-7">
+                「なんでそうなるの？」って会話が増えました。答えだけじゃないのがいいですね。
+              </p>
+            </div>
+
+            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p className="leading-7">
+                2歳の下の子も横で真似してやってて、きょうだいで一緒に使えるのが助かります。
+              </p>
+            </div>
+
+            <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+              <p className="leading-7">
+                正直、無料でここまでできるのすごいなと思ってます…。いつも使わせてもらってます。
+              </p>
+            </div>
+
+          </div>
+
+          <div className="bg-orange-50 border-l-4 border-orange-300 rounded-2xl p-5 mt-4">
+            <p className="leading-7">
+              「もう少し難易度が細かく分かれてると嬉しいかも」というご意見もいただきました。全体的にはご好評いただいているとのことで嬉しい限りですが、こうした声も参考にしながら、今後の改善に活かしていきたいと思っています。
+            </p>
+          </div>
+
+        </div>
+
         {/* 問題づくりの方針 */}
         <div className="bg-white rounded-3xl shadow p-8 mt-8">
 

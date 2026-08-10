@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "小学校入学準備チェックリスト｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="小学校入学準備チェックリスト｜わくたん"
+        description="小学校入学前に確認しておきたい準備を、学用品・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。"
+        slug="school-checklist"
+        datePublished="2026-06-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -86,6 +96,15 @@ export default function Page() {
           すべてを完璧に準備する必要はありません。今のお子さんの様子を見ながら、できることから少しずつ取り組んでいきましょう。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            やっておいてよかったと感じたのは「生活面の準備」でした。朝の支度を自分で進めること、時間を意識すること、話を最後まで聞くことなど、学習面よりも毎日の生活を自分で回せる力の方が安心感につながりました。逆に「先取り学習」はそこまで急がなくてもよかったと感じています。計算や漢字を早く進めるよりも、「考えることに慣れる」「最後までやり切る」ことの方が、その後に効いてきました。上の子を見ていても、「できる・できない」より「取り組む姿勢」の方が入学後に差が出ると感じています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -102,7 +121,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月
+          公開日：2026年6月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -123,6 +142,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="school-checklist" />
 
       </article>
 

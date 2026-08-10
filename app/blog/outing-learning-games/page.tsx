@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "お出かけ先で自然に学べる声かけ＆ゲーム｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="お出かけ先で自然に学べる声かけ＆ゲーム｜わくたん"
+        description="スーパーや公園などのお出かけ先で、自然に数や言葉に親しめる声かけ・ゲームのアイデアを紹介します。"
+        slug="outing-learning-games"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -113,6 +123,15 @@ export default function Page() {
           </p>
         </div>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            公園では「順番」「数える」「比較する」といった場面が自然に出てきます。すべり台の順番待ちで「あと何人？」と数えたり、「どっちが高い？」と遊具を比べたりしています。電車の中でも「次は何駅？」「あといくつで着く？」といったやり取りをすることで、数や順序の感覚が少しずつ身についてきたと感じます。遊びの中なので、本人は勉強している感覚はほとんどありません。下の子（2歳）も、上の子とのやり取りを聞いて数字や言葉を覚えていく様子があり、きょうだいでの学びの効果も感じています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -129,7 +148,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -150,6 +169,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="outing-learning-games" />
 
       </article>
 

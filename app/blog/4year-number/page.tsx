@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "4歳で数字を覚えるコツ｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="4歳で数字を覚えるコツ｜わくたん"
+        description="4歳児が数字を覚えるための具体的なコツを紹介。発達の段階をふまえた、無理のない数字学習の進め方を解説します。"
+        slug="4year-number"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -123,6 +133,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="4year-number" />
 
       </article>
 

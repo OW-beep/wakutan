@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "幼児にごほうびは必要？やる気を育てる上手な褒め方｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="幼児にごほうびは必要？やる気を育てる上手な褒め方｜わくたん"
+        description="幼児学習でのごほうびの使い方を、心理学の考え方もふまえて解説。やる気を長く育てる褒め方のコツを紹介します。"
+        slug="reward-for-study"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -78,6 +88,15 @@ export default function Page() {
           「最後まで頑張ったね」「よく考えたね」という具体的な言葉がけも、立派なごほうびです。物より言葉の方が、内側からのやる気を育てやすいとされています。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            最初の頃は「終わったらシール」「できたらおやつ」といった小さなごほうびを用意していました。上の子（5歳）には特に効果があり、「あと1問！」と頑張るきっかけになっていました。ただ続けていくうちに「ごほうびがないとやらない」状態になりかけたことがあり、一度やり方を見直しました。今は物ではなく「できたね」「ここ自分で考えたね」という声かけを中心にし、完全にごほうびをなくすのではなく「1週間続いたら好きな遊びをする」といった特別な形に変えています。2歳の子はまだごほうびの理解が浅いので、一緒に喜ぶ・褒めるという関わりの方が効いていると感じます。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -115,6 +134,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="reward-for-study" />
 
       </article>
 

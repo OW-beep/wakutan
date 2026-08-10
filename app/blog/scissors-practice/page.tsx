@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "はさみの練習はいつから？4〜6歳向けの始め方｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="はさみの練習はいつから？4〜6歳向けの始め方｜わくたん"
+        description="4〜6歳向けに、はさみの練習を始めるタイミングと安全な進め方を紹介。手先の器用さを育てるコツと、安全対策も解説します。"
+        slug="scissors-practice"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -117,6 +127,15 @@ export default function Page() {
           小さな紙くずの誤飲にも注意し、練習後は一緒に片付ける習慣をつけると安心です。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            正直、ヒヤッとした場面もありました。下の子（2歳）が勢いよく切ろうとして、紙から外れてしまったことがあります。それ以降は「切る線が太くてわかりやすいもの」を選び、「一緒に持ってゆっくり動かす」ことを徹底しています。短時間で終わる課題にするのも効果的で、長くやると集中が切れて危ないので、「ここまで切ったら終わり」と区切るようにしています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -154,6 +173,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="scissors-practice" />
 
       </article>
 

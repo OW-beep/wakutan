@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "雨の日・室内遊びで考える力を伸ばす10のアイデア｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="雨の日・室内遊びで考える力を伸ばす10のアイデア｜わくたん"
+        description="雨の日や室内で過ごす時間が増える日におすすめの、考える力を伸ばす室内遊びのアイデアを10個紹介します。"
+        slug="rainy-day-play"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -122,6 +132,15 @@ export default function Page() {
           言葉や想像力を育てる、雨の日の定番の過ごし方です。ゆったりとした時間も大切にしましょう。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            雨の日は、おもちゃを「色」「形」「大きさ」で分ける遊びをよくしています。特別な準備がいらないので気軽に取り入れられるのですが、これがそのまま“仲間分け”の力につながっていると感じます。0歳の子も含めてきょうだいで同じ空間にいることで、上の子が分けている様子を下の子が眺めたり真似したりして、自然と学びの環境ができているように思います。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -138,7 +157,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -159,6 +178,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="rainy-day-play" />
 
       </article>
 

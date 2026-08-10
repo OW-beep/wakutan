@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "4歳ではじめてのひらがな｜どこから始める？｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="4歳ではじめてのひらがな｜どこから始める？｜わくたん"
+        description="4歳ではじめてひらがなに触れる際の進め方を解説。何から始めればよいか、興味を持たない場合の対処法もあわせて紹介します。"
+        slug="4year-hiragana"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -146,6 +156,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="4year-hiragana" />
 
       </article>
 

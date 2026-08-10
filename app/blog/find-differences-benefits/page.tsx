@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "間違い探しの効果｜観察力・集中力・考える力が育つ｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="間違い探しの効果｜観察力・集中力・考える力が育つ｜わくたん"
+        description="間違い探しは観察力や集中力、考える力を育てる知育遊びです。4〜6歳向けに間違い探しの効果や、年齢別の難易度調整の仕方を紹介します。"
+        slug="find-differences-benefits"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -90,6 +100,15 @@ export default function Page() {
           違いを見つけたときの「あ、ちがう！」という発見の喜びは、子どもにとって大きな達成感になります。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            上の子（5歳）は間違い探しがかなり好きです。特に「あと1個だけ見つからない」という状態になると、そこから急に集中力が上がります。「もうないよ」と言いながらもしばらくすると「あった！」と見つけることがあり、その瞬間はかなり嬉しそうです。逆に、最初から難しすぎる間違い探しは嫌がりました。最初の数問で「全然見つからない」となると、一気にやる気がなくなってしまうので、少し簡単めから始めるようにしています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -127,6 +146,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="find-differences-benefits" />
 
       </article>
 

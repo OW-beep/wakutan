@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "買い物ごっこで育つ力｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="買い物ごっこで育つ力｜わくたん"
+        description="子どもに人気の買い物ごっこで育つ力を解説。数の感覚やコミュニケーション力を楽しく育てる遊び方を紹介します。"
+        slug="shopping-play-benefits"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -106,6 +116,15 @@ export default function Page() {
           </p>
         </div>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            スーパーでは「どっちが多い？」「何個入ってる？」といったやり取りをよくしています。上の子（5歳）は考えて説明するようになり、下の子（2歳）も「多い・少ない」を感覚で覚えてきました。特別な教材がなくても、買い物という日常の中で自然と学びになっているのを実感します。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -122,7 +141,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -143,6 +162,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="shopping-play-benefits" />
 
       </article>
 

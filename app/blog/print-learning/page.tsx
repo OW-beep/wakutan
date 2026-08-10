@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "プリント学習のメリット｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="プリント学習のメリット｜わくたん"
+        description="幼児向けプリント学習のメリットを解説。集中力・思考力・学習習慣を育てる家庭学習のコツも紹介します。"
+        slug="print-learning"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -183,7 +193,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月
+          公開日：2026年3月　/　最終更新日：2026年8月
         </div>
 
         {/* CTA */}
@@ -205,6 +215,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="print-learning" />
 
       </article>
 

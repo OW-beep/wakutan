@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "5歳の学び方・勉強のコツ｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-sky-50 to-indigo-50">
+      <ArticleSchema
+        title="5歳の学び方・勉強のコツ｜わくたん"
+        description="5歳児の勉強・学び方のコツを解説。考える力や集中力を育てながら楽しく学習する関わり方を紹介します。"
+        slug="how-5year-learn"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto px-6 py-10">
 
@@ -243,6 +253,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="how-5year-learn" />
 
       </article>
 

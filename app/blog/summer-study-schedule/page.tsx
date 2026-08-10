@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "夏休みの家庭学習スケジュール例｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="夏休みの家庭学習スケジュール例｜わくたん"
+        description="幼児の夏休み中の家庭学習スケジュール例を紹介。1週間単位で無理なく続けられる無料ドリルの活用プランをまとめました。"
+        slug="summer-study-schedule"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -86,6 +96,15 @@ export default function Page() {
           普段忙しくて後回しになりがちな「じっくり考える問題」や「苦手なジャンル」に、時間のある夏休みに挑戦してみるのもおすすめです。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            長期休みは、最初にリズムを崩したことがあります。「時間があるから」と量を増やした結果、だんだんやらなくなってしまいました。うまくいったのは「普段より減らす」ことで、1日10分だけにするなどハードルを下げると逆に続きやすくなりました。また「朝やる」と時間を固定するより、「できるタイミングでやる」くらいの柔軟さを持たせた方が、下の子たちの状況にも対応しやすく、結果的に継続できています。休み中は「学習量を増やす」より「習慣を切らさない」ことを優先するようにしました。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -102,7 +121,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -123,6 +142,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="summer-study-schedule" />
 
       </article>
 

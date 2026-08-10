@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "知育玩具とドリルどっち？｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="知育玩具とドリルどっち？｜わくたん"
+        description="知育玩具とドリル、幼児期にはどちらが良いか悩む保護者向けに、それぞれのメリット・デメリットと使い分け方を解説します。"
+        slug="toys-vs-drills"
+        datePublished="2026-06-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -108,6 +118,15 @@ export default function Page() {
           遊びの合間の「ちょっとした挑戦」として取り入れやすい設計です。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            いろいろ試した中で感じたのは「どちらかではなく使い分ける」ことでした。知育玩具で良かったのはパズル系やブロックで、自分で試行錯誤する時間が自然に生まれ、長く使える点が良かったです。一方で「最初は遊ぶけどすぐ使わなくなる」ものもあり、特に遊び方が限定されているものは飽きるのも早かったです。ドリルはやる内容が明確なので習慣化しやすいのが強みですが、それだけだと単調になるので遊びで補う形にしています。結果的に「日常＝遊び（知育玩具）」「習慣＝ドリル」と役割を分けることで、バランスよく続けられるようになりました。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -124,7 +143,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月
+          公開日：2026年6月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -145,6 +164,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="toys-vs-drills" />
 
       </article>
 

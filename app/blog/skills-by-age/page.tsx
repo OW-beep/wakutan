@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "4歳・5歳・6歳の発達段階別 「今」伸ばしたい力｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="4歳・5歳・6歳の発達段階別 「今」伸ばしたい力｜わくたん"
+        description="4歳・5歳・6歳それぞれの発達段階で伸ばしたい力の違いをまとめ、年齢に合わせた家庭学習のヒントを紹介します。"
+        slug="skills-by-age"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -105,6 +115,15 @@ export default function Page() {
           </p>
         </div>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            3人を見ていると、同じ「学ぶ」でも年齢によって全然違うなと感じます。上の子（5歳）は「自分で考えて答えを出す力」が伸びている時期で、以前はすぐに「教えて」と言っていた問題でも、最近は「ちょっと待って」と自分で考える時間が増えてきました。真ん中の子（2歳）は、数字や文字そのものよりも「分類する」「同じものを見つける」力が伸びている印象で、おもちゃを色ごとに並べたり、自分なりのルールで分けたりしています。一番下の子はまだ学習という段階ではありませんが、上の2人が遊んでいるものをじっと見たり手を伸ばしたりする姿があり、それ自体がこの時期の大切な刺激なのだと感じます。「できることを増やす」より、「その年齢で今伸びている力を大事にする」ことを意識するようになりました。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -121,7 +140,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -142,6 +161,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="skills-by-age" />
 
       </article>
 

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "タブレット学習と紙のドリル、どう使い分ける？｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="タブレット学習と紙のドリル、どう使い分ける？｜わくたん"
+        description="幼児向けのタブレット学習アプリと紙のドリル、それぞれのメリットと使い分け方を紹介します。"
+        slug="tablet-vs-paper"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -82,6 +92,15 @@ export default function Page() {
           わくたんのように無料で印刷できるドリルは、紙学習を気軽に取り入れたいご家庭にも活用しやすい選択肢です。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            いろいろ試した結果、今はタブレットと紙を使い分けています。タブレットは上の子（5歳）にとって楽しく、導入には効果的でしたが、「なんとなく進めてしまう」ことも多く、考える深さはやや弱いと感じました。紙のプリントは「書く」「考える」「間違える」が残るため、理解が深まりやすく、今は紙を基本にしています。結果として「紙×無料プリント」を軸にしつつ、タブレットは補助的に使う形に落ち着きました。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -98,7 +117,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -119,6 +138,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="tablet-vs-paper" />
 
       </article>
 

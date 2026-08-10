@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "5歳で数が苦手なとき、家庭でできること｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="5歳で数が苦手なとき、家庭でできること｜わくたん"
+        description="5歳の子どもが数を苦手にしているときの対処法を解説。数の意味の理解を育てる家庭での関わり方を紹介します。"
+        slug="5year-number-weak"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -104,6 +114,15 @@ export default function Page() {
           </p>
         </div>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            上の子（5歳）がつまずいたのは、「数えること」から「考えること」に変わるタイミングでした。ただ数を言うのはできても、「どちらが多いか」「いくつ残るか」となると止まってしまうことがありました。最初はドリルで何とかしようとしてうまくいかず、日常の中に戻すことにしました。おやつを分けるときに「同じになるように分けるにはどうする？」と聞いたり、「あと1個足すとどうなる？」といったやり取りを増やしています。ドリルと日常を行き来するようにしたことで、少しずつ理解がつながっていきました。「できない問題を繰り返す」よりも「使う場面を増やす」方が、わが家では効果的でした。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -120,7 +139,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -141,6 +160,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="5year-number-weak" />
 
       </article>
 

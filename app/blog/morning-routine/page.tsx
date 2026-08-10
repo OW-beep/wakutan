@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "幼児の朝の準備をスムーズにする工夫｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="幼児の朝の準備をスムーズにする工夫｜わくたん"
+        description="幼児期の朝の身支度をスムーズにする工夫を紹介。保育園・幼稚園の準備で慌ただしくなりがちな朝を、少しでも穏やかに過ごすためのヒントをまとめました。"
+        slug="morning-routine"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -106,6 +116,15 @@ export default function Page() {
           </p>
         </div>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            以前は「朝にドリルをやらせよう」として失敗しました。5歳と2歳の準備だけでもバタバタで、そこに学習を入れると親も子も余裕がなくなってしまいました。うまくいったのは「やるタイミングを固定すること」と「短くすること」です。「朝の準備が全部終わったら1枚だけ」と決めると、逆に準備がスムーズになりました。また、前日の夜にプリントを机に出しておくだけでも効果があり、「何をやるか考える時間」を減らすことで自然と取りかかれるようになります。0歳の子がいることで予定通りにいかない日も多いので、「できたらOK」くらいのゆるさも意識しています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -122,7 +141,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -143,6 +162,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="morning-routine" />
 
       </article>
 

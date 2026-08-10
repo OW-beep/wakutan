@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "ひらがなを楽しく覚える5つの方法｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="ひらがなを楽しく覚える5つの方法｜わくたん"
+        description="4〜6歳向けに、ひらがなを遊びながら覚える5つの方法を紹介。日常生活の中で楽しく文字に親しむコツと、つまずいたときの対応も解説します。"
+        slug="hiragana-fun"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -162,6 +172,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="hiragana-fun" />
 
       </article>
 

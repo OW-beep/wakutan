@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "5歳でひらがなが読めない・書けない…親の不安解消法｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="5歳でひらがなが読めない・書けない…親の不安解消法｜わくたん"
+        description="5歳になってもひらがなが読めない・書けないことに不安を感じる保護者向けに、無理なく興味を引き出すステップを紹介します。"
+        slug="hiragana-worry-5year"
+        datePublished="2026-06-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -90,6 +100,15 @@ export default function Page() {
           「昨日より少しできるようになったね」と、その子自身の成長に目を向けてあげましょう。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            正直、「まだ読めない・書けない」と焦った時期はありました。周りと比べてしまい、「そろそろできた方がいいのでは」と思うこともありました。ただ、無理にやらせようとすると逆に嫌がるようになり、一度引きました。その代わり、絵本を一緒に読む時間を増やしたり、本人が興味を持った言葉だけを拾うようにすると、ある時期から急に読めるようになり、そこから一気に進みました。「準備が整うタイミングがある」と感じてからは、焦りすぎないようにしています。今は「全部できること」よりも「興味を持ち続けること」を大事にしています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -106,7 +125,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月
+          公開日：2026年6月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -127,6 +146,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="hiragana-worry-5year" />
 
       </article>
 

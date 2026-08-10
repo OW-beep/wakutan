@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "お小遣い、いつから始める？｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="お小遣い、いつから始める？｜わくたん"
+        description="子どものお小遣いを始めるタイミングについて解説。幼児期にできる準備段階と、始める際のポイントを紹介します。"
+        slug="allowance-timing"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -102,6 +112,15 @@ export default function Page() {
           </p>
         </div>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            わが家では上の子が5歳ということもあり、まだ本格的なお小遣い制度は始めていません。「お手伝いをしたらお金をあげる」という形にすると、何かをする理由が全部お金になってしまいそうだと感じるのが理由です。ただ、お金そのものには少しずつ興味を持ってきていて、買い物に行ったときに「これ買ったらお金なくなる？」と聞いてくることもあります。今は実際のお金を使って計算するより、「これは○円だね」「こっちの方が高いね」といった会話を増やしている段階です。もう少し大きくなって「欲しいものを自分で選ぶ」という経験ができるようになったら、少額のお小遣いを始めてもいいかなと思っています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -118,7 +137,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -139,6 +158,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="allowance-timing" />
 
       </article>
 

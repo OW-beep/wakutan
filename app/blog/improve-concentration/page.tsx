@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "幼児の集中力を伸ばす方法｜家庭で今日からできるコツ｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="幼児の集中力を伸ばす方法｜家庭で今日からできるコツ｜わくたん"
+        description="幼児の集中力を伸ばす方法を、年齢別の目安データとあわせて解説。家庭で今日から取り入れられる具体的な工夫を紹介します。"
+        slug="improve-concentration"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -119,6 +129,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="improve-concentration" />
 
       </article>
 

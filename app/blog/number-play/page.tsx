@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "数字遊びで算数が好きになる｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="数字遊びで算数が好きになる｜わくたん"
+        description="4〜6歳向けの数字遊びを紹介。お買い物ごっこやサイコロ遊びなど、日常の中で自然に数の感覚を育てる方法を解説します。"
+        slug="number-play"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -155,6 +165,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="number-play" />
 
       </article>
 

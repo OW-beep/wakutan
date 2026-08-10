@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "カタカナはいつから教える？｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="カタカナはいつから教える？｜わくたん"
+        description="カタカナを教え始めるタイミングと、ひらがなとの学習の違いについて解説します。無理なく取り入れるためのステップも紹介します。"
+        slug="katakana-start"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -117,6 +127,15 @@ export default function Page() {
           カタカナは読めるようになるまでに時間がかかる子も多い文字です。ひらがなと同じように、読むことから少しずつ慣れていきましょう。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            わが家では、ひらがながある程度読めるようになってから、子どもが自然にカタカナへ興味を持ち始めました。きっかけは、看板やお菓子のパッケージで「これ何て読むの？」と聞かれることが増えたことです。ひらがなに比べると形が似ている文字が多く（シ・ツ、ソ・ンなど）最初は混乱していたので、「一気に覚える」のではなく日常で出てきたものだけ少しずつ拾うようにしました。ドリルとしてやるときも全部を網羅するのではなく、「ジュース」「バス」のような普段よく見る言葉から入るようにすると、抵抗なく覚えやすかったです。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -154,6 +173,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="katakana-start" />
 
       </article>
 

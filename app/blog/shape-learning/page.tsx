@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "図形遊びの効果｜図形感覚・空間認識力を育てよう｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="図形遊びの効果｜図形感覚・空間認識力を育てよう｜わくたん"
+        description="図形遊びは空間認識力や図形感覚、考える力を育てる知育遊びです。4〜6歳向けに図形遊びのメリットと、小学校の学習へのつながりを紹介します。"
+        slug="shape-learning"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -94,6 +104,15 @@ export default function Page() {
           幼児期に図形に親しんでおくことは、こうした学習に対する苦手意識を減らすことにつながります。難しい用語を教える必要はなく、「触れて楽しむ」経験の積み重ねが大切です。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            上の子（5歳）がブロックで家を作っていたとき、最初は適当に積んでいるだけに見えたのですが、途中から「ここに四角がないと崩れる」と言い始めたことがありました。大人からすると単純なブロック遊びですが、「どの形をどこに置くと安定するか」を考えているんだと気づかされました。下の子（2歳）はまだ作品を作るというより、同じ形を集めたり穴に入れたり積んだりすることが中心ですが、それでも形や大きさの違いを覚えているのだと思います。ドリルで「図形の問題」として出す前に、遊びの中で触れておくことはかなり大事だと感じています。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -131,6 +150,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="shape-learning" />
 
       </article>
 

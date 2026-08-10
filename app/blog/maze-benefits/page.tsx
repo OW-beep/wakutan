@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "迷路遊びで育つ5つの力｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="迷路遊びで育つ5つの力｜わくたん"
+        description="子どもに人気の迷路遊びで育つ5つの力を解説。楽しみながら思考力や集中力を伸ばす迷路遊びの魅力と選び方を紹介します。"
+        slug="maze-benefits"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -106,6 +116,15 @@ export default function Page() {
           紙に自由に線を描いて簡単な迷路を作るのもおすすめです。子ども自身に迷路を作ってもらうと、「どうすれば難しくなるか」を考える経験にもなります。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            迷路は「あとちょっとでゴール」という感覚があるので、途中でやめずに粘る経験につながっています。上の子（5歳）は一度ハマると何回も同じ迷路をやり直していて、「どうすれば早く行けるか」を自分で考えている様子がありました。パズルや迷路のように「遊び」として入れることで、無理なく考える力が育つ実感があります。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -143,6 +162,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="maze-benefits" />
 
       </article>
 

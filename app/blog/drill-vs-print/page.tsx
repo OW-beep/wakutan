@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "市販ドリル vs 無料プリント どっちがいい？｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="市販ドリル vs 無料プリント どっちがいい？｜わくたん"
+        description="市販の幼児向けドリルと無料の印刷プリント、それぞれのメリット・デメリットを比較し、上手な使い分け方を紹介します。"
+        slug="drill-vs-print"
+        datePublished="2026-07-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -86,6 +96,15 @@ export default function Page() {
           どちらを選んでも、無理なく続けられることが一番大切です。お子さんの反応を見ながら、合う方法を見つけてあげましょう。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            市販ドリルは体系的で安心ですが、「終わったら次どうするか」で止まりがちでした。一方、無料プリントはその日の子どもの様子に合わせて選べるので、柔軟に続けやすいと感じています。わが家では、市販ドリルや教材を土台にしつつ、日々の調整は無料プリントで補うという使い方に落ち着きました。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -102,7 +121,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月
+          公開日：2026年7月　/　最終更新日：2026年8月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
@@ -123,6 +142,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="drill-vs-print" />
 
       </article>
 

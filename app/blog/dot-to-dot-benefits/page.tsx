@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "点つなぎ遊びの効果｜集中力・数字・運筆力が育つ｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="点つなぎ遊びの効果｜集中力・数字・運筆力が育つ｜わくたん"
+        description="点つなぎ遊びは数字を覚えながら集中力や運筆力を育てられる知育遊びです。4〜6歳向けに効果や、数字が苦手な子への配慮も紹介します。"
+        slug="dot-to-dot-benefits"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -94,6 +104,15 @@ export default function Page() {
           「これ、頑張って完成させたんだよね」と後から振り返ることで、自信の積み重ねにもつながります。
         </p>
 
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            🏠 わくたん運営者のわが家での工夫
+          </p>
+          <p className="leading-7">
+            点つなぎは数字を順番に追う練習にもなりますが、5歳くらいだと「何ができるんだろう？」という完成形への期待があるのが良いところだと感じます。「最後までやったら何が出てくるかな？」と声をかけると、ただ数字を追うよりも楽しんで取り組んでいました。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -131,6 +150,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="dot-to-dot-benefits" />
 
       </article>
 

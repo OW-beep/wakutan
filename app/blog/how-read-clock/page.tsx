@@ -1,4 +1,6 @@
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
   title: "時計の読み方はいつから教える？｜わくたん",
@@ -9,6 +11,14 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
+      <ArticleSchema
+        title="時計の読み方はいつから教える？｜わくたん"
+        description="幼児期の時計の読み方の教え方を解説。何歳から始めるとよいか、つまずきやすいポイントとステップごとの練習方法を紹介します。"
+        slug="how-read-clock"
+        datePublished="2026-03-01"
+        dateModified="2026-08-10"
+      />
+
 
       <article className="max-w-4xl mx-auto">
 
@@ -156,6 +166,8 @@ export default function Page() {
           </Link>
 
         </div>
+
+        <RelatedArticles currentSlug="how-read-clock" />
 
       </article>
 
