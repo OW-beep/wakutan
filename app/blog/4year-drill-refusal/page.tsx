@@ -76,6 +76,14 @@ export default function Page() {
           遊びから学習への切り替えに時間がかかるのも4歳の特徴です。「あと5分遊んだらドリルしようね」と予告しておくと、切り替えがスムーズになることがあります。
         </p>
 
+        <p className="leading-8 mb-4">
+          それでも「今日はドリルやらない！」となる日は珍しくありません。以前は「あと1枚だけだから」と説得していたのですが、そうすると親子ともに疲れてしまいます。一番効果があったのは、いったんドリルから完全に離れることでした。「じゃあ今日はやめよう」と言って、ブロックやパズルなど別の遊びに切り替えます。しばらく遊んだあと、「これ終わったら、迷路1個だけやってみる？」と聞くと、意外と「やる」と戻ってくることがありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、「算数やる？」と聞くより、「迷路と間違い探し、どっちがいい？」と選択肢を渡すのも効果的でした。4歳くらいだと「勉強するか・しないか」の二択にすると嫌になってしまうので、「どれならやってみたい？」に変えるだけでもかなり違うと感じます。
+        </p>
+
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           無理に続けさせない選択も大切
         </h2>
@@ -91,6 +99,25 @@ export default function Page() {
         <p className="leading-8 mb-4">
           「10問全部」ではなく「今日は1問だけ」から始めるのもおすすめです。わくたんのドリルも、一部だけ取り組む使い方で問題ありません。
         </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 毎日「今日はやらない」と言われます。無理にでもやらせるべき？</p>
+            <p className="leading-7 text-gray-700">A. 無理にやらせる必要はありません。二択（やる・やらない）ではなく、「どっちがいい？」と選択肢を渡す形にするだけで、拒否反応が和らぐことがあります。それでも嫌がる日は、思い切ってお休みにして大丈夫です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 別の遊びに切り替えると、そのまま戻ってこないのでは？</p>
+            <p className="leading-7 text-gray-700">A. 戻ってこない日もありますが、それで問題ありません。「離れる→戻ってくる」を無理に狙うのではなく、「イヤな気持ちのまま続けさせない」ことの方が長い目で見ると大切です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. きょうだいがいると、一人だけ特別扱いしにくいのですが？</p>
+            <p className="leading-7 text-gray-700">A. その子だけ量やペースを変えても問題ありません。学習は比べるものではなく、その子に合ったペースで進めることが何より大切です。</p>
+          </div>
+        </div>
 
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">

@@ -48,7 +48,7 @@ export default function Page() {
         </h2>
 
         <p className="leading-8 mb-4">
-          形や高さを考えながら組み立てる遊びは、空間認識力を育てます。
+          形や高さを考えながら組み立てる遊びは、空間認識力を育てます。「ここに四角がないと崩れる」など、遊びながら安定させる工夫を自分で見つけていく姿もよく見られます。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -56,7 +56,7 @@ export default function Page() {
         </h2>
 
         <p className="leading-8 mb-4">
-          自由に表現する遊びは、発想力や手先の器用さを育てます。
+          自由に表現する遊びは、発想力や手先の器用さを育てます。うまく描けたかどうかより、色を選んだ理由や描いたものについて話を聞いてあげると、会話も広がります。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -64,7 +64,7 @@ export default function Page() {
         </h2>
 
         <p className="leading-8 mb-4">
-          隠れる場所を考えたり、探す順番を工夫したりする中で、思考力が育ちます。
+          隠れる場所を考えたり、探す順番を工夫したりする中で、思考力が育ちます。「どこに隠れたら見つかりにくいか」を考えること自体が、立派な推理の練習になっています。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -72,7 +72,7 @@ export default function Page() {
         </h2>
 
         <p className="leading-8 mb-4">
-          言葉を思い出したり、答えを推理したりする遊びです。移動時間にもおすすめです。
+          言葉を思い出したり、答えを推理したりする遊びです。移動時間にもおすすめです。道具がいらないので、家事の合間などちょっとしたすきま時間にも取り入れやすいのが魅力です。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -80,7 +80,7 @@ export default function Page() {
         </h2>
 
         <p className="leading-8 mb-4">
-          手順通りに折る経験が、順序立てて考える力につながります。
+          手順通りに折る経験が、順序立てて考える力につながります。船や飛行機など簡単なものから始めると、完成の達成感を得やすくおすすめです。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -104,7 +104,7 @@ export default function Page() {
         </h2>
 
         <p className="leading-8 mb-4">
-          ちぎる・丸める・投げるなど、手先を使いながら体も動かせる遊びです。
+          ちぎる・丸める・投げるなど、手先を使いながら体も動かせる遊びです。新聞紙を丸めてボールにして、家の中で的当てをしたり、「何個入った？」と数えたりするのもおすすめです。紙を折って船や飛行機を作ることもでき、作ったものを兄弟姉妹が真似しようとするので、きょうだいで遊びが続くこともあります。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -132,12 +132,39 @@ export default function Page() {
           言葉や想像力を育てる、雨の日の定番の過ごし方です。ゆったりとした時間も大切にしましょう。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ⑪ おうち宝物探し
+        </h2>
+
+        <p className="leading-8 mb-4">
+          家の中に「宝物」を隠して、簡単なヒントを出す遊びもおすすめです。「ソファの近く」「赤いものの近く」など、少しずつヒントを出すと、言葉を理解しながら探すので、意外と頭を使う遊びになります。特別な道具がいらず、思いついたときにすぐ始められるのも魅力です。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 「知育遊び」として意識しないといけない？</p>
+            <p className="leading-7 text-gray-700">A. 意識しすぎる必要はありません。子どもが夢中になっている遊びの中には、数・言葉・順番・位置関係など、いろいろな学びがすでに含まれていることがほとんどです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. きょうだいで年齢差があっても一緒に遊べる？</p>
+            <p className="leading-7 text-gray-700">A. 新聞紙遊びや宝物探しは、年齢差があっても一緒に楽しみやすい遊びです。上の子の様子を下の子が真似しようとすることも多く、きょうだいならではの学びにもつながります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 何をして過ごせばいいか思いつかない日はどうすれば？</p>
+            <p className="leading-7 text-gray-700">A. 「今日はどうやって時間をつぶそう」と思う日があって当然です。ここで紹介したアイデアを1つ試してみるだけでも、子どもと一緒に遊びを考えるうちに、自然と過ごし方が見つかっていきます。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫
           </p>
           <p className="leading-7">
-            雨の日は、おもちゃを「色」「形」「大きさ」で分ける遊びをよくしています。特別な準備がいらないので気軽に取り入れられるのですが、これがそのまま“仲間分け”の力につながっていると感じます。0歳の子も含めてきょうだいで同じ空間にいることで、上の子が分けている様子を下の子が眺めたり真似したりして、自然と学びの環境ができているように思います。
+            雨の日は、おもちゃを「色」「形」「大きさ」で分ける遊びをよくしています。特別な準備がいらないので気軽に取り入れられるのですが、これがそのまま“仲間分け”の力につながっていると感じます。0歳の子も含めてきょうだいで同じ空間にいることで、上の子が分けている様子を下の子が眺めたり真似したりして、自然と学びの環境ができているように思います。「知育遊びをしよう」と構えなくても、子どもが夢中になっている遊びを少し工夫するだけで十分なんだなと感じています。
           </p>
         </div>
 
@@ -151,6 +178,7 @@ export default function Page() {
             <li>室内遊びにも考える力を育てるチャンスがたくさんある</li>
             <li>積み木・パズル・折り紙は思考力や手先の器用さを育てる</li>
             <li>しりとりやなぞなぞは移動時間にも手軽にできる</li>
+            <li>新聞紙遊びや宝物探しは道具いらずで、きょうだいでも楽しみやすい</li>
             <li>「雨の日はドリルの日」と決めるのもおすすめ</li>
           </ul>
 

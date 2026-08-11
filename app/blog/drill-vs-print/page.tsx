@@ -55,6 +55,10 @@ export default function Page() {
           シールやキャラクターなど、子どものやる気を引き出す工夫がされているドリルも多くあります。
         </p>
 
+        <p className="leading-8 mb-4">
+          市販ドリルで良かったのは、何より「順番が考えられていること」です。ひらがななら、まず文字を見て、次になぞって、最後に書いてみる、といった具合に、少しずつ難しくなっていくものは使いやすいと感じます。また、紙の質やイラストなどがしっかり作られていて、「今日はこのページをやろう」と決めやすいのもメリットです。
+        </p>
+
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           無料プリントのメリット
         </h2>
@@ -65,6 +69,10 @@ export default function Page() {
 
         <p className="leading-8 mb-4">
           「今日は算数だけ」「今日はひらがなだけ」のように、その日の気分や興味に合わせて自由に選べる点も便利です。
+        </p>
+
+        <p className="leading-8 mb-4">
+          市販ドリルは全ページを毎回やる必要がない日もあります。「今日は数字だけやりたい」「この問題は簡単すぎる」というときは、無料プリントの方が柔軟に対応できます。市販ドリルと無料プリントは競合するものではなく、使い分けるものだと考えると気持ちが楽になります。
         </p>
 
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
@@ -85,7 +93,7 @@ export default function Page() {
         </p>
 
         <p className="leading-8 mb-4">
-          「平日は無料プリントで軽く、週末は市販ドリルでじっくり」のような組み合わせもおすすめです。
+          「平日は無料プリントで軽く、週末は市販ドリルでじっくり」のような組み合わせもおすすめです。市販ドリルは「体系的に進めたいとき」、無料プリントは「その日の子どもの状態に合わせたいとき」と役割を分けて考えると、選ぶときに迷いにくくなります。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -95,6 +103,25 @@ export default function Page() {
         <p className="leading-8 mb-4">
           どちらを選んでも、無理なく続けられることが一番大切です。お子さんの反応を見ながら、合う方法を見つけてあげましょう。
         </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 市販ドリルと無料プリント、どちらか一つに絞った方がいい？</p>
+            <p className="leading-7 text-gray-700">A. どちらか一つに絞る必要はありません。基礎固めは市販ドリル、その日の気分に合わせた調整は無料プリント、というように役割を分けて併用する家庭が多いです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 市販ドリルが途中で止まってしまいます。どうすれば？</p>
+            <p className="leading-7 text-gray-700">A. 1冊を最後までやりきることにこだわらなくて大丈夫です。「終わったら次どうするか」で止まりがちな場合は、その間を無料プリントでつなぐと、学習の流れが途切れにくくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 無料プリントだけで基礎は身につく？</p>
+            <p className="leading-7 text-gray-700">A. 十分身につきますが、体系的な順序で進めたい場合は市販ドリルと組み合わせるとより安心です。どちらが優れているというより、目的に応じた使い分けが大切です。</p>
+          </div>
+        </div>
 
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
