@@ -20,6 +20,7 @@ import { generateNakamawakeQuestions, generateNakamahazureQuestions } from "./ca
 import { generateAntonymQuestions, generateKatakanaQuestions } from "./hiraganaQuestions";
 import { generateRiddleQuestions } from "./nazonazoQuestions";
 import { generateTwoStepWordProblems } from "./mojiQuestions";
+import { generateSuiriQuestions6 } from "./suiriQuestions";
 
 type Question = {
   genre: string;
@@ -32,8 +33,9 @@ type Question = {
   /** 1（やさしい）〜 数字が大きいほど むずかしい。同じ日の中で かんたん→むずかしい の じゅんに ならべるために使う */
   difficulty?: number;
   dotFigure?: DotFigure;
+  suiriScene?: string;
+  comparePeople?: string[];
 };
-
 type RonriTemplate = [string, string, string];
 type PatternTemplate = [string, string, string];
 
@@ -645,6 +647,16 @@ export function generate6Questions() {
     dotFigure: figure,
   }));
 
+  const suiri: Question[] = generateSuiriQuestions6().map(q => ({
+    genre: "すいり",
+    question: q.question,
+    answer: q.answer,
+    explanation: q.explanation,
+    difficulty: q.difficulty,
+    suiriScene: q.suiriScene,
+    comparePeople: q.comparePeople,
+  }));
+
   return {
     sansu,
     ronri,
@@ -659,5 +671,6 @@ export function generate6Questions() {
     okane,
     tsumiki,
     onajikatachi,
+    suiri,
   };
 }

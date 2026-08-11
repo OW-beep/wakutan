@@ -8,6 +8,7 @@ import { generateQuantityCompareQuestions, generateSameQuantityQuestions } from 
 import { generateNakamawakeQuestions, generateNakamahazureQuestions } from "./categoryQuestions";
 import { generateWordChoiceQuestions } from "./hiraganaQuestions";
 import { generateRiddleQuestions } from "./nazonazoQuestions";
+import { generateSuiriQuestions4 } from "./suiriQuestions";
 
 type Question = {
   genre: string;
@@ -19,6 +20,8 @@ type Question = {
   /** 1（やさしい）〜 数字が大きいほど むずかしい。同じ日の中で かんたん→むずかしい の じゅんに ならべるために使う */
   difficulty?: number;
   dotFigure?: DotFigure;
+  suiriScene?: string;
+  comparePeople?: string[];
 };
 
 export function generate4Questions() {
@@ -485,5 +488,15 @@ export function generate4Questions() {
     dotFigure: figure,
   }));
 
-  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, nazonazo, okane, tsumiki, onajikatachi };
+  const suiri: Question[] = generateSuiriQuestions4().map(q => ({
+    genre: "すいり",
+    question: q.question,
+    answer: q.answer,
+    explanation: q.explanation,
+    difficulty: q.difficulty,
+    suiriScene: q.suiriScene,
+    comparePeople: q.comparePeople,
+  }));
+
+  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, nazonazo, okane, tsumiki, onajikatachi, suiri };
 }

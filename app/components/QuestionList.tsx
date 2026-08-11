@@ -5,6 +5,8 @@ import ClockFace from "./ClockFace";
 import MoneyIllustration from "./MoneyIllustration";
 import CubeStack from "./CubeStack";
 import DotFigureCopy from "./DotFigureCopy";
+import SuiriScene from "./SuiriScene";
+import ComparePeople from "./ComparePeople";
 
 type Question = {
   genre: string;
@@ -15,6 +17,8 @@ type Question = {
   money?: { value: number; count: number }[];
   cubes?: number[][];
   dotFigure?: { gridSize: number; lines: [[number, number], [number, number]][] };
+  suiriScene?: string;
+  comparePeople?: string[];
 };
 
 type Props = {
@@ -72,6 +76,14 @@ export default function QuestionList({
             )}
 
             {q.dotFigure && <DotFigureCopy figure={q.dotFigure} />}
+
+            {q.suiriScene && (
+              <div className="flex justify-center mb-3">
+                <SuiriScene scene={q.suiriScene} />
+              </div>
+            )}
+
+            {q.comparePeople && <ComparePeople names={q.comparePeople} />}
 
             <div className="text-lg mb-2">
               {q.question}

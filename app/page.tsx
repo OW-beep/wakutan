@@ -412,6 +412,7 @@ export default function Home() {
           {[
             { emoji: "🔢", title: "算数ドリル", desc: "数を数える・たし算/ひきざんの基礎を学ぼう", key: "sansu", ages: [4, 5, 6] },
             { emoji: "🧠", title: "論理問題", desc: "きまりを見つけて考える力を育てよう", key: "ronri", ages: [4, 5, 6] },
+            { emoji: "🔍", title: "すいり問題", desc: "「なぜ？」を考える、地頭を鍛える推理問題", key: "suiri", ages: [4, 5, 6] },
             { emoji: "🔷", title: "パターン問題", desc: "規則性を見つける力を育てよう", key: "pattern", ages: [4, 5, 6] },
             { emoji: "🔤", title: "ひらがな", desc: "文字への興味・読み書きの力を育てよう", key: "hiragana", ages: [4, 5, 6] },
             { emoji: "📦", title: "仲間分け問題", desc: "分類する力を育てよう", key: "nakamawake", ages: [4, 5, 6] },

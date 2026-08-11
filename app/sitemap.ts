@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     "/4/sansu",
     "/4/ronri",
+    "/4/suiri",
     "/4/pattern",
     "/4/hiragana",
     "/4/nakamawake",
@@ -24,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     "/5/sansu",
     "/5/ronri",
+    "/5/suiri",
     "/5/pattern",
     "/5/hiragana",
     "/5/nakamawake",
@@ -37,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     "/6/sansu",
     "/6/ronri",
+    "/6/suiri",
     "/6/pattern",
     "/6/hiragana",
     "/6/nakamawake",

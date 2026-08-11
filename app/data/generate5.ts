@@ -9,6 +9,7 @@ import { generateNakamawakeQuestions, generateNakamahazureQuestions } from "./ca
 import { generateFirstSoundQuestions } from "./hiraganaQuestions";
 import { generateRiddleQuestions } from "./nazonazoQuestions";
 import { generateFactLookupQuestions, generateSimpleWordProblems } from "./mojiQuestions";
+import { generateSuiriQuestions5 } from "./suiriQuestions";
 
 type Question = {
   genre: string;
@@ -20,6 +21,8 @@ type Question = {
   /** 1（やさしい）〜 数字が大きいほど むずかしい。同じ日の中で かんたん→むずかしい の じゅんに ならべるために使う */
   difficulty?: number;
   dotFigure?: DotFigure;
+  suiriScene?: string;
+  comparePeople?: string[];
 };
 
 export function generate5Questions() {
@@ -547,5 +550,15 @@ export function generate5Questions() {
     dotFigure: figure,
   }));
 
-  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, moji, nazonazo, okane, tsumiki, onajikatachi };
+  const suiri: Question[] = generateSuiriQuestions5().map(q => ({
+    genre: "すいり",
+    question: q.question,
+    answer: q.answer,
+    explanation: q.explanation,
+    difficulty: q.difficulty,
+    suiriScene: q.suiriScene,
+    comparePeople: q.comparePeople,
+  }));
+
+  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, moji, nazonazo, okane, tsumiki, onajikatachi, suiri };
 }

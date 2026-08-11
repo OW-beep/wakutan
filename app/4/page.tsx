@@ -36,6 +36,7 @@ export default function Page() {
         items={[
           { href: "/4/sansu", emoji: "🔢", label: "さんすう" },
           { href: "/4/ronri", emoji: "🧠", label: "ろんり" },
+          { href: "/4/suiri", emoji: "🔍", label: "すいり" },
           { href: "/4/pattern", emoji: "🔷", label: "パターン" },
           { href: "/4/hiragana", emoji: "🔤", label: "ひらがな" },
           { href: "/4/nakamawake", emoji: "📦", label: "なかまわけ" },
