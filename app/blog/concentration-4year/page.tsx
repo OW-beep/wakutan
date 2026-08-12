@@ -36,7 +36,7 @@ export default function Page() {
 
         </div>
         <p className="text-lg leading-8 mb-6">
-          4歳ごろ集中が続くのは、平均するとまだ5〜10分ほど。それが自然な発達段階だと知っているだけで、見え方が変わってきます。焦る必要はありません。
+          幼児の集中時間には個人差が大きく、4歳ごろは5〜10分程度を一つの目安として紹介されることが多いです。好きな遊びか、机に向かう課題かによっても変わってきます。それが自然な発達段階だと知っているだけで、見え方が変わってきます。焦る必要はありません。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
