@@ -96,6 +96,37 @@ export default function Page() {
           普段忙しくて後回しになりがちな「じっくり考える問題」や「苦手なジャンル」に、時間のある夏休みに挑戦してみるのもおすすめです。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          途中でリズムが崩れてしまったら
+        </h2>
+
+        <p className="leading-8 mb-4">
+          帰省やお出かけが続くと、決めていたリズムが崩れてしまうこともよくあります。そんなときは、崩れたこと自体を気にしすぎないことが大切です。
+        </p>
+
+        <p className="leading-8 mb-4">
+          「休み明けからまたゆるく再開する」くらいの気持ちで十分です。1日休んだからといって、それまでの取り組みが無駄になるわけではありません。無理に取り戻そうとせず、いつも通りの量に戻すことを意識しましょう。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 帰省中も続けた方がいい？</p>
+            <p className="leading-7 text-gray-700">A. 無理に続ける必要はありません。環境が変わる時期は、学習より生活そのものを楽しむことを優先しても大丈夫です。帰ってきてから再開すれば十分です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 夏休み明け、急に学習量を増やしても大丈夫？</p>
+            <p className="leading-7 text-gray-700">A. 休み明けは生活リズムを整えることを優先し、学習量は少しずつ元に戻していくのがおすすめです。急に増やすと負担になり、逆効果になることがあります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. きょうだいで学年が違う場合、同じスケジュールでいい？</p>
+            <p className="leading-7 text-gray-700">A. 完全に同じにする必要はありません。取り組む時間帯だけ揃えて、内容やペースはそれぞれに合わせるのがおすすめです。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

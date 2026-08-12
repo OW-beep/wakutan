@@ -116,6 +116,37 @@ export default function Page() {
           紙に自由に線を描いて簡単な迷路を作るのもおすすめです。子ども自身に迷路を作ってもらうと、「どうすれば難しくなるか」を考える経験にもなります。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          行き詰まったときの見守り方
+        </h2>
+
+        <p className="leading-8 mb-4">
+          迷路の途中で手が止まってしまったとき、すぐに正解の道を教えたくなりますが、少し待ってあげることも大切です。「ここ、行き止まりかな？」と気づく経験そのものが、試行錯誤する力を育てます。
+        </p>
+
+        <p className="leading-8 mb-4">
+          それでも長く止まってしまう場合は、「スタートに戻ってもう一回見てみようか」と、視点をリセットするきっかけを与えるだけで十分です。答えの道を直接教えるのは、最後の手段にしておきましょう。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 何歳くらいから迷路遊びを始められる？</p>
+            <p className="leading-7 text-gray-700">A. 3歳前後から、道幅が広くシンプルな迷路であれば楽しめます。鉛筆を使うのが難しい場合は、指でなぞるところから始めても大丈夫です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 途中で諦めてしまうことが多いです。どうすれば続けられる？</p>
+            <p className="leading-7 text-gray-700">A. 難易度が合っていない可能性があります。一つ簡単なレベルに戻し、「できた」という成功体験を積み重ねることで、少しずつ難しい迷路にも挑戦しやすくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 鉛筆でうまく線が引けません。練習した方がいい？</p>
+            <p className="leading-7 text-gray-700">A. 線がガタガタでも問題ありません。ゴールまでたどり着けたことを一緒に喜んであげましょう。運筆力は繰り返す中で自然に上達していきます。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

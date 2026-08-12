@@ -96,6 +96,37 @@ export default function Page() {
           4歳の段階では、まず数字を楽しく唱えられることを目標にし、正確に数えられるかどうかは気にしすぎなくて大丈夫です。この力は5歳、6歳にかけて自然に育っていきます。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくあるつまずき
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「1、2、3、5……」のように、数字を唱える途中で飛ばしてしまうのはこの時期によくあることです。すぐに間違いを指摘するより、「今どこまで数えた？」と一緒に振り返る方が、自分で気づく力につながります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、「10まで言えるのに、ものを10個数えられない」という状態もよくあります。これは「唱える」段階から「数える」段階への移行途中でよく見られるもので、指差ししながら数える練習を重ねることで、少しずつ結びついていきます。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 10までしか言えません。もっと大きい数を教えた方がいい？</p>
+            <p className="leading-7 text-gray-700">A. 焦って先に進める必要はありません。10までを実際に数えられる、意味を理解できる段階を大切にする方が、その後の理解がスムーズになります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 数字に全く興味を示しません。無理にでも教えるべき？</p>
+            <p className="leading-7 text-gray-700">A. 無理に教える必要はありません。エレベーターの階数やお菓子の数など、生活の中で自然に数字に触れる場面を増やすところから始めてみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 指で数えるのは良くない癖になりますか？</p>
+            <p className="leading-7 text-gray-700">A. 4歳の時期には全く問題ありません。指を使って数える経験は、数の量的なイメージをつかむための大切なステップです。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

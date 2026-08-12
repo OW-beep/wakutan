@@ -100,6 +100,37 @@ export default function Page() {
           違いを見つけたときの「あ、ちがう！」という発見の喜びは、子どもにとって大きな達成感になります。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          見つからずに困っているときの声かけ
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「あと1個」で止まってしまったとき、すぐに答えを教えるのではなく、「上の方はもう見た？」「色に注目してみたら？」というように、探す範囲や視点のヒントを出すのがおすすめです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          答えそのものではなく「探し方」のヒントにすることで、次に別の間違い探しに取り組むときにも自分で応用できるようになります。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. すぐに答えを教えてしまってもいい？</p>
+            <p className="leading-7 text-gray-700">A. たまになら問題ありませんが、毎回教えてしまうと「探す」楽しさが育ちにくくなります。まずは探す範囲のヒントを出し、自分で見つける経験を大切にしましょう。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 何歳から間違い探しはできる？</p>
+            <p className="leading-7 text-gray-700">A. 3〜4歳ごろから、違いが大きくてわかりやすいものであれば楽しめます。年齢よりも、今の興味に合わせて難易度を選ぶのがポイントです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 全然見つけられず、すぐに諦めてしまいます。どうすれば？</p>
+            <p className="leading-7 text-gray-700">A. 難易度が合っていない可能性があります。違いの数が少なく、はっきりしたものから始めて、「見つかった」成功体験を積み重ねると、少しずつ粘れるようになっていきます。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

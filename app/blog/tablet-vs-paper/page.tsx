@@ -92,6 +92,25 @@ export default function Page() {
           わくたんのように無料で印刷できるドリルは、紙学習を気軽に取り入れたいご家庭にも活用しやすい選択肢です。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. タブレット学習だけでは不十分ですか？</p>
+            <p className="leading-7 text-gray-700">A. タブレットだけでも一定の学びは得られますが、小学校の授業やテストは今も紙が中心です。「書く」経験を並行して積んでおくと、入学後のギャップが少なくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 何歳からタブレット学習を取り入れていい？</p>
+            <p className="leading-7 text-gray-700">A. 年齢の目安より、「時間を決めて使えるか」が判断のポイントです。使う時間と終わるタイミングをあらかじめ決めておくと、幼児期でも取り入れやすくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 紙のドリルを嫌がる場合、タブレットだけでもいい？</p>
+            <p className="leading-7 text-gray-700">A. 一時的にタブレット中心にしても問題ありません。ただ、鉛筆を持つ機会が極端に減らないよう、月齢に応じて少しずつ紙にも触れる時間を作っておくと安心です。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

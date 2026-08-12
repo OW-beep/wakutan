@@ -92,6 +92,37 @@ export default function Page() {
           興味のあることには、目安の時間より長く集中できることも珍しくありません。得意なジャンルや好きなテーマから取り組み始めるのも、集中力を引き出すコツです。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          集中が切れてしまったときの対応
+        </h2>
+
+        <p className="leading-8 mb-4">
+          目安の時間を過ぎて集中が切れてきたら、無理に続けさせず「今日はここまで」と区切るのも大切な判断です。引っ張って続けさせると、次に取り組むときの抵抗感につながることがあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          机の前で進まなくなったときは、場所を変えるのも効果的です。リビングのテーブルや床に移動するだけで、気分が切り替わって再び取り組めることもあります。「集中させる」ことより「続けられる形にする」ことを意識してみましょう。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 同年代の子より集中力が続かない気がします。心配すべき？</p>
+            <p className="leading-7 text-gray-700">A. 集中力には個人差が大きく、年齢の目安はあくまで参考です。日によって波があるのも自然なことなので、極端に短い状態が長く続かない限り、心配しすぎなくて大丈夫です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. きょうだいがいると、どうしても気が散ってしまいます。どうすれば？</p>
+            <p className="leading-7 text-gray-700">A. 完全に静かな環境を作るのは難しいことが多いです。短時間で区切る、取り組む場所を工夫するなど、「多少騒がしくても集中できる形」を探る方が現実的です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 集中力を伸ばすために、何か特別な訓練が必要？</p>
+            <p className="leading-7 text-gray-700">A. 特別な訓練は必要ありません。年齢に合った時間と環境で、興味のあることに取り組む経験を積み重ねることが、一番自然な形で集中力を育てます。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

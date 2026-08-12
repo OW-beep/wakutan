@@ -100,6 +100,37 @@ export default function Page() {
           「昨日より少しできるようになったね」と、その子自身の成長に目を向けてあげましょう。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          気になることが続くときは
+        </h2>
+
+        <p className="leading-8 mb-4">
+          多くの場合は個人差の範囲内ですが、「文字と音がなかなか結びつかない」「読み書き以外でも気になる様子が続く」といった状態が長く続く場合は、自己判断で抱え込まず、園の先生や自治体の発達相談窓口などに相談してみるのも一つの選択肢です。
+        </p>
+
+        <p className="leading-8 mb-4">
+          専門的な視点からアドバイスをもらうことで、家庭での関わり方のヒントが見つかることもあります。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 何歳までに読めるようになれば安心ですか？</p>
+            <p className="leading-7 text-gray-700">A. 明確な年齢の基準はありません。多くの場合、小学校入学後の授業を通じて少しずつ読み書きが定着していきます。5歳の時点で焦る必要はありません。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. ドリルを嫌がって全く取り組んでくれません。どうすれば？</p>
+            <p className="leading-7 text-gray-700">A. 一度ドリルから離れて、絵本や好きなキャラクターの名前など、興味のある入り口から文字に触れる時間を増やしてみてください。「勉強」という形にこだわらないことが近道になることもあります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 鏡文字（左右反転した文字）を書きます。心配すべき？</p>
+            <p className="leading-7 text-gray-700">A. 幼児期にはよく見られる現象で、多くの場合は成長とともに自然に減っていきます。頻繁に続く場合や気になる場合は、園の先生に相談してみると安心です。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

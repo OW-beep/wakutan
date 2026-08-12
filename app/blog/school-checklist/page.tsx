@@ -89,12 +89,43 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ④ 心の準備
+        </h2>
+
+        <p className="leading-8 mb-4">
+          新しい環境への期待と不安は、大人が思う以上に子どもの中で入り混じっています。「小学校に行くのが楽しみ」という気持ちだけでなく、「うまくやれるかな」という不安も自然な感情です。
+        </p>
+
+        <p className="leading-8 mb-4">
+          「分からないことがあったら先生に聞いていいんだよ」と伝えておくだけでも、子どもの安心感につながります。完璧を求めるより、「困ったときに助けを求めていい」と知っていることの方が、入学後の心の支えになります。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           焦らず、できることから
         </h2>
 
         <p className="leading-8 mb-4">
           すべてを完璧に準備する必要はありません。今のお子さんの様子を見ながら、できることから少しずつ取り組んでいきましょう。
         </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. ひらがなが完璧に読めなくても大丈夫？</p>
+            <p className="leading-7 text-gray-700">A. 入学時点で完璧に読み書きできる必要はありません。学校でも一から丁寧に教えてもらえるので、興味を持って取り組める土台があれば十分です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 何ヶ月前から準備を始めればいい？</p>
+            <p className="leading-7 text-gray-700">A. 生活リズムの調整は1〜2ヶ月前から、学びへの土台づくりは半年〜1年前からゆっくり取り組むのがおすすめです。直前に詰め込むより、日常の中に少しずつ取り入れる方が負担が少なくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 人見知りが強い子でも大丈夫？</p>
+            <p className="leading-7 text-gray-700">A. 心配な気持ちは自然なことです。「分からないことは聞いていい」と伝えておくこと、そして家庭で「自分の気持ちを言葉にする」練習を積んでおくことが、少しずつ安心感につながります。</p>
+          </div>
+        </div>
 
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">

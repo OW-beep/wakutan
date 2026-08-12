@@ -204,6 +204,50 @@ export default function Page() {
 
         </section>
 
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 className="text-3xl font-bold mb-6 text-green-600">
+            💬 「困った」を言葉にする練習
+          </h2>
+
+          <p className="leading-8 mb-4">
+            入学準備というと、ひらがなや数字などの学習面を考えがちですが、実は「困ったときに自分から伝えられること」も同じくらい大切な準備です。
+          </p>
+
+          <p className="leading-8 mb-4">
+            家で何かできないことがあったときに、すぐ親が助けるのではなく、「どうしたの？」「何に困ってる？」「どうしてほしい？」と聞くようにしてみましょう。以前は「できない！」だけで終わっていたことでも、少しずつ「ここができない」「これが取れない」「もう一回やってほしい」と具体的に言えるようになっていきます。
+          </p>
+
+          <p className="leading-8">
+            先生に「分からない」と伝える、トイレに行きたいと伝える、友達とのトラブルを説明する。困ったときに黙ってしまわずに言葉にできることは、勉強ができることとは別の、入学後にとても大切になる力です。
+          </p>
+
+        </section>
+
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 className="text-3xl font-bold mb-6 text-green-600">
+            ✅ 今すでにやっていること・まだやっていないこと
+          </h2>
+
+          <p className="leading-8 mb-4">
+            今すでにやっていることとしては、次のようなものがあります。
+          </p>
+
+          <ul className="list-disc ml-6 space-y-2 leading-7 text-gray-700 mb-4">
+            <li>朝の着替えや準備をできる範囲で自分でする</li>
+            <li>自分の持ち物を少しずつ自分で管理する</li>
+            <li>分からないときは「分からない」と言う</li>
+            <li>困ったときに「どうしてほしいか」を伝える</li>
+            <li>絵本や会話を通して、人の話を最後まで聞く</li>
+          </ul>
+
+          <p className="leading-8">
+            一方で、まだやっていないのは、入学後を意識した先取り学習を大量にやることです。漢字や計算を先取りしてどんどん進めるより、今はひらがなや数字に親しみながら「分からないことがあっても考えてみる」「困ったら聞いてみる」という姿勢を大切にしています。毎日完璧に準備しようとするより、入学までに少しずつこの土台を作っていければ十分だと考えています。
+          </p>
+
+        </section>
+
         <section className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-3xl p-8 shadow-lg mb-8">
 
           <h2 className="text-3xl font-bold mb-6 text-green-700">
@@ -270,9 +314,17 @@ export default function Page() {
             Q. 一番大切な準備は？
           </h3>
 
-          <p className="leading-8">
+          <p className="leading-8 mb-6">
             学ぶことを楽しむ気持ちと、
             自分で考える習慣です。
+          </p>
+
+          <h3 className="text-xl font-bold mb-2">
+            Q. 「困った」をなかなか言葉にできません。どうすれば？
+          </h3>
+
+          <p className="leading-8">
+            すぐに親が代わりに答えを出すのではなく、「どうしたの？」「何に困ってる？」と一歩待って聞いてみましょう。最初はうまく言葉にできなくても、繰り返すうちに少しずつ具体的に言えるようになっていきます。焦らず、日常の小さな場面から練習していくのがおすすめです。
           </p>
 
         </section>

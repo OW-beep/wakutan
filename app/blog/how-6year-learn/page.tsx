@@ -170,6 +170,49 @@ export default function Page() {
 
         </section>
 
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 className="text-3xl font-bold mb-6 text-purple-600">
+            🌟 6歳になったら意識したいこと
+          </h2>
+
+          <p className="leading-8 mb-4">
+            わが家にはまだ6歳の子はいませんが、5歳の上の子を見ていて、6歳になったら意識したいと思っていることがあります。
+          </p>
+
+          <p className="leading-8 mb-4">
+            6歳になったら、今より少しずつ「自分でできること」を増やしていきたいと考えています。朝の準備や持ち物の確認など、親が全部やるのではなく、自分で確認する習慣をつけたいです。学習についても、長時間やらせるというより、学校生活に必要な読み書きや数の基礎を確認しつつ、「分からないことをそのままにしない」習慣を作ることを意識したいと思っています。
+          </p>
+
+          <p className="leading-8">
+            ただ、6歳になったからといって、遊びの時間を減らして勉強ばかりにするつもりはありません。外で遊んだり、絵本を読んだり、ブロックやパズルをしたりする時間も残したいです。むしろ小学校に入るからこそ、家庭では「学校で勉強する」こととは別に、自由に遊んだり、自分で興味を持ったことを調べたりする時間を大切にしたいと考えています。5歳の子を見ていると、6歳になったから急に別人のように成長するわけではないので、4歳・5歳のときに身につけてきた「自分で考える」「やってみる」という部分を、そのまま伸ばしていけたらと思っています。
+          </p>
+
+        </section>
+
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 className="text-3xl font-bold mb-6 text-purple-600">
+            ❓ よくある質問
+          </h2>
+
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">Q. 入学前に計算や漢字を先取りした方がいい？</p>
+              <p className="leading-7 text-gray-700">A. 先取りを急ぐ必要はありません。それよりも「分からないことをそのままにしない」「話を最後まで聞く」といった姿勢を育てておく方が、入学後の学習にスムーズにつながります。</p>
+            </div>
+            <div>
+              <p className="font-bold">Q. 6歳になっても集中が続きません。大丈夫？</p>
+              <p className="leading-7 text-gray-700">A. 個人差の範囲であることがほとんどです。10〜15分程度を目安に、無理のない長さから少しずつ伸ばしていけば十分です。</p>
+            </div>
+            <div>
+              <p className="font-bold">Q. 小学校入学後、家庭学習はどう変えればいい？</p>
+              <p className="leading-7 text-gray-700">A. 急に大きく変える必要はありません。入学前に積み重ねてきた「毎日少し取り組む」習慣を、そのまま宿題や学校の学習に置き換えていくイメージで十分です。</p>
+            </div>
+          </div>
+
+        </section>
+
         <section className="bg-gradient-to-r from-purple-100 to-violet-100 rounded-3xl p-8 shadow-lg mb-8">
 
           <h2 className="text-3xl font-bold mb-6 text-purple-700">

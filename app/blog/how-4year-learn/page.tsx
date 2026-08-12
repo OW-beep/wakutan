@@ -178,6 +178,52 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
         </section>
 
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+            🕐 4歳の1日の過ごし方（イメージ例）
+          </h2>
+
+          <p className="leading-8 mb-4">
+            4歳は5歳よりもさらに「遊び中心」の過ごし方になります。あくまで一例ですが、大まかな1日の流れを紹介します。
+          </p>
+
+          <ul className="space-y-3 leading-7 text-gray-700 mb-4">
+            <li><span className="font-bold text-orange-700">朝：</span>起きて着替えや朝食を済ませ、園へ。</li>
+            <li><span className="font-bold text-orange-700">帰宅後：</span>まず遊ぶことが多くなります。ブロック、パズル、絵本、お絵描きなど、その日の気分で遊びます。</li>
+            <li><span className="font-bold text-orange-700">ドリルの時間：</span>やるとしても5〜10分程度。「今日はひらがなをやろう」と決める日もあれば、本人が「迷路がやりたい」と言えば迷路だけにする日もあります。</li>
+            <li><span className="font-bold text-orange-700">お出かけの時間：</span>公園や買い物も大切な時間です。数字を数えたり、看板の文字を見たり、遊具の順番を待ったりすることも、振り返れば十分な学びになっています。</li>
+          </ul>
+
+          <p className="leading-8">
+            4歳の頃は、「毎日きちんと勉強する」ことより、「机に向かうことが嫌にならない」ことを優先するくらいでちょうどよいと感じています。
+          </p>
+
+        </section>
+
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+            ❓ よくある質問
+          </h2>
+
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">Q. 毎日ドリルをやらないと遅れてしまいませんか？</p>
+              <p className="leading-7 text-gray-700">A. 4歳の時期に毎日必ずやる必要はありません。公園や買い物など、日常の中にも十分な学びがあるので、ドリルができない日があっても心配しすぎなくて大丈夫です。</p>
+            </div>
+            <div>
+              <p className="font-bold">Q. 子どもが選んだ問題ばかりで、苦手なジャンルをやりません。</p>
+              <p className="leading-7 text-gray-700">A. 4歳のうちは、まず「取り組むこと自体を楽しい」と感じてもらう方が優先です。得意なジャンルから始めて自信をつけ、少しずつ他のジャンルにも誘ってみましょう。</p>
+            </div>
+            <div>
+              <p className="font-bold">Q. 集中が5分も続きません。短すぎませんか？</p>
+              <p className="leading-7 text-gray-700">A. 4歳では5分でも十分です。無理に伸ばそうとせず、「短くても毎日続く」方が、長い目で見て学習習慣の土台になります。</p>
+            </div>
+          </div>
+
+        </section>
+
         <section className="bg-gradient-to-r from-yellow-100 to-orange-100 rounded-3xl p-8 shadow-lg mb-8">
 
           <h2 className="text-3xl font-bold mb-6 text-orange-700">

@@ -104,6 +104,37 @@ export default function Page() {
           幼児期に図形に親しんでおくことは、こうした学習に対する苦手意識を減らすことにつながります。難しい用語を教える必要はなく、「触れて楽しむ」経験の積み重ねが大切です。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          年齢別の関わり方の目安
+        </h2>
+
+        <p className="leading-8 mb-4">
+          4歳ごろは、丸・三角・四角など基本の形の名前を、遊びの中で自然に耳にする機会を増やす時期です。名前を正確に言えるかどうかより、形に興味を持つこと自体を大切にしましょう。
+        </p>
+
+        <p className="leading-8 mb-4">
+          5歳ごろになると、「同じ形を集める」「違う形を組み合わせて新しい形を作る」といった、少し複雑な操作も楽しめるようになってきます。6歳ごろは、図形を回転させたり組み合わせたりして、頭の中でイメージする力も少しずつ育ってきます。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 図形の名前を覚えさせた方がいい？</p>
+            <p className="leading-7 text-gray-700">A. 名前を先に覚えさせる必要はありません。遊びの中で「これは丸だね」と自然に言葉にする程度で十分で、興味を持って触れることの方が大切です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 積み木やパズルが苦手な子には、どう働きかければいい？</p>
+            <p className="leading-7 text-gray-700">A. 最初から複雑なものに挑戦せず、簡単な型はめや大きめのブロックから始めるのがおすすめです。うまく組み合わせられた瞬間を一緒に喜ぶことで、少しずつ興味が広がっていきます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 図形遊びとドリルの図形問題、どちらを優先すべき？</p>
+            <p className="leading-7 text-gray-700">A. 順番としては、まず遊びの中で図形に親しんでから、ドリルで理解を確認する流れがおすすめです。遊びの経験が土台になっていると、ドリルの図形問題にも抵抗なく取り組みやすくなります。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

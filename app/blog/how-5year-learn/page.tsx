@@ -74,6 +74,10 @@ export default function Page() {
             考える経験を積み重ねることが重要です。
           </p>
 
+          <p className="leading-8 mt-4">
+            ただし、5歳といっても発達のペースには個人差があります。文字への興味が早い子もいれば、体を動かす遊びに夢中な子もいます。「うちの子はまだ〇〇ができない」と焦る必要はなく、今その子が興味を持っていることを大切にすることが、結果的に一番の近道になります。
+          </p>
+
         </section>
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
@@ -204,6 +208,55 @@ export default function Page() {
             </li>
 
           </ul>
+
+        </section>
+
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 className="text-3xl font-bold mb-6 text-indigo-600">
+            🕐 5歳の1日の過ごし方（イメージ例）
+          </h2>
+
+          <p className="leading-8 mb-4">
+            5歳は毎日きっちり同じスケジュールというわけではありません。特にきょうだいがいる家庭では、予定通りにいかないことも多いものです。あくまで一つのイメージとして、大まかな1日の流れを紹介します。
+          </p>
+
+          <ul className="space-y-3 leading-7 text-gray-700 mb-4">
+            <li><span className="font-bold text-indigo-700">7:00頃　起床：</span>着替えや朝食。できる範囲で、自分のことは自分でやってもらうようにします。</li>
+            <li><span className="font-bold text-indigo-700">8:00頃　朝の準備：</span>「早くして！」と言いたくなる時間ですが、なるべく自分で準備する時間を作ります。</li>
+            <li><span className="font-bold text-indigo-700">日中　園で過ごす：</span>友達と遊んだり、工作をしたり、歌ったり。家庭でドリルをやるより、こうした集団生活の中で学んでいることの方が多いとも言えます。</li>
+            <li><span className="font-bold text-indigo-700">帰宅後　自由時間：</span>帰ってすぐに「勉強！」にはせず、まず遊んだり、きょうだいと過ごしたりする時間にします。</li>
+            <li><span className="font-bold text-indigo-700">夕方〜夕食前後　ドリル5〜10分程度：</span>毎日必ずではなく、「今日のドリルやる？」と聞いて、本人の様子を見ながら。1問だけやって終わってもOKくらいの気持ちで臨みます。</li>
+            <li><span className="font-bold text-indigo-700">夕食後　遊び・絵本：</span>「学習時間」とは考えていませんが、実際には数字や言葉、図形などに触れる機会になっています。</li>
+            <li><span className="font-bold text-indigo-700">20:30〜21:00頃　就寝</span></li>
+          </ul>
+
+          <p className="leading-8">
+            特に大事にしたいのは、「勉強だけが学びではない」ということです。ドリルを10分やることより、ブロックで30分夢中になって「どうしたら崩れないかな」と考えていることの方が、その子にとって大きな学びになっている日もあります。遊ぶ、話す、絵本を読む、外に出る。そして、その中で5〜10分だけドリルをする。そのくらいのバランスが、多くの家庭にとって続けやすい形だと感じています。
+          </p>
+
+        </section>
+
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 className="text-3xl font-bold mb-6 text-indigo-600">
+            ❓ よくある質問
+          </h2>
+
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">Q. きょうだいがいると、上の子だけの時間を作るのが難しいです。</p>
+              <p className="leading-7 text-gray-700">A. 毎日きっちり時間を確保しようとしなくて大丈夫です。「今日は5分だけ」でも、その日にできた分を積み重ねる意識で十分です。下の子が近くにいる中で取り組む日があってもよいでしょう。</p>
+            </div>
+            <div>
+              <p className="font-bold">Q. 園から帰るとぐったりしていて、ドリルどころではありません。</p>
+              <p className="leading-7 text-gray-700">A. その日は無理にやらせなくて大丈夫です。園での集団生活自体が大きな学びの時間になっているので、ドリルができない日があっても心配しすぎる必要はありません。</p>
+            </div>
+            <div>
+              <p className="font-bold">Q. 「勉強やだ」と言われたときはどうすればいい？</p>
+              <p className="leading-7 text-gray-700">A. 正面から説得するのではなく、「今日はやりたくないんだね」と一度受け止めてみてください。量や内容を変えて様子を見るだけでも、翌日以降の取り組みやすさが変わることがあります。</p>
+            </div>
+          </div>
 
         </section>
 
