@@ -92,6 +92,37 @@ export default function Page() {
           正解率だけでなく、「うーん」と考え込む時間があるか、集中して取り組めているかといった反応を見ることが、ちょうどいい難易度を見極めるヒントになります。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「待ってよかった」が形になった瞬間
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「待ってよかった」と一番感じたのは、パズルでなかなか合うピースが見つからなかったときでした。「分からない、やって」と言われたので、以前ならすぐに一緒に探していたと思います。でもそのときは、「もう少し探してみる？」とだけ言って待ってみました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          しばらくすると、ピースをいろいろな向きに回しながら、「これじゃない？」と自分で見つけました。その後、別のパズルでもすぐに「やって」と言わず、まず自分でピースを回してみるようになったんです。もちろん全部を待てばいいわけではなく、明らかに難しすぎるときは助けます。ただ、「できない」と言った瞬間が、本当にできないとは限らない、というのはこの経験からかなり意識するようになりました。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. どれくらい待てばいいか分かりません。</p>
+            <p className="leading-7 text-gray-700">A. 明確な秒数の正解はありませんが、30秒〜1分ほど試行錯誤している様子があれば、まずは見守るのがおすすめです。完全に手が止まって困っているようなら、そこで軽くヒントを出しましょう。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 待っている間、子どもがイライラし始めたら？</p>
+            <p className="leading-7 text-gray-700">A. イライラが強くなってきたら、無理に待たせ続ける必要はありません。「ここまでは合ってるね」と一部だけ肯定するヒントを挟むと、気持ちが切り替わりやすくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. きょうだいで「待つ」対応を変える必要はある？</p>
+            <p className="leading-7 text-gray-700">A. 年齢や性格によって調整して大丈夫です。年齢が低い子には「できるかどうか」より「やってみること」自体を優先し、待つことにこだわりすぎないのもひとつの考え方です。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

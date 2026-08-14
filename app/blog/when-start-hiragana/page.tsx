@@ -81,6 +81,37 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          読めるようになるまでの過程
+        </h2>
+
+        <p className="leading-8 mb-4">
+          興味を持ち始めてから、すぐに全部読めるようになったわけではありません。最初は自分の名前に入っている文字など、知っている文字が少しずつ増えていく感じでした。最初は「あ」を見つけて「あ！」と言えるだけ。そのうち絵本を読んでいるときに「あ」を見つけるようになり、次に「これは何て読む？」と聞かれたときに、知っている文字なら答えられるようになっていきました。数ヶ月かけて少しずつ読める文字が増えていったという感覚です。
+        </p>
+
+        <p className="leading-8 mb-4">
+          特に変化を感じたのは、文字を一文字ずつ読むのではなく、言葉として読もうとするようになったときです。「り」「ん」「ご」と一文字ずつ確認していたのが、「りんご」とまとまりで読めるようになる。そこまで来ると、本人も「読めた！」という感覚があるようで、絵本や看板の文字を自分から読もうとすることが増えました。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 一文字ずつしか読めず、単語としてまとめて読めません。</p>
+            <p className="leading-7 text-gray-700">A. これはよくある通過点です。一文字ずつ確認する時期を経て、徐々にまとまりで読めるようになっていきます。焦らず今の段階を認めてあげましょう。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. どれくらいの期間で読めるようになりますか？</p>
+            <p className="leading-7 text-gray-700">A. 個人差が大きく一概には言えませんが、興味を持ち始めてから数ヶ月かけて少しずつ読める文字が増えていくのが一般的な過程です。急激に読めるようになるというより、じわじわ進むイメージを持っておくと安心です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 読めるようになった後、書く練習はいつから始めればいい？</p>
+            <p className="leading-7 text-gray-700">A. 読むことにある程度慣れてから書く練習に進むのがスムーズです。読めない文字を書かせようとすると負担が大きくなるので、順番を急がないようにしましょう。</p>
+          </div>
+        </div>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           読めなくても焦らない理由
         </h2>
 

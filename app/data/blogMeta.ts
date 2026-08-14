@@ -7,6 +7,7 @@ export type BlogMetaEntry = {
 };
 
 export const blogMeta: BlogMetaEntry[] = [
+  { slug: "question-bank-by-age", title: "4歳→6歳で問題はどう変わる？わくたん12,649問を分析してみた", category: "データで見るわくたん" },
   { slug: "4year-drill-refusal", title: "4歳児がドリルを嫌がるときの対処法", category: "年齢別ガイド" },
   { slug: "4year-hiragana", title: "4歳ではじめてのひらがな｜どこから始める？", category: "ひらがな・文字" },
   { slug: "4year-number", title: "4歳で数字を覚えるコツ", category: "かず・さんすう" },

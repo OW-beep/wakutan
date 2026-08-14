@@ -62,6 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy-policy",
     "/terms",
 
+    "/blog/question-bank-by-age",
     "/blog/how-4year-learn",
     "/blog/how-5year-learn",
     "/blog/how-6year-learn",

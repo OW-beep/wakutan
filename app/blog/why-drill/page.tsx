@@ -223,6 +223,14 @@ export default function Page() {
           そこで、同じ「たし算」でも問われ方や題材を変えたり、同じ「仲間分け」でも登場する絵柄を毎日入れ替えたりと、見せ方に変化をつける工夫を重ねています。「今日はどんな問題が出るかな」という新鮮さ自体が、続けるモチベーションになると感じているからです。
         </p>
 
+        <p className="leading-8 mb-4">
+          実際にどれくらいの問題を用意しているのか、学年ごとにどう変わっているのかは、
+          <Link href="/blog/question-bank-by-age" className="text-orange-700 font-bold hover:underline">
+            わくたんの問題データを分析した記事
+          </Link>
+          にまとめています。
+        </p>
+
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           問題を作る中で一番苦労していること
         </h2>

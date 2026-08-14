@@ -93,6 +93,37 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「言える」から「分かる」へ変わった瞬間
+        </h2>
+
+        <p className="leading-8 mb-4">
+          数字への理解が進んだと感じたのは、「数字を言える」から「数字と実際の数が結びついた」瞬間でした。最初は1、2、3、4……と順番に言えるようになっても、それが本当に「4個」という意味なのかは別のことです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          あるとき、お菓子を4個並べて「何個ある？」と聞いたら、1個ずつ指をさしながら「1、2、3、4」と数えて、「4個！」と答えました。その後、「じゃあ1個食べたら？」と聞くと、「3個」と答えたんです。そこで、「数字を暗記しているだけではなく、数量として理解し始めたんだな」と感じました。それ以来、ドリルだけでなく、お菓子やブロックなど実物を使って「何個ある？」と聞くようにしています。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 数字を順番に言えるのに、数を数えられません。心配すべき？</p>
+            <p className="leading-7 text-gray-700">A. よくあることです。「唱える」段階から「数える」段階への移行には時間がかかります。指差ししながら実物を数える練習を重ねることで、少しずつ結びついていきます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 「1個減ったら？」のような問題は、いつ頃から理解できますか？</p>
+            <p className="leading-7 text-gray-700">A. 個人差が大きいですが、実物を目の前で数えられるようになった後、少しずつ理解が進むことが多いです。焦らず実物を使った練習を続けてみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. ドリルと実物、どちらを優先すべき？</p>
+            <p className="leading-7 text-gray-700">A. 数量の感覚がまだ不安定なうちは、実物を使った経験を優先するのがおすすめです。感覚が育ってきてから、ドリルで理解を確認する流れが無理なく進めやすいです。</p>
+          </div>
+        </div>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢はあくまで目安
         </h2>
 

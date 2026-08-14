@@ -127,6 +127,37 @@ export default function Page() {
           小さな紙くずの誤飲にも注意し、練習後は一緒に片付ける習慣をつけると安心です。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          何から始めて、どう上達したか
+        </h2>
+
+        <p className="leading-8 mb-4">
+          最初は、いきなり線に沿って切るのではなく、細長い紙をチョキチョキ切るところから始めました。直線を1本切るのも最初は意外と難しくて、紙を動かす手と、はさみを動かす手がうまく連動しませんでした。慣れてきたら、太い直線、次に波線や簡単な曲線というように、少しずつ変えていきました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          上達を感じたのは、以前は線から大きく外れていても気にせず切っていたのが、あるときから「ここから曲がるんだよね」と紙を回しながら、自分で調整するようになったことです。はさみを使う技術そのものだけでなく、「どう動かせばうまく切れるか」を自分で考えているのが分かりました。今では工作をするときに、「これ切りたい」と自分からはさみを持ってくることもあります。最初からきれいに切らせようとするより、まずは「切ることって楽しい」と思ってもらう方がよかったと感じています。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 何歳からはさみの練習を始めていい？</p>
+            <p className="leading-7 text-gray-700">A. 2歳半〜3歳頃から、大人が見守りながら細長い紙を切る練習を始める家庭が多いです。子ども用の安全はさみを使い、必ず近くで見守りましょう。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 線からずれてしまいます。直した方がいい？</p>
+            <p className="leading-7 text-gray-700">A. 最初のうちは線からずれても気にしなくて大丈夫です。「切ることが楽しい」という気持ちが育ってから、少しずつ正確さを求めていく方がスムーズです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 曲線がうまく切れません。コツはありますか？</p>
+            <p className="leading-7 text-gray-700">A. はさみを動かすより、紙の方を回しながら切ると曲線が切りやすくなります。「紙を回してみようか」と声をかけてあげると、コツをつかみやすくなります。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

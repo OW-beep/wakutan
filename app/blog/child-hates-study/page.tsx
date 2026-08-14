@@ -108,6 +108,37 @@ export default function Page() {
           <p className="text-green-700 mt-1">OK例：「おやつの前に1問だけ挑戦してみる？」</p>
         </div>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「1問だけ」以外に効果があった切り替え方
+        </h2>
+
+        <p className="leading-8 mb-4">
+          もう一つ効果的だったのが、やる順番を子どもに選んでもらう方法です。例えば「ひらがなと迷路、どっちからやる？」と聞きます。「やる・やらない」の二択だと「やらない」になりやすいのですが、「どっちから？」にすると、本人が選べるので入りやすいようです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          もう一つは、親が先にやってみることです。「これ難しいな。お父さんもやってみようかな」と言うと、「私もやる」と参加してくることがあります。子どもだけに「勉強しなさい」と言うより、親も一緒にやっている雰囲気にすると、遊びに近い感覚になるんです。それでも嫌がる日は、無理にやらせません。「今日はやめよう。また明日やろう」で終わって、翌日に普通に再開できれば、それで十分だと思っています。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 「どっちからやる？」と聞いても、両方嫌がります。</p>
+            <p className="leading-7 text-gray-700">A. その場合は無理に選ばせず、一度離れて別の遊びをしてから改めて誘ってみましょう。タイミングを変えるだけで反応が変わることもあります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 親が一緒にやると言っても、子どもが乗ってきません。</p>
+            <p className="leading-7 text-gray-700">A. 効果には個人差があります。無理に誘わず、他の切り替え方（順番を選ばせる、量を減らすなど）と組み合わせて、その子に合う方法を探ってみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 毎日のように嫌がられると、こちらも疲れてしまいます。</p>
+            <p className="leading-7 text-gray-700">A. 保護者の負担が大きい時期は、無理に毎日続けようとしなくて大丈夫です。数日休んでも、また「今日はどっちからやる？」から再開すれば十分です。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

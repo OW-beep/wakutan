@@ -114,6 +114,37 @@ export default function Page() {
           もあわせてご覧いただくと、さらに具体的なアイデアが見つかります。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          量を増やして失敗した話
+        </h2>
+
+        <p className="leading-8 mb-4">
+          一度、10問くらいならできているから大丈夫だろうと思って、「今日は20問やってみよう」と量を増やしたことがあります。最初の数日は普通にできたのですが、だんだん「今日は多いからやりたくない」と言うようになりました。さらに、20問終わらせることが目的になってしまって、後半になると明らかに集中力が落ちていました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          そこで、また10問程度に戻しました。すると、「これならできる」と感じるのか、取り組みやすくなりました。今では、10問全部やることすら必須にはしていません。5問で終わってもいいし、1問だけでもいい。0歳と2歳の子がいる家庭だと、毎日同じ条件で学習できるわけではありません。だからこそ、わくたんも「30分しっかり勉強するためのサイト」ではなく、忙しい日でも5分だけ取り組める場所にしたいと考えています。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 問題数を増やしたくなったら、どう判断すればいい？</p>
+            <p className="leading-7 text-gray-700">A. 「もっとやりたい」と本人が言ってきたときだけ増やすのが安全です。保護者側から「できそうだから」と先回りして増やすと、負担になっていることに気づきにくくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 5分すら取れない日はどうすれば？</p>
+            <p className="leading-7 text-gray-700">A. その日は無理にやらなくて大丈夫です。「今日はできなかった」と気にするより、翌日また「今日は1問だけ」から再開する方が、長い目で見ると続けやすくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. きょうだいがいると、上の子だけの時間が取りにくいです。</p>
+            <p className="leading-7 text-gray-700">A. 完璧な時間を確保しようとしなくて大丈夫です。下の子が近くにいる状態のまま、短時間だけ取り組む形でも十分に習慣は続けられます。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

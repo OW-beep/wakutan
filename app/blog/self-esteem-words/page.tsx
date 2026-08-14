@@ -114,6 +114,37 @@ export default function Page() {
           <p className="text-green-700 mt-1">OK例：「ここまで自分で考えられたね。ここだけ一緒に見てみようか」</p>
         </div>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家でよく使う決まり文句
+        </h2>
+
+        <p className="leading-8 mb-4">
+          一番よく使うのは「どうやって考えたの？」です。正解したときも、間違えたときも使えます。正解しても、たまたま当たっただけなのか、ちゃんと考えて答えたのか分からないことがあります。「どうやって考えたの？」と聞くと、「こっちが3個で、こっちは2個だから」など、自分の考えを説明してくれることがあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          もう一つは「前よりできるようになったね」です。「すごい」「頭いいね」だけだと、結果を褒めることになります。でも「前はここで止まってたけど、今日は自分でできたね」と伝えると、本人も成長を実感しやすいようです。「上手にできたね」より、「自分で考えてたね」という言葉を意識するようになりました。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 「すごいね」を言いすぎるのは良くない？</p>
+            <p className="leading-7 text-gray-700">A. 絶対にダメというわけではありませんが、頻繁に使いすぎると軽く聞こえてしまうことがあります。「どうやって考えたの？」のように過程を尋ねる言葉と組み合わせると、より効果的です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 褒めても反応が薄い子には、どうすればいい？</p>
+            <p className="leading-7 text-gray-700">A. 言葉での反応が薄くても、内心では嬉しく感じていることも多いです。人前で大げさに褒めるより、2人きりのときに落ち着いて伝える方が伝わりやすいタイプの子もいます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. きょうだいの前で1人だけ褒めると、他の子がすねてしまいます。</p>
+            <p className="leading-7 text-gray-700">A. その場合は、それぞれの得意なことを別のタイミングで褒めるのがおすすめです。全員を同じ場面で同時に褒めようとせず、日々のさまざまな場面に分散させると角が立ちにくくなります。</p>
+          </div>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">

@@ -136,6 +136,37 @@ export default function Page() {
           </p>
         </div>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          お手伝いも立派な知育遊び
+        </h2>
+
+        <p className="leading-8 mb-4">
+          意外だったのは、お手伝いがかなり学びになっていたことです。例えば料理をしているときに「卵を3個持ってきて」と頼むと、数を数えながら持ってきます。洗濯物を畳むときも、「これは誰の？」と分けたり、靴下を左右で組み合わせたりします。これだけでも、数・分類・比較などを自然に使っています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          あとは、お絵描きや工作もそうです。「ここに丸を描いて」「この大きさにしたい」と考えながら作るので、図形や大きさ、位置関係をかなり意識しています。親としては「遊んでいるだけ」と思っていたことが、後から考えると、実はかなり頭を使っていたということが多いです。だから、最近は「知育のための特別な遊び」を増やすより、普段の生活や遊びの中で子どもが考える場面を大切にするようになりました。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. お手伝いを嫌がるときはどうすれば？</p>
+            <p className="leading-7 text-gray-700">A. 無理にやらせる必要はありません。最初は「一緒にやる」形にして、少しずつ子どもの担当を増やしていくと、抵抗なく取り組めることが多いです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. お絵描きが図形の理解につながっている実感が持てません。</p>
+            <p className="leading-7 text-gray-700">A. 「ここに丸を描いて」「もっと大きく描いて」といった声かけをしてみると、子どもが形や大きさを意識しながら描いている様子に気づきやすくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 遊びと学習、時間配分の目安はありますか？</p>
+            <p className="leading-7 text-gray-700">A. 明確な配分の正解はありません。幼児期は遊びの中にすでに多くの学びが含まれているので、ドリルの時間を無理に増やすより、日常の遊びやお手伝いを大切にする方が結果的にバランスが取れることが多いです。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

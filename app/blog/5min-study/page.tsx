@@ -206,6 +206,37 @@ export default function Page() {
           子どもたちが考える楽しさを体験できるようにしています。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          続けてきて変わったこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          5分程度の短い学習を続けてきて、一番変わったのは「勉強を始めるまでの抵抗が小さくなった」ことです。以前は「ドリルやる？」と聞くと、「あとで」「今は遊びたい」と言われることが多かったです。でも、毎回長時間やらなくてもいいと分かってきたのか、最近は「今日はこれだけ」と言うと、比較的すんなり机に向かうようになりました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、最初は親が横について「ここやって」と言わないと進まなかったのが、今はプリントを渡すと、自分で問題を読んで考えようとする場面も増えました。もちろん毎日ではありません。ただ、「勉強＝長く座らされるもの」というイメージが薄くなったのは大きいと思います。5分の学習で知識が一気に増えるわけではありませんが、「自分から始める」「最後までやってみる」という習慣の部分では、少しずつ変化を感じています。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 5分学習で本当に力はつきますか？</p>
+            <p className="leading-7 text-gray-700">A. 短時間で知識が一気に増えるわけではありませんが、「自分から始める」「最後までやってみる」という習慣が育ちます。この習慣は、学年が上がってからの学習にも土台として活きてきます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 効果を感じるまでどれくらいかかりますか？</p>
+            <p className="leading-7 text-gray-700">A. 個人差がありますが、数週間〜数ヶ月続けるうちに、「勉強を始めるまでの抵抗」が少しずつ小さくなっていくのを感じる家庭が多いようです。焦らず続けてみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 親が横について見ている方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 最初は横についても構いませんが、慣れてきたら少しずつ「プリントを渡して自分で読んでもらう」場面を増やすと、自分で考える力が育ちやすくなります。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

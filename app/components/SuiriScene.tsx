@@ -8,7 +8,17 @@ type SceneKey =
   | "cupFalling"
   | "hotWater"
   | "lightsOff"
-  | "flowerNoWater";
+  | "flowerNoWater"
+  | "sunnyDay"
+  | "spilledMilk"
+  | "openWindow"
+  | "muddyShoes"
+  | "balloonFlying"
+  | "sleepyFace"
+  | "emptyPlate"
+  | "wetUmbrella"
+  | "wideEyes"
+  | "messyRoom";
 
 const KNOWN_SCENES: SceneKey[] = [
   "rain",
@@ -21,6 +31,16 @@ const KNOWN_SCENES: SceneKey[] = [
   "hotWater",
   "lightsOff",
   "flowerNoWater",
+  "sunnyDay",
+  "spilledMilk",
+  "openWindow",
+  "muddyShoes",
+  "balloonFlying",
+  "sleepyFace",
+  "emptyPlate",
+  "wetUmbrella",
+  "wideEyes",
+  "messyRoom",
 ];
 
 function isSceneKey(value: string): value is SceneKey {
@@ -136,6 +156,89 @@ export default function SuiriScene({ scene, size = 140 }: Props) {
           <path d="M80 130 q-4 -30 10 -46" stroke="#65a30d" strokeWidth="4" fill="none" strokeLinecap="round" />
           <ellipse cx="92" cy="86" rx="16" ry="10" fill="#fda4af" transform="rotate(30 92 86)" />
           <circle cx="92" cy="86" r="6" fill="#fbbf24" />
+        </>
+      )}
+
+      {scene === "sunnyDay" && (
+        <>
+          <circle cx="80" cy="60" r="26" fill="#fbbf24" />
+          <path d="M80 20 v12 M80 88 v12 M40 60 h12 M108 60 h12 M52 32 l8 8 M100 80 l8 8 M108 32 l-8 8 M60 80 l-8 8" stroke="#f59e0b" strokeWidth="4" strokeLinecap="round" />
+        </>
+      )}
+
+      {scene === "spilledMilk" && (
+        <>
+          <ellipse cx="80" cy="118" rx="46" ry="10" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="2" />
+          <path d="M60 118 q-4 -30 8 -46" stroke="#f8fafc" strokeWidth="10" strokeLinecap="round" opacity="0.9" />
+          <rect x="96" y="60" width="18" height="26" rx="3" fill="#e2e8f0" stroke="#94a3b8" strokeWidth="2" />
+        </>
+      )}
+
+      {scene === "openWindow" && (
+        <>
+          <rect x="35" y="30" width="90" height="90" rx="6" fill="#bae6fd" stroke="#0284c7" strokeWidth="3" />
+          <line x1="80" y1="30" x2="80" y2="120" stroke="#0284c7" strokeWidth="3" />
+          <path d="M20 55 q10 -6 18 0 M20 75 q10 -6 18 0" stroke="#94a3b8" strokeWidth="3" fill="none" strokeLinecap="round" />
+        </>
+      )}
+
+      {scene === "muddyShoes" && (
+        <>
+          <ellipse cx="55" cy="115" rx="22" ry="9" fill="#78350f" opacity="0.8" />
+          <ellipse cx="100" cy="118" rx="20" ry="8" fill="#78350f" opacity="0.6" />
+          <path d="M40 100 q15 -10 30 0 q0 10 -5 15 h-22 q-5 -6 -3 -15z" fill="#a16207" />
+        </>
+      )}
+
+      {scene === "balloonFlying" && (
+        <>
+          <circle cx="85" cy="55" r="22" fill="#f472b6" />
+          <path d="M85 77 v30" stroke="#9d174d" strokeWidth="2" />
+          <path d="M40 120 q40 -10 45 -40" stroke="#94a3b8" strokeWidth="3" fill="none" strokeLinecap="round" />
+        </>
+      )}
+
+      {scene === "sleepyFace" && (
+        <>
+          <circle cx="80" cy="80" r="30" fill="#fde68a" />
+          <path d="M65 76 q6 -6 12 0 M83 76 q6 -6 12 0" stroke="#78350f" strokeWidth="3" fill="none" strokeLinecap="round" />
+          <path d="M68 96 q12 6 24 0" stroke="#78350f" strokeWidth="3" fill="none" strokeLinecap="round" />
+          <text x="112" y="46" fontSize="20" fill="#94a3b8">Z</text>
+        </>
+      )}
+
+      {scene === "emptyPlate" && (
+        <>
+          <ellipse cx="80" cy="90" rx="42" ry="18" fill="#f1f5f9" stroke="#94a3b8" strokeWidth="3" />
+          <ellipse cx="80" cy="90" rx="24" ry="10" fill="#e2e8f0" />
+        </>
+      )}
+
+      {scene === "wetUmbrella" && (
+        <>
+          <path d="M40 70 a40 34 0 0 1 80 0 z" fill="#60a5fa" />
+          <path d="M80 70 v46" stroke="#334155" strokeWidth="3" />
+          <path d="M60 122 q4 8 12 0" stroke="#334155" strokeWidth="3" fill="none" strokeLinecap="round" />
+          <path d="M35 120 h90" stroke="#93c5fd" strokeWidth="4" strokeLinecap="round" opacity="0.6" />
+        </>
+      )}
+
+      {scene === "wideEyes" && (
+        <>
+          <circle cx="80" cy="78" r="30" fill="#fde68a" />
+          <circle cx="68" cy="72" r="7" fill="#ffffff" stroke="#78350f" strokeWidth="2" />
+          <circle cx="92" cy="72" r="7" fill="#ffffff" stroke="#78350f" strokeWidth="2" />
+          <circle cx="68" cy="72" r="3" fill="#1f2937" />
+          <circle cx="92" cy="72" r="3" fill="#1f2937" />
+          <ellipse cx="80" cy="95" rx="6" ry="4" fill="#78350f" />
+        </>
+      )}
+
+      {scene === "messyRoom" && (
+        <>
+          <rect x="30" y="95" width="26" height="16" rx="4" fill="#f97316" transform="rotate(-10 43 103)" />
+          <circle cx="95" cy="100" r="10" fill="#60a5fa" />
+          <rect x="100" y="105" width="30" height="10" rx="4" fill="#a3e635" transform="rotate(8 115 110)" />
         </>
       )}
     </svg>

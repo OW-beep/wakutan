@@ -88,6 +88,37 @@ export default function Page() {
           「最後まで頑張ったね」「よく考えたね」という具体的な言葉がけも、立派なごほうびです。物より言葉の方が、内側からのやる気を育てやすいとされています。
         </p>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「1週間続いたらルール」、実際にやってみると
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「1週間続いたら好きな遊びをする」というルールは、実際にやってみると最初はかなり効果がありました。「あと3日！」など、本人も楽しみにしていました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ただ、何週間か続けていると、途中から「今日やったらあと何日？」と、ごほうびの方を気にするようになりました。そこで、これはちょっと違うなと思い、毎週必ずごほうびという形はやめました。今は、例えば「1週間続いたから特別に好きなところへ行こう」というように、毎日の学習と直接交換するものではなく、頑張ったことを一緒に喜ぶイベントくらいの位置づけにしています。ごほうび自体が悪いというより、毎回「勉強＝何かもらえる」とならないようにすることが大事だと感じました。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. ごほうびがないとやらなくなってきました。どうすれば？</p>
+            <p className="leading-7 text-gray-700">A. 急にごほうびをやめるより、少しずつ物のごほうびから言葉のごほうびに置き換えていくのがおすすめです。「できたね」の一言を、物のごほうびと同じくらいの熱量で伝えることを意識してみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. きょうだいで反応が違います。同じルールにすべき？</p>
+            <p className="leading-7 text-gray-700">A. 同じにする必要はありません。ごほうびの理解度は年齢によっても差が大きいので、下の子には「一緒に喜ぶ」関わりを中心にするなど、それぞれに合わせて調整して大丈夫です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 一度始めたごほうび制度、途中でやめてもいい？</p>
+            <p className="leading-7 text-gray-700">A. 問題ありません。「ごほうびを気にしすぎているな」と感じたタイミングで見直すのは自然なことです。やめるときは、代わりに言葉のごほうびを増やすと切り替えがスムーズです。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫

@@ -123,6 +123,37 @@ export default function Page() {
           </p>
         </div>
 
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          図書館・博物館・エレベーターも学びの場に
+        </h2>
+
+        <p className="leading-8 mb-4">
+          意外と学びになっていたのは、図書館や博物館などの施設に行ったときです。図書館では、単純に本を読むだけでなく、「この本はどこにあるんだろう」と探したり、背表紙の文字を見たりします。博物館などで展示を見ていると、「これは何？」「どうしてこうなってるの？」と質問が出てきます。
+        </p>
+
+        <p className="leading-8 mb-4">
+          他には、ホテルや公共施設のエレベーターも意外と面白いです。階数を確認したり、「今何階？」と聞いたり、案内表示のマークを見つけたりします。最近は、外出先で子どもが何かに興味を持ったら、すぐ答えを教えるのではなく、少し「どう思う？」と聞くようにしています。知らないものを見つけたときに「これは何だと思う？」と聞く。正解を当てることより、「見たものから考えてみる」こと自体を楽しんでもらうイメージです。わくたんを作っていても感じますが、学びというと机に向かうことを考えがちです。でも実際には、子どもが「なんで？」「どうして？」と思った瞬間が、一番自然な学びになっているのかもしれません。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 博物館などで子どもが飽きてしまいます。無理に見せるべき？</p>
+            <p className="leading-7 text-gray-700">A. 無理に全部を見せる必要はありません。興味を持ったコーナーだけじっくり見て、あとは切り上げるくらいの気持ちで十分です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 「どう思う？」と聞いても、答えが返ってきません。</p>
+            <p className="leading-7 text-gray-700">A. 最初はうまく答えられなくて普通です。「こうかな、ああかな」と一緒に考える姿を見せることで、少しずつ自分の考えを言葉にできるようになっていきます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. お出かけ先での学びを、家庭学習に活かす方法はありますか？</p>
+            <p className="leading-7 text-gray-700">A. 特別なことをする必要はありません。出先で気づいたことを帰宅後に「今日見たあれ、面白かったね」と振り返るだけでも、記憶や興味の定着につながります。</p>
+          </div>
+        </div>
+
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫
