@@ -6,6 +6,9 @@ export const metadata = {
   title: "幼児の朝の準備をスムーズにする工夫｜わくたん",
   description:
     "幼児期の朝の身支度をスムーズにする工夫を紹介。保育園・幼稚園の準備で慌ただしくなりがちな朝を、少しでも穏やかに過ごすためのヒントをまとめました。",
+  alternates: {
+    canonical: "/blog/morning-routine",
+  },
 };
 
 export default function Page() {
@@ -108,7 +111,7 @@ export default function Page() {
 
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
           <p className="font-bold mb-2">
-            ❓ よくある質問
+            ❓ こんな質問もよくいただきます
           </p>
           <p>
             <span className="font-bold">Q. 毎日リストを見てくれません</span><br />

@@ -6,6 +6,9 @@ export const metadata = {
   title: "4歳なのに集中できない…1日5分から始める集中力の育て方｜わくたん",
   description:
     "4歳の子がすぐに飽きてしまう、集中が続かないと悩む保護者向けに、1日5分から始められる集中力の育て方を紹介します。",
+  alternates: {
+    canonical: "/blog/concentration-4year",
+  },
 };
 
 export default function Page() {

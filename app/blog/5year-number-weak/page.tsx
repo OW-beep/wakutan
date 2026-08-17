@@ -6,6 +6,9 @@ export const metadata = {
   title: "5歳で数が苦手なとき、家庭でできること｜わくたん",
   description:
     "5歳の子どもが数を苦手にしているときの対処法を解説。数の意味の理解を育てる家庭での関わり方を紹介します。",
+  alternates: {
+    canonical: "/blog/5year-number-weak",
+  },
 };
 
 export default function Page() {
@@ -106,7 +109,7 @@ export default function Page() {
 
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
           <p className="font-bold mb-2">
-            ❓ よくある質問
+            ❓ Q&Aでチェック
           </p>
           <p>
             <span className="font-bold">Q. どのくらいで効果が出ますか？</span><br />

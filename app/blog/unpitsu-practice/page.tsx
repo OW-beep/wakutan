@@ -6,6 +6,9 @@ export const metadata = {
   title: "運筆練習が文字上達の近道になる理由｜わくたん",
   description:
     "文字を書く前段階として重要な運筆練習について解説。線を引く練習がなぜ文字の上達につながるのか、家庭でできる練習法を紹介します。",
+  alternates: {
+    canonical: "/blog/unpitsu-practice",
+  },
 };
 
 export default function Page() {

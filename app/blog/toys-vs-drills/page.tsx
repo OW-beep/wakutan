@@ -6,6 +6,9 @@ export const metadata = {
   title: "知育玩具とドリルどっち？｜わくたん",
   description:
     "知育玩具とドリル、幼児期にはどちらが良いか悩む保護者向けに、それぞれのメリット・デメリットと使い分け方を解説します。",
+  alternates: {
+    canonical: "/blog/toys-vs-drills",
+  },
 };
 
 export default function Page() {
@@ -140,7 +143,7 @@ export default function Page() {
         </div>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          こんな質問もよくいただきます
         </h2>
 
         <div className="space-y-4 mb-6">

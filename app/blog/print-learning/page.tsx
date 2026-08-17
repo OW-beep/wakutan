@@ -6,6 +6,9 @@ export const metadata = {
   title: "プリント学習のメリット｜わくたん",
   description:
     "幼児向けプリント学習のメリットを解説。集中力・思考力・学習習慣を育てる家庭学習のコツも紹介します。",
+  alternates: {
+    canonical: "/blog/print-learning",
+  },
 };
 
 export default function Page() {

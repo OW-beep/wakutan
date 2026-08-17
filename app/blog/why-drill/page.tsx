@@ -6,6 +6,9 @@ export const metadata = {
   title: "なぜドリル学習が効果的？｜わくたん",
   description:
     "幼児向けドリル学習の効果を解説。考える力・集中力・学習習慣を育てる理由をわかりやすく紹介します。",
+  alternates: {
+    canonical: "/blog/why-drill",
+  },
 };
 
 export default function Page() {
@@ -293,7 +296,7 @@ export default function Page() {
         </div>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          保護者からよく届く質問
         </h2>
 
         <div className="space-y-4 mb-6">

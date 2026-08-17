@@ -6,6 +6,9 @@ export const metadata = {
   title: "自己肯定感を育てる声かけ｜わくたん",
   description:
     "幼児期の自己肯定感を育てる声かけの工夫を紹介。結果だけでなく過程に注目した伝え方のポイントを解説します。",
+  alternates: {
+    canonical: "/blog/self-esteem-words",
+  },
 };
 
 export default function Page() {
@@ -72,16 +75,6 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
-          <p className="font-bold mb-2">
-            ❓ よくある質問
-          </p>
-          <p>
-            <span className="font-bold">Q. 人見知りの子には、どう声をかければいい？</span><br />
-            A. 人前で急に褒められると、かえって照れて萎縮してしまう子もいます。そのようなタイプの子には、みんなの前ではなく、後で2人きりのときに「さっきのあれ、よかったね」と伝える方が素直に届くことがあります。
-          </p>
-        </div>
-
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           失敗したときの声かけも大切
         </h2>
@@ -127,10 +120,14 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          よくある疑問
         </h2>
 
         <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 人見知りの子には、どう声をかければいい？</p>
+            <p className="leading-7 text-gray-700">A. 人前で急に褒められると、かえって照れて萎縮してしまう子もいます。そのようなタイプの子には、みんなの前ではなく、後で2人きりのときに「さっきのあれ、よかったね」と伝える方が素直に届くことがあります。</p>
+          </div>
           <div>
             <p className="font-bold">Q. 「すごいね」を言いすぎるのは良くない？</p>
             <p className="leading-7 text-gray-700">A. 絶対にダメというわけではありませんが、頻繁に使いすぎると軽く聞こえてしまうことがあります。「どうやって考えたの？」のように過程を尋ねる言葉と組み合わせると、より効果的です。</p>

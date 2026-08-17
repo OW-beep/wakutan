@@ -6,6 +6,9 @@ export const metadata = {
   title: "家庭学習を続けるコツ｜わくたん",
   description:
     "幼児の家庭学習が続かないと悩む保護者向け。無理なく習慣化する方法や、勉強嫌いを防ぐコツを紹介します。",
+  alternates: {
+    canonical: "/blog/study-habit",
+  },
 };
 
 export default function Page() {
@@ -286,7 +289,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          こんな質問もよくいただきます
         </h2>
 
         <div className="space-y-4 mb-6">

@@ -6,6 +6,9 @@ export const metadata = {
   title: "小学校入学前に身につけたい力｜わくたん",
   description:
     "小学校入学前の勉強・準備で身につけたい力を解説。文字や計算だけではない、本当に大切な力とは？",
+  alternates: {
+    canonical: "/blog/school-preparation",
+  },
 };
 
 export default function Page() {
@@ -287,7 +290,7 @@ export default function Page() {
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
           <h2 className="text-3xl font-bold mb-6 text-green-600">
-            ❓ よくある質問
+            ❓ よく聞かれること
           </h2>
 
           <h3 className="text-xl font-bold mb-2">

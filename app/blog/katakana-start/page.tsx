@@ -6,6 +6,9 @@ export const metadata = {
   title: "カタカナはいつから教える？｜わくたん",
   description:
     "カタカナを教え始めるタイミングと、ひらがなとの学習の違いについて解説します。無理なく取り入れるためのステップも紹介します。",
+  alternates: {
+    canonical: "/blog/katakana-start",
+  },
 };
 
 export default function Page() {

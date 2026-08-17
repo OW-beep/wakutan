@@ -6,6 +6,9 @@ export const metadata = {
   title: "お小遣い、いつから始める？｜わくたん",
   description:
     "子どものお小遣いを始めるタイミングについて解説。幼児期にできる準備段階と、始める際のポイントを紹介します。",
+  alternates: {
+    canonical: "/blog/allowance-timing",
+  },
 };
 
 export default function Page() {
@@ -100,7 +103,7 @@ export default function Page() {
 
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
           <p className="font-bold mb-2">
-            ❓ よくある質問
+            ❓ よく聞かれること
           </p>
           <p className="mb-2">
             <span className="font-bold">Q. 年長さんから始めても早すぎる？</span><br />

@@ -6,6 +6,9 @@ export const metadata = {
   title: "4歳児がドリルを嫌がるときの対処法｜わくたん",
   description:
     "4歳児がドリルを嫌がるときの理由と対処法を解説。この年齢ならではの発達的な背景と、無理なく取り組める工夫を紹介します。",
+  alternates: {
+    canonical: "/blog/4year-drill-refusal",
+  },
 };
 
 export default function Page() {

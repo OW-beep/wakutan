@@ -6,6 +6,9 @@ export const metadata = {
   title: "小学校入学準備、いつ何をすればいい？月ごとの目安｜わくたん",
   description:
     "小学校入学準備を月ごとに整理して解説。いつ・何をすればいいか迷う保護者向けに、無理のないタイムラインを紹介します。",
+  alternates: {
+    canonical: "/blog/6year-prep-timeline",
+  },
 };
 
 export default function Page() {
@@ -121,7 +124,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          よく聞かれること
         </h2>
 
         <div className="space-y-4 mb-6">

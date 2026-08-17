@@ -6,6 +6,9 @@ export const metadata = {
   title: "タブレット学習と紙のドリル、どう使い分ける？｜わくたん",
   description:
     "幼児向けのタブレット学習アプリと紙のドリル、それぞれのメリットと使い分け方を紹介します。",
+  alternates: {
+    canonical: "/blog/tablet-vs-paper",
+  },
 };
 
 export default function Page() {
@@ -93,7 +96,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          保護者からよく届く質問
         </h2>
 
         <div className="space-y-4 mb-6">

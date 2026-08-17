@@ -6,6 +6,9 @@ export const metadata = {
   title: "ひらがなは何歳から？無理なく始めるタイミングを解説｜わくたん",
   description:
     "ひらがなを教え始める年齢の目安を、公的な調査データもふまえて解説。無理なく始めるためのサインの見つけ方を紹介します。",
+  alternates: {
+    canonical: "/blog/when-start-hiragana",
+  },
 };
 
 export default function Page() {
@@ -93,7 +96,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          もう少し詳しく知りたい方へ
         </h2>
 
         <div className="space-y-4 mb-6">

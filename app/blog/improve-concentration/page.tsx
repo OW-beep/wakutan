@@ -6,6 +6,9 @@ export const metadata = {
   title: "幼児の集中力を伸ばす方法｜家庭で今日からできるコツ｜わくたん",
   description:
     "幼児の集中力を伸ばす方法を、年齢別の目安データとあわせて解説。家庭で今日から取り入れられる具体的な工夫を紹介します。",
+  alternates: {
+    canonical: "/blog/improve-concentration",
+  },
 };
 
 export default function Page() {
@@ -105,7 +108,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          よくある疑問
         </h2>
 
         <div className="space-y-4 mb-6">

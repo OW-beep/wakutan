@@ -6,6 +6,9 @@ export const metadata = {
   title: "パズル遊びの効果｜考える力・集中力・空間認識力が育つ｜わくたん",
   description:
     "パズル遊びが育てる力を解説。考える力・集中力・空間認識力を伸ばすパズルの選び方や取り入れ方も紹介します。",
+  alternates: {
+    canonical: "/blog/puzzle-benefits",
+  },
 };
 
 export default function Page() {
@@ -113,7 +116,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          保護者からよく届く質問
         </h2>
 
         <div className="space-y-4 mb-6">

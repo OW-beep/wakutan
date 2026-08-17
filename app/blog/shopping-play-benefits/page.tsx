@@ -6,6 +6,9 @@ export const metadata = {
   title: "買い物ごっこで育つ力｜わくたん",
   description:
     "子どもに人気の買い物ごっこで育つ力を解説。数の感覚やコミュニケーション力を楽しく育てる遊び方を紹介します。",
+  alternates: {
+    canonical: "/blog/shopping-play-benefits",
+  },
 };
 
 export default function Page() {
@@ -102,7 +105,7 @@ export default function Page() {
 
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
           <p className="font-bold mb-2">
-            ❓ よくある質問
+            ❓ 保護者からよく届く質問
           </p>
           <p className="mb-2">
             <span className="font-bold">Q. おつりの計算までさせるべき？</span><br />

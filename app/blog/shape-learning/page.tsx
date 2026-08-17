@@ -6,6 +6,9 @@ export const metadata = {
   title: "図形遊びの効果｜図形感覚・空間認識力を育てよう｜わくたん",
   description:
     "図形遊びは空間認識力や図形感覚、考える力を育てる知育遊びです。4〜6歳向けに図形遊びのメリットと、小学校の学習へのつながりを紹介します。",
+  alternates: {
+    canonical: "/blog/shape-learning",
+  },
 };
 
 export default function Page() {
@@ -117,7 +120,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          よくある疑問
         </h2>
 
         <div className="space-y-4 mb-6">

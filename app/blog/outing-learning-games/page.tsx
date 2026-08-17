@@ -6,6 +6,9 @@ export const metadata = {
   title: "お出かけ先で自然に学べる声かけ＆ゲーム｜わくたん",
   description:
     "スーパーや公園などのお出かけ先で、自然に数や言葉に親しめる声かけ・ゲームのアイデアを紹介します。",
+  alternates: {
+    canonical: "/blog/outing-learning-games",
+  },
 };
 
 export default function Page() {
@@ -136,7 +139,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          Q&Aでチェック
         </h2>
 
         <div className="space-y-4 mb-6">

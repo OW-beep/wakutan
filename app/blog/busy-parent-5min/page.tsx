@@ -6,6 +6,9 @@ export const metadata = {
   title: "忙しいママ・パパ向け 1日5分ルーティン｜わくたん",
   description:
     "仕事や家事で忙しい保護者向けに、無理なく続けられる1日5分の家庭学習ルーティンの作り方を紹介します。",
+  alternates: {
+    canonical: "/blog/busy-parent-5min",
+  },
 };
 
 export default function Page() {

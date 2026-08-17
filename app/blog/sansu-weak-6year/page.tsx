@@ -6,6 +6,9 @@ export const metadata = {
   title: "6歳で算数が苦手でも大丈夫！小学校でつまずかない土台の作り方｜わくたん",
   description:
     "6歳で算数が苦手な子でも安心できる、小学校の算数につまずかないための土台づくりのポイントを紹介します。",
+  alternates: {
+    canonical: "/blog/sansu-weak-6year",
+  },
 };
 
 export default function Page() {
@@ -120,7 +123,7 @@ export default function Page() {
 
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
           <p className="font-bold mb-2">
-            ❓ よくある質問
+            ❓ よくある疑問
           </p>
           <p>
             <span className="font-bold">Q. 小学校入学までに何ができればいい？</span><br />

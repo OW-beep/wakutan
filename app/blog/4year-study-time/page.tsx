@@ -6,6 +6,9 @@ export const metadata = {
   title: "4歳の家庭学習は何分くらい？｜わくたん",
   description:
     "4歳の家庭学習はどれくらいの時間が理想なのか解説。無理なく続けられる学習時間の目安と、時間配分の工夫を紹介します。",
+  alternates: {
+    canonical: "/blog/4year-study-time",
+  },
 };
 
 export default function Page() {

@@ -6,6 +6,9 @@ export const metadata = {
   title: "「あと少しでできそう」を見極めるコツ｜わくたん",
   description:
     "子どもにとって「ちょっと頑張ればできる」難易度を見極めるコツを紹介。発達心理学の考え方をふまえ、無理なく力を伸ばす問題の選び方を解説します。",
+  alternates: {
+    canonical: "/blog/almost-can-do",
+  },
 };
 
 export default function Page() {
@@ -105,7 +108,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          もう少し詳しく知りたい方へ
         </h2>
 
         <div className="space-y-4 mb-6">

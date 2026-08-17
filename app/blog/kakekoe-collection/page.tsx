@@ -6,6 +6,9 @@ export const metadata = {
   title: "勉強嫌いにならないための声かけ集｜わくたん",
   description:
     "幼児期に勉強嫌いにならないための声かけのポイントと具体例を紹介。「頑張れ」以外の伝え方のヒントをまとめました。",
+  alternates: {
+    canonical: "/blog/kakekoe-collection",
+  },
 };
 
 export default function Page() {

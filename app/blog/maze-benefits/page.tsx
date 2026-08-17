@@ -6,6 +6,9 @@ export const metadata = {
   title: "迷路遊びで育つ5つの力｜わくたん",
   description:
     "子どもに人気の迷路遊びで育つ5つの力を解説。楽しみながら思考力や集中力を伸ばす迷路遊びの魅力と選び方を紹介します。",
+  alternates: {
+    canonical: "/blog/maze-benefits",
+  },
 };
 
 export default function Page() {
@@ -129,7 +132,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          もう少し詳しく知りたい方へ
         </h2>
 
         <div className="space-y-4 mb-6">

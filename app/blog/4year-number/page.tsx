@@ -6,6 +6,9 @@ export const metadata = {
   title: "4歳で数字を覚えるコツ｜わくたん",
   description:
     "4歳児が数字を覚えるための具体的なコツを紹介。発達の段階をふまえた、無理のない数字学習の進め方を解説します。",
+  alternates: {
+    canonical: "/blog/4year-number",
+  },
 };
 
 export default function Page() {

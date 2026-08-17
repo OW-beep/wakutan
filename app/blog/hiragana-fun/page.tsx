@@ -6,6 +6,9 @@ export const metadata = {
   title: "ひらがなを楽しく覚える5つの方法｜わくたん",
   description:
     "4〜6歳向けに、ひらがなを遊びながら覚える5つの方法を紹介。日常生活の中で楽しく文字に親しむコツと、つまずいたときの対応も解説します。",
+  alternates: {
+    canonical: "/blog/hiragana-fun",
+  },
 };
 
 export default function Page() {

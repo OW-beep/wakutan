@@ -6,6 +6,9 @@ export const metadata = {
   title: "5歳の学び方・勉強のコツ｜わくたん",
   description:
     "5歳児の勉強・学び方のコツを解説。考える力や集中力を育てながら楽しく学習する関わり方を紹介します。",
+  alternates: {
+    canonical: "/blog/how-5year-learn",
+  },
 };
 
 export default function Page() {
@@ -240,7 +243,7 @@ export default function Page() {
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
           <h2 className="text-3xl font-bold mb-6 text-indigo-600">
-            ❓ よくある質問
+            ❓ よくある疑問
           </h2>
 
           <div className="space-y-4">

@@ -6,6 +6,9 @@ export const metadata = {
   title: "幼児におすすめの知育遊び10選｜わくたん",
   description:
     "4歳〜6歳の子どもにおすすめの知育遊びを10個紹介。おうちにあるものでできる遊びから、考える力を育てる遊びまでわかりやすく解説します。",
+  alternates: {
+    canonical: "/blog/educational-play",
+  },
 };
 
 export default function Page() {
@@ -149,7 +152,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          気になる疑問Q&A
         </h2>
 
         <div className="space-y-4 mb-6">

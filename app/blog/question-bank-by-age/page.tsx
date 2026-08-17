@@ -3,17 +3,20 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
-  title: "4歳→6歳で問題はどう変わる？わくたん12,649問を分析してみた｜わくたん",
+  title: "4歳→6歳で問題はどう変わる？わくたん12,843問を分析してみた｜わくたん",
   description:
-    "わくたんが実際に生成している問題データ（4〜6歳・全12,649問）を分析。学年が上がるとどのジャンルが増え、どの力が重視されるようになるのかを、運営者自身のデータで解説します。",
+    "わくたんが実際に生成している問題データ（4〜6歳・全12,843問）を分析。学年が上がるとどのジャンルが増え、どの力が重視されるようになるのかを、運営者自身のデータで解説します。",
+  alternates: {
+    canonical: "/blog/question-bank-by-age",
+  },
 };
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-indigo-50 to-white p-6">
       <ArticleSchema
-        title="4歳→6歳で問題はどう変わる？わくたん12,649問を分析してみた｜わくたん"
-        description="わくたんが実際に生成している問題データ（4〜6歳・全12,649問）を分析。学年が上がるとどのジャンルが増え、どの力が重視されるようになるのかを、運営者自身のデータで解説します。"
+        title="4歳→6歳で問題はどう変わる？わくたん12,843問を分析してみた｜わくたん"
+        description="わくたんが実際に生成している問題データ（4〜6歳・全12,843問）を分析。学年が上がるとどのジャンルが増え、どの力が重視されるようになるのかを、運営者自身のデータで解説します。"
         slug="question-bank-by-age"
         datePublished="2026-08-13"
         dateModified="2026-08-13"
@@ -28,7 +31,7 @@ export default function Page() {
               📊 わくたんのデータで見る
             </p>
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              4歳→6歳で問題はどう変わる？わくたん12,649問を分析してみた
+              4歳→6歳で問題はどう変わる？わくたん12,843問を分析してみた
             </h1>
             <p className="text-lg text-gray-700">
               これはよそのサイトの受け売りではなく、わくたんが実際に生成している問題データそのものを集計した結果です。
@@ -147,7 +150,7 @@ export default function Page() {
           </p>
 
           <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-            よくある質問
+            よく聞かれること
           </h2>
 
           <div className="space-y-4 mb-6">

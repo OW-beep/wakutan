@@ -6,6 +6,9 @@ export const metadata = {
   title: "4歳ではじめてのひらがな｜どこから始める？｜わくたん",
   description:
     "4歳ではじめてひらがなに触れる際の進め方を解説。何から始めればよいか、興味を持たない場合の対処法もあわせて紹介します。",
+  alternates: {
+    canonical: "/blog/4year-hiragana",
+  },
 };
 
 export default function Page() {
@@ -132,7 +135,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          こんな質問もよくいただきます
         </h2>
 
         <div className="space-y-4 mb-6">

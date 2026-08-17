@@ -6,6 +6,9 @@ export const metadata = {
   title: "幼児の家庭学習でやってはいけないこと5つ｜わくたん",
   description:
     "幼児期の家庭学習でありがちな失敗パターンを5つ紹介し、それぞれの改善のヒントをまとめました。",
+  alternates: {
+    canonical: "/blog/study-mistakes",
+  },
 };
 
 export default function Page() {
@@ -150,7 +153,7 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          よくある質問
+          気になる疑問Q&A
         </h2>
 
         <div className="space-y-4 mb-6">
