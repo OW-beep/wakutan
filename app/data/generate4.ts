@@ -9,6 +9,7 @@ import { generateNakamawakeQuestions, generateNakamahazureQuestions } from "./ca
 import { generateWordChoiceQuestions } from "./hiraganaQuestions";
 import { generateRiddleQuestions } from "./nazonazoQuestions";
 import { generateSuiriQuestions4 } from "./suiriQuestions";
+import { generateKokkiQuestions4 } from "./kokkiQuestions";
 
 type Question = {
   genre: string;
@@ -22,6 +23,8 @@ type Question = {
   dotFigure?: DotFigure;
   suiriScene?: string;
   comparePeople?: string[];
+  flagKey?: string;
+  flagKeys?: string[];
 };
 
 export function generate4Questions() {
@@ -498,5 +501,15 @@ export function generate4Questions() {
     comparePeople: q.comparePeople,
   }));
 
-  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, nazonazo, okane, tsumiki, onajikatachi, suiri };
+  const kokki: Question[] = generateKokkiQuestions4().map(q => ({
+    genre: "こっき",
+    question: q.question,
+    answer: q.answer,
+    explanation: q.explanation,
+    difficulty: q.difficulty,
+    flagKey: q.flagKey,
+    flagKeys: q.flagKeys,
+  }));
+
+  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, nazonazo, okane, tsumiki, onajikatachi, suiri, kokki };
 }

@@ -21,6 +21,7 @@ import { generateAntonymQuestions, generateKatakanaQuestions } from "./hiraganaQ
 import { generateRiddleQuestions } from "./nazonazoQuestions";
 import { generateTwoStepWordProblems } from "./mojiQuestions";
 import { generateSuiriQuestions6 } from "./suiriQuestions";
+import { generateKokkiQuestions6 } from "./kokkiQuestions";
 
 type Question = {
   genre: string;
@@ -35,6 +36,8 @@ type Question = {
   dotFigure?: DotFigure;
   suiriScene?: string;
   comparePeople?: string[];
+  flagKey?: string;
+  flagKeys?: string[];
 };
 type RonriTemplate = [string, string, string];
 type PatternTemplate = [string, string, string];
@@ -657,6 +660,16 @@ export function generate6Questions() {
     comparePeople: q.comparePeople,
   }));
 
+  const kokki: Question[] = generateKokkiQuestions6().map(q => ({
+    genre: "こっき",
+    question: q.question,
+    answer: q.answer,
+    explanation: q.explanation,
+    difficulty: q.difficulty,
+    flagKey: q.flagKey,
+    flagKeys: q.flagKeys,
+  }));
+
   return {
     sansu,
     ronri,
@@ -672,5 +685,6 @@ export function generate6Questions() {
     tsumiki,
     onajikatachi,
     suiri,
+    kokki,
   };
 }

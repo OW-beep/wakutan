@@ -40,6 +40,7 @@ export default function Page() {
           { href: "/6/sansu", emoji: "🔢", label: "さんすう" },
           { href: "/6/ronri", emoji: "🧠", label: "ろんり" },
           { href: "/6/suiri", emoji: "🔍", label: "すいり" },
+          { href: "/6/kokki", emoji: "🚩", label: "こっき" },
           { href: "/6/pattern", emoji: "🔷", label: "パターン" },
           { href: "/6/hiragana", emoji: "🔤", label: "ひらがな" },
           { href: "/6/nakamawake", emoji: "📦", label: "なかまわけ" },

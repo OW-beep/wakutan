@@ -10,6 +10,7 @@ import { generateFirstSoundQuestions } from "./hiraganaQuestions";
 import { generateRiddleQuestions } from "./nazonazoQuestions";
 import { generateFactLookupQuestions, generateSimpleWordProblems } from "./mojiQuestions";
 import { generateSuiriQuestions5 } from "./suiriQuestions";
+import { generateKokkiQuestions5 } from "./kokkiQuestions";
 
 type Question = {
   genre: string;
@@ -23,6 +24,8 @@ type Question = {
   dotFigure?: DotFigure;
   suiriScene?: string;
   comparePeople?: string[];
+  flagKey?: string;
+  flagKeys?: string[];
 };
 
 export function generate5Questions() {
@@ -560,5 +563,15 @@ export function generate5Questions() {
     comparePeople: q.comparePeople,
   }));
 
-  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, moji, nazonazo, okane, tsumiki, onajikatachi, suiri };
+  const kokki: Question[] = generateKokkiQuestions5().map(q => ({
+    genre: "こっき",
+    question: q.question,
+    answer: q.answer,
+    explanation: q.explanation,
+    difficulty: q.difficulty,
+    flagKey: q.flagKey,
+    flagKeys: q.flagKeys,
+  }));
+
+  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, moji, nazonazo, okane, tsumiki, onajikatachi, suiri, kokki };
 }

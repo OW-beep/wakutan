@@ -7,6 +7,7 @@ import CubeStack from "./CubeStack";
 import DotFigureCopy from "./DotFigureCopy";
 import SuiriScene from "./SuiriScene";
 import ComparePeople from "./ComparePeople";
+import FlagIcon from "./FlagIcon";
 
 type Question = {
   genre: string;
@@ -19,6 +20,8 @@ type Question = {
   dotFigure?: { gridSize: number; lines: [[number, number], [number, number]][] };
   suiriScene?: string;
   comparePeople?: string[];
+  flagKey?: string;
+  flagKeys?: string[];
 };
 
 type Props = {
@@ -84,6 +87,32 @@ export default function QuestionList({
             )}
 
             {q.comparePeople && <ComparePeople names={q.comparePeople} />}
+
+            {q.flagKey && !q.flagKeys && (
+              <div className="flex justify-center mb-3">
+                <FlagIcon flagKey={q.flagKey} />
+              </div>
+            )}
+
+            {q.flagKey && q.flagKeys && (
+              <div className="flex flex-col items-center gap-2 mb-3">
+                <FlagIcon flagKey={q.flagKey} size={80} />
+                <div className="text-xs text-gray-500">↓ こたえは どれかな？</div>
+                <div className="flex justify-center gap-3 flex-wrap">
+                  {q.flagKeys.map((k) => (
+                    <FlagIcon key={k} flagKey={k} size={70} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {!q.flagKey && q.flagKeys && (
+              <div className="flex justify-center gap-3 flex-wrap mb-3">
+                {q.flagKeys.map((k) => (
+                  <FlagIcon key={k} flagKey={k} size={80} />
+                ))}
+              </div>
+            )}
 
             <div className="text-lg mb-2">
               {q.question}
