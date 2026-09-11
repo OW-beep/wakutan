@@ -60,11 +60,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/categories",
     "/category/age",
     "/category/parent",
+    "/narai-shindan",
 
     "/contact",
     "/privacy-policy",
     "/terms",
 
+    "/blog/narai-shindan-guide",
     "/blog/question-bank-by-age",
     "/blog/how-4year-learn",
     "/blog/how-5year-learn",
@@ -141,6 +143,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         : ["/4", "/5", "/6"].includes(page)
         ? 0.95
         : page === "/articles"
+        ? 0.9
+        : page === "/narai-shindan"
         ? 0.9
         : page.startsWith("/category")
         ? 0.85

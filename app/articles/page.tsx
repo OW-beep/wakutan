@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   },
 };
 
+const naraiArticles = [
+  {
+    href: "/blog/narai-shindan-guide",
+    emoji: "🧭",
+    title: "習い事は何を基準に選ぶ？",
+    desc: "4〜6歳の習い事選びで大切にしたい考え方",
+  },
+];
+
 const ageArticles = [
   {
     href: "/blog/how-4year-learn",
@@ -336,6 +345,11 @@ export default function ArticlesPage() {
           </p>
 
         </div>
+
+        <ArticleSection
+          title="🧭 習い事選び"
+          articles={naraiArticles}
+        />
 
         <ArticleSection
           title="🧸 年齢別の学び方"

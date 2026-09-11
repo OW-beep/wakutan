@@ -144,6 +144,44 @@ export default function Home() {
 
       </section>      
 
+      {/* 習い事診断 */}
+      <section className="max-w-6xl mx-auto px-6 mb-14">
+
+        <Link href="/narai-shindan">
+          <div className="relative bg-gradient-to-r from-orange-100 to-yellow-100 rounded-3xl px-8 py-8 shadow-lg hover:shadow-xl transition overflow-hidden">
+
+            <div className="flex flex-wrap items-center gap-6">
+
+              <div className="wt-float wt-icon-badge bg-white w-16 h-16 text-4xl shadow-md shrink-0">
+                🧭
+              </div>
+
+              <div className="flex-1 min-w-[240px]">
+                <div className="text-xs font-bold text-orange-600 mb-1">
+                  NEW・無料診断
+                </div>
+
+                <h2 className="text-2xl font-extrabold text-orange-700 mb-2">
+                  わくたん習い事診断
+                </h2>
+
+                <p className="text-gray-700">
+                  何を習わせるかの前に、何を大切にしたいか考えてみよう。
+                  目的・興味・性格・家庭の条件から、お子さんに合いそうな習い事TOP3を無料診断。
+                </p>
+              </div>
+
+              <div className="shrink-0 bg-orange-500 text-white px-6 py-3 rounded-xl font-bold wt-btn-pop">
+                診断してみる →
+              </div>
+
+            </div>
+
+          </div>
+        </Link>
+
+      </section>
+
       {/* ドリルのイメージ */}
       <section className="max-w-6xl mx-auto px-6 mb-14">
 

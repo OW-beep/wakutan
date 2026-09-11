@@ -111,6 +111,7 @@ export default function RootLayout({
               <Link href="/4">4さい</Link>
               <Link href="/5">5さい</Link>
               <Link href="/6">6さい</Link>
+              <Link href="/narai-shindan">習い事診断</Link>
               <Link href="/articles">記事一覧</Link>
             </nav>
 
@@ -143,6 +144,7 @@ export default function RootLayout({
 
               <div className="flex flex-col gap-2 text-sm">
                 <Link href="/about">わくたんについて</Link>
+                <Link href="/narai-shindan">習い事診断</Link>
                 <Link href="/articles">記事一覧</Link>
                 <Link href="/privacy-policy">プライバシーポリシー</Link>
                 <Link href="/terms">利用規約</Link>

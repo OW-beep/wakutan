@@ -7,6 +7,7 @@ export type BlogMetaEntry = {
 };
 
 export const blogMeta: BlogMetaEntry[] = [
+  { slug: "narai-shindan-guide", title: "習い事は何を基準に選ぶ？4〜6歳の習い事選びで大切にしたい考え方", category: "習い事選び" },
   { slug: "question-bank-by-age", title: "4歳→6歳で問題はどう変わる？わくたん12,843問を分析してみた", category: "データで見るわくたん" },
   { slug: "4year-drill-refusal", title: "4歳児がドリルを嫌がるときの対処法", category: "年齢別ガイド" },
   { slug: "4year-hiragana", title: "4歳ではじめてのひらがな｜どこから始める？", category: "ひらがな・文字" },
