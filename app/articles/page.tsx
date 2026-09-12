@@ -85,6 +85,12 @@ const ageArticles = [
 
 const learningArticles = [
   {
+    href: "/blog/drill-hurdle-down",
+    emoji: "📝",
+    title: "「1問だけでもいい」続くようになった話",
+    desc: "運営者の体験談・ハードルを下げる工夫",
+  },
+  {
     href: "/blog/study-habit",
     emoji: "🌱",
     title: "家庭学習を続けるコツ",

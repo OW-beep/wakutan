@@ -66,6 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy-policy",
     "/terms",
 
+    "/blog/drill-hurdle-down",
     "/blog/narai-shindan-guide",
     "/blog/question-bank-by-age",
     "/blog/how-4year-learn",
