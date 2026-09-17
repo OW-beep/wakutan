@@ -7,6 +7,7 @@ export type BlogMetaEntry = {
 };
 
 export const blogMeta: BlogMetaEntry[] = [
+  { slug: "self-time-childcare", title: "「自分の時間が全然ない」と感じたときに大切な3つの視点", category: "保護者向け" },
   { slug: "drill-hurdle-down", title: "「1問だけでもいい」家庭学習のハードルを下げたら続くようになった話", category: "学習習慣・声かけ" },
   { slug: "narai-shindan-guide", title: "習い事は何を基準に選ぶ？4〜6歳の習い事選びで大切にしたい考え方", category: "習い事選び" },
   { slug: "question-bank-by-age", title: "4歳→6歳で問題はどう変わる？わくたん12,843問を分析してみた", category: "データで見るわくたん" },

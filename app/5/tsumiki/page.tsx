@@ -26,12 +26,16 @@ export default function Page() {
 
       <div className="max-w-4xl mx-auto p-6">
 
-        <Breadcrumb
+        <div className="print-hide">
+
+          <Breadcrumb
           items={[
             { name: "5歳ドリル", href: "/5" },
             { name: "つみき問題" },
           ]}
         />
+
+        </div>
 
         <div className="bg-white rounded-3xl shadow p-8 mb-8">
 
@@ -39,6 +43,8 @@ export default function Page() {
             🧊 5歳向けつみき問題
           </h1>
 
+
+          <div className="print-hide">
           <p className="leading-8">
             ならんだ つみきの タワーを 見て、ぜんぶで なんこ あるか かぞえる もんだいです。4歳のときより タワーの数が ふえて、少し かぞえごたえが あります。
           </p>
@@ -48,10 +54,11 @@ export default function Page() {
           </p>
 
           <p className="leading-6 mt-2 text-xs text-gray-500">（{data.tsumiki.length}問のストックから、日替わりで30問を選んでいます）</p>
+          </div>
 
         </div>
 
-        <div className="bg-cyan-50 border border-cyan-200 rounded-2xl p-5 mb-8 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+        <div className="bg-cyan-50 border border-cyan-200 rounded-2xl p-5 mb-8 flex flex-wrap gap-x-8 gap-y-2 text-sm print-hide">
           <p><span className="font-bold">🌱 この問題について：</span>空間認知・かず</p>
           <p><span className="font-bold">⏱ めやす時間：</span>5分</p>
         </div>
@@ -62,7 +69,7 @@ export default function Page() {
           accentButton="bg-cyan-500"
         />
 
-        <div className="mt-10 bg-white rounded-3xl shadow p-8">
+        <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">
 
           <h2 className="text-2xl font-bold mb-4">
             👨‍👩‍👧 保護者の方へ
@@ -99,7 +106,7 @@ export default function Page() {
 
         </div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-8 text-center print-hide">
           <Link
             href="/5"
             className="inline-block bg-cyan-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"

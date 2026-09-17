@@ -138,7 +138,7 @@ export default function PageClient() {
         </div>
 
         {/* 保護者向け */}
-        <div className="mt-10 bg-white rounded-3xl shadow p-8">
+        <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">
 
           <h2 className="text-2xl font-bold mb-4">
             👨‍👩‍👧 保護者の方へ

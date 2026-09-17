@@ -196,6 +196,12 @@ const playArticles = [
 
 const parentArticles = [
   {
+    href: "/blog/self-time-childcare",
+    emoji: "🌷",
+    title: "「自分の時間が全然ない」と感じたら",
+    desc: "無理に時間を作る前に大切にしたい3つの視点",
+  },
+  {
     href: "/blog/school-preparation",
     emoji: "🎒",
     title: "小学校入学前に身につけたい力",
