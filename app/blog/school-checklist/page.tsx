@@ -3,9 +3,9 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
-  title: "小学校入学準備チェックリスト｜わくたん",
+  title: "小学校入学準備チェックリスト・学用品一覧｜わくたん",
   description:
-    "小学校入学前に確認しておきたい準備を、学用品・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。",
+    "小学校入学前に確認しておきたい準備を、学用品一覧・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。",
   alternates: {
     canonical: "/blog/school-checklist",
   },
@@ -15,11 +15,11 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
-        title="小学校入学準備チェックリスト｜わくたん"
-        description="小学校入学前に確認しておきたい準備を、学用品・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。"
+        title="小学校入学準備チェックリスト・学用品一覧｜わくたん"
+        description="小学校入学前に確認しておきたい準備を、学用品一覧・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。"
         slug="school-checklist"
         datePublished="2026-06-01"
-        dateModified="2026-08-10"
+        dateModified="2026-09-18"
       />
 
 
@@ -47,12 +47,46 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
-          ① 学用品・持ち物の準備
+          ① 学用品・持ち物の準備【一覧】
         </h2>
 
         <p className="leading-8 mb-4">
-          ランドセル、筆記用具、上履きなど、学校から指定された持ち物は早めに準備し、名前を書いておきましょう。
+          学校から指定された持ち物は早めに準備し、名前を書いておきましょう。一般的に準備することが多いものを一覧にまとめました（学校によって指定が異なるため、最終的には入学説明会の案内を確認してください）。
         </p>
+
+        <p className="leading-8 mb-2 font-bold">🎒 学校生活の基本アイテム</p>
+        <ul className="list-disc ml-6 space-y-1 text-gray-700 mb-4">
+          <li>ランドセル（または指定の通学バッグ）</li>
+          <li>上履き・上履き入れ</li>
+          <li>体操服・体操服袋</li>
+          <li>給食袋（コップ・ナフキン・マスクなど）</li>
+          <li>ハンカチ・ティッシュ</li>
+          <li>防災頭巾・防災頭巾カバー（学校による）</li>
+        </ul>
+
+        <p className="leading-8 mb-2 font-bold">✏️ 文房具・学用品</p>
+        <ul className="list-disc ml-6 space-y-1 text-gray-700 mb-4">
+          <li>筆箱・鉛筆（2B〜4B指定が多い）・消しゴム</li>
+          <li>下敷き・赤鉛筆</li>
+          <li>連絡帳・連絡袋</li>
+          <li>お道具箱（はさみ・のり・クレヨンなど）</li>
+          <li>算数セット</li>
+        </ul>
+
+        <p className="leading-8 mb-2 font-bold">👕 生活・身の回りのもの</p>
+        <ul className="list-disc ml-6 space-y-1 text-gray-700 mb-4">
+          <li>通学用の服・雨具（傘・レインコート）</li>
+          <li>名前シール・お名前スタンプ（持ち物すべてに記名が必要になります）</li>
+        </ul>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            💡 ポイント
+          </p>
+          <p>
+            指定品・自由に選べるものは学校によって差が大きいので、この一覧は「だいたいの全体像をつかむため」の目安として使い、詳細は入学説明会の案内で確認するのが安心です。
+          </p>
+        </div>
 
         <p className="leading-8 mb-4">
           また、自分の持ち物を自分で管理する練習として、お子さん自身にランドセルへの荷物の出し入れをさせてみるのもおすすめです。
@@ -109,6 +143,9 @@ export default function Page() {
 
         <p className="leading-8 mb-4">
           すべてを完璧に準備する必要はありません。今のお子さんの様子を見ながら、できることから少しずつ取り組んでいきましょう。
+          「いつ・何を準備すればいいか」を時期ごとに知りたい方は、
+          <Link href="/blog/6year-prep-timeline" className="text-orange-600 font-bold hover:underline">月ごとの入学準備の目安</Link>
+          もあわせてご覧ください。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -155,7 +192,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月　/　最終更新日：2026年8月
+          公開日：2026年6月　/　最終更新日：2026年9月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

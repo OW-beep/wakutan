@@ -85,6 +85,12 @@ const ageArticles = [
 
 const learningArticles = [
   {
+    href: "/blog/chiiku-otoshiana",
+    emoji: "🕳️",
+    title: "9割の親がやりがちな知育の落とし穴3つ",
+    desc: "つい怒る・比べる・結果だけ見てしまうを手放す",
+  },
+  {
     href: "/blog/drill-hurdle-down",
     emoji: "📝",
     title: "「1問だけでもいい」続くようになった話",

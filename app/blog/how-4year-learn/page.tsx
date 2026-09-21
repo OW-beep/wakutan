@@ -3,9 +3,9 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 
 export const metadata = {
-title: "4歳の学び方・勉強のコツ｜わくたん",
+title: "4歳の学び方・勉強のコツ｜やる気を引き出す関わり方｜わくたん",
 description:
-  "4歳児の勉強・学び方のコツを解説。遊びと学習を両立しながら考える力を育てる関わり方を紹介します。",
+  "4歳児の勉強・学び方のコツを解説。やる気を引き出す関わり方や、遊びと学習を両立しながら考える力を育てる工夫を紹介します。",
   alternates: {
     canonical: "/blog/how-4year-learn",
   },
@@ -14,11 +14,11 @@ description:
 export default function Page() {
 return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange-50">
       <ArticleSchema
-        title="4歳の学び方・勉強のコツ｜わくたん"
-        description="4歳児の勉強・学び方のコツを解説。遊びと学習を両立しながら考える力を育てる関わり方を紹介します。"
+        title="4歳の学び方・勉強のコツ｜やる気を引き出す関わり方｜わくたん"
+        description="4歳児の勉強・学び方のコツを解説。やる気を引き出す関わり方や、遊びと学習を両立しながら考える力を育てる工夫を紹介します。"
         slug="how-4year-learn"
         datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        dateModified="2026-09-18"
       />
 
 
@@ -103,6 +103,40 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
       <p className="leading-8">
         大切なのは正解を教えることではなく、
         子ども自身に考えさせることです。
+      </p>
+
+    </section>
+
+    <section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+      <h2 className="text-3xl font-bold mb-6 text-orange-600">
+        🔥 やる気を引き出すコツ
+      </h2>
+
+      <p className="leading-8 mb-4">
+        「勉強しなさい」と言われるほど、やる気が下がってしまうのは4歳児も大人も同じです。
+        やる気を引き出すには、いくつかの小さなコツがあります。
+      </p>
+
+      <p className="leading-8 mb-4">
+        まず、「やらせる」より「選ばせる」ことです。「ひらがなと迷路、どっちやる？」のように選択肢を渡すだけで、
+        同じ内容でも子どもの取り組み方が変わることがあります。
+      </p>
+
+      <p className="leading-8 mb-4">
+        次に、結果より過程を認めることです。「できた」だけでなく、「最後まで考えたね」「これ自分で気づいたの？」と
+        取り組んだ過程に言葉をかけると、やらされている感覚が薄れていきます。
+      </p>
+
+      <p className="leading-8 mb-4">
+        そして、「もっとやりたい」で終わらせることです。満足するまでやらせきってしまうより、
+        少し物足りないくらいで切り上げる方が、次への意欲につながりやすい傾向があります。
+      </p>
+
+      <p className="leading-8">
+        それでもドリル自体を嫌がる日が続く場合は、
+        <Link href="/blog/4year-drill-refusal" className="text-orange-600 font-bold hover:underline">4歳児がドリルを嫌がるときの対処法</Link>
+        もあわせてご覧ください。
       </p>
 
     </section>
@@ -295,7 +329,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年3月　/　最終更新日：2026年7月</p>
+          <p>公開日：2026年3月　/　最終更新日：2026年9月</p>
           <p className="mt-1">
             本記事は、わくたん運営者が4歳向けの問題を作りながら日々感じていることをもとにまとめています。
           </p>

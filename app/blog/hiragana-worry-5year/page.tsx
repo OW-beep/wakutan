@@ -19,7 +19,7 @@ export default function Page() {
         description="5歳になってもひらがなが読めない・書けないことに不安を感じる保護者向けに、無理なく興味を引き出すステップを紹介します。"
         slug="hiragana-worry-5year"
         datePublished="2026-06-01"
-        dateModified="2026-08-10"
+        dateModified="2026-09-18"
       />
 
 
@@ -59,6 +59,26 @@ export default function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「読めない」と「書けない」は分けて考える
+        </h2>
+
+        <p className="leading-8 mb-4">
+          ひとくちに「ひらがなができない」と言っても、「読めない」のか「書けない」のかで、状況は少し違います。
+        </p>
+
+        <p className="leading-8 mb-4">
+          <span className="font-bold">5歳でひらがなが読めない場合</span>は、文字と音がまだ結びついていないことが多く、読み聞かせや文字探し遊びなど「読む」経験を増やすことが近道です。
+        </p>
+
+        <p className="leading-8 mb-4">
+          <span className="font-bold">5歳でひらがなが書けない場合</span>は、読むことはできても、手先の動き（運筆）がまだ追いついていないケースがよくあります。いきなり文字を書かせるより、線をなぞる・点を結ぶといった運筆の練習から始めると、負担なく進められます。
+        </p>
+
+        <p className="leading-8 mb-4">
+          どちらも5歳の時点でできていないこと自体は珍しくなく、順番として「読む→書く」の順で身についていくのが自然な流れです。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           まずは「読む」から始める
         </h2>
 
@@ -89,6 +109,9 @@ export default function Page() {
 
         <p className="leading-8 mb-4">
           わくたんのひらがなドリルも、なかま分けの要素を取り入れ、遊び感覚で取り組める内容にしています。
+          運筆の練習がしたい場合は、
+          <Link href="/blog/dot-to-dot-benefits" className="text-orange-600 font-bold hover:underline">点つなぎの効果</Link>
+          についての記事もあわせてご覧ください。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -120,6 +143,10 @@ export default function Page() {
         </h2>
 
         <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 5歳でひらがなが書けるのが普通ですか？</p>
+            <p className="leading-7 text-gray-700">A. 「全て書ける」状態が普通というわけではありません。読める・書けるの習得スピードには個人差が大きく、5歳の時点で自分の名前程度しか書けなくても心配しすぎる段階ではないケースがほとんどです。</p>
+          </div>
           <div>
             <p className="font-bold">Q. 何歳までに読めるようになれば安心ですか？</p>
             <p className="leading-7 text-gray-700">A. 明確な年齢の基準はありません。多くの場合、小学校入学後の授業を通じて少しずつ読み書きが定着していきます。5歳の時点で焦る必要はありません。</p>
@@ -159,7 +186,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月　/　最終更新日：2026年8月
+          公開日：2026年6月　/　最終更新日：2026年9月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
