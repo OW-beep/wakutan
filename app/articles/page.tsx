@@ -202,6 +202,12 @@ const playArticles = [
 
 const parentArticles = [
   {
+    href: "/blog/akachan-gaeri",
+    emoji: "🍼",
+    title: "赤ちゃん返りが心配になったら",
+    desc: "よくあることと知っておきたい3つのポイント",
+  },
+  {
     href: "/blog/self-time-childcare",
     emoji: "🌷",
     title: "「自分の時間が全然ない」と感じたら",

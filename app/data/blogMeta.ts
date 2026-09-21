@@ -7,6 +7,7 @@ export type BlogMetaEntry = {
 };
 
 export const blogMeta: BlogMetaEntry[] = [
+  { slug: "akachan-gaeri", title: "赤ちゃん返りが心配になったら知ってほしい3つ", category: "保護者向け" },
   { slug: "chiiku-otoshiana", title: "9割の親がやりがちな、知育の落とし穴3つ", category: "学習習慣・声かけ" },
   { slug: "self-time-childcare", title: "「自分の時間が全然ない」と感じたときに大切な3つの視点", category: "保護者向け" },
   { slug: "drill-hurdle-down", title: "「1問だけでもいい」家庭学習のハードルを下げたら続くようになった話", category: "学習習慣・声かけ" },
