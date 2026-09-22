@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import { searchRakutenItems } from "@/lib/rakuten";
+import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
 title: "4歳の学び方・勉強のコツ｜やる気を引き出す関わり方｜わくたん",
@@ -11,7 +13,9 @@ description:
   },
 };
 
-export default function Page() {
+export default async function Page() {
+  const products = await searchRakutenItems("知育ドリル 4歳", 3);
+
 return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange-50">
       <ArticleSchema
         title="4歳の学び方・勉強のコツ｜やる気を引き出す関わり方｜わくたん"
@@ -350,6 +354,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
         </div>
 
+        <RakutenProducts items={products} />
         <RelatedArticles currentSlug="how-4year-learn" />
 
       </article>

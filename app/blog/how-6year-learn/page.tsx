@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import { searchRakutenItems } from "@/lib/rakuten";
+import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
   title: "6歳の学び方・勉強のコツ｜わくたん",
@@ -11,7 +13,9 @@ export const metadata = {
   },
 };
 
-export default function Page() {
+export default async function Page() {
+  const products = await searchRakutenItems("知育ドリル 6歳", 3);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-purple-50 to-violet-50">
       <ArticleSchema
@@ -285,6 +289,7 @@ export default function Page() {
 
         </div>
 
+        <RakutenProducts items={products} />
         <RelatedArticles currentSlug="how-6year-learn" />
 
       </article>

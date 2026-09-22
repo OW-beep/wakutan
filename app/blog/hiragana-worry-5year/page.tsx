@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import { searchRakutenItems } from "@/lib/rakuten";
+import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
   title: "5歳でひらがなが読めない・書けない…親の不安解消法｜わくたん",
@@ -11,7 +13,9 @@ export const metadata = {
   },
 };
 
-export default function Page() {
+export default async function Page() {
+  const products = await searchRakutenItems("ひらがな 練習 ドリル", 3);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
@@ -208,6 +212,7 @@ export default function Page() {
 
         </div>
 
+        <RakutenProducts items={products} />
         <RelatedArticles currentSlug="hiragana-worry-5year" />
 
       </article>

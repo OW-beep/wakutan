@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import { searchRakutenItems } from "@/lib/rakuten";
+import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
   title: "子どものお金の教育は何歳から？｜わくたん",
@@ -11,7 +13,9 @@ export const metadata = {
   },
 };
 
-export default function Page() {
+export default async function Page() {
+  const products = await searchRakutenItems("子供 お金 知育", 3);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
@@ -165,6 +169,7 @@ export default function Page() {
 
         </div>
 
+        <RakutenProducts items={products} />
         <RelatedArticles currentSlug="money-education-age" />
 
       </article>

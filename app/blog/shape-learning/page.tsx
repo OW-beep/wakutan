@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import { searchRakutenItems } from "@/lib/rakuten";
+import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
   title: "図形遊びの効果｜図形感覚・空間認識力を育てよう｜わくたん",
@@ -11,7 +13,9 @@ export const metadata = {
   },
 };
 
-export default function Page() {
+export default async function Page() {
+  const products = await searchRakutenItems("図形 知育パズル", 3);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
@@ -185,6 +189,7 @@ export default function Page() {
 
         </div>
 
+        <RakutenProducts items={products} />
         <RelatedArticles currentSlug="shape-learning" />
 
       </article>

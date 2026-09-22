@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import { searchRakutenItems } from "@/lib/rakuten";
+import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
   title: "習い事は何を基準に選ぶ？4〜6歳の習い事選びで大切にしたい考え方｜わくたん",
@@ -11,7 +13,9 @@ export const metadata = {
   },
 };
 
-export default function Page() {
+export default async function Page() {
+  const products = await searchRakutenItems("幼児 習い事 知育", 3);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange-50">
       <ArticleSchema
@@ -166,6 +170,7 @@ export default function Page() {
           </p>
         </div>
 
+        <RakutenProducts items={products} />
         <RelatedArticles currentSlug="narai-shindan-guide" />
       </article>
     </main>
