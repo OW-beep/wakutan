@@ -548,8 +548,7 @@ export function generate6Questions() {
   });
 
   [
-    ...generateRiddleQuestions(6950, 2, 6),
-    ...generateRiddleQuestions(6960, 3, 8),
+    ...generateRiddleQuestions(6960, 3, 10),
   ].forEach(q => {
     nazonazo.push({
       genre: "🧩 なぞなぞ",

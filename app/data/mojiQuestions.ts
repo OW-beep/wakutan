@@ -54,9 +54,9 @@ export function generateFactLookupQuestions(seed: number, count: number): Simple
     const honorific = rand() > 0.5 ? "くん" : "さん";
 
     qs.push({
-      question: `${name}${honorific}の ${tpl.attr}は ${value}です。${name}${honorific}の ${tpl.attr}は？`,
+      question: `${name}${honorific}が「わたしの ${tpl.attr}は ${value}だよ」と おしえてくれました。${name}${honorific}の ${tpl.attr}は なに？`,
       answer: value,
-      explanation: `ぶんのなかに「${tpl.attr}は ${value}」と かいてあるよ。`,
+      explanation: `${name}${honorific}が「${tpl.attr}は ${value}」と いっていたね。`,
     });
   }
 
