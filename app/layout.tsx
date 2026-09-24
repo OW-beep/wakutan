@@ -97,7 +97,7 @@ export default function RootLayout({
         />
 
         {/* ヘッダー */}
-        <header className="bg-white border-b shadow-sm">
+        <header className="bg-white border-b shadow-sm print-hide">
           <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
             <Link
@@ -123,7 +123,7 @@ export default function RootLayout({
         </main>
 
         {/* フッター */}
-        <footer className="bg-white border-t mt-20">
+        <footer className="bg-white border-t mt-20 print-hide">
           <div className="max-w-6xl mx-auto px-6 py-10">
 
             <div className="grid md:grid-cols-2 gap-8">
