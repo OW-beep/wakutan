@@ -20,7 +20,7 @@ type Props = {
  */
 export default function GenreNav({ items, accentText, accentBorder, accentBg }: Props) {
   return (
-    <div className="max-w-5xl mx-auto px-6 mb-10">
+    <div className="max-w-5xl mx-auto px-6 mb-10 print-hide">
       <h2 className={`text-xl font-bold mb-4 ${accentText}`}>
         📚 もんだいの しゅるい
       </h2>

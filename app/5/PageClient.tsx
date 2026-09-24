@@ -47,6 +47,11 @@ export default function PageClient() {
           .print-hide {
             display: none;
           }
+
+          .print-avoid-break {
+            break-inside: avoid;
+            page-break-inside: avoid;
+          }
         }
       `}</style>
 
@@ -76,7 +81,7 @@ export default function PageClient() {
 
             <div
               key={index}
-              className="bg-white rounded-3xl shadow p-6"
+              className="bg-white rounded-3xl shadow p-6 print-avoid-break"
             >
 
               <div className="text-lg font-bold mb-2 text-blue-600">

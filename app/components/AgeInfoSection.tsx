@@ -39,7 +39,7 @@ export default function AgeInfoSection({
   relatedArticles,
 }: Props) {
   return (
-    <div className="max-w-5xl mx-auto px-6 pb-10 space-y-8">
+    <div className="max-w-5xl mx-auto px-6 pb-10 space-y-8 print-hide">
 
       {/* この年齢の特徴 */}
       <section className="bg-white rounded-3xl shadow p-8">

@@ -6,6 +6,8 @@ export type SimpleQuestion = {
   question: string;
   answer: string;
   explanation: string;
+  /** 1桁の数どうしを比べる問題用：絵文字を個数分ならべて縦に比較できるようにする行データ */
+  compareRows?: { emoji: string; count: number; counter?: string; label?: string }[];
 };
 
 function seededRandom(seed: number): () => number {
@@ -35,9 +37,18 @@ const ITEMS: { emoji: string; word: string; counter: string }[] = [
   { emoji: "🚗", word: "くるま", counter: "だい" },
 ];
 
-/** 数量を絵文字を並べて視覚的に見せるための文字列（例：🎈🎈🎈🎈 ふうせんが 4こ） */
-function countedLabel(item: { emoji: string; word: string; counter: string }, n: number): string {
-  return `${item.emoji.repeat(n)} ${item.word}が ${n}${item.counter}`;
+/** 1桁（9こ以下）のときだけ、絵文字を並べて縦にくらべられる行データをつくる */
+function rowsIfSingleDigit(
+  item1: { emoji: string; word: string; counter: string },
+  a: number,
+  item2: { emoji: string; word: string; counter: string },
+  b: number
+): { emoji: string; count: number; counter?: string; label?: string }[] | undefined {
+  if (a > 9 || b > 9) return undefined;
+  return [
+    { emoji: item1.emoji, count: a, counter: item1.counter, label: item1.word },
+    { emoji: item2.emoji, count: b, counter: item2.counter, label: item2.word },
+  ];
 }
 
 /**
@@ -60,9 +71,10 @@ export function generateQuantityCompareQuestions(seed: number, count: number): S
     const answer = askMore ? `${bigger}${item.counter}` : `${smaller}${item.counter}`;
 
     qs.push({
-      question: `${countedLabel(item, a)} と ${countedLabel(item, b)}、どちらが ${askMore ? "おおい" : "すくない"}？`,
+      question: `${item.emoji}${item.word} ${a}${item.counter} と ${item.emoji}${item.word} ${b}${item.counter}、どちらが ${askMore ? "おおい" : "すくない"}？`,
       answer,
       explanation: `${smaller}${item.counter}より ${bigger}${item.counter}の ほうが おおいよ。`,
+      compareRows: rowsIfSingleDigit(item, a, item, b),
     });
   }
 
@@ -88,9 +100,10 @@ export function generateDifferenceQuestions(seed: number, count: number): Simple
     const diff = Math.abs(a - b);
 
     qs.push({
-      question: `${countedLabel(item1, a)}、${countedLabel(item2, b)}。いくつ ちがう？`,
+      question: `${item1.emoji}${item1.word}が ${a}${item1.counter}、${item2.emoji}${item2.word}が ${b}${item2.counter}。いくつ ちがう？`,
       answer: `${diff}${item1.counter}`,
       explanation: `${Math.max(a, b)}-${Math.min(a, b)}=${diff}${item1.counter}だよ。`,
+      compareRows: rowsIfSingleDigit(item1, a, item2, b),
     });
   }
 
@@ -103,9 +116,10 @@ export function generateSameQuantityQuestions(seed: number, count: number): Simp
     const item = ITEMS[Math.floor(rand() * ITEMS.length)];
     const n = 1 + Math.floor(rand() * 9);
     qs.push({
-      question: `${countedLabel(item, n)} と ${countedLabel(item, n)}、どちらが おおい？`,
+      question: `${item.emoji}${item.word} ${n}${item.counter} と ${item.emoji}${item.word} ${n}${item.counter}、どちらが おおい？`,
       answer: "おなじ",
       explanation: `どちらも ${n}${item.counter}で おなじ かずだよ。`,
+      compareRows: rowsIfSingleDigit(item, n, item, n),
     });
   }
   return qs;

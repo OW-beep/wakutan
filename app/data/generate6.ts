@@ -36,6 +36,7 @@ type Question = {
   dotFigure?: DotFigure;
   suiriScene?: string;
   comparePeople?: string[];
+  compareRows?: { emoji: string; count: number; counter?: string; label?: string }[];
   flagKey?: string;
   flagKeys?: string[];
 };
@@ -372,6 +373,7 @@ export function generate6Questions() {
       question: q.question,
       answer: q.answer,
       explanation: q.explanation,
+      compareRows: q.compareRows,
     });
   });
 

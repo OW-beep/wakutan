@@ -8,6 +8,7 @@ import DotFigureCopy from "./DotFigureCopy";
 import SuiriScene from "./SuiriScene";
 import ComparePeople from "./ComparePeople";
 import FlagIcon from "./FlagIcon";
+import EmojiRows from "./EmojiRows";
 
 type Question = {
   genre: string;
@@ -20,6 +21,7 @@ type Question = {
   dotFigure?: { gridSize: number; lines: [[number, number], [number, number]][] };
   suiriScene?: string;
   comparePeople?: string[];
+  compareRows?: { emoji: string; count: number; counter?: string; label?: string }[];
   flagKey?: string;
   flagKeys?: string[];
 };
@@ -48,6 +50,11 @@ export default function QuestionList({
           .print-hide {
             display: none;
           }
+
+          .print-avoid-break {
+            break-inside: avoid;
+            page-break-inside: avoid;
+          }
         }
       `}</style>
 
@@ -57,7 +64,7 @@ export default function QuestionList({
 
           <div
             key={index}
-            className="bg-white p-5 rounded-2xl shadow"
+            className="bg-white p-5 rounded-2xl shadow print-avoid-break"
           >
 
             <div className={`font-bold mb-2 ${accentText}`}>
@@ -87,6 +94,8 @@ export default function QuestionList({
             )}
 
             {q.comparePeople && <ComparePeople names={q.comparePeople} />}
+
+            {q.compareRows && <EmojiRows rows={q.compareRows} />}
 
             {q.flagKey && !q.flagKeys && (
               <div className="flex justify-center mb-3">

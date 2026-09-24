@@ -88,13 +88,39 @@ export async function searchRakutenItems(keyword: string, hits = 3): Promise<Rak
   // アプリ登録時に指定した「Allowed websites」のドメインとRefererが一致しないと弾かれる
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://wakutan.vercel.app";
 
+  const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  // ビルド時（静的生成）は数十ページ分のリクエストがほぼ同時に走るため、
+  // 楽天側のレート制限（429 Too Many Requests）に引っかかりやすい。
+  // 429のときだけ少し待って最大3回までリトライする（他のエラーは即座に諦める）。
+  const MAX_ATTEMPTS = 3;
+  let res: Response;
+  let rawText: string;
+
+  for (let attempt = 1; ; attempt++) {
+    try {
+      res = await fetch(`${ENDPOINT}?${query}`, {
+        headers: { Referer: siteUrl, Origin: siteUrl },
+        // 楽天APIの呼び出し回数を抑えるため、同じキーワードの結果は1日キャッシュする
+        next: { revalidate: 60 * 60 * 24 }
+      });
+    } catch (err) {
+      console.warn(`[rakuten] 「${keyword}」の検索中に例外が発生しました:`, err);
+      return null;
+    }
+
+    if (res.status === 429 && attempt < MAX_ATTEMPTS) {
+      const waitMs = 1500 * attempt;
+      console.warn(`[rakuten] 「${keyword}」が429（レート制限）。${waitMs}ms待ってリトライします（${attempt}/${MAX_ATTEMPTS}）`);
+      await sleep(waitMs);
+      continue;
+    }
+
+    rawText = await res.text();
+    break;
+  }
+
   try {
-    const res = await fetch(`${ENDPOINT}?${query}`, {
-      headers: { Referer: siteUrl, Origin: siteUrl },
-      // 楽天APIの呼び出し回数を抑えるため、同じキーワードの結果は1日キャッシュする
-      next: { revalidate: 60 * 60 * 24 }
-    });
-    const rawText = await res.text();
     let data: RakutenSearchResponse = {};
     try {
       data = JSON.parse(rawText);
