@@ -101,3 +101,25 @@ body {
     transition: none !important;
   }
 }
+
+/* ============================================================
+   印刷まわり（サイト全体で共通）
+   もともと各ページ（PageClient.tsx / QuestionList.tsx）内の
+   <style jsx global> にバラバラに書いていたが、確実に効かせるため
+   ここ（ビルド時にコンパイルされるグローバルCSS）に一本化する。
+   印刷時は「タイトル＋問題」だけが残るようにする。
+   ============================================================ */
+@media print {
+  button {
+    display: none !important;
+  }
+
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

@@ -40,23 +40,6 @@ export default function PageClient() {
 
   return (
     <>
-      <style jsx global>{`
-        @media print {
-          button {
-            display: none;
-          }
-
-          .print-hide {
-            display: none;
-          }
-
-          .print-avoid-break {
-            break-inside: avoid;
-            page-break-inside: avoid;
-          }
-        }
-      `}</style>
-
       <div className="max-w-5xl mx-auto px-6 pb-10">
 
         {/* ヘッダー */}

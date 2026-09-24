@@ -41,23 +41,6 @@ export default function QuestionList({
 
   return (
     <>
-      <style jsx global>{`
-        @media print {
-          button {
-            display: none;
-          }
-
-          .print-hide {
-            display: none;
-          }
-
-          .print-avoid-break {
-            break-inside: avoid;
-            page-break-inside: avoid;
-          }
-        }
-      `}</style>
-
       <div className="space-y-4">
 
         {questions.map((q, index) => (
