@@ -5,9 +5,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "5歳の学び方・勉強のコツ｜わくたん",
+  title: "5歳の学び方・勉強のコツ｜年中さん向けの関わり方｜わくたん",
   description:
-    "5歳児の勉強・学び方のコツを解説。考える力や集中力を育てながら楽しく学習する関わり方を紹介します。",
+    "5歳（年中〜年長）の勉強・学び方のコツを解説。考える力や集中力を育てながら、楽しく学習を続けるための関わり方を紹介します。",
   alternates: {
     canonical: "/blog/how-5year-learn",
   },
@@ -19,11 +19,11 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-sky-50 to-indigo-50">
       <ArticleSchema
-        title="5歳の学び方・勉強のコツ｜わくたん"
-        description="5歳児の勉強・学び方のコツを解説。考える力や集中力を育てながら楽しく学習する関わり方を紹介します。"
+        title="5歳の学び方・勉強のコツ｜年中さん向けの関わり方｜わくたん"
+        description="5歳（年中〜年長）の勉強・学び方のコツを解説。考える力や集中力を育てながら、楽しく学習を続けるための関わり方を紹介します。"
         slug="how-5year-learn"
         datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        dateModified="2026-09-25"
       />
 
 

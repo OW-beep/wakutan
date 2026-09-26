@@ -5,9 +5,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "小学校入学準備チェックリスト・学用品一覧｜わくたん",
+  title: "小学校入学に必要なものは？準備チェックリスト・学用品一覧｜わくたん",
   description:
-    "小学校入学前に確認しておきたい準備を、学用品一覧・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。",
+    "小学校入学に必要なものは何？入学前に確認しておきたい準備を、学用品一覧・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。",
   alternates: {
     canonical: "/blog/school-checklist",
   },
@@ -19,11 +19,11 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
-        title="小学校入学準備チェックリスト・学用品一覧｜わくたん"
-        description="小学校入学前に確認しておきたい準備を、学用品一覧・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。"
+        title="小学校入学に必要なものは？準備チェックリスト・学用品一覧｜わくたん"
+        description="小学校入学に必要なものは何？入学前に確認しておきたい準備を、学用品一覧・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。"
         slug="school-checklist"
         datePublished="2026-06-01"
-        dateModified="2026-09-18"
+        dateModified="2026-09-26"
       />
 
 

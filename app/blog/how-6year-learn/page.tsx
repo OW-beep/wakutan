@@ -5,9 +5,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "6歳の学び方・勉強のコツ｜わくたん",
+  title: "6歳（年長）の学び方・勉強のコツ｜家庭学習のおすすめ｜わくたん",
   description:
-    "6歳児の勉強・学び方のコツを解説。小学校入学前に育てたい力や家庭学習のポイントを紹介します。",
+    "6歳・年長さんの勉強・学び方のコツを解説。小学校入学前に育てたい力や、おすすめの家庭学習のポイントを紹介します。",
   alternates: {
     canonical: "/blog/how-6year-learn",
   },
@@ -19,11 +19,11 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-purple-50 to-violet-50">
       <ArticleSchema
-        title="6歳の学び方・勉強のコツ｜わくたん"
-        description="6歳児の勉強・学び方のコツを解説。小学校入学前に育てたい力や家庭学習のポイントを紹介します。"
+        title="6歳（年長）の学び方・勉強のコツ｜家庭学習のおすすめ｜わくたん"
+        description="6歳・年長さんの勉強・学び方のコツを解説。小学校入学前に育てたい力や、おすすめの家庭学習のポイントを紹介します。"
         slug="how-6year-learn"
         datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        dateModified="2026-09-25"
       />
 
 
@@ -36,11 +36,11 @@ export default async function Page() {
           </div>
 
           <h1 className="text-4xl font-extrabold text-purple-700 mb-4">
-            6歳の学び方
+            6歳（年長）の学び方
           </h1>
 
           <p className="text-lg leading-8">
-            6歳は小学校入学を目前に控えた大切な時期です。
+            6歳・年長さんは小学校入学を目前に控えた大切な時期です。
             文字や数字への理解が深まり、
             学習への興味も大きく成長します。
           </p>

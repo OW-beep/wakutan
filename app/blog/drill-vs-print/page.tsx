@@ -5,9 +5,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "市販ドリル vs 無料プリント どっちがいい？｜わくたん",
+  title: "市販ドリルと無料プリント、結局どっちがいい？｜わが家の使い分け方｜わくたん",
   description:
-    "市販の幼児向けドリルと無料の印刷プリント、それぞれのメリット・デメリットを比較し、上手な使い分け方を紹介します。",
+    "市販ドリルと無料プリント、どちらがいいか迷う方へ。それぞれのメリット・デメリットと、わが家での上手な使い分け方を紹介します。",
   alternates: {
     canonical: "/blog/drill-vs-print",
   },
@@ -19,11 +19,11 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
-        title="市販ドリル vs 無料プリント どっちがいい？｜わくたん"
-        description="市販の幼児向けドリルと無料の印刷プリント、それぞれのメリット・デメリットを比較し、上手な使い分け方を紹介します。"
+        title="市販ドリルと無料プリント、結局どっちがいい？｜わが家の使い分け方｜わくたん"
+        description="市販ドリルと無料プリント、どちらがいいか迷う方へ。それぞれのメリット・デメリットと、わが家での上手な使い分け方を紹介します。"
         slug="drill-vs-print"
         datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        dateModified="2026-09-25"
       />
 
 

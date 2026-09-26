@@ -5,9 +5,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "図形遊びの効果｜図形感覚・空間認識力を育てよう｜わくたん",
+  title: "図形遊び・図形模写の効果｜図形感覚・空間認識力を育てよう｜わくたん",
   description:
-    "図形遊びは空間認識力や図形感覚、考える力を育てる知育遊びです。4〜6歳向けに図形遊びのメリットと、小学校の学習へのつながりを紹介します。",
+    "図形遊びや図形模写（お手本を見て同じ形を描く遊び）は、空間認識力や図形感覚、考える力を育てる知育遊びです。4〜6歳向けに図形遊びのメリットと、小学校の学習へのつながりを紹介します。",
   alternates: {
     canonical: "/blog/shape-learning",
   },
@@ -19,11 +19,11 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
-        title="図形遊びの効果｜図形感覚・空間認識力を育てよう｜わくたん"
-        description="図形遊びは空間認識力や図形感覚、考える力を育てる知育遊びです。4〜6歳向けに図形遊びのメリットと、小学校の学習へのつながりを紹介します。"
+        title="図形遊び・図形模写の効果｜図形感覚・空間認識力を育てよう｜わくたん"
+        description="図形遊びや図形模写（お手本を見て同じ形を描く遊び）は、空間認識力や図形感覚、考える力を育てる知育遊びです。4〜6歳向けに図形遊びのメリットと、小学校の学習へのつながりを紹介します。"
         slug="shape-learning"
         datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        dateModified="2026-09-25"
       />
 
 
@@ -34,7 +34,7 @@ export default async function Page() {
           <div className="text-5xl mb-3">🔺</div>
 
           <h1 className="text-4xl font-extrabold text-orange-700 mb-3">
-            図形遊びの効果｜図形感覚・空間認識力を育てよう
+            図形遊び・図形模写の効果｜図形感覚・空間認識力を育てよう
           </h1>
 
           <p className="text-lg text-gray-700">
@@ -44,6 +44,7 @@ export default async function Page() {
         </div>
         <p className="text-lg leading-8 mb-6">
           丸・三角・四角など、身の回りにあふれる図形。図形遊びは、算数の学習につながる大切な感覚を育てます。
+          お手本と同じ形を見て描く「図形模写」も、図形遊びの代表的な方法のひとつです。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -52,6 +53,21 @@ export default async function Page() {
 
         <p className="leading-8 mb-4">
           積み木やパズルで図形に触れる経験を通して、形の特徴を感覚的に理解する力が育ちます。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          図形模写のやり方
+        </h2>
+
+        <p className="leading-8 mb-4">
+          図形模写は、お手本の図形を見ながら、同じ形を別の場所に描き写す遊びです。
+          点と点を結んで形をなぞる「点つなぎ」に近い遊び方から始めると、無理なく取り組めます。
+        </p>
+
+        <p className="leading-8 mb-4">
+          最初は丸や三角など単純な形から、慣れてきたら組み合わさった形へと進めていくと、
+          「よく見て、同じように再現する」という力が少しずつ育っていきます。
+          わくたんの「おなじかたち」ドリルも、この図形模写に近い感覚で取り組める内容にしています。
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">

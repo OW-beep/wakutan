@@ -7,6 +7,7 @@ export type BlogMetaEntry = {
 };
 
 export const blogMeta: BlogMetaEntry[] = [
+  { slug: "nencho-katei-gakushu", title: "年長さんの家庭学習、何をすればいい？1年間の進め方", category: "小学校入学準備" },
   { slug: "akachan-gaeri", title: "赤ちゃん返りが心配になったら知ってほしい3つ", category: "保護者向け" },
   { slug: "chiiku-otoshiana", title: "9割の親がやりがちな、知育の落とし穴3つ", category: "学習習慣・声かけ" },
   { slug: "self-time-childcare", title: "「自分の時間が全然ない」と感じたときに大切な3つの視点", category: "保護者向け" },

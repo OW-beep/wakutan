@@ -226,6 +226,12 @@ const parentArticles = [
     desc: "学用品だけじゃない本当に大切な準備",
   },
   {
+    href: "/blog/nencho-katei-gakushu",
+    emoji: "🎒",
+    title: "年長さんの家庭学習、何をすればいい？",
+    desc: "1年間の進め方の目安",
+  },
+  {
     href: "/blog/improve-concentration",
     emoji: "🎯",
     title: "幼児の集中力を伸ばす方法",

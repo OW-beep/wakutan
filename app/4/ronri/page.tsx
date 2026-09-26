@@ -5,9 +5,9 @@ import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "4歳向け論理問題｜わくたん",
+  title: "4歳向け論理問題｜きまりを見つける無料ドリル｜わくたん",
   description:
-    "4歳向け無料論理ドリル。順番やきまりを考える問題を毎日更新。無料で印刷OK。",
+    "4歳向け無料論理ドリル。「つぎはどれ？」順番やきまりを考える問題を毎日更新。印刷・登録不要ですぐ挑戦できます。",
   alternates: {
     canonical: "/4/ronri",
   },

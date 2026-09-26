@@ -5,9 +5,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "プリント学習のメリット｜わくたん",
+  title: "プリント学習のメリットとは？家庭学習を続けるコツ｜わくたん",
   description:
-    "幼児向けプリント学習のメリットを解説。集中力・思考力・学習習慣を育てる家庭学習のコツも紹介します。",
+    "幼児向けプリント学習には、どんなメリットがある？集中力・思考力・学習習慣を育てる理由と、家庭学習を無理なく続けるコツを紹介します。",
   alternates: {
     canonical: "/blog/print-learning",
   },
@@ -19,11 +19,11 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
-        title="プリント学習のメリット｜わくたん"
-        description="幼児向けプリント学習のメリットを解説。集中力・思考力・学習習慣を育てる家庭学習のコツも紹介します。"
+        title="プリント学習のメリットとは？家庭学習を続けるコツ｜わくたん"
+        description="幼児向けプリント学習には、どんなメリットがある？集中力・思考力・学習習慣を育てる理由と、家庭学習を無理なく続けるコツを紹介します。"
         slug="print-learning"
         datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        dateModified="2026-09-25"
       />
 
 
