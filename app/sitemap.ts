@@ -61,11 +61,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/category/age",
     "/category/parent",
     "/narai-shindan",
+    "/search",
 
     "/contact",
     "/privacy-policy",
     "/terms",
 
+    "/blog/print-builder-guide",
+    "/blog/kodomo-hikaku-tebanasu",
     "/blog/nencho-katei-gakushu",
     "/blog/akachan-gaeri",
     "/blog/chiiku-otoshiana",

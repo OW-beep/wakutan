@@ -1,6 +1,9 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import FavoriteButton from "@/app/components/FavoriteButton";
+import AdUnit from "@/app/components/AdUnit";
+import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
 import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
@@ -355,6 +358,8 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
         </div>
 
         <RakutenProducts items={products} />
+        <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
+        <FavoriteButton href="/blog/how-4year-learn" title="4歳の学び方・勉強のコツ" />
         <RelatedArticles currentSlug="how-4year-learn" />
 
       </article>

@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "flag-icons/css/flag-icons.min.css";
 import Script from "next/script";
+import ServiceWorkerRegister from "@/app/components/ServiceWorkerRegister";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -61,6 +62,8 @@ export default function RootLayout({
     >
       <body className="bg-yellow-50 text-gray-800 min-h-screen flex flex-col">
 
+        <ServiceWorkerRegister />
+
         {/* AdSense */}
         <Script
           strategy="afterInteractive"
@@ -113,6 +116,8 @@ export default function RootLayout({
               <Link href="/6">6さい</Link>
               <Link href="/narai-shindan">習い事診断</Link>
               <Link href="/articles">記事一覧</Link>
+              <Link href="/favorites">⭐</Link>
+              <Link href="/search">🔍</Link>
             </nav>
 
           </div>
@@ -146,6 +151,8 @@ export default function RootLayout({
                 <Link href="/about">わくたんについて</Link>
                 <Link href="/narai-shindan">習い事診断</Link>
                 <Link href="/articles">記事一覧</Link>
+                <Link href="/favorites">お気に入り</Link>
+                <Link href="/search">サイト内検索</Link>
                 <Link href="/privacy-policy">プライバシーポリシー</Link>
                 <Link href="/terms">利用規約</Link>
                 <Link href="/contact">お問い合わせ</Link>

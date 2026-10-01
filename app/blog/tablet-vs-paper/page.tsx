@@ -1,6 +1,9 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import FavoriteButton from "@/app/components/FavoriteButton";
+import AdUnit from "@/app/components/AdUnit";
+import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
 import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
@@ -166,6 +169,8 @@ export default async function Page() {
         </div>
 
         <RakutenProducts items={products} />
+        <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
+        <FavoriteButton href="/blog/tablet-vs-paper" title="タブレット学習と紙のドリル、どう使い分ける？" />
         <RelatedArticles currentSlug="tablet-vs-paper" />
 
       </article>

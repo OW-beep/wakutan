@@ -1,6 +1,9 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import FavoriteButton from "@/app/components/FavoriteButton";
+import AdUnit from "@/app/components/AdUnit";
+import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
 import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
@@ -186,6 +189,8 @@ export default async function Page() {
         </div>
 
         <RakutenProducts items={products} />
+        <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
+        <FavoriteButton href="/blog/when-start-numbers" title="数字は何歳から覚える？年齢別の教え方を解説" />
         <RelatedArticles currentSlug="when-start-numbers" />
 
       </article>

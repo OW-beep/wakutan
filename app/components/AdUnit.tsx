@@ -35,13 +35,21 @@ type Props = {
  */
 export default function AdUnit({ slot, className, style }: Props) {
   useEffect(() => {
+    // まだ本物の広告ユニットIDに差し替えていない間は、AdSenseへの読み込み要求そのものを送らない
+    if (slot === "REPLACE_WITH_AD_UNIT_ID") return;
+
     try {
       // @ts-expect-error adsbygoogleはグローバルに読み込まれるAdSenseのスクリプトが定義する
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch {
       // AdSenseのスクリプト読み込み前など、失敗しても致命的ではないので握りつぶす
     }
-  }, []);
+  }, [slot]);
+
+  // 審査待ち・広告ユニット未作成の間（app/data/adSlots.ts が未設定のプレースホルダーのまま）は、
+  // 何も描画しない。AdSense側の「未配信時は自動で折りたたまれる」挙動には頼らず、
+  // ここで確実に非表示にする。
+  if (slot === "REPLACE_WITH_AD_UNIT_ID") return null;
 
   return (
     <ins

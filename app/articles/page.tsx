@@ -127,6 +127,12 @@ const learningArticles = [
     desc: "特徴を知って上手に使い分ける",
   },
   {
+    href: "/blog/print-builder-guide",
+    emoji: "🖨️",
+    title: "オリジナルプリントの作り方",
+    desc: "苦手なジャンルだけを選んで印刷ビルダーで復習",
+  },
+  {
     href: "/blog/tablet-vs-paper",
     emoji: "📱",
     title: "タブレット学習と紙のドリル、どう使い分ける？",
@@ -201,6 +207,12 @@ const playArticles = [
 ];
 
 const parentArticles = [
+  {
+    href: "/blog/kodomo-hikaku-tebanasu",
+    emoji: "🌱",
+    title: "「よその子と比べてしまう」を手放す",
+    desc: "成長のスピードは一人ひとりちがう",
+  },
   {
     href: "/blog/akachan-gaeri",
     emoji: "🍼",

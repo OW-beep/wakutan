@@ -484,6 +484,19 @@ function ResultView({
         </div>
       </div>
 
+      <div className="text-center">
+        <a
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+            `わが家の診断結果は「${typeLabel(answers, first)}」でした🌈\nおすすめは${first.category.emoji}${first.category.name}！\n#わくたん習い事診断`
+          )}&url=${encodeURIComponent("https://wakutan.vercel.app/narai-shindan")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-2xl font-bold hover:opacity-90 transition wt-btn-pop"
+        >
+          𝕏 で診断結果をシェアする
+        </a>
+      </div>
+
       {gap?.hasGap && (
         <div className="bg-blue-50 border-l-4 border-blue-400 rounded-2xl p-6">
           <p className="font-bold mb-2">💡 こんな組み合わせも考えられます</p>

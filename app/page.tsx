@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import TodayEncouragement from "@/app/components/TodayEncouragement";
 
 export const metadata: Metadata = {
   title: "4歳〜6歳向け無料知育ドリル",
@@ -143,6 +144,10 @@ export default function Home() {
         </div>
 
       </section>      
+
+      <div className="max-w-3xl mx-auto px-6">
+        <TodayEncouragement />
+      </div>
 
       {/* 習い事診断 */}
       <section className="max-w-6xl mx-auto px-6 mb-14">

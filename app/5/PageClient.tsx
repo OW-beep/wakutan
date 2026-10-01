@@ -1,5 +1,8 @@
 "use client";
 
+import StickerBoard from "@/app/components/StickerBoard";
+import SpeakButton from "@/app/components/SpeakButton";
+
 import { useMemo, useState } from "react";
 import { generate5Questions } from "../data/generate5";
 import { pickDailyPreview } from "../data/dailyPreview";
@@ -57,6 +60,8 @@ export default function PageClient() {
 
         </div>
 
+        <StickerBoard />
+
         {/* 問題 */}
         <div className="grid gap-5">
 
@@ -81,8 +86,9 @@ export default function PageClient() {
 
               {q.dotFigure && <DotFigureCopy figure={q.dotFigure} />}
 
-              <div className="text-xl leading-8">
-                {index + 1}. {q.question}
+              <div className="text-xl leading-8 flex items-start gap-2">
+                <span className="flex-1">{index + 1}. {q.question}</span>
+                <SpeakButton text={q.question} />
               </div>
 
               {showAnswer && (

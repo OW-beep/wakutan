@@ -9,6 +9,7 @@ import SuiriScene from "./SuiriScene";
 import ComparePeople from "./ComparePeople";
 import FlagIcon from "./FlagIcon";
 import EmojiRows from "./EmojiRows";
+import SpeakButton from "./SpeakButton";
 
 type Question = {
   genre: string;
@@ -106,8 +107,9 @@ export default function QuestionList({
               </div>
             )}
 
-            <div className="text-lg mb-2">
-              {q.question}
+            <div className="text-lg mb-2 flex items-start gap-2">
+              <span className="flex-1">{q.question}</span>
+              <SpeakButton text={q.question} />
             </div>
 
             {showAnswer && (

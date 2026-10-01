@@ -1,6 +1,9 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import FavoriteButton from "@/app/components/FavoriteButton";
+import AdUnit from "@/app/components/AdUnit";
+import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
 import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
@@ -205,6 +208,8 @@ export default async function Page() {
         </div>
 
         <RakutenProducts items={products} />
+        <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
+        <FavoriteButton href="/blog/skills-by-age" title="4歳・5歳・6歳の発達段階別 「今」伸ばしたい力" />
         <RelatedArticles currentSlug="skills-by-age" />
 
       </article>
