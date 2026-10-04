@@ -3,6 +3,7 @@ import Link from "next/link";
 import { generate6Questions } from "../../data/generate6";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 import Breadcrumb from "../../components/Breadcrumb";
+import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
   title: "6歳向け論理問題｜わくたん",
@@ -63,6 +64,7 @@ export default function Page() {
           <p><span className="font-bold">⏱ めやす時間：</span>10〜15分</p>
         </div>
 
+        <GenreAbilityBox genreKey="ronri" />
         <QuestionList
           questions={questions}
           accentText="text-blue-700"

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { generate6Questions } from "../../data/generate6";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 import Breadcrumb from "../../components/Breadcrumb";
+import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
   title: "6歳向けなかまはずれ問題｜考える力を伸ばす無料ドリル｜わくたん",
@@ -63,6 +64,7 @@ export default function Page() {
           <p><span className="font-bold">⏱ めやす時間：</span>10〜15分</p>
         </div>
 
+        <GenreAbilityBox genreKey="nakamahazure" />
         <QuestionList
           questions={questions}
           accentText="text-rose-700"

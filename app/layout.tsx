@@ -117,6 +117,7 @@ export default function RootLayout({
               <Link href="/narai-shindan">習い事診断</Link>
               <Link href="/articles">記事一覧</Link>
               <Link href="/favorites">⭐</Link>
+              <Link href="/review">📌</Link>
               <Link href="/search">🔍</Link>
             </nav>
 
@@ -152,6 +153,7 @@ export default function RootLayout({
                 <Link href="/narai-shindan">習い事診断</Link>
                 <Link href="/articles">記事一覧</Link>
                 <Link href="/favorites">お気に入り</Link>
+                <Link href="/review">ふくしゅうリスト</Link>
                 <Link href="/search">サイト内検索</Link>
                 <Link href="/privacy-policy">プライバシーポリシー</Link>
                 <Link href="/terms">利用規約</Link>

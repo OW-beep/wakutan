@@ -3,6 +3,7 @@ import Link from "next/link";
 import { generate5Questions } from "../../data/generate5";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 import Breadcrumb from "../../components/Breadcrumb";
+import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
   title: "5歳向けつみき問題（空間認知）｜わくたん",
@@ -63,6 +64,7 @@ export default function Page() {
           <p><span className="font-bold">⏱ めやす時間：</span>5分</p>
         </div>
 
+        <GenreAbilityBox genreKey="tsumiki" />
         <QuestionList
           questions={questions}
           accentText="text-cyan-700"

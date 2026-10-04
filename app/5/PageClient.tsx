@@ -2,8 +2,10 @@
 
 import StickerBoard from "@/app/components/StickerBoard";
 import SpeakButton from "@/app/components/SpeakButton";
+import AbilityPanel from "@/app/components/AbilityPanel";
+import AnswerReveal from "@/app/components/AnswerReveal";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { generate5Questions } from "../data/generate5";
 import { pickDailyPreview } from "../data/dailyPreview";
 import MoneyIllustration from "../components/MoneyIllustration";
@@ -11,8 +13,6 @@ import CubeStack from "../components/CubeStack";
 import DotFigureCopy from "../components/DotFigureCopy";
 
 export default function PageClient() {
-  const [showAnswer, setShowAnswer] = useState(false);
-
   const data = useMemo(() => generate5Questions(), []);
 
   // 「毎日10問」の表記どおり、その日ごとにジャンルをローテーションしながら
@@ -60,6 +60,7 @@ export default function PageClient() {
 
         </div>
 
+        <AbilityPanel />
         <StickerBoard />
 
         {/* 問題 */}
@@ -91,18 +92,13 @@ export default function PageClient() {
                 <SpeakButton text={q.question} />
               </div>
 
-              {showAnswer && (
-
-                <div className="mt-4">
-                  <div className="text-green-700 font-bold text-lg">
-                    こたえ：{q.answer}
-                  </div>
-                  <div className="text-gray-600 text-sm mt-1">
-                    🔍 かいせつ：{q.explanation}
-                  </div>
-                </div>
-
-              )}
+              <AnswerReveal
+                genre={q.genre}
+                question={q.question}
+                answer={q.answer}
+                explanation={q.explanation}
+                accentButton="bg-blue-500 hover:bg-blue-600"
+              />
 
             </div>
 
@@ -114,17 +110,8 @@ export default function PageClient() {
         <div className="mt-8 print-hide">
 
           <button
-            onClick={() => setShowAnswer(!showAnswer)}
-            className="w-full bg-blue-500 text-white p-4 rounded-2xl font-bold text-lg transition wt-btn-pop"
-          >
-            {showAnswer
-              ? "こたえをかくす"
-              : "こたえを見る"}
-          </button>
-
-          <button
             onClick={() => window.print()}
-            className="w-full mt-4 bg-green-500 text-white p-4 rounded-2xl font-bold text-lg transition wt-btn-pop"
+            className="w-full bg-green-500 text-white p-4 rounded-2xl font-bold text-lg transition wt-btn-pop"
           >
             🖨 印刷する
           </button>

@@ -1,6 +1,7 @@
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
+import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
@@ -64,6 +65,7 @@ export default function Page() {
           <p><span className="font-bold">⏱ めやす時間：</span>5〜10分</p>
         </div>
 
+        <GenreAbilityBox genreKey="ronri" />
         <QuestionList
           questions={questions}
           accentText="text-blue-600"

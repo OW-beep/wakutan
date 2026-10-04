@@ -3,6 +3,7 @@ import Link from "next/link";
 import { generate6Questions } from "../../data/generate6";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 import Breadcrumb from "../../components/Breadcrumb";
+import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
   title: "6歳向けおなじかたち問題（点図形の模写）｜わくたん",
@@ -63,6 +64,7 @@ export default function Page() {
           <p><span className="font-bold">⏱ めやす時間：</span>10分</p>
         </div>
 
+        <GenreAbilityBox genreKey="onajikatachi" />
         <QuestionList
           questions={questions}
           accentText="text-violet-700"

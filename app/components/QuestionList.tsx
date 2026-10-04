@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import ClockFace from "./ClockFace";
 import MoneyIllustration from "./MoneyIllustration";
 import CubeStack from "./CubeStack";
@@ -10,6 +9,7 @@ import ComparePeople from "./ComparePeople";
 import FlagIcon from "./FlagIcon";
 import EmojiRows from "./EmojiRows";
 import SpeakButton from "./SpeakButton";
+import AnswerReveal from "./AnswerReveal";
 
 type Question = {
   genre: string;
@@ -38,8 +38,6 @@ export default function QuestionList({
   accentText,
   accentButton,
 }: Props) {
-  const [showAnswer, setShowAnswer] = useState(false);
-
   return (
     <>
       <div className="space-y-4">
@@ -112,30 +110,18 @@ export default function QuestionList({
               <SpeakButton text={q.question} />
             </div>
 
-            {showAnswer && (
-              <div className="mt-3 pt-3 border-t border-dashed">
-                <div className="text-green-700 font-bold">
-                  こたえ：{q.answer}
-                </div>
-                <div className="text-gray-600 text-sm mt-1">
-                  🔍 かいせつ：{q.explanation}
-                </div>
-              </div>
-            )}
+            <AnswerReveal
+              genre={q.genre}
+              question={q.question}
+              answer={q.answer}
+              explanation={q.explanation}
+              accentButton={accentButton}
+            />
 
           </div>
 
         ))}
 
-      </div>
-
-      <div className="mt-6 print-hide">
-        <button
-          onClick={() => setShowAnswer(!showAnswer)}
-          className={`w-full text-white p-4 rounded-2xl font-bold text-lg transition wt-btn-pop ${accentButton}`}
-        >
-          {showAnswer ? "こたえをかくす" : "こたえ・かいせつを見る"}
-        </button>
       </div>
     </>
   );
