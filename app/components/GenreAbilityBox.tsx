@@ -1,3 +1,5 @@
+"use client";
+
 import { GENRE_ABILITIES } from "@/app/data/genreAbilities";
 import { STAT_LABEL, STAT_COLOR } from "@/lib/abilities";
 
