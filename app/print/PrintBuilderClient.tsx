@@ -5,6 +5,7 @@ import { generate4Questions } from "@/app/data/generate4";
 import { generate5Questions } from "@/app/data/generate5";
 import { generate6Questions } from "@/app/data/generate6";
 import QuestionList from "@/app/components/QuestionList";
+import PrintHeader from "@/app/components/PrintHeader";
 
 type Age = "4" | "5" | "6";
 
@@ -199,6 +200,8 @@ export default function PrintBuilderClient() {
           <h1 className="text-2xl font-bold mb-4">
             わくたん　オリジナルプリント（{AGE_LABEL[built.age]}）
           </h1>
+
+          <PrintHeader />
 
           <QuestionList
             questions={builtQuestions}

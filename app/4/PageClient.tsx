@@ -3,6 +3,7 @@
 import StickerBoard from "@/app/components/StickerBoard";
 import SpeakButton from "@/app/components/SpeakButton";
 import AbilityPanel from "@/app/components/AbilityPanel";
+import PrintHeader from "@/app/components/PrintHeader";
 import AnswerReveal from "@/app/components/AnswerReveal";
 
 import { useMemo } from "react";
@@ -53,6 +54,8 @@ export default function PageClient() {
             きょうの10もんにちょうせん！
           </p>
         </div>
+
+        <PrintHeader />
 
         <AbilityPanel />
         <StickerBoard />
