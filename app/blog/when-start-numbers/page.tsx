@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "数字は何歳から覚える？年齢別の教え方を解説｜わくたん",
+  title: "数字は何歳から覚える？年齢別の教え方を解説",
   description:
     "数字はいつから教え始めるとよいのか、年齢ごとの目安と教え方のコツを、データも交えて解説します。",
   alternates: {

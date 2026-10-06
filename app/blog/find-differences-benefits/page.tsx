@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "間違い探しの効果｜観察力・集中力・考える力が育つ｜わくたん",
+  title: "間違い探しの効果｜観察力・集中力・考える力が育つ",
   description:
     "間違い探しは観察力や集中力、考える力を育てる知育遊びです。4〜6歳向けに間違い探しの効果や、年齢別の難易度調整の仕方を紹介します。",
   alternates: {

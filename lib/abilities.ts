@@ -44,7 +44,45 @@ export const GENRE_STAT: Record<string, Exclude<StatKey, "shuuchuu">> = {
   pattern: "kuukan",
   kokki: "kioku",
   nazonazo: "kioku",
+  kaiten: "kuukan",
+  sentaisho: "kuukan",
+  mikata: "kuukan",
+  keiyoushi: "kotoba",
 };
+
+/**
+ * 問題データの genre は「🧊 つみき」「パターン」のような表示用ラベルなので、
+ * GENRE_STAT のキー（tsumiki など）とそのままでは一致せず、のうりょくが
+ * 育たなかった。ラベル（先頭の絵文字をのぞいた文字）からも引けるようにする。
+ */
+const LABEL_STAT: Record<string, Exclude<StatKey, "shuuchuu">> = {
+  さんすう: "kazu",
+  くらべっこ: "kazu",
+  おかね: "kazu",
+  とけい: "kazu",
+  ひらがな: "kotoba",
+  ことば: "kotoba",
+  もじのよみとき: "kotoba",
+  ぴったりことば: "kotoba",
+  ろんり: "ronri",
+  すいり: "ronri",
+  なかまわけ: "ronri",
+  なかまはずれ: "ronri",
+  つみき: "kuukan",
+  おなじかたち: "kuukan",
+  パターン: "kuukan",
+  くるくるパズル: "kuukan",
+  かがみうつし: "kuukan",
+  "どこからみる？": "kuukan",
+  こっき: "kioku",
+  なぞなぞ: "kioku",
+};
+
+function statForGenre(genre: string): Exclude<StatKey, "shuuchuu"> | undefined {
+  if (GENRE_STAT[genre]) return GENRE_STAT[genre];
+  const label = genre.replace(/^[^\p{L}\p{N}]+/u, "").trim();
+  return LABEL_STAT[label];
+}
 
 const STATS_KEY = "wakutan:ability-stats";
 const TOTAL_CORRECT_KEY = "wakutan:total-correct";
@@ -114,7 +152,7 @@ function writeTotalCorrect(n: number) {
 
 /** 問題に答えた結果を記録する。correct=trueなら該当ジャンルの能力値としゅうちゅう力が、falseでも少しだけ能力値が育つ */
 export function recordAnswer(genre: string, correct: boolean) {
-  const primary = GENRE_STAT[genre];
+  const primary = statForGenre(genre);
   const stats = readStats();
   const next = { ...stats };
 

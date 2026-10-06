@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "知育玩具とドリルどっち？｜わくたん",
+  title: "知育玩具とドリルどっち？",
   description:
     "知育玩具とドリル、幼児期にはどちらが良いか悩む保護者向けに、それぞれのメリット・デメリットと使い分け方を解説します。",
   alternates: {

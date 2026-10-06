@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "はさみの練習はいつから？4〜6歳向けの始め方｜わくたん",
+  title: "はさみの練習はいつから？4〜6歳向けの始め方",
   description:
     "4〜6歳向けに、はさみの練習を始めるタイミングと安全な進め方を紹介。手先の器用さを育てるコツと、安全対策も解説します。",
   alternates: {

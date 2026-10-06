@@ -1,3 +1,5 @@
+import PrintArea from "@/app/components/PrintArea";
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate6Questions } from "../../data/generate6";
@@ -6,7 +8,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "6歳向け論理問題｜わくたん",
+  title: "6歳向け論理問題",
   description:
     "6歳向け無料論理ドリル。規則性やルールを考える問題を毎日更新。",
   alternates: {
@@ -65,11 +67,14 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="ronri" />
+        <PrintArea>
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-blue-700"
           accentButton="bg-blue-500"
         />
+        </PrintArea>
 
         <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">
 

@@ -48,7 +48,7 @@ export default function PatternQuestion({ genre, question, prefix = "" }: Props)
   return (
     <div className="flex-1">
       <div
-        className="flex flex-wrap items-center gap-2 mb-3"
+        className="flex flex-wrap items-center gap-2 mb-3 wt-tiles"
         role="img"
         aria-label={question}
       >

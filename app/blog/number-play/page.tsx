@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "数字遊びで算数が好きになる｜わくたん",
+  title: "数字遊びで算数が好きになる",
   description:
     "4〜6歳向けの数字遊びを紹介。お買い物ごっこやサイコロ遊びなど、日常の中で自然に数の感覚を育てる方法を解説します。",
   alternates: {

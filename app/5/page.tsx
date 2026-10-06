@@ -17,7 +17,7 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-sky-50 to-blue-50">
 
-      <div className="max-w-5xl mx-auto px-6 pt-8">
+      <div className="max-w-5xl mx-auto px-6 pt-8 print-hide">
 
         <Breadcrumb
           items={[
@@ -51,6 +51,10 @@ export default function Page() {
           { href: "/5/okane", emoji: "💰", label: "おかね" },
           { href: "/5/tsumiki", emoji: "🧊", label: "つみき" },
           { href: "/5/onajikatachi", emoji: "✏️", label: "おなじかたち" },
+          { href: "/5/kaiten", emoji: "🔄", label: "くるくるパズル" },
+          { href: "/5/sentaisho", emoji: "🪞", label: "かがみうつし" },
+          { href: "/5/mikata", emoji: "🔭", label: "どこからみる？" },
+          { href: "/5/keiyoushi", emoji: "💬", label: "ぴったりことば" },
         ]}
       />
 

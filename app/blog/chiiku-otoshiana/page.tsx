@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "9割の親がやりがちな、知育の落とし穴3つ｜わくたん",
+  title: "9割の親がやりがちな、知育の落とし穴3つ",
   description:
     "「できないと怒ってしまう」「みんな同じを求めてしまう」「結果ばかり見てしまう」。わかっていてもつい陥りがちな、知育・家庭学習の3つの落とし穴を、運営者の実体験とともに紹介します。",
   alternates: {

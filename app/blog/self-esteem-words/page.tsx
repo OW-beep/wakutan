@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "自己肯定感を育てる声かけ｜わくたん",
+  title: "自己肯定感を育てる声かけ",
   description:
     "幼児期の自己肯定感を育てる声かけの工夫を紹介。結果だけでなく過程に注目した伝え方のポイントを解説します。",
   alternates: {

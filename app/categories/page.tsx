@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "カテゴリ一覧",
+  alternates: { canonical: "/categories" },
   description:
     "年齢別学習や家庭学習に関する記事カテゴリ一覧です。",
 };

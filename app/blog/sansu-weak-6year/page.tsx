@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "6歳で算数が苦手でも大丈夫！小学校でつまずかない土台の作り方｜わくたん",
+  title: "6歳で算数が苦手でも大丈夫！小学校でつまずかない土台の作り方",
   description:
     "6歳で算数が苦手な子でも安心できる、小学校の算数につまずかないための土台づくりのポイントを紹介します。",
   alternates: {

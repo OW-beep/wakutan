@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "毎日5分学習の効果｜わくたん",
+  title: "毎日5分学習の効果",
   description:
     "幼児の家庭学習は長時間より継続が大切。毎日5分の学習が集中力や学習習慣を育てる理由を解説します。",
   alternates: {

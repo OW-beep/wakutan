@@ -131,7 +131,8 @@ body {
    未対応ブラウザでは単に表示されないだけで、印刷自体は問題なく行える。
    ============================================================ */
 @page {
-  margin: 1.5cm;
+  /* 余白は少なめ（1まいに多く入れて、用紙代をへらす）。ふつうのプリンターは1cmあれば印刷できる */
+  margin: 1cm 1.2cm;
 }
 
 @page {
@@ -145,5 +146,147 @@ body {
 @page :first {
   @bottom-right {
     content: "";
+  }
+}
+
+/* ============================================================
+   ジャンルページの印刷：2列レイアウト（用紙の枚数をへらす）
+   PrintArea が data-print-cols="2" をつけたときだけ有効。
+   ============================================================ */
+@media print {
+  [data-print-cols="2"] .wt-q-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    align-items: start;
+  }
+  [data-print-cols="2"] .wt-q-list > * {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-top: 0 !important;
+  }
+  [data-print-cols="2"] .wt-q-card {
+    padding: 8px;
+    box-shadow: none;
+    border: 1px solid #d1d5db;
+    font-size: 12px;
+  }
+  /* えらぶ問題の図（4つの選択肢など）だけ縮小。書きこむ問題の ます は小さくしない */
+  [data-print-cols="2"] .wt-fig {
+    zoom: 0.62;
+  }
+  [data-print-cols="2"] .wt-q-card .text-lg,
+  [data-print-cols="2"] .wt-q-card .text-xl {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* 1列の印刷でも、えらぶ問題の図は少し縮めて、1まいに2問以上入るようにする */
+@media print {
+  .wt-fig {
+    zoom: 0.8;
+  }
+}
+
+/* ============================================================
+   5・6歳「今日の10問」：A4 1まいにおさめる印刷レイアウト（2列×5段）
+   ============================================================ */
+@media print {
+  /* 段ぞろえ（grid）だと背の高い問題にひっぱられて すきまができるので、2列に流しこむ */
+  .wt-daily-a4 {
+    display: block;
+    column-count: 2;
+    column-gap: 6px;
+    /* 左の列をページの下までうめてから右の列へ。balance だと、1ページ目に日付欄だけ残って
+       問題がまるごと2ページ目に飛ぶことがあった */
+    column-fill: auto;
+  }
+  .wt-daily-a4 > * {
+    padding: 6px !important;
+    border: 1px solid #d1d5db;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin: 0 0 6px 0 !important;
+    font-size: 12px;
+  }
+  .wt-daily-a4 .text-lg,
+  .wt-daily-a4 .text-xl {
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+  .wt-daily-a4 svg {
+    zoom: 0.78;
+  }
+  .wt-daily-a4 .wt-write {
+    zoom: 0.72;
+  }
+  .wt-daily-a4 .wt-write svg {
+    zoom: 1;
+  }
+  .wt-daily-a4 .wt-fig {
+    zoom: 0.62;
+  }
+  .wt-daily-a4 .wt-fig svg {
+    zoom: 1;
+  }
+}
+
+/* 5・6歳「今日の10問」を1まいにおさめるとき、こたえ欄は小さめにする */
+@media print {
+  .wt-daily-a4 .wt-answer-line {
+    margin-top: 4px;
+    font-size: 11px;
+  }
+  .wt-daily-a4 .wt-answer-line span:last-child {
+    height: 1.25rem;
+    width: 6.5rem;
+  }
+}
+
+@media print {
+  .wt-daily-a4 .wt-cube {
+    zoom: 0.4;
+  }
+  .wt-daily-a4 .wt-tiles {
+    zoom: 0.75;
+  }
+  .wt-daily-a4 .wt-cube svg {
+    zoom: 1;
+  }
+}
+
+/* 「ぴったりことば」：2まい組が、せまい列でも よこにならぶように小さめの枠にする（印刷・1まい版のみ） */
+@media print {
+  .wt-daily-a4 .wt-trace-card {
+    min-width: 0;
+    padding: 4px 6px;
+  }
+  .wt-daily-a4 .wt-trace-card .text-5xl {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+  .wt-daily-a4 .wt-trace-box {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.7rem;
+  }
+  .wt-daily-a4 .wt-write {
+    zoom: 0.85;
+  }
+}
+
+@media print {
+  .wt-daily-a4 .wt-money {
+    zoom: 0.62;
+  }
+  .wt-daily-a4 .wt-dots {
+    zoom: 0.72;
+  }
+  .wt-daily-a4 .wt-money svg,
+  .wt-daily-a4 .wt-dots svg {
+    zoom: 1;
   }
 }

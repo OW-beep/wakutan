@@ -1,4 +1,5 @@
 "use client";
+import AnswerLine, { needsAnswerLine } from "./AnswerLine";
 
 import ClockFace from "./ClockFace";
 import MoneyIllustration from "./MoneyIllustration";
@@ -9,7 +10,10 @@ import ComparePeople from "./ComparePeople";
 import FlagIcon from "./FlagIcon";
 import EmojiRows from "./EmojiRows";
 import SpeakButton from "./SpeakButton";
+import PatternQuestion, { speakTextFor } from "./PatternQuestion";
 import AnswerReveal from "./AnswerReveal";
+import FigureQuestion, { FigureAnswer } from "./FigureQuestion";
+import type { Figure } from "../data/figureTypes";
 
 type Question = {
   genre: string;
@@ -25,6 +29,7 @@ type Question = {
   compareRows?: { emoji: string; count: number; counter?: string; label?: string }[];
   flagKey?: string;
   flagKeys?: string[];
+  figure?: Figure;
 };
 
 type Props = {
@@ -40,13 +45,13 @@ export default function QuestionList({
 }: Props) {
   return (
     <>
-      <div className="space-y-4">
+      <div className="space-y-4 wt-q-list">
 
         {questions.map((q, index) => (
 
           <div
             key={index}
-            className="bg-white p-5 rounded-2xl shadow print-avoid-break"
+            className="bg-white p-5 rounded-2xl shadow print-avoid-break wt-q-card"
           >
 
             <div className={`font-bold mb-2 ${accentText}`}>
@@ -79,6 +84,8 @@ export default function QuestionList({
 
             {q.compareRows && <EmojiRows rows={q.compareRows} />}
 
+            {q.figure && <FigureQuestion figure={q.figure} />}
+
             {q.flagKey && !q.flagKeys && (
               <div className="flex justify-center mb-3">
                 <FlagIcon flagKey={q.flagKey} />
@@ -106,9 +113,11 @@ export default function QuestionList({
             )}
 
             <div className="text-lg mb-2 flex items-start gap-2">
-              <span className="flex-1">{q.question}</span>
-              <SpeakButton text={q.question} />
+              <PatternQuestion genre={q.genre} question={q.question} />
+              <SpeakButton text={speakTextFor(q.genre, q.question)} />
             </div>
+
+            {needsAnswerLine(q) && <AnswerLine />}
 
             <AnswerReveal
               genre={q.genre}
@@ -116,6 +125,7 @@ export default function QuestionList({
               answer={q.answer}
               explanation={q.explanation}
               accentButton={accentButton}
+              extra={q.figure ? <FigureAnswer figure={q.figure} /> : undefined}
             />
 
           </div>

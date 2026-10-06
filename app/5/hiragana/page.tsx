@@ -1,3 +1,5 @@
+import PrintArea from "@/app/components/PrintArea";
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate5Questions } from "../../data/generate5";
@@ -6,7 +8,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "5歳向けひらがな｜わくたん",
+  title: "5歳向けひらがな",
   description:
     "5歳向け無料ひらがな練習。言葉の仲間分けを通して読み書きの力を育てます。",
   alternates: {
@@ -65,11 +67,14 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="hiragana" />
+        <PrintArea>
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-pink-600"
           accentButton="bg-pink-500"
         />
+        </PrintArea>
 
         <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">
 

@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "小学校入学準備、いつ何をすればいい？月ごとの目安｜わくたん",
+  title: "小学校入学準備、いつ何をすればいい？月ごとの目安",
   description:
     "小学校入学準備を月ごとに整理して解説。いつ・何をすればいいか迷う保護者向けに、無理のないタイムラインを紹介します。",
   alternates: {

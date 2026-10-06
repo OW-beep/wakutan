@@ -468,6 +468,10 @@ export default function Home() {
             { emoji: "💰", title: "おかね問題", desc: "硬貨を数えたり、おつりの計算に挑戦しよう", key: "okane", ages: [4, 5, 6] },
             { emoji: "🧊", title: "つみき問題", desc: "つみきの数をかぞえよう", key: "tsumiki", ages: [4, 5, 6] },
             { emoji: "✏️", title: "おなじかたち問題", desc: "点をむすんで図形をかきうつそう", key: "onajikatachi", ages: [4, 5, 6] },
+            { emoji: "🔄", title: "くるくるパズル", desc: "図形をまわすと どうなるかな？", key: "kaiten", ages: [4, 5, 6] },
+            { emoji: "🪞", title: "かがみうつし", desc: "かがみに うつしたように かきうつそう", key: "sentaisho", ages: [4, 5, 6] },
+            { emoji: "🔭", title: "どこからみる？", desc: "上から・横から見たら どんな形？", key: "mikata", ages: [4, 5, 6] },
+            { emoji: "💬", title: "ぴったりことば", desc: "絵を見て ぴったりのことばを なぞり書き", key: "keiyoushi", ages: [4, 5, 6] },
           ].map((c) => (
 
             <div

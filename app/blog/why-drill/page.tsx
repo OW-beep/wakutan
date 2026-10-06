@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "なぜドリル学習が効果的？幼児期に伸びる3つの力｜わくたん",
+  title: "なぜドリル学習が効果的？幼児期に伸びる3つの力",
   description:
     "幼児向けドリル学習がなぜ効果的なのか、考える力・集中力・学習習慣という3つの観点からわかりやすく解説します。",
   alternates: {

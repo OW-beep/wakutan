@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "幼児におすすめの知育遊び10選｜わくたん",
+  title: "幼児におすすめの知育遊び10選",
   description:
     "4歳〜6歳の子どもにおすすめの知育遊びを10個紹介。おうちにあるものでできる遊びから、考える力を育てる遊びまでわかりやすく解説します。",
   alternates: {

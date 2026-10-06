@@ -1,10 +1,13 @@
 "use client";
+import AnswerLine, { needsAnswerLine } from "@/app/components/AnswerLine";
 
 import StickerBoard from "@/app/components/StickerBoard";
 import SpeakButton from "@/app/components/SpeakButton";
 import AbilityPanel from "@/app/components/AbilityPanel";
 import PrintHeader from "@/app/components/PrintHeader";
+import PatternQuestion, { speakTextFor } from "@/app/components/PatternQuestion";
 import AnswerReveal from "@/app/components/AnswerReveal";
+import FigureQuestion, { FigureAnswer } from "@/app/components/FigureQuestion";
 
 import { useMemo } from "react";
 import { generate5Questions } from "../data/generate5";
@@ -34,6 +37,10 @@ export default function PageClient() {
           okane: data.okane,
           tsumiki: data.tsumiki,
           onajikatachi: data.onajikatachi,
+          kaiten: data.kaiten,
+          sentaisho: data.sentaisho,
+          mikata: data.mikata,
+          keiyoushi: data.keiyoushi,
         },
         10
       ),
@@ -45,7 +52,7 @@ export default function PageClient() {
       <div className="max-w-5xl mx-auto px-6 pb-10">
 
         {/* ヘッダー */}
-        <div className="bg-gradient-to-r from-sky-200 to-blue-200 rounded-3xl p-8 shadow-lg mb-8">
+        <div className="print-hide bg-gradient-to-r from-sky-200 to-blue-200 rounded-3xl p-8 shadow-lg mb-8">
 
           <div className="text-6xl mb-4">
             🚀
@@ -61,13 +68,13 @@ export default function PageClient() {
 
         </div>
 
-        <PrintHeader />
+        <PrintHeader total={questions.length} />
 
         <AbilityPanel />
         <StickerBoard />
 
         {/* 問題 */}
-        <div className="grid gap-5">
+        <div className="grid gap-5 wt-daily-a4">
 
           {questions.map((q, index) => (
 
@@ -80,20 +87,32 @@ export default function PageClient() {
                 {q.genre}
               </div>
 
-              {q.money && <MoneyIllustration items={q.money} />}
+              {q.money && (
+                <div className="wt-money">
+                  <MoneyIllustration items={q.money} />
+                </div>
+              )}
 
               {q.cubes && (
-                <div className="flex justify-center mb-3">
+                <div className="flex justify-center mb-3 wt-cube">
                   <CubeStack heights={q.cubes} />
                 </div>
               )}
 
-              {q.dotFigure && <DotFigureCopy figure={q.dotFigure} />}
+              {q.dotFigure && (
+                <div className="wt-dots">
+                  <DotFigureCopy figure={q.dotFigure} />
+                </div>
+              )}
+
+              {q.figure && <FigureQuestion figure={q.figure} />}
 
               <div className="text-xl leading-8 flex items-start gap-2">
-                <span className="flex-1">{index + 1}. {q.question}</span>
-                <SpeakButton text={q.question} />
+                <PatternQuestion genre={q.genre} question={q.question} prefix={`${index + 1}. `} />
+                <SpeakButton text={speakTextFor(q.genre, q.question)} />
               </div>
+
+              {needsAnswerLine(q) && <AnswerLine />}
 
               <AnswerReveal
                 genre={q.genre}
@@ -101,6 +120,7 @@ export default function PageClient() {
                 answer={q.answer}
                 explanation={q.explanation}
                 accentButton="bg-blue-500 hover:bg-blue-600"
+                extra={q.figure ? <FigureAnswer figure={q.figure} /> : undefined}
               />
 
             </div>

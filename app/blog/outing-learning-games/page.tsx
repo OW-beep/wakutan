@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "お出かけ先で自然に学べる声かけ＆ゲーム｜わくたん",
+  title: "お出かけ先で自然に学べる声かけ＆ゲーム",
   description:
     "スーパーや公園などのお出かけ先で、自然に数や言葉に親しめる声かけ・ゲームのアイデアを紹介します。",
   alternates: {

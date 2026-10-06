@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "4歳・5歳・6歳の発達段階別 「今」伸ばしたい力｜わくたん",
+  title: "4歳・5歳・6歳の発達段階別 「今」伸ばしたい力",
   description:
     "4歳・5歳・6歳それぞれの発達段階で伸ばしたい力の違いをまとめ、年齢に合わせた家庭学習のヒントを紹介します。",
   alternates: {

@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-title: "4歳の学び方・勉強のコツ｜やる気を引き出す関わり方｜わくたん",
+title: "4歳の勉強はどう教える？やる気を引き出す関わり方とコツ",
 description:
   "4歳児の勉強・学び方のコツを解説。やる気を引き出す関わり方や、遊びと学習を両立しながら考える力を育てる工夫を紹介します。",
   alternates: {

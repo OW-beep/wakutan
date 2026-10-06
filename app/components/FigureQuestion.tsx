@@ -97,7 +97,7 @@ function TraceWord({ word }: { word: string }) {
         return (
           <span
             key={i}
-            className="inline-flex items-center justify-center w-14 h-14 border-2 border-gray-400 rounded-lg bg-white text-4xl leading-none"
+            className="wt-trace-box inline-flex items-center justify-center w-14 h-14 border-2 border-gray-400 rounded-lg bg-white text-4xl leading-none"
             style={{
               color: guide ? "#cbd5e1" : "transparent",
               fontFamily: '"UD Digi Kyokasho NK-R","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif',
@@ -196,7 +196,7 @@ export default function FigureQuestion({ figure }: { figure: Figure }) {
           {figure.items.map((it, i) => (
             <div
               key={i}
-              className="rounded-2xl border-2 border-gray-300 bg-white px-4 py-3 text-center min-w-[200px]"
+              className="wt-trace-card rounded-2xl border-2 border-gray-300 bg-white px-4 py-3 text-center min-w-[200px]"
             >
               <div className="text-5xl leading-tight tracking-wide">{it.emojis.join("")}</div>
               <TraceWord word={it.word} />

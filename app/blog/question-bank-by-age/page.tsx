@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "4歳→6歳で問題はどう変わる？わくたん12,843問を分析してみた｜わくたん",
+  title: "4歳→6歳で問題はどう変わる？わくたん12,843問を分析してみた",
   description:
     "わくたんが実際に生成している問題データ（4〜6歳・全12,843問）を分析。学年が上がるとどのジャンルが増え、どの力が重視されるようになるのかを、運営者自身のデータで解説します。",
   alternates: {

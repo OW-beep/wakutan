@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "図形遊び・図形模写の効果｜図形感覚・空間認識力を育てよう｜わくたん",
+  title: "図形遊び・図形模写の効果｜図形感覚・空間認識力を育てよう",
   description:
     "図形遊びや図形模写（お手本を見て同じ形を描く遊び）は、空間認識力や図形感覚、考える力を育てる知育遊びです。4〜6歳向けに図形遊びのメリットと、小学校の学習へのつながりを紹介します。",
   alternates: {

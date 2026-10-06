@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "時計の読み方はいつから教える？｜わくたん",
+  title: "時計の読み方はいつから教える？",
   description:
     "幼児期の時計の読み方の教え方を解説。何歳から始めるとよいか、つまずきやすいポイントとステップごとの練習方法を紹介します。",
   alternates: {
