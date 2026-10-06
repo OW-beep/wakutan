@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Breadcrumb from "./Breadcrumb";
 import GenreAbilityBox from "./GenreAbilityBox";
+import PrintArea from "./PrintArea";
 import PrintHeader from "./PrintHeader";
 import QuestionList from "./QuestionList";
 import { generate4Questions } from "../data/generate4";
@@ -92,8 +93,10 @@ export default function GenrePage({ age, genreKey }: { age: GenreAge; genreKey: 
 
         <GenreAbilityBox genreKey={genreKey} />
 
-        <PrintHeader total={questions.length} />
-        <QuestionList questions={questions} accentText={c.text} accentButton={c.button} />
+        <PrintArea defaultCols={genreKey === "mikata" && age >= 5 ? 2 : 1}>
+          <PrintHeader total={questions.length} />
+          <QuestionList questions={questions} accentText={c.text} accentButton={c.button} />
+        </PrintArea>
 
         <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">
           <h2 className="text-2xl font-bold mb-4">👨‍👩‍👧 保護者の方へ</h2>

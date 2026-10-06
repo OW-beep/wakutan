@@ -1,3 +1,4 @@
+import PrintArea from "@/app/components/PrintArea";
 import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
@@ -68,12 +69,14 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="kokki" />
+        <PrintArea>
         <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-sky-600"
           accentButton="bg-sky-500"
         />
+        </PrintArea>
 
 
         <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">

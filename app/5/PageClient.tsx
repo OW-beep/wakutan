@@ -51,7 +51,7 @@ export default function PageClient() {
       <div className="max-w-5xl mx-auto px-6 pb-10">
 
         {/* ヘッダー */}
-        <div className="bg-gradient-to-r from-sky-200 to-blue-200 rounded-3xl p-8 shadow-lg mb-8">
+        <div className="print-hide bg-gradient-to-r from-sky-200 to-blue-200 rounded-3xl p-8 shadow-lg mb-8">
 
           <div className="text-6xl mb-4">
             🚀
@@ -73,7 +73,7 @@ export default function PageClient() {
         <StickerBoard />
 
         {/* 問題 */}
-        <div className="grid gap-5">
+        <div className="grid gap-5 wt-daily-a4">
 
           {questions.map((q, index) => (
 
@@ -89,7 +89,7 @@ export default function PageClient() {
               {q.money && <MoneyIllustration items={q.money} />}
 
               {q.cubes && (
-                <div className="flex justify-center mb-3">
+                <div className="flex justify-center mb-3 wt-fig">
                   <CubeStack heights={q.cubes} />
                 </div>
               )}

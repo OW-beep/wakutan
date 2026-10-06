@@ -132,7 +132,7 @@ export default function FigureQuestion({ figure }: { figure: Figure }) {
   switch (figure.kind) {
     case "rotate-choice":
       return (
-        <div className="mb-3">
+        <div className="wt-fig mb-3">
           <div className="flex flex-wrap items-center gap-2 justify-center">
             <ShapeGrid size={figure.size} cells={figure.cells} u={46} />
             <ArrowLabel text={turnText(figure.deg)} />
@@ -151,7 +151,7 @@ export default function FigureQuestion({ figure }: { figure: Figure }) {
 
     case "rotate-draw":
       return (
-        <div className="mb-3 flex flex-wrap items-center gap-2 justify-center">
+        <div className="wt-write mb-3 flex flex-wrap items-center gap-2 justify-center">
           <ShapeGrid size={figure.size} cells={figure.cells} u={46} />
           <ArrowLabel text={turnText(figure.deg)} />
           <ShapeGrid size={figure.size} cells={[]} u={46} blank />
@@ -160,7 +160,7 @@ export default function FigureQuestion({ figure }: { figure: Figure }) {
 
     case "symmetry":
       return (
-        <div className="mb-3 flex items-center justify-center gap-0">
+        <div className="wt-write mb-3 flex items-center justify-center gap-0">
           <ShapeGrid size={figure.size} cells={figure.cells} u={figure.size >= 4 ? 40 : 46} />
           <svg width={20} height={figure.size * (figure.size >= 4 ? 40 : 46)} aria-hidden="true">
             <line x1={10} y1={0} x2={10} y2="100%" stroke="#7c3aed" strokeWidth={2.5} strokeDasharray="6 5" />
@@ -171,7 +171,7 @@ export default function FigureQuestion({ figure }: { figure: Figure }) {
 
     case "solid-view":
       return (
-        <div className="mb-3">
+        <div className="wt-fig mb-3">
           <div className="flex justify-center">
             <SolidStack layers={figure.layers} />
           </div>
@@ -192,7 +192,7 @@ export default function FigureQuestion({ figure }: { figure: Figure }) {
 
     case "trace":
       return (
-        <div className="mb-3 flex flex-wrap justify-center gap-4">
+        <div className="wt-write mb-3 flex flex-wrap justify-center gap-4">
           {figure.items.map((it, i) => (
             <div
               key={i}

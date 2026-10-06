@@ -44,13 +44,13 @@ export default function QuestionList({
 }: Props) {
   return (
     <>
-      <div className="space-y-4">
+      <div className="space-y-4 wt-q-list">
 
         {questions.map((q, index) => (
 
           <div
             key={index}
-            className="bg-white p-5 rounded-2xl shadow print-avoid-break"
+            className="bg-white p-5 rounded-2xl shadow print-avoid-break wt-q-card"
           >
 
             <div className={`font-bold mb-2 ${accentText}`}>

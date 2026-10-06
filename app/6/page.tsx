@@ -17,7 +17,7 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-purple-50 to-indigo-50">
 
-      <div className="max-w-5xl mx-auto px-6 pt-8">
+      <div className="max-w-5xl mx-auto px-6 pt-8 print-hide">
 
         <Breadcrumb
           items={[
