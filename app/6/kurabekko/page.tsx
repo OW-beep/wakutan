@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate6Questions } from "../../data/generate6";
@@ -6,7 +7,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "6歳向けくらべっこ問題｜わくたん",
+  title: "6歳向けくらべっこ問題",
   description:
     "6歳向け無料くらべっこドリル。数の差や単位の違いを考える問題を毎日更新。",
   alternates: {
@@ -65,6 +66,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="kurabekko" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-teal-700"

@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate5Questions } from "../../data/generate5";
@@ -6,9 +7,9 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "5歳向け仲間分け問題｜わくたん",
+  title: "5歳向け仲間分け問題",
   description:
-    "5歳向け無料仲間分けドリル。分類する力を育てる問題を毎日更新。",
+    "5歳向け無料の仲間分け（なかまあつめ）ドリル。分類する力を育てる問題を毎日更新。",
   alternates: {
     canonical: "/5/nakamawake",
   },
@@ -65,6 +66,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="nakamawake" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-green-600"

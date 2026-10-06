@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
@@ -6,7 +7,7 @@ import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "4歳向けひらがな｜わくたん",
+  title: "4歳向けひらがな",
   description:
     "4歳向け無料ひらがな練習。絵を見て正しい言葉を選ぶ、読みの力を育てる問題です。無料で印刷OK。",
   alternates: {
@@ -65,6 +66,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="hiragana" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-pink-600"

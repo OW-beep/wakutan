@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate4Questions } from "../../data/generate4";
@@ -6,7 +7,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "4歳向けなぞなぞ問題｜わくたん",
+  title: "4歳向けなぞなぞ問題",
   description:
     "4歳向け無料なぞなぞドリル。ヒントから答えを考える問題を毎日更新。無料で印刷OK。",
   alternates: {
@@ -65,6 +66,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="nazonazo" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-fuchsia-700"

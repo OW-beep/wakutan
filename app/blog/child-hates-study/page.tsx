@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "子どもが勉強を嫌がるときは？無理なく続ける5つのコツ｜わくたん",
+  title: "子どもが勉強を嫌がるときは？無理なく続ける5つのコツ",
   description:
     "子どもが勉強を嫌がる理由と、無理なく学習を続けるための5つのコツを解説。動機づけの考え方もふまえて紹介します。",
   alternates: {

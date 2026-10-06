@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate5Questions } from "../../data/generate5";
@@ -6,7 +7,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "5歳向け算数ドリル｜わくたん",
+  title: "5歳向け算数ドリル",
   description:
     "5歳向け無料算数ドリル。たし算の基礎や数の理解を毎日30問。無料で印刷OK。",
   alternates: {
@@ -66,6 +67,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="sansu" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-yellow-700"

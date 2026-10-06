@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "保護者向け記事 | わくたん",
+  title: "保護者向け記事",
   description:
     "家庭学習・知育・小学校入学準備など、保護者向けの記事一覧です。",
 

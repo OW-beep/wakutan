@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "幼児の集中力を伸ばす方法｜家庭で今日からできるコツ｜わくたん",
+  title: "幼児の集中力を伸ばす方法｜家庭で今日からできるコツ",
   description:
     "幼児の集中力を伸ばす方法を、年齢別の目安データとあわせて解説。家庭で今日から取り入れられる具体的な工夫を紹介します。",
   alternates: {

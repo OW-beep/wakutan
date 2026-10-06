@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "幼児の朝の準備をスムーズにする工夫｜わくたん",
+  title: "幼児の朝の準備をスムーズにする工夫",
   description:
     "幼児期の朝の身支度をスムーズにする工夫を紹介。保育園・幼稚園の準備で慌ただしくなりがちな朝を、少しでも穏やかに過ごすためのヒントをまとめました。",
   alternates: {

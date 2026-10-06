@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "幼児にごほうびは必要？やる気を育てる上手な褒め方｜わくたん",
+  title: "幼児にごほうびは必要？やる気を育てる上手な褒め方",
   description:
     "幼児学習でのごほうびの使い方を、心理学の考え方もふまえて解説。やる気を長く育てる褒め方のコツを紹介します。",
   alternates: {

@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
@@ -6,9 +7,9 @@ import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "4歳向けパターン問題｜わくたん",
+  title: "4歳向けパターン問題",
   description:
-    "4歳向け規則性ドリル。繰り返しのパターンを考える問題を毎日更新。無料で印刷OK。",
+    "4歳向け無料パターンドリル。りんご・ぶどうなどの絵で「くりかえし」を見つけて次を考える問題を毎日更新。数字がわからなくてもOK、印刷OK。",
   alternates: {
     canonical: "/4/pattern",
   },
@@ -67,6 +68,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="pattern" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-purple-700"

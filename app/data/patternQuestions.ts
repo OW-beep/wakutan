@@ -42,10 +42,14 @@ const WORD_PAIRS: [string, string][] = [
   ["つよい", "よわい"], ["あつい", "つめたい"], ["ながい", "みじかい"],
 ];
 
-const NUMBER_PAIRS: [number, number][] = [
-  [1, 2], [1, 3], [2, 4], [3, 5], [6, 7], [2, 3], [4, 5], [1, 4], [2, 5], [3, 6],
-  [4, 6], [5, 7], [1, 5], [2, 6], [3, 7], [1, 6], [1, 7], [2, 7], [4, 7], [5, 6],
-  [7, 8], [8, 9], [1, 9], [3, 9], [2, 9],
+// 数字のくりかえしは「たしざん・ひきざん」の感覚が前提になって難しいため、
+// 4〜6歳には絵（絵文字）でくりかえしを見つける形にしている。
+const EMOJI_PAIRS: [string, string][] = [
+  ["🍎", "🍇"], ["🍌", "🍓"], ["🍊", "🍉"], ["🍑", "🍋"], ["🍒", "🥝"],
+  ["🐶", "🐱"], ["🐰", "🐻"], ["🐸", "🐥"], ["🐟", "🐢"], ["🐘", "🦒"],
+  ["🚗", "🚌"], ["🚃", "✈️"], ["🚲", "🚢"], ["🌸", "🌻"], ["🌳", "🌷"],
+  ["🍙", "🍞"], ["🍦", "🍪"], ["🥕", "🍅"], ["🌽", "🍆"], ["⚽", "🏀"],
+  ["🎈", "🎁"], ["🌙", "⭐"], ["☀️", "☔"], ["🐝", "🦋"], ["🐞", "🐜"],
 ];
 
 // シンプルな決定的疑似乱数
@@ -72,9 +76,9 @@ export function generateAlternatingPatternQuestions(): SimpleQuestion[] {
     qs.push({ question: `${b} ${a} ${b} ${a} □`, answer: b, explanation: `「${a}」と「${b}」が こうごに ならんでいるよ。` });
   }
 
-  for (const [a, b] of NUMBER_PAIRS) {
-    qs.push({ question: `${a} ${b} ${a} ${b} □`, answer: `${a}`, explanation: `${a}と ${b}が こうごに ならんでいるよ。` });
-    qs.push({ question: `${b} ${a} ${b} ${a} □`, answer: `${b}`, explanation: `${a}と ${b}が こうごに ならんでいるよ。` });
+  for (const [a, b] of EMOJI_PAIRS) {
+    qs.push({ question: `${a} ${b} ${a} ${b} □`, answer: a, explanation: `${a}と ${b}が こうごに ならんでいるよ。` });
+    qs.push({ question: `${b} ${a} ${b} ${a} □`, answer: b, explanation: `${a}と ${b}が こうごに ならんでいるよ。` });
   }
 
   return qs;
@@ -85,13 +89,14 @@ const TRIPLE_SETS: [string, string, string][] = [
   ["○", "△", "□"],
   ["あ", "い", "う"],
   ["あか", "あお", "きいろ"],
-  ["1", "2", "3"],
+  ["🍎", "🍇", "🍌"],
   ["★", "♥", "♪"],
   ["まる", "さんかく", "しかく"],
   ["いぬ", "ねこ", "とり"],
   ["りんご", "ばなな", "みかん"],
   ["え", "お", "か"],
-  ["4", "5", "6"],
+  ["🐶", "🐱", "🐰"],
+  ["🚗", "🚌", "🚃"],
 ];
 
 export function generateTriplePatternQuestions(): SimpleQuestion[] {
@@ -143,7 +148,7 @@ export function generateAlternatingPattern5Questions(): SimpleQuestion[] {
 const QUAD_SETS: [string, string, string, string][] = [
   ["○", "△", "□", "◇"],
   ["あ", "い", "う", "え"],
-  ["1", "2", "3", "4"],
+  ["🍎", "🍇", "🍌", "🍊"],
   ["あか", "あお", "きいろ", "みどり"],
   ["はる", "なつ", "あき", "ふゆ"],
   ["いぬ", "ねこ", "とり", "うさぎ"],

@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate6Questions } from "../../data/generate6";
@@ -6,7 +7,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "6歳向けとけいの問題｜わくたん",
+  title: "6歳向けとけいの問題",
   description:
     "6歳向け無料時計ドリル。なんじ・なんじはん・分の読み方を毎日更新。",
   alternates: {
@@ -65,6 +66,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="tokei" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-amber-700"

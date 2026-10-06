@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "雨の日・室内遊びで考える力を伸ばす10のアイデア｜わくたん",
+  title: "雨の日・室内遊びで考える力を伸ばす10のアイデア",
   description:
     "雨の日や室内で過ごす時間が増える日におすすめの、考える力を伸ばす室内遊びのアイデアを10個紹介します。",
   alternates: {

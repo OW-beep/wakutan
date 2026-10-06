@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "迷路遊びで育つ5つの力｜わくたん",
+  title: "迷路遊びで育つ5つの力",
   description:
     "子どもに人気の迷路遊びで育つ5つの力を解説。楽しみながら思考力や集中力を伸ばす迷路遊びの魅力と選び方を紹介します。",
   alternates: {

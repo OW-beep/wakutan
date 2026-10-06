@@ -24,6 +24,10 @@ const GENRES: Record<Age, { key: string; emoji: string; label: string }[]> = {
     { key: "okane", emoji: "💰", label: "おかね" },
     { key: "tsumiki", emoji: "🧊", label: "つみき" },
     { key: "onajikatachi", emoji: "✏️", label: "おなじかたち" },
+    { key: "kaiten", emoji: "🔄", label: "くるくるパズル" },
+    { key: "sentaisho", emoji: "🪞", label: "かがみうつし" },
+    { key: "mikata", emoji: "🔭", label: "どこからみる？" },
+    { key: "keiyoushi", emoji: "💬", label: "ぴったりことば" },
   ],
   "5": [
     { key: "sansu", emoji: "🔢", label: "さんすう" },
@@ -40,6 +44,10 @@ const GENRES: Record<Age, { key: string; emoji: string; label: string }[]> = {
     { key: "okane", emoji: "💰", label: "おかね" },
     { key: "tsumiki", emoji: "🧊", label: "つみき" },
     { key: "onajikatachi", emoji: "✏️", label: "おなじかたち" },
+    { key: "kaiten", emoji: "🔄", label: "くるくるパズル" },
+    { key: "sentaisho", emoji: "🪞", label: "かがみうつし" },
+    { key: "mikata", emoji: "🔭", label: "どこからみる？" },
+    { key: "keiyoushi", emoji: "💬", label: "ぴったりことば" },
   ],
   "6": [
     { key: "sansu", emoji: "🔢", label: "さんすう" },
@@ -57,6 +65,10 @@ const GENRES: Record<Age, { key: string; emoji: string; label: string }[]> = {
     { key: "okane", emoji: "💰", label: "おかね" },
     { key: "tsumiki", emoji: "🧊", label: "つみき" },
     { key: "onajikatachi", emoji: "✏️", label: "おなじかたち" },
+    { key: "kaiten", emoji: "🔄", label: "くるくるパズル" },
+    { key: "sentaisho", emoji: "🪞", label: "かがみうつし" },
+    { key: "mikata", emoji: "🔭", label: "どこからみる？" },
+    { key: "keiyoushi", emoji: "💬", label: "ぴったりことば" },
   ],
 };
 
@@ -201,7 +213,7 @@ export default function PrintBuilderClient() {
             わくたん　オリジナルプリント（{AGE_LABEL[built.age]}）
           </h1>
 
-          <PrintHeader />
+          <PrintHeader total={builtQuestions.length} />
 
           <QuestionList
             questions={builtQuestions}

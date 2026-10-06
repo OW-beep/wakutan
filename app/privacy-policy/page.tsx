@@ -1,5 +1,6 @@
 export const metadata = {
-  title: "プライバシーポリシー｜わくたん",
+  title: "プライバシーポリシー",
+  alternates: { canonical: "/privacy-policy" },
   description: "わくたんのプライバシーポリシー",
 };
 

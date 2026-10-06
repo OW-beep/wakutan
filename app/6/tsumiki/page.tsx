@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate6Questions } from "../../data/generate6";
@@ -6,7 +7,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "6歳向けつみき問題（空間認知）｜わくたん",
+  title: "6歳向けつみき問題（空間認知）",
   description:
     "6歳向け無料つみき（積み木）問題。ならんだタワーの立方体をかぞえる空間認知ドリルを毎日更新。小学校入学準備にも。無料で印刷OK。",
   alternates: {
@@ -65,6 +66,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="tsumiki" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-cyan-700"

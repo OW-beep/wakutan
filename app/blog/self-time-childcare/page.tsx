@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "「自分の時間が全然ない」と感じたときに大切な3つの視点｜わくたん",
+  title: "「自分の時間が全然ない」と感じたときに大切な3つの視点",
   description:
     "子育て中、自分の時間が全然取れないと感じることはありませんか。無理に時間を作ろうとする前に知っておきたい、3つの考え方を紹介します。",
   alternates: {

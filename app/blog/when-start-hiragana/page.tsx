@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "ひらがなは何歳から？無理なく始めるタイミングを解説｜わくたん",
+  title: "ひらがなは何歳から？無理なく始めるタイミングを解説",
   description:
     "ひらがなを教え始める年齢の目安を、公的な調査データもふまえて解説。無理なく始めるためのサインの見つけ方を紹介します。",
   alternates: {

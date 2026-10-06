@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "幼児の家庭学習でやってはいけないこと5つ｜わくたん",
+  title: "幼児の家庭学習でやってはいけないこと5つ",
   description:
     "幼児期の家庭学習でありがちな失敗パターンを5つ紹介し、それぞれの改善のヒントをまとめました。",
   alternates: {

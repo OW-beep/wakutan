@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "4歳児がドリルを嫌がるときの対処法｜わくたん",
+  title: "4歳児がドリルを嫌がるときの対処法",
   description:
     "4歳児がドリルを嫌がるときの理由と対処法を解説。この年齢ならではの発達的な背景と、無理なく取り組める工夫を紹介します。",
   alternates: {

@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "市販ドリルと無料プリント、結局どっちがいい？｜わが家の使い分け方｜わくたん",
+  title: "市販ドリルと無料プリント、結局どっちがいい？｜わが家の使い分け方",
   description:
     "市販ドリルと無料プリント、どちらがいいか迷う方へ。それぞれのメリット・デメリットと、わが家での上手な使い分け方を紹介します。",
   alternates: {

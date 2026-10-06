@@ -1,3 +1,5 @@
+import type { Figure } from "./figureTypes";
+import { generateKaiten, generateSentaisho, generateMikata, generateKeiyoushi } from "./figureQuestions";
 import { parseMoney } from "./moneyParser";
 import { CubeShape, totalCubes, describeCubes } from "./cubeShapes";
 import { DotFigure, dotFiguresSize4, buildDotFigurePool } from "./dotFigures";
@@ -24,6 +26,7 @@ import { generateSuiriQuestions6 } from "./suiriQuestions";
 import { generateKokkiQuestions6 } from "./kokkiQuestions";
 
 type Question = {
+  figure?: Figure;
   genre: string;
   question: string;
   answer: string;
@@ -671,6 +674,12 @@ export function generate6Questions() {
     flagKeys: q.flagKeys,
   }));
 
+  // かいてん・せんたいしょう・うえ/よこから みる・けいようし（イラスト・書きこみ式）
+  const kaiten: Question[] = generateKaiten(6);
+  const sentaisho: Question[] = generateSentaisho(6);
+  const mikata: Question[] = generateMikata(6);
+  const keiyoushi: Question[] = generateKeiyoushi(6);
+
   return {
     sansu,
     ronri,
@@ -687,5 +696,9 @@ export function generate6Questions() {
     onajikatachi,
     suiri,
     kokki,
+    kaiten,
+    sentaisho,
+    mikata,
+    keiyoushi,
   };
 }

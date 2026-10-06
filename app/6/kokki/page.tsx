@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
@@ -6,7 +7,7 @@ import { generate6Questions } from "../../data/generate6";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "6歳向けこっき（国旗）問題（地頭系）｜わくたん",
+  title: "6歳向けこっき（国旗）問題（地頭系）",
   description:
     "6歳向け無料こっき（国旗）ドリル。なかまはずれ探しに加えて、模様が似ている国旗を選ぶ問題を毎日更新。無料で印刷OK。",
   alternates: {
@@ -67,6 +68,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="kokki" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-sky-600"

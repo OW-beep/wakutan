@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate5Questions } from "../../data/generate5";
@@ -6,7 +7,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "5歳向けおなじかたち問題（点図形の模写）｜わくたん",
+  title: "5歳向けおなじかたち問題（点図形の模写）",
   description:
     "5歳向け無料おなじかたち問題。点をせんでむすんだ図形を見て、同じ形をかきうつす模写ドリルを毎日更新。無料で印刷OK。",
   alternates: {
@@ -65,6 +66,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="onajikatachi" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-violet-700"

@@ -1,5 +1,6 @@
 export const metadata = {
-  title: "利用規約｜わくたん",
+  title: "利用規約",
+  alternates: { canonical: "/terms" },
   description: "わくたんの利用規約",
 };
 

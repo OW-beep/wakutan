@@ -52,6 +52,10 @@ export default function Page() {
           { href: "/6/okane", emoji: "💰", label: "おかね" },
           { href: "/6/tsumiki", emoji: "🧊", label: "つみき" },
           { href: "/6/onajikatachi", emoji: "✏️", label: "おなじかたち" },
+          { href: "/6/kaiten", emoji: "🔄", label: "くるくるパズル" },
+          { href: "/6/sentaisho", emoji: "🪞", label: "かがみうつし" },
+          { href: "/6/mikata", emoji: "🔭", label: "どこからみる？" },
+          { href: "/6/keiyoushi", emoji: "💬", label: "ぴったりことば" },
         ]}
       />
 

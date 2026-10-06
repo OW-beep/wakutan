@@ -1,3 +1,4 @@
+import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
@@ -6,7 +7,7 @@ import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "4歳向け論理問題｜きまりを見つける無料ドリル｜わくたん",
+  title: "4歳向け論理問題｜きまりを見つける無料ドリル",
   description:
     "4歳向け無料論理ドリル。「つぎはどれ？」順番やきまりを考える問題を毎日更新。印刷・登録不要ですぐ挑戦できます。",
   alternates: {
@@ -66,6 +67,7 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="ronri" />
+        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-blue-600"
