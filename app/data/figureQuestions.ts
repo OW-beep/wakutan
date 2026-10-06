@@ -79,13 +79,13 @@ export function generateKaiten(age: Age): FigureQ[] {
   const seen = new Set<string>();
   const cfg =
     age === 4
-      ? { size: 2, n: 2, pool: ["o", "dot", "sq", "x"] as Shape[], degs: [180] as (90 | 180 | 270)[], must: undefined, choices: 3, target: 40, diff: 1 }
+      ? { size: 2, n: 2, pool: ["o", "dot", "sq", "x"] as Shape[], degs: [180] as (90 | 180 | 270)[], must: undefined, choices: 3, target: 80, diff: 1 }
       : age === 5
-      ? { size: 2, n: 3, pool: ["o", "dot", "x", "tu", "tr", "td", "tl"] as Shape[], degs: [90, 270] as (90 | 180 | 270)[], must: DIRECTIONAL, choices: 4, target: 50, diff: 2 }
-      : { size: 3, n: 4, pool: ["o", "dot", "x", "sq", "tu", "tr", "td", "tl"] as Shape[], degs: [90, 180, 270] as (90 | 180 | 270)[], must: DIRECTIONAL, choices: 0, target: 60, diff: 3 };
+      ? { size: 2, n: 3, pool: ["o", "dot", "x", "tu", "tr", "td", "tl"] as Shape[], degs: [90, 270] as (90 | 180 | 270)[], must: DIRECTIONAL, choices: 4, target: 120, diff: 2 }
+      : { size: 3, n: 4, pool: ["o", "dot", "x", "sq", "tu", "tr", "td", "tl"] as Shape[], degs: [90, 180, 270] as (90 | 180 | 270)[], must: DIRECTIONAL, choices: 0, target: 200, diff: 3 };
 
   let guard = 0;
-  while (out.length < cfg.target && guard++ < 4000) {
+  while (out.length < cfg.target && guard++ < 20000) {
     const n = age === 6 ? (r() < 0.5 ? 3 : 4) : cfg.n;
     const cells = randomCells(r, cfg.size, n, cfg.pool, cfg.must);
     const deg = pick(r, cfg.degs);
@@ -150,13 +150,13 @@ export function generateSentaisho(age: Age): FigureQ[] {
   const seen = new Set<string>();
   const cfg =
     age === 4
-      ? { size: 2, ns: [2, 3], pool: ["o", "dot", "sq", "x"] as Shape[], must: undefined, target: 40, diff: 1 }
+      ? { size: 2, ns: [2, 3], pool: ["o", "dot", "sq", "x"] as Shape[], must: undefined, target: 100, diff: 1 }
       : age === 5
-      ? { size: 3, ns: [3, 4], pool: ["o", "dot", "sq", "x", "tu", "tl", "tr"] as Shape[], must: ["tl", "tr"] as Shape[], target: 50, diff: 2 }
-      : { size: 4, ns: [5, 6], pool: ["o", "dot", "sq", "x", "tu", "td", "tl", "tr", "sl", "bs"] as Shape[], must: ["tl", "tr", "sl", "bs"] as Shape[], target: 60, diff: 3 };
+      ? { size: 3, ns: [3, 4], pool: ["o", "dot", "sq", "x", "tu", "tl", "tr"] as Shape[], must: ["tl", "tr"] as Shape[], target: 150, diff: 2 }
+      : { size: 4, ns: [5, 6], pool: ["o", "dot", "sq", "x", "tu", "td", "tl", "tr", "sl", "bs"] as Shape[], must: ["tl", "tr", "sl", "bs"] as Shape[], target: 250, diff: 3 };
 
   let guard = 0;
-  while (out.length < cfg.target && guard++ < 4000) {
+  while (out.length < cfg.target && guard++ < 20000) {
     const cells = randomCells(r, cfg.size, pick(r, cfg.ns), cfg.pool, age === 4 ? undefined : cfg.must);
     const key = cellsSignature(cells);
     if (seen.has(key)) continue;
@@ -271,13 +271,13 @@ export function generateMikata(age: Age): FigureQ[] {
   const seen = new Set<string>();
   const cfg =
     age === 4
-      ? { layers: [1, 1, 2], sideRate: 0, choices: 3, target: 40, diff: 1 }
+      ? { layers: [1, 1, 2], sideRate: 0, choices: 3, target: 90, diff: 1 }
       : age === 5
-      ? { layers: [2, 2, 3], sideRate: 0.3, choices: 3, target: 50, diff: 2 }
-      : { layers: [2, 3, 3], sideRate: 0.5, choices: 4, target: 60, diff: 3 };
+      ? { layers: [2, 2, 3], sideRate: 0.3, choices: 3, target: 140, diff: 2 }
+      : { layers: [2, 3, 3], sideRate: 0.5, choices: 4, target: 200, diff: 3 };
 
   let guard = 0;
-  while (out.length < cfg.target && guard++ < 6000) {
+  while (out.length < cfg.target && guard++ < 30000) {
     const side = r() < cfg.sideRate;
     const layers = randomLayers(r, pick(r, cfg.layers), side);
     const sig = (side ? sideSig : topSig)(layers);
@@ -346,6 +346,9 @@ const PAIRS: Pair[] = [
   { level: 2, a: { w: "かたい", e: ["🧱"], hint: "れんがは かたい" }, b: { w: "やわらかい", e: ["🍞"], hint: "パンは やわらかい" } },
   { level: 2, a: { w: "あたらしい", e: ["🆕", "👟"], hint: "かったばかりで あたらしい" }, b: { w: "ふるい", e: ["🏚️"], hint: "ずっと まえから あって ふるい" } },
   { level: 2, a: { w: "つよい", e: ["💪", "🦁"], hint: "ライオンは つよい" }, b: { w: "よわい", e: ["🥺"], hint: "ちからが でなくて よわい" } },
+  { level: 2, a: { w: "しろい", e: ["☁️", "🥛"], hint: "くもや ぎゅうにゅうは しろい" }, b: { w: "くろい", e: ["🦇"], hint: "こうもりは くろい" } },
+  { level: 2, a: { w: "あかい", e: ["🍎", "🍓"], hint: "りんごや いちごは あかい" }, b: { w: "あおい", e: ["🌊", "🐳"], hint: "うみや そらは あおい" } },
+  { level: 2, a: { w: "ふとい", e: ["🌳"], hint: "おおきな きは ふとい" }, b: { w: "ほそい", e: ["🧵"], hint: "いとは ほそい" } },
 ];
 
 const SINGLES: Single[] = [
@@ -371,6 +374,26 @@ const SINGLES: Single[] = [
   { level: 3, w: "くるしい", e: ["😫"], hint: "いきが できなくて くるしい" },
   { level: 3, w: "うつくしい", e: ["🌈", "🌸"], hint: "にじや さくらは うつくしい" },
   { level: 3, w: "おとなしい", e: ["🤫"], hint: "しずかで おとなしい" },
+  { level: 1, w: "あかい", e: ["🍎", "🍓"], hint: "りんごや いちごは あかい" },
+  { level: 1, w: "あおい", e: ["🌊", "🐳"], hint: "うみや そらは あおい" },
+  { level: 1, w: "しろい", e: ["☁️", "🥛"], hint: "くもや ぎゅうにゅうは しろい" },
+  { level: 1, w: "くろい", e: ["🦇"], hint: "こうもりは くろい" },
+  { level: 1, w: "きいろい", e: ["🍌", "🐥"], hint: "バナナや ひよこは きいろい" },
+  { level: 1, w: "かゆい", e: ["🦟", "😖"], hint: "かに さされて かゆい" },
+  { level: 1, w: "すごい", e: ["🤩"], hint: "びっくりするほど すごい" },
+  { level: 2, w: "すずしい", e: ["🌬️", "🎐"], hint: "かぜが ふいて すずしい" },
+  { level: 2, w: "かしこい", e: ["🦉", "🧠"], hint: "ふくろうは かしこい" },
+  { level: 2, w: "さわがしい", e: ["🙉", "📢"], hint: "おおぜいで さわがしい" },
+  { level: 2, w: "ほしい", e: ["🧸", "🥺"], hint: "おもちゃが ほしい" },
+  { level: 2, w: "ひどい", e: ["⛈️"], hint: "あらしは ひどい" },
+  { level: 3, w: "めずらしい", e: ["🦄", "✨"], hint: "なかなか みられなくて めずらしい" },
+  { level: 3, w: "なつかしい", e: ["📷", "👵"], hint: "むかしを おもいだして なつかしい" },
+  { level: 3, w: "たのもしい", e: ["💪", "🤝"], hint: "たよりに なって たのもしい" },
+  { level: 3, w: "くわしい", e: ["🔍", "📚"], hint: "よく しっていて くわしい" },
+  { level: 3, w: "けわしい", e: ["⛰️", "🧗"], hint: "やまの みちが けわしい" },
+  { level: 3, w: "あやしい", e: ["🕵️", "❓"], hint: "なにか あやしい" },
+  { level: 3, w: "うらやましい", e: ["🥺", "✨"], hint: "いいなあと おもって うらやましい" },
+  { level: 3, w: "いさましい", e: ["🦁", "🛡️"], hint: "こわがらずに すすむ いさましい" },
 ];
 
 const TRACE_Q = "えを みて、ようすを あらわす ことばを かこう。うすい もじは うえから なぞろう。";
@@ -397,7 +420,17 @@ export function generateKeiyoushi(age: Age): FigureQ[] {
   const singles = SINGLES.filter((s) => lv.includes(s.level));
   for (const s of singles) out.push(mk([s], diff - 0.2));
   // ことなる2つの組み合わせ（ひとまわり ふやす）
-  const sh = shuffle(r, singles);
-  for (let i = 0; i + 1 < sh.length; i += 2) out.push(mk([sh[i], sh[i + 1]], diff + 0.2));
-  return shuffle(r, out);
+  for (let round = 0; round < 3; round++) {
+    const sh = shuffle(r, singles);
+    for (let i = 0; i + 1 < sh.length; i += 2) out.push(mk([sh[i], sh[i + 1]], diff + 0.2));
+  }
+  // おなじ ことばの組み合わせが かさならないようにする（ならびが ぎゃくでも おなじ）
+  const seen = new Set<string>();
+  const uniq = out.filter((q) => {
+    const key = q.answer.split("・").sort().join("|");
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+  return shuffle(r, uniq);
 }
