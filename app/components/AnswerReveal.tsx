@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useState } from "react";
 import { recordAnswer } from "@/lib/abilities";
 import { addWeakQuestion, removeWeakQuestion } from "@/lib/weakQuestions";
 
@@ -10,11 +10,9 @@ type Props = {
   answer: string;
   explanation: string;
   accentButton: string;
-  /** こたえをひらいたあとに、こたえの下へ出す図など（かきこみ問題のおてほん用） */
-  extra?: ReactNode;
 };
 
-export default function AnswerReveal({ genre, question, answer, explanation, accentButton, extra }: Props) {
+export default function AnswerReveal({ genre, question, answer, explanation, accentButton }: Props) {
   const [revealed, setRevealed] = useState(false);
   const [done, setDone] = useState<"correct" | "retry" | null>(null);
 
@@ -45,7 +43,6 @@ export default function AnswerReveal({ genre, question, answer, explanation, acc
   return (
     <div className="mt-3 pt-3 border-t border-dashed">
       <div className="text-green-700 font-bold">こたえ：{answer}</div>
-      {extra}
       <div className="text-gray-600 text-sm mt-1">🔍 かいせつ：{explanation}</div>
 
       {done === null && (

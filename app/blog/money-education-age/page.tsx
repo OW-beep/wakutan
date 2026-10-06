@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "子どものお金の教育は何歳から？",
+  title: "子どものお金の教育は何歳から？｜わくたん",
   description:
     "子どものお金の教育を始める年齢の目安を、公的な資料もふまえて解説。幼児期に家庭でできる金銭教育のはじめ方を紹介します。",
   alternates: {

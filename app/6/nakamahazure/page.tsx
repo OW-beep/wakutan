@@ -1,5 +1,3 @@
-import PrintArea from "@/app/components/PrintArea";
-import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate6Questions } from "../../data/generate6";
@@ -8,7 +6,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "6歳向けなかまはずれ問題｜考える力を伸ばす無料ドリル",
+  title: "6歳向けなかまはずれ問題｜考える力を伸ばす無料ドリル｜わくたん",
   description:
     "「なかまはずれはどれ？」6歳向けの無料なかまはずれ問題を毎日更新。理由を考える力が身につきます。印刷・登録不要ですぐ挑戦できます。",
   alternates: {
@@ -67,14 +65,11 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="nakamahazure" />
-        <PrintArea>
-        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-rose-700"
           accentButton="bg-indigo-500"
         />
-        </PrintArea>
 
         <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">
 

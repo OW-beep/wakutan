@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "きょうだいで学年差がある場合の家庭学習の進め方",
+  title: "きょうだいで学年差がある場合の家庭学習の進め方｜わくたん",
   description:
     "4歳と6歳など、きょうだいで年齢差がある場合の家庭学習の進め方を紹介。それぞれのペースを尊重しながら両立するための工夫をまとめました。",
   alternates: {

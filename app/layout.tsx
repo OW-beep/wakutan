@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "flag-icons/css/flag-icons.min.css";
 import Script from "next/script";
 import ServiceWorkerRegister from "@/app/components/ServiceWorkerRegister";
 
@@ -25,6 +26,10 @@ export const metadata: Metadata = {
 
   description:
     "4歳〜6歳向け無料知育ドリル。毎日10問・無料・印刷OK。",
+
+  alternates: {
+    canonical: "/",
+  },
 
   openGraph: {
     title: "わくたん",
@@ -55,9 +60,6 @@ export default function RootLayout({
       lang="ja"
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <head>
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-      </head>
       <body className="bg-yellow-50 text-gray-800 min-h-screen flex flex-col">
 
         <ServiceWorkerRegister />

@@ -6,7 +6,7 @@ import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
 import FavoriteButton from "@/app/components/FavoriteButton";
 
 export const metadata = {
-  title: "苦手なジャンルだけを復習できる、オリジナルプリントの作り方",
+  title: "苦手なジャンルだけを復習できる、オリジナルプリントの作り方｜わくたん",
   description:
     "わくたんの「印刷ビルダー」を使うと、年齢とジャンルを選ぶだけで、苦手なところだけを集めたオリジナルのプリントを作れます。使い方をわかりやすく紹介します。",
   alternates: {

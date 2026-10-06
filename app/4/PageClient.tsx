@@ -4,9 +4,7 @@ import StickerBoard from "@/app/components/StickerBoard";
 import SpeakButton from "@/app/components/SpeakButton";
 import AbilityPanel from "@/app/components/AbilityPanel";
 import PrintHeader from "@/app/components/PrintHeader";
-import PatternQuestion, { speakTextFor } from "@/app/components/PatternQuestion";
 import AnswerReveal from "@/app/components/AnswerReveal";
-import FigureQuestion, { FigureAnswer } from "@/app/components/FigureQuestion";
 
 import { useMemo } from "react";
 import { generate4Questions } from "../data/generate4";
@@ -35,10 +33,6 @@ export default function PageClient() {
           okane: data.okane,
           tsumiki: data.tsumiki,
           onajikatachi: data.onajikatachi,
-          kaiten: data.kaiten,
-          sentaisho: data.sentaisho,
-          mikata: data.mikata,
-          keiyoushi: data.keiyoushi,
         },
         10
       ),
@@ -61,7 +55,7 @@ export default function PageClient() {
           </p>
         </div>
 
-        <PrintHeader total={questions.length} />
+        <PrintHeader />
 
         <AbilityPanel />
         <StickerBoard />
@@ -87,11 +81,9 @@ export default function PageClient() {
 
               {q.dotFigure && <DotFigureCopy figure={q.dotFigure} />}
 
-              {q.figure && <FigureQuestion figure={q.figure} />}
-
               <div className="text-xl leading-8 flex items-start gap-2">
-                <PatternQuestion genre={q.genre} question={q.question} />
-                <SpeakButton text={speakTextFor(q.genre, q.question)} />
+                <span className="flex-1">{q.question}</span>
+                <SpeakButton text={q.question} />
               </div>
 
               <AnswerReveal
@@ -100,7 +92,6 @@ export default function PageClient() {
                 answer={q.answer}
                 explanation={q.explanation}
                 accentButton="bg-orange-500 hover:bg-orange-600"
-                extra={q.figure ? <FigureAnswer figure={q.figure} /> : undefined}
               />
             </div>
           ))}

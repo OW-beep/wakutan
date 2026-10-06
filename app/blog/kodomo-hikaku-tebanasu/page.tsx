@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "「よそのお子さんと比べてしまう」を手放す3つの視点",
+  title: "「よそのお子さんと比べてしまう」を手放す3つの視点｜わくたん",
   description:
     "同年代の子と比べて「うちの子は遅いのかな」と感じたときに大切にしたい3つの視点を、運営者の実体験とともに紹介します。",
   alternates: {

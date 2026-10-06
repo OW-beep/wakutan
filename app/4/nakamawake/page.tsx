@@ -1,5 +1,3 @@
-import PrintArea from "@/app/components/PrintArea";
-import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
@@ -8,9 +6,9 @@ import { generate4Questions } from "../../data/generate4";
 import { getDailyQuestions } from "../../data/getDailyQuestions";
 
 export const metadata = {
-  title: "4歳向け仲間分け問題",
+  title: "4歳向け仲間分け問題｜わくたん",
   description:
-    "4歳向け無料の仲間分け（なかまあつめ）ドリル。分類する力を育てる問題を毎日更新。無料で印刷OK。",
+    "4歳向け無料仲間分けドリル。分類する力を育てる問題を毎日更新。無料で印刷OK。",
   alternates: {
     canonical: "/4/nakamawake",
   },
@@ -67,14 +65,11 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="nakamawake" />
-        <PrintArea>
-        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-green-600"
           accentButton="bg-green-500"
         />
-        </PrintArea>
 
 
         <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">

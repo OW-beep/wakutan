@@ -1,5 +1,3 @@
-import type { Figure } from "./figureTypes";
-import { generateKaiten, generateSentaisho, generateMikata, generateKeiyoushi } from "./figureQuestions";
 import { parseMoney } from "./moneyParser";
 import { CubeShape, totalCubes, describeCubes } from "./cubeShapes";
 import { DotFigure, dotFiguresSize3, buildDotFigurePool } from "./dotFigures";
@@ -15,7 +13,6 @@ import { generateSuiriQuestions5 } from "./suiriQuestions";
 import { generateKokkiQuestions5 } from "./kokkiQuestions";
 
 type Question = {
-  figure?: Figure;
   genre: string;
   question: string;
   answer: string;
@@ -151,26 +148,26 @@ export function generate5Questions() {
   // パターン
   // ====================
   const patternBase: [string, string, string][] = [
-    ["🍎 🍇 🍎 🍇 🍎 □", "🍇", "🍎と 🍇が こうごに ならんでいるよ。"],
+    ["1 2 1 2 1 □", "2", "1と 2が こうごに ならんでいるよ。"],
     ["あ い あ い □", "あ", "「あ」と「い」が こうごに ならんでいるよ。"],
     ["○ △ ○ △ □", "○", "○と △が こうごに ならんでいるよ。"],
-    ["🍌 🍓 🍌 🍓 🍌 □", "🍓", "🍌と 🍓が こうごに ならんでいるよ。"],
+    ["2 4 2 4 2 □", "4", "2と 4が こうごに ならんでいるよ。"],
     ["あか あお きいろ あか あお □", "きいろ", "あか・あお・きいろの じゅんに くりかえすよ。"],
-    ["🍎 🍇 🍌 🍎 🍇 🍌 □", "🍎", "🍎・🍇・🍌の じゅんに くりかえすよ。"],
+    ["1 2 3 1 2 3 □", "1", "1・2・3の じゅんに くりかえすよ。"],
     ["★ ★ ♥ ★ ★ □", "♥", "★が2つ、♥が1つの じゅんに くりかえすよ。"],
     ["おお ちゅう ちい おお ちゅう □", "ちい", "おお・ちゅう・ちいの じゅんに くりかえすよ。"],
     ["いぬ ねこ とり いぬ ねこ □", "とり", "いぬ・ねこ・とりの じゅんに くりかえすよ。"],
-    ["🐶 🐱 🐰 🐶 🐱 □", "🐰", "🐶・🐱・🐰の じゅんに くりかえすよ。"],
+    ["5 10 15 5 10 □", "15", "5・10・15の じゅんに くりかえすよ。"],
     ["● ▲ ■ ● ▲ □", "■", "●・▲・■の じゅんに くりかえすよ。"],
     ["うえ みぎ した ひだり うえ □", "みぎ", "うえ・みぎ・した・ひだりの じゅんに くりかえすよ。"],
-    ["🐟 🐢 🐟 🐢 🐟 □", "🐢", "🐟と 🐢が こうごに ならんでいるよ。"],
+    ["3 6 3 6 3 □", "6", "3と 6が こうごに ならんでいるよ。"],
     ["さかな とり むし さかな とり □", "むし", "さかな・とり・むしの じゅんに くりかえすよ。"],
     ["おおい ふつう すくない おおい ふつう □", "すくない", "おおい・ふつう・すくないの じゅんに くりかえすよ。"],
     ["A B C A B □", "C", "A・B・Cの じゅんに くりかえすよ。"],
-    ["🚗 🚌 🚗 🚌 🚗 □", "🚌", "🚗と 🚌が こうごに ならんでいるよ。"],
+    ["4 8 4 8 4 □", "8", "4と 8が こうごに ならんでいるよ。"],
     ["すき きらい ふつう すき きらい □", "ふつう", "すき・きらい・ふつうの じゅんに くりかえすよ。"],
-    ["🌸 🌻 🌷 🌸 🌻 □", "🌷", "🌸・🌻・🌷の じゅんに くりかえすよ。"],
-    ["🍊 🍉 🍊 🍉 □", "🍊", "🍊と 🍉が こうごに ならんでいるよ。"],
+    ["10 9 8 10 9 □", "8", "10・9・8の じゅんに くりかえすよ。"],
+    ["7 8 7 8 □", "7", "7と 8が こうごに ならんでいるよ。"],
   ];
 
   patternBase.forEach(t => {
@@ -583,11 +580,5 @@ export function generate5Questions() {
     flagKeys: q.flagKeys,
   }));
 
-  // かいてん・せんたいしょう・うえ/よこから みる・けいようし（イラスト・書きこみ式）
-  const kaiten: Question[] = generateKaiten(5);
-  const sentaisho: Question[] = generateSentaisho(5);
-  const mikata: Question[] = generateMikata(5);
-  const keiyoushi: Question[] = generateKeiyoushi(5);
-
-  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, moji, nazonazo, okane, tsumiki, onajikatachi, suiri, kokki, kaiten, sentaisho, mikata, keiyoushi };
+  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, moji, nazonazo, okane, tsumiki, onajikatachi, suiri, kokki };
 }

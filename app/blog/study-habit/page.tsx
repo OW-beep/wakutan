@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "家庭学習を続けるコツ",
+  title: "家庭学習を続けるコツ｜わくたん",
   description:
     "幼児の家庭学習が続かないと悩む保護者向け。無理なく習慣化する方法や、勉強嫌いを防ぐコツを紹介します。",
   alternates: {

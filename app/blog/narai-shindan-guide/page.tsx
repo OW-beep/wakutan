@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "習い事は何を基準に選ぶ？4〜6歳の習い事選びで大切にしたい考え方",
+  title: "習い事は何を基準に選ぶ？4〜6歳の習い事選びで大切にしたい考え方｜わくたん",
   description:
     "4〜6歳の習い事選びは「人気ランキング」より「何を大切にしたいか」から考えるのがおすすめです。目的・子どもの興味・家庭の条件の整理の仕方と、無料の習い事診断ツールを紹介します。",
   alternates: {

@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "赤ちゃん返りが心配になったら知ってほしい3つ",
+  title: "赤ちゃん返りが心配になったら知ってほしい3つ｜わくたん",
   description:
     "下の子が生まれてから、上の子の赤ちゃん返りが気になる方へ。よくあることだと知っておきたい理由と、無理なく関わるための3つのポイントを、運営者の実体験とともに紹介します。",
   alternates: {

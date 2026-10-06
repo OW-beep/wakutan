@@ -1,4 +1,3 @@
-import "flag-icons/css/flag-icons.min.css";
 import { FLAGS } from "../data/flagData";
 
 type Props = {

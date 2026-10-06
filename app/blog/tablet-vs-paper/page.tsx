@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "タブレット学習と紙のドリル、どう使い分ける？",
+  title: "タブレット学習と紙のドリル、どう使い分ける？｜わくたん",
   description:
     "幼児向けのタブレット学習アプリと紙のドリル、それぞれのメリットと使い分け方を紹介します。",
   alternates: {

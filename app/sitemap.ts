@@ -23,10 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/4/okane",
     "/4/tsumiki",
     "/4/onajikatachi",
-    "/4/kaiten",
-    "/4/sentaisho",
-    "/4/mikata",
-    "/4/keiyoushi",
 
     "/5/sansu",
     "/5/ronri",
@@ -42,10 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/5/okane",
     "/5/tsumiki",
     "/5/onajikatachi",
-    "/5/kaiten",
-    "/5/sentaisho",
-    "/5/mikata",
-    "/5/keiyoushi",
 
     "/6/sansu",
     "/6/ronri",
@@ -62,10 +54,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/6/okane",
     "/6/tsumiki",
     "/6/onajikatachi",
-    "/6/kaiten",
-    "/6/sentaisho",
-    "/6/mikata",
-    "/6/keiyoushi",
 
     "/about",
     "/articles",

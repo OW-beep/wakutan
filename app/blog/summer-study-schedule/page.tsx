@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "夏休みの家庭学習スケジュール例",
+  title: "夏休みの家庭学習スケジュール例｜わくたん",
   description:
     "幼児の夏休み中の家庭学習スケジュール例を紹介。1週間単位で無理なく続けられる無料ドリルの活用プランをまとめました。",
   alternates: {

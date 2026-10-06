@@ -1,5 +1,3 @@
-import PrintArea from "@/app/components/PrintArea";
-import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate4Questions } from "../../data/generate4";
@@ -8,7 +6,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "4歳向けなかまはずれ問題",
+  title: "4歳向けなかまはずれ問題｜わくたん",
   description:
     "4歳向け無料なかまはずれドリル。4つの中から仲間はずれを見つける問題を毎日更新。",
   alternates: {
@@ -67,14 +65,11 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="nakamahazure" />
-        <PrintArea>
-        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-rose-700"
           accentButton="bg-rose-500"
         />
-        </PrintArea>
 
         <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">
 

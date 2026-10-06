@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "小学校入学前に身につけたい力",
+  title: "小学校入学前に身につけたい力｜わくたん",
   description:
     "小学校入学前の勉強・準備で身につけたい力を解説。文字や計算だけではない、本当に大切な力とは？",
   alternates: {

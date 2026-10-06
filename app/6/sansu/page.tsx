@@ -1,5 +1,3 @@
-import PrintArea from "@/app/components/PrintArea";
-import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate6Questions } from "../../data/generate6";
@@ -8,7 +6,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "6歳向け算数ドリル",
+  title: "6歳向け算数ドリル｜わくたん",
   description:
     "6歳向け無料算数ドリル。たし算・ひきざんの基礎を毎日30問。無料で印刷OK。",
   alternates: {
@@ -67,14 +65,11 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="sansu" />
-        <PrintArea>
-        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-yellow-700"
           accentButton="bg-orange-500"
         />
-        </PrintArea>
 
         <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">
 

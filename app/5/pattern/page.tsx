@@ -1,5 +1,3 @@
-import PrintArea from "@/app/components/PrintArea";
-import PrintHeader from "@/app/components/PrintHeader";
 import QuestionList from "../../components/QuestionList";
 import Link from "next/link";
 import { generate5Questions } from "../../data/generate5";
@@ -8,9 +6,9 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "5歳向けパターン問題",
+  title: "5歳向けパターン問題｜わくたん",
   description:
-    "5歳向け無料パターンドリル。絵・形・もじの「くりかえし」を見つけて次を考える問題を毎日更新。印刷OK。",
+    "5歳向け規則性ドリル。次にくる形や数を考える問題を毎日更新。",
   alternates: {
     canonical: "/5/pattern",
   },
@@ -67,14 +65,11 @@ export default function Page() {
         </div>
 
         <GenreAbilityBox genreKey="pattern" />
-        <PrintArea>
-        <PrintHeader total={questions.length} />
         <QuestionList
           questions={questions}
           accentText="text-purple-700"
           accentButton="bg-purple-500"
         />
-        </PrintArea>
 
         <div className="mt-10 bg-white rounded-3xl shadow p-8 print-hide">
 

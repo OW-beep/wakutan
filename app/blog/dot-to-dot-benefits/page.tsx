@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "点つなぎ遊びの効果｜集中力・数字・運筆力が育つ",
+  title: "点つなぎ遊びの効果｜集中力・数字・運筆力が育つ｜わくたん",
   description:
     "点つなぎ遊びは数字を覚えながら集中力や運筆力を育てられる知育遊びです。4〜6歳向けに効果や、数字が苦手な子への配慮も紹介します。",
   alternates: {

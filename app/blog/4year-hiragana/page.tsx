@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "4歳ではじめてのひらがな｜どこから始める？",
+  title: "4歳ではじめてのひらがな｜どこから始める？｜わくたん",
   description:
     "4歳ではじめてひらがなに触れる際の進め方を解説。何から始めればよいか、興味を持たない場合の対処法もあわせて紹介します。",
   alternates: {

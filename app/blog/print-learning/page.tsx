@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "プリント学習のメリットとは？家庭学習を続けるコツ",
+  title: "プリント学習のメリットとは？家庭学習を続けるコツ｜わくたん",
   description:
     "幼児向けプリント学習には、どんなメリットがある？集中力・思考力・学習習慣を育てる理由と、家庭学習を無理なく続けるコツを紹介します。",
   alternates: {

@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "パズル遊びの効果｜考える力・集中力・空間認識力が育つ",
+  title: "パズル遊びの効果｜考える力・集中力・空間認識力が育つ｜わくたん",
   description:
     "パズル遊びが育てる力を解説。考える力・集中力・空間認識力を伸ばすパズルの選び方や取り入れ方も紹介します。",
   alternates: {

@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "5歳でひらがなが書けない・読めない…親の不安を解消する関わり方",
+  title: "5歳でひらがなが読めない・書けない…親の不安解消法｜わくたん",
   description:
     "5歳になってもひらがなが読めない・書けないことに不安を感じる保護者向けに、無理なく興味を引き出すステップを紹介します。",
   alternates: {

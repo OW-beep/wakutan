@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "6歳（年長）の学び方・勉強のコツ｜家庭学習のおすすめ",
+  title: "6歳（年長）の学び方・勉強のコツ｜家庭学習のおすすめ｜わくたん",
   description:
     "6歳・年長さんの勉強・学び方のコツを解説。小学校入学前に育てたい力や、おすすめの家庭学習のポイントを紹介します。",
   alternates: {

@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "5歳の学び方・勉強のコツ｜年中さん向けの関わり方",
+  title: "5歳の学び方・勉強のコツ｜年中さん向けの関わり方｜わくたん",
   description:
     "5歳（年中〜年長）の勉強・学び方のコツを解説。考える力や集中力を育てながら、楽しく学習を続けるための関わり方を紹介します。",
   alternates: {

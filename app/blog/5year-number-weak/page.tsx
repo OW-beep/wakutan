@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "5歳で数が苦手なとき、家庭でできること",
+  title: "5歳で数が苦手なとき、家庭でできること｜わくたん",
   description:
     "5歳の子どもが数を苦手にしているときの対処法を解説。数の意味の理解を育てる家庭での関わり方を紹介します。",
   alternates: {

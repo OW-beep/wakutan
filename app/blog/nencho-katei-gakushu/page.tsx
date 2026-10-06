@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "年長さんの家庭学習、何をすればいい？1年間の進め方",
+  title: "年長さんの家庭学習、何をすればいい？1年間の進め方｜わくたん",
   description:
     "年長さんの家庭学習は、何を・どれくらい進めればいいか迷う方も多いはずです。小学校入学までの1年間を見通した、無理のない家庭学習の進め方を紹介します。",
   alternates: {
