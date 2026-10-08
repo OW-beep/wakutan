@@ -7,6 +7,10 @@ export type BlogMetaEntry = {
 };
 
 export const blogMeta: BlogMetaEntry[] = [
+  { slug: "spatial-skills-preschool", title: "空間認識力とは？幼児期のパズル・図形遊びと算数の関係【研究まとめ】", category: "研究から学ぶ" },
+  { slug: "pattern-repeating-math", title: "くりかえしパターンは算数の土台？数字がわからなくても取り組める理由【研究】", category: "研究から学ぶ" },
+  { slug: "emotion-words-keiyoushi", title: "気持ちやようすのことば（形容詞）を増やすと？語彙と感情理解の研究と声かけのコツ", category: "研究から学ぶ" },
+  { slug: "tracing-vs-handwriting", title: "なぞり書きだけで大丈夫？手で書く経験と文字学習の研究から考える", category: "研究から学ぶ" },
   { slug: "print-builder-guide", title: "苦手なジャンルだけを復習できる、オリジナルプリントの作り方", category: "教材の選び方" },
   { slug: "kodomo-hikaku-tebanasu", title: "「よそのお子さんと比べてしまう」を手放す3つの視点", category: "保護者向け" },
   { slug: "nencho-katei-gakushu", title: "年長さんの家庭学習、何をすればいい？1年間の進め方", category: "小学校入学準備" },

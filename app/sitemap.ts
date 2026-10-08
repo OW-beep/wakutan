@@ -151,6 +151,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/scissors-practice",
     "/blog/shape-learning",
     "/blog/unpitsu-practice",
+    "/blog/spatial-skills-preschool",
+    "/blog/pattern-repeating-math",
+    "/blog/emotion-words-keiyoushi",
+    "/blog/tracing-vs-handwriting",
   ];
 
   return pages.map((page) => ({

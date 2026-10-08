@@ -84,7 +84,15 @@ export default function QuestionList({
 
             {q.compareRows && <EmojiRows rows={q.compareRows} />}
 
-            {q.figure && <FigureQuestion figure={q.figure} />}
+            {q.figure && (
+                <FigureQuestion
+                  figure={q.figure}
+                  trace={
+                    q.figure.kind === "symmetry" &&
+                    questions.findIndex((x) => x.figure?.kind === "symmetry") === index
+                  }
+                />
+              )}
 
             {q.flagKey && !q.flagKeys && (
               <div className="flex justify-center mb-3">

@@ -21,7 +21,7 @@ export type Cell = { r: number; c: number; s: Shape };
 export type SolidKind = "cyl" | "cube" | "sphere" | "cone";
 export type Layer = { kind: SolidKind; color: string; w: 1 | 2 | 3 };
 
-export type TraceItem = { emojis: string[]; word: string };
+export type TraceItem = { emojis: string[]; word: string; scene?: string };
 
 export type Figure =
   | {
@@ -47,7 +47,7 @@ export type Figure =
       choices: Layer[][];
       correct: number;
     }
-  | { kind: "trace"; items: TraceItem[] };
+  | { kind: "trace"; items: TraceItem[]; bank?: string[] };
 
 // ---------- 図形の変換 ----------
 

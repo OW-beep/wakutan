@@ -11,6 +11,33 @@ export const metadata: Metadata = {
   },
 };
 
+const researchArticles = [
+  {
+    href: "/blog/spatial-skills-preschool",
+    emoji: "🧩",
+    title: "空間認識力とは？パズル・図形遊びと算数の関係",
+    desc: "国際的な研究から、言えること・言えないことを整理",
+  },
+  {
+    href: "/blog/pattern-repeating-math",
+    emoji: "🍎",
+    title: "くりかえしパターンは算数の土台？",
+    desc: "数字がわからなくても取り組める理由を研究から解説",
+  },
+  {
+    href: "/blog/emotion-words-keiyoushi",
+    emoji: "💬",
+    title: "気持ちやようすのことば（形容詞）を増やすと？",
+    desc: "語彙と感情理解の研究と、家庭での声かけのコツ",
+  },
+  {
+    href: "/blog/tracing-vs-handwriting",
+    emoji: "✏️",
+    title: "なぞり書きだけで大丈夫？",
+    desc: "手で書く経験と文字学習の研究から考える",
+  },
+];
+
 const naraiArticles = [
   {
     href: "/blog/narai-shindan-guide",
@@ -391,6 +418,11 @@ export default function ArticlesPage() {
         <ArticleSection
           title="🧭 習い事選び"
           articles={naraiArticles}
+        />
+
+        <ArticleSection
+          title="🔬 研究から学ぶ（出典つき）"
+          articles={researchArticles}
         />
 
         <ArticleSection

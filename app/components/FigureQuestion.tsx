@@ -9,16 +9,16 @@ import { SolidStack, TopView, SideView } from "./Solids";
 
 const INK = "#1f2937";
 
-function ShapeMark({ s, x, y, u }: { s: Shape; x: number; y: number; u: number }) {
+function ShapeMark({ s, x, y, u, color = INK }: { s: Shape; x: number; y: number; u: number; color?: string }) {
   const cx = x + u / 2;
   const cy = y + u / 2;
   const r = u * 0.3;
-  const p = { stroke: INK, strokeWidth: 2.2, fill: "none", strokeLinejoin: "round" as const, strokeLinecap: "round" as const };
+  const p = { stroke: color, strokeWidth: 2.2, fill: "none", strokeLinejoin: "round" as const, strokeLinecap: "round" as const };
   switch (s) {
     case "o":
       return <circle cx={cx} cy={cy} r={r} {...p} />;
     case "dot":
-      return <circle cx={cx} cy={cy} r={r * 0.9} fill={INK} />;
+      return <circle cx={cx} cy={cy} r={r * 0.9} fill={color} />;
     case "sq":
       return <rect x={cx - r} y={cy - r} width={r * 2} height={r * 2} {...p} />;
     case "x":
@@ -51,7 +51,7 @@ export function ShapeGrid({
   cells: Cell[];
   u?: number;
   blank?: boolean;
-  tone?: "normal" | "answer";
+  tone?: "normal" | "answer" | "faint";
 }) {
   const W = size * u;
   const stroke = tone === "answer" ? "#16a34a" : INK;
@@ -72,7 +72,9 @@ export function ShapeGrid({
         </g>
       ))}
       {!blank &&
-        cells.map((c, i) => <ShapeMark key={i} s={c.s} x={c.c * u} y={c.r * u} u={u} />)}
+        cells.map((c, i) => (
+          <ShapeMark key={i} s={c.s} x={c.c * u} y={c.r * u} u={u} color={tone === "faint" ? "#cbd5e1" : INK} />
+        ))}
     </svg>
   );
 }
@@ -128,7 +130,11 @@ function AnswerBox() {
   );
 }
 
-export default function FigureQuestion({ figure }: { figure: Figure }) {
+/**
+ * trace=true のとき、かきこみ式の図（かがみうつし）に「れいだい」として
+ * こたえをうすく ひいておく。うえから なぞって れんしゅうできる。
+ */
+export default function FigureQuestion({ figure, trace = false }: { figure: Figure; trace?: boolean }) {
   switch (figure.kind) {
     case "rotate-choice":
       return (
@@ -165,7 +171,22 @@ export default function FigureQuestion({ figure }: { figure: Figure }) {
           <svg width={20} height={figure.size * (figure.size >= 4 ? 40 : 46)} aria-hidden="true">
             <line x1={10} y1={0} x2={10} y2="100%" stroke="#7c3aed" strokeWidth={2.5} strokeDasharray="6 5" />
           </svg>
-          <ShapeGrid size={figure.size} cells={[]} u={figure.size >= 4 ? 40 : 46} blank />
+          <ShapeGrid
+            size={figure.size}
+            cells={trace ? figure.result : []}
+            u={figure.size >= 4 ? 40 : 46}
+            tone={trace ? "faint" : "normal"}
+            blank={!trace}
+          />
+          {trace && (
+            <span className="ml-3 text-sm font-bold text-purple-700 leading-5">
+              れいだい
+              <br />
+              うすい ずを
+              <br />
+              なぞろう
+            </span>
+          )}
         </div>
       );
 
@@ -192,16 +213,32 @@ export default function FigureQuestion({ figure }: { figure: Figure }) {
 
     case "trace":
       return (
-        <div className="wt-write mb-3 flex flex-wrap justify-center gap-4">
-          {figure.items.map((it, i) => (
-            <div
-              key={i}
-              className="wt-trace-card rounded-2xl border-2 border-gray-300 bg-white px-4 py-3 text-center min-w-[200px]"
-            >
-              <div className="text-5xl leading-tight tracking-wide">{it.emojis.join("")}</div>
-              <TraceWord word={it.word} />
+        <div className="wt-write mb-3">
+          {figure.bank && figure.bank.length > 0 && (
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-3 wt-bank">
+              <span className="text-sm font-bold text-green-700">ことばの えらびしゃ：</span>
+              {figure.bank.map((w) => (
+                <span
+                  key={w}
+                  className="rounded-full border-2 border-green-300 bg-green-50 px-3 py-1 text-lg font-bold"
+                >
+                  {w}
+                </span>
+              ))}
             </div>
-          ))}
+          )}
+          <div className="flex flex-wrap justify-center gap-4">
+            {figure.items.map((it, i) => (
+              <div
+                key={i}
+                className="wt-trace-card rounded-2xl border-2 border-gray-300 bg-white px-4 py-3 text-center min-w-[200px] max-w-[320px]"
+              >
+                <div className="text-5xl leading-tight tracking-wide">{it.emojis.join("")}</div>
+                {it.scene && <p className="wt-scene text-sm leading-6 text-gray-700 mt-1">{it.scene}</p>}
+                <TraceWord word={it.word} />
+              </div>
+            ))}
+          </div>
         </div>
       );
   }

@@ -88,7 +88,15 @@ export default function PageClient() {
 
               {q.dotFigure && <DotFigureCopy figure={q.dotFigure} />}
 
-              {q.figure && <FigureQuestion figure={q.figure} />}
+              {q.figure && (
+                <FigureQuestion
+                  figure={q.figure}
+                  trace={
+                    q.figure.kind === "symmetry" &&
+                    questions.findIndex((x) => x.figure?.kind === "symmetry") === index
+                  }
+                />
+              )}
 
               <div className="text-xl leading-8 flex items-start gap-2">
                 <PatternQuestion genre={q.genre} question={q.question} />

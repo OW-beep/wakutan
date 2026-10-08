@@ -16,6 +16,7 @@ import {
   type SolidKind,
 } from "./figureTypes";
 import { SOLID_COLORS, layerWidth } from "../components/Solids";
+import { PAIR_DEFS, SINGLE_DEFS, WORDS, type WordDef } from "./keiyoushiData";
 
 export type Age = 4 | 5 | 6;
 
@@ -323,108 +324,64 @@ export function generateMikata(age: Age): FigureQ[] {
   return shuffle(r, out);
 }
 
-// ---------- けいようし ----------
+// ---------- けいようし（ぴったりことば） ----------
 
-type Word = { w: string; e: string[]; hint: string };
-type Pair = { a: Word; b: Word; level: 1 | 2 };
-type Single = Word & { level: 1 | 2 | 3 };
-
-const PAIRS: Pair[] = [
-  { level: 1, a: { w: "あつい", e: ["🥵", "☀️"], hint: "なつの たいようの したは あつい" }, b: { w: "さむい", e: ["🥶", "❄️"], hint: "ふゆの ゆきの ひは さむい" } },
-  { level: 1, a: { w: "おおきい", e: ["🐘"], hint: "ぞうは おおきい" }, b: { w: "ちいさい", e: ["🐭"], hint: "ねずみは ちいさい" } },
-  { level: 1, a: { w: "ながい", e: ["🟦", "🟦", "🟦", "🟦", "🟦"], hint: "ながく つながっている" }, b: { w: "みじかい", e: ["🟦", "🟦"], hint: "すこししか つながっていない" } },
-  { level: 1, a: { w: "おおい", e: ["🍎", "🍎", "🍎", "🍎", "🍎", "🍎"], hint: "かずが たくさん ある" }, b: { w: "すくない", e: ["🍎", "🍎"], hint: "かずが すこししか ない" } },
-  { level: 1, a: { w: "はやい", e: ["🚄"], hint: "しんかんせんは はやい" }, b: { w: "おそい", e: ["🐢"], hint: "かめは ゆっくり。おそい" } },
-  { level: 1, a: { w: "おもい", e: ["🪨"], hint: "おおきな いしは おもい" }, b: { w: "かるい", e: ["🎈"], hint: "ふうせんは かるい" } },
-  { level: 1, a: { w: "たかい", e: ["🏢"], hint: "ビルは たかい" }, b: { w: "ひくい", e: ["🏠"], hint: "ちいさな いえは ひくい" } },
-  { level: 1, a: { w: "おいしい", e: ["😋", "🍰"], hint: "あじが よくて おいしい" }, b: { w: "まずい", e: ["🤢"], hint: "あじが よくなくて まずい" } },
-  { level: 2, a: { w: "あかるい", e: ["☀️", "💡"], hint: "ひかりが あって あかるい" }, b: { w: "くらい", e: ["🌃"], hint: "よるは くらい" } },
-  { level: 2, a: { w: "うれしい", e: ["😄", "🎁"], hint: "プレゼントを もらって うれしい" }, b: { w: "かなしい", e: ["😢"], hint: "なみだが でて かなしい" } },
-  { level: 2, a: { w: "たのしい", e: ["🥳", "🎡"], hint: "あそんで たのしい" }, b: { w: "つまらない", e: ["😑"], hint: "おもしろく なくて つまらない" } },
-  { level: 2, a: { w: "つめたい", e: ["🧊", "🍦"], hint: "こおりは つめたい" }, b: { w: "あたたかい", e: ["☕", "🧣"], hint: "おゆや マフラーは あたたかい" } },
-  { level: 2, a: { w: "あまい", e: ["🍰", "🍬"], hint: "ケーキは あまい" }, b: { w: "からい", e: ["🌶️"], hint: "とうがらしは からい" } },
-  { level: 2, a: { w: "かたい", e: ["🧱"], hint: "れんがは かたい" }, b: { w: "やわらかい", e: ["🍞"], hint: "パンは やわらかい" } },
-  { level: 2, a: { w: "あたらしい", e: ["🆕", "👟"], hint: "かったばかりで あたらしい" }, b: { w: "ふるい", e: ["🏚️"], hint: "ずっと まえから あって ふるい" } },
-  { level: 2, a: { w: "つよい", e: ["💪", "🦁"], hint: "ライオンは つよい" }, b: { w: "よわい", e: ["🥺"], hint: "ちからが でなくて よわい" } },
-  { level: 2, a: { w: "しろい", e: ["☁️", "🥛"], hint: "くもや ぎゅうにゅうは しろい" }, b: { w: "くろい", e: ["🦇"], hint: "こうもりは くろい" } },
-  { level: 2, a: { w: "あかい", e: ["🍎", "🍓"], hint: "りんごや いちごは あかい" }, b: { w: "あおい", e: ["🌊", "🐳"], hint: "うみや そらは あおい" } },
-  { level: 2, a: { w: "ふとい", e: ["🌳"], hint: "おおきな きは ふとい" }, b: { w: "ほそい", e: ["🧵"], hint: "いとは ほそい" } },
-];
-
-const SINGLES: Single[] = [
-  { level: 1, w: "ねむい", e: ["😴"], hint: "めが とじそうで ねむい" },
-  { level: 1, w: "いたい", e: ["🤕"], hint: "けがを して いたい" },
-  { level: 1, w: "こわい", e: ["😱", "👻"], hint: "おばけは こわい" },
-  { level: 1, w: "あまい", e: ["🍰", "🍬"], hint: "ケーキは あまい" },
-  { level: 1, w: "かわいい", e: ["🐶", "🐱"], hint: "こいぬと こねこは かわいい" },
-  { level: 2, w: "すっぱい", e: ["🍋", "😖"], hint: "レモンは すっぱい" },
-  { level: 2, w: "うるさい", e: ["📢", "🙉"], hint: "おおきな おとが して うるさい" },
-  { level: 2, w: "あぶない", e: ["⚠️", "🔥"], hint: "ひは さわると あぶない" },
-  { level: 2, w: "おもしろい", e: ["🤣", "📺"], hint: "わらってしまう おもしろい" },
-  { level: 2, w: "かっこいい", e: ["😎"], hint: "サングラスの ヒーローは かっこいい" },
-  { level: 2, w: "いそがしい", e: ["🏃", "💦"], hint: "やる ことが たくさんで いそがしい" },
-  { level: 2, w: "さびしい", e: ["😔"], hint: "ひとりで さびしい" },
-  { level: 3, w: "はずかしい", e: ["😳"], hint: "かおが あかく なって はずかしい" },
-  { level: 3, w: "むずかしい", e: ["🤯", "📚"], hint: "かんがえても わからない むずかしい" },
-  { level: 3, w: "くやしい", e: ["😣"], hint: "まけて くやしい" },
-  { level: 3, w: "おそろしい", e: ["😨", "🦖"], hint: "きょうりゅうは おそろしい" },
-  { level: 3, w: "まぶしい", e: ["😖", "☀️"], hint: "ひかりが つよくて まぶしい" },
-  { level: 3, w: "やさしい", e: ["🥰", "🤝"], hint: "しんせつで やさしい" },
-  { level: 3, w: "すばらしい", e: ["🏆", "👏"], hint: "とても じょうずで すばらしい" },
-  { level: 3, w: "くるしい", e: ["😫"], hint: "いきが できなくて くるしい" },
-  { level: 3, w: "うつくしい", e: ["🌈", "🌸"], hint: "にじや さくらは うつくしい" },
-  { level: 3, w: "おとなしい", e: ["🤫"], hint: "しずかで おとなしい" },
-  { level: 1, w: "あかい", e: ["🍎", "🍓"], hint: "りんごや いちごは あかい" },
-  { level: 1, w: "あおい", e: ["🌊", "🐳"], hint: "うみや そらは あおい" },
-  { level: 1, w: "しろい", e: ["☁️", "🥛"], hint: "くもや ぎゅうにゅうは しろい" },
-  { level: 1, w: "くろい", e: ["🦇"], hint: "こうもりは くろい" },
-  { level: 1, w: "きいろい", e: ["🍌", "🐥"], hint: "バナナや ひよこは きいろい" },
-  { level: 1, w: "かゆい", e: ["🦟", "😖"], hint: "かに さされて かゆい" },
-  { level: 1, w: "すごい", e: ["🤩"], hint: "びっくりするほど すごい" },
-  { level: 2, w: "すずしい", e: ["🌬️", "🎐"], hint: "かぜが ふいて すずしい" },
-  { level: 2, w: "かしこい", e: ["🦉", "🧠"], hint: "ふくろうは かしこい" },
-  { level: 2, w: "さわがしい", e: ["🙉", "📢"], hint: "おおぜいで さわがしい" },
-  { level: 2, w: "ほしい", e: ["🧸", "🥺"], hint: "おもちゃが ほしい" },
-  { level: 2, w: "ひどい", e: ["⛈️"], hint: "あらしは ひどい" },
-  { level: 3, w: "めずらしい", e: ["🦄", "✨"], hint: "なかなか みられなくて めずらしい" },
-  { level: 3, w: "なつかしい", e: ["📷", "👵"], hint: "むかしを おもいだして なつかしい" },
-  { level: 3, w: "たのもしい", e: ["💪", "🤝"], hint: "たよりに なって たのもしい" },
-  { level: 3, w: "くわしい", e: ["🔍", "📚"], hint: "よく しっていて くわしい" },
-  { level: 3, w: "けわしい", e: ["⛰️", "🧗"], hint: "やまの みちが けわしい" },
-  { level: 3, w: "あやしい", e: ["🕵️", "❓"], hint: "なにか あやしい" },
-  { level: 3, w: "うらやましい", e: ["🥺", "✨"], hint: "いいなあと おもって うらやましい" },
-  { level: 3, w: "いさましい", e: ["🦁", "🛡️"], hint: "こわがらずに すすむ いさましい" },
-];
-
-const TRACE_Q = "えを みて、ようすを あらわす ことばを かこう。うすい もじは うえから なぞろう。";
+const TRACE_Q =
+  "えと おはなしを みて、ぴったりの ことばを えらんで かこう。うすい もじは うえから なぞろう。";
 
 export function generateKeiyoushi(age: Age): FigureQ[] {
   const r = makeRng(10000 + age);
-  const out: FigureQ[] = [];
   const lv = age === 4 ? [1] : age === 5 ? [1, 2] : [2, 3];
   const diff = age === 4 ? 1 : age === 5 ? 2 : 3;
-  const mk = (items: Word[], difficulty: number): FigureQ => ({
-    genre: GENRE_LABEL.keiyoushi,
-    question: TRACE_Q,
-    answer: items.map((i) => i.w).join("・"),
-    explanation: items.map((i) => `${i.w}：${i.hint}。`).join(" "),
-    difficulty,
-    figure: { kind: "trace", items: items.map((i) => ({ emojis: i.e, word: i.w })) },
-  });
 
-  // はんたいことばの2まい組（絵を くらべて ことばを かく）
-  for (const p of PAIRS.filter((p) => lv.includes(p.level))) {
-    out.push(mk([p.a, p.b], diff));
+  // そのとしで出す ことば（ぎゃくの候補にも この中から えらぶ）
+  const levelOf: Record<string, number> = {};
+  for (const [a, b, l] of PAIR_DEFS) {
+    levelOf[a] = Math.min(levelOf[a] ?? 9, l);
+    levelOf[b] = Math.min(levelOf[b] ?? 9, l);
   }
-  // ひとつだけの絵
-  const singles = SINGLES.filter((s) => lv.includes(s.level));
-  for (const s of singles) out.push(mk([s], diff - 0.2));
-  // ことなる2つの組み合わせ（ひとまわり ふやす）
+  for (const [w, l] of SINGLE_DEFS) levelOf[w] = Math.min(levelOf[w] ?? 9, l);
+  const allowed = Object.values(WORDS).filter((w) => lv.includes(levelOf[w.w]));
+
+  const pickDistractors = (answers: WordDef[], n: number): string[] => {
+    if (n <= 0) return [];
+    const names = new Set(answers.map((a) => a.w));
+    const sameGroup = shuffle(r, allowed.filter((w) => !names.has(w.w) && w.g === answers[0].g));
+    const others = shuffle(r, allowed.filter((w) => !names.has(w.w) && w.g !== answers[0].g));
+    return [...sameGroup, ...others].slice(0, n).map((w) => w.w);
+  };
+
+  const mk = (items: WordDef[], extra: number, difficulty: number): FigureQ => {
+    const bank = shuffle(r, [...items.map((i) => i.w), ...pickDistractors(items, extra)]);
+    return {
+      genre: GENRE_LABEL.keiyoushi,
+      question: TRACE_Q,
+      answer: items.map((i) => i.w).join("・"),
+      explanation: items.map((i) => `${i.w}：${i.h}。`).join(" "),
+      difficulty,
+      figure: {
+        kind: "trace",
+        bank,
+        items: items.map((i) => ({ emojis: i.e, word: i.w, scene: i.s })),
+      },
+    };
+  };
+
+  const out: FigureQ[] = [];
+  // はんたいことばの2まい組：4歳はことばを えらぶだけ（きまった 2つ）、5・6歳は まぎらわしい ことばも ならべる
+  for (const [a, b, l] of PAIR_DEFS) {
+    if (!lv.includes(l)) continue;
+    out.push(mk([WORDS[a], WORDS[b]], age === 4 ? 0 : 1, diff));
+  }
+  // ひとつだけの絵：えらびしゃ（4歳は2つ、5歳は3つ、6歳は4つ）
+  const singles = SINGLE_DEFS.filter(([, l]) => lv.includes(l)).map(([w]) => WORDS[w]);
+  for (const w of singles) out.push(mk([w], age === 4 ? 1 : age === 5 ? 2 : 3, diff - 0.2));
+  // ことなる2つの組み合わせ（かさならない ことばだけ）
   for (let round = 0; round < 3; round++) {
     const sh = shuffle(r, singles);
-    for (let i = 0; i + 1 < sh.length; i += 2) out.push(mk([sh[i], sh[i + 1]], diff + 0.2));
+    for (let i = 0; i + 1 < sh.length; i += 2) out.push(mk([sh[i], sh[i + 1]], age === 4 ? 0 : age === 5 ? 1 : 2, diff + 0.2));
   }
-  // おなじ ことばの組み合わせが かさならないようにする（ならびが ぎゃくでも おなじ）
+
   const seen = new Set<string>();
   const uniq = out.filter((q) => {
     const key = q.answer.split("・").sort().join("|");

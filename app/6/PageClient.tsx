@@ -71,7 +71,6 @@ export default function PageClient() {
 
         </div>
 
-        <PrintHeader total={questions.length} />
 
         <EntranceCountdown />
         <AbilityPanel />
@@ -79,6 +78,11 @@ export default function PageClient() {
 
         {/* 問題 */}
         <div className="grid gap-5 wt-daily-a4">
+
+          {/* 日付・なまえ・とくてん：2列ブロックの先頭に全幅で置く（ブロックだけ次ページに飛ぶのを防ぐ） */}
+          <div className="wt-span-all">
+            <PrintHeader total={questions.length} />
+          </div>
 
           {questions.map((q, index) => (
 
@@ -115,7 +119,15 @@ export default function PageClient() {
                 </div>
               )}
 
-              {q.figure && <FigureQuestion figure={q.figure} />}
+              {q.figure && (
+                <FigureQuestion
+                  figure={q.figure}
+                  trace={
+                    q.figure.kind === "symmetry" &&
+                    questions.findIndex((x) => x.figure?.kind === "symmetry") === index
+                  }
+                />
+              )}
 
               <div className="text-xl leading-8 flex items-start gap-2">
                 <PatternQuestion genre={q.genre} question={q.question} prefix={`${index + 1}. `} />

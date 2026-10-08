@@ -198,9 +198,6 @@ body {
     display: block;
     column-count: 2;
     column-gap: 6px;
-    /* 左の列をページの下までうめてから右の列へ。balance だと、1ページ目に日付欄だけ残って
-       問題がまるごと2ページ目に飛ぶことがあった */
-    column-fill: auto;
   }
   .wt-daily-a4 > * {
     padding: 6px !important;
@@ -288,5 +285,31 @@ body {
   .wt-daily-a4 .wt-money svg,
   .wt-daily-a4 .wt-dots svg {
     zoom: 1;
+  }
+}
+
+/* 「ぴったりことば」：えらびしゃ と おはなし を 1まい版では小さめに */
+@media print {
+  .wt-daily-a4 .wt-bank {
+    margin-bottom: 4px;
+    gap: 4px;
+  }
+  .wt-daily-a4 .wt-bank span {
+    font-size: 11px;
+    padding: 1px 8px;
+  }
+  .wt-daily-a4 .wt-scene {
+    font-size: 10px;
+    line-height: 1.35;
+  }
+}
+
+@media print {
+  .wt-daily-a4 > .wt-span-all {
+    column-span: all;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 6px 0 !important;
+    border-radius: 0 !important;
   }
 }
