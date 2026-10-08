@@ -6,6 +6,9 @@ import { generate5Questions } from "@/app/data/generate5";
 import { generate6Questions } from "@/app/data/generate6";
 import QuestionList from "@/app/components/QuestionList";
 import PrintHeader from "@/app/components/PrintHeader";
+import MasuSheetPrint from "@/app/components/MasuSheetPrint";
+import { usePrintWithAnswers } from "@/app/components/printWithAnswers";
+import { generateMasu, getDayIndex, MASU_LEVELS, type MasuSheet } from "@/app/data/masuKeisan";
 
 type Age = "4" | "5" | "6";
 
@@ -28,6 +31,7 @@ const GENRES: Record<Age, { key: string; emoji: string; label: string }[]> = {
     { key: "sentaisho", emoji: "🪞", label: "かがみうつし" },
     { key: "mikata", emoji: "🔭", label: "どこからみる？" },
     { key: "keiyoushi", emoji: "💬", label: "ぴったりことば" },
+    { key: "masu", emoji: "🧮", label: "ますけいさん（1シート＝1ページ）" },
   ],
   "5": [
     { key: "sansu", emoji: "🔢", label: "さんすう" },
@@ -48,6 +52,7 @@ const GENRES: Record<Age, { key: string; emoji: string; label: string }[]> = {
     { key: "sentaisho", emoji: "🪞", label: "かがみうつし" },
     { key: "mikata", emoji: "🔭", label: "どこからみる？" },
     { key: "keiyoushi", emoji: "💬", label: "ぴったりことば" },
+    { key: "masu", emoji: "🧮", label: "ますけいさん（1シート＝1ページ）" },
   ],
   "6": [
     { key: "sansu", emoji: "🔢", label: "さんすう" },
@@ -69,6 +74,7 @@ const GENRES: Record<Age, { key: string; emoji: string; label: string }[]> = {
     { key: "sentaisho", emoji: "🪞", label: "かがみうつし" },
     { key: "mikata", emoji: "🔭", label: "どこからみる？" },
     { key: "keiyoushi", emoji: "💬", label: "ぴったりことば" },
+    { key: "masu", emoji: "🧮", label: "ますけいさん（1シート＝1ページ）" },
   ],
 };
 
@@ -87,7 +93,15 @@ export default function PrintBuilderClient() {
   const [age, setAge] = useState<Age>("5");
   const [selectedGenres, setSelectedGenres] = useState<string[]>([]);
   const [perGenre, setPerGenre] = useState(3);
-  const [built, setBuilt] = useState<{ age: Age; genres: string[]; perGenre: number } | null>(null);
+  const [masuSize, setMasuSize] = useState<number | null>(null);
+  const [masuSheetCount, setMasuSheetCount] = useState(1);
+  const [built, setBuilt] = useState<{
+    age: Age;
+    genres: string[];
+    perGenre: number;
+    masuSheets: MasuSheet[];
+  } | null>(null);
+  const { printAnswers, printWithAnswers } = usePrintWithAnswers();
 
   const allData: QuestionsByGenre = useMemo(() => {
     if (age === "4") return generate4Questions();
@@ -103,7 +117,15 @@ export default function PrintBuilderClient() {
 
   function handleBuild() {
     if (selectedGenres.length === 0) return;
-    setBuilt({ age, genres: selectedGenres, perGenre });
+    let masuSheets: MasuSheet[] = [];
+    if (selectedGenres.includes("masu")) {
+      const a = Number(age) as 4 | 5 | 6;
+      const size = masuSize ?? MASU_LEVELS[a].sizes[0];
+      const list = generateMasu(a).filter((sh) => sh.size === size);
+      const start = getDayIndex();
+      masuSheets = Array.from({ length: masuSheetCount }, (_, i) => list[(start + i) % list.length]);
+    }
+    setBuilt({ age, genres: selectedGenres, perGenre, masuSheets });
   }
 
   const builtQuestions = useMemo(() => {
@@ -183,6 +205,43 @@ export default function PrintBuilderClient() {
             ))}
           </div>
 
+          {selectedGenres.includes("masu") && (
+            <div className="mb-6 rounded-2xl bg-teal-50 border border-teal-200 p-4">
+              <p className="font-bold mb-2">🧮 ますけいさんの せってい</p>
+              <div className="flex flex-wrap items-center gap-2 mb-2">
+                <span className="text-sm">ますの かず：</span>
+                {MASU_LEVELS[Number(age) as 4 | 5 | 6].sizes.map((sz) => (
+                  <button
+                    key={sz}
+                    onClick={() => setMasuSize(sz)}
+                    className={`px-3 py-1 rounded-full border-2 text-sm font-bold ${
+                      (masuSize ?? MASU_LEVELS[Number(age) as 4 | 5 | 6].sizes[0]) === sz
+                        ? "border-teal-500 bg-teal-100 text-teal-700"
+                        : "border-gray-200 text-gray-500"
+                    }`}
+                  >
+                    {sz}ます
+                  </button>
+                ))}
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-sm">シートの まいすう：</span>
+                {[1, 2, 3].map((k) => (
+                  <button
+                    key={k}
+                    onClick={() => setMasuSheetCount(k)}
+                    className={`px-3 py-1 rounded-full border-2 text-sm font-bold ${
+                      masuSheetCount === k ? "border-teal-500 bg-teal-100 text-teal-700" : "border-gray-200 text-gray-500"
+                    }`}
+                  >
+                    {k}まい
+                  </button>
+                ))}
+                <span className="text-xs text-gray-500">（ほかの問題のあとに、1シートずつ 新しいページで 印刷されます）</span>
+              </div>
+            </div>
+          )}
+
           <button
             onClick={handleBuild}
             disabled={selectedGenres.length === 0}
@@ -195,31 +254,49 @@ export default function PrintBuilderClient() {
         </div>
       </div>
 
-      {built && builtQuestions.length > 0 && (
-        <div>
-          <div className="print-hide flex justify-between items-center mb-4">
+      {built && (builtQuestions.length > 0 || built.masuSheets.length > 0) && (
+        <div data-print-answers={printAnswers ? "1" : "0"}>
+          <div className="print-hide flex justify-between items-center mb-4 gap-2 flex-wrap">
             <h2 className="text-xl font-bold">
               {AGE_LABEL[built.age]} ・ {built.genres.length}ジャンル ・ 全{builtQuestions.length}問
+              {built.masuSheets.length > 0 && ` ＋ ますけいさん ${built.masuSheets.length}シート`}
             </h2>
-            <button
-              onClick={() => window.print()}
-              className="bg-orange-500 text-white px-6 py-2 rounded-xl font-bold hover:opacity-90 transition"
-            >
-              🖨 印刷する
-            </button>
+            <div className="flex gap-2">
+              <button
+                onClick={() => window.print()}
+                className="bg-orange-500 text-white px-6 py-2 rounded-xl font-bold hover:opacity-90 transition"
+              >
+                🖨 印刷する
+              </button>
+              <button
+                onClick={printWithAnswers}
+                className="px-5 py-2 rounded-xl border-2 border-green-500 text-green-700 font-bold hover:bg-green-50"
+              >
+                ✅ こたえつきで 印刷
+              </button>
+            </div>
           </div>
 
-          <h1 className="text-2xl font-bold mb-4">
+          <h1 className={`text-2xl font-bold mb-4 ${builtQuestions.length === 0 ? "print-hide" : ""}`}>
             わくたん　オリジナルプリント（{AGE_LABEL[built.age]}）
           </h1>
 
-          <PrintHeader total={builtQuestions.length} />
+          {builtQuestions.length > 0 && (
+            <>
+              <PrintHeader total={builtQuestions.length} />
 
-          <QuestionList
-            questions={builtQuestions}
-            accentText={AGE_ACCENT[built.age]}
-            accentButton={AGE_BUTTON[built.age]}
-          />
+              <QuestionList
+                key={JSON.stringify([built.age, built.genres, built.perGenre])}
+                questions={builtQuestions}
+                accentText={AGE_ACCENT[built.age]}
+                accentButton={AGE_BUTTON[built.age]}
+              />
+            </>
+          )}
+
+          {built.masuSheets.map((sh, i) => (
+            <MasuSheetPrint key={i} sheet={sh} />
+          ))}
         </div>
       )}
 

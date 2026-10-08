@@ -51,6 +51,7 @@ export default function Page() {
           { href: "/4/sentaisho", emoji: "🪞", label: "かがみうつし" },
           { href: "/4/mikata", emoji: "🔭", label: "どこからみる？" },
           { href: "/4/keiyoushi", emoji: "💬", label: "ぴったりことば" },
+          { href: "/4/masu", emoji: "🧮", label: "ますけいさん" },
         ]}
       />
 

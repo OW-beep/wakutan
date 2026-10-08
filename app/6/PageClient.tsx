@@ -1,5 +1,7 @@
 "use client";
 import AnswerLine, { needsAnswerLine } from "@/app/components/AnswerLine";
+import AnswerCheck, { canCheck, ScoreBar, useCheckResultsState } from "@/app/components/AnswerCheck";
+import { usePrintWithAnswers } from "@/app/components/printWithAnswers";
 
 import StickerBoard from "@/app/components/StickerBoard";
 import EntranceCountdown from "@/app/components/EntranceCountdown";
@@ -19,6 +21,8 @@ import CubeStack from "../components/CubeStack";
 import DotFigureCopy from "../components/DotFigureCopy";
 
 export default function PageClient() {
+  const { results, report } = useCheckResultsState();
+  const { printAnswers, printWithAnswers } = usePrintWithAnswers();
   const data = useMemo(() => generate6Questions(), []);
 
   // 「毎日10問」の表記どおり、その日ごとにジャンルをローテーションしながら
@@ -52,7 +56,7 @@ export default function PageClient() {
 
   return (
     <>
-      <div className="max-w-5xl mx-auto px-6 pb-10">
+      <div className="max-w-5xl mx-auto px-6 pb-10" data-print-answers={printAnswers ? "1" : "0"}>
 
         {/* ヘッダー */}
         <div className="print-hide bg-gradient-to-r from-purple-200 to-indigo-200 rounded-3xl p-8 shadow-lg mb-8">
@@ -75,6 +79,8 @@ export default function PageClient() {
         <EntranceCountdown />
         <AbilityPanel />
         <StickerBoard />
+
+        <ScoreBar results={results} total={questions.filter(canCheck).length} />
 
         {/* 問題 */}
         <div className="grid gap-5 wt-daily-a4">
@@ -136,6 +142,8 @@ export default function PageClient() {
 
               {needsAnswerLine(q) && <AnswerLine />}
 
+              {canCheck(q) && <AnswerCheck answer={q.answer} onResult={(ok) => report(index, ok)} />}
+
               <AnswerReveal
                 genre={q.genre}
                 question={q.question}
@@ -144,6 +152,14 @@ export default function PageClient() {
                 accentButton="bg-indigo-500 hover:bg-indigo-600"
                 extra={q.figure ? <FigureAnswer figure={q.figure} /> : undefined}
               />
+
+              <div className="wt-print-answer">
+                <strong>こたえ：</strong>
+                {q.answer}
+                <br />
+                {q.explanation}
+                {q.figure ? <FigureAnswer figure={q.figure} /> : null}
+              </div>
 
             </div>
 
@@ -159,6 +175,13 @@ export default function PageClient() {
             className="w-full bg-green-500 text-white p-4 rounded-2xl font-bold text-lg transition wt-btn-pop"
           >
             🖨 印刷する
+          </button>
+
+          <button
+            onClick={printWithAnswers}
+            className="w-full mt-3 bg-white border-2 border-green-500 text-green-700 p-3 rounded-2xl font-bold transition hover:bg-green-50"
+          >
+            ✅ こたえつきで 印刷する（おうちの人用）
           </button>
 
         </div>

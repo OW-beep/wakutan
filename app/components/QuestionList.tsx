@@ -1,5 +1,6 @@
 "use client";
 import AnswerLine, { needsAnswerLine } from "./AnswerLine";
+import AnswerCheck, { canCheck, ScoreBar, useCheckResultsState } from "./AnswerCheck";
 
 import ClockFace from "./ClockFace";
 import MoneyIllustration from "./MoneyIllustration";
@@ -43,8 +44,12 @@ export default function QuestionList({
   accentText,
   accentButton,
 }: Props) {
+  const { results, report } = useCheckResultsState();
+  const checkable = questions.filter(canCheck).length;
+
   return (
     <>
+      <ScoreBar results={results} total={checkable} />
       <div className="space-y-4 wt-q-list">
 
         {questions.map((q, index) => (
@@ -127,6 +132,8 @@ export default function QuestionList({
 
             {needsAnswerLine(q) && <AnswerLine />}
 
+            {canCheck(q) && <AnswerCheck answer={q.answer} onResult={(ok) => report(index, ok)} />}
+
             <AnswerReveal
               genre={q.genre}
               question={q.question}
@@ -135,6 +142,15 @@ export default function QuestionList({
               accentButton={accentButton}
               extra={q.figure ? <FigureAnswer figure={q.figure} /> : undefined}
             />
+
+            {/* 「こたえつきで いんさつ」のときだけ 印刷に出る */}
+            <div className="wt-print-answer">
+              <strong>こたえ：</strong>
+              {q.answer}
+              <br />
+              {q.explanation}
+              {q.figure ? <FigureAnswer figure={q.figure} /> : null}
+            </div>
 
           </div>
 

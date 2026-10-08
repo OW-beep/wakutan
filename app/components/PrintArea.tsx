@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
+import { usePrintWithAnswers } from "./printWithAnswers";
 
 /**
  * ジャンルページの「印刷ボタン」と「1まいに入れる問題の密度」切りかえ。
@@ -16,15 +17,23 @@ export default function PrintArea({
   defaultCols?: 1 | 2;
 }) {
   const [cols, setCols] = useState<1 | 2>(defaultCols);
+  const { printAnswers, printWithAnswers } = usePrintWithAnswers();
 
   return (
-    <div data-print-cols={cols}>
+    <div data-print-cols={cols} data-print-answers={printAnswers ? "1" : "0"}>
       <div className="print-hide bg-white rounded-2xl shadow p-4 mb-4 flex flex-wrap items-center gap-3">
         <button
           onClick={() => window.print()}
           className="bg-green-500 text-white px-6 py-3 rounded-xl font-bold wt-btn-pop"
         >
           🖨 このページを印刷する
+        </button>
+
+        <button
+          onClick={printWithAnswers}
+          className="px-5 py-3 rounded-xl border-2 border-green-500 text-green-700 font-bold hover:bg-green-50"
+        >
+          ✅ こたえつきで 印刷（おうちの人用）
         </button>
 
         <div className="flex items-center gap-2 text-sm">

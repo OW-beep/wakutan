@@ -471,6 +471,7 @@ export default function Home() {
             { emoji: "🔄", title: "くるくるパズル", desc: "図形をまわすと どうなるかな？", key: "kaiten", ages: [4, 5, 6] },
             { emoji: "🪞", title: "かがみうつし", desc: "かがみに うつしたように かきうつそう", key: "sentaisho", ages: [4, 5, 6] },
             { emoji: "🔭", title: "どこからみる？", desc: "上から・横から見たら どんな形？", key: "mikata", ages: [4, 5, 6] },
+            { emoji: "🧮", title: "ますけいさん", desc: "たし算を タイマーで はかろう（点数つき）", key: "masu", ages: [4, 5, 6] },
             { emoji: "💬", title: "ぴったりことば", desc: "絵を見て ぴったりのことばを なぞり書き", key: "keiyoushi", ages: [4, 5, 6] },
           ].map((c) => (
 
