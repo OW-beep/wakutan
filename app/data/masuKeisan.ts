@@ -6,7 +6,19 @@
  * いちばん大きい 10×10 ますでも、たし算の答えは 20 まで。
  * 年齢が上がるほど、ますの数（3〜10）がふえる。
  */
-export type MasuSheet = { size: number; top: number[]; left: number[] };
+export type MasuOp = "add" | "sub";
+
+/**
+ * add（たし算）：うえの数 ＋ ひだりの数
+ * sub（ひき算）：うえの数 − ひだりの数
+ *   ひき算のとき、うえは（N+1〜2N）、ひだりは（1〜N）。こたえは いつも 1 以上。
+ *   いちばん大きい 10×10 ますでも、うえの数は 20 まで。
+ */
+export type MasuSheet = { size: number; top: number[]; left: number[]; op: MasuOp };
+
+export function masuAnswer(op: MasuOp, top: number, left: number): number {
+  return op === "sub" ? top - left : top + left;
+}
 
 export type MasuLevel = {
   sizes: number[];
@@ -30,8 +42,8 @@ function makeRng(seed: number): () => number {
   };
 }
 
-function pickDistinct(r: () => number, max: number, n: number): number[] {
-  const all = Array.from({ length: max }, (_, i) => i + 1);
+function pickDistinct(r: () => number, max: number, n: number, from = 1): number[] {
+  const all = Array.from({ length: max }, (_, i) => i + from);
   for (let i = all.length - 1; i > 0; i--) {
     const j = Math.floor(r() * (i + 1));
     [all[i], all[j]] = [all[j], all[i]];
@@ -39,21 +51,21 @@ function pickDistinct(r: () => number, max: number, n: number): number[] {
   return all.slice(0, n);
 }
 
-export function generateMasu(age: 4 | 5 | 6): MasuSheet[] {
+export function generateMasu(age: 4 | 5 | 6, op: MasuOp = "add"): MasuSheet[] {
   const lv = MASU_LEVELS[age];
-  const r = makeRng(20000 + age);
+  const r = makeRng((op === "add" ? 20000 : 21000) + age);
   const out: MasuSheet[] = [];
   for (const size of lv.sizes) {
     const seen = new Set<string>();
     let guard = 0;
     while (seen.size < lv.perSize && guard++ < 500) {
       // 1〜size を ならべかえる（たしざんの答えは、さいだい size×2）
-      const top = pickDistinct(r, size, size);
+      const top = op === "sub" ? pickDistinct(r, size, size, size + 1) : pickDistinct(r, size, size);
       const left = pickDistinct(r, size, size);
       const key = top.join(",") + "/" + left.join(",");
       if (seen.has(key)) continue;
       seen.add(key);
-      out.push({ size, top, left });
+      out.push({ size, top, left, op });
     }
   }
   return out;

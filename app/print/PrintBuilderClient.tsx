@@ -8,7 +8,7 @@ import QuestionList from "@/app/components/QuestionList";
 import PrintHeader from "@/app/components/PrintHeader";
 import MasuSheetPrint from "@/app/components/MasuSheetPrint";
 import { usePrintWithAnswers } from "@/app/components/printWithAnswers";
-import { generateMasu, getDayIndex, MASU_LEVELS, type MasuSheet } from "@/app/data/masuKeisan";
+import { generateMasu, getDayIndex, MASU_LEVELS, type MasuOp, type MasuSheet } from "@/app/data/masuKeisan";
 
 type Age = "4" | "5" | "6";
 
@@ -95,6 +95,7 @@ export default function PrintBuilderClient() {
   const [perGenre, setPerGenre] = useState(3);
   const [masuSize, setMasuSize] = useState<number | null>(null);
   const [masuSheetCount, setMasuSheetCount] = useState(1);
+  const [masuOp, setMasuOp] = useState<MasuOp>("add");
   const [built, setBuilt] = useState<{
     age: Age;
     genres: string[];
@@ -121,7 +122,7 @@ export default function PrintBuilderClient() {
     if (selectedGenres.includes("masu")) {
       const a = Number(age) as 4 | 5 | 6;
       const size = masuSize ?? MASU_LEVELS[a].sizes[0];
-      const list = generateMasu(a).filter((sh) => sh.size === size);
+      const list = generateMasu(a, masuOp).filter((sh) => sh.size === size);
       const start = getDayIndex();
       masuSheets = Array.from({ length: masuSheetCount }, (_, i) => list[(start + i) % list.length]);
     }
@@ -208,6 +209,20 @@ export default function PrintBuilderClient() {
           {selectedGenres.includes("masu") && (
             <div className="mb-6 rounded-2xl bg-teal-50 border border-teal-200 p-4">
               <p className="font-bold mb-2">🧮 ますけいさんの せってい</p>
+              <div className="flex flex-wrap items-center gap-2 mb-2">
+                <span className="text-sm">けいさん：</span>
+                {([["add", "➕ たし算"], ["sub", "➖ ひき算"]] as const).map(([k, label]) => (
+                  <button
+                    key={k}
+                    onClick={() => setMasuOp(k)}
+                    className={`px-3 py-1 rounded-full border-2 text-sm font-bold ${
+                      masuOp === k ? "border-teal-500 bg-teal-100 text-teal-700" : "border-gray-200 text-gray-500"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
               <div className="flex flex-wrap items-center gap-2 mb-2">
                 <span className="text-sm">ますの かず：</span>
                 {MASU_LEVELS[Number(age) as 4 | 5 | 6].sizes.map((sz) => (

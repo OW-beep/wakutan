@@ -50,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/4/mikata",
     "/4/keiyoushi",
     "/4/masu",
+    "/4/masu/hiki",
 
     "/5/sansu",
     "/5/ronri",
@@ -70,6 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/5/mikata",
     "/5/keiyoushi",
     "/5/masu",
+    "/5/masu/hiki",
 
     "/6/sansu",
     "/6/ronri",
@@ -91,6 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/6/mikata",
     "/6/keiyoushi",
     "/6/masu",
+    "/6/masu/hiki",
 
     "/about",
     "/articles",

@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import PrintHeader from "./PrintHeader";
 import { usePrintWithAnswers } from "./printWithAnswers";
-import type { MasuSheet } from "../data/masuKeisan";
+import { masuAnswer, type MasuSheet } from "../data/masuKeisan";
 
 type Phase = "ready" | "running" | "done";
 
@@ -56,7 +56,12 @@ export default function MasuDrill({
   const inputs = useRef<(HTMLInputElement | null)[]>([]);
 
   const n = sheet.size;
-  const bestKey = `wakutan-masu-best-${age}-${n}`;
+  const op = sheet.op;
+  const isSub = op === "sub";
+  const sym = isSub ? "－" : "＋";
+  const opWord = isSub ? "ひき算" : "たし算";
+  const bestKey = isSub ? `wakutan-masu-sub-best-${age}-${n}` : `wakutan-masu-best-${age}-${n}`;
+  const bestKeyFor = (sz: number) => (isSub ? `wakutan-masu-sub-best-${age}-${sz}` : `wakutan-masu-best-${age}-${sz}`);
 
   useEffect(() => {
     if (phase !== "running") return;
@@ -71,7 +76,7 @@ export default function MasuDrill({
     setNewBest(false);
     setSize(nextSize);
     setOffset(nextOffset);
-    setBest(readBest(`wakutan-masu-best-${age}-${nextSize}`));
+    setBest(readBest(bestKeyFor(nextSize)));
   }
 
   function start() {
@@ -86,7 +91,7 @@ export default function MasuDrill({
   const correct = answers.filter((a, i) => {
     const r = Math.floor(i / n);
     const c = i % n;
-    return a !== "" && Number(a) === sheet.top[c] + sheet.left[r];
+    return a !== "" && Number(a) === masuAnswer(op, sheet.top[c], sheet.left[r]);
   }).length;
 
   function finish() {
@@ -126,7 +131,7 @@ export default function MasuDrill({
     <div data-print-answers={printAnswers ? "1" : "0"}>
       <PrintHeader total={n * n} showTime />
       <p className="hidden print:block text-xs mb-2 text-gray-600">
-        やりかた：よこの すう ＋ たての すう の こたえを、まじわる ますに かこう。はじめる まえに ときどき とけいを みて、おわった じかんも かこう。
+        やりかた：{isSub ? "うえの すう － ひだりの すう" : "よこの すう ＋ たての すう"} の こたえを、まじわる ますに かこう。はじめる まえに ときどき とけいを みて、おわった じかんも かこう。
       </p>
       <p className="wt-print-answer-title text-sm font-bold text-green-700 mb-1">こたえ（おうちの人用）</p>
 
@@ -189,7 +194,7 @@ export default function MasuDrill({
         </div>
 
         <p className="text-sm text-gray-500 mt-3">
-          {phase === "ready" && "「スタート」をおして、よこの すう ＋ たての すう の こたえを いれよう。（いんさつして、とけいで はかっても OK）"}
+          {phase === "ready" && `「スタート」をおして、${isSub ? "うえの すう － ひだりの すう" : "よこの すう ＋ たての すう"} の こたえを いれよう。（いんさつして、とけいで はかっても OK）`}
           {phase === "running" && "ぜんぶ かけたら「おわり」をおそう。Enter・やじるしキーで となりの ますへ うつれるよ。"}
           {phase === "done" && "おつかれさま！タイムは じぶんの きろく。ほかの子と くらべなくて だいじょうぶ。"}
         </p>
@@ -214,10 +219,10 @@ export default function MasuDrill({
 
       {/* ---- ます ---- */}
       <div className="bg-white rounded-2xl shadow p-3 sm:p-5 print:shadow-none print:p-0">
-        <table className="w-full table-fixed border-collapse text-center" aria-label={`${n}ます計算`}>
+        <table className="w-full table-fixed border-collapse text-center" aria-label={`${n}ます${opWord}`}>
           <tbody>
             <tr>
-              <th className={`border-2 border-gray-700 bg-teal-100 h-11 print:h-14 ${headCls}`}>＋</th>
+              <th className={`border-2 border-gray-700 bg-teal-100 h-11 print:h-14 ${headCls}`}>{sym}</th>
               {sheet.top.map((t, c) => (
                 <th key={c} className={`border-2 border-gray-700 bg-teal-50 h-11 print:h-14 font-bold ${headCls}`}>
                   {t}
@@ -230,7 +235,7 @@ export default function MasuDrill({
                 {sheet.top.map((t, c) => {
                   const i = r * n + c;
                   const val = answers[i] ?? "";
-                  const ans = t + l;
+                  const ans = masuAnswer(op, t, l);
                   const checked = phase === "done";
                   const ok = checked && Number(val) === ans;
                   const bad = checked && !ok;
@@ -246,7 +251,7 @@ export default function MasuDrill({
                         value={val}
                         readOnly={phase !== "running"}
                         inputMode="numeric"
-                        aria-label={`${l}たす${t}`}
+                        aria-label={isSub ? `${t}ひく${l}` : `${l}たす${t}`}
                         onChange={(e) => setAnswer(i, e.target.value)}
                         onKeyDown={(e) => {
                           if (e.key === "Enter" || e.key === "ArrowRight") {

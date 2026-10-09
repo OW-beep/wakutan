@@ -79,7 +79,7 @@ export const GENRE_ABILITIES: Record<string, GenreAbilityInfo> = {
   masu: {
     stat: "kazu",
     growth:
-      "たし算を正確に、すばやく行う計算力と、集中して最後まで取り組む力が育ちます。",
+      "たし算・ひき算を正確に、すばやく行う計算力と、集中して最後まで取り組む力が育ちます。",
     future:
       "小学校のたし算・ひき算の学習で、計算に慣れる土台になります。",
   },

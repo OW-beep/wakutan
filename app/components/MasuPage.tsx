@@ -6,25 +6,44 @@ import { generateMasu, getDayIndex, MASU_LEVELS } from "../data/masuKeisan";
 
 type Age = 4 | 5 | 6;
 
-export function masuMetadata(age: Age) {
+type Op = "add" | "sub";
+
+export function masuMetadata(age: Age, op: Op = "add") {
   const lv = MASU_LEVELS[age];
   const first = lv.sizes[0];
   const last = lv.sizes[lv.sizes.length - 1];
+  const path = op === "add" ? `/${age}/masu` : `/${age}/masu/hiki`;
+  if (op === "add") {
+    return {
+      title: `${age}歳向けたし算のます計算（${first}〜${last}ます）｜点数とタイムをはかろう（無料・印刷OK）`,
+      description: `${age}歳向けの無料のたし算ます計算（${first}〜${last}ます）。ますの数と同じ、${first}ますなら1〜${first}、${last}ますなら1〜${last}の数を使い、答えは${last * 2}までです。画面でタイマーと点数をはかったり、印刷して書きこんだりできます。`,
+      alternates: { canonical: path },
+    };
+  }
   return {
-    title: `${age}歳向けたし算のます計算（${first}〜${last}ます）｜点数とタイムをはかろう（無料・印刷OK）`,
-    description: `${age}歳向けの無料のたし算ます計算（${first}〜${last}ます）。ますの数と同じ、${first}ますなら1〜${first}、${last}ますなら1〜${last}の数を使い、答えは${last * 2}までです。画面でタイマーと点数をはかったり、印刷して書きこんだりできます。`,
-    alternates: { canonical: `/${age}/masu` },
+    title: `${age}歳向けひき算のます計算（${first}〜${last}ます）｜点数とタイムをはかろう（無料・印刷OK）`,
+    description: `${age}歳向けの無料のひき算ます計算（${first}〜${last}ます）。上の数（ますの数＋1〜ますの数×2）から、左の数（1〜ますの数）をひきます。上の数は${last * 2}までで、答えはいつも1以上です。画面でタイマーと点数をはかったり、印刷して書きこんだりできます。`,
+    alternates: { canonical: path },
   };
 }
 
-const LEVEL_TEXT: Record<Age, string> = {
-  4: "3ます・4ますの小さなますです。つかう数は、ますの数と同じ数までです（3ますなら 1〜3、4ますなら 1〜4）。答えは 8 までです。",
-  5: "5ます〜7ますです。つかう数は、ますの数と同じ数までです（5ますなら 1〜5、7ますなら 1〜7）。答えは 14 までです。",
-  6: "8ます〜10ますです。つかう数は、ますの数と同じ数までです（8ますなら 1〜8、10ますなら 1〜10）。いちばん大きい 10×10 ますでも、答えは 20 までです。",
+const LEVEL_TEXT: Record<Op, Record<Age, string>> = {
+  add: {
+    4: "3ます・4ますの小さなますです。つかう数は、ますの数と同じ数までです（3ますなら 1〜3、4ますなら 1〜4）。答えは 8 までです。",
+    5: "5ます〜7ますです。つかう数は、ますの数と同じ数までです（5ますなら 1〜5、7ますなら 1〜7）。答えは 14 までです。",
+    6: "8ます〜10ますです。つかう数は、ますの数と同じ数までです（8ますなら 1〜8、10ますなら 1〜10）。いちばん大きい 10×10 ますでも、答えは 20 までです。",
+  },
+  sub: {
+    4: "3ます・4ますの小さなますです。ひだりの数は 1〜ますの数、うえの数は「ますの数＋1」から「ますの数×2」までです（3ますなら うえ 4〜6、ひだり 1〜3）。うえの数は 8 までで、答えはいつも 1 以上です。",
+    5: "5ます〜7ますです。ひだりの数は 1〜ますの数、うえの数は「ますの数＋1」から「ますの数×2」までです（5ますなら うえ 6〜10、ひだり 1〜5）。うえの数は 14 までです。",
+    6: "8ます〜10ますです。ひだりの数は 1〜ますの数、うえの数は「ますの数＋1」から「ますの数×2」までです（10ますなら うえ 11〜20、ひだり 1〜10）。うえの数は 20 までです。",
+  },
 };
 
-export default function MasuPage({ age }: { age: Age }) {
-  const sheets = generateMasu(age);
+export default function MasuPage({ age, op = "add" }: { age: Age; op?: Op }) {
+  const sheets = generateMasu(age, op);
+  const isSub = op === "sub";
+  const opWord = isSub ? "ひき算" : "たし算";
   const startSeed = getDayIndex();
   const lv = MASU_LEVELS[age];
 
@@ -32,18 +51,44 @@ export default function MasuPage({ age }: { age: Age }) {
     <main className="min-h-screen bg-teal-50">
       <div className="max-w-4xl mx-auto p-4 sm:p-6">
         <div className="print-hide">
-          <Breadcrumb items={[{ name: `${age}歳ドリル`, href: `/${age}` }, { name: "ますけいさん" }]} />
+          <Breadcrumb items={[{ name: `${age}歳ドリル`, href: `/${age}` }, { name: isSub ? "ますけいさん（ひき算）" : "ますけいさん（たし算）" }]} />
         </div>
 
         <div className="bg-white rounded-3xl shadow p-6 sm:p-8 mb-6 print-hide">
           <h1 className="text-3xl sm:text-4xl font-bold mb-3 text-teal-700">🧮 {age}歳向けますけいさん</h1>
+
+          {/* たし算・ひき算の切りかえ（べつのページになっている） */}
+          <nav aria-label="けいさんの しゅるい" className="flex gap-2 mb-4">
+            <Link
+              href={`/${age}/masu`}
+              aria-current={!isSub ? "page" : undefined}
+              className={`px-5 py-2 rounded-full border-2 font-bold ${
+                !isSub ? "border-teal-500 bg-teal-500 text-white" : "border-gray-200 text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              ➕ たし算
+            </Link>
+            <Link
+              href={`/${age}/masu/hiki`}
+              aria-current={isSub ? "page" : undefined}
+              className={`px-5 py-2 rounded-full border-2 font-bold ${
+                isSub ? "border-orange-500 bg-orange-500 text-white" : "border-gray-200 text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              ➖ ひき算
+            </Link>
+          </nav>
+
           <p className="leading-8">
-            よこの数と、たての数を「たし算」して、まじわるますに答えを書く問題です。画面で「スタート」をおすとタイマーが動き、「おわり」で点数とタイムが出ます。印刷して、書きこんで使うこともできます。
+            {isSub
+              ? "うえの数から、ひだりの数を「ひき算」して、まじわるますに答えを書く問題です。"
+              : "よこの数と、たての数を「たし算」して、まじわるますに答えを書く問題です。"}
+            画面で「スタート」をおすとタイマーが動き、「おわり」で点数とタイムが出ます。印刷して、書きこんで使うこともできます。
           </p>
-          <p className="leading-7 mt-2 text-sm text-gray-500">📝 算数の「たし算の習熟練習（ます計算）」の形式です。ますの数は {lv.sizes[0]}〜{lv.sizes[lv.sizes.length - 1]} から選べます。</p>
+          <p className="leading-7 mt-2 text-sm text-gray-500">📝 算数の「{opWord}の習熟練習（ます計算）」の形式です。ますの数は {lv.sizes[0]}〜{lv.sizes[lv.sizes.length - 1]} から選べます。</p>
           <p className="leading-7 mt-3 text-sm bg-teal-50 rounded-xl p-3">
             <span className="font-bold">📘 {age}歳のレベル：</span>
-            {LEVEL_TEXT[age]}
+            {LEVEL_TEXT[op][age]}
           </p>
         </div>
 
@@ -55,7 +100,7 @@ export default function MasuPage({ age }: { age: Age }) {
               <ol className="list-decimal list-inside space-y-0.5">
                 <li>「ますの かず」を えらぶ</li>
                 <li>「スタート」を おす（タイマーが うごく）</li>
-                <li>よこの すう ＋ たての すう の こたえを いれる（Enter・やじるしキーで となりへ）</li>
+                <li>{isSub ? "うえの すう － ひだりの すう" : "よこの すう ＋ たての すう"} の こたえを いれる（Enter・やじるしキーで となりへ）</li>
                 <li>「おわり！こたえあわせ」で 点数と タイムが でる</li>
                 <li>ぜんぶ せいかいなら「じこベスト」に きろく</li>
               </ol>
@@ -90,8 +135,8 @@ export default function MasuPage({ age }: { age: Age }) {
           {age < 6 && (
             <p className="mt-4 text-sm text-gray-500">
               できるようになってきたら、
-              <Link href={`/${age + 1}/masu`} className="text-teal-700 font-bold hover:underline">
-                {age + 1}歳向けのますけいさん
+              <Link href={isSub ? `/${age + 1}/masu/hiki` : `/${age + 1}/masu`} className="text-teal-700 font-bold hover:underline">
+                {age + 1}歳向けの{isSub ? "ひき算の" : "たし算の"}ますけいさん
               </Link>
               にも挑戦してみましょう。
             </p>
