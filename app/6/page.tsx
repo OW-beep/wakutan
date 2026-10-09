@@ -5,9 +5,9 @@ import AgeInfoSection from "../components/AgeInfoSection";
 import GenreNav from "../components/GenreNav";
 
 export const metadata: Metadata = {
-  title: "6歳向け無料知育ドリル",
+  title: "6歳向け無料知育プリント・ドリル｜毎日10問",
   description:
-    "6歳向け無料知育ドリル。算数・論理・ひらがな・仲間分けなど毎日10問。印刷OK。小学校入学準備に役立つ家庭学習のポイントも解説しています。",
+    "6歳向け無料知育ドリル。算数・論理・ひらがな・仲間分けなど毎日10問を、答えつきで印刷できます。小学校入学準備に役立つ家庭学習のポイントも解説。",
   alternates: {
     canonical: "/6",
   },
@@ -130,7 +130,7 @@ export default function Page() {
           },
         ]}
         relatedArticles={[
-          { href: "/blog/how-6year-learn", emoji: "🎓", title: "6歳の学び方" },
+          { href: "/blog/how-6year-learn", emoji: "🎓", title: "6歳（年長）の勉強・学び方のコツ" },
           { href: "/blog/sansu-weak-6year", emoji: "🔢", title: "6歳で算数が苦手でも大丈夫！" },
           { href: "/blog/school-checklist", emoji: "🎒", title: "小学校入学準備チェックリスト" },
           { href: "/blog/study-habit", emoji: "🌱", title: "家庭学習を続けるコツ" },

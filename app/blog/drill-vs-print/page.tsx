@@ -10,7 +10,7 @@ import RakutenProducts from "@/app/components/RakutenProducts";
 export const metadata = {
   title: "市販ドリルと無料プリント、結局どっちがいい？｜わが家の使い分け方",
   description:
-    "市販ドリルと無料プリント、どちらがいいか迷う方へ。それぞれのメリット・デメリットと、わが家での上手な使い分け方を紹介します。",
+    "市販ドリルと無料プリントはどっちがいい？メリット・デメリットを比べて、続けやすさや使い分けの考え方までQ&Aでまとめました。",
   alternates: {
     canonical: "/blog/drill-vs-print",
   },

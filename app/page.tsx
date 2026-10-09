@@ -257,7 +257,7 @@ export default function Home() {
             className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="font-bold text-lg mb-2">
-              🧸 4歳の学び方
+              🧸 4歳の勉強はどこまで？教え方のコツ
             </h3>
             <p className="text-gray-600 text-sm">
               4歳は文字を書くことより「考える遊び」が大切な時期です。
@@ -399,7 +399,7 @@ export default function Home() {
             className="bg-white rounded-2xl shadow p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             <h3 className="text-xl font-bold mb-2">
-              🔤 5歳でひらがなが読めない…
+              🔤 5歳でひらがなが書けない・読めないときの関わり方
             </h3>
 
             <p className="text-gray-600 text-sm">

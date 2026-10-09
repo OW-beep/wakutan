@@ -8,9 +8,9 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "6歳向けおなじかたち問題（点図形の模写）",
+  title: "6歳向け図形の模写（おなじかたち）プリント｜無料",
   description:
-    "6歳向け無料おなじかたち問題。点をせんでむすんだ図形を見て、同じ形をかきうつす模写ドリルを毎日更新。小学校入学準備にも。無料で印刷OK。",
+    "6歳向けの無料の図形模写（点つなぎ）ドリル。点をせんでむすんだ図形を見て、同じ形をかきうつします。答えつきで印刷できます。",
   alternates: {
     canonical: "/6/onajikatachi",
   },

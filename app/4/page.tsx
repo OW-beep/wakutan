@@ -5,9 +5,9 @@ import AgeInfoSection from "../components/AgeInfoSection";
 import GenreNav from "../components/GenreNav";
 
 export const metadata: Metadata = {
-  title: "4歳向け無料知育ドリル",
+  title: "4歳向け無料知育プリント・ドリル｜毎日10問",
   description:
-    "4歳向け無料知育ドリル。算数・論理・パターン認識・ひらがな・仲間分けなど毎日10問。無料・印刷OK。4歳の発達に合わせた家庭学習のポイントも解説しています。",
+    "4歳向け無料知育ドリル。算数・論理・パターン・ひらがな・仲間分けなど毎日10問を、答えつきで印刷できます。4歳の家庭学習のポイントも解説。",
   alternates: {
     canonical: "/4",
   },
@@ -125,7 +125,8 @@ export default function Page() {
           },
         ]}
         relatedArticles={[
-          { href: "/blog/how-4year-learn", emoji: "🧸", title: "4歳の学び方" },
+          { href: "/blog/how-4year-learn", emoji: "🧸", title: "4歳の勉強はどこまで？教え方のコツ" },
+          { href: "/blog/4year-drill-refusal", emoji: "🙅", title: "4歳児がドリルを嫌がるときの対処法" },
           { href: "/blog/concentration-4year", emoji: "🎯", title: "4歳なのに集中できない…" },
           { href: "/blog/when-start-hiragana", emoji: "🔤", title: "ひらがなは何歳から？" },
           { href: "/blog/when-start-numbers", emoji: "🔢", title: "数字は何歳から覚える？" },

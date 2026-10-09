@@ -8,9 +8,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "家庭学習を続けるコツ",
+  title: "家庭学習が続かないときのコツ｜幼児の習慣づけ",
   description:
-    "幼児の家庭学習が続かないと悩む保護者向け。無理なく習慣化する方法や、勉強嫌いを防ぐコツを紹介します。",
+    "幼児の家庭学習が続かないと悩む保護者向け。無理なく習慣化する方法と、勉強嫌いを防ぐコツを紹介します。",
   alternates: {
     canonical: "/blog/study-habit",
   },
@@ -22,8 +22,8 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
-        title="家庭学習を続けるコツ｜わくたん"
-        description="幼児の家庭学習が続かないと悩む保護者向け。無理なく習慣化する方法や、勉強嫌いを防ぐコツを紹介します。"
+        title="家庭学習が続かないときのコツ｜幼児の習慣づけ"
+        description="幼児の家庭学習が続かないと悩む保護者向け。無理なく習慣化する方法と、勉強嫌いを防ぐコツを紹介します。"
         slug="study-habit"
         datePublished="2026-03-01"
         dateModified="2026-08-10"

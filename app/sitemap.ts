@@ -1,4 +1,26 @@
 import type { MetadataRoute } from "next";
+import fs from "node:fs";
+import path from "node:path";
+
+/**
+ * 全ページを「いまの日時」で出していると、Google が lastmod を信用しなくなる。
+ * ブログ記事は、記事自身の dateModified を使う。それ以外のページは、内容を大きく
+ * 変えたときに、下の日付を手で更新する。
+ */
+const SITE_UPDATED = "2026-10-09";
+
+function lastModFor(page: string): Date {
+  if (page.startsWith("/blog/")) {
+    try {
+      const file = path.join(process.cwd(), "app", page, "page.tsx");
+      const m = fs.readFileSync(file, "utf8").match(/dateModified="(\d{4}-\d{2}-\d{2})"/);
+      if (m) return new Date(m[1]);
+    } catch {
+      /* 読めなければ SITE_UPDATED を使う */
+    }
+  }
+  return new Date(SITE_UPDATED);
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://wakutan.vercel.app";
@@ -162,7 +184,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return pages.map((page) => ({
     url: `${baseUrl}${page}`,
-    lastModified: new Date(),
+    lastModified: lastModFor(page),
     changeFrequency: "weekly",
     priority:
       page === ""

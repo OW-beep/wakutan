@@ -8,9 +8,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "毎日5分学習の効果",
+  title: "毎日5分の家庭学習は効果がある？幼児の続け方",
   description:
-    "幼児の家庭学習は長時間より継続が大切。毎日5分の学習が集中力や学習習慣を育てる理由を解説します。",
+    "幼児の家庭学習は長時間より継続が大切。毎日5分の学習が、集中力や学習習慣を育てる理由と、続けるコツを解説します。",
   alternates: {
     canonical: "/blog/5min-study",
   },
@@ -22,8 +22,8 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
-        title="毎日5分学習の効果｜わくたん"
-        description="幼児の家庭学習は長時間より継続が大切。毎日5分の学習が集中力や学習習慣を育てる理由を解説します。"
+        title="毎日5分の家庭学習は効果がある？幼児の続け方"
+        description="幼児の家庭学習は長時間より継続が大切。毎日5分の学習が、集中力や学習習慣を育てる理由と、続けるコツを解説します。"
         slug="5min-study"
         datePublished="2026-03-01"
         dateModified="2026-08-10"

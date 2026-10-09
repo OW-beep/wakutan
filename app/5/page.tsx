@@ -5,9 +5,9 @@ import AgeInfoSection from "../components/AgeInfoSection";
 import GenreNav from "../components/GenreNav";
 
 export const metadata: Metadata = {
-  title: "5歳向け無料知育ドリル",
+  title: "5歳向け無料知育プリント・ドリル｜毎日10問",
   description:
-    "5歳向け無料知育ドリル。算数・論理・パターン認識・ひらがな・仲間分けなど毎日10問。無料・印刷OK。5歳の発達に合わせた家庭学習のポイントも解説しています。",
+    "5歳向け無料知育ドリル。算数・論理・パターン・ひらがな・仲間分けなど毎日10問を、答えつきで印刷できます。5歳の家庭学習のポイントも解説。",
   alternates: {
     canonical: "/5",
   },
@@ -130,7 +130,7 @@ export default function Page() {
         ]}
         relatedArticles={[
           { href: "/blog/how-5year-learn", emoji: "🚀", title: "5歳の学び方" },
-          { href: "/blog/hiragana-worry-5year", emoji: "🔤", title: "5歳でひらがなが読めない…" },
+          { href: "/blog/hiragana-worry-5year", emoji: "🔤", title: "5歳でひらがなが書けない・読めないときの関わり方" },
           { href: "/blog/school-preparation", emoji: "🎒", title: "小学校入学前に身につけたい力" },
           { href: "/blog/study-habit", emoji: "🌱", title: "家庭学習を続けるコツ" },
           { href: "/blog/5min-study", emoji: "⏰", title: "毎日5分学習の効果" },

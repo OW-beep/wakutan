@@ -10,7 +10,7 @@ import RakutenProducts from "@/app/components/RakutenProducts";
 export const metadata = {
   title: "小学校入学に必要なものは？準備チェックリスト・学用品一覧",
   description:
-    "小学校入学に必要なものは何？入学前に確認しておきたい準備を、学用品一覧・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。",
+    "小学校入学までに必要な学用品の一覧と、生活リズム・学びの土台・心の準備まで、4つの観点で入学準備をチェックできるリストです。",
   alternates: {
     canonical: "/blog/school-checklist",
   },

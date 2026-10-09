@@ -10,7 +10,7 @@ import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 export const metadata = {
   title: "6歳向けなかまはずれ問題｜考える力を伸ばす無料ドリル",
   description:
-    "「なかまはずれはどれ？」6歳向けの無料なかまはずれ問題を毎日更新。理由を考える力が身につきます。印刷・登録不要ですぐ挑戦できます。",
+    "「なかまはずれはどれ？」6歳向けの無料なかまはずれ問題を毎日更新。理由を考える力が身につきます。答えつきで、登録不要ですぐ印刷できます。",
   alternates: {
     canonical: "/6/nakamahazure",
   },

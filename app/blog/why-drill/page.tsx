@@ -8,9 +8,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "なぜドリル学習が効果的？幼児期に伸びる3つの力",
+  title: "ドリル学習とは？幼児期に伸びる3つの力",
   description:
-    "幼児向けドリル学習がなぜ効果的なのか、考える力・集中力・学習習慣という3つの観点からわかりやすく解説します。",
+    "ドリル学習とは何か、幼児期のドリルが考える力・集中力・学習習慣につながる理由を解説。遊びとの両立や、間違いを学びに変える考え方も紹介します。",
   alternates: {
     canonical: "/blog/why-drill",
   },
@@ -22,8 +22,8 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
-        title="なぜドリル学習が効果的？幼児期に伸びる3つの力｜わくたん"
-        description="幼児向けドリル学習がなぜ効果的なのか、考える力・集中力・学習習慣という3つの観点からわかりやすく解説します。"
+        title="ドリル学習とは？幼児期に伸びる3つの力"
+        description="ドリル学習とは何か、幼児期のドリルが考える力・集中力・学習習慣につながる理由を解説。遊びとの両立や、間違いを学びに変える考え方も紹介します。"
         slug="why-drill"
         datePublished="2026-03-01"
         dateModified="2026-09-25"

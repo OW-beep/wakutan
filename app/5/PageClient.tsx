@@ -1,6 +1,6 @@
 "use client";
 import AnswerLine, { needsAnswerLine } from "@/app/components/AnswerLine";
-import AnswerCheck, { canCheck, ScoreBar, useCheckResultsState } from "@/app/components/AnswerCheck";
+import AnswerCheck, { canCheck, ScoreBar, SelfMark, useCheckResultsState } from "@/app/components/AnswerCheck";
 import { usePrintWithAnswers } from "@/app/components/printWithAnswers";
 
 import StickerBoard from "@/app/components/StickerBoard";
@@ -76,7 +76,7 @@ export default function PageClient() {
         <AbilityPanel />
         <StickerBoard />
 
-        <ScoreBar results={results} total={questions.filter(canCheck).length} />
+        <ScoreBar results={results} total={questions.length} />
 
         {/* 問題 */}
         <div className="grid gap-5 wt-daily-a4">
@@ -132,7 +132,11 @@ export default function PageClient() {
 
               {needsAnswerLine(q) && <AnswerLine />}
 
-              {canCheck(q) && <AnswerCheck answer={q.answer} onResult={(ok) => report(index, ok)} />}
+              {canCheck(q) ? (
+                <AnswerCheck answer={q.answer} onResult={(ok) => report(index, ok)} />
+              ) : (
+                <SelfMark onResult={(ok) => report(index, ok)} />
+              )}
 
               <AnswerReveal
                 genre={q.genre}

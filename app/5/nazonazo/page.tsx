@@ -8,9 +8,9 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "5歳向けなぞなぞ問題",
+  title: "5歳向けなぞなぞ問題｜答えつき・無料で印刷OK",
   description:
-    "5歳向け無料なぞなぞドリル。2〜3つのヒントを組み合わせて答えを考える問題を毎日更新。",
+    "5歳向けの無料なぞなぞ。ヒントから答えを考える問題を毎日更新し、答えと解説つきで確かめられます。印刷もできます。",
   alternates: {
     canonical: "/5/nazonazo",
   },

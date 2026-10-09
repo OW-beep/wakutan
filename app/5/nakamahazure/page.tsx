@@ -8,9 +8,9 @@ import Breadcrumb from "../../components/Breadcrumb";
 import GenreAbilityBox from "@/app/components/GenreAbilityBox";
 
 export const metadata = {
-  title: "5歳向けなかまはずれ問題",
+  title: "5歳向けなかまはずれ問題｜考える力を伸ばす無料ドリル",
   description:
-    "5歳向け無料なかまはずれドリル。少しまぎらわしい選択肢から仲間はずれを見つける問題を毎日更新。",
+    "「どれが仲間はずれ？」5歳向けの無料なかまはずれ問題を毎日更新。理由を考える力が身につきます。答えつきで印刷できます。",
   alternates: {
     canonical: "/5/nakamahazure",
   },

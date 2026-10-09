@@ -8,9 +8,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-title: "4歳の勉強はどう教える？やる気を引き出す関わり方とコツ",
+title: "4歳の勉強はどこまで？教え方とやる気を引き出すコツ",
 description:
-  "4歳児の勉強・学び方のコツを解説。やる気を引き出す関わり方や、遊びと学習を両立しながら考える力を育てる工夫を紹介します。",
+  "4歳の勉強はどこまで進めればいい？遊びを通して学ぶ関わり方、やる気を引き出すコツ、数や論理の練習法、1日の学習時間の目安、よくある質問をまとめました。",
   alternates: {
     canonical: "/blog/how-4year-learn",
   },
@@ -21,11 +21,11 @@ export default async function Page() {
 
 return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange-50">
       <ArticleSchema
-        title="4歳の学び方・勉強のコツ｜やる気を引き出す関わり方｜わくたん"
-        description="4歳児の勉強・学び方のコツを解説。やる気を引き出す関わり方や、遊びと学習を両立しながら考える力を育てる工夫を紹介します。"
+        title="4歳の勉強はどこまで？教え方とやる気を引き出すコツ"
+        description="4歳の勉強はどこまで進めればいい？遊びを通して学ぶ関わり方、やる気を引き出すコツ、数や論理の練習法、1日の学習時間の目安、よくある質問をまとめました。"
         slug="how-4year-learn"
         datePublished="2026-03-01"
-        dateModified="2026-09-18"
+        dateModified="2026-10-09"
       />
 
 
@@ -241,6 +241,40 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
           <p className="leading-8">
             4歳の頃は、「毎日きちんと勉強する」ことより、「机に向かうことが嫌にならない」ことを優先するくらいでちょうどよいと感じています。
+          </p>
+
+        </section>
+
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+            📏 4歳の勉強は「どこまで」？幼稚園教育要領の考え方
+          </h2>
+
+          <p className="leading-8 mb-4">
+            「4歳でどこまで勉強させればいいの？」と迷う保護者の方は多いと思います。文部科学省の『幼稚園教育要領』（平成29年3月告示）は、幼児期の学びについて、次のような考え方を示しています。
+          </p>
+
+          <ul className="list-disc ml-6 space-y-2 leading-8 mb-4">
+            <li>幼児期の教育は、遊びを通しての指導を中心として行うことが基本とされています。</li>
+            <li>領域「環境」では、身近な物を見たり、考えたり、扱ったりする中で、物の性質や数量、文字などに対する感覚を豊かにすることが、ねらいのひとつに挙げられています。</li>
+            <li>幼児の評価は、他の幼児との比較や、一定の基準に対する達成度についての評定によってとらえるものではない、とされています。</li>
+          </ul>
+
+          <p className="leading-8 mb-4">
+            つまり、「何歳までにここまでできるように」という目標を急ぐよりも、遊びや生活の中で、数・形・文字に興味をもつ経験を重ねることが大切にされています。ドリルを使うときも、お子さんが楽しめる量と内容にとどめ、他の子との比較ではなく、お子さん自身の変化を見てあげてください。
+          </p>
+
+          <p className="text-xs text-gray-500">
+            出典：文部科学省『幼稚園教育要領』（平成29年3月告示）。
+            <a
+              href="https://www.mext.go.jp/content/1384661_3_2.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline ml-1"
+            >
+              原文（PDF）
+            </a>
           </p>
 
         </section>

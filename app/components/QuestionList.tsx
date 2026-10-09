@@ -1,6 +1,6 @@
 "use client";
 import AnswerLine, { needsAnswerLine } from "./AnswerLine";
-import AnswerCheck, { canCheck, ScoreBar, useCheckResultsState } from "./AnswerCheck";
+import AnswerCheck, { canCheck, ScoreBar, SelfMark, useCheckResultsState } from "./AnswerCheck";
 
 import ClockFace from "./ClockFace";
 import MoneyIllustration from "./MoneyIllustration";
@@ -45,7 +45,7 @@ export default function QuestionList({
   accentButton,
 }: Props) {
   const { results, report } = useCheckResultsState();
-  const checkable = questions.filter(canCheck).length;
+  const checkable = questions.length;
 
   return (
     <>
@@ -132,7 +132,11 @@ export default function QuestionList({
 
             {needsAnswerLine(q) && <AnswerLine />}
 
-            {canCheck(q) && <AnswerCheck answer={q.answer} onResult={(ok) => report(index, ok)} />}
+            {canCheck(q) ? (
+                <AnswerCheck answer={q.answer} onResult={(ok) => report(index, ok)} />
+              ) : (
+                <SelfMark onResult={(ok) => report(index, ok)} />
+              )}
 
             <AnswerReveal
               genre={q.genre}

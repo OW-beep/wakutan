@@ -96,6 +96,43 @@ export default function AnswerCheck({
   );
 }
 
+/**
+ * 手で書く問題・絵や記号がこたえの問題用の「じぶんで まるつけ」。
+ * こたえを見て（「こたえ・かいせつを見る」）、できたかどうかを自分で えらぶ。
+ */
+export function SelfMark({ onResult }: { onResult: (ok: boolean) => void }) {
+  const [mark, setMark] = useState<null | boolean>(null);
+
+  function choose(ok: boolean) {
+    setMark(ok);
+    onResult(ok);
+  }
+
+  return (
+    <div className="print-hide mt-2 mb-1 flex flex-wrap items-center gap-2">
+      <span className="text-sm font-bold text-gray-600">✏️ かけたら、こたえを みて じぶんで まるつけ</span>
+      <button
+        onClick={() => choose(true)}
+        aria-pressed={mark === true}
+        className={`px-4 py-1.5 rounded-lg border-2 font-bold text-sm ${
+          mark === true ? "border-green-500 bg-green-100 text-green-700" : "border-gray-300 text-gray-600 hover:bg-gray-50"
+        }`}
+      >
+        ⭕ できた
+      </button>
+      <button
+        onClick={() => choose(false)}
+        aria-pressed={mark === false}
+        className={`px-4 py-1.5 rounded-lg border-2 font-bold text-sm ${
+          mark === false ? "border-red-400 bg-red-100 text-red-700" : "border-gray-300 text-gray-600 hover:bg-gray-50"
+        }`}
+      >
+        ✖ もういちど
+      </button>
+    </div>
+  );
+}
+
 export function useCheckResultsState() {
   const [results, setResults] = useState<Record<number, boolean>>({});
   return {
@@ -120,7 +157,7 @@ export function ScoreBar({
         てんすう：{ok} / {total} てん
       </span>
       <span className="ml-3 text-sm text-gray-600">
-        （こたえあわせ した もんだい：{tried} / {total}）
+        （まるつけ した もんだい：{tried} / {total}）
       </span>
     </div>
   );

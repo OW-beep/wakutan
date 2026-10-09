@@ -8,9 +8,9 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "5歳でひらがなが書けない・読めない…親の不安を解消する関わり方",
+  title: "5歳でひらがなが書けない・読めないときの関わり方",
   description:
-    "5歳になってもひらがなが読めない・書けないことに不安を感じる保護者向けに、無理なく興味を引き出すステップを紹介します。",
+    "5歳でひらがなが読めない・書けないと不安なときに、「読めない」と「書けない」を分けて考えるコツと、遊びの中で無理なく文字に触れる方法を紹介します。",
   alternates: {
     canonical: "/blog/hiragana-worry-5year",
   },
@@ -22,8 +22,8 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
-        title="5歳でひらがなが読めない・書けない…親の不安解消法｜わくたん"
-        description="5歳になってもひらがなが読めない・書けないことに不安を感じる保護者向けに、無理なく興味を引き出すステップを紹介します。"
+        title="5歳でひらがなが書けない・読めないときの関わり方"
+        description="5歳でひらがなが読めない・書けないと不安なときに、「読めない」と「書けない」を分けて考えるコツと、遊びの中で無理なく文字に触れる方法を紹介します。"
         slug="hiragana-worry-5year"
         datePublished="2026-06-01"
         dateModified="2026-09-18"
