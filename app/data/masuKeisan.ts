@@ -1,22 +1,22 @@
 /**
  * ますけいさん（たし算のます計算）のシートを作る。
  *   よこ（うえ）の数 ＋ たて（ひだり）の数 を、まじわるますに書く。
- * 数は 1〜maxNum。いちばん大きい 10×10 ますでも、たし算の答えは 20 まで。
- * 年齢が上がるほど、ますの数（3〜10）と、つかう数のはんいがふえる。
+ * N ますのときは、よこ・たてとも 1〜N の数を ならべかえて つかう
+ * （3ますなら 1〜3、4ますなら 1〜4、…、10ますなら 1〜10）。
+ * いちばん大きい 10×10 ますでも、たし算の答えは 20 まで。
+ * 年齢が上がるほど、ますの数（3〜10）がふえる。
  */
 export type MasuSheet = { size: number; top: number[]; left: number[] };
 
 export type MasuLevel = {
   sizes: number[];
-  /** つかう数は 1〜maxNum（ますの数より小さくならないようにしている） */
-  maxNum: number;
   perSize: number;
 };
 
 export const MASU_LEVELS: Record<4 | 5 | 6, MasuLevel> = {
-  4: { sizes: [3, 4], maxNum: 5, perSize: 12 },
-  5: { sizes: [5, 6, 7], maxNum: 8, perSize: 12 },
-  6: { sizes: [8, 9, 10], maxNum: 10, perSize: 12 },
+  4: { sizes: [3, 4], perSize: 12 },
+  5: { sizes: [5, 6, 7], perSize: 12 },
+  6: { sizes: [8, 9, 10], perSize: 12 },
 };
 
 function makeRng(seed: number): () => number {
@@ -47,8 +47,9 @@ export function generateMasu(age: 4 | 5 | 6): MasuSheet[] {
     const seen = new Set<string>();
     let guard = 0;
     while (seen.size < lv.perSize && guard++ < 500) {
-      const top = pickDistinct(r, lv.maxNum, size);
-      const left = pickDistinct(r, lv.maxNum, size);
+      // 1〜size を ならべかえる（たしざんの答えは、さいだい size×2）
+      const top = pickDistinct(r, size, size);
+      const left = pickDistinct(r, size, size);
       const key = top.join(",") + "/" + left.join(",");
       if (seen.has(key)) continue;
       seen.add(key);

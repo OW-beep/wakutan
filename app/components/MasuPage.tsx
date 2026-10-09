@@ -8,19 +8,19 @@ type Age = 4 | 5 | 6;
 
 export function masuMetadata(age: Age) {
   const lv = MASU_LEVELS[age];
-  const range = `${lv.sizes[0]}〜${lv.sizes[lv.sizes.length - 1]}ます`;
-  const maxSum = lv.maxNum * 2;
+  const first = lv.sizes[0];
+  const last = lv.sizes[lv.sizes.length - 1];
   return {
-    title: `${age}歳向けたし算のます計算（${range}）｜点数とタイムをはかろう（無料・印刷OK）`,
-    description: `${age}歳向けの無料のたし算ます計算（${range}、1〜${lv.maxNum}の数、答えは${maxSum}まで）。画面でタイマーと点数をはかったり、印刷して書きこんだりできます。`,
+    title: `${age}歳向けたし算のます計算（${first}〜${last}ます）｜点数とタイムをはかろう（無料・印刷OK）`,
+    description: `${age}歳向けの無料のたし算ます計算（${first}〜${last}ます）。ますの数と同じ、${first}ますなら1〜${first}、${last}ますなら1〜${last}の数を使い、答えは${last * 2}までです。画面でタイマーと点数をはかったり、印刷して書きこんだりできます。`,
     alternates: { canonical: `/${age}/masu` },
   };
 }
 
 const LEVEL_TEXT: Record<Age, string> = {
-  4: "3ます・4ますの小さなますです。つかう数は 1〜5 で、答えは 10 までです。",
-  5: "5ます〜7ますです。つかう数は 1〜8 で、答えは 16 までです。",
-  6: "8ます〜10ますです。つかう数は 1〜10 で、いちばん大きい 10×10 ますでも、答えは 20 までです。",
+  4: "3ます・4ますの小さなますです。つかう数は、ますの数と同じ数までです（3ますなら 1〜3、4ますなら 1〜4）。答えは 8 までです。",
+  5: "5ます〜7ますです。つかう数は、ますの数と同じ数までです（5ますなら 1〜5、7ますなら 1〜7）。答えは 14 までです。",
+  6: "8ます〜10ますです。つかう数は、ますの数と同じ数までです（8ますなら 1〜8、10ますなら 1〜10）。いちばん大きい 10×10 ますでも、答えは 20 までです。",
 };
 
 export default function MasuPage({ age }: { age: Age }) {
