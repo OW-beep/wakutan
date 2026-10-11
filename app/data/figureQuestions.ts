@@ -5,6 +5,7 @@
  */
 import {
   CIRCLED,
+  carryParts,
   cellsSignature,
   mirrorCells,
   rotateCells,
@@ -30,6 +31,7 @@ export type FigureQ = {
 };
 
 export const GENRE_LABEL = {
+  kuriagari: "🔟 くりあがりたしざん",
   kaiten: "🔄 くるくるパズル",
   sentaisho: "🪞 かがみうつし",
   mikata: "🔭 どこからみる？",
@@ -390,4 +392,47 @@ export function generateKeiyoushi(age: Age): FigureQ[] {
     return true;
   });
   return shuffle(r, uniq);
+}
+
+
+// ---------- くりあがりたしざん ----------
+
+/**
+ * 5歳：大きいほうが 9 か 8（9＋4、8＋5 など）。
+ * 6歳：大きいほうが 9・8・7・6（和が 11〜18 の、1けたどうしの すべて）。
+ * 4歳は つくらない（10の分け方を 遊びで ふれる時期）。
+ */
+export function generateKuriagari(age: Age): FigureQ[] {
+  if (age === 4) return [];
+  const r = makeRng(30000 + age);
+  const bigs = age === 5 ? [9, 8] : [9, 8, 7, 6];
+  const pairs: [number, number][] = [];
+  for (const big of bigs) {
+    for (let small = 11 - big; small <= big; small++) {
+      pairs.push([big, small]);
+      if (small !== big) pairs.push([small, big]);
+    }
+  }
+  const out: FigureQ[] = [];
+  for (const level of [1, 2, 3] as const) {
+    for (const [a, b] of pairs) {
+      const { big, small, x, y } = carryParts(a, b);
+      const sum = a + b;
+      const q =
+        level === 1
+          ? `${a}＋${b}を、10を つくって けいさんしよう。うすい すうじは なぞって、わくを うめよう。`
+          : level === 2
+          ? `${a}＋${b}を、10を つくって けいさんしよう。わくの なかに すうじを かこう。`
+          : `${a}＋${b}を、10を つくって けいさんしよう。（わくなし。じぶんで かんがえて こたえよう）`;
+      out.push({
+        genre: GENRE_LABEL.kuriagari,
+        question: q,
+        answer: String(sum),
+        explanation: `${big}は あと${x}で 10。${small}を ${x}と ${y}に わけて、${big}＋${x}＝10、10＋${y}＝${sum}。`,
+        difficulty: level + (10 - big) * 0.05,
+        figure: { kind: "carry", a, b, level, help: "/kuriagari" },
+      });
+    }
+  }
+  return shuffle(r, out);
 }

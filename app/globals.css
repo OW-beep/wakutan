@@ -360,3 +360,19 @@ body {
   font-weight: 700;
   color: #166534;
 }
+
+/* くりあがりたしざん：2列で印刷しても、図が折りかえさず、8問が1まいに入るようにする */
+@media print {
+  [data-print-cols="2"] .wt-carry {
+    padding: 4px;
+    zoom: 0.78;
+    margin-bottom: 4px;
+  }
+  [data-print-cols="2"] .wt-carry .wt-carry-steps {
+    gap: 4px 12px;
+    font-size: 16px;
+  }
+  [data-print-cols="2"] .wt-carry-steps > span {
+    white-space: nowrap;
+  }
+}

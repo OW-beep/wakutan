@@ -47,7 +47,16 @@ export type Figure =
       choices: Layer[][];
       correct: number;
     }
-  | { kind: "trace"; items: TraceItem[]; bank?: string[] };
+  | { kind: "trace"; items: TraceItem[]; bank?: string[] }
+  | {
+      /** くりあがりのある たしざん（10を つくる）。level 1=うすい ほじょ 2=わくだけ 3=わくなし */
+      kind: "carry";
+      a: number;
+      b: number;
+      level: 1 | 2 | 3;
+      /** 「やりかたを みる」の リンクさき（解説ページ） */
+      help: string;
+    };
 
 // ---------- 図形の変換 ----------
 
@@ -114,4 +123,13 @@ export function turnText(deg: 90 | 180 | 270): string {
   if (deg === 90) return "みぎに ひとつぶん まわす";
   if (deg === 180) return "さかさまに まわす";
   return "ひだりに ひとつぶん まわす";
+}
+
+/** 「大きいほうの数に、あと いくつで 10？」のぶんを、小さいほうの数から わける */
+export function carryParts(a: number, b: number) {
+  const big = Math.max(a, b);
+  const small = Math.min(a, b);
+  const x = 10 - big; // 10にするために、小さい数からわける数
+  const y = small - x; // のこり
+  return { big, small, x, y, smallIsLeft: a < b };
 }

@@ -57,6 +57,7 @@ export default function Page() {
           { href: "/6/mikata", emoji: "🔭", label: "どこからみる？" },
           { href: "/6/keiyoushi", emoji: "💬", label: "ぴったりことば" },
           { href: "/6/masu", emoji: "🧮", label: "ますけいさん" },
+          { href: "/6/kuriagari", emoji: "🔟", label: "くりあがりたしざん" },
         ]}
       />
 

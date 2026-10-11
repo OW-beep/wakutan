@@ -1,6 +1,7 @@
 import type { Cell, Figure, Shape } from "../data/figureTypes";
-import { CIRCLED, turnText } from "../data/figureTypes";
+import { CIRCLED, carryParts, turnText } from "../data/figureTypes";
 import { SolidStack, TopView, SideView } from "./Solids";
+import Link from "next/link";
 
 /**
  * かいてん・せんたいしょう・うえ/よこからみる・けいようし の「図」を描く。
@@ -134,6 +135,82 @@ function AnswerBox() {
  * trace=true のとき、かきこみ式の図（かがみうつし）に「れいだい」として
  * こたえをうすく ひいておく。うえから なぞって れんしゅうできる。
  */
+
+// ---------- くりあがりたしざん ----------
+
+function CarryBox({ value, faint, wide = false }: { value?: number | string; faint?: boolean; wide?: boolean }) {
+  return (
+    <span
+      className={`inline-flex items-center justify-center border-2 border-gray-600 rounded-lg bg-white text-2xl font-bold h-11 ${wide ? "w-14" : "w-11"}`}
+      style={{ color: faint ? "#cbd5e1" : INK }}
+    >
+      {value ?? ""}
+    </span>
+  );
+}
+
+function CarryCard({ figure }: { figure: Extract<Figure, { kind: "carry" }> }) {
+  const { a, b, level, help } = figure;
+  const { big, x, y, smallIsLeft } = carryParts(a, b);
+  const sum = a + b;
+  const faint = level === 1;
+  const frame = level !== 3;
+
+  // 小さいほうの数の下に、ふたつにわけるわくを出す
+  const branch = (
+    <div className="flex flex-col items-center mt-1">
+      <svg width="64" height="18" viewBox="0 0 64 18" aria-hidden="true">
+        <path d="M32 0 L14 17 M32 0 L50 17" stroke={INK} strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      </svg>
+      <div className="flex gap-2">
+        <CarryBox value={faint ? x : undefined} faint={faint} />
+        <CarryBox value={faint ? y : undefined} faint={faint} />
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="wt-write wt-carry mb-3 rounded-2xl border-2 border-gray-300 bg-white p-3">
+      <div className="wt-carry-row flex items-start justify-center gap-2">
+        <div className="flex flex-col items-center">
+          <span className="inline-flex h-11 w-11 items-center justify-center text-3xl font-bold">{a}</span>
+          {frame && smallIsLeft && branch}
+        </div>
+        <span className="h-11 inline-flex items-center text-3xl font-bold">＋</span>
+        <div className="flex flex-col items-center">
+          <span className="inline-flex h-11 w-11 items-center justify-center text-3xl font-bold">{b}</span>
+          {frame && !smallIsLeft && branch}
+        </div>
+        <span className="h-11 inline-flex items-center text-3xl font-bold">＝</span>
+        <CarryBox wide />
+      </div>
+
+      {frame && (
+        <div className="wt-carry-steps mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xl font-bold">
+          <span className="inline-flex items-center gap-1">
+            {big}＋
+            <CarryBox value={faint ? x : undefined} faint={faint} />＝
+            <span className="inline-flex h-11 w-12 items-center justify-center" style={{ color: faint ? "#cbd5e1" : INK }}>
+              {faint ? 10 : "10"}
+            </span>
+          </span>
+          <span className="inline-flex items-center gap-1">
+            10＋
+            <CarryBox value={faint ? y : undefined} faint={faint} />＝
+            <CarryBox value={faint ? sum : undefined} faint={faint} wide />
+          </span>
+        </div>
+      )}
+
+      <p className="print-hide mt-2 text-center text-xs">
+        <Link href={help} className="text-blue-600 underline hover:text-blue-800">
+          💡 「10を つくる」やりかたを みる
+        </Link>
+      </p>
+    </div>
+  );
+}
+
 export default function FigureQuestion({ figure, trace = false }: { figure: Figure; trace?: boolean }) {
   switch (figure.kind) {
     case "rotate-choice":
@@ -211,6 +288,9 @@ export default function FigureQuestion({ figure, trace = false }: { figure: Figu
         </div>
       );
 
+    case "carry":
+      return <CarryCard figure={figure} />;
+
     case "trace":
       return (
         <div className="wt-write mb-3">
@@ -251,6 +331,14 @@ export function FigureAnswer({ figure }: { figure: Figure }) {
       <div className="mt-2">
         <ShapeGrid size={figure.size} cells={figure.result} u={40} tone="answer" />
       </div>
+    );
+  }
+  if (figure.kind === "carry") {
+    const { big, small, x, y } = carryParts(figure.a, figure.b);
+    return (
+      <p className="mt-2 text-sm font-bold text-green-700">
+        {small}を {x}と {y}に わける → {big}＋{x}＝10、10＋{y}＝{figure.a + figure.b}
+      </p>
     );
   }
   if (figure.kind === "symmetry") {
