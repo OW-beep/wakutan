@@ -76,6 +76,13 @@ export const GENRE_ABILITIES: Record<string, GenreAbilityInfo> = {
     future:
       "「何が同じで、何が違うか」を見極める力は、観察力や、物事を正確に捉える力として、学習全般に活きてきます。",
   },
+  kurisagari: {
+    stat: "kazu",
+    growth:
+      "10のまとまりをくずして考える力と、数を分けて組み立てる力が育ちます。",
+    future:
+      "小学校のくりさがりのあるひき算や、2年生の筆算の学習で、計算の仕組みを理解する土台になります。",
+  },
   kuriagari: {
     stat: "kazu",
     growth:

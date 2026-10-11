@@ -49,6 +49,14 @@ export type Figure =
     }
   | { kind: "trace"; items: TraceItem[]; bank?: string[] }
   | {
+      /** くりさがりのある ひきざん（減加法：10から ひいて、のこりを たす）。level は carry と同じ */
+      kind: "borrow";
+      a: number; // 11〜18
+      b: number; // 2〜9（一の位より大きい数）
+      level: 1 | 2 | 3;
+      help: string;
+    }
+  | {
       /** くりあがりのある たしざん（10を つくる）。level 1=うすい ほじょ 2=わくだけ 3=わくなし */
       kind: "carry";
       a: number;
@@ -132,4 +140,11 @@ export function carryParts(a: number, b: number) {
   const x = 10 - big; // 10にするために、小さい数からわける数
   const y = small - x; // のこり
   return { big, small, x, y, smallIsLeft: a < b };
+}
+
+/** a − b（くりさがり）：a を 10 と t に わけ、10 − b = x、x + t = こたえ */
+export function borrowParts(a: number, b: number) {
+  const t = a - 10;
+  const x = 10 - b;
+  return { t, x, ans: x + t };
 }

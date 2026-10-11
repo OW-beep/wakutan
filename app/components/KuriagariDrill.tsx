@@ -17,7 +17,7 @@ const MODES: { key: Mode; label: string; note: string }[] = [
 ];
 
 function level(q: Q): number {
-  return q.figure && q.figure.kind === "carry" ? q.figure.level : 0;
+  return q.figure && (q.figure.kind === "carry" || q.figure.kind === "borrow") ? q.figure.level : 0;
 }
 
 function pick<T>(list: T[], n: number, start: number): T[] {
@@ -28,9 +28,13 @@ function pick<T>(list: T[], n: number, start: number): T[] {
 export default function KuriagariDrill({
   questions,
   startSeed,
+  helpHref = "/kuriagari",
+  helpLabel = "💡 「10を つくる」やりかたを みる（かいせつ）",
 }: {
   questions: Q[];
   startSeed: number;
+  helpHref?: string;
+  helpLabel?: string;
 }) {
   const [mode, setMode] = useState<Mode>("steps");
   const [offset, setOffset] = useState(0);
@@ -73,8 +77,8 @@ export default function KuriagariDrill({
         </div>
         <p className="text-sm text-gray-600">{current.note}</p>
         <p className="text-sm mt-2">
-          <Link href="/kuriagari" className="text-blue-600 underline font-bold">
-            💡 「10を つくる」やりかたを みる（かいせつ）
+          <Link href={helpHref} className="text-blue-600 underline font-bold">
+            {helpLabel}
           </Link>
         </p>
       </div>

@@ -218,6 +218,16 @@ export default function Page() {
           </div>
         </div>
 
+        <div className="bg-white rounded-2xl p-5 mt-8 mb-6 leading-8">
+          <p>
+            つぎは、ひき算で
+            <Link href="/kurisagari" className="text-blue-600 underline font-bold mx-1">
+              🔻 くりさがりひきざんの やりかた
+            </Link>
+            に すすもう。
+          </p>
+        </div>
+
         <div className="mt-8 text-center">
           <Link href="/5/kuriagari" className="inline-block bg-amber-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop mr-2">
             5歳向けの れんしゅう

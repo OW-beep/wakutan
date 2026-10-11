@@ -72,6 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/5/keiyoushi",
     "/5/masu",
     "/5/kuriagari",
+    "/5/kurisagari",
     "/5/masu/hiki",
 
     "/6/sansu",
@@ -95,12 +96,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/6/keiyoushi",
     "/6/masu",
     "/6/kuriagari",
+    "/6/kurisagari",
     "/6/masu/hiki",
 
     "/about",
     "/articles",
     "/categories",
     "/kuriagari",
+    "/kurisagari",
     "/category/age",
     "/category/parent",
     "/narai-shindan",

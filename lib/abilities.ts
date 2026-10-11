@@ -66,6 +66,7 @@ const LABEL_STAT: Record<string, Exclude<StatKey, "shuuchuu">> = {
   ぴったりことば: "kotoba",
   ますけいさん: "kazu",
   くりあがりたしざん: "kazu",
+  くりさがりひきざん: "kazu",
   ろんり: "ronri",
   すいり: "ronri",
   なかまわけ: "ronri",

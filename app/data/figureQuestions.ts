@@ -5,6 +5,7 @@
  */
 import {
   CIRCLED,
+  borrowParts,
   carryParts,
   cellsSignature,
   mirrorCells,
@@ -32,6 +33,7 @@ export type FigureQ = {
 
 export const GENRE_LABEL = {
   kuriagari: "🔟 くりあがりたしざん",
+  kurisagari: "🔻 くりさがりひきざん",
   kaiten: "🔄 くるくるパズル",
   sentaisho: "🪞 かがみうつし",
   mikata: "🔭 どこからみる？",
@@ -432,6 +434,44 @@ export function generateKuriagari(age: Age): FigureQ[] {
         difficulty: level + (10 - big) * 0.05,
         figure: { kind: "carry", a, b, level, help: "/kuriagari" },
       });
+    }
+  }
+  return shuffle(r, out);
+}
+
+
+// ---------- くりさがりひきざん ----------
+
+/**
+ * 11〜18 から 1けたを ひく（くりさがりが ひつよう：一のくらいが ひく数より小さい）。
+ * 5歳：ひく数が 9 か 8（13−9、14−8 など）。6歳：ひく数が 2〜9 のすべて。
+ * 4歳は つくらない。
+ */
+export function generateKurisagari(age: Age): FigureQ[] {
+  if (age === 4) return [];
+  const r = makeRng(31000 + age);
+  const bs = age === 5 ? [9, 8] : [9, 8, 7, 6, 5, 4, 3, 2];
+  const out: FigureQ[] = [];
+  for (const level of [1, 2, 3] as const) {
+    for (const b of bs) {
+      for (let t = 1; t < b; t++) {
+        const a = 10 + t;
+        const { x, ans } = borrowParts(a, b);
+        const q =
+          level === 1
+            ? `${a}－${b}を、10から ひいて けいさんしよう。うすい すうじは なぞって、わくを うめよう。`
+            : level === 2
+            ? `${a}－${b}を、10から ひいて けいさんしよう。わくの なかに すうじを かこう。`
+            : `${a}－${b}を、10から ひいて けいさんしよう。（わくなし。じぶんで かんがえて こたえよう）`;
+        out.push({
+          genre: GENRE_LABEL.kurisagari,
+          question: q,
+          answer: String(ans),
+          explanation: `${a}を 10と${t}に わけて、10－${b}＝${x}、${x}＋${t}＝${ans}。`,
+          difficulty: level + (10 - b) * 0.05,
+          figure: { kind: "borrow", a, b, level, help: "/kurisagari" },
+        });
+      }
     }
   }
   return shuffle(r, out);
