@@ -1,5 +1,5 @@
 import type { Cell, Figure, Shape } from "../data/figureTypes";
-import { CIRCLED, borrowParts, carryParts, turnText } from "../data/figureTypes";
+import { CIRCLED, borrowParts, carryParts, coinsTotal, priceParts, turnText } from "../data/figureTypes";
 import { SolidStack, TopView, SideView } from "./Solids";
 import Link from "next/link";
 
@@ -141,7 +141,7 @@ function AnswerBox() {
 function CarryBox({ value, faint, wide = false }: { value?: number | string; faint?: boolean; wide?: boolean }) {
   return (
     <span
-      className={`inline-flex items-center justify-center border-2 border-gray-600 rounded-lg bg-white text-2xl font-bold h-11 ${wide ? "w-14" : "w-11"}`}
+      className={`wt-box ${wide ? "wt-box-wide" : ""} inline-flex items-center justify-center border-2 border-gray-600 rounded-lg bg-white text-2xl font-bold h-11 ${wide ? "w-14" : "w-11"}`}
       style={{ color: faint ? "#cbd5e1" : INK }}
     >
       {value ?? ""}
@@ -267,6 +267,125 @@ function BorrowCard({ figure }: { figure: Extract<Figure, { kind: "borrow" }> })
   );
 }
 
+// ---------- おかねの けいさん ----------
+
+const COIN_STYLE: Record<number, { fill: string; stroke: string; text: string }> = {
+  1: { fill: "#e5e7eb", stroke: "#6b7280", text: "#374151" },
+  5: { fill: "#fde68a", stroke: "#a16207", text: "#713f12" },
+  10: { fill: "#c9854a", stroke: "#7c3f14", text: "#ffffff" },
+};
+
+/** ふつうの 丸い コインの ずに、なん円かを かいたもの（実物の デザインでは ありません） */
+export function CoinDisc({ v }: { v: 1 | 5 | 10 }) {
+  const st = COIN_STYLE[v];
+  return (
+    <svg width="38" height="38" viewBox="0 0 38 38" aria-label={`${v}円玉`}>
+      <circle cx="19" cy="19" r="17" fill={st.fill} stroke={st.stroke} strokeWidth="2" />
+      <text x="19" y="25" textAnchor="middle" fontSize="16" fontWeight="700" fill={st.text}>
+        {v}
+      </text>
+    </svg>
+  );
+}
+
+function CoinsCard({ figure }: { figure: Extract<Figure, { kind: "coins" }> }) {
+  const { coins, level, help } = figure;
+  const faint = level === 1;
+  const frame = level !== 3;
+  return (
+    <div className="wt-write wt-carry wt-money-card mb-3 rounded-2xl border-2 border-gray-300 bg-white p-3">
+      <div className="space-y-1">
+        {coins.map((c) => (
+          <div key={c.v} className="flex items-center gap-2">
+            <span className="w-14 shrink-0 text-sm font-bold text-gray-600">{c.v}円玉</span>
+            <div className="flex flex-wrap gap-1">
+              {Array.from({ length: c.n }).map((_, i) => (
+                <CoinDisc key={i} v={c.v} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {frame && (
+        <div className="wt-carry-steps mt-3 space-y-2 text-lg font-bold">
+          {coins.map((c) => (
+            <div key={c.v} className="flex flex-wrap items-center justify-center gap-1">
+              {c.v}円 ×
+              <CarryBox value={faint ? c.n : undefined} faint={faint} />
+              こ ＝
+              <CarryBox value={faint ? c.v * c.n : undefined} faint={faint} wide />
+              円
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="mt-3 flex items-center justify-center gap-2 text-xl font-bold">
+        ぜんぶで
+        <CarryBox wide />
+        円
+      </div>
+
+      <p className="print-hide mt-2 text-center text-xs">
+        <Link href={help} className="text-blue-600 underline hover:text-blue-800">
+          💡 「まとめて かぞえる」やりかたを みる
+        </Link>
+      </p>
+    </div>
+  );
+}
+
+function PriceTag({ yen }: { yen: number }) {
+  return (
+    <span className="inline-flex items-center justify-center rounded-lg border-2 border-gray-700 bg-yellow-50 px-3 h-11 text-2xl font-bold">
+      {yen}円
+    </span>
+  );
+}
+
+function PriceCard({ figure }: { figure: Extract<Figure, { kind: "price" }> }) {
+  const { a, b, level, help } = figure;
+  const p = priceParts(a, b);
+  const faint = level === 1;
+  const frame = level !== 3;
+  return (
+    <div className="wt-write wt-carry wt-money-card mb-3 rounded-2xl border-2 border-gray-300 bg-white p-3">
+      <div className="flex flex-wrap items-center justify-center gap-2">
+        <PriceTag yen={a} />
+        <span className="text-3xl font-bold">＋</span>
+        <PriceTag yen={b} />
+        <span className="text-3xl font-bold">＝</span>
+        <CarryBox wide />
+        <span className="text-xl font-bold">円</span>
+      </div>
+
+      {frame && (
+        <div className="wt-carry-steps mt-3 space-y-2 text-lg font-bold">
+          <div className="flex flex-wrap items-center justify-center gap-1">
+            <span className="text-sm text-gray-600 mr-1">一のくらい</span>
+            {p.o1}＋{p.o2}＝
+            <CarryBox value={faint ? p.onesSum : undefined} faint={faint} />
+            {p.carry === 1 && <span className="text-sm text-gray-600 ml-1">（10が 1こ → 十のくらいへ）</span>}
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-1">
+            <span className="text-sm text-gray-600 mr-1">十のくらい</span>
+            {p.t1}＋{p.t2}＋
+            <CarryBox value={faint ? p.carry : undefined} faint={faint} />＝
+            <CarryBox value={faint ? p.tens : undefined} faint={faint} />
+          </div>
+        </div>
+      )}
+
+      <p className="print-hide mt-2 text-center text-xs">
+        <Link href={help} className="text-blue-600 underline hover:text-blue-800">
+          💡 「十のくらい・一のくらい」やりかたを みる
+        </Link>
+      </p>
+    </div>
+  );
+}
+
 export default function FigureQuestion({ figure, trace = false }: { figure: Figure; trace?: boolean }) {
   switch (figure.kind) {
     case "rotate-choice":
@@ -350,6 +469,12 @@ export default function FigureQuestion({ figure, trace = false }: { figure: Figu
     case "borrow":
       return <BorrowCard figure={figure} />;
 
+    case "coins":
+      return <CoinsCard figure={figure} />;
+
+    case "price":
+      return <PriceCard figure={figure} />;
+
     case "trace":
       return (
         <div className="wt-write mb-3">
@@ -397,6 +522,23 @@ export function FigureAnswer({ figure }: { figure: Figure }) {
     return (
       <p className="mt-2 text-sm font-bold text-green-700">
         {small}を {x}と {y}に わける → {big}＋{x}＝10、10＋{y}＝{figure.a + figure.b}
+      </p>
+    );
+  }
+  if (figure.kind === "coins") {
+    return (
+      <p className="mt-2 text-sm font-bold text-green-700">
+        {figure.coins.map((c) => `${c.v}円玉 ${c.n}こ＝${c.v * c.n}円`).join("、")} → あわせて {coinsTotal(figure.coins)}円
+      </p>
+    );
+  }
+  if (figure.kind === "price") {
+    const p = priceParts(figure.a, figure.b);
+    return (
+      <p className="mt-2 text-sm font-bold text-green-700">
+        一のくらい {p.o1}＋{p.o2}＝{p.onesSum}
+        {p.carry ? "（くりあがり）" : ""}、十のくらい {p.t1}＋{p.t2}
+        {p.carry ? "＋1" : ""}＝{p.tens} → {p.total}円
       </p>
     );
   }

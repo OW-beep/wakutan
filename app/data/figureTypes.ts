@@ -49,6 +49,21 @@ export type Figure =
     }
   | { kind: "trace"; items: TraceItem[]; bank?: string[] }
   | {
+      /** おかねの けいさん①：コインの ごうけい（しゅるいごとに かぞえて たす） */
+      kind: "coins";
+      coins: { v: 1 | 5 | 10; n: number }[];
+      level: 1 | 2 | 3;
+      help: string;
+    }
+  | {
+      /** おかねの けいさん②：ねだんを たす（十のくらい・一のくらいに わけて けいさん） */
+      kind: "price";
+      a: number;
+      b: number;
+      level: 1 | 2 | 3;
+      help: string;
+    }
+  | {
       /** くりさがりのある ひきざん（減加法：10から ひいて、のこりを たす）。level は carry と同じ */
       kind: "borrow";
       a: number; // 11〜18
@@ -147,4 +162,21 @@ export function borrowParts(a: number, b: number) {
   const t = a - 10;
   const x = 10 - b;
   return { t, x, ans: x + t };
+}
+
+/** ねだん a + b を、一のくらい・十のくらいに わけて たす */
+export function priceParts(a: number, b: number) {
+  const o1 = a % 10;
+  const o2 = b % 10;
+  const t1 = Math.floor(a / 10);
+  const t2 = Math.floor(b / 10);
+  const onesSum = o1 + o2;
+  const carry = onesSum >= 10 ? 1 : 0;
+  const ones = onesSum - carry * 10;
+  const tens = t1 + t2 + carry;
+  return { o1, o2, t1, t2, onesSum, carry, ones, tens, total: a + b };
+}
+
+export function coinsTotal(coins: { v: number; n: number }[]): number {
+  return coins.reduce((s, c) => s + c.v * c.n, 0);
 }

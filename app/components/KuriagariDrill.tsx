@@ -17,7 +17,7 @@ const MODES: { key: Mode; label: string; note: string }[] = [
 ];
 
 function level(q: Q): number {
-  return q.figure && (q.figure.kind === "carry" || q.figure.kind === "borrow") ? q.figure.level : 0;
+  return q.figure && "level" in q.figure ? q.figure.level : 0;
 }
 
 function pick<T>(list: T[], n: number, start: number): T[] {

@@ -58,6 +58,7 @@ export default function Page() {
           { href: "/5/masu", emoji: "🧮", label: "ますけいさん" },
           { href: "/5/kuriagari", emoji: "🔟", label: "くりあがりたしざん" },
           { href: "/5/kurisagari", emoji: "🔻", label: "くりさがりひきざん" },
+          { href: "/5/okane-keisan", emoji: "💴", label: "おかねの けいさん" },
         ]}
       />
 

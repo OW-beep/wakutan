@@ -1,5 +1,5 @@
 import type { Figure } from "./figureTypes";
-import { generateKaiten, generateKuriagari, generateKurisagari, generateSentaisho, generateMikata, generateKeiyoushi } from "./figureQuestions";
+import { generateKaiten, generateKuriagari, generateKurisagari, generateOkaneKeisan, generateSentaisho, generateMikata, generateKeiyoushi } from "./figureQuestions";
 import { parseMoney } from "./moneyParser";
 import { CubeShape, totalCubes, describeCubes } from "./cubeShapes";
 import { DotFigure, dotFiguresSize3, buildDotFigurePool } from "./dotFigures";
@@ -590,6 +590,7 @@ export function generate5Questions() {
   const keiyoushi: Question[] = generateKeiyoushi(5);
   const kuriagari: Question[] = generateKuriagari(5);
   const kurisagari: Question[] = generateKurisagari(5);
+  const okanekeisan: Question[] = generateOkaneKeisan(5);
 
-  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, moji, nazonazo, okane, tsumiki, onajikatachi, suiri, kokki, kaiten, sentaisho, mikata, keiyoushi, kuriagari, kurisagari };
+  return { sansu, ronri, pattern, hiragana, nakamawake, kurabekko, nakamahazure, moji, nazonazo, okane, tsumiki, onajikatachi, suiri, kokki, kaiten, sentaisho, mikata, keiyoushi, kuriagari, kurisagari, okanekeisan };
 }

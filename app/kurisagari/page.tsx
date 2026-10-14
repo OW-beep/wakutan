@@ -168,6 +168,16 @@ export default function Page() {
           </div>
         </div>
 
+        <div className="bg-white rounded-2xl p-5 mt-8 mb-6 leading-8">
+          <p>
+            つぎは
+            <Link href="/okane-keisan" className="text-blue-600 underline font-bold mx-1">
+              💴 おかねの けいさん
+            </Link>
+            で、10円玉を まとめて かぞえよう。
+          </p>
+        </div>
+
         <div className="mt-8 text-center">
           <Link href="/5/kurisagari" className="inline-block bg-sky-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop mr-2">
             5歳向けの れんしゅう

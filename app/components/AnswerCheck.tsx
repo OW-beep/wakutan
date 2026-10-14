@@ -12,7 +12,7 @@ type Checkable = { genre: string; answer: string; figure?: Figure; dotFigure?: u
 
 export function canCheck(q: Checkable): boolean {
   if (q.dotFigure) return false;
-  if (q.figure && q.figure.kind !== "rotate-choice" && q.figure.kind !== "solid-view" && q.figure.kind !== "carry" && q.figure.kind !== "borrow") return false;
+  if (q.figure && q.figure.kind !== "rotate-choice" && q.figure.kind !== "solid-view" && q.figure.kind !== "carry" && q.figure.kind !== "borrow" && q.figure.kind !== "coins" && q.figure.kind !== "price") return false;
   const a = q.answer.trim();
   if (!a || a.length > 16) return false;
   return /^[\p{L}\p{N}\p{M}ー・、。\s]+$/u.test(a);

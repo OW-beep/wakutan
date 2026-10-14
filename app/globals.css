@@ -376,3 +376,49 @@ body {
     white-space: nowrap;
   }
 }
+
+/* 計算ドリル（くりあがり・くりさがり・おかね）：高さが ちがう カードを 2列に つめて、1まいに おさめる */
+@media print {
+  [data-print-cols="2"] .wt-q-list:has(.wt-carry) {
+    display: block;
+    column-count: 2;
+    column-gap: 8px;
+  }
+  [data-print-cols="2"] .wt-q-list:has(.wt-carry) > * {
+    margin: 0 0 8px 0 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  [data-print-cols="2"] .wt-carry svg[aria-label$="円玉"] {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* おかねの けいさん：コインの カードは 行が多いので、2列で 印刷するときは わくを 少し小さくする */
+@media print {
+  [data-print-cols="2"] .wt-money-card .wt-box {
+    height: 30px;
+    width: 30px;
+    font-size: 17px;
+  }
+  [data-print-cols="2"] .wt-money-card .wt-box-wide {
+    width: 40px;
+  }
+  [data-print-cols="2"] .wt-money-card .wt-carry-steps {
+    font-size: 14px;
+  }
+  [data-print-cols="2"] .wt-money-card .space-y-2 > * + * {
+    margin-top: 2px;
+  }
+}
+
+@media print {
+  [data-print-cols="2"] .wt-money-card {
+    zoom: 0.7;
+  }
+  [data-print-cols="2"] .wt-q-list:has(.wt-money-card) > * {
+    padding: 6px !important;
+    margin-bottom: 6px !important;
+  }
+}

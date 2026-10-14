@@ -6,6 +6,8 @@
 import {
   CIRCLED,
   borrowParts,
+  coinsTotal,
+  priceParts,
   carryParts,
   cellsSignature,
   mirrorCells,
@@ -34,6 +36,7 @@ export type FigureQ = {
 export const GENRE_LABEL = {
   kuriagari: "🔟 くりあがりたしざん",
   kurisagari: "🔻 くりさがりひきざん",
+  okanekeisan: "💴 おかねの けいさん",
   kaiten: "🔄 くるくるパズル",
   sentaisho: "🪞 かがみうつし",
   mikata: "🔭 どこからみる？",
@@ -472,6 +475,103 @@ export function generateKurisagari(age: Age): FigureQ[] {
           figure: { kind: "borrow", a, b, level, help: "/kurisagari" },
         });
       }
+    }
+  }
+  return shuffle(r, out);
+}
+
+
+// ---------- おかねの けいさん ----------
+
+const OKANE_HELP = "/okane-keisan";
+
+/**
+ * ①コインの ごうけい：5歳は 10円玉と1円玉（ごうけい 59円まで）、
+ *   6歳は 10円玉・5円玉・1円玉（ごうけい 99円まで）。
+ * ②ねだんの たしざん：5歳は くりあがりなし、6歳は くりあがりも ふくむ（こたえ 99円まで）。
+ * 4歳は つくらない。
+ */
+export function generateOkaneKeisan(age: Age): FigureQ[] {
+  if (age === 4) return [];
+  const r = makeRng(32000 + age);
+  const out: FigureQ[] = [];
+
+  // ① コイン
+  const coinSets: { v: 1 | 5 | 10; n: number }[][] = [];
+  if (age === 5) {
+    for (let t = 1; t <= 5; t++) for (let o = 1; o <= 9; o++) coinSets.push([{ v: 10, n: t }, { v: 1, n: o }]);
+    for (let t = 1; t <= 5; t++) coinSets.push([{ v: 10, n: t }]);
+  } else {
+    for (let t = 1; t <= 9; t++)
+      for (let f = 0; f <= 1; f++)
+        for (let o = 0; o <= 4; o++) {
+          if (f === 0 && o === 0) continue;
+          const set: { v: 1 | 5 | 10; n: number }[] = [{ v: 10, n: t }];
+          if (f) set.push({ v: 5, n: f });
+          if (o) set.push({ v: 1, n: o });
+          coinSets.push(set);
+        }
+    for (let t = 1; t <= 4; t++) for (let f = 1; f <= 3; f++) coinSets.push([{ v: 10, n: t }, { v: 5, n: f }]);
+  }
+  const seenCoins = new Set<string>();
+  for (const level of [1, 2, 3] as const) {
+    for (const set of coinSets) {
+      const total = coinsTotal(set);
+      if (total > (age === 5 ? 59 : 99)) continue;
+      const key = JSON.stringify(set) + level;
+      if (seenCoins.has(key)) continue;
+      seenCoins.add(key);
+      const parts = set.map((c) => `${c.v}円玉が ${c.n}こで ${c.v * c.n}円`).join("、");
+      const q =
+        level === 1
+          ? "コインは ぜんぶで なん円かな？ うすい すうじは なぞって、わくを うめよう。"
+          : level === 2
+          ? "コインは ぜんぶで なん円かな？ わくの なかに すうじを かこう。"
+          : "コインは ぜんぶで なん円かな？（わくなし。じぶんで かんがえよう）";
+      out.push({
+        genre: GENRE_LABEL.okanekeisan,
+        question: q,
+        answer: String(total),
+        explanation: `${parts}。あわせて ${total}円。`,
+        difficulty: level + set.length * 0.1,
+        figure: { kind: "coins", coins: set, level, help: OKANE_HELP },
+      });
+    }
+  }
+
+  // ② ねだんの たしざん
+  const pairs: [number, number][] = [];
+  const prices: number[] = [];
+  for (let t = 1; t <= 6; t++) for (let o = 0; o <= 9; o++) prices.push(t * 10 + o);
+  for (const a of prices) {
+    for (const b of prices) {
+      const p = priceParts(a, b);
+      if (p.total > 99) continue;
+      if (age === 5 && p.carry) continue;
+      if (age === 6 && !p.carry && r() < 0.6) continue; // 6歳は くりあがりを おおめに
+      if (r() < 0.9) continue; // かずを しぼる
+      pairs.push([a, b]);
+    }
+  }
+  for (const level of [1, 2, 3] as const) {
+    for (const [a, b] of pairs.slice(0, 40)) {
+      const p = priceParts(a, b);
+      const q =
+        level === 1
+          ? `${a}円の ものと ${b}円の ものを かうと、ぜんぶで なん円？ うすい すうじは なぞって、わくを うめよう。`
+          : level === 2
+          ? `${a}円の ものと ${b}円の ものを かうと、ぜんぶで なん円？ わくの なかに すうじを かこう。`
+          : `${a}円の ものと ${b}円の ものを かうと、ぜんぶで なん円？（わくなし。じぶんで かんがえよう）`;
+      out.push({
+        genre: GENRE_LABEL.okanekeisan,
+        question: q,
+        answer: String(p.total),
+        explanation: p.carry
+          ? `一のくらい ${p.o1}＋${p.o2}＝${p.onesSum}（10円玉が 1こ ふえる）。十のくらい ${p.t1}＋${p.t2}＋1＝${p.tens}。あわせて ${p.total}円。`
+          : `一のくらい ${p.o1}＋${p.o2}＝${p.ones}。十のくらい ${p.t1}＋${p.t2}＝${p.tens}。あわせて ${p.total}円。`,
+        difficulty: level + (p.carry ? 0.5 : 0),
+        figure: { kind: "price", a, b, level, help: OKANE_HELP },
+      });
     }
   }
   return shuffle(r, out);
