@@ -76,6 +76,13 @@ export const GENRE_ABILITIES: Record<string, GenreAbilityInfo> = {
     future:
       "「何が同じで、何が違うか」を見極める力は、観察力や、物事を正確に捉える力として、学習全般に活きてきます。",
   },
+  otsuri: {
+    stat: "kazu",
+    growth:
+      "10円玉の数で考える力と、「もっている数－使う数」のひき算の考え方が育ちます。",
+    future:
+      "小学校のひき算や、買い物でのおつりの計算の土台になります。",
+  },
   okanekeisan: {
     stat: "kazu",
     growth:

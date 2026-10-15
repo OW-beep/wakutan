@@ -55,6 +55,7 @@ const GENRES: Record<Age, { key: string; emoji: string; label: string }[]> = {
     { key: "kuriagari", emoji: "🔟", label: "くりあがりたしざん" },
     { key: "kurisagari", emoji: "🔻", label: "くりさがりひきざん" },
     { key: "okanekeisan", emoji: "💴", label: "おかねの けいさん" },
+    { key: "otsuri", emoji: "🛍️", label: "おつりの けいさん" },
     { key: "masu", emoji: "🧮", label: "ますけいさん（1シート＝1ページ）" },
   ],
   "6": [
@@ -80,6 +81,7 @@ const GENRES: Record<Age, { key: string; emoji: string; label: string }[]> = {
     { key: "kuriagari", emoji: "🔟", label: "くりあがりたしざん" },
     { key: "kurisagari", emoji: "🔻", label: "くりさがりひきざん" },
     { key: "okanekeisan", emoji: "💴", label: "おかねの けいさん" },
+    { key: "otsuri", emoji: "🛍️", label: "おつりの けいさん" },
     { key: "masu", emoji: "🧮", label: "ますけいさん（1シート＝1ページ）" },
   ],
 };

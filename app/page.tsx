@@ -471,6 +471,7 @@ export default function Home() {
             { emoji: "🔄", title: "くるくるパズル", desc: "図形をまわすと どうなるかな？", key: "kaiten", ages: [4, 5, 6] },
             { emoji: "🪞", title: "かがみうつし", desc: "かがみに うつしたように かきうつそう", key: "sentaisho", ages: [4, 5, 6] },
             { emoji: "🔭", title: "どこからみる？", desc: "上から・横から見たら どんな形？", key: "mikata", ages: [4, 5, 6] },
+            { emoji: "🛍️", title: "おつりの けいさん", desc: "10円玉の かずで おつりを けいさん", key: "otsuri", ages: [5, 6] },
             { emoji: "💴", title: "おかねの けいさん", desc: "コインの ごうけいと ねだんの たしざん", key: "okane-keisan", ages: [5, 6] },
             { emoji: "🔻", title: "くりさがりひきざん", desc: "10から ひいて けいさん（うすい ほじょつき）", key: "kurisagari", ages: [5, 6] },
             { emoji: "🔟", title: "くりあがりたしざん", desc: "10を つくって けいさん（うすい ほじょつき）", key: "kuriagari", ages: [5, 6] },

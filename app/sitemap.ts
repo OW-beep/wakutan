@@ -74,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/5/kuriagari",
     "/5/kurisagari",
     "/5/okane-keisan",
+    "/5/otsuri",
     "/5/masu/hiki",
 
     "/6/sansu",
@@ -99,6 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/6/kuriagari",
     "/6/kurisagari",
     "/6/okane-keisan",
+    "/6/otsuri",
     "/6/masu/hiki",
 
     "/about",
@@ -107,6 +109,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/kuriagari",
     "/kurisagari",
     "/okane-keisan",
+    "/otsuri",
     "/category/age",
     "/category/parent",
     "/narai-shindan",

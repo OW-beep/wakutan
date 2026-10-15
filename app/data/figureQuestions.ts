@@ -6,6 +6,7 @@
 import {
   CIRCLED,
   borrowParts,
+  changeKind,
   coinsTotal,
   priceParts,
   carryParts,
@@ -37,6 +38,7 @@ export const GENRE_LABEL = {
   kuriagari: "🔟 くりあがりたしざん",
   kurisagari: "🔻 くりさがりひきざん",
   okanekeisan: "💴 おかねの けいさん",
+  otsuri: "🛍️ おつりの けいさん",
   kaiten: "🔄 くるくるパズル",
   sentaisho: "🪞 かがみうつし",
   mikata: "🔭 どこからみる？",
@@ -571,6 +573,55 @@ export function generateOkaneKeisan(age: Age): FigureQ[] {
           : `一のくらい ${p.o1}＋${p.o2}＝${p.ones}。十のくらい ${p.t1}＋${p.t2}＝${p.tens}。あわせて ${p.total}円。`,
         difficulty: level + (p.carry ? 0.5 : 0),
         figure: { kind: "price", a, b, level, help: OKANE_HELP },
+      });
+    }
+  }
+  return shuffle(r, out);
+}
+
+
+// ---------- おつりの けいさん ----------
+
+/**
+ * 5歳：10円ごとの おつり（50円で 30円の もの → 20円）。
+ * 6歳：5歳の もんだいに くわえて、10円で 1〜9円の もの（10−7）と、
+ *      20円で 11〜19円の もの（20−13）。
+ * 4歳は つくらない。
+ */
+export function generateOtsuri(age: Age): FigureQ[] {
+  if (age === 4) return [];
+  const r = makeRng(33000 + age);
+  const pairs: [number, number][] = [];
+  const maxTens = age === 5 ? 9 : 10;
+  for (let p = 3; p <= maxTens; p++) for (let q = 1; q < p; q++) pairs.push([p * 10, q * 10]);
+  if (age === 6) {
+    for (let y = 1; y <= 9; y++) pairs.push([10, y]);
+    for (let x = 1; x <= 9; x++) pairs.push([20, 10 + x]);
+  }
+  const out: FigureQ[] = [];
+  for (const level of [1, 2, 3] as const) {
+    for (const [pay, price] of pairs) {
+      const ans = pay - price;
+      const kind = changeKind(pay, price);
+      const q =
+        level === 1
+          ? `${pay}円で ${price}円の ものを かうと、おつりは なん円？ うすい すうじは なぞって、わくを うめよう。`
+          : level === 2
+          ? `${pay}円で ${price}円の ものを かうと、おつりは なん円？ わくの なかに すうじを かこう。`
+          : `${pay}円で ${price}円の ものを かうと、おつりは なん円？（わくなし。じぶんで かんがえよう）`;
+      const exp =
+        kind === "tens"
+          ? `10円玉 ${pay / 10}こ から ${price / 10}こ つかうと、のこりは ${ans / 10}こ。おつりは ${ans}円。`
+          : kind === "ten"
+          ? `10は ${price}と ${ans}。おつりは ${ans}円。`
+          : `20－10＝10、10－${price - 10}＝${ans}。おつりは ${ans}円。`;
+      out.push({
+        genre: GENRE_LABEL.otsuri,
+        question: q,
+        answer: String(ans),
+        explanation: exp,
+        difficulty: level + (kind === "tens" ? 0 : 0.5),
+        figure: { kind: "change", pay, price, level, help: "/otsuri" },
       });
     }
   }

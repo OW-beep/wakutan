@@ -60,6 +60,7 @@ export default function Page() {
           { href: "/6/kuriagari", emoji: "🔟", label: "くりあがりたしざん" },
           { href: "/6/kurisagari", emoji: "🔻", label: "くりさがりひきざん" },
           { href: "/6/okane-keisan", emoji: "💴", label: "おかねの けいさん" },
+          { href: "/6/otsuri", emoji: "🛍️", label: "おつりの けいさん" },
         ]}
       />
 

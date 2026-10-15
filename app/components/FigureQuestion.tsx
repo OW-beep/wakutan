@@ -1,5 +1,5 @@
 import type { Cell, Figure, Shape } from "../data/figureTypes";
-import { CIRCLED, borrowParts, carryParts, coinsTotal, priceParts, turnText } from "../data/figureTypes";
+import { CIRCLED, borrowParts, carryParts, changeKind, coinsTotal, priceParts, turnText } from "../data/figureTypes";
 import { SolidStack, TopView, SideView } from "./Solids";
 import Link from "next/link";
 
@@ -386,6 +386,91 @@ function PriceCard({ figure }: { figure: Extract<Figure, { kind: "price" }> }) {
   );
 }
 
+// ---------- おつり ----------
+
+function ChangeCard({ figure }: { figure: Extract<Figure, { kind: "change" }> }) {
+  const { pay, price, level, help } = figure;
+  const ans = pay - price;
+  const kind = changeKind(pay, price);
+  const faint = level === 1;
+  const frame = level !== 3;
+
+  return (
+    <div className="wt-write wt-carry wt-money-card mb-3 rounded-2xl border-2 border-gray-300 bg-white p-3">
+      <div className="flex flex-wrap items-center justify-center gap-2 text-lg font-bold">
+        <span>もっている</span>
+        <PriceTag yen={pay} />
+        <span>ねだん</span>
+        <PriceTag yen={price} />
+      </div>
+      <div className="mt-2 flex items-center justify-center gap-2 text-xl font-bold">
+        おつり
+        <CarryBox wide />
+        円
+      </div>
+
+      {frame && kind === "tens" && (
+        <div className="wt-carry-steps mt-3 space-y-2 text-lg font-bold">
+          <div className="flex flex-wrap items-center justify-center gap-1">
+            10円玉
+            <CarryBox value={faint ? pay / 10 : undefined} faint={faint} />
+            こ －
+            <CarryBox value={faint ? price / 10 : undefined} faint={faint} />
+            こ ＝
+            <CarryBox value={faint ? ans / 10 : undefined} faint={faint} />
+            こ
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-1">
+            10円玉
+            <CarryBox value={faint ? ans / 10 : undefined} faint={faint} />
+            こ ＝
+            <CarryBox value={faint ? ans : undefined} faint={faint} wide />
+            円
+          </div>
+        </div>
+      )}
+
+      {frame && kind === "ten" && (
+        <div className="wt-carry-steps mt-3 text-lg font-bold">
+          <div className="flex flex-col items-center">
+            <span className="text-2xl">10</span>
+            <svg width="64" height="18" viewBox="0 0 64 18" aria-hidden="true">
+              <path d="M32 0 L14 17 M32 0 L50 17" stroke={INK} strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            </svg>
+            <div className="flex gap-2">
+              <CarryBox value={faint ? price : undefined} faint={faint} />
+              <CarryBox value={faint ? ans : undefined} faint={faint} />
+            </div>
+          </div>
+          <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
+            10－{price}＝
+            <CarryBox value={faint ? ans : undefined} faint={faint} />
+          </div>
+        </div>
+      )}
+
+      {frame && kind === "twenty" && (
+        <div className="wt-carry-steps mt-3 space-y-2 text-lg font-bold">
+          <div className="flex flex-wrap items-center justify-center gap-1">
+            20－10＝
+            <CarryBox value={faint ? 10 : undefined} faint={faint} wide />
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-1">
+            10－{price - 10}＝
+            <CarryBox value={faint ? ans : undefined} faint={faint} />
+          </div>
+        </div>
+      )}
+
+      <p className="print-hide mt-2 text-center text-xs">
+        <Link href={help} className="text-blue-600 underline hover:text-blue-800">
+          💡 「おつり」のやりかたを みる
+        </Link>
+      </p>
+    </div>
+  );
+}
+
 export default function FigureQuestion({ figure, trace = false }: { figure: Figure; trace?: boolean }) {
   switch (figure.kind) {
     case "rotate-choice":
@@ -472,6 +557,9 @@ export default function FigureQuestion({ figure, trace = false }: { figure: Figu
     case "coins":
       return <CoinsCard figure={figure} />;
 
+    case "change":
+      return <ChangeCard figure={figure} />;
+
     case "price":
       return <PriceCard figure={figure} />;
 
@@ -522,6 +610,19 @@ export function FigureAnswer({ figure }: { figure: Figure }) {
     return (
       <p className="mt-2 text-sm font-bold text-green-700">
         {small}を {x}と {y}に わける → {big}＋{x}＝10、10＋{y}＝{figure.a + figure.b}
+      </p>
+    );
+  }
+  if (figure.kind === "change") {
+    const ans = figure.pay - figure.price;
+    const k = changeKind(figure.pay, figure.price);
+    return (
+      <p className="mt-2 text-sm font-bold text-green-700">
+        {k === "tens"
+          ? `10円玉 ${figure.pay / 10}こ－${figure.price / 10}こ＝${ans / 10}こ → ${ans}円`
+          : k === "ten"
+          ? `10は ${figure.price}と ${ans} → ${ans}円`
+          : `20－10＝10、10－${figure.price - 10}＝${ans} → ${ans}円`}
       </p>
     );
   }

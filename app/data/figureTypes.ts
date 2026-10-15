@@ -49,6 +49,14 @@ export type Figure =
     }
   | { kind: "trace"; items: TraceItem[]; bank?: string[] }
   | {
+      /** おつり：もっている金がく pay から、ねだん price を ひく */
+      kind: "change";
+      pay: number;
+      price: number;
+      level: 1 | 2 | 3;
+      help: string;
+    }
+  | {
       /** おかねの けいさん①：コインの ごうけい（しゅるいごとに かぞえて たす） */
       kind: "coins";
       coins: { v: 1 | 5 | 10; n: number }[];
@@ -179,4 +187,16 @@ export function priceParts(a: number, b: number) {
 
 export function coinsTotal(coins: { v: number; n: number }[]): number {
   return coins.reduce((s, c) => s + c.v * c.n, 0);
+}
+
+/**
+ * おつりの 考えかた：
+ *  tens  … pay も price も 10円ごと（50円 − 30円）：10円玉の こすうで かんがえる
+ *  ten   … pay が 10円（10円 − 7円）：10を 7と ○に わける
+ *  twenty… pay が 20円で price が 11〜19円（20円 − 13円）：20 − 10 = 10、10 − 3
+ */
+export function changeKind(pay: number, price: number): "tens" | "ten" | "twenty" {
+  if (pay === 10) return "ten";
+  if (pay === 20 && price % 10 !== 0) return "twenty";
+  return "tens";
 }
