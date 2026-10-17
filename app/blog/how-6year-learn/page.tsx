@@ -26,7 +26,7 @@ export default async function Page() {
         description="6歳・年長さんの勉強・学び方のコツを解説。小学校入学前に育てたい力や、おすすめの家庭学習のポイントを紹介します。"
         slug="how-6year-learn"
         datePublished="2026-03-01"
-        dateModified="2026-09-25"
+        dateModified="2026-10-17"
       />
 
 
@@ -39,7 +39,7 @@ export default async function Page() {
           </div>
 
           <h1 className="text-4xl font-extrabold text-purple-700 mb-4">
-            6歳（年長）の学び方
+            6歳（年長）の学び方・勉強のコツ
           </h1>
 
           <p className="text-lg leading-8">

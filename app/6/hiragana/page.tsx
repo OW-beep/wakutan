@@ -82,6 +82,14 @@ export default function Page() {
             👨‍👩‍👧 保護者の方へ
           </h2>
 
+          <p className="leading-8 mt-3 text-sm bg-yellow-50 rounded-xl p-3">
+            ひらがなが「読めない」「書けない」と心配なときは、
+            <Link href="/blog/hiragana-worry-5year" className="text-orange-600 font-bold hover:underline">
+              ひらがなの習得に関する調査と、関わり方のヒント
+            </Link>
+            もあわせてご覧ください。
+          </p>
+
           <p className="leading-8">
             6歳は読み書きへの自信がつく時期です。間違いを指摘しすぎず、「読めたね」「書けたね」と成功体験を積み重ねましょう。
           </p>

@@ -26,7 +26,7 @@ export default async function Page() {
         description="小学校入学に必要なものは何？入学前に確認しておきたい準備を、学用品一覧・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。"
         slug="school-checklist"
         datePublished="2026-06-01"
-        dateModified="2026-09-26"
+        dateModified="2026-10-17"
       />
 
 
@@ -37,7 +37,7 @@ export default async function Page() {
           <div className="text-5xl mb-3">🎒</div>
 
           <h1 className="text-4xl font-extrabold text-orange-700 mb-3">
-            小学校入学準備チェックリスト
+            小学校入学に必要なものは？準備チェックリスト・学用品一覧
           </h1>
 
           <p className="text-lg text-gray-700">

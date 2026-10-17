@@ -25,7 +25,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
         description="4歳の勉強はどこまで進めればいい？遊びを通して学ぶ関わり方、やる気を引き出すコツ、数や論理の練習法、1日の学習時間の目安、よくある質問をまとめました。"
         slug="how-4year-learn"
         datePublished="2026-03-01"
-        dateModified="2026-10-09"
+        dateModified="2026-10-17"
       />
 
 
@@ -39,7 +39,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
       </div>
 
       <h1 className="text-4xl font-extrabold text-orange-700 mb-4">
-        4歳の学び方
+        4歳の勉強はどこまで？教え方とやる気を引き出すコツ
       </h1>
 
       <p className="text-lg leading-8">

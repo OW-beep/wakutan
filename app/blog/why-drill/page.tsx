@@ -8,7 +8,7 @@ import { searchRakutenItems } from "@/lib/rakuten";
 import RakutenProducts from "@/app/components/RakutenProducts";
 
 export const metadata = {
-  title: "ドリル学習とは？幼児期に伸びる3つの力",
+  title: "ドリル学習とは？幼児期に育つ力と、遊びとの両立",
   description:
     "ドリル学習とは何か、幼児期のドリルが考える力・集中力・学習習慣につながる理由を解説。遊びとの両立や、間違いを学びに変える考え方も紹介します。",
   alternates: {
@@ -22,11 +22,11 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
       <ArticleSchema
-        title="ドリル学習とは？幼児期に伸びる3つの力"
+        title="ドリル学習とは？幼児期に育つ力と、遊びとの両立"
         description="ドリル学習とは何か、幼児期のドリルが考える力・集中力・学習習慣につながる理由を解説。遊びとの両立や、間違いを学びに変える考え方も紹介します。"
         slug="why-drill"
         datePublished="2026-03-01"
-        dateModified="2026-09-25"
+        dateModified="2026-10-17"
       />
 
 
@@ -39,7 +39,7 @@ export default async function Page() {
           </div>
 
           <h1 className="text-4xl font-extrabold text-orange-700 mb-3">
-            なぜドリル学習が効果的？
+            ドリル学習とは？幼児期に育つ力と、遊びとの両立
           </h1>
 
           <p className="text-lg text-gray-700">

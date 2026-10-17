@@ -82,6 +82,14 @@ export default function Page() {
             👨‍👩‍👧 保護者の方へ
           </h2>
 
+          <p className="leading-8 mt-3 text-sm bg-yellow-50 rounded-xl p-3">
+            ひらがなが「読めない」「書けない」と心配なときは、
+            <Link href="/blog/hiragana-worry-5year" className="text-orange-600 font-bold hover:underline">
+              ひらがなの習得に関する調査と、関わり方のヒント
+            </Link>
+            もあわせてご覧ください。
+          </p>
+
           <p className="leading-8">
             5歳はひらがなの読み書きが伸びる時期です。焦らず、絵本や生活の中の文字にも一緒に注目してみましょう。
           </p>

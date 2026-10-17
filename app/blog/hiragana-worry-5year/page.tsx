@@ -26,7 +26,7 @@ export default async function Page() {
         description="5歳でひらがなが読めない・書けないと不安なときに、「読めない」と「書けない」を分けて考えるコツと、遊びの中で無理なく文字に触れる方法を紹介します。"
         slug="hiragana-worry-5year"
         datePublished="2026-06-01"
-        dateModified="2026-09-18"
+        dateModified="2026-10-17"
       />
 
 
@@ -37,7 +37,7 @@ export default async function Page() {
           <div className="text-5xl mb-3">🔤</div>
 
           <h1 className="text-4xl font-extrabold text-orange-700 mb-3">
-            5歳でひらがなが読めない・書けない…親の不安解消法
+            5歳でひらがなが書けない・読めないときの関わり方
           </h1>
 
           <p className="text-lg text-gray-700">
@@ -122,6 +122,41 @@ export default async function Page() {
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          調査からわかること：ひらがなの読み書きの個人差
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「年長なのにまだ読めない…」と心配になったときのために、幼児のひらがなの習得を調べた調査を紹介します。数字は、論文に書かれている範囲のものだけです。
+        </p>
+
+        <div className="bg-amber-50 border border-amber-300 rounded-2xl p-5 my-6">
+          <p className="font-bold text-lg mb-1">📚 4〜6歳のひらがな音読の調査（東京学芸大学紀要 2015）</p>
+          <p className="text-sm text-gray-600 mb-3">
+            出典：歌代ら（2015）「健常幼児のひらがな獲得に関する研究」東京学芸大学紀要 総合教育科学系Ⅱ 第66集
+          </p>
+          <ul className="list-disc ml-6 space-y-1 leading-7 mb-3">
+            <li>ひらがなの音読の結果から、「1文字も読めない（A水準）」から「1文字の音読と特殊音節の音読がすべてできる（H水準）」までの水準に分けて、幼児の習得状況を調べています。</li>
+            <li>1文字も読めないA水準は、4歳児2名（3.3%）だけでした。多くの子どもが4歳の時点で、ひらがなを読み始めていました。</li>
+            <li>年齢が上がるにつれて高い水準の子が増え、6歳児では、ほとんどの子が1文字ずつならほぼすべてのひらがなを音読できました。</li>
+            <li>4歳児は、A水準からH水準まで幅広く分布していて、個人差が大きいと述べられています。著者らは、子どもの興味・関心、保護者の教育への関心、園や生活環境など、さまざまな要因が関連していると推測しています。</li>
+            <li>清音や濁音・半濁音に比べて、特殊音節（「きゃ」「っ」など）の習得は難しい傾向があると、著者らは述べています。</li>
+          </ul>
+          <p className="font-bold mb-1">この調査の見かた</p>
+          <ul className="list-disc ml-6 space-y-1 leading-7">
+            <li>一部の幼児を対象にした調査で、すべての子どもに当てはまる基準を示すものではありません。（対象の詳しい内容は、元の論文でご確認ください。）</li>
+            <li>調べているのは「読み」です。「書き」の習得は、読みと同じ速さで進むとは限りません。</li>
+          </ul>
+        </div>
+
+        <p className="leading-8 mb-4">
+          また、国立国語研究所（1972）の調査は、仮名を21〜59字読める幼児は単語を読んで理解し始め、60〜71字読める幼児は、自分で、あるいは保護者の助けを借りて、絵本や簡単な文章の本を読むとしています（宮本直美の紀要論文による紹介）。
+        </p>
+
+        <p className="leading-8 mb-4">
+          書くときの「左右が反対の文字（鏡文字）」についても、同じ国立国語研究所（1972）の調査で、幼児の書き誤りの中で最も多く、全誤りの27.4%を占めたと紹介されています（愛媛大学教育学部紀要 1992）。鏡文字は、文字の全体の枠組みをとらえて書けるようになる4〜6歳ごろに出やすいとされています。左右が反対の文字が出ても、珍しいことではありません。
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           比べすぎないことが一番大切
         </h2>
 
@@ -152,7 +187,7 @@ export default async function Page() {
         <div className="space-y-4 mb-6">
           <div>
             <p className="font-bold">Q. 5歳でひらがなが書けるのが普通ですか？</p>
-            <p className="leading-7 text-gray-700">A. 「全て書ける」状態が普通というわけではありません。読める・書けるの習得スピードには個人差が大きく、5歳の時点で自分の名前程度しか書けなくても心配しすぎる段階ではないケースがほとんどです。</p>
+            <p className="leading-7 text-gray-700">A. 「全て書ける」状態が普通というわけではありません。上で紹介した調査でも、4歳児ではひらがなの習得状況に大きな個人差がありました。読める・書けるの習得スピードは一人ひとり違うので、まずはお子さん自身の変化を見てあげてください。気になる状態が続くときは、園の先生などに相談してみましょう。</p>
           </div>
           <div>
             <p className="font-bold">Q. 何歳までに読めるようになれば安心ですか？</p>
@@ -216,6 +251,30 @@ export default async function Page() {
         </div>
 
         <RakutenProducts items={products} />
+        <div className="bg-white rounded-2xl p-5 text-sm text-gray-700 my-8">
+          <p className="font-bold mb-1">参考資料</p>
+          <ul className="list-disc ml-6 space-y-1 break-all">
+            <li>
+              歌代ら（2015）「健常幼児のひらがな獲得に関する研究」東京学芸大学紀要 総合教育科学系Ⅱ 第66集：
+              <a className="text-blue-600 underline ml-1" href="https://u-gakugei.repo.nii.ac.jp/record/32478/files/18804306_66_55.pdf" target="_blank" rel="noopener noreferrer">
+                https://u-gakugei.repo.nii.ac.jp/record/32478/files/18804306_66_55.pdf
+              </a>
+            </li>
+            <li>
+              国立国語研究所（1972）の調査の紹介（宮本直美 紀要論文）：
+              <a className="text-blue-600 underline ml-1" href="https://jonan.repo.nii.ac.jp/record/1001/files/%E7%B4%80%E8%A6%81%E7%AC%AC15%E5%8F%B7_02_%E5%AE%AE%E6%9C%AC%E7%9B%B4%E7%BE%8E.pdf" target="_blank" rel="noopener noreferrer">
+                リポジトリで読む
+              </a>
+            </li>
+            <li>
+              愛媛大学教育学部紀要 39(1)（1992）の鏡映文字に関する記述：
+              <a className="text-blue-600 underline ml-1" href="https://ehime-u.repo.nii.ac.jp/record/1733/files/AN00024764_1992_39_1-103.pdf" target="_blank" rel="noopener noreferrer">
+                https://ehime-u.repo.nii.ac.jp/record/1733/files/AN00024764_1992_39_1-103.pdf
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/hiragana-worry-5year" title="5歳でひらがなが読めない・書けない…親の不安解消法" />
         <RelatedArticles currentSlug="hiragana-worry-5year" />

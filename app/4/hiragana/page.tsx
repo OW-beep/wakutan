@@ -83,6 +83,14 @@ export default function Page() {
             👨‍👩‍👧 保護者の方へ
           </h2>
 
+          <p className="leading-8 mt-3 text-sm bg-yellow-50 rounded-xl p-3">
+            ひらがなが「読めない」「書けない」と心配なときは、
+            <Link href="/blog/hiragana-worry-5year" className="text-orange-600 font-bold hover:underline">
+              ひらがなの習得に関する調査と、関わり方のヒント
+            </Link>
+            もあわせてご覧ください。
+          </p>
+
           <p className="leading-8">
             ひらがなへの興味は、子どもによって芽生えるタイミングが大きく異なります。読めなくても焦らず、絵本や身の回りの文字に触れる機会を増やしてあげましょう。
           </p>
