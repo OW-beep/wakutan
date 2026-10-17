@@ -26,7 +26,7 @@ export default async function Page() {
         description="4歳児がドリルを嫌がるときの理由と対処法を解説。この年齢ならではの発達的な背景と、無理なく取り組める工夫を紹介します。"
         slug="4year-drill-refusal"
         datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        dateModified="2026-10-17"
       />
 
 
@@ -138,6 +138,108 @@ export default async function Page() {
           </p>
         </div>
 
+        <h2 className="text-2xl font-bold mt-10 mb-2 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          🏠 わが家の体験：「やりなさい」をやめた日々
+        </h2>
+        <p className="text-sm text-gray-500 mb-6">
+          わくたん運営者（上の子は5歳、下に2歳と0歳の子がいます）の実際の体験です。4歳の時期と近い年齢での出来事として紹介します。
+        </p>
+        <h3 className="text-xl font-bold mt-8 mb-3 text-emerald-700">
+          ① 夕食前に誘うと、途中で乗り気でなくなった
+        </h3>
+        <p className="leading-8 mb-4">
+          上の子が5歳になった頃、ひらがなや迷路などのドリルに取り組んでいたときのことです。園から帰ってきて夕食までの時間に少しやってみようと誘うと、最初は取り組んでいても、途中から乗り気でなくなることがありました。
+        </p>
+        <p className="leading-8 mb-4">
+          園で過ごした後なので、本人も疲れていたのかもしれません。親としては「家で少しだけならできるかな」と思っていたのですが、こちらが考えているタイミングと、子どもがやりたいタイミングは違うのだと感じました。
+        </p>
+        <h3 className="text-xl font-bold mt-8 mb-3 text-emerald-700">
+          ② すぐに取りかからない、別の遊びを始める
+        </h3>
+        <p className="leading-8 mb-4">
+          ドリルを出しても、すぐに取りかからなかったり、別の遊びを始めようとしたりすることがありました。親としては「これくらいならすぐ終わるのに」と思ってしまいますが、子どもにとっては、遊びを中断して机に向かうこと自体が嫌だったのかもしれません。
+        </p>
+        <p className="leading-8 mb-4">
+          そこで、すぐに「やりなさい」と言うのではなく、まずは本人の様子を見るようにしました。
+        </p>
+        <h3 className="text-xl font-bold mt-8 mb-3 text-emerald-700">
+          ③ 「あと1枚だけだから」が押し問答になった
+        </h3>
+        <div className="bg-orange-50 rounded-2xl p-5 mb-4 leading-8">
+          <p>
+            <span className="font-bold text-orange-700">親：</span>
+            「あと1枚だけだから、最後までやってみよう」
+          </p>
+        </div>
+        <p className="leading-8 mb-4">
+          以前はこう声をかけていました。せっかく始めたのだから最後まで終わらせたい、という気持ちがあったんです。でも、子どもはなかなか取りかからず、こちらも何度も声をかける。子どもは嫌になり、親もだんだん焦ってくる。そんなやり取りになることがありました。
+        </p>
+        <p className="leading-8 mb-4">
+          これでは、問題を解くことよりも、親子で押し問答をする時間の方が長くなってしまいます。そこで、最後まで終わらせることにこだわらず、集中力が切れてきたら区切りをつけるようにしました。
+        </p>
+        <h3 className="text-xl font-bold mt-8 mb-3 text-emerald-700">
+          ④ 「今日はもうやめようか」と言えるようになって
+        </h3>
+        <div className="bg-orange-50 rounded-2xl p-5 mb-4 leading-8">
+          <p>
+            <span className="font-bold text-orange-700">親：</span>
+            「今日はもうやめようか」
+          </p>
+        </div>
+        <p className="leading-8 mb-4">
+          こう伝えるようにしてからは、無理に続けさせなくてもいいのだと思えるようになりました。親としては、途中でやめて大丈夫かな、という気持ちもあります。ただ、嫌がっているのに続けさせて、ドリルそのものが嫌いになってしまう方が心配でした。全部終わらせることよりも、「また今度やってみよう」と思える状態で終えることを大切にしたいと考えるようになりました。
+        </p>
+        <h3 className="text-xl font-bold mt-8 mb-3 text-emerald-700">
+          ⑤ 別の遊びのあとに、1個だけ聞いてみる
+        </h3>
+        <p className="leading-8 mb-4">
+          嫌がったときは、ブロックやパズルなど、本人が興味を持っている遊びに切り替えることがあります。しばらく遊んで気持ちが落ち着いたところで、こう聞いてみる方法です。
+        </p>
+        <div className="bg-orange-50 rounded-2xl p-5 mb-4 leading-8">
+          <p>
+            <span className="font-bold text-orange-700">親：</span>
+            「迷路を1個だけやってみる？」
+          </p>
+        </div>
+        <p className="leading-8 mb-4">
+          ポイントは、必ずドリルに戻らせようとしないことです。本人が「やってみる」と言えば一緒に取り組みますし、乗り気でなければ、その日は遊びのまま終わることもあります。1問だけでも取り組めたらそれで十分。毎回予定どおりに進めることよりも、本人の気持ちを見ながら進めるようにしています。
+        </p>
+        <h3 className="text-xl font-bold mt-8 mb-3 text-emerald-700">
+          ⑥ 戻ってこなかった日
+        </h3>
+        <p className="leading-8 mb-4">
+          別の遊びを始めたあと、そのままドリルに戻ってこない日ももちろんあります。そういう日は、何度も誘い直すことはしません。0歳と2歳の下の子もいるので、こちらが思い描いたとおりに時間を使えないことも多いです。毎日必ずやろうとすると、親も子どもも苦しくなってしまいます。
+        </p>
+        <p className="leading-8 mb-4">
+          できなかった日はそのまま終わりにして、翌日、また余裕があるときに誘えばいい。そう考えるようになってから、親自身の気持ちも少し楽になりました。
+        </p>
+        <h3 className="text-xl font-bold mt-8 mb-3 text-emerald-700">
+          ⑦ きょうだいがいる中でのドリル
+        </h3>
+        <p className="leading-8 mb-4">
+          下に2歳と0歳の子がいると、上の子と落ち着いてドリルをする時間を確保するのは簡単ではありません。下の子が泣いたり、手伝いを必要としたりして、途中で中断することもあります。上の子からすると、せっかく取り組んでいたのに中断されたり、親が下の子の方へ行ってしまったりすることもあるわけです。
+        </p>
+        <p className="leading-8 mb-4">
+          そのため、ドリルを嫌がったときに、単純に「勉強したくないんだ」と決めつけないようにしています。疲れているのか、遊びたいのか、それとも親に構ってほしいのか。理由を一つに決めず、そのときの様子を見ます。長い時間を確保できなくても、1問だけ一緒に考えたり、短い時間でも上の子の話を聞いたりすることを大切にしています。
+        </p>
+        <h3 className="text-xl font-bold mt-8 mb-3 text-emerald-700">
+          ⑧ うまくいかなかったこと
+        </h3>
+        <p className="leading-8 mb-4">
+          うまくいかなかったのは、「あと少しだから」「これだけやれば終わりだから」と、何とか最後まで進めようとしたことです。親からすると、残りが少なければ頑張れるだろうと思います。でも、子どもがすでに疲れていると、残り1問でも負担になることがあります。
+        </p>
+        <p className="leading-8 mb-4">
+          また、問題数を増やせばその分だけ力がつくだろうと考え、10問から20問に増やしたこともありましたが、量が多いと後半は集中力が落ちてしまいました。今は、あらかじめ決めた量を終えることよりも、その日の様子に合わせて量を調整することを優先しています。
+        </p>
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+          <p className="font-bold mb-2">
+            💬 同じ悩みを持つ保護者の方へ
+          </p>
+          <p className="leading-8">
+            子どもがドリルを嫌がる日は、無理に最後までやらせなくてもいいと思います。1問で終わる日や、何もしない日があっても、また始められれば大丈夫です。
+          </p>
+        </div>
+
         <div className="bg-green-50 p-6 rounded-2xl border mt-10">
 
           <h3 className="font-bold text-xl mb-3">
@@ -154,7 +256,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月　/　最終更新日：2026年10月
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
