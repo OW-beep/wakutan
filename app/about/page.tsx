@@ -55,7 +55,7 @@ export default function Page() {
         {/* サイトを作った想い */}
         <div className="bg-white rounded-3xl shadow p-8 mt-8">
 
-          <h2 className="text-2xl font-bold mb-4">💭 わくたんを作った理由</h2>
+          <h2 id="reason" className="text-2xl font-bold mb-4">💭 わくたんを作った理由</h2>
 
           <p className="leading-8 mb-4">
             市販の幼児向けドリルは、1冊が終わると新しいものを買い足す必要があり、
@@ -240,7 +240,7 @@ export default function Page() {
         {/* 運営者情報（AdSense重要） */}
         <div className="bg-white rounded-3xl shadow p-8 mt-8">
 
-          <h2 className="text-2xl font-bold mb-4">運営者情報</h2>
+          <h2 id="operator" className="text-2xl font-bold mb-4">運営者情報</h2>
 
           <p className="mb-4">
             本サイト「わくたん」は、個人で運営しています。

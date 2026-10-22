@@ -361,127 +361,53 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
         </section>
 
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
-          <p className="font-bold mb-2">
-            🏠 わくたん運営者のわが家での工夫
+          <p className="font-bold mb-2 text-lg">
+            🏠 わくたん運営者のわが家の場面から（4歳半のころ）
           </p>
-          <p className="leading-7">
-            わが家の4歳児は、集中できる時間はかなり短く、体感としては10分前後が一つの目安でした。20〜30分続けさせようとして後半に集中が切れてしまった失敗から、「まだできるかもしれないけど、ここで終わり」というくらいで切り上げるようにしたところ、「またやりたい」という気持ちにつながりました。ひらがなや数字も、「4歳になったから教える」というより、「これ何て読むの？」「これ何？」と本人が聞いてくるようになったタイミングを目安にしています。教える年齢を決めるより、本人の興味のサインを見る方が、わが家にはうまくいきました。
-          </p>
+          <p className="leading-8 mb-2">わが家の4歳児は、集中できる時間はかなり短く、体感としては5〜10分が一つの目安でした。ひらがなや数字も、「4歳になったから教える」というより、「これ何て読むの？」「これ何？」と本人が聞いてくるようになったタイミングを目安にしています。教える年齢を決めるより、本人の興味のサインを見る方が、わが家にはうまくいきました。そう考えるようになった場面を、順に紹介します。</p>
+          <h3 className="font-bold text-lg mt-6 mb-2 text-emerald-900">① 夕食前に、20〜30分続けてしまった日</h3>
+          <p className="leading-8 mb-2">4歳半ごろ、夕食前の17時ごろに、ひらがなや数字のドリルをやっていました。最初は楽しそうに取り組んでいたので、もう少しできそうだと思い、そのまま20〜30分ほど続けました。ところが、途中から手が止まるようになり、問題を見てもなかなか答えなくなりました。</p>
+          <div className="space-y-1 my-3 ml-2 border-l-4 border-emerald-300 pl-3">
+            <p className="leading-7"><span className="font-bold text-emerald-800">子：</span>（鉛筆を置いて）「もうやりたくない」</p>
+            <p className="leading-7"><span className="font-bold text-emerald-800">私：</span>「あと少しだから、もうちょっと頑張ろう」</p>
+          </div>
+          <p className="leading-8 mb-2">それでも子どもは問題を見ようとせず、椅子から降りてしまいました。</p>
+          <div className="space-y-1 my-3 ml-2 border-l-4 border-emerald-300 pl-3">
+            <p className="leading-7"><span className="font-bold text-emerald-800">私：</span>「疲れちゃったかな。今日はここまでにしようか」</p>
+          </div>
+          <p className="leading-8 mb-2">親としては、せっかく始めたのだから最後までやってほしいと思っていました。でも今振り返ると、少し長く続けさせすぎていました。最後までやり切ることばかり考えていましたが、嫌になってしまうまで続ける必要はなかったのだと感じました。</p>
+          <h3 className="font-bold text-lg mt-6 mb-2 text-emerald-900">② 5〜10分で切り上げた日</h3>
+          <p className="leading-8 mb-2">それからは、ドリルを始めるときに、最初から長時間取り組むことを目標にしないようにしました。ある日は、5〜10分ほど取り組んだところで、まだ問題が残っていても終わりにしました。</p>
+          <div className="space-y-1 my-3 ml-2 border-l-4 border-emerald-300 pl-3">
+            <p className="leading-7"><span className="font-bold text-emerald-800">私：</span>「まだできそうだけど、今日はここまでにしようか」</p>
+          </div>
+          <p className="leading-8 mb-2">子どもは少し不思議そうな顔をしていましたが、大きく嫌がることなく片づけられました。無理に続けさせることはしませんでした。</p>
+          <p className="leading-8 mb-2">以前は、やる気があるなら最後までやらせたほうがいいと思っていました。でも、長く続けた結果、次の日に嫌がることもあったので、少し物足りないくらいで終わることも大切なのかなと考えるようになりました。全部終わらせることよりも、「ドリルって嫌なものじゃないな」と感じてもらうことを優先したかったからです。</p>
+          <h3 className="font-bold text-lg mt-6 mb-2 text-emerald-900">③ 別の日、子どもから聞かれた</h3>
+          <p className="leading-8 mb-2">短時間で終えるようにしてから、別の日に、子どもからこう聞かれました。</p>
+          <div className="space-y-1 my-3 ml-2 border-l-4 border-emerald-300 pl-3">
+            <p className="leading-7"><span className="font-bold text-emerald-800">子：</span>「今日もドリルやる？」</p>
+          </div>
+          <p className="leading-8 mb-2">以前は、始めたら最後までやらせなければと思っていました。終わり方を変えることで、勉強に対する抵抗感を減らせるのではないかと感じました。毎日必ず取り組むことにこだわらず、子どもが興味を示したときに始められるようにしています。</p>
+          <h3 className="font-bold text-lg mt-6 mb-2 text-emerald-900">④ 買い物中に</h3>
+          <p className="leading-8 mb-2">買い物中に、お店の看板の文字を見て、聞かれました。</p>
+          <div className="space-y-1 my-3 ml-2 border-l-4 border-emerald-300 pl-3">
+            <p className="leading-7"><span className="font-bold text-emerald-800">子：</span>「これ何て読むの？」</p>
+            <p className="leading-7"><span className="font-bold text-emerald-800">私：</span>「そう読むんだよ」</p>
+          </div>
+          <p className="leading-8 mb-2">聞かれた文字を、そのまま教えるようにしました。興味を持ったときに答えを知ることも、文字を覚えるきっかけになると思います。ドリルの時間だけが勉強ではなく、普段の生活の中で文字や数字に触れることも大切にしています。</p>
+          <h3 className="font-bold text-lg mt-6 mb-2 text-emerald-900">うまくいかなかったこと</h3>
+          <ul className="list-disc ml-6 space-y-1 leading-7 mb-2">
+            <li>問題を最後まで終わらせることを優先してしまいました。子どもが疲れているのに「あと少し」と繰り返すと、勉強そのものが嫌になってしまうことがあります。</li>
+            <li>ほかの子と比べて「もうできるはず」と考えることも、親子ともに負担になると思いました。</li>
+          </ul>
+          <p className="leading-8 mb-2">今は、正解した数や進んだページ数だけでなく、自分で考えたことや、昨日できなかったことに取り組めたことも認めるようにしています。</p>
+          <h3 className="font-bold text-lg mt-6 mb-2 text-emerald-900">同じ悩みの保護者の方へ</h3>
+          <p className="leading-8 mb-2">4歳の勉強は、たくさん進めることよりも、「またやってみよう」と思える終わり方が大切だと感じます。短い時間でも、子どもが楽しく考えられたなら、それを十分な学びとして受け止めてよいと思います。</p>
         </div>
 
-        <section className="bg-white rounded-3xl shadow p-8 mb-8">
-
-          <h2 className="text-3xl font-bold mb-2 text-emerald-700">
-            🏠 わが家の体験：続けさせすぎて失敗した日から
-          </h2>
-          <p className="text-sm text-gray-500 mb-6">
-            わくたん運営者（上の子は5歳）の実際の体験です。4歳の時期と近い年齢での出来事として紹介します。
-          </p>
-
-          <h3 className="text-xl font-bold text-emerald-700 mb-3">
-            ① 20分くらい続けさせた日
-          </h3>
-          <p className="leading-8 mb-4">
-            上の子が5歳になった頃、ドリルに取り組んでいたときのことです。最初は10問くらいならできるので、「もう少し頑張れるかな」と思い、そのまま続けてもらおうとしました。時間にすると20分くらいだったと思います。
-          </p>
-          <p className="leading-8 mb-4">
-            ただ、途中から明らかに集中力が落ちて、問題をよく見ずに答えたり、こちらが声をかけても気が散ったりするようになりました。親としては「あと少しだから終わらせたい」と思ってしまうのですが、子どもにとっては、もう十分に頑張った後だったのかもしれません。
-          </p>
-          <p className="leading-8 mb-8">
-            このとき、長く取り組ませること自体が目的になっていないかな、と考えるようになりました。
-          </p>
-
-          <h3 className="text-xl font-bold text-emerald-700 mb-3">
-            ② 「あと少しだから」が逆効果だったとき
-          </h3>
-          <div className="bg-orange-50 rounded-2xl p-5 mb-4 leading-8">
-            <p>
-              <span className="font-bold text-orange-700">親：</span>
-              「あと少しだからやってみよう」
-            </p>
-            <p>
-              <span className="font-bold text-orange-700">子：</span>
-              （問題を進めるのを嫌がるようになった）
-            </p>
-          </div>
-          <p className="leading-8 mb-4">
-            最初はこう声をかけていましたが、それで集中力が戻るわけではありませんでした。むしろ、親が続けさせようとするほど、ドリルそのものが嫌になってしまいそうだと感じました。
-          </p>
-          <p className="leading-8 mb-8">
-            そこで、最後まで全部終わらせることにこだわるのをやめ、「今日はここまでにしようか」という考え方に変えました。今振り返ると、子どもが嫌がっているのに、親の側が決めたゴールまで進めようとしていたことが問題だったのだと思います。
-          </p>
-
-          <h3 className="text-xl font-bold text-emerald-700 mb-3">
-            ③ まだできそうでも、終わりにする
-          </h3>
-          <p className="leading-8 mb-4">
-            それからは、まだできそうに見えても、集中力が落ちてきたら終わりにすることを意識しています。たとえば10問用意していても、5問くらいで疲れている様子ならそこで終わりです。
-          </p>
-          <div className="bg-orange-50 rounded-2xl p-5 mb-4 leading-8">
-            <p>
-              <span className="font-bold text-orange-700">声かけ：</span>
-              「全部終わらなかったね」ではなく、「今日はここまでできたね」
-            </p>
-          </div>
-          <p className="leading-8 mb-8">
-            毎回きっちり決めた量を終わらせるよりも、子どもが「これならできそう」と思えるところで終わる方が、家庭学習を続けやすいと感じています。
-          </p>
-
-          <h3 className="text-xl font-bold text-emerald-700 mb-3">
-            ④ 次の日、数日後の様子
-          </h3>
-          <p className="leading-8 mb-4">
-            毎回、翌日に自分から「ドリルをやりたい」と言うわけではありません。ただ、無理に最後までやらせず短い時間で終えるようにしてからは、ドリルに誘ったときに取り組み始めるまでの抵抗が少なくなったように感じます。
-          </p>
-          <p className="leading-8 mb-4">
-            忙しい日は1問だけにすることもありますし、数日できないこともあります。それでも、間が空いたからといって、次の日にまとめて取り戻そうとはしません。また1問から始めればいい、というくらいの気持ちでいます。
-          </p>
-          <p className="leading-8 mb-8">
-            家庭学習は、毎日必ず完璧に続けることよりも、休んだ後にまた戻ってこられることが大事なのかなと思っています。
-          </p>
-
-          <h3 className="text-xl font-bold text-emerald-700 mb-3">
-            ⑤ 文字に興味が出てきたとき
-          </h3>
-          <p className="leading-8 mb-4">
-            ひらがなは、最初から机に向かって覚えさせようとしたわけではありません。子どもが自分の名前や、絵本に出てくる文字に興味を持つようになってから、少しずつ一緒に見るようになりました。
-          </p>
-          <div className="bg-orange-50 rounded-2xl p-5 mb-4 leading-8">
-            <p>
-              <span className="font-bold text-orange-700">親：</span>
-              「これ、前にも見たね」
-            </p>
-          </div>
-          <p className="leading-8 mb-8">
-            絵本を読んでいて知っている文字を見つけたらこんなふうに話したり、自分の名前と同じ文字を探したりします。文字を聞かれたときも、一度にすべてを覚えさせようとはせず、その場で分かる範囲を一緒に確認するようにしています。勉強の時間以外にも学ぶきっかけはあるのだと感じました。
-          </p>
-
-          <h3 className="text-xl font-bold text-emerald-700 mb-3">
-            ⑥ うまくいかなかったこと
-          </h3>
-          <p className="leading-8 mb-4">
-            一番うまくいかなかったのは、取り組める量を増やせば、その分だけ学習も進むだろうと考えたことです。10問くらいならできるから今日は20問にしてみよう、と思ったこともありました。でも量が増えると「まだあるの？」という雰囲気になり、後半は問題を丁寧に考えなくなってしまいます。
-          </p>
-          <p className="leading-8 mb-4">
-            そこで、問題数を増やすよりも、その日の様子に合わせて量を調整することを優先するようになりました。
-          </p>
-          <p className="leading-8 mb-8">
-            ごほうび作戦も、最初はうまくいっているように見えましたが、次第に「あと何日でごほうび？」ということばかり気にするようになりました。そのため、ごほうびを毎回の学習と直接結びつけるのをやめ、頑張ったときに一緒に喜んだり、たまに特別な遊びをしたりする形に変えました。
-          </p>
-
-          <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl">
-            <p className="font-bold mb-2">
-              💬 同じ悩みを持つ保護者の方へ
-            </p>
-            <p className="leading-8">
-              家庭学習は、毎日たくさんやらせることよりも、子どもが「これならできそう」と思える量で続けることが大切だと感じています。できない日があっても、休んだ日があっても大丈夫です。まずは1問、5分からでも、また始められれば十分だと思います。
-            </p>
-          </div>
-
-        </section>
-
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年3月　/　最終更新日：2026年10月</p>
+          <p>公開日：2026年3月　/　最終更新日：2026年9月</p>
           <p className="mt-1">
             本記事は、わくたん運営者が4歳向けの問題を作りながら日々感じていることをもとにまとめています。
           </p>

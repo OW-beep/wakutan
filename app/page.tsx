@@ -17,6 +17,24 @@ export default function Home() {
   return (
     <main>
 
+      {/* 運営者より：トップの目立つ位置に、運営者の情報への入口を置く */}
+      <aside aria-label="運営者より" className="print-hide max-w-6xl mx-auto px-6 pt-4">
+        <p className="rounded-2xl bg-[#12243b] px-5 py-3 text-sm leading-7 text-slate-300">
+          <span className="font-bold text-slate-100">運営者より：</span>{" "}
+          <Link href="/about#reason" className="inline-block whitespace-nowrap underline underline-offset-4 decoration-slate-400 hover:text-white hover:decoration-white">
+            「わくたん」を作った理由
+          </Link>
+          {" ・ "}
+          <Link href="/about#operator" className="inline-block whitespace-nowrap underline underline-offset-4 decoration-slate-400 hover:text-white hover:decoration-white">
+            運営者情報
+          </Link>
+          {" ・ "}
+          <Link href="/blog/how-4year-learn" className="underline underline-offset-4 decoration-slate-400 hover:text-white hover:decoration-white">
+            4歳の勉強はどこまで？わが家の場面から
+          </Link>
+        </p>
+      </aside>
+
       {/* ヒーロー */}
       <section className="max-w-6xl mx-auto px-6 py-6">
 
