@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="知育玩具とドリルどっち？｜わくたん"
         description="知育玩具とドリル、幼児期にはどちらが良いか悩む保護者向けに、それぞれのメリット・デメリットと使い分け方を解説します。"
         slug="toys-vs-drills"
-        datePublished="2026-06-01"
-        dateModified="2026-08-10"
+        datePublished="2026-06-12"
+        dateModified="2026-07-06"
       />
 
 
@@ -46,6 +48,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-07-06" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "知育玩具のメリット"}, {"id": "section-2", "text": "ドリルのメリット"}, {"id": "section-3", "text": "年齢による使い分けの目安"}, {"id": "section-4", "text": "両方を組み合わせるのがおすすめ"}, {"id": "section-5", "text": "実際にハマった玩具・すぐ飽きた玩具"}, {"id": "section-6", "text": "こんな質問もよくいただきます"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           「知育玩具とドリル、どちらを与えればいいの？」
           という悩みは多くの保護者の方が抱える疑問です。
@@ -56,7 +65,7 @@ export default async function Page() {
           年齢や目的に合わせて使い分けるのがおすすめです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           知育玩具のメリット
         </h2>
 
@@ -72,7 +81,7 @@ export default async function Page() {
           自由な発想力も育てます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ドリルのメリット
         </h2>
 
@@ -97,7 +106,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢による使い分けの目安
         </h2>
 
@@ -112,7 +121,7 @@ export default async function Page() {
           無理なく学習習慣につなげられます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           両方を組み合わせるのがおすすめ
         </h2>
 
@@ -128,7 +137,7 @@ export default async function Page() {
           遊びの合間の「ちょっとした挑戦」として取り入れやすい設計です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           実際にハマった玩具・すぐ飽きた玩具
         </h2>
 
@@ -149,7 +158,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           こんな質問もよくいただきます
         </h2>
 
@@ -193,7 +202,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月　/　最終更新日：2026年8月
+          公開日：2026年6月12日　/　最終更新日：2026年7月6日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

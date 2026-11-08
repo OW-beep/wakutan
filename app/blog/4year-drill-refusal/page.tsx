@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="4歳児がドリルを嫌がるときの対処法｜わくたん"
         description="4歳児がドリルを嫌がるときの理由と対処法を解説。この年齢ならではの発達的な背景と、無理なく取り組める工夫を紹介します。"
         slug="4year-drill-refusal"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-07-21"
+        dateModified="2026-09-26"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-09-26" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "4歳ならではの理由①：集中できる時間がまだ短い"}, {"id": "section-2", "text": "4歳ならではの理由②：「できない」経験への抵抗"}, {"id": "section-3", "text": "4歳ならではの理由③：気分の切り替えが苦手"}, {"id": "section-4", "text": "無理に続けさせない選択も大切"}, {"id": "section-5", "text": "1問からのスモールスタート"}, {"id": "section-6", "text": "よくある質問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           遊んでいる姿は活き活きしているのに、ドリルを取り出したとたん表情が曇る——4歳のお子さんによく見られる反応です。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           この時期は、他の年齢とは少し違う理由で嫌がることが多いのが特徴です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           4歳ならではの理由①：集中できる時間がまだ短い
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           4歳の集中力は5〜10分程度が目安です。10問すべてに取り組もうとすると、途中で集中が切れて嫌がる原因になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           4歳ならではの理由②：「できない」経験への抵抗
         </h2>
 
@@ -78,7 +87,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           4歳ならではの理由③：気分の切り替えが苦手
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           また、「算数やる？」と聞くより、「迷路と間違い探し、どっちがいい？」と選択肢を渡すのも効果的でした。4歳くらいだと「勉強するか・しないか」の二択にすると嫌になってしまうので、「どれならやってみたい？」に変えるだけでもかなり違うと感じます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           無理に続けさせない選択も大切
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           対処法を試しても嫌がる日は、無理に続けさせず「今日はお休み」にしましょう。4歳の時期に「ドリル=嫌なもの」という印象がついてしまう方が、長期的にはマイナスです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           1問からのスモールスタート
         </h2>
 
@@ -110,7 +119,7 @@ export default async function Page() {
           「10問全部」ではなく「今日は1問だけ」から始めるのもおすすめです。わくたんのドリルも、一部だけ取り組む使い方で問題ありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -154,7 +163,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月21日　/　最終更新日：2026年9月26日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

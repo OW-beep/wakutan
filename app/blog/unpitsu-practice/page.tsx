@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="運筆練習が文字上達の近道になる理由｜わくたん"
         description="文字を書く前段階として重要な運筆練習について解説。線を引く練習がなぜ文字の上達につながるのか、家庭でできる練習法を紹介します。"
         slug="unpitsu-practice"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-04-28"
+        dateModified="2026-06-25"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-06-25" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "なぜ運筆練習が大切なのか"}, {"id": "section-2", "text": "家庭でできる運筆練習"}, {"id": "section-3", "text": "年齢別の運筆のめやす"}, {"id": "section-4", "text": "鉛筆の持ち方も少しずつ"}, {"id": "section-5", "text": "市販の運筆ドリルとの付き合い方"}, {"id": "section-6", "text": "運筆からひらがなへ"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           「文字を書く練習をしているのに、なかなか上手にならない」という場合、実は文字そのものより「線を引く力」が不足していることがあります。
         </p>
@@ -64,7 +73,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           なぜ運筆練習が大切なのか
         </h2>
 
@@ -76,7 +85,7 @@ export default async function Page() {
           線をコントロールする力が育っていないと、文字の形そのものよりも「思い通りに手を動かすこと」自体が難しく、文字学習への苦手意識につながりやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           家庭でできる運筆練習
         </h2>
 
@@ -97,7 +106,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢別の運筆のめやす
         </h2>
 
@@ -109,7 +118,7 @@ export default async function Page() {
           年齢というより、その子の手の発達に合わせて無理のない難易度を選ぶことが大切です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           鉛筆の持ち方も少しずつ
         </h2>
 
@@ -121,7 +130,7 @@ export default async function Page() {
           遊びの中で自然に正しい持ち方に近づけるよう、無理のない範囲で声かけをしていきましょう。三角軸の鉛筆やグリップを使うのも一つの方法です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           市販の運筆ドリルとの付き合い方
         </h2>
 
@@ -129,7 +138,7 @@ export default async function Page() {
           市販の運筆ドリルは種類が豊富ですが、1冊をきっちり終わらせることにこだわりすぎず、興味を持ったページから取り組む形でも十分効果があります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           運筆からひらがなへ
         </h2>
 
@@ -162,7 +171,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年4月28日　/　最終更新日：2026年6月25日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

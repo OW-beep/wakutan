@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -24,7 +26,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
         title="4歳の勉強はどこまで？教え方とやる気を引き出すコツ"
         description="4歳の勉強はどこまで進めればいい？遊びを通して学ぶ関わり方、やる気を引き出すコツ、数や論理の練習法、1日の学習時間の目安、よくある質問をまとめました。"
         slug="how-4year-learn"
-        datePublished="2026-03-01"
+        datePublished="2026-04-21"
         dateModified="2026-10-17"
       />
 
@@ -51,6 +53,13 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
     </div>
 
+    <ArticleByline dateModified="2026-10-17" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "🌱 4歳はどんな時期？"}, {"id": "section-2", "text": "🎨 遊びこそ最高の学習"}, {"id": "section-3", "text": "🔥 やる気を引き出すコツ"}, {"id": "section-4", "text": "🔢 数に親しむコツ"}, {"id": "section-5", "text": "🧩 論理力を育てよう"}, {"id": "section-6", "text": "⏰ 学習時間はどれくらい？"}, {"id": "section-7", "text": "🕐 4歳の1日の過ごし方（イメージ例）"}, {"id": "section-8", "text": "📏 4歳の勉強は「どこまで」？幼稚園教育要領の考え方"}, {"id": "section-9", "text": "❓ よくある質問"}, {"id": "section-10", "text": "💡 保護者が意識したいポイント"}, {"id": "section-11", "text": "🌈 まとめ"}, {"id": "section-12", "text": "🎯 今日のドリルはこちら"}]}
+    />
+
+
     <div className="bg-white border-2 border-dashed border-orange-200 rounded-2xl p-6 mb-8">
       <p className="font-bold text-orange-700 mb-2">
         📋 この記事でわかること
@@ -64,7 +73,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
     <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-      <h2 className="text-3xl font-bold mb-6 text-orange-600">
+      <h2 id="section-1" className="text-3xl font-bold mb-6 text-orange-600">
         🌱 4歳はどんな時期？
       </h2>
 
@@ -91,7 +100,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
     <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-      <h2 className="text-3xl font-bold mb-6 text-orange-600">
+      <h2 id="section-2" className="text-3xl font-bold mb-6 text-orange-600">
         🎨 遊びこそ最高の学習
       </h2>
 
@@ -116,7 +125,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
     <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-      <h2 className="text-3xl font-bold mb-6 text-orange-600">
+      <h2 id="section-3" className="text-3xl font-bold mb-6 text-orange-600">
         🔥 やる気を引き出すコツ
       </h2>
 
@@ -150,7 +159,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
     <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-      <h2 className="text-3xl font-bold mb-6 text-orange-600">
+      <h2 id="section-4" className="text-3xl font-bold mb-6 text-orange-600">
         🔢 数に親しむコツ
       </h2>
 
@@ -175,7 +184,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+          <h2 id="section-5" className="text-3xl font-bold mb-6 text-orange-600">
             🧩 論理力を育てよう
           </h2>
 
@@ -201,7 +210,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+          <h2 id="section-6" className="text-3xl font-bold mb-6 text-orange-600">
             ⏰ 学習時間はどれくらい？
           </h2>
 
@@ -224,7 +233,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+          <h2 id="section-7" className="text-3xl font-bold mb-6 text-orange-600">
             🕐 4歳の1日の過ごし方（イメージ例）
           </h2>
 
@@ -247,7 +256,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+          <h2 id="section-8" className="text-3xl font-bold mb-6 text-orange-600">
             📏 4歳の勉強は「どこまで」？幼稚園教育要領の考え方
           </h2>
 
@@ -281,7 +290,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+          <h2 id="section-9" className="text-3xl font-bold mb-6 text-orange-600">
             ❓ よくある質問
           </h2>
 
@@ -304,7 +313,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
         <section className="bg-gradient-to-r from-yellow-100 to-orange-100 rounded-3xl p-8 shadow-lg mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-orange-700">
+          <h2 id="section-10" className="text-3xl font-bold mb-6 text-orange-700">
             💡 保護者が意識したいポイント
           </h2>
 
@@ -336,7 +345,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
         <section className="bg-white rounded-3xl shadow p-8 mb-10">
 
-          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+          <h2 id="section-11" className="text-3xl font-bold mb-6 text-orange-600">
             🌈 まとめ
           </h2>
 
@@ -407,7 +416,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年3月　/　最終更新日：2026年9月</p>
+          <p>公開日：2026年4月21日　/　最終更新日：2026年10月17日</p>
           <p className="mt-1">
             本記事は、わくたん運営者が4歳向けの問題を作りながら日々感じていることをもとにまとめています。
           </p>
@@ -415,7 +424,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
         <div className="bg-yellow-100 rounded-3xl p-8 text-center">
 
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 id="section-12" className="text-2xl font-bold mb-4">
             🎯 今日のドリルはこちら
           </h2>
 

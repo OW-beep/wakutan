@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -26,7 +28,7 @@ export default async function Page() {
         description="ひらがなを教え始める年齢の目安を、公的な調査データもふまえて解説。無理なく始めるためのサインの見つけ方を紹介します。"
         slug="when-start-hiragana"
         datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        dateModified="2026-05-24"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-05-24" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "データで見るひらがな習得の目安"}, {"id": "section-2", "text": "なぜ4〜5歳で伸びるのか"}, {"id": "section-3", "text": "始めどきのサイン"}, {"id": "section-4", "text": "読めるようになるまでの過程"}, {"id": "section-5", "text": "もう少し詳しく知りたい方へ"}, {"id": "section-6", "text": "読めなくても焦らない理由"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           「ひらがなはいつから教えればいいの？」という疑問に対して、ここではデータをもとにした目安と、始めどきのサインを紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           データで見るひらがな習得の目安
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           一方で、書くことについては読むことよりも遅れて発達するというのが、多くの専門家に共通する見解です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           なぜ4〜5歳で伸びるのか
         </h2>
 
@@ -78,7 +87,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           始めどきのサイン
         </h2>
 
@@ -90,7 +99,7 @@ export default async function Page() {
           こうしたサインが出てから取り組み始めると、無理なくスムーズに進みやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           読めるようになるまでの過程
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           特に変化を感じたのは、文字を一文字ずつ読むのではなく、言葉として読もうとするようになったときです。「り」「ん」「ご」と一文字ずつ確認していたのが、「りんご」とまとまりで読めるようになる。そこまで来ると、本人も「読めた！」という感覚があるようで、絵本や看板の文字を自分から読もうとすることが増えました。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           もう少し詳しく知りたい方へ
         </h2>
 
@@ -121,7 +130,7 @@ export default async function Page() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           読めなくても焦らない理由
         </h2>
 
@@ -154,7 +163,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年3月1日　/　最終更新日：2026年5月24日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -36,6 +38,13 @@ export default function Page() {
           </p>
         </div>
 
+    <ArticleByline dateModified="2026-10-08" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "先に結論"}, {"id": "section-2", "text": "幼稚園教育要領では"}, {"id": "section-3", "text": "研究①：言語の力と、感情に関する力の関係（Beck ら 2012）"}, {"id": "section-4", "text": "研究②：感情を描いた本を読んで話し合う（Kumschick ら 2014）"}, {"id": "section-5", "text": "家庭で試せる、気持ちのことばの声かけ"}, {"id": "section-6", "text": "「ぴったりことば」の設計について"}, {"id": "section-7", "text": "よくある質問"}, {"id": "section-8", "text": "参考文献"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           「うれしい」「くやしい」「はずかしい」…気持ちを表すことばは、日本語ではおもに形容詞で表されます。この記事では、気持ちのことばについて、幼稚園教育要領の記述と、ことばと感情の力の関係を調べた研究を、確認できた範囲で整理します。
         </p>
@@ -47,7 +56,7 @@ export default function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           先に結論
         </h2>
 
@@ -58,7 +67,7 @@ export default function Page() {
             <li>ただし、これらは小学生が対象です。幼児で、形容詞を学ぶと感情の力が育つかを直接調べた研究は、今回確認できた範囲ではありません。</li>
         </ul>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           幼稚園教育要領では
         </h2>
 
@@ -74,7 +83,7 @@ export default function Page() {
           つまり、要領は、ことばを「覚えさせる」というより、遊びや絵本の中で触れ、使う楽しさを味わうことを大切にしています。また、総則では、遊びを通しての指導を中心とすること、言語に関する能力の発達と思考力等の発達が関連していることを踏まえて言語環境を整えること、が示されています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           研究①：言語の力と、感情に関する力の関係（Beck ら 2012）
         </h2>
 
@@ -93,7 +102,7 @@ export default function Page() {
           </ul>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           研究②：感情を描いた本を読んで話し合う（Kumschick ら 2014）
         </h2>
 
@@ -116,7 +125,7 @@ export default function Page() {
           </ul>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           家庭で試せる、気持ちのことばの声かけ
         </h2>
 
@@ -135,7 +144,7 @@ export default function Page() {
           <p className="leading-7">気持ちは、場面とセットで話すと伝わりやすくなります。同じ表情でも、「くやしい」のか「かなしい」のかは、そのときの出来事で決まります。これは研究の結果ではなく、わくたんの考え方です。</p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「ぴったりことば」の設計について
         </h2>
 
@@ -147,7 +156,7 @@ export default function Page() {
           この教材の効果を調べた研究はありません。上の研究が示しているのは、ことばと感情に関する力のつながりと、物語や会話の中で気持ちを扱う活動の効果（小学生を対象）です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -166,7 +175,7 @@ export default function Page() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           参考文献
         </h2>
         <ol className="list-decimal ml-6 space-y-3 text-sm leading-7 text-gray-700 mb-6">
@@ -194,7 +203,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年10月　/　最終更新日：2026年10月
+          公開日：2026年10月8日　/　最終更新日：2026年10月8日
         </div>
 
         <div className="mt-8 bg-yellow-50 border rounded-2xl p-6">

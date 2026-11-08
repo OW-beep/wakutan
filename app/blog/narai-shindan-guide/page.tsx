@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -43,6 +45,13 @@ export default async function Page() {
           </p>
         </div>
 
+    <ArticleByline dateModified="2026-09-12" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "人気ランキングだけで選ぶと起こりがちなこと"}, {"id": "section-2", "text": "習い事選びを整理する4つの視点"}, {"id": "section-3", "text": "親の希望と子どもの興味がズレることもある"}, {"id": "section-4", "text": "🧭 わくたん習い事診断で整理してみる"}]}
+    />
+
+
         <div className="bg-white border-2 border-dashed border-orange-200 rounded-2xl p-6 mb-8">
           <p className="font-bold text-orange-700 mb-2">📋 この記事でわかること</p>
           <ul className="list-disc ml-6 space-y-1 text-gray-700">
@@ -53,7 +62,7 @@ export default async function Page() {
         </div>
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
-          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+          <h2 id="section-1" className="text-3xl font-bold mb-6 text-orange-600">
             人気ランキングだけで選ぶと起こりがちなこと
           </h2>
 
@@ -77,7 +86,7 @@ export default async function Page() {
         </section>
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
-          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+          <h2 id="section-2" className="text-3xl font-bold mb-6 text-orange-600">
             習い事選びを整理する4つの視点
           </h2>
 
@@ -118,7 +127,7 @@ export default async function Page() {
         </section>
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
-          <h2 className="text-3xl font-bold mb-6 text-orange-600">
+          <h2 id="section-3" className="text-3xl font-bold mb-6 text-orange-600">
             親の希望と子どもの興味がズレることもある
           </h2>
 
@@ -149,7 +158,7 @@ export default async function Page() {
         </div>
 
         <div className="bg-yellow-100 rounded-3xl p-8 text-center mb-8">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 id="section-4" className="text-2xl font-bold mb-4">
             🧭 わくたん習い事診断で整理してみる
           </h2>
 
@@ -167,7 +176,7 @@ export default async function Page() {
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年9月　/　最終更新日：2026年9月</p>
+          <p>公開日：2026年9月12日　/　最終更新日：2026年9月12日</p>
           <p className="mt-1">
             本記事は、わくたん運営者が家庭での習い事選びを検討する中で感じたことをもとにまとめています。
           </p>

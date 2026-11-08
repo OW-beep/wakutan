@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
 import FavoriteButton from "@/app/components/FavoriteButton";
@@ -41,13 +43,16 @@ export default function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-09-29" />
+
+
         <p className="text-lg leading-8 mb-6">
           「うちの子、ひらがなはできるけど、なかまはずれが苦手かも」
           「さんすうだけ、もう少し練習させたい」——そんなときに便利な、
           わくたんの「印刷ビルダー」機能を紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           印刷ビルダーでできること
         </h2>
 
@@ -87,7 +92,7 @@ export default function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           こんな使い方がおすすめです
         </h2>
 
@@ -103,7 +108,7 @@ export default function Page() {
           もあわせてご覧ください。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -137,7 +142,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年9月　/　最終更新日：2026年9月
+          公開日：2026年9月29日　/　最終更新日：2026年9月29日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6 text-center">

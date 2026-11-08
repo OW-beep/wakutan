@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="6歳で算数が苦手でも大丈夫！小学校でつまずかない土台の作り方｜わくたん"
         description="6歳で算数が苦手な子でも安心できる、小学校の算数につまずかないための土台づくりのポイントを紹介します。"
         slug="sansu-weak-6year"
-        datePublished="2026-06-01"
-        dateModified="2026-08-10"
+        datePublished="2026-06-13"
+        dateModified="2026-10-08"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-10-08" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "計算より先に「数の感覚」を育てる"}, {"id": "section-2", "text": "指を使って数えてもOK"}, {"id": "section-3", "text": "間違いを責めない"}, {"id": "section-4", "text": "毎日少しずつの積み重ねが力になる"}, {"id": "section-5", "text": "くり上がりのつまずきには「10のかたまり」"}, {"id": "section-6", "text": "文章題は「絵に描く」練習から"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           「たし算がなかなか覚えられない」「数字を見るのを嫌がる」——6歳の保護者からよく聞く悩みです。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           小学校入学が近づくと不安になりますが、今の時点で計算が完璧である必要はありません。大切なのは土台となる「数の感覚」です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           計算より先に「数の感覚」を育てる
         </h2>
 
@@ -65,7 +74,7 @@ export default async function Page() {
           お菓子やブロックなど、身近なものを使うと、数の増減を体感的に理解しやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           指を使って数えてもOK
         </h2>
 
@@ -86,7 +95,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           間違いを責めない
         </h2>
 
@@ -98,7 +107,7 @@ export default async function Page() {
           「どこまで考えたか」を一緒に確認し、できたところをまずほめてあげましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           毎日少しずつの積み重ねが力になる
         </h2>
 
@@ -110,7 +119,7 @@ export default async function Page() {
           わくたんの6歳向け算数ドリルも、基礎的な内容から少しずつ取り組める構成にしています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           くり上がりのつまずきには「10のかたまり」
         </h2>
 
@@ -118,7 +127,7 @@ export default async function Page() {
           8+5のようなくり上がりの計算でつまずく場合は、「8はあと2で10になる」という感覚が育っていないことが多いです。おはじきを10個ずつのお皿に分けて並べ、「あと何個で10になる？」と繰り返し問いかけると、10のまとまりを意識する感覚が少しずつ身についていきます。この感覚があると、繰り上がりの計算がぐっと楽になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           文章題は「絵に描く」練習から
         </h2>
 
@@ -163,7 +172,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月　/　最終更新日：2026年8月
+          公開日：2026年6月13日　/　最終更新日：2026年10月8日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

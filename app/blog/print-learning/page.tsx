@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,7 +27,7 @@ export default async function Page() {
         title="プリント学習のメリットとは？家庭学習を続けるコツ｜わくたん"
         description="幼児向けプリント学習には、どんなメリットがある？集中力・思考力・学習習慣を育てる理由と、家庭学習を無理なく続けるコツを紹介します。"
         slug="print-learning"
-        datePublished="2026-03-01"
+        datePublished="2026-04-05"
         dateModified="2026-09-25"
       />
 
@@ -49,6 +51,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-09-25" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "手を動かして学べる"}, {"id": "section-2", "text": "集中力が身につく"}, {"id": "section-3", "text": "間違いから学べる"}, {"id": "section-4", "text": "小学校入学準備になる"}, {"id": "section-5", "text": "わくたんがおすすめする学習方法"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           最近はタブレット学習や動画教材が増えています。
           しかし、幼児期の学びにおいてはプリント学習にも大きな価値があります。
@@ -65,7 +74,7 @@ export default async function Page() {
         </p>
 
         {/* 見出し */}
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           手を動かして学べる
         </h2>
 
@@ -92,7 +101,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           集中力が身につく
         </h2>
 
@@ -114,7 +123,7 @@ export default async function Page() {
           自然と机に向かう習慣が身につきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           間違いから学べる
         </h2>
 
@@ -145,7 +154,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           小学校入学準備になる
         </h2>
 
@@ -165,7 +174,7 @@ export default async function Page() {
           将来の学習の土台作りに役立ちます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           わくたんがおすすめする学習方法
         </h2>
 
@@ -211,7 +220,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年8月
+          公開日：2026年4月5日　/　最終更新日：2026年9月25日
         </div>
 
         {/* CTA */}

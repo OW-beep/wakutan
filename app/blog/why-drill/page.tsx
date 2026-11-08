@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,7 +27,7 @@ export default async function Page() {
         title="ドリル学習とは？幼児期に育つ力と、遊びとの両立"
         description="ドリル学習とは何か、幼児期のドリルが考える力・集中力・学習習慣につながる理由を解説。遊びとの両立や、間違いを学びに変える考え方も紹介します。"
         slug="why-drill"
-        datePublished="2026-03-01"
+        datePublished="2026-03-28"
         dateModified="2026-10-17"
       />
 
@@ -47,6 +49,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-10-17" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "「わくたん」を作った本当のきっかけ"}, {"id": "section-2", "text": "ドリルは考える練習になる"}, {"id": "section-3", "text": "集中する力が身につく"}, {"id": "section-4", "text": "間違いが学びになる"}, {"id": "section-5", "text": "小学校の学習にもつながる"}, {"id": "section-6", "text": "遊びとドリルは両立できる"}, {"id": "section-7", "text": "日々の運営から見えてきたこと"}, {"id": "section-8", "text": "問題を作る中で一番苦労していること"}, {"id": "section-9", "text": "わくたんのドリルが目指すもの"}, {"id": "section-10", "text": "紙のドリルを選んだ理由"}, {"id": "section-11", "text": "保護者からよく届く質問"}]}
+    />
+
 
         <div className="bg-white border-2 border-dashed border-orange-200 rounded-2xl p-6 mb-8">
           <p className="font-bold text-orange-700 mb-2">
@@ -73,7 +82,7 @@ export default async function Page() {
           ドリル学習はそのきっかけとして非常に優れています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「わくたん」を作った本当のきっかけ
         </h2>
 
@@ -93,7 +102,7 @@ export default async function Page() {
           だから、わくたんでは「大量に勉強するための教材」ではなく、「毎日少しだけ考えるためのドリル」を目指しました。10問程度の「今日のドリル」を用意しているのも、その考え方からです。毎日30分頑張るより、5分でも「今日はできた」と思える経験を積み重ねてほしい。それが、ドリル形式にした一番大きな理由です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ドリルは考える練習になる
         </h2>
 
@@ -126,7 +135,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           集中する力が身につく
         </h2>
 
@@ -146,7 +155,7 @@ export default async function Page() {
           小さな積み重ねが将来の大きな力になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           間違いが学びになる
         </h2>
 
@@ -177,7 +186,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           小学校の学習にもつながる
         </h2>
 
@@ -197,7 +206,7 @@ export default async function Page() {
           算数の基礎となります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           遊びとドリルは両立できる
         </h2>
 
@@ -221,7 +230,7 @@ export default async function Page() {
           ドリル学習の大きな魅力です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           日々の運営から見えてきたこと
         </h2>
 
@@ -241,7 +250,7 @@ export default async function Page() {
           にまとめています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           問題を作る中で一番苦労していること
         </h2>
 
@@ -261,7 +270,7 @@ export default async function Page() {
           1問を作るだけでもかなり時間がかかりますが、だからこそ「これは子どもが実際に考えてくれそうだ」と思える問題ができたときは、作っている側としてもうれしい瞬間です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           わくたんのドリルが目指すもの
         </h2>
 
@@ -281,7 +290,7 @@ export default async function Page() {
           続ければ大きな成長につながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           紙のドリルを選んだ理由
         </h2>
 
@@ -302,7 +311,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           保護者からよく届く質問
         </h2>
 
@@ -347,7 +356,7 @@ export default async function Page() {
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 mt-8 text-sm text-gray-500">
-          <p>公開日：2026年3月　/　最終更新日：2026年7月</p>
+          <p>公開日：2026年3月28日　/　最終更新日：2026年10月17日</p>
           <p className="mt-1">
             本記事は、わくたん運営者が「なぜドリル形式にしているか」を実際の運営経験をもとにまとめています。
           </p>

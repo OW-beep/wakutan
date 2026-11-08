@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="カタカナはいつから教える？｜わくたん"
         description="カタカナを教え始めるタイミングと、ひらがなとの学習の違いについて解説します。無理なく取り入れるためのステップも紹介します。"
         slug="katakana-start"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-05-03"
+        dateModified="2026-05-22"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-05-22" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "カタカナを始めるタイミング"}, {"id": "section-2", "text": "身近なカタカナから始める"}, {"id": "section-3", "text": "ひらがなとの形の違いに注意"}, {"id": "section-4", "text": "ひらがなと混同しやすい文字"}, {"id": "section-5", "text": "アルファベットとの違いに戸惑う場合も"}, {"id": "section-6", "text": "焦らず段階的に"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           ひらがなが読めるようになると、次に気になるのが「カタカナはいつから教えればいいの？」という疑問です。
         </p>
@@ -64,7 +73,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           カタカナを始めるタイミング
         </h2>
 
@@ -76,7 +85,7 @@ export default async function Page() {
           小学校でも1年生でひらがな、その後にカタカナを学ぶ流れになっているため、家庭でも焦って先取りする必要はありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           身近なカタカナから始める
         </h2>
 
@@ -97,7 +106,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ひらがなとの形の違いに注意
         </h2>
 
@@ -109,7 +118,7 @@ export default async function Page() {
           無理に一度に覚えさせず、間違えても「よくあることだよ」と伝えてあげましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ひらがなと混同しやすい文字
         </h2>
 
@@ -121,7 +130,7 @@ export default async function Page() {
           混同しても大きな問題ではありませんが、「これはひらがな、こっちはカタカナだよ」と種類の違いを意識させる声かけが役立ちます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           アルファベットとの違いに戸惑う場合も
         </h2>
 
@@ -129,7 +138,7 @@ export default async function Page() {
           英語のアルファベットに触れる機会がある子は、カタカナと混同することもあります。焦らず「これは日本語の文字、これは英語の文字」と整理してあげましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           焦らず段階的に
         </h2>
 
@@ -162,7 +171,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年5月3日　/　最終更新日：2026年5月22日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

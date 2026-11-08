@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="迷路遊びで育つ5つの力｜わくたん"
         description="子どもに人気の迷路遊びで育つ5つの力を解説。楽しみながら思考力や集中力を伸ばす迷路遊びの魅力と選び方を紹介します。"
         slug="maze-benefits"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-05-11"
+        dateModified="2026-07-09"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-07-09" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① 見通しを立てる力"}, {"id": "section-2", "text": "② 集中力"}, {"id": "section-3", "text": "③ 運筆力"}, {"id": "section-4", "text": "④ 試行錯誤する力"}, {"id": "section-5", "text": "⑤ 達成感"}, {"id": "section-6", "text": "年齢に合わせた迷路の選び方"}, {"id": "section-7", "text": "手作り迷路も効果的"}, {"id": "section-8", "text": "行き詰まったときの見守り方"}, {"id": "section-9", "text": "もう少し詳しく知りたい方へ"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           多くの子どもが夢中になる迷路遊び。実はただ楽しいだけでなく、さまざまな力を育てる効果があります。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           この記事では、迷路遊びで育つ5つの力と、年齢に合わせた選び方を紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① 見通しを立てる力
         </h2>
 
@@ -65,7 +74,7 @@ export default async function Page() {
           この力は、算数の文章題を解くときに「まず何をすればいいか」を考える力の土台にもなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② 集中力
         </h2>
 
@@ -73,7 +82,7 @@ export default async function Page() {
           スタートからゴールまで線をたどる作業には、集中して取り組む力が必要です。継続することで集中できる時間も少しずつ伸びていきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ 運筆力
         </h2>
 
@@ -90,7 +99,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ④ 試行錯誤する力
         </h2>
 
@@ -98,7 +107,7 @@ export default async function Page() {
           行き止まりに気づいて別の道を探す経験は、失敗してもやり直せばいいという前向きな姿勢を育てます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑤ 達成感
         </h2>
 
@@ -106,7 +115,7 @@ export default async function Page() {
           ゴールにたどり着いたときの「できた！」という達成感は、次の挑戦への意欲につながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢に合わせた迷路の選び方
         </h2>
 
@@ -118,7 +127,7 @@ export default async function Page() {
           難しすぎる迷路は途中で投げ出す原因になるため、「ちょっと頑張ればできる」くらいの難易度を選びましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           手作り迷路も効果的
         </h2>
 
@@ -126,7 +135,7 @@ export default async function Page() {
           紙に自由に線を描いて簡単な迷路を作るのもおすすめです。子ども自身に迷路を作ってもらうと、「どうすれば難しくなるか」を考える経験にもなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           行き詰まったときの見守り方
         </h2>
 
@@ -138,7 +147,7 @@ export default async function Page() {
           それでも長く止まってしまう場合は、「スタートに戻ってもう一回見てみようか」と、視点をリセットするきっかけを与えるだけで十分です。答えの道を直接教えるのは、最後の手段にしておきましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           もう少し詳しく知りたい方へ
         </h2>
 
@@ -182,7 +191,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年5月11日　/　最終更新日：2026年7月9日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

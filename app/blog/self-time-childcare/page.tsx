@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -45,6 +47,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-09-18" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① 5分でも「自分だけの時間」を確保する"}, {"id": "section-2", "text": "② 「自分を大事にする」ことも子育ての一部"}, {"id": "section-3", "text": "③ 誰かに頼れる時は、遠慮なく頼る"}, {"id": "section-4", "text": "子どもが少しだけ一人で取り組める時間をつくる"}, {"id": "section-5", "text": "よくある質問"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           気づいたら朝から晩まで子どものことばかりで、「自分の時間」がまったくない——
           子育て中、そんな風に感じることはありませんか。
@@ -56,7 +65,7 @@ export default async function Page() {
           ここでは、無理に「まとまった時間」を作ろうとする前に知っておきたい、3つの考え方を紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① 5分でも「自分だけの時間」を確保する
         </h2>
 
@@ -71,7 +80,7 @@ export default async function Page() {
           それだけでも、心の状態は変わってきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② 「自分を大事にする」ことも子育ての一部
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ 誰かに頼れる時は、遠慮なく頼る
         </h2>
 
@@ -108,7 +117,7 @@ export default async function Page() {
           むしろ、無理なく続けていくための工夫の一つです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           子どもが少しだけ一人で取り組める時間をつくる
         </h2>
 
@@ -124,7 +133,7 @@ export default async function Page() {
           もあわせてご覧ください。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -170,7 +179,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年9月　/　最終更新日：2026年9月
+          公開日：2026年9月18日　/　最終更新日：2026年9月18日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

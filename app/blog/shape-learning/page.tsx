@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -45,12 +47,19 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-09-25" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "図形感覚が育つ"}, {"id": "section-2", "text": "図形模写のやり方"}, {"id": "section-3", "text": "空間認識力が育つ"}, {"id": "section-4", "text": "身の回りの図形を探すゲーム"}, {"id": "section-5", "text": "積み木・折り紙での図形遊び"}, {"id": "section-6", "text": "図形はドリルとも相性が良い"}, {"id": "section-7", "text": "小学校の図形学習へのつながり"}, {"id": "section-8", "text": "年齢別の関わり方の目安"}, {"id": "section-9", "text": "よくある疑問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           丸・三角・四角など、身の回りにあふれる図形。図形遊びは、算数の学習につながる大切な感覚を育てます。
           お手本と同じ形を見て描く「図形模写」も、図形遊びの代表的な方法のひとつです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           図形感覚が育つ
         </h2>
 
@@ -58,7 +67,7 @@ export default async function Page() {
           積み木やパズルで図形に触れる経験を通して、形の特徴を感覚的に理解する力が育ちます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           図形模写のやり方
         </h2>
 
@@ -73,7 +82,7 @@ export default async function Page() {
           わくたんの「おなじかたち」ドリルも、この図形模写に近い感覚で取り組める内容にしています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           空間認識力が育つ
         </h2>
 
@@ -90,7 +99,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           身の回りの図形を探すゲーム
         </h2>
 
@@ -98,7 +107,7 @@ export default async function Page() {
           「まる、みつけた」「テレビは四角だね」のように、日常の中で図形を探すゲームは特別な道具なしで手軽に取り組めます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           積み木・折り紙での図形遊び
         </h2>
 
@@ -110,7 +119,7 @@ export default async function Page() {
           折り紙も、四角を三角に折る、さらに小さな三角にするといった過程で、図形が変化する様子を体感できる良い教材です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           図形はドリルとも相性が良い
         </h2>
 
@@ -118,7 +127,7 @@ export default async function Page() {
           パターン問題や仲間わけの問題には、図形の理解が役立つ場面が多くあります。遊びで育てた感覚をドリルで確認してみましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           小学校の図形学習へのつながり
         </h2>
 
@@ -130,7 +139,7 @@ export default async function Page() {
           幼児期に図形に親しんでおくことは、こうした学習に対する苦手意識を減らすことにつながります。難しい用語を教える必要はなく、「触れて楽しむ」経験の積み重ねが大切です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢別の関わり方の目安
         </h2>
 
@@ -142,7 +151,7 @@ export default async function Page() {
           5歳ごろになると、「同じ形を集める」「違う形を組み合わせて新しい形を作る」といった、少し複雑な操作も楽しめるようになってきます。6歳ごろは、図形を回転させたり組み合わせたりして、頭の中でイメージする力も少しずつ育ってきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある疑問
         </h2>
 
@@ -186,7 +195,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年3月1日　/　最終更新日：2026年9月25日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,7 +27,7 @@ export default async function Page() {
         title="小学校入学に必要なものは？準備チェックリスト・学用品一覧｜わくたん"
         description="小学校入学に必要なものは何？入学前に確認しておきたい準備を、学用品一覧・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。"
         slug="school-checklist"
-        datePublished="2026-06-01"
+        datePublished="2026-06-04"
         dateModified="2026-10-17"
       />
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-10-17" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① 学用品・持ち物の準備【一覧】"}, {"id": "section-2", "text": "② 生活リズムの準備"}, {"id": "section-3", "text": "③ 学びへの土台づくり"}, {"id": "section-4", "text": "④ 心の準備"}, {"id": "section-5", "text": "焦らず、できることから"}, {"id": "section-6", "text": "気になる疑問Q&A"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           小学校入学が近づくと、何を準備すればいいのか不安になる保護者の方も多いのではないでしょうか。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           ランドセルや学用品の準備も大切ですが、実はそれ以上に「生活習慣」と「学びへの土台」の準備が入学後の安心につながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① 学用品・持ち物の準備【一覧】
         </h2>
 
@@ -99,7 +108,7 @@ export default async function Page() {
           また、自分の持ち物を自分で管理する練習として、お子さん自身にランドセルへの荷物の出し入れをさせてみるのもおすすめです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② 生活リズムの準備
         </h2>
 
@@ -120,7 +129,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ 学びへの土台づくり
         </h2>
 
@@ -132,7 +141,7 @@ export default async function Page() {
           わくたんのドリルのように、短時間で取り組める問題を通じて、机に向かう習慣を少しずつつけておくのも一つの方法です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ④ 心の準備
         </h2>
 
@@ -144,7 +153,7 @@ export default async function Page() {
           「分からないことがあったら先生に聞いていいんだよ」と伝えておくだけでも、子どもの安心感につながります。完璧を求めるより、「困ったときに助けを求めていい」と知っていることの方が、入学後の心の支えになります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           焦らず、できることから
         </h2>
 
@@ -155,7 +164,7 @@ export default async function Page() {
           もあわせてご覧ください。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           気になる疑問Q&A
         </h2>
 
@@ -199,7 +208,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月　/　最終更新日：2026年9月
+          公開日：2026年6月4日　/　最終更新日：2026年10月17日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

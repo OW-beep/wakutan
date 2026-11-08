@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="小学校入学前に身につけたい力｜わくたん"
         description="小学校入学前の勉強・準備で身につけたい力を解説。文字や計算だけではない、本当に大切な力とは？"
         slug="school-preparation"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-04-02"
+        dateModified="2026-07-21"
       />
 
 
@@ -55,6 +57,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-07-21" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "🌱 学力よりも大切な土台"}, {"id": "section-2", "text": "👂 話を聞く力"}, {"id": "section-3", "text": "🧠 自分で考える力"}, {"id": "section-4", "text": "✏️ 文字や数字はどこまで必要？"}, {"id": "section-5", "text": "⏰ 集中する力"}, {"id": "section-6", "text": "🙋 自分のことを伝える力"}, {"id": "section-7", "text": "💬 「困った」を言葉にする練習"}, {"id": "section-8", "text": "✅ 今すでにやっていること・まだやっていないこと"}, {"id": "section-9", "text": "💡 家庭でできる入学準備"}, {"id": "section-10", "text": "❓ よく聞かれること"}, {"id": "section-11", "text": "🌈 まとめ"}, {"id": "section-12", "text": "🎯 考える力を育てるドリルはこちら"}]}
+    />
+
+
         <div className="bg-white border-2 border-dashed border-green-200 rounded-2xl p-6 mb-8">
           <p className="font-bold text-green-700 mb-2">
             📋 この記事でわかること
@@ -68,7 +77,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-600">
+          <h2 id="section-1" className="text-3xl font-bold mb-6 text-green-600">
             🌱 学力よりも大切な土台
           </h2>
 
@@ -93,7 +102,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-600">
+          <h2 id="section-2" className="text-3xl font-bold mb-6 text-green-600">
             👂 話を聞く力
           </h2>
 
@@ -116,7 +125,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-600">
+          <h2 id="section-3" className="text-3xl font-bold mb-6 text-green-600">
             🧠 自分で考える力
           </h2>
 
@@ -140,7 +149,7 @@ export default async function Page() {
     
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-600">
+          <h2 id="section-4" className="text-3xl font-bold mb-6 text-green-600">
             ✏️ 文字や数字はどこまで必要？
           </h2>
 
@@ -164,7 +173,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-600">
+          <h2 id="section-5" className="text-3xl font-bold mb-6 text-green-600">
             ⏰ 集中する力
           </h2>
 
@@ -190,7 +199,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-600">
+          <h2 id="section-6" className="text-3xl font-bold mb-6 text-green-600">
             🙋 自分のことを伝える力
           </h2>
 
@@ -216,7 +225,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-600">
+          <h2 id="section-7" className="text-3xl font-bold mb-6 text-green-600">
             💬 「困った」を言葉にする練習
           </h2>
 
@@ -236,7 +245,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-600">
+          <h2 id="section-8" className="text-3xl font-bold mb-6 text-green-600">
             ✅ 今すでにやっていること・まだやっていないこと
           </h2>
 
@@ -260,7 +269,7 @@ export default async function Page() {
 
         <section className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-3xl p-8 shadow-lg mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-700">
+          <h2 id="section-9" className="text-3xl font-bold mb-6 text-green-700">
             💡 家庭でできる入学準備
           </h2>
 
@@ -296,7 +305,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-600">
+          <h2 id="section-10" className="text-3xl font-bold mb-6 text-green-600">
             ❓ よく聞かれること
           </h2>
 
@@ -341,7 +350,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-10">
 
-          <h2 className="text-3xl font-bold mb-6 text-green-600">
+          <h2 id="section-11" className="text-3xl font-bold mb-6 text-green-600">
             🌈 まとめ
           </h2>
 
@@ -374,7 +383,7 @@ export default async function Page() {
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年3月　/　最終更新日：2026年7月</p>
+          <p>公開日：2026年4月2日　/　最終更新日：2026年7月21日</p>
           <p className="mt-1">
             本記事はわくたん運営者が、家庭学習に関する一般的な考え方をもとにまとめています。
           </p>
@@ -382,7 +391,7 @@ export default async function Page() {
 
         <div className="bg-green-100 rounded-3xl p-8 text-center">
 
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 id="section-12" className="text-2xl font-bold mb-4">
             🎯 考える力を育てるドリルはこちら
           </h2>
 

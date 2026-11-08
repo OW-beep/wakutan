@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "わくたんについて",
@@ -198,6 +199,14 @@ export default function Page() {
             自治体の窓口や専門機関にもご相談ください。
           </p>
 
+          <p className="leading-8 mt-4">
+            記事の作り方や、体験談・研究の扱い方、広告との向き合い方は、
+            <Link href="/editorial-policy" className="text-orange-700 underline underline-offset-4">
+              編集方針
+            </Link>
+            のページにまとめています。
+          </p>
+
         </div>
 
         {/* 参考にした考え方 */}
@@ -285,7 +294,11 @@ export default function Page() {
           </p>
 
           <p className="mb-4">
-            本サイトは広告収益により運営されています。
+            本サイトは、広告（Google AdSense）や、楽天市場の商品紹介（楽天アフィリエイト）による収益で運営しています。記事内の商品リンクには「PR」と表示しています。広告やアフィリエイトの扱いについては、
+            <Link href="/privacy-policy" className="text-orange-700 underline underline-offset-4">
+              プライバシーポリシー
+            </Link>
+            もご覧ください。
           </p>
 
           <h2 className="text-2xl font-bold mt-6 mb-4">連絡先</h2>

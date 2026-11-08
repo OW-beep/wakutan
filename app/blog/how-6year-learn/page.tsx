@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,7 +27,7 @@ export default async function Page() {
         title="6歳（年長）の学び方・勉強のコツ｜家庭学習のおすすめ｜わくたん"
         description="6歳・年長さんの勉強・学び方のコツを解説。小学校入学前に育てたい力や、おすすめの家庭学習のポイントを紹介します。"
         slug="how-6year-learn"
-        datePublished="2026-03-01"
+        datePublished="2026-05-03"
         dateModified="2026-10-17"
       />
 
@@ -55,6 +57,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-10-17" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "🌱 6歳は学習習慣を作る時期"}, {"id": "section-2", "text": "🧠 考える力を伸ばそう"}, {"id": "section-3", "text": "🔢 数の理解を深める"}, {"id": "section-4", "text": "✏️ 文字を使う楽しさを知る"}, {"id": "section-5", "text": "👂 人の話を聞く力"}, {"id": "section-6", "text": "🌟 6歳になったら意識したいこと"}, {"id": "section-7", "text": "❓ こんな質問もよくいただきます"}, {"id": "section-8", "text": "💡 保護者が意識したいポイント"}, {"id": "section-9", "text": "🌈 まとめ"}, {"id": "section-10", "text": "🎓 今日の6さいドリルはこちら"}]}
+    />
+
+
         <div className="bg-white border-2 border-dashed border-purple-200 rounded-2xl p-6 mb-8">
           <p className="font-bold text-purple-700 mb-2">
             📋 この記事でわかること
@@ -68,7 +77,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-purple-600">
+          <h2 id="section-1" className="text-3xl font-bold mb-6 text-purple-600">
             🌱 6歳は学習習慣を作る時期
           </h2>
 
@@ -91,7 +100,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-purple-600">
+          <h2 id="section-2" className="text-3xl font-bold mb-6 text-purple-600">
             🧠 考える力を伸ばそう
           </h2>
 
@@ -114,7 +123,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-purple-600">
+          <h2 id="section-3" className="text-3xl font-bold mb-6 text-purple-600">
             🔢 数の理解を深める
           </h2>
 
@@ -138,7 +147,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-purple-600">
+          <h2 id="section-4" className="text-3xl font-bold mb-6 text-purple-600">
             ✏️ 文字を使う楽しさを知る
           </h2>
 
@@ -161,7 +170,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-purple-600">
+          <h2 id="section-5" className="text-3xl font-bold mb-6 text-purple-600">
             👂 人の話を聞く力
           </h2>
 
@@ -182,7 +191,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-purple-600">
+          <h2 id="section-6" className="text-3xl font-bold mb-6 text-purple-600">
             🌟 6歳になったら意識したいこと
           </h2>
 
@@ -202,7 +211,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-purple-600">
+          <h2 id="section-7" className="text-3xl font-bold mb-6 text-purple-600">
             ❓ こんな質問もよくいただきます
           </h2>
 
@@ -225,7 +234,7 @@ export default async function Page() {
 
         <section className="bg-gradient-to-r from-purple-100 to-violet-100 rounded-3xl p-8 shadow-lg mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-purple-700">
+          <h2 id="section-8" className="text-3xl font-bold mb-6 text-purple-700">
             💡 保護者が意識したいポイント
           </h2>
 
@@ -241,7 +250,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-10">
 
-          <h2 className="text-3xl font-bold mb-6 text-purple-600">
+          <h2 id="section-9" className="text-3xl font-bold mb-6 text-purple-600">
             🌈 まとめ
           </h2>
 
@@ -271,7 +280,7 @@ export default async function Page() {
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年3月　/　最終更新日：2026年7月</p>
+          <p>公開日：2026年5月3日　/　最終更新日：2026年10月17日</p>
           <p className="mt-1">
             本記事は、わくたん運営者が6歳・就学前の子どもたちの様子を見ながら考えたことをもとにまとめています。
           </p>
@@ -279,7 +288,7 @@ export default async function Page() {
 
         <div className="bg-purple-100 rounded-3xl p-8 text-center">
 
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 id="section-10" className="text-2xl font-bold mb-4">
             🎓 今日の6さいドリルはこちら
           </h2>
 

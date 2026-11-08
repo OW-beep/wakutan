@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -45,6 +47,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-09-21" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① 「できないと」つい怒ってしまう"}, {"id": "section-2", "text": "② 「みんな同じ」を求めてしまう"}, {"id": "section-3", "text": "③ 「結果」ばかり見てしまう"}, {"id": "section-4", "text": "3つに共通していること"}, {"id": "section-5", "text": "よくある質問"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           子どもの知育・家庭学習に関わっていると、「頭では分かっているのに、つい」という場面がよくあります。
         </p>
@@ -54,7 +63,7 @@ export default async function Page() {
           「うちだけじゃないんだ」と思ってもらえたら、それだけで少し気持ちが軽くなるかもしれません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① 「できないと」つい怒ってしまう
         </h2>
 
@@ -76,7 +85,7 @@ export default async function Page() {
           「できないことを直す」というより、「どこでつまずいているのかを見る」という意識に変わってきました。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② 「みんな同じ」を求めてしまう
         </h2>
 
@@ -108,7 +117,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ 「結果」ばかり見てしまう
         </h2>
 
@@ -135,7 +144,7 @@ export default async function Page() {
           親自身も焦らなくなりました。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           3つに共通していること
         </h2>
 
@@ -153,7 +162,7 @@ export default async function Page() {
           でも詳しく紹介しています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -200,7 +209,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年9月　/　最終更新日：2026年9月
+          公開日：2026年9月21日　/　最終更新日：2026年9月21日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

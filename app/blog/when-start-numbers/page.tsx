@@ -1,6 +1,10 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -17,7 +21,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("さんすう ドリル 幼児", 3);
+  const products = await searchRakutenItems("数 おもちゃ 知育 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -25,8 +29,8 @@ export default async function Page() {
         title="数字は何歳から覚える？年齢別の教え方を解説｜わくたん"
         description="数字はいつから教え始めるとよいのか、年齢ごとの目安と教え方のコツを、データも交えて解説します。"
         slug="when-start-numbers"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-04-01"
+        dateModified="2026-11-08"
       />
 
 
@@ -45,6 +49,19 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-11-08" />
+
+    <ArticleSummary
+      worry="数字を教え始めるのは、何歳からがいいのか迷っています。"
+      answer="年齢にこだわらず、お子さんが興味を持ったところから始めて大丈夫です。数字を読む・順番に数える・物の数が分かる、は別々の力。まずは、お風呂や買い物など、生活の中で数に触れるところから始めましょう。"
+      steps={["お風呂で数を数える、おもちゃの数を一緒に確認する", "読み書きの練習より先に、物を数える・「どちらが多い？」を比べる経験を増やす", "周りの子と比べず、本人が興味を持ったところから始める"]}
+    />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "数字を唱えられる時期の目安"}, {"id": "section-2", "text": "数える力が育つ時期の目安"}, {"id": "section-3", "text": "数の意味を理解する時期の目安"}, {"id": "section-4", "text": "無理に覚えさせるより日常の中で触れる"}, {"id": "section-5", "text": "「言える」から「分かる」へ変わった瞬間"}, {"id": "section-6", "text": "わが家が数字に関わり始めたころ"}, {"id": "section-7", "text": "迷ったことと、今から思うこと"}, {"id": "section-8", "text": "保護者からよく届く質問"}, {"id": "section-9", "text": "年齢はあくまで目安"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           数字の理解には「唱える」「数える」「意味がわかる」という段階があります。まだ数字が言えないと焦る前に、この順番を知っておくと安心です。
         </p>
@@ -53,7 +70,7 @@ export default async function Page() {
           多くの子は1〜10を順番に言えるようになるのが先で、「3個ちょうだい」のように実際に数える力はその後に育っていきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           数字を唱えられる時期の目安
         </h2>
 
@@ -61,7 +78,7 @@ export default async function Page() {
           3歳前後から「いち、に、さん…」と数字を順番に唱えられるようになる子が増えてきます。この段階では、意味を理解していなくても問題ありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           数える力が育つ時期の目安
         </h2>
 
@@ -82,7 +99,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           数の意味を理解する時期の目安
         </h2>
 
@@ -90,7 +107,7 @@ export default async function Page() {
           「3」という数字を見て「3個」をイメージできるようになるのは、5〜6歳ごろにかけて発達していく力です。この力が育つと、簡単なたし算・ひきざんの土台ができてきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           無理に覚えさせるより日常の中で触れる
         </h2>
 
@@ -102,7 +119,7 @@ export default async function Page() {
           興味を持ったタイミングで少しずつ取り入れることが、無理なく定着させるコツです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「言える」から「分かる」へ変わった瞬間
         </h2>
 
@@ -114,7 +131,44 @@ export default async function Page() {
           あるとき、お菓子を4個並べて「何個ある？」と聞いたら、1個ずつ指をさしながら「1、2、3、4」と数えて、「4個！」と答えました。その後、「じゃあ1個食べたら？」と聞くと、「3個」と答えたんです。そこで、「数字を暗記しているだけではなく、数量として理解し始めたんだな」と感じました。それ以来、ドリルだけでなく、お菓子やブロックなど実物を使って「何個ある？」と聞くようにしています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家が数字に関わり始めたころ
+        </h2>
+
+        <p className="leading-8 mb-4">
+          数字を意識して関わるようになったのは、3歳後半から4歳ごろです。最初から数字を書く練習をさせたわけではありません。お風呂で数を数えたり、おもちゃの数を一緒に確認したりするところから始めました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          数字を覚えることだけを目的にするのではなく、日常生活の中で数に触れる機会を増やしていった感じです。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          迷ったことと、今から思うこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          何歳から数字を教えるのがよいのか、どこまで理解できていればよいのかは、少し迷いました。周りの子が数字を書いている話を聞くと、うちも早く練習させた方がよいのかな、と思うこともありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ただ、数字を読めること、順番に数えられること、実際の物の数を理解することは、それぞれ違う力です。一度に全部できるようにする必要はないと考えて、まずは本人が興味を持ったところから始めました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          今から思うと、数字を読んだり書いたりする練習に、少し意識が向きすぎていたかなと思います。数字の形を覚えることも大切ですが、実際に物を数えたり、どちらが多いか比べたりする経験を、もっと増やしてもよかったと感じています。今は、買い物のときに個数を数えたり、おもちゃを片付けるときに一緒に数えたりと、生活の中で自然に数字を使うことを意識しています。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ✏️ 「どちらが多い？」の経験づくりに
+          </p>
+          <p>
+            <Link href="/4/kurabekko" className="text-orange-600 font-bold hover:underline">4歳向けくらべっこ</Link>は、大小・多い少ないを比べる問題です。生活の中の経験とあわせて、試してみてください。
+          </p>
+        </div>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           保護者からよく届く質問
         </h2>
 
@@ -131,9 +185,17 @@ export default async function Page() {
             <p className="font-bold">Q. ドリルと実物、どちらを優先すべき？</p>
             <p className="leading-7 text-gray-700">A. 数量の感覚がまだ不安定なうちは、実物を使った経験を優先するのがおすすめです。感覚が育ってきてから、ドリルで理解を確認する流れが無理なく進めやすいです。</p>
           </div>
+          <div>
+            <p className="font-bold">Q. 周りの子が数字を書いているのを聞くと、焦ります。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、そう思うことがありました。数字を読めること、順番に数えられること、物の数を理解することは、それぞれ別の力です。一度に全部できるようにする必要はなく、本人が興味を持ったところから始めて大丈夫です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 数字の読み書きの練習は、いつから始めればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 急がなくて大丈夫です。わが家では、読み書きの練習に意識が向きすぎたと感じていて、物を数える、どちらが多いか比べるといった経験を、先にもっと増やしてもよかったと思っています。</p>
+          </div>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢はあくまで目安
         </h2>
 
@@ -166,29 +228,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年4月1日　/　最終更新日：2026年11月8日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4/sansu", "label": "4歳向け算数ドリルを見る", "desc": "物を数える・数を比べる、簡単なたし算の問題を毎日更新しています。"}, {"href": "/4/kurabekko", "label": "4歳向けくらべっこ", "desc": "「どちらが多い？」を比べる経験づくりに。"}, {"href": "/5/sansu", "label": "5歳向け算数ドリル", "desc": "数の理解や、たし算の基礎を毎日30問。"}]}
+          articles={[{"slug": "4year-number", "desc": "数が合わないときの、3個から始める数え方。"}, {"slug": "number-play", "desc": "準備いらずで、生活の中でできる数遊び。"}, {"slug": "5year-number-weak", "desc": "数字は読めるのに量がわからない、と感じたときの関わり方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🎁 今日のおすすめ
-          </h3>
-
-          <p className="mb-3">
-            数の感覚を育てる算数ドリルにも挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/4/sansu"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            算数ドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="数に親しめる知育グッズ" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/when-start-numbers" title="数字は何歳から覚える？年齢別の教え方を解説" />
         <RelatedArticles currentSlug="when-start-numbers" />

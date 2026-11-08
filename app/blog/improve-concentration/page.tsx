@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="幼児の集中力を伸ばす方法｜家庭で今日からできるコツ｜わくたん"
         description="幼児の集中力を伸ばす方法を、年齢別の目安データとあわせて解説。家庭で今日から取り入れられる具体的な工夫を紹介します。"
         slug="improve-concentration"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-04-27"
+        dateModified="2026-07-04"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-07-04" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "年齢別の集中力の目安"}, {"id": "section-2", "text": "環境を整える"}, {"id": "section-3", "text": "量を区切って取り組む"}, {"id": "section-4", "text": "集中している時は見守る"}, {"id": "section-5", "text": "好きなことから始める"}, {"id": "section-6", "text": "集中が切れてしまったときの対応"}, {"id": "section-7", "text": "よくある疑問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           集中力の心配は多くの保護者に共通する悩みですが、幼児の集中力には年齢なりの目安があり、多くの場合は心配しすぎる必要はありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢別の集中力の目安
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           この目安に照らすと、多くの子は年齢相応の集中力を持っていることになります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           環境を整える
         </h2>
 
@@ -78,7 +87,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           量を区切って取り組む
         </h2>
 
@@ -86,7 +95,7 @@ export default async function Page() {
           「10問全部」ではなく「3問だけ」のように、量を区切って取り組むと、達成感を得やすく集中力も保ちやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           集中している時は見守る
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           子どもが何かに集中しているときに、「すごいね」「どうやったの？」と話しかけたくなりますが、集中を途切れさせる原因になることもあります。一区切りつくまで見守るのも大切な関わり方です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           好きなことから始める
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           興味のあることには、目安の時間より長く集中できることも珍しくありません。得意なジャンルや好きなテーマから取り組み始めるのも、集中力を引き出すコツです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           集中が切れてしまったときの対応
         </h2>
 
@@ -114,7 +123,7 @@ export default async function Page() {
           机の前で進まなくなったときは、場所を変えるのも効果的です。リビングのテーブルや床に移動するだけで、気分が切り替わって再び取り組めることもあります。「集中させる」ことより「続けられる形にする」ことを意識してみましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある疑問
         </h2>
 
@@ -158,7 +167,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年4月27日　/　最終更新日：2026年7月4日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

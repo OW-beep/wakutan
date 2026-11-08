@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -45,6 +47,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-09-26" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① 成長のスピードは一人ひとりちがう"}, {"id": "section-2", "text": "② 「先月のわが子」と比べてみる"}, {"id": "section-3", "text": "③ できたことを一緒に喜ぶ"}, {"id": "section-4", "text": "よくある質問"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           公園や児童館で同年代の子を見て、「うちの子はまだできないけど大丈夫かな」と感じることはありませんか。
         </p>
@@ -54,7 +63,7 @@ export default async function Page() {
           ここでは、比べる気持ちと上手に付き合うための3つの視点を紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① 成長のスピードは一人ひとりちがう
         </h2>
 
@@ -77,7 +86,7 @@ export default async function Page() {
           ということはなるべくしないようにしています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② 「先月のわが子」と比べてみる
         </h2>
 
@@ -107,7 +116,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ できたことを一緒に喜ぶ
         </h2>
 
@@ -130,7 +139,7 @@ export default async function Page() {
           でも紹介しているので、あわせてご覧ください。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -176,7 +185,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年9月　/　最終更新日：2026年9月
+          公開日：2026年9月26日　/　最終更新日：2026年9月26日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

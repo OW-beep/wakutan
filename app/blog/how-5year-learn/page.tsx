@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,7 +27,7 @@ export default async function Page() {
         title="5歳の学び方・勉強のコツ｜年中さん向けの関わり方｜わくたん"
         description="5歳（年中〜年長）の勉強・学び方のコツを解説。考える力や集中力を育てながら、楽しく学習を続けるための関わり方を紹介します。"
         slug="how-5year-learn"
-        datePublished="2026-03-01"
+        datePublished="2026-05-28"
         dateModified="2026-09-25"
       />
 
@@ -50,6 +52,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-09-25" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "🌱 5歳は学びが広がる時期"}, {"id": "section-2", "text": "🧠 考える力を伸ばそう"}, {"id": "section-3", "text": "🔢 数字への理解を深める"}, {"id": "section-4", "text": "✏️ 文字への興味を大切に"}, {"id": "section-5", "text": "⏰ 学習時間の目安"}, {"id": "section-6", "text": "💡 保護者が意識したいポイント"}, {"id": "section-7", "text": "🕐 5歳の1日の過ごし方（イメージ例）"}, {"id": "section-8", "text": "❓ よくある疑問"}, {"id": "section-9", "text": "🌈 まとめ"}, {"id": "section-10", "text": "🚀 今日の5さいドリルはこちら"}]}
+    />
+
+
         <div className="bg-white border-2 border-dashed border-indigo-200 rounded-2xl p-6 mb-8">
           <p className="font-bold text-indigo-700 mb-2">
             📋 この記事でわかること
@@ -63,7 +72,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-indigo-600">
+          <h2 id="section-1" className="text-3xl font-bold mb-6 text-indigo-600">
             🌱 5歳は学びが広がる時期
           </h2>
 
@@ -92,7 +101,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-indigo-600">
+          <h2 id="section-2" className="text-3xl font-bold mb-6 text-indigo-600">
             🧠 考える力を伸ばそう
           </h2>
 
@@ -117,7 +126,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-indigo-600">
+          <h2 id="section-3" className="text-3xl font-bold mb-6 text-indigo-600">
             🔢 数字への理解を深める
           </h2>
 
@@ -142,7 +151,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-indigo-600">
+          <h2 id="section-4" className="text-3xl font-bold mb-6 text-indigo-600">
             ✏️ 文字への興味を大切に
           </h2>
 
@@ -168,7 +177,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-indigo-600">
+          <h2 id="section-5" className="text-3xl font-bold mb-6 text-indigo-600">
             ⏰ 学習時間の目安
           </h2>
 
@@ -191,7 +200,7 @@ export default async function Page() {
 
         <section className="bg-gradient-to-r from-sky-100 to-indigo-100 rounded-3xl p-8 shadow-lg mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-indigo-700">
+          <h2 id="section-6" className="text-3xl font-bold mb-6 text-indigo-700">
             💡 保護者が意識したいポイント
           </h2>
 
@@ -223,7 +232,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-indigo-600">
+          <h2 id="section-7" className="text-3xl font-bold mb-6 text-indigo-600">
             🕐 5歳の1日の過ごし方（イメージ例）
           </h2>
 
@@ -249,7 +258,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-8">
 
-          <h2 className="text-3xl font-bold mb-6 text-indigo-600">
+          <h2 id="section-8" className="text-3xl font-bold mb-6 text-indigo-600">
             ❓ よくある疑問
           </h2>
 
@@ -272,7 +281,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-10">
 
-          <h2 className="text-3xl font-bold mb-6 text-indigo-600">
+          <h2 id="section-9" className="text-3xl font-bold mb-6 text-indigo-600">
             🌈 まとめ
           </h2>
 
@@ -305,7 +314,7 @@ export default async function Page() {
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年3月　/　最終更新日：2026年7月</p>
+          <p>公開日：2026年5月28日　/　最終更新日：2026年9月25日</p>
           <p className="mt-1">
             本記事は、わくたん運営者が5歳向けの問題づくりや家庭での様子をふまえてまとめています。
           </p>
@@ -313,7 +322,7 @@ export default async function Page() {
 
         <div className="bg-indigo-100 rounded-3xl p-8 text-center">
 
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 id="section-10" className="text-2xl font-bold mb-4">
             🚀 今日の5さいドリルはこちら
           </h2>
 

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="ひらがなを楽しく覚える5つの方法｜わくたん"
         description="4〜6歳向けに、ひらがなを遊びながら覚える5つの方法を紹介。日常生活の中で楽しく文字に親しむコツと、つまずいたときの対応も解説します。"
         slug="hiragana-fun"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-05-23"
+        dateModified="2026-06-25"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-06-25" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① 絵本の読み聞かせ"}, {"id": "section-2", "text": "② カルタ遊び"}, {"id": "section-3", "text": "③ 名前探しゲーム"}, {"id": "section-4", "text": "④ お手紙ごっこ"}, {"id": "section-5", "text": "⑤ なぞり書き→自分で書く"}, {"id": "section-6", "text": "好きなキャラクターを活用する"}, {"id": "section-7", "text": "つまずいたときの対応"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           ひらがな学習というと、机に向かって書く練習をイメージしがちですが、実はそれ以外にも楽しく覚えられる方法がたくさんあります。
         </p>
@@ -64,7 +73,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① 絵本の読み聞かせ
         </h2>
 
@@ -76,7 +85,7 @@ export default async function Page() {
           同じ絵本を繰り返し読むことで、「この文字、知ってる！」という発見も生まれやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② カルタ遊び
         </h2>
 
@@ -93,7 +102,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ 名前探しゲーム
         </h2>
 
@@ -101,7 +110,7 @@ export default async function Page() {
           自分の名前や好きなものの名前を、身の回りから探すゲームは、興味を持って取り組みやすいのが特徴です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ④ お手紙ごっこ
         </h2>
 
@@ -113,7 +122,7 @@ export default async function Page() {
           うまく書けなくても、絵とひらがな1文字を組み合わせるだけで立派な「お手紙」になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑤ なぞり書き→自分で書く
         </h2>
 
@@ -121,7 +130,7 @@ export default async function Page() {
           いきなり自分で書かせるのではなく、なぞり書きから始めて少しずつ自分で書く練習に移行すると、無理なくステップアップできます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           好きなキャラクターを活用する
         </h2>
 
@@ -133,7 +142,7 @@ export default async function Page() {
           「このキャラクターの名前、書けるようになりたい」という気持ちが、学習の大きなモチベーションになることもあります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           つまずいたときの対応
         </h2>
 
@@ -170,7 +179,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年5月23日　/　最終更新日：2026年6月25日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

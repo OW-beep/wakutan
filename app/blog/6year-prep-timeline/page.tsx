@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="小学校入学準備、いつ何をすればいい？月ごとの目安｜わくたん"
         description="小学校入学準備を月ごとに整理して解説。いつ・何をすればいいか迷う保護者向けに、無理のないタイムラインを紹介します。"
         slug="6year-prep-timeline"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-07-07"
+        dateModified="2026-07-17"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-07-17" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "秋ごろ：情報収集と生活リズムの見直し"}, {"id": "section-2", "text": "冬ごろ：学用品の準備を始める"}, {"id": "section-3", "text": "1〜2月ごろ：生活習慣の総仕上げ"}, {"id": "section-4", "text": "3月ごろ：学びへの土台づくり"}, {"id": "section-5", "text": "4月：入学"}, {"id": "section-6", "text": "遅れていても焦らなくて大丈夫"}, {"id": "section-7", "text": "これから意識したいこと（生活面の自立）"}, {"id": "section-8", "text": "よく聞かれること"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           「入学準備、結局いつから何を始めればいいの？」という疑問に、月ごとの目安でお答えします。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           ここで紹介するのはあくまで目安です。焦らず、できるところから進めていただければと思います。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           秋ごろ：情報収集と生活リズムの見直し
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           就学時健診の案内が届く時期です。あわせて、起床・就寝時間を少しずつ小学校生活に近づけていくとよいでしょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           冬ごろ：学用品の準備を始める
         </h2>
 
@@ -78,7 +87,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           1〜2月ごろ：生活習慣の総仕上げ
         </h2>
 
@@ -86,7 +95,7 @@ export default async function Page() {
           「自分で着替える」「時間を見て行動する」など、生活面の自立を意識する時期です。学用品の準備よりも、実はこちらの方が入学後の安心感につながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           3月ごろ：学びへの土台づくり
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           文字や数の完璧な習得よりも、「話を聞く」「机に向かう」という姿勢づくりを意識しましょう。わくたんのような短時間のドリルを習慣にしておくのも一つの方法です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           4月：入学
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           入学後は、学校からの新しい情報も多く、保護者の方も慌ただしくなりがちです。事前の準備がしてあれば、この時期の負担を減らすことができます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           遅れていても焦らなくて大丈夫
         </h2>
 
@@ -110,7 +119,7 @@ export default async function Page() {
           このタイムラインより準備が遅れていても、多くのことは直前からでも十分間に合います。完璧を目指さず、できることから進めましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           これから意識したいこと（生活面の自立）
         </h2>
 
@@ -130,7 +139,7 @@ export default async function Page() {
           学習面では、ひらがな・数字を無理なく確認しながら、少しずつ「問題を読んで、自分で考える」経験を増やしたいと思っています。また、入学直前になって急に生活リズムを変えるのではなく、朝起きる時間や寝る時間を少しずつ整えていくことも意識したいです。「小学校に入るまでに全部できるようにする」というより、あと1年くらいかけて、できることを少しずつ増やしていくイメージです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よく聞かれること
         </h2>
 
@@ -174,7 +183,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月7日　/　最終更新日：2026年7月17日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="「あと少しでできそう」を見極めるコツ｜わくたん"
         description="子どもにとって「ちょっと頑張ればできる」難易度を見極めるコツを紹介。発達心理学の考え方をふまえ、無理なく力を伸ばす問題の選び方を解説します。"
         slug="almost-can-do"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-07-06"
+        dateModified="2026-08-18"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-08-18" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "「発達の最近接領域」という考え方"}, {"id": "section-2", "text": "見極めのサイン①：時間をかければ自力で解ける"}, {"id": "section-3", "text": "見極めのサイン②：ヒントで一気に理解が進む"}, {"id": "section-4", "text": "難しすぎるサイン・簡単すぎるサイン"}, {"id": "section-5", "text": "正解不正解より「反応」を見る"}, {"id": "section-6", "text": "「待ってよかった」が形になった瞬間"}, {"id": "section-7", "text": "もう少し詳しく知りたい方へ"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           簡単すぎる問題は退屈に、難しすぎる問題はやる気を失わせてしまいます。ちょうどいい難易度を見極めることは、実は家庭学習の大きなポイントです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「発達の最近接領域」という考え方
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           この「ちょっと頑張ればできる」範囲は、心理学で「発達の最近接領域」と呼ばれています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           見極めのサイン①：時間をかければ自力で解ける
         </h2>
 
@@ -78,7 +87,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           見極めのサイン②：ヒントで一気に理解が進む
         </h2>
 
@@ -86,7 +95,7 @@ export default async function Page() {
           少しヒントを出しただけで「あ、わかった！」となる問題も、まさに「あと少し」の範囲にある問題です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           難しすぎるサイン・簡単すぎるサイン
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           ヒントを出しても全く進まない場合は、少しレベルを下げてみましょう。逆に、説明もせずにすぐ正解してしまう場合は、レベルを上げるタイミングかもしれません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           正解不正解より「反応」を見る
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           正解率だけでなく、「うーん」と考え込む時間があるか、集中して取り組めているかといった反応を見ることが、ちょうどいい難易度を見極めるヒントになります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「待ってよかった」が形になった瞬間
         </h2>
 
@@ -114,7 +123,7 @@ export default async function Page() {
           しばらくすると、ピースをいろいろな向きに回しながら、「これじゃない？」と自分で見つけました。その後、別のパズルでもすぐに「やって」と言わず、まず自分でピースを回してみるようになったんです。もちろん全部を待てばいいわけではなく、明らかに難しすぎるときは助けます。ただ、「できない」と言った瞬間が、本当にできないとは限らない、というのはこの経験からかなり意識するようになりました。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           もう少し詳しく知りたい方へ
         </h2>
 
@@ -158,7 +167,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月6日　/　最終更新日：2026年8月18日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

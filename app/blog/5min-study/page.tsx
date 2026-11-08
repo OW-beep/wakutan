@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="毎日5分の家庭学習は効果がある？幼児の続け方"
         description="幼児の家庭学習は長時間より継続が大切。毎日5分の学習が、集中力や学習習慣を育てる理由と、続けるコツを解説します。"
         slug="5min-study"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-05-25"
+        dateModified="2026-07-28"
       />
 
 
@@ -48,6 +50,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-07-28" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "なぜ5分でいいの？"}, {"id": "section-2", "text": "習慣化しやすい"}, {"id": "section-3", "text": "集中力が育つ"}, {"id": "section-4", "text": "自信につながる"}, {"id": "section-5", "text": "勉強嫌いを防ぎやすい"}, {"id": "section-6", "text": "わくたんの考え方"}, {"id": "section-7", "text": "続けてきて変わったこと"}, {"id": "section-8", "text": "よくある疑問"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           「勉強は長くやった方がいい」
           と思われがちですが、幼児期は少し違います。
@@ -65,7 +74,7 @@ export default async function Page() {
           をおすすめしています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           なぜ5分でいいの？
         </h2>
 
@@ -97,7 +106,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           習慣化しやすい
         </h2>
 
@@ -126,7 +135,7 @@ export default async function Page() {
 になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           集中力が育つ
         </h2>
 
@@ -157,7 +166,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           自信につながる
         </h2>
 
@@ -177,7 +186,7 @@ export default async function Page() {
           新しいことへ挑戦する力になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           勉強嫌いを防ぎやすい
         </h2>
 
@@ -197,7 +206,7 @@ export default async function Page() {
           幼児期は好きになることが最優先です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           わくたんの考え方
         </h2>
 
@@ -216,7 +225,7 @@ export default async function Page() {
           子どもたちが考える楽しさを体験できるようにしています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           続けてきて変わったこと
         </h2>
 
@@ -228,7 +237,7 @@ export default async function Page() {
           また、最初は親が横について「ここやって」と言わないと進まなかったのが、今はプリントを渡すと、自分で問題を読んで考えようとする場面も増えました。もちろん毎日ではありません。ただ、「勉強＝長く座らされるもの」というイメージが薄くなったのは大きいと思います。5分の学習で知識が一気に増えるわけではありませんが、「自分から始める」「最後までやってみる」という習慣の部分では、少しずつ変化を感じています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある疑問
         </h2>
 
@@ -273,7 +282,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年8月
+          公開日：2026年5月25日　/　最終更新日：2026年7月28日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

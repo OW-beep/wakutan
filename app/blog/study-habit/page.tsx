@@ -1,6 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +28,8 @@ export default async function Page() {
         title="家庭学習が続かないときのコツ｜幼児の習慣づけ"
         description="幼児の家庭学習が続かないと悩む保護者向け。無理なく習慣化する方法と、勉強嫌いを防ぐコツを紹介します。"
         slug="study-habit"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-03-20"
+        dateModified="2026-11-08"
       />
 
 
@@ -47,6 +50,19 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-11-08" />
+
+    <ArticleSummary
+      worry="家庭学習が続きません。習慣にするには、どうすればいいですか？"
+      answer="毎日きっちりより、「休んでもまた始められる」形を目指しましょう。生活の流れに自然に入れて、数日空いたら、興味を持ちそうな問題を1枚出すだけで、再開できます。"
+      steps={["夕食前など、余裕のある時間を、ゆるく決める", "前の晩に、1枚だけ机に置いておく", "数日空いても、「今日は1枚だけ」で再開する", "叱らない・比べない。できたことを認める"]}
+    />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "毎日少しだけにする"}, {"id": "section-2", "text": "時間を固定する"}, {"id": "section-3", "text": "「始めるまでの手間」を減らす"}, {"id": "section-4", "text": "正解より挑戦をほめる"}, {"id": "section-5", "text": "完璧を目指さない"}, {"id": "section-6", "text": "「途切れても戻ってこられる」ことの方が大事"}, {"id": "section-7", "text": "子どもが選べるようにする"}, {"id": "section-8", "text": "家庭学習は競争ではない"}, {"id": "section-9", "text": "休んだ後の再開のコツ"}, {"id": "section-10", "text": "わくたんがおすすめする学習法"}, {"id": "section-11", "text": "「必ずこの時間」にしなくていい"}, {"id": "section-12", "text": "休んでも、また始められればいい"}, {"id": "section-13", "text": "習慣づけで、やらないと決めていること"}, {"id": "section-14", "text": "こんな質問もよくいただきます"}]}
+    />
+
 
         <p className="text-lg leading-8 mb-6">
           「最初はやる気だったのに続かなかった」
@@ -71,7 +87,7 @@ export default async function Page() {
           本記事では、幼児の家庭学習を無理なく続けるためのコツを紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           毎日少しだけにする
         </h2>
 
@@ -105,7 +121,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           時間を固定する
         </h2>
 
@@ -127,7 +143,7 @@ export default async function Page() {
           続きやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「始めるまでの手間」を減らす
         </h2>
 
@@ -148,7 +164,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           正解より挑戦をほめる
         </h2>
 
@@ -184,7 +200,7 @@ export default async function Page() {
           </ul>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           完璧を目指さない
         </h2>
 
@@ -211,7 +227,7 @@ export default async function Page() {
           と考えることが習慣化のコツです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「途切れても戻ってこられる」ことの方が大事
         </h2>
 
@@ -223,7 +239,7 @@ export default async function Page() {
           ただ、休んだからといって一気に取り戻そうと何枚もやらせると、かえって子どもが嫌になってしまいます。3日休んでも、また「今日は1枚だけやろう」と再開すればいい。習慣を途切れさせないことよりも、「途切れても戻ってこられること」の方が、長い目で見ると大切です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           子どもが選べるようにする
         </h2>
 
@@ -243,7 +259,7 @@ export default async function Page() {
           自分で選ぶ学習になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           家庭学習は競争ではない
         </h2>
 
@@ -262,7 +278,7 @@ export default async function Page() {
           小学校以降の学びにも良い影響があります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           休んだ後の再開のコツ
         </h2>
 
@@ -274,7 +290,7 @@ export default async function Page() {
           再開するときこそ、いつもより少ない量から始めるのがコツです。「今日は1問だけ」で十分で、まずは「また始められた」という感覚を取り戻すことを優先しましょう。量を戻すのはそれからでも遅くありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           わくたんがおすすめする学習法
         </h2>
 
@@ -295,7 +311,43 @@ export default async function Page() {
           学ぶことが自然な習慣になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「必ずこの時間」にしなくていい
+        </h2>
+
+        <p className="leading-8 mb-4">
+          わが家で一番効果があったのは、取り組むタイミングをある程度決めたことです。夕食前など、比較的時間に余裕があるときにドリルをすることが多いです。ただし、必ずその時間にやらなければいけないとは決めていません。
+        </p>
+
+        <p className="leading-8 mb-4">
+          「この時間になったら必ず勉強」というルールにするよりも、生活の流れの中に自然に入れることを意識しています。
+        </p>
+
+<h2 id="section-12" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          休んでも、また始められればいい
+        </h2>
+
+        <p className="leading-8 mb-4">
+          旅行や体調不良、下の子たちの生活リズムが崩れたときなど、しばらくドリルをしない時期もありました。以前は、何日も空いてしまうと、また最初から習慣を作り直さなければいけないような気持ちになっていました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          でも、今はあまり気にしていません。数日空いたあとでも、子どもが興味を持ちそうな問題を1枚出してみると、意外と自然に再開できます。毎日欠かさず続けることよりも、休んでもまた始められることの方が大切だと感じています。
+        </p>
+
+<h2 id="section-13" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          習慣づけで、やらないと決めていること
+        </h2>
+
+        <p className="leading-8 mb-4">
+          わが家で、やらないと決めているのは、ドリルを終わらせることを理由に叱ることです。「昨日もやらなかったよね」「これくらいはできるでしょう」といった言葉は、できるだけ使わないようにしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、ほかの子と比べることもしません。学習の進み方は子どもによって違いますし、上の子自身も、日によって集中できる量が違います。ドリルが嫌なものになってしまわないように、できたことを認めるようにしています。
+        </p>
+
+<h2 id="section-14" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           こんな質問もよくいただきます
         </h2>
 
@@ -311,6 +363,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 声をかけないと、いつまでも自分から始めません。</p>
             <p className="leading-7 text-gray-700">A. 声かけそのものをやめるより、「始めるまでの手間」を減らす工夫の方が効果的なことが多いです。前日の夜にプリントを1枚机に置いておくなど、小さな仕掛けから試してみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 必ず同じ時間にやらないと、習慣になりませんか？</p>
+            <p className="leading-7 text-gray-700">A. 「必ずこの時間」と決めなくても大丈夫です。夕食前など、余裕のある時間をゆるく決めて、生活の流れの中に自然に入れる形でも続けられます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 叱らずに、続けさせることはできますか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、ドリルを終わらせることを理由に叱らないと決めています。「昨日もやらなかったよね」といった言葉は使わず、できたことを認めるようにしています。</p>
           </div>
         </div>
 
@@ -341,29 +401,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年8月
+          公開日：2026年3月20日　/　最終更新日：2026年11月8日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/5", "label": "5歳向けドリルを見る", "desc": "今日は1枚だけ。前の晩に1枚選んで、机に置いておくのがおすすめです。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/print", "label": "印刷して使う", "desc": "1枚だけ印刷して、机に置いておきたいときに。"}]}
+          articles={[{"slug": "drill-hurdle-down", "desc": "「1問だけでもいい」と考えて、続けやすくした話。"}, {"slug": "busy-parent-5min", "desc": "忙しい日でも続けやすい、1日5分の進め方。"}, {"slug": "4year-drill-refusal", "desc": "ドリルを嫌がるときの、関わり方。"}, {"slug": "5min-study", "desc": "5分でできる学習法の、具体的なアイデア。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🎈 さっそく試してみよう
-          </h3>
-
-          <p className="mb-3">
-            習慣づくりの第一歩に、今日は1問だけ開いてみましょう。
-          </p>
-
-          <Link
-            href="/5"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            5さいドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="家庭学習を始めやすいドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/study-habit" title="家庭学習を続けるコツ" />
         <RelatedArticles currentSlug="study-habit" />

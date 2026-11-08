@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="幼児におすすめの知育遊び10選｜わくたん"
         description="4歳〜6歳の子どもにおすすめの知育遊びを10個紹介。おうちにあるものでできる遊びから、考える力を育てる遊びまでわかりやすく解説します。"
         slug="educational-play"
-        datePublished="2026-06-01"
-        dateModified="2026-08-10"
+        datePublished="2026-06-07"
+        dateModified="2026-08-11"
       />
 
 
@@ -46,6 +48,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-08-11" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "1. 仲間分けごっこ"}, {"id": "section-2", "text": "2. しりとり"}, {"id": "section-3", "text": "3. 数字探し"}, {"id": "section-4", "text": "4. パターン積み木"}, {"id": "section-5", "text": "5. 間違い探し"}, {"id": "section-6", "text": "6. なぞなぞ・クイズ"}, {"id": "section-7", "text": "7. 折り紙"}, {"id": "section-8", "text": "8. お店やさんごっこ"}, {"id": "section-9", "text": "9. カルタ・カードゲーム"}, {"id": "section-10", "text": "10. 迷路遊び"}, {"id": "section-11", "text": "お手伝いも立派な知育遊び"}, {"id": "section-12", "text": "気になる疑問Q&A"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           幼児期は「遊び」そのものが学びにつながる時期です。
           特別な教材がなくても、おうちにあるものや日常の会話の中で、
@@ -56,7 +65,7 @@ export default async function Page() {
           ここでは、4歳〜6歳のお子さんにおすすめの知育遊びを10個紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           1. 仲間分けごっこ
         </h2>
         <p className="leading-8 mb-4">
@@ -64,7 +73,7 @@ export default async function Page() {
           分類する力は、算数や論理的思考の土台になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           2. しりとり
         </h2>
         <p className="leading-8 mb-4">
@@ -72,7 +81,7 @@ export default async function Page() {
           移動中や待ち時間にも手軽にできる遊びです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           3. 数字探し
         </h2>
         <p className="leading-8 mb-4">
@@ -80,7 +89,7 @@ export default async function Page() {
           数字への興味を自然に引き出せます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           4. パターン積み木
         </h2>
         <p className="leading-8 mb-4">
@@ -88,7 +97,7 @@ export default async function Page() {
           規則性を見つける力が育ちます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           5. 間違い探し
         </h2>
         <p className="leading-8 mb-4">
@@ -96,7 +105,7 @@ export default async function Page() {
           絵本やドリルでも手軽に取り入れられます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           6. なぞなぞ・クイズ
         </h2>
         <p className="leading-8 mb-4">
@@ -104,7 +113,7 @@ export default async function Page() {
           親子の会話を楽しみながら取り組めるのも魅力です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           7. 折り紙
         </h2>
         <p className="leading-8 mb-4">
@@ -112,7 +121,7 @@ export default async function Page() {
           「手順を理解する力」を育てます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           8. お店やさんごっこ
         </h2>
         <p className="leading-8 mb-4">
@@ -120,7 +129,7 @@ export default async function Page() {
           遊びながら体験できます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           9. カルタ・カードゲーム
         </h2>
         <p className="leading-8 mb-4">
@@ -128,7 +137,7 @@ export default async function Page() {
           興味を育てます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           10. 迷路遊び
         </h2>
         <p className="leading-8 mb-4">
@@ -146,7 +155,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           お手伝いも立派な知育遊び
         </h2>
 
@@ -158,7 +167,7 @@ export default async function Page() {
           あとは、お絵描きや工作もそうです。「ここに丸を描いて」「この大きさにしたい」と考えながら作るので、図形や大きさ、位置関係をかなり意識しています。親としては「遊んでいるだけ」と思っていたことが、後から考えると、実はかなり頭を使っていたということが多いです。だから、最近は「知育のための特別な遊び」を増やすより、普段の生活や遊びの中で子どもが考える場面を大切にするようになりました。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-12" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           気になる疑問Q&A
         </h2>
 
@@ -202,7 +211,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月　/　最終更新日：2026年8月
+          公開日：2026年6月7日　/　最終更新日：2026年8月11日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

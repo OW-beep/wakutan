@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="雨の日・室内遊びで考える力を伸ばす10のアイデア｜わくたん"
         description="雨の日や室内で過ごす時間が増える日におすすめの、考える力を伸ばす室内遊びのアイデアを10個紹介します。"
         slug="rainy-day-play"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-07-10"
+        dateModified="2026-07-21"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-07-21" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① 積み木・ブロック遊び"}, {"id": "section-2", "text": "② お絵かき・ぬりえ"}, {"id": "section-3", "text": "③ かくれんぼ（おうちバージョン）"}, {"id": "section-4", "text": "④ しりとり・なぞなぞ"}, {"id": "section-5", "text": "⑤ 折り紙"}, {"id": "section-6", "text": "⑥ パズル"}, {"id": "section-7", "text": "⑦ ままごと・ごっこ遊び"}, {"id": "section-8", "text": "⑧ 新聞紙遊び"}, {"id": "section-9", "text": "⑨ 間違い探し・迷路"}, {"id": "section-10", "text": "⑩ 絵本の読み聞かせ"}, {"id": "section-11", "text": "⑪ おうち宝物探し"}, {"id": "section-12", "text": "よく聞かれること"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           雨の日が続くと、「外で遊べなくて子どもが退屈そう…」と感じることもあるのではないでしょうか。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           実は室内遊びにも、考える力や集中力を育てるチャンスがたくさんあります。ここでは手軽にできる10個のアイデアを紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① 積み木・ブロック遊び
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           形や高さを考えながら組み立てる遊びは、空間認識力を育てます。「ここに四角がないと崩れる」など、遊びながら安定させる工夫を自分で見つけていく姿もよく見られます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② お絵かき・ぬりえ
         </h2>
 
@@ -69,7 +78,7 @@ export default async function Page() {
           自由に表現する遊びは、発想力や手先の器用さを育てます。うまく描けたかどうかより、色を選んだ理由や描いたものについて話を聞いてあげると、会話も広がります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ かくれんぼ（おうちバージョン）
         </h2>
 
@@ -77,7 +86,7 @@ export default async function Page() {
           隠れる場所を考えたり、探す順番を工夫したりする中で、思考力が育ちます。「どこに隠れたら見つかりにくいか」を考えること自体が、立派な推理の練習になっています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ④ しりとり・なぞなぞ
         </h2>
 
@@ -85,7 +94,7 @@ export default async function Page() {
           言葉を思い出したり、答えを推理したりする遊びです。移動時間にもおすすめです。道具がいらないので、家事の合間などちょっとしたすきま時間にも取り入れやすいのが魅力です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑤ 折り紙
         </h2>
 
@@ -93,7 +102,7 @@ export default async function Page() {
           手順通りに折る経験が、順序立てて考える力につながります。船や飛行機など簡単なものから始めると、完成の達成感を得やすくおすすめです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑥ パズル
         </h2>
 
@@ -101,7 +110,7 @@ export default async function Page() {
           全体像をイメージしながらピースを組み合わせる、論理的思考の練習になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑦ ままごと・ごっこ遊び
         </h2>
 
@@ -109,7 +118,7 @@ export default async function Page() {
           役になりきって会話する中で、想像力や言葉の力が育ちます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑧ 新聞紙遊び
         </h2>
 
@@ -117,7 +126,7 @@ export default async function Page() {
           ちぎる・丸める・投げるなど、手先を使いながら体も動かせる遊びです。新聞紙を丸めてボールにして、家の中で的当てをしたり、「何個入った？」と数えたりするのもおすすめです。紙を折って船や飛行機を作ることもでき、作ったものを兄弟姉妹が真似しようとするので、きょうだいで遊びが続くこともあります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑨ 間違い探し・迷路
         </h2>
 
@@ -134,7 +143,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑩ 絵本の読み聞かせ
         </h2>
 
@@ -142,7 +151,7 @@ export default async function Page() {
           言葉や想像力を育てる、雨の日の定番の過ごし方です。ゆったりとした時間も大切にしましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑪ おうち宝物探し
         </h2>
 
@@ -150,7 +159,7 @@ export default async function Page() {
           家の中に「宝物」を隠して、簡単なヒントを出す遊びもおすすめです。「ソファの近く」「赤いものの近く」など、少しずつヒントを出すと、言葉を理解しながら探すので、意外と頭を使う遊びになります。特別な道具がいらず、思いついたときにすぐ始められるのも魅力です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-12" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よく聞かれること
         </h2>
 
@@ -195,7 +204,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月10日　/　最終更新日：2026年7月21日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

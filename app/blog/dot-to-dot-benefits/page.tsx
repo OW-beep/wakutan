@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="点つなぎ遊びの効果｜集中力・数字・運筆力が育つ｜わくたん"
         description="点つなぎ遊びは数字を覚えながら集中力や運筆力を育てられる知育遊びです。4〜6歳向けに効果や、数字が苦手な子への配慮も紹介します。"
         slug="dot-to-dot-benefits"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-04-24"
+        dateModified="2026-07-15"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-07-15" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "数字の順番に親しめる"}, {"id": "section-2", "text": "運筆力が育つ"}, {"id": "section-3", "text": "集中力・最後までやりきる力"}, {"id": "section-4", "text": "数字が苦手な子への配慮"}, {"id": "section-5", "text": "完成した絵で会話が広がる"}, {"id": "section-6", "text": "完成後の活用法"}, {"id": "section-7", "text": "よくある質問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           数字の順番に点をつないでいくと絵が現れる「点つなぎ」。シンプルながら、複数の力を同時に育てられる遊びです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           数字の順番に親しめる
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           最初のうちは「1、2、3、5……」というように、途中の数字を飛ばしてしまうこともよくあります。間違えるたびに「4が抜けてるよ」と教えるだけでは、間違いを直しているだけになりがちです。「今どこまで来た？」と聞いて、自分で直前の数字を確認してもらうようにすると、数字の並びそのものを意識する力が育っていきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           運筆力が育つ
         </h2>
 
@@ -82,7 +91,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           集中力・最後までやりきる力
         </h2>
 
@@ -90,7 +99,7 @@ export default async function Page() {
           絵が完成するまで集中して取り組む経験は、達成感とともに「最後までやりきる」力を育てます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           数字が苦手な子への配慮
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           「1、2、3…」と一緒に声に出しながら進めると、数字と点のつながりを確認しながら取り組めます。無理に一人でやらせず、最初は隣で見守ってあげるのがおすすめです。数字が小さかったり、点が多すぎたりするとかなり難しくなるので、まずは点の数が少ないものから始めるのが安心です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           完成した絵で会話が広がる
         </h2>
 
@@ -110,7 +119,7 @@ export default async function Page() {
           「何の絵が出てくるかな？」とワクワクしながら取り組めるのも点つなぎの魅力です。完成した絵について話すことで、会話も広がります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           完成後の活用法
         </h2>
 
@@ -122,7 +131,7 @@ export default async function Page() {
           「これ、頑張って完成させたんだよね」と後から振り返ることで、自信の積み重ねにもつながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -166,7 +175,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年4月24日　/　最終更新日：2026年7月15日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

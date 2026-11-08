@@ -1,6 +1,10 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +29,8 @@ export default async function Page() {
         title="数字遊びで算数が好きになる｜わくたん"
         description="4〜6歳向けの数字遊びを紹介。お買い物ごっこやサイコロ遊びなど、日常の中で自然に数の感覚を育てる方法を解説します。"
         slug="number-play"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-05-28"
+        dateModified="2026-11-08"
       />
 
 
@@ -45,6 +49,19 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-11-08" />
+
+    <ArticleSummary
+      worry="数字遊びをさせたいけれど、何をすればいいか分かりません。"
+      answer="特別な教材はいりません。お風呂で数える、積み木を並べて「いくつある？」と聞く、おやつを配って「みんなの分は足りるかな？」と考える。生活の中の数遊びで十分です。"
+      steps={["積み木やおもちゃを並べて、「いくつあると思う？」と聞く", "おやつを配るとき、「みんなの分は足りるかな？」と一緒に考える", "数字だけが並ぶプリントより、物を使った遊びから始める"]}
+    />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① お買い物ごっこ"}, {"id": "section-2", "text": "② サイコロ遊び"}, {"id": "section-3", "text": "③ かぞえ歌・手遊び"}, {"id": "section-4", "text": "④ 数字探しゲーム"}, {"id": "section-5", "text": "⑤ 年齢による取り入れ方の違い"}, {"id": "section-6", "text": "⑥ 遊びとドリルを組み合わせる"}, {"id": "section-7", "text": "わが家でよくやる、準備いらずの数遊び"}, {"id": "section-8", "text": "反応がよかった遊び・乗ってこなかった遊び"}, {"id": "section-9", "text": "「数が分かってきたな」と感じた場面"}, {"id": "section-10", "text": "よくある質問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           算数が得意になるかどうかは、実は「机に向かう前」の経験が大きく影響します。
         </p>
@@ -57,7 +74,7 @@ export default async function Page() {
           この記事では、特別な教材がなくても今日から始められる数字遊びを、年齢の目安とあわせて紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① お買い物ごっこ
         </h2>
 
@@ -69,7 +86,7 @@ export default async function Page() {
           実際のお買い物のときに「あと何個で10個かな？」と聞いてみるのもおすすめです。おもちゃのレジがなくても、お財布代わりの箱とカードで十分に遊べます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② サイコロ遊び
         </h2>
 
@@ -90,7 +107,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ かぞえ歌・手遊び
         </h2>
 
@@ -102,7 +119,7 @@ export default async function Page() {
           声に出しながら数える経験は、数字を読む力にもつながります。手遊びは移動中や待ち時間にも取り入れやすいのがメリットです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ④ 数字探しゲーム
         </h2>
 
@@ -114,7 +131,7 @@ export default async function Page() {
           「1から10までの数字、見つけられるかな？」と声をかけるだけで、外出先でも手軽に数字遊びができます。数字を見つけるたびに指差しして読む習慣は、数字を認識する力の土台になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑤ 年齢による取り入れ方の違い
         </h2>
 
@@ -126,7 +143,7 @@ export default async function Page() {
           年齢に合わせて難易度を調整することで、無理なく自信を積み重ねていくことができます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑥ 遊びとドリルを組み合わせる
         </h2>
 
@@ -138,7 +155,74 @@ export default async function Page() {
           「さっきサイコロでやったのと同じだね」と結びつけてあげると、子どもも学びのつながりを感じやすくなります。
         </p>
 
-        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家でよくやる、準備いらずの数遊び
+        </h2>
+
+        <p className="leading-8 mb-4">
+          わが家では、特別な教材を使うというより、お風呂で数を数えたり、おもちゃを並べて個数を当てたりする遊びが多いです。例えば、積み木を何個か並べて「いくつあると思う？」と聞いたり、おやつを配るときに「みんなの分は足りるかな？」と一緒に考えたりしています。日常生活の中でできるので、準備がいらないのも助かっています。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          反応がよかった遊び・乗ってこなかった遊び
+        </h2>
+
+        <div className="grid sm:grid-cols-2 gap-4 my-6">
+          <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">😊 反応がよかった</p>
+            <p className="leading-7">積み木やおもちゃを使った数遊び。目の前に物があると分かりやすいようで、自分から並べ替えたり、数え直したりしていました。</p>
+          </div>
+          <div className="bg-rose-50 border border-rose-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">😕 乗ってこなかった</p>
+            <p className="leading-7">数字だけが並んだプリントを使って、繰り返し答える遊び。同じような問題が続くと、途中で飽きてしまうことが多かったです。</p>
+          </div>
+        </div>
+
+        <p className="leading-8 mb-4">
+          同じ数字の勉強でも、遊び方によって反応が違うのだと感じました。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「数が分かってきたな」と感じた場面
+        </h2>
+
+        <p className="leading-8 mb-4">
+          おやつを配るときに、人数分を考えて、自分から数えるようになったときです。以前は親が一つずつ渡していましたが、あるとき自分で数を確認しながら並べていました。また、積み木を並べたときに、数を数えなくても「こっちの方が多い」と気づくことも出てきました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ドリルで正解できることだけが成長ではなく、普段の生活の中で数を使うようになったことも、大きな変化だと思っています。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ✏️ 遊びの「どちらが多い？」をドリルでも
+          </p>
+          <p>
+            <Link href="/4/kurabekko" className="text-orange-600 font-bold hover:underline">4歳向けくらべっこ</Link>は、大小・多い少ないを比べる問題です。積み木遊びとあわせて試してみてください。
+          </p>
+        </div>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 特別な教材は必要ですか？</p>
+            <p className="leading-7 text-gray-700">A. 必要ありません。積み木やおやつなど、身近な物で十分です。準備がいらないので、続けやすいです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 数字のプリントを嫌がるときは、どうすればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、数字だけが並んだプリントを繰り返す遊びは、長続きしませんでした。物を使った遊びから始めて、慣れてきたら、ドリルを少しだけ取り入れてみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 「数が分かってきた」のは、どんなときに感じますか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、おやつを配るときに人数分を自分で数えて並べたときと、積み木を数えなくても「こっちの方が多い」と気づいたときでした。</p>
+          </div>
+        </div>
+
+<div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫
           </p>
@@ -163,29 +247,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年5月28日　/　最終更新日：2026年11月8日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4/sansu", "label": "4歳向け算数ドリルを見る", "desc": "物を数える・数を比べる、簡単なたし算の問題を毎日更新しています。"}, {"href": "/4/kurabekko", "label": "4歳向けくらべっこ", "desc": "積み木遊びの「どっちが多い？」の延長で。"}, {"href": "/5/sansu", "label": "5歳向け算数ドリル", "desc": "数の理解や、たし算の基礎を毎日30問。"}]}
+          articles={[{"slug": "4year-number", "desc": "数が合わないときの、3個から始める数え方。"}, {"slug": "when-start-numbers", "desc": "数字をいつから教えるか、迷っているときに。"}, {"slug": "5year-number-weak", "desc": "数字は読めるのに量がわからない、と感じたときの関わり方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🎈 さっそく試してみよう
-          </h3>
-
-          <p className="mb-3">
-            遊びの延長として、今日の算数ドリルにも挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/4/sansu"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            算数ドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="数遊びに使える知育玩具" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/number-play" title="数字遊びで算数が好きになる" />
         <RelatedArticles currentSlug="number-play" />

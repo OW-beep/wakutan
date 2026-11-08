@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-10-17" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "焦る前に知っておきたいこと"}, {"id": "section-2", "text": "「読めない」と「書けない」は分けて考える"}, {"id": "section-3", "text": "まずは「読む」から始める"}, {"id": "section-4", "text": "遊びの中でひらがなに触れる"}, {"id": "section-5", "text": "調査からわかること：ひらがなの読み書きの個人差"}, {"id": "section-6", "text": "比べすぎないことが一番大切"}, {"id": "section-7", "text": "気になることが続くときは"}, {"id": "section-8", "text": "よく聞かれること"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           周りの子がひらがなを読めるようになってくると、「うちの子はまだ…」と不安になる方も多いのではないでしょうか。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           しかし、ひらがなの習得スピードには個人差が大きく、5歳で読み書きが完璧である必要はありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           焦る前に知っておきたいこと
         </h2>
 
@@ -65,7 +74,7 @@ export default async function Page() {
           大切なのは「文字は楽しいもの」という気持ちを育てることです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「読めない」と「書けない」は分けて考える
         </h2>
 
@@ -85,7 +94,7 @@ export default async function Page() {
           どちらも5歳の時点でできていないこと自体は珍しくなく、順番として「読む→書く」の順で身についていくのが自然な流れです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           まずは「読む」から始める
         </h2>
 
@@ -106,7 +115,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           遊びの中でひらがなに触れる
         </h2>
 
@@ -121,7 +130,7 @@ export default async function Page() {
           についての記事もあわせてご覧ください。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           調査からわかること：ひらがなの読み書きの個人差
         </h2>
 
@@ -156,7 +165,7 @@ export default async function Page() {
           書くときの「左右が反対の文字（鏡文字）」についても、同じ国立国語研究所（1972）の調査で、幼児の書き誤りの中で最も多く、全誤りの27.4%を占めたと紹介されています（愛媛大学教育学部紀要 1992）。鏡文字は、文字の全体の枠組みをとらえて書けるようになる4〜6歳ごろに出やすいとされています。左右が反対の文字が出ても、珍しいことではありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           比べすぎないことが一番大切
         </h2>
 
@@ -168,7 +177,7 @@ export default async function Page() {
           「昨日より少しできるようになったね」と、その子自身の成長に目を向けてあげましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           気になることが続くときは
         </h2>
 
@@ -180,7 +189,7 @@ export default async function Page() {
           専門的な視点からアドバイスをもらうことで、家庭での関わり方のヒントが見つかることもあります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よく聞かれること
         </h2>
 
@@ -228,7 +237,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月　/　最終更新日：2026年9月
+          公開日：2026年6月1日　/　最終更新日：2026年10月17日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

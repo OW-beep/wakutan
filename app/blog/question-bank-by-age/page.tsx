@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -45,6 +47,13 @@ export default async function Page() {
             </p>
           </div>
 
+    <ArticleByline dateModified="2026-08-13" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "学年が上がるほど問題数が増える理由"}, {"id": "section-2", "text": "ジャンル別・年齢別の問題数"}, {"id": "section-3", "text": "とけいは、なぜ6歳から？"}, {"id": "section-4", "text": "さんすう・ろんりは6歳で急拡大する"}, {"id": "section-5", "text": "ほぼ横ばいのジャンルは「土台」"}, {"id": "section-6", "text": "一番新しいジャンル「すいり」"}, {"id": "section-7", "text": "よく聞かれること"}]}
+    />
+
+
           <p className="leading-8 mb-4">
             わくたんは「今日のドリル」を毎日自動で更新していますが、その裏側には年齢ごとに用意された問題のストックがあります。今回、運営者自身がそのデータを集計してみました。他のどこにも載っていない、わくたん独自の数字です。
           </p>
@@ -55,7 +64,7 @@ export default async function Page() {
             <p className="text-sm text-gray-500 mt-2">4歳：3,235問／5歳：3,785問／6歳：5,823問（2026年8月時点）</p>
           </div>
 
-          <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
             学年が上がるほど問題数が増える理由
           </h2>
 
@@ -63,7 +72,7 @@ export default async function Page() {
             単純に「同じ問題を年齢別に振り分けている」わけではありません。6歳になると、4歳・5歳にはないジャンルが加わったり、同じジャンルでも問題のパターンそのものが大きく増えたりします。その結果、6歳向けの問題ストックは4歳の1.8倍近くまで膨らんでいます。
           </p>
 
-          <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
             ジャンル別・年齢別の問題数
           </h2>
 
@@ -99,7 +108,7 @@ export default async function Page() {
             ※ひらがな・もじは、5〜6歳向けの「もじ（文章問題）」ジャンルを合算しています。
           </p>
 
-          <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
             とけいは、なぜ6歳から？
           </h2>
 
@@ -111,7 +120,7 @@ export default async function Page() {
             これは「6歳・小学校入学が近づく時期に、時計を読む力が生活の中で急に必要になる」という考えに基づいた設計です。時間割に沿って行動する、休み時間の終わりを意識する、といった小学校生活を見据え、あえて他のジャンルより早いタイミングで問題数を厚くしています。
           </p>
 
-          <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
             さんすう・ろんりは6歳で急拡大する
           </h2>
 
@@ -132,7 +141,7 @@ export default async function Page() {
             </p>
           </div>
 
-          <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
             ほぼ横ばいのジャンルは「土台」
           </h2>
 
@@ -144,7 +153,7 @@ export default async function Page() {
             これらは年齢が上がっても難易度を急激に変えるより、繰り返し取り組むことで定着させたい「土台」にあたるジャンルだと考えています。派手に問題数を増やすジャンルと、じっくり定着させるジャンルを意図的に分けているということでもあります。
           </p>
 
-          <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
             一番新しいジャンル「すいり」
           </h2>
 
@@ -156,7 +165,7 @@ export default async function Page() {
             特に5歳・6歳向けは、登場人物を3人→4人に増やしたり、比べる観点（背の高さ・重さ・速さ・値段）を増やしたりすることで、同じ「推理する」という力を色々な角度から試せるようにしています。他のジャンルと同じくらいの厚みに育っていく過程を、この記事でそのまま記録していく予定です。
           </p>
 
-          <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
             よく聞かれること
           </h2>
 
@@ -176,7 +185,7 @@ export default async function Page() {
           </div>
 
           <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-            公開日：2026年8月　/　最終更新日：2026年8月<br />
+            公開日：2026年8月13日　/　最終更新日：2026年8月13日<br />
             本記事は、わくたんが実際に保持している問題データを運営者自身が集計したものです。集計方法や数値は今後の更新で変動する可能性があります。
           </div>
 

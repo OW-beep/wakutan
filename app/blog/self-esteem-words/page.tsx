@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="自己肯定感を育てる声かけ｜わくたん"
         description="幼児期の自己肯定感を育てる声かけの工夫を紹介。結果だけでなく過程に注目した伝え方のポイントを解説します。"
         slug="self-esteem-words"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-07-14"
+        dateModified="2026-07-29"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-07-29" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "結果だけでなく過程に注目する"}, {"id": "section-2", "text": "「できたこと」を具体的に伝える"}, {"id": "section-3", "text": "性格によって響く言葉は違う"}, {"id": "section-4", "text": "失敗したときの声かけも大切"}, {"id": "section-5", "text": "比べる相手は「昨日のその子」"}, {"id": "section-6", "text": "場面別の声かけ例"}, {"id": "section-7", "text": "わが家でよく使う決まり文句"}, {"id": "section-8", "text": "よくある疑問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           自己肯定感という言葉をよく耳にするようになりましたが、「具体的にどう声をかければいいの？」と悩む保護者の方も多いのではないでしょうか。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           結果だけでなく過程に注目する
         </h2>
 
@@ -57,7 +66,7 @@ export default async function Page() {
           「上手にできたね」だけでなく、「最後まで頑張ったね」「工夫して考えたね」のように、過程に注目した声かけは、結果が出なかったときにも使えるという利点があります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「できたこと」を具体的に伝える
         </h2>
 
@@ -65,7 +74,7 @@ export default async function Page() {
           「すごいね」という言葉は便利ですが、繰り返し使ううちに軽く聞こえてしまうこともあります。「一人で靴を履けたね」のように、具体的な行動を言葉にすると伝わりやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           性格によって響く言葉は違う
         </h2>
 
@@ -82,7 +91,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           失敗したときの声かけも大切
         </h2>
 
@@ -90,7 +99,7 @@ export default async function Page() {
           うまくいかなかったときに「大丈夫、また挑戦できるよ」と伝えることは、結果に関わらず自分の存在を認められているという安心感につながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           比べる相手は「昨日のその子」
         </h2>
 
@@ -98,7 +107,7 @@ export default async function Page() {
           他の子と比べるのではなく、「前よりできるようになったね」とその子自身の成長に注目することが、自己肯定感を育てる声かけの基本です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           場面別の声かけ例
         </h2>
 
@@ -114,7 +123,7 @@ export default async function Page() {
           <p className="text-green-700 mt-1">OK例：「ここまで自分で考えられたね。ここだけ一緒に見てみようか」</p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           わが家でよく使う決まり文句
         </h2>
 
@@ -126,7 +135,7 @@ export default async function Page() {
           もう一つは「前よりできるようになったね」です。「すごい」「頭いいね」だけだと、結果を褒めることになります。でも「前はここで止まってたけど、今日は自分でできたね」と伝えると、本人も成長を実感しやすいようです。「上手にできたね」より、「自分で考えてたね」という言葉を意識するようになりました。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある疑問
         </h2>
 
@@ -165,7 +174,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月14日　/　最終更新日：2026年7月29日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

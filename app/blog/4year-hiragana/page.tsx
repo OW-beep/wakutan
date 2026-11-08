@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="4歳ではじめてのひらがな｜どこから始める？｜わくたん"
         description="4歳ではじめてひらがなに触れる際の進め方を解説。何から始めればよいか、興味を持たない場合の対処法もあわせて紹介します。"
         slug="4year-hiragana"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-03-29"
+        dateModified="2026-05-16"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-05-16" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "まずは自分の名前から"}, {"id": "section-2", "text": "「読む」を先に、「書く」は後で"}, {"id": "section-3", "text": "1日に覚える文字数は少なくてOK"}, {"id": "section-4", "text": "興味を持たない場合の対処"}, {"id": "section-5", "text": "書く練習に進むタイミング"}, {"id": "section-6", "text": "興味の芽を大切に"}, {"id": "section-7", "text": "「自分の名前を書きたい」がきっかけだった"}, {"id": "section-8", "text": "こんな質問もよくいただきます"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           4歳は、多くの子どもがひらがなに初めて興味を持ち始める時期です。「何から始めればいいの？」という疑問にお答えします。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           まずは自分の名前から
         </h2>
 
@@ -68,7 +77,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「読む」を先に、「書く」は後で
         </h2>
 
@@ -85,7 +94,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           1日に覚える文字数は少なくてOK
         </h2>
 
@@ -97,7 +106,7 @@ export default async function Page() {
           「昨日覚えた文字、覚えてるかな？」と振り返る時間も、記憶の定着に役立ちます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           興味を持たない場合の対処
         </h2>
 
@@ -109,7 +118,7 @@ export default async function Page() {
           好きな遊びやキャラクターと結びつけると、興味のきっかけが生まれやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           書く練習に進むタイミング
         </h2>
 
@@ -121,7 +130,7 @@ export default async function Page() {
           焦って進める必要はなく、読む力が十分に育ってからで構いません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           興味の芽を大切に
         </h2>
 
@@ -129,7 +138,7 @@ export default async function Page() {
           4歳の時点でひらがなに全く興味を示さなくても、心配しすぎる必要はありません。興味が出てきたタイミングを逃さず取り組むことが大切です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「自分の名前を書きたい」がきっかけだった
         </h2>
 
@@ -141,7 +150,7 @@ export default async function Page() {
           また、絵本を読んでいるときに「この文字、○○にもある！」と気づくことも増えました。以前は親から「これは『あ』だよ」と教えることが多かったのですが、途中から子どもの方から「これ知ってる」と言うようになったんです。そのときに、教えるよりも「自分で発見する」方が、文字への興味が続きやすいと感じました。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           こんな質問もよくいただきます
         </h2>
 
@@ -185,7 +194,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年3月29日　/　最終更新日：2026年5月16日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

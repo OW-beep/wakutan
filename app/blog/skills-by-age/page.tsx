@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="4歳・5歳・6歳の発達段階別 「今」伸ばしたい力｜わくたん"
         description="4歳・5歳・6歳それぞれの発達段階で伸ばしたい力の違いをまとめ、年齢に合わせた家庭学習のヒントを紹介します。"
         slug="skills-by-age"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-07-24"
+        dateModified="2026-08-15"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-08-15" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "4歳ごろ：好奇心と数への興味"}, {"id": "section-2", "text": "5歳ごろ：考える力とルール理解"}, {"id": "section-3", "text": "6歳ごろ：学習習慣と自信"}, {"id": "section-4", "text": "焦らず、その子のペースを大切に"}, {"id": "section-5", "text": "年齢ごとの具体的な目安"}, {"id": "section-6", "text": "最近「ここ成長したな」と感じた瞬間"}, {"id": "section-7", "text": "よくある質問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           幼児期は1年ごとに大きく成長する時期です。年齢によって伸ばしやすい力も変わってくるため、今のお子さんに合った関わり方を知ることが大切です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           4歳ごろ：好奇心と数への興味
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           完璧にできることよりも、興味を持って取り組む姿勢を育てることを優先しましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           5歳ごろ：考える力とルール理解
         </h2>
 
@@ -82,7 +91,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           6歳ごろ：学習習慣と自信
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           「できた」という成功体験を積み重ね、学ぶことへの自信を育ててあげましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           焦らず、その子のペースを大切に
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           発達のスピードには個人差があります。年齢はあくまで目安として捉え、その子自身の興味や得意なことを大切にしてあげましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢ごとの具体的な目安
         </h2>
 
@@ -125,7 +134,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           最近「ここ成長したな」と感じた瞬間
         </h2>
 
@@ -141,7 +150,7 @@ export default async function Page() {
           3人を見ていると、「伸ばしたい力」を年齢で決めすぎない方がいいとも感じます。5歳なら考える力、2歳なら自分でやってみる力、0歳なら見る・聞く・触れるといった経験。その時期に自然に出てきている力を大切にしたいと思っています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -185,7 +194,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月24日　/　最終更新日：2026年8月15日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

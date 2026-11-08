@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="子どものお金の教育は何歳から？｜わくたん"
         description="子どものお金の教育を始める年齢の目安を、公的な資料もふまえて解説。幼児期に家庭でできる金銭教育のはじめ方を紹介します。"
         slug="money-education-age"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-08-02"
+        dateModified="2026-08-22"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-08-22" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "幼児期は「見せる」ことから"}, {"id": "section-2", "text": "硬貨に触れる経験も大切"}, {"id": "section-3", "text": "本格的な金銭管理は小学生から"}, {"id": "section-4", "text": "お金の話をタブーにしない"}, {"id": "section-5", "text": "「これ買ったらお金なくなる？」への答え方"}, {"id": "section-6", "text": "よく聞かれること"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           「お金の話は早すぎる？」と感じる保護者の方も多いかもしれませんが、金銭教育は幼児期から少しずつ始められるといわれています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           幼児期は「見せる」ことから
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           キャッシュレス決済が広まった今、お金を支払う様子が子どもから見えにくくなっています。買い物のときに「これを買うよ」「お金を払うね」と声に出すだけでも、お金と物の交換という基本的な仕組みが伝わりやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           硬貨に触れる経験も大切
         </h2>
 
@@ -78,7 +87,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           本格的な金銭管理は小学生から
         </h2>
 
@@ -86,7 +95,7 @@ export default async function Page() {
           多くの金融教育の専門家は、お小遣い帳をつけるような本格的な金銭管理は、小学校低学年ごろからで十分としています。幼児期に無理に先取りする必要はありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           お金の話をタブーにしない
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           「子どもにお金の話をするのは早い」と避けてしまうと、かえってお金の価値を実感する機会を減らしてしまうことがあります。日常の会話の中で自然に触れていくことが大切です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「これ買ったらお金なくなる？」への答え方
         </h2>
 
@@ -106,7 +115,7 @@ export default async function Page() {
           例えば、2つ欲しいものがあるときに「今日はどっちにする？」と選んでもらうこともあります。以前は「どっちも欲しい！」だったのが、最近は「じゃあ今日はこっち」と選べることが少しずつ増えてきました。そのときに「我慢できてえらい」というより、「自分で選んだんだね」と声をかけるようにしています。お金の教育というと、お小遣いや計算を思い浮かべますが、今はまず「限りがあるものの中から選ぶ」経験を大切にしています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よく聞かれること
         </h2>
 
@@ -150,7 +159,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年8月2日　/　最終更新日：2026年8月22日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

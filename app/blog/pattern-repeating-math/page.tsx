@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -36,6 +38,13 @@ export default function Page() {
           </p>
         </div>
 
+    <ArticleByline dateModified="2026-10-08" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "先に結論"}, {"id": "section-2", "text": "パターン（くりかえし）ってなに？"}, {"id": "section-3", "text": "研究：くりかえしパターンの力と、算数の知識"}, {"id": "section-4", "text": "パターンは算数で大事？議論もあります"}, {"id": "section-5", "text": "わくたんがパターン問題を「絵」にした理由"}, {"id": "section-6", "text": "おうちで試せる、パターン遊び"}, {"id": "section-7", "text": "よくある質問"}, {"id": "section-8", "text": "参考文献"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           「1・3・1・3・□」のような数字のくりかえしは、数の感覚がまだ育っていない子には難しく感じられます。一方、「りんご・ぶどう・りんご・ぶどう・□」のような絵のくりかえしなら、数字を知らなくても取り組めます。この記事では、くりかえしパターンを見つける力と、算数の関係について、論文の内容を整理します。
         </p>
@@ -47,7 +56,7 @@ export default function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           先に結論
         </h2>
 
@@ -58,7 +67,7 @@ export default function Page() {
             <li>一方で、この研究は「関連」を調べたもので、パターンを練習すれば算数が伸びるとまでは言えません。</li>
         </ul>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           パターン（くりかえし）ってなに？
         </h2>
 
@@ -74,7 +83,7 @@ export default function Page() {
           なお、同論文は、「ふえていくパターン（growing patterns）」については、この研究の対象外で、さらに研究が必要だとしています。「2・4・6・8…」のような数の並びは、わくたんでは6歳向けに用意しています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           研究：くりかえしパターンの力と、算数の知識
         </h2>
 
@@ -97,7 +106,7 @@ export default function Page() {
           </ul>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           パターンは算数で大事？議論もあります
         </h2>
 
@@ -109,7 +118,7 @@ export default function Page() {
           一方、同論文は、くりかえしパターンを幼児期に扱うことの意味を、数字の知識を必要とせずに「予測できる並び」に気づき、説明する機会になるためだと述べています。また、論文が紹介している先行研究（Kidd ら 2013、2014）では、算数が苦手な小学1年生に、パターンの指導を1年間行ったところ、算数の成績が、ほかの指導を受けた子より高かったとされています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           わくたんがパターン問題を「絵」にした理由
         </h2>
 
@@ -122,7 +131,7 @@ export default function Page() {
           <p className="leading-7">数字のくりかえしが「悪い」わけではありません。数字に苦手意識がある子に、まず絵で「くり返しを見つける」経験をしてもらおう、というわくたんの設計上の判断です。この形式の問題が算数の力を伸ばすことを示した研究はありません。</p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           おうちで試せる、パターン遊び
         </h2>
 
@@ -136,7 +145,7 @@ export default function Page() {
             <li>お子さんが作った並びを、大人が続けてみる。「どんなルール？」とたずねて、ことばにしてもらう。</li>
         </ul>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -151,7 +160,7 @@ export default function Page() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           参考文献
         </h2>
         <ol className="list-decimal ml-6 space-y-3 text-sm leading-7 text-gray-700 mb-6">
@@ -172,7 +181,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年10月　/　最終更新日：2026年10月
+          公開日：2026年10月8日　/　最終更新日：2026年10月8日
         </div>
 
         <div className="mt-8 bg-yellow-50 border rounded-2xl p-6">

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="お小遣い、いつから始める？｜わくたん"
         description="子どものお小遣いを始めるタイミングについて解説。幼児期にできる準備段階と、始める際のポイントを紹介します。"
         slug="allowance-timing"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-07-26"
+        dateModified="2026-10-03"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-10-03" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "お小遣いは小学校からが一般的"}, {"id": "section-2", "text": "幼児期は「準備段階」"}, {"id": "section-3", "text": "お手伝いとの結びつけ方は家庭次第"}, {"id": "section-4", "text": "始める前に話しておきたいこと"}, {"id": "section-5", "text": "代表的な3つの渡し方"}, {"id": "section-6", "text": "幼児期にできる金銭感覚の準備"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           「お小遣いはいつから渡せばいいの？」という疑問は、多くの保護者が一度は感じるものです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           お小遣いは小学校からが一般的
         </h2>
 
@@ -57,7 +66,7 @@ export default async function Page() {
           多くの家庭では、お小遣いを始めるのは小学校入学以降が一般的です。数の理解や、お金を計画的に使うという概念が育ってくる時期に合わせるとスムーズです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           幼児期は「準備段階」
         </h2>
 
@@ -74,7 +83,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           お手伝いとの結びつけ方は家庭次第
         </h2>
 
@@ -82,7 +91,7 @@ export default async function Page() {
           お手伝いの対価としてお小遣いを渡す家庭もあれば、月額制にする家庭もあります。どちらが正解ということはなく、家庭の考え方に合った方法を選んで問題ありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           始める前に話しておきたいこと
         </h2>
 
@@ -90,7 +99,7 @@ export default async function Page() {
           お小遣いを始める際は、「何に使ってもいいお金」なのか「貯めることも考えるお金」なのか、簡単なルールを話しておくと、子どもも使い方を考えやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           代表的な3つの渡し方
         </h2>
 
@@ -98,7 +107,7 @@ export default async function Page() {
           お小遣いの渡し方には、大きく分けて3つの方式があります。<span className="font-bold">定額制</span>は「毎月〇円」と決めて渡す方法で、計画的に使う練習になります。<span className="font-bold">報酬制</span>はお手伝いの対価として渡す方法で、労働と対価の関係を学べます。<span className="font-bold">都度制</span>は必要なときに必要な分だけ渡す方法で、幼児期から小学校低学年にかけての移行期に向いています。どれか1つに決めなくても、成長に合わせて組み合わせを変えていく家庭も多くあります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           幼児期にできる金銭感覚の準備
         </h2>
 
@@ -147,7 +156,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月26日　/　最終更新日：2026年10月3日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

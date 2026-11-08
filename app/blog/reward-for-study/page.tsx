@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="幼児にごほうびは必要？やる気を育てる上手な褒め方｜わくたん"
         description="幼児学習でのごほうびの使い方を、心理学の考え方もふまえて解説。やる気を長く育てる褒め方のコツを紹介します。"
         slug="reward-for-study"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-04-02"
+        dateModified="2026-06-17"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-06-17" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "ごほうび（外発的動機づけ）の効果と注意点"}, {"id": "section-2", "text": "内側から育つやる気（内発的動機づけ）"}, {"id": "section-3", "text": "ごほうびを使うなら「頻度」に注意"}, {"id": "section-4", "text": "言葉のごほうびを活用する"}, {"id": "section-5", "text": "「1週間続いたらルール」、実際にやってみると"}, {"id": "section-6", "text": "よくある疑問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           「ドリルを頑張ったらシールをあげる」「できたらお菓子」——ごほうびを使うこと自体は悪いことではありませんが、使い方によっては逆効果になることもあります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ごほうび（外発的動機づけ）の効果と注意点
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           心理学の研究では、もともと興味を持って取り組んでいた活動に報酬を与えると、報酬がなくなった後の取り組み意欲がかえって下がる現象が知られており、「アンダーマイニング効果」と呼ばれています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           内側から育つやる気（内発的動機づけ）
         </h2>
 
@@ -82,7 +91,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ごほうびを使うなら「頻度」に注意
         </h2>
 
@@ -90,7 +99,7 @@ export default async function Page() {
           ごほうびを絶対に使ってはいけないわけではありません。毎回ではなく、特別な達成のときだけにするなど、頻度を抑えることでリスクを減らせます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           言葉のごほうびを活用する
         </h2>
 
@@ -98,7 +107,7 @@ export default async function Page() {
           「最後まで頑張ったね」「よく考えたね」という具体的な言葉がけも、立派なごほうびです。物より言葉の方が、内側からのやる気を育てやすいとされています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「1週間続いたらルール」、実際にやってみると
         </h2>
 
@@ -110,7 +119,7 @@ export default async function Page() {
           ただ、何週間か続けていると、途中から「今日やったらあと何日？」と、ごほうびの方を気にするようになりました。そこで、これはちょっと違うなと思い、毎週必ずごほうびという形はやめました。今は、例えば「1週間続いたから特別に好きなところへ行こう」というように、毎日の学習と直接交換するものではなく、頑張ったことを一緒に喜ぶイベントくらいの位置づけにしています。ごほうび自体が悪いというより、毎回「勉強＝何かもらえる」とならないようにすることが大事だと感じました。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある疑問
         </h2>
 
@@ -154,7 +163,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年4月2日　/　最終更新日：2026年6月17日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

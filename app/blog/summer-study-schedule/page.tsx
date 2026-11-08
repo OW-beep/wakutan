@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="夏休みの家庭学習スケジュール例｜わくたん"
         description="幼児の夏休み中の家庭学習スケジュール例を紹介。1週間単位で無理なく続けられる無料ドリルの活用プランをまとめました。"
         slug="summer-study-schedule"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-07-22"
+        dateModified="2026-08-17"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-08-17" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "夏休みの学習で大切にしたいこと"}, {"id": "section-2", "text": "1週間のスケジュール例"}, {"id": "section-3", "text": "印刷してまとめて用意しておく"}, {"id": "section-4", "text": "長期休みだからこそできることも"}, {"id": "section-5", "text": "途中でリズムが崩れてしまったら"}, {"id": "section-6", "text": "こんな質問もよくいただきます"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           夏休みは生活リズムが崩れやすく、「毎日何をすればいいかわからない」と悩む保護者の方も多い時期です。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           ここでは、幼児期のお子さんが無理なく続けられる、1週間単位の家庭学習スケジュール例を紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           夏休みの学習で大切にしたいこと
         </h2>
 
@@ -65,7 +74,7 @@ export default async function Page() {
           普段より時間があるからこそ、遊びと学びのバランスを意識してみましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           1週間のスケジュール例
         </h2>
 
@@ -86,7 +95,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           印刷してまとめて用意しておく
         </h2>
 
@@ -98,7 +107,7 @@ export default async function Page() {
           🖨印刷機能を使って数日分をストックしておけば、旅行先やおじいちゃん・おばあちゃんの家でも取り組めます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           長期休みだからこそできることも
         </h2>
 
@@ -106,7 +115,7 @@ export default async function Page() {
           普段忙しくて後回しになりがちな「じっくり考える問題」や「苦手なジャンル」に、時間のある夏休みに挑戦してみるのもおすすめです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           途中でリズムが崩れてしまったら
         </h2>
 
@@ -118,7 +127,7 @@ export default async function Page() {
           「休み明けからまたゆるく再開する」くらいの気持ちで十分です。1日休んだからといって、それまでの取り組みが無駄になるわけではありません。無理に取り戻そうとせず、いつも通りの量に戻すことを意識しましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           こんな質問もよくいただきます
         </h2>
 
@@ -162,7 +171,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月22日　/　最終更新日：2026年8月17日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

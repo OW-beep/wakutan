@@ -2,7 +2,7 @@
 // ネットワークを優先し、オフライン時のみキャッシュから返す（ネットワークファースト）。
 // ドリル内容は日々更新されるため、オンライン時に古い内容を出さないことを優先している。
 
-const CACHE_NAME = "wakutan-cache-v1";
+const CACHE_NAME = "wakutan-cache-v2";
 
 self.addEventListener("install", () => {
   self.skipWaiting();
@@ -22,6 +22,10 @@ self.addEventListener("fetch", (event) => {
 
   // GET以外（フォーム送信等）はそのままネットワークに任せる
   if (request.method !== "GET") return;
+
+  // 他のサイトへのリクエスト（広告のスクリプト・商品画像など）は、キャッシュせず素通しにする。
+  // 広告の配信に、古いキャッシュが混ざらないようにするため。
+  if (new URL(request.url).origin !== self.location.origin) return;
 
   event.respondWith(
     fetch(request)

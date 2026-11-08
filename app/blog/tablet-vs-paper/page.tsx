@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="タブレット学習と紙のドリル、どう使い分ける？｜わくたん"
         description="幼児向けのタブレット学習アプリと紙のドリル、それぞれのメリットと使い分け方を紹介します。"
         slug="tablet-vs-paper"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-08-03"
+        dateModified="2026-10-11"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-10-11" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "タブレット学習のメリット"}, {"id": "section-2", "text": "紙のドリルのメリット"}, {"id": "section-3", "text": "画面時間とのバランスも意識したい"}, {"id": "section-4", "text": "おすすめの組み合わせ方"}, {"id": "section-5", "text": "保護者からよく届く質問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           知育アプリやタブレット教材が身近になり、「紙とどちらがいいの？」と迷う保護者の方も増えています。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           結論としては、どちらか一方ではなく、目的に応じて使い分けるのがおすすめです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           タブレット学習のメリット
         </h2>
 
@@ -61,7 +70,7 @@ export default async function Page() {
           音声やアニメーションで直感的に理解しやすく、自動で丸つけをしてくれる手軽さも魅力です。子どもが自分でどんどん進められる点も便利です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           紙のドリルのメリット
         </h2>
 
@@ -82,7 +91,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           画面時間とのバランスも意識したい
         </h2>
 
@@ -90,7 +99,7 @@ export default async function Page() {
           小児科領域では、幼児期の長時間のスクリーンタイムについて注意を促す意見も多くあります。タブレット学習を取り入れる場合も、時間を決めて使うと安心です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           おすすめの組み合わせ方
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           わくたんのように無料で印刷できるドリルは、紙学習を気軽に取り入れたいご家庭にも活用しやすい選択肢です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           保護者からよく届く質問
         </h2>
 
@@ -146,7 +155,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年8月3日　/　最終更新日：2026年10月11日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

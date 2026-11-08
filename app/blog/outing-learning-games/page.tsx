@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="お出かけ先で自然に学べる声かけ＆ゲーム｜わくたん"
         description="スーパーや公園などのお出かけ先で、自然に数や言葉に親しめる声かけ・ゲームのアイデアを紹介します。"
         slug="outing-learning-games"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-07-23"
+        dateModified="2026-08-08"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-08-08" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "スーパーでできること"}, {"id": "section-2", "text": "公園でできること"}, {"id": "section-3", "text": "移動中にできること"}, {"id": "section-4", "text": "大切なのは「気づき」を大切にすること"}, {"id": "section-5", "text": "長い車移動・電車移動での工夫"}, {"id": "section-6", "text": "年齢別の声かけの工夫"}, {"id": "section-7", "text": "図書館・博物館・エレベーターも学びの場に"}, {"id": "section-8", "text": "Q&Aでチェック"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           特別な教材がなくても、日常のお出かけの中には学びのきっかけがたくさんあります。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           ここでは、スーパーや公園でできる、遊び感覚の声かけやゲームを紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           スーパーでできること
         </h2>
 
@@ -74,7 +83,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           公園でできること
         </h2>
 
@@ -86,7 +95,7 @@ export default async function Page() {
           落ち葉や木の実を集めて「大きい順に並べてみよう」と遊ぶのも、比較する力を育てます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           移動中にできること
         </h2>
 
@@ -98,7 +107,7 @@ export default async function Page() {
           しりとりやなぞなぞも、移動時間にぴったりの遊びです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           大切なのは「気づき」を大切にすること
         </h2>
 
@@ -106,7 +115,7 @@ export default async function Page() {
           正解を教え込むのではなく、「あ、本当だね」「よく気づいたね」と、子どもの発見に共感してあげることが一番の学びにつながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           長い車移動・電車移動での工夫
         </h2>
 
@@ -114,7 +123,7 @@ export default async function Page() {
           長時間の移動は、集中して言葉遊びに取り組める貴重な時間でもあります。「あ」から始まる言葉を交代で言い合う、通り過ぎる看板の中からひらがなを見つける、駅の数を一緒に数えるなど、窓の外の景色を使った遊びは飽きにくいのが特徴です。ぐずってしまいそうなときほど、「次の信号が青になるまで何秒かな？」のような短い集中ゲームに切り替えると、気分転換にもなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢別の声かけの工夫
         </h2>
 
@@ -133,7 +142,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           図書館・博物館・エレベーターも学びの場に
         </h2>
 
@@ -145,7 +154,7 @@ export default async function Page() {
           他には、ホテルや公共施設のエレベーターも意外と面白いです。階数を確認したり、「今何階？」と聞いたり、案内表示のマークを見つけたりします。最近は、外出先で子どもが何かに興味を持ったら、すぐ答えを教えるのではなく、少し「どう思う？」と聞くようにしています。知らないものを見つけたときに「これは何だと思う？」と聞く。正解を当てることより、「見たものから考えてみる」こと自体を楽しんでもらうイメージです。わくたんを作っていても感じますが、学びというと机に向かうことを考えがちです。でも実際には、子どもが「なんで？」「どうして？」と思った瞬間が、一番自然な学びになっているのかもしれません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           Q&Aでチェック
         </h2>
 
@@ -189,7 +198,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月23日　/　最終更新日：2026年8月8日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

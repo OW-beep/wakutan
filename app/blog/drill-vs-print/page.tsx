@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,7 +27,7 @@ export default async function Page() {
         title="市販ドリルと無料プリント、結局どっちがいい？｜わが家の使い分け方｜わくたん"
         description="市販ドリルと無料プリント、どちらがいいか迷う方へ。それぞれのメリット・デメリットと、わが家での上手な使い分け方を紹介します。"
         slug="drill-vs-print"
-        datePublished="2026-07-01"
+        datePublished="2026-07-22"
         dateModified="2026-09-25"
       />
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-09-25" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "市販ドリルのメリット"}, {"id": "section-2", "text": "無料プリントのメリット"}, {"id": "section-3", "text": "こんな使い分けがおすすめ"}, {"id": "section-4", "text": "一番大切なのは続けやすさ"}, {"id": "section-5", "text": "Q&Aでチェック"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           書店に並ぶ市販のドリルと、わくたんのような無料の印刷プリント。どちらを選べばいいのか迷う保護者の方も多いのではないでしょうか。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           それぞれに良さがあるので、目的に合わせて使い分けるのがおすすめです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           市販ドリルのメリット
         </h2>
 
@@ -69,7 +78,7 @@ export default async function Page() {
           市販ドリルで良かったのは、何より「順番が考えられていること」です。ひらがななら、まず文字を見て、次になぞって、最後に書いてみる、といった具合に、少しずつ難しくなっていくものは使いやすいと感じます。また、紙の質やイラストなどがしっかり作られていて、「今日はこのページをやろう」と決めやすいのもメリットです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           無料プリントのメリット
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           こんな使い分けがおすすめ
         </h2>
 
@@ -106,7 +115,7 @@ export default async function Page() {
           「平日は無料プリントで軽く、週末は市販ドリルでじっくり」のような組み合わせもおすすめです。市販ドリルは「体系的に進めたいとき」、無料プリントは「その日の子どもの状態に合わせたいとき」と役割を分けて考えると、選ぶときに迷いにくくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           一番大切なのは続けやすさ
         </h2>
 
@@ -114,7 +123,7 @@ export default async function Page() {
           どちらを選んでも、無理なく続けられることが一番大切です。お子さんの反応を見ながら、合う方法を見つけてあげましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           Q&Aでチェック
         </h2>
 
@@ -158,7 +167,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月22日　/　最終更新日：2026年9月25日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

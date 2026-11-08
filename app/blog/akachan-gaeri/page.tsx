@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -45,6 +47,13 @@ export default async function Page() {
 
         </div>
 
+    <ArticleByline dateModified="2026-09-22" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① 赤ちゃん返りはよくあること"}, {"id": "section-2", "text": "② 「上の子」を甘えさせる時間も作る"}, {"id": "section-3", "text": "③ 無理にお兄ちゃん・お姉ちゃん扱いしない"}, {"id": "section-4", "text": "焦らなくて大丈夫"}, {"id": "section-5", "text": "よくある質問"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           下の子が生まれてから、それまで一人でできていたことを急に「やって」と言うようになったり、
           わがままが増えたように感じたり――いわゆる「赤ちゃん返り」に戸惑う保護者は多いと思います。
@@ -55,7 +64,7 @@ export default async function Page() {
           ここでは、赤ちゃん返りとの付き合い方について、3つのポイントを紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① 赤ちゃん返りはよくあること
         </h2>
 
@@ -77,7 +86,7 @@ export default async function Page() {
           しばらく甘えた後にまた自分でやり始めることがよくあります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② 「上の子」を甘えさせる時間も作る
         </h2>
 
@@ -106,7 +115,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ 無理にお兄ちゃん・お姉ちゃん扱いしない
         </h2>
 
@@ -129,7 +138,7 @@ export default async function Page() {
           結果的に下の子への優しさにもつながっていくように思います。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           焦らなくて大丈夫
 
         </h2>
@@ -143,7 +152,7 @@ export default async function Page() {
           もあわせてご覧ください。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -190,7 +199,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年9月　/　最終更新日：2026年9月
+          公開日：2026年9月22日　/　最終更新日：2026年9月22日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

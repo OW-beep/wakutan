@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://wakutan.vercel.app"),
 
+
   title: {
     default: "わくたん",
     template: "%s｜わくたん",
@@ -43,6 +44,11 @@ export const metadata: Metadata = {
   verification: {
     google: "KYZp6leIoJkmXQipodIUtUhXTopgEfgqFiQ7eJZuRZA",
   },
+
+  // AdSenseのサイト所有確認用（アカウントの発行元IDを meta でも宣言しておく）
+  other: {
+    "google-adsense-account": "ca-pub-4630812027939211",
+  },
 };
 
 export default function RootLayout({
@@ -57,6 +63,12 @@ export default function RootLayout({
     >
       <head>
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="わくたん 新着記事"
+          href="/feed.xml"
+        />
       </head>
       <body className="bg-yellow-50 text-gray-800 min-h-screen flex flex-col">
 
@@ -79,6 +91,8 @@ export default function RootLayout({
               "@type": "Organization",
               name: "わくたん",
               url: "https://wakutan.vercel.app",
+              email: "wakutan.info@gmail.com",
+              description: "4〜6歳向けの無料知育ドリルと、家庭学習・知育の記事を公開している個人運営のサイトです。",
             }),
           }}
         />
@@ -148,11 +162,14 @@ export default function RootLayout({
 
               <div className="flex flex-col gap-2 text-sm">
                 <Link href="/about">わくたんについて</Link>
+                <Link href="/editorial-policy">編集方針</Link>
                 <Link href="/narai-shindan">習い事診断</Link>
                 <Link href="/articles">記事一覧</Link>
                 <Link href="/favorites">お気に入り</Link>
                 <Link href="/review">ふくしゅうリスト</Link>
                 <Link href="/search">サイト内検索</Link>
+                <Link href="/sitemap">サイトマップ</Link>
+                <a href="/feed.xml">RSS</a>
                 <Link href="/privacy-policy">プライバシーポリシー</Link>
                 <Link href="/terms">利用規約</Link>
                 <Link href="/contact">お問い合わせ</Link>

@@ -1,6 +1,10 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -17,7 +21,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育ドリル 幼児", 3);
+  const products = await searchRakutenItems("迷路 ドリル 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -25,8 +29,8 @@ export default async function Page() {
         title="忙しいママ・パパ向け 1日5分ルーティン｜わくたん"
         description="仕事や家事で忙しい保護者向けに、無理なく続けられる1日5分の家庭学習ルーティンの作り方を紹介します。"
         slug="busy-parent-5min"
-        datePublished="2026-06-01"
-        dateModified="2026-08-10"
+        datePublished="2026-06-26"
+        dateModified="2026-11-08"
       />
 
 
@@ -45,6 +49,19 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-11-08" />
+
+    <ArticleSummary
+      worry="忙しくて、家庭学習の時間がなかなか取れません。"
+      answer="毎日できなくて大丈夫です。取れない日は、迷路・仲間分け・数字の問題などを1〜2問だけ。5分で終わる形にしておくと、親も子も気持ちが楽になります。"
+      steps={["その日の気分で、1〜2問だけ選ぶ", "書く量の多い問題より、見て考える・指で答える問題を選ぶ", "答えたあとに「どうしてこれだと思ったの？」と少し話す", "できない日があっても、翌日また1問から"]}
+    />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "「毎日」より「決まったタイミング」"}, {"id": "section-2", "text": "5分でできる範囲に区切る"}, {"id": "section-3", "text": "印刷しておいて隙間時間に"}, {"id": "section-4", "text": "できなかった日があってもOK"}, {"id": "section-5", "text": "共働き家庭の1週間の組み込み例"}, {"id": "section-6", "text": "すでにある習慣にくっつける「習慣の連結」"}, {"id": "section-7", "text": "量を増やして失敗した話"}, {"id": "section-8", "text": "5分で何をする？（わが家の場合）"}, {"id": "section-9", "text": "5分でも続けて、変わったこと"}, {"id": "section-10", "text": "よくある質問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           「家庭学習が大事なのはわかっていても、毎日は難しい」——共働きや家事で忙しい保護者の方には、切実な悩みだと思います。
         </p>
@@ -53,7 +70,7 @@ export default async function Page() {
           実は、毎日長時間取り組むよりも、短時間でも続けやすいルーティンを作る方が、学習習慣は定着しやすいといわれています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「毎日」より「決まったタイミング」
         </h2>
 
@@ -65,7 +82,7 @@ export default async function Page() {
           週に3〜4回でも、続けられていればしっかり効果があります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           5分でできる範囲に区切る
         </h2>
 
@@ -86,7 +103,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           印刷しておいて隙間時間に
         </h2>
 
@@ -98,7 +115,7 @@ export default async function Page() {
           外出先や待ち時間にも活用できるので、忙しいご家庭にもおすすめです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           できなかった日があってもOK
         </h2>
 
@@ -106,7 +123,7 @@ export default async function Page() {
           忙しい日は無理に取り組まなくても大丈夫です。「今日はお休み」と割り切ることも、長く続けるためには大切です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           共働き家庭の1週間の組み込み例
         </h2>
 
@@ -114,7 +131,7 @@ export default async function Page() {
           平日は「朝ごはんを待つ間の3問だけ」、週末は「土曜の朝に少し多めに」というように、曜日ごとに強弱をつけると無理なく続けられます。例えば月・水・金は朝食前の3分、火・木はお休み、土曜は10分でまとめて取り組む、というリズムなら、週3〜4回のペースを保ちながら保護者の負担も分散できます。同じ曜日・同じタイミングを繰り返すことで、子ども自身も「次は何をする時間か」を覚えやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           すでにある習慣にくっつける「習慣の連結」
         </h2>
 
@@ -124,7 +141,7 @@ export default async function Page() {
           もあわせてご覧いただくと、さらに具体的なアイデアが見つかります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           量を増やして失敗した話
         </h2>
 
@@ -136,7 +153,40 @@ export default async function Page() {
           そこで、また10問程度に戻しました。すると、「これならできる」と感じるのか、取り組みやすくなりました。今では、10問全部やることすら必須にはしていません。5問で終わってもいいし、1問だけでもいい。0歳と2歳の子がいる家庭だと、毎日同じ条件で学習できるわけではありません。だからこそ、わくたんも「30分しっかり勉強するためのサイト」ではなく、忙しい日でも5分だけ取り組める場所にしたいと考えています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          5分で何をする？（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          下の子たちの世話や家事が重なる日や、子ども自身が疲れている日は、長く勉強することを最初から考えず、5分程度で終わる内容にしています。特に夕方は、食事の準備やお風呂、寝る準備などが続くので、上の子と落ち着いて向き合う時間を取るのが難しいことがあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          その日の気分に合わせて、迷路や仲間分け、数字の問題などを1〜2問選びます。書くことが多い問題よりも、見て考えたり、指で答えたりできる問題の方が、短時間で取り組みやすいです。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            💬 5分でも、考える時間にできます
+          </p>
+          <p>
+            絵を見て仲間外れを探す問題なら、答えを選んだあとに「どうしてこれだと思ったの？」と少し話すだけでも、考える時間になります。<Link href="/4/nakamahazure" className="text-orange-600 font-bold hover:underline">4歳向けなかまはずれ</Link>や<Link href="/4/nakamawake" className="text-orange-600 font-bold hover:underline">4歳向け仲間分け</Link>を、1〜2問だけ試してみてください。
+          </p>
+        </div>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          5分でも続けて、変わったこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          大きく変わったと感じるのは、ドリルを始めることへの抵抗が少なくなったことです。以前は「勉強するよ」と声をかけると面倒そうにすることもありましたが、短い時間で終わると分かってからは、比較的すんなり取り組めるようになりました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          もちろん、毎日5分できているわけではありません。それでも、忙しい日でも少しだけ取り組める選択肢があることで、親も子どもも気持ちが楽になったと思います。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -153,6 +203,14 @@ export default async function Page() {
             <p className="font-bold">Q. きょうだいがいると、上の子だけの時間が取りにくいです。</p>
             <p className="leading-7 text-gray-700">A. 完璧な時間を確保しようとしなくて大丈夫です。下の子が近くにいる状態のまま、短時間だけ取り組む形でも十分に習慣は続けられます。</p>
           </div>
+          <div>
+            <p className="font-bold">Q. 5分で、何をすればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. その日の気分で、迷路・仲間分け・数字の問題などを1〜2問選ぶのがおすすめです。書くことが多い問題より、見て考えたり、指で答えたりできる問題の方が、短時間で取り組みやすいです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 5分だけで、意味はありますか？</p>
+            <p className="leading-7 text-gray-700">A. 短くても、ドリルを始めることへの抵抗が減るのが、わが家での大きな変化でした。毎日できなくても、忙しい日に少しだけ取り組める選択肢があることで、気持ちが楽になります。</p>
+          </div>
         </div>
 
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
@@ -161,6 +219,9 @@ export default async function Page() {
           </p>
           <p className="leading-7">
             問題作りをしていて実感したのですが、「たくさんやらせた方がいい」と量を増やしたときほど、途中で集中が切れて続かなくなりました。反対に、1回で終わる分量に絞ったところ、「今日はこれだけやればOK」という安心感が生まれ、家庭でも自然と続けやすくなりました。忙しい日ほど、分量を削ることを迷わないようにしています。
+          </p>
+          <p className="leading-7 mt-3">
+            夕方は食事の準備やお風呂、寝る準備が続くので、上の子と落ち着いて向き合う時間を取るのが難しい日があります。そんな日は、迷路や仲間分け、数字の問題を1〜2問だけ選んで、「今日はこれでOK」にしています。
           </p>
         </div>
 
@@ -180,29 +241,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月　/　最終更新日：2026年8月
+          公開日：2026年6月26日　/　最終更新日：2026年11月8日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/print", "label": "印刷して使う", "desc": "週末にまとめて数枚印刷しておくと、平日の隙間時間にすぐ取り組めます。"}, {"href": "/4/nakamawake", "label": "4歳向け仲間分け", "desc": "見て考えて答える問題。1〜2問だけでも取り組めます。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "ジャンルを選んで、1〜2問だけでもOK。"}]}
+          articles={[{"slug": "5min-study", "desc": "5分でできる学習法の、具体的なアイデア。"}, {"slug": "drill-hurdle-down", "desc": "「1問だけでもいい」と考えて、続けやすくした話。"}, {"slug": "study-habit", "desc": "休んでも、また始められる。習慣づけの考え方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🍭 今日のごほうびドリル
-          </h3>
-
-          <p className="mb-3">
-            週末にまとめて印刷して、平日は隙間時間にサッと取り組んでみませんか？
-          </p>
-
-          <Link
-            href="/print"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            印刷して使う
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="5分で取り組みやすい迷路・ドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/busy-parent-5min" title="忙しいママ・パパ向け 1日5分ルーティン" />
         <RelatedArticles currentSlug="busy-parent-5min" />

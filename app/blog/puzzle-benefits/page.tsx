@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="パズル遊びの効果｜考える力・集中力・空間認識力が育つ｜わくたん"
         description="パズル遊びが育てる力を解説。考える力・集中力・空間認識力を伸ばすパズルの選び方や取り入れ方も紹介します。"
         slug="puzzle-benefits"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-05-03"
+        dateModified="2026-08-25"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-08-25" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "空間認識力が育つ"}, {"id": "section-2", "text": "試行錯誤する力が育つ"}, {"id": "section-3", "text": "集中力が育つ"}, {"id": "section-4", "text": "年齢に合わせたピース数の目安"}, {"id": "section-5", "text": "完成の達成感を大切に"}, {"id": "section-6", "text": "保護者からよく届く質問"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           多くの子どもが夢中になるパズル遊び。ピースを合わせるだけのシンプルな遊びに見えて、実は複数の力を同時に育てる効果があります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           空間認識力が育つ
         </h2>
 
@@ -65,7 +74,7 @@ export default async function Page() {
           最初はピースをくるくる回しながら手探りで合わせていた子も、慣れてくると「このピースはこの向きだ」と頭の中で先に判断できるようになっていきます。手を動かしながら空間認識力を鍛えられるのが、パズルならではの良さです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           試行錯誤する力が育つ
         </h2>
 
@@ -86,7 +95,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           集中力が育つ
         </h2>
 
@@ -98,7 +107,7 @@ export default async function Page() {
           途中で飽きてしまう日があっても、無理に最後までやらせる必要はありません。「続きはまた今度やろうね」と一度片付けて、また別の日に取り組めるようにしておくと、パズルへの苦手意識がつきにくくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢に合わせたピース数の目安
         </h2>
 
@@ -114,7 +123,7 @@ export default async function Page() {
           ピース数だけでなく、絵柄の分かりやすさも選ぶときのポイントです。背景と絵柄のコントラストがはっきりしているものは、ピース同士の見分けがつきやすく、小さな子どもでも取り組みやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           完成の達成感を大切に
         </h2>
 
@@ -122,7 +131,7 @@ export default async function Page() {
           完成したパズルは、しばらく飾っておくのもおすすめです。「これ、頑張って完成させたね」と振り返ることで、自信の積み重ねにつながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           保護者からよく届く質問
         </h2>
 
@@ -166,7 +175,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年5月3日　/　最終更新日：2026年8月25日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

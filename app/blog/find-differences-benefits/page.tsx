@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="間違い探しの効果｜観察力・集中力・考える力が育つ｜わくたん"
         description="間違い探しは観察力や集中力、考える力を育てる知育遊びです。4〜6歳向けに間違い探しの効果や、年齢別の難易度調整の仕方を紹介します。"
         slug="find-differences-benefits"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-04-20"
+        dateModified="2026-07-01"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-07-01" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "観察力が育つ"}, {"id": "section-2", "text": "集中力が育つ"}, {"id": "section-3", "text": "比較する力が育つ"}, {"id": "section-4", "text": "年齢別の難易度調整"}, {"id": "section-5", "text": "親子で一緒に取り組む楽しさ"}, {"id": "section-6", "text": "達成感が自信になる"}, {"id": "section-7", "text": "見つからずに困っているときの声かけ"}, {"id": "section-8", "text": "Q&Aでチェック"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           2つの絵を見比べて違いを探す「間違い探し」。シンプルな遊びですが、実はさまざまな力を育てる効果があります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           観察力が育つ
         </h2>
 
@@ -57,7 +66,7 @@ export default async function Page() {
           細部までじっくり見比べる経験は、物事を注意深く観察する力を育てます。この力は理科的な学びの土台にもなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           集中力が育つ
         </h2>
 
@@ -74,7 +83,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           比較する力が育つ
         </h2>
 
@@ -82,7 +91,7 @@ export default async function Page() {
           「ここは同じ、ここは違う」と比べながら考える経験は、算数の「等しい・等しくない」を理解する土台にもつながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢別の難易度調整
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           難しすぎると途中で飽きてしまうため、「ちょっと頑張れば見つかる」くらいの難易度を選びましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           親子で一緒に取り組む楽しさ
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           「私はこっちを探すね」というように役割を分けたり、見つけた違いについて「本当だ、ここが違うね」と一緒に確認したりすることで、親子のコミュニケーションの時間にもなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           達成感が自信になる
         </h2>
 
@@ -110,7 +119,7 @@ export default async function Page() {
           違いを見つけたときの「あ、ちがう！」という発見の喜びは、子どもにとって大きな達成感になります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           見つからずに困っているときの声かけ
         </h2>
 
@@ -122,7 +131,7 @@ export default async function Page() {
           答えそのものではなく「探し方」のヒントにすることで、次に別の間違い探しに取り組むときにも自分で応用できるようになります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           Q&Aでチェック
         </h2>
 
@@ -166,7 +175,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年4月20日　/　最終更新日：2026年7月1日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

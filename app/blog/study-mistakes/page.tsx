@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="幼児の家庭学習でやってはいけないこと5つ｜わくたん"
         description="幼児期の家庭学習でありがちな失敗パターンを5つ紹介し、それぞれの改善のヒントをまとめました。"
         slug="study-mistakes"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-07-20"
+        dateModified="2026-10-01"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-10-01" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① 長時間やらせすぎる"}, {"id": "section-2", "text": "② 間違いを強く指摘しすぎる"}, {"id": "section-3", "text": "③ 他の子と比べる"}, {"id": "section-4", "text": "④ ごほうびに頼りすぎる"}, {"id": "section-5", "text": "⑤ 保護者がイライラしながら付き合う"}, {"id": "section-6", "text": "年齢によって気をつけたいポイントも変わる"}, {"id": "section-7", "text": "気になる疑問Q&A"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           良かれと思ってやっていることが、実は子どもの学習意欲を下げてしまっている——そんなケースは少なくありません。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           ここでは、幼児期の家庭学習でありがちな失敗パターンを5つ紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① 長時間やらせすぎる
         </h2>
 
@@ -69,7 +78,7 @@ export default async function Page() {
           対策としては、時間を長くするより「回数を増やす」方向で考えるのがおすすめです。朝5分、夕方5分というように分けるだけで、合計の取り組み時間は変わらなくても、子どもの負担はぐっと軽くなります。タイマーを使って「ここまで」と区切りを見える化するのも効果的です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② 間違いを強く指摘しすぎる
         </h2>
 
@@ -103,7 +112,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ 他の子と比べる
         </h2>
 
@@ -119,7 +128,7 @@ export default async function Page() {
           「先月は読めなかった字が読めるようになったね」「前は1問で疲れてたけど、今は3問できるね」というように、その子の中での変化に目を向けると、比較が自信につながります。きょうだいがいる家庭では特に、無意識のうちに比べてしまいがちなので、意識して言葉にするようにしてみてください。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ④ ごほうびに頼りすぎる
         </h2>
 
@@ -131,7 +140,7 @@ export default async function Page() {
           物のごほうびに頼りすぎないためには、「できたね」「よく考えたね」という言葉のごほうびを軸にし、物は「1週間続いたら」のような特別なタイミングに限定するのがおすすめです。日々の積み重ねを言葉で認めることが、長い目で見た学習意欲につながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑤ 保護者がイライラしながら付き合う
         </h2>
 
@@ -147,7 +156,7 @@ export default async function Page() {
           保護者自身に余裕がない日は、ドリルの内容よりも「一緒に過ごす時間の質」が下がってしまいます。そういう日は思い切って休んでしまい、余裕のある日にまとめて取り組む方が、結果的に長続きします。「毎日やらなければ」というプレッシャーを手放すことも、家庭学習を続けるコツの一つです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢によって気をつけたいポイントも変わる
         </h2>
 
@@ -159,7 +168,7 @@ export default async function Page() {
           4歳くらいまでは、間違いを指摘すること自体がまだ早いことも多く、「合ってる・間違ってる」よりも「やってみた」ことそのものを認めてあげる方が効果的です。5歳になると、少しずつ「どうして間違えたか」を自分の言葉で説明できるようになってくるので、理由を聞く声かけが効いてきます。6歳くらいで小学校入学が近づくと、間違いを直す経験そのものが「見直す力」につながっていくので、焦らず一緒に振り返る習慣をつけておくと、入学後の学習にもつながっていきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           気になる疑問Q&A
         </h2>
 
@@ -194,7 +203,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年7月20日　/　最終更新日：2026年10月1日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

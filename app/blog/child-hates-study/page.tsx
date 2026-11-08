@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="子どもが勉強を嫌がるときは？無理なく続ける5つのコツ｜わくたん"
         description="子どもが勉強を嫌がる理由と、無理なく学習を続けるための5つのコツを解説。動機づけの考え方もふまえて紹介します。"
         slug="child-hates-study"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-05-28"
+        dateModified="2026-07-31"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-07-31" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "① 難易度が合っていないのかも"}, {"id": "section-2", "text": "② タイミングが合っていないのかも"}, {"id": "section-3", "text": "③ 「やらされている」感覚があるのかも"}, {"id": "section-4", "text": "④ 成功体験が不足しているのかも"}, {"id": "section-5", "text": "⑤ 完璧を求めすぎているのかも"}, {"id": "section-6", "text": "場面別の声かけ例"}, {"id": "section-7", "text": "「1問だけ」以外に効果があった切り替え方"}, {"id": "section-8", "text": "気になる疑問Q&A"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           机に向かうことそのものへの抵抗感は、多くの家庭が一度は経験する壁です。無理に続けさせる前に、まずは理由を考えてみましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ① 難易度が合っていないのかも
         </h2>
 
@@ -57,7 +66,7 @@ export default async function Page() {
           難しすぎる問題は「できない」という経験の積み重ねになり、嫌悪感につながります。少し簡単なレベルに戻してみるのも一つの方法です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ② タイミングが合っていないのかも
         </h2>
 
@@ -74,7 +83,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ③ 「やらされている」感覚があるのかも
         </h2>
 
@@ -86,7 +95,7 @@ export default async function Page() {
           「どっちからやる？」のように、小さな選択肢を与えるだけでも、「やらされている」感覚が和らぐことがあります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ④ 成功体験が不足しているのかも
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           「できた」という経験が少ないと、取り組む前から苦手意識を持ってしまうことがあります。簡単な問題から始めて、成功体験を積み重ねましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ⑤ 完璧を求めすぎているのかも
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           保護者の方が無意識のうちに完璧を求めてしまうと、子どもはそのプレッシャーを敏感に感じ取ります。「間違えても大丈夫」という空気づくりが大切です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           場面別の声かけ例
         </h2>
 
@@ -118,7 +127,7 @@ export default async function Page() {
           <p className="text-green-700 mt-1">OK例：「おやつの前に1問だけ挑戦してみる？」</p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「1問だけ」以外に効果があった切り替え方
         </h2>
 
@@ -130,7 +139,7 @@ export default async function Page() {
           もう一つは、親が先にやってみることです。「これ難しいな。お父さんもやってみようかな」と言うと、「私もやる」と参加してくることがあります。子どもだけに「勉強しなさい」と言うより、親も一緒にやっている雰囲気にすると、遊びに近い感覚になるんです。それでも嫌がる日は、無理にやらせません。「今日はやめよう。また明日やろう」で終わって、翌日に普通に再開できれば、それで十分だと思っています。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           気になる疑問Q&A
         </h2>
 
@@ -174,7 +183,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年5月28日　/　最終更新日：2026年7月31日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

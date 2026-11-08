@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -36,6 +38,13 @@ export default function Page() {
           </p>
         </div>
 
+    <ArticleByline dateModified="2026-10-08" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "先に結論"}, {"id": "section-2", "text": "研究：手書き・タイピング・なぞり書きの比較"}, {"id": "section-3", "text": "なぞり書きの使いどころ"}, {"id": "section-4", "text": "わくたんのドリルでの考え方"}, {"id": "section-5", "text": "よくある質問"}, {"id": "section-6", "text": "参考文献"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           ひらがなの練習でよく使われる「なぞり書き」。ていねいに書けるようになる一方で、「自分で書く」練習につながっているのか気になる方もいるかもしれません。この記事では、幼児の手書きと文字の認識を調べた研究を、論文の原文で確認して整理します。
         </p>
@@ -47,7 +56,7 @@ export default function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           先に結論
         </h2>
 
@@ -57,7 +66,7 @@ export default function Page() {
             <li>ただし、15人の小さな研究で、英語圏の子どもが、アルファベットの大文字や図形で、1回の練習をしたものです。「なぞり書きは意味がない」と言えるものではありません。</li>
         </ul>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           研究：手書き・タイピング・なぞり書きの比較
         </h2>
 
@@ -81,7 +90,7 @@ export default function Page() {
           </ul>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           なぞり書きの使いどころ
         </h2>
 
@@ -104,7 +113,7 @@ export default function Page() {
           <p className="leading-7">うまく書けなくても、自分で書こうとしたこと自体を認めましょう。字の形より、最後まで取り組めた経験を大事にしてください。（一般的な声かけの例です。）</p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           わくたんのドリルでの考え方
         </h2>
 
@@ -116,7 +125,7 @@ export default function Page() {
           これは、「なぞる」と「自分で書く」を組み合わせる、わくたんの設計上の判断です。この形式の効果を調べた研究はなく、「研究で効果が確認された教材」という意味ではありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -135,7 +144,7 @@ export default function Page() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           参考文献
         </h2>
         <ol className="list-decimal ml-6 space-y-3 text-sm leading-7 text-gray-700 mb-6">
@@ -156,7 +165,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年10月　/　最終更新日：2026年10月
+          公開日：2026年10月8日　/　最終更新日：2026年10月8日
         </div>
 
         <div className="mt-8 bg-yellow-50 border rounded-2xl p-6">

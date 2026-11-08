@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="時計の読み方はいつから？教え方のステップと練習のコツ"
         description="幼児期の時計の読み方の教え方を解説。何歳ごろから始めるとよいか、つまずきやすいポイントと、ステップごとの練習方法を紹介します。"
         slug="how-read-clock"
-        datePublished="2026-03-01"
-        dateModified="2026-08-10"
+        datePublished="2026-05-27"
+        dateModified="2026-06-18"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-06-18" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "何歳から始めるのが目安？"}, {"id": "section-2", "text": "ステップ①：生活の中で時計に触れる"}, {"id": "section-3", "text": "ステップ②：「なんじ」から始める"}, {"id": "section-4", "text": "ステップ③：5分刻みへ"}, {"id": "section-5", "text": "つまずきやすいポイント"}, {"id": "section-6", "text": "時計クイズを日常に取り入れる"}, {"id": "section-7", "text": "気になる疑問Q&A"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           「そろそろ時計を教えたいけど、何歳から始めればいいの？」という声はよく聞かれます。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           時計の読み方は一気に教えようとするとつまずきやすいテーマです。段階を踏んで進めることが大切です。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           何歳から始めるのが目安？
         </h2>
 
@@ -65,7 +74,7 @@ export default async function Page() {
           「分」まで正確に読めるようになるのは、多くの場合小学校低学年ごろで、6歳の時点で完璧である必要はありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ステップ①：生活の中で時計に触れる
         </h2>
 
@@ -81,7 +90,7 @@ export default async function Page() {
           最初から「長い針が分、短い針が時間」と教えるより、生活の中の時間と結びつけた方が入りやすいこともあります。「長い針が6になったらお風呂」「短い針が8になったら寝る」というように、毎日の生活の節目と時計を結びつけると、数字としてではなく、実感として時計を捉えられるようになっていきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ステップ②：「なんじ」から始める
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           ステップ③：5分刻みへ
         </h2>
 
@@ -114,7 +123,7 @@ export default async function Page() {
           時計の文字盤に5・10・15…と小さく数字を書いたシールを貼ってあげると、長い針の位置と分の対応がわかりやすくなります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           つまずきやすいポイント
         </h2>
 
@@ -135,7 +144,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           時計クイズを日常に取り入れる
         </h2>
 
@@ -143,7 +152,7 @@ export default async function Page() {
           「今何時かな？」と1日に1回だけクイズを出すなど、無理のない範囲で習慣化すると、自然と読める時間が増えていきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           気になる疑問Q&A
         </h2>
 
@@ -178,7 +187,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月　/　最終更新日：2026年7月
+          公開日：2026年5月27日　/　最終更新日：2026年6月18日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

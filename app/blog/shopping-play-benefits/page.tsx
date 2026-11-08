@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="買い物ごっこで育つ力｜わくたん"
         description="子どもに人気の買い物ごっこで育つ力を解説。数の感覚やコミュニケーション力を楽しく育てる遊び方を紹介します。"
         slug="shopping-play-benefits"
-        datePublished="2026-07-01"
-        dateModified="2026-08-10"
+        datePublished="2026-08-02"
+        dateModified="2026-10-21"
       />
 
 
@@ -45,11 +47,18 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-10-21" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "数の感覚が育つ"}, {"id": "section-2", "text": "コミュニケーション力が育つ"}, {"id": "section-3", "text": "役割を演じることで想像力も育つ"}, {"id": "section-4", "text": "年齢によって遊び方を変える"}, {"id": "section-5", "text": "はじめかたの具体例"}, {"id": "section-6", "text": "家庭でできる工夫"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           おもちゃのレジやお財布を使った買い物ごっこは、多くの子どもが大好きな遊びです。実はこの遊び、数やコミュニケーションの力を育てる効果があります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           数の感覚が育つ
         </h2>
 
@@ -57,7 +66,7 @@ export default async function Page() {
           「これは100円です」「あわせて300円になります」というやりとりの中で、自然と数を扱う経験が増えます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           コミュニケーション力が育つ
         </h2>
 
@@ -74,7 +83,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           役割を演じることで想像力も育つ
         </h2>
 
@@ -82,7 +91,7 @@ export default async function Page() {
           「お店屋さんだったら、どう言うかな？」と想像しながら演じる経験は、ごっこ遊び全般に共通する想像力の発達にもつながります。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           年齢によって遊び方を変える
         </h2>
 
@@ -94,7 +103,7 @@ export default async function Page() {
           5〜6歳になると、実際に硬貨を使ったやりとりに挑戦できるようになります。「100円のジュースを買うのに、10円玉を何枚出せばいい？」のように、少しずつ計算の要素を混ぜていくと、遊びながら自然に数の感覚が深まっていきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           はじめかたの具体例
         </h2>
 
@@ -102,7 +111,7 @@ export default async function Page() {
           特別な道具がなくても、身の回りのもので今すぐ始められます。空き箱やペットボトルのキャップを商品に見立てたり、折り紙を切っておもちゃのお金を手作りしたりするだけで、立派な「お店」が完成します。最初は親が店員役になって見本を見せ、次に子どもと役を交代してみましょう。両方の立場を経験することで、会話のパターンがより自然に身についていきます。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           家庭でできる工夫
         </h2>
 
@@ -151,7 +160,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月　/　最終更新日：2026年8月
+          公開日：2026年8月2日　/　最終更新日：2026年10月21日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">

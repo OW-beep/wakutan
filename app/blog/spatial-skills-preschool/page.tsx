@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -36,6 +38,13 @@ export default function Page() {
           </p>
         </div>
 
+    <ArticleByline dateModified="2026-10-08" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "先に結論"}, {"id": "section-2", "text": "空間スキルってなに？"}, {"id": "section-3", "text": "研究①：家庭でのパズル遊びと、4歳半の空間スキル"}, {"id": "section-4", "text": "研究②：空間スキルは伸ばせる"}, {"id": "section-5", "text": "研究③：算数の成績まで伸びるのか"}, {"id": "section-6", "text": "おうちで試せる、空間の力にふれる遊び"}, {"id": "section-7", "text": "よくある質問"}, {"id": "section-8", "text": "参考文献"}]}
+    />
+
+
         <p className="text-lg leading-8 mb-6">
           図形を頭の中で回したり、見る向きを変えて形を思い浮かべたりする力を、研究では「空間スキル」と呼びます。パズルや積み木、図形のドリルは、この力や算数に関係するのでしょうか。この記事では、原文で内容を確認できた論文だけを取り上げて、わかっていることと、まだわからないことを整理します。
         </p>
@@ -47,7 +56,7 @@ export default function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           先に結論
         </h2>
 
@@ -62,7 +71,7 @@ export default function Page() {
           <p className="leading-7">「空間スキルは練習で伸ばせる。ただし、それで算数が必ず伸びるとまでは、研究から言い切れない」というのが、確認できた論文からわかる範囲です。</p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           空間スキルってなに？
         </h2>
 
@@ -74,7 +83,7 @@ export default function Page() {
           わくたんの「くるくるパズル」「かがみうつし」「どこからみる？」は、図形を回す・左右を反対にする・見る向きを変えるといった、空間スキルに関係する問題として作っています。ただし、これらのドリル自体の効果を調べた研究はありません。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           研究①：家庭でのパズル遊びと、4歳半の空間スキル
         </h2>
 
@@ -96,7 +105,7 @@ export default function Page() {
           </ul>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           研究②：空間スキルは伸ばせる
         </h2>
 
@@ -118,7 +127,7 @@ export default function Page() {
           </ul>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           研究③：算数の成績まで伸びるのか
         </h2>
 
@@ -153,7 +162,7 @@ export default function Page() {
           </ul>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           おうちで試せる、空間の力にふれる遊び
         </h2>
 
@@ -167,7 +176,7 @@ export default function Page() {
             <li>鏡に手や折り紙をうつして、「左右が反対になるね」と一緒に見る。</li>
         </ul>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -186,7 +195,7 @@ export default function Page() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           参考文献
         </h2>
         <ol className="list-decimal ml-6 space-y-3 text-sm leading-7 text-gray-700 mb-6">
@@ -222,7 +231,7 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年10月　/　最終更新日：2026年10月
+          公開日：2026年10月8日　/　最終更新日：2026年10月8日
         </div>
 
         <div className="mt-8 bg-yellow-50 border rounded-2xl p-6">

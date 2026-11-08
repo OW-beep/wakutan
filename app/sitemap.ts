@@ -7,7 +7,7 @@ import path from "node:path";
  * ブログ記事は、記事自身の dateModified を使う。それ以外のページは、内容を大きく
  * 変えたときに、下の日付を手で更新する。
  */
-const SITE_UPDATED = "2026-10-09";
+const SITE_UPDATED = "2026-11-08";
 
 function lastModFor(page: string): Date {
   if (page.startsWith("/blog/")) {
@@ -104,6 +104,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/6/masu/hiki",
 
     "/about",
+    "/editorial-policy",
+    "/sitemap",
     "/articles",
     "/categories",
     "/kuriagari",

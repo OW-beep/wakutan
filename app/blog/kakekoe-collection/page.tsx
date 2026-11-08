@@ -1,6 +1,8 @@
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
+import ArticleByline from "@/app/components/ArticleByline";
+import ArticleToc from "@/app/components/ArticleToc";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -25,8 +27,8 @@ export default async function Page() {
         title="勉強嫌いにならないための声かけ集｜わくたん"
         description="幼児期に勉強嫌いにならないための声かけのポイントと具体例を紹介。「頑張れ」以外の伝え方のヒントをまとめました。"
         slug="kakekoe-collection"
-        datePublished="2026-06-01"
-        dateModified="2026-08-10"
+        datePublished="2026-06-27"
+        dateModified="2026-10-06"
       />
 
 
@@ -45,6 +47,13 @@ export default async function Page() {
           </p>
 
         </div>
+
+    <ArticleByline dateModified="2026-10-06" />
+
+    <ArticleToc
+      items={[{"id": "section-1", "text": "結果よりも過程に注目する"}, {"id": "section-2", "text": "比較ではなく、その子自身の成長を伝える"}, {"id": "section-3", "text": "間違えた時こそ前向きな言葉を"}, {"id": "section-4", "text": "「やらせる」より「一緒にやる」姿勢を"}, {"id": "section-5", "text": "シーン別・声かけの言い換え例"}]}
+    />
+
         <p className="text-lg leading-8 mb-6">
           「頑張れ」「もっとできるでしょ」——励ますつもりの言葉が、時にプレッシャーになってしまうことがあります。
         </p>
@@ -53,7 +62,7 @@ export default async function Page() {
           幼児期の声かけは、その後の学習への向き合い方に大きく影響します。ここでは、日常で使いやすい声かけの工夫を紹介します。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-1" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           結果よりも過程に注目する
         </h2>
 
@@ -74,7 +83,7 @@ export default async function Page() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-2" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           比較ではなく、その子自身の成長を伝える
         </h2>
 
@@ -86,7 +95,7 @@ export default async function Page() {
           「前より早くできるようになったね」など、その子自身の変化に目を向けた声かけを心がけましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-3" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           間違えた時こそ前向きな言葉を
         </h2>
 
@@ -98,7 +107,7 @@ export default async function Page() {
           「どこで迷ったかな？一緒に見てみよう」と、間違いを一緒に振り返る姿勢を見せてあげましょう。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           「やらせる」より「一緒にやる」姿勢を
         </h2>
 
@@ -110,7 +119,7 @@ export default async function Page() {
           保護者の方が隣にいてくれるだけで、子どもは安心して挑戦できるものです。
         </p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+        <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           シーン別・声かけの言い換え例
         </h2>
 
@@ -167,7 +176,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月　/　最終更新日：2026年8月
+          公開日：2026年6月27日　/　最終更新日：2026年10月6日
         </div>
 
         <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
