@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="子どもに人気の迷路遊びで育つ5つの力を解説。楽しみながら思考力や集中力を伸ばす迷路遊びの魅力と選び方を紹介します。"
         slug="maze-benefits"
         datePublished="2026-05-11"
-        dateModified="2026-07-09"
+        dateModified="2026-11-03"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-07-09" />
+    <ArticleByline dateModified="2026-11-03" />
+
+    <ArticleSummary
+      worry="迷路遊びに意味はあるのか、どう関わればいいのか知りたいです。"
+      answer="迷路は、先を考える・間違えたらやり直す経験になります。行き止まりで止まっても、答えを教えず、自分で試す時間を取ってあげるのがポイントです。"
+      steps={["4歳ごろは、道幅が広くシンプルな迷路から始める", "行き止まりで止まっても、すぐに正解を教えず、少し待つ", "指で先に道をなぞってから鉛筆を動かしても、OK", "戻って別の道を探せたら、「やり直せたね」と認める"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "① 見通しを立てる力"}, {"id": "section-2", "text": "② 集中力"}, {"id": "section-3", "text": "③ 運筆力"}, {"id": "section-4", "text": "④ 試行錯誤する力"}, {"id": "section-5", "text": "⑤ 達成感"}, {"id": "section-6", "text": "年齢に合わせた迷路の選び方"}, {"id": "section-7", "text": "手作り迷路も効果的"}, {"id": "section-8", "text": "行き詰まったときの見守り方"}, {"id": "section-9", "text": "もう少し詳しく知りたい方へ"}]}
+      items={[{"id": "section-1", "text": "① 見通しを立てる力"}, {"id": "section-2", "text": "② 集中力"}, {"id": "section-3", "text": "③ 運筆力"}, {"id": "section-4", "text": "④ 試行錯誤する力"}, {"id": "section-5", "text": "⑤ 達成感"}, {"id": "section-6", "text": "年齢に合わせた迷路の選び方"}, {"id": "section-7", "text": "手作り迷路も効果的"}, {"id": "section-8", "text": "行き詰まったときの見守り方"}, {"id": "section-9", "text": "迷路に取り組む様子（わが家の場合）"}, {"id": "section-10", "text": "続けて、できるようになったこと"}, {"id": "section-11", "text": "もう少し詳しく知りたい方へ"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -148,6 +155,34 @@ export default async function Page() {
         </p>
 
         <h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          迷路に取り組む様子（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          わが家で迷路に興味を持ち始めたのは、4歳ごろです。ドリルの中にあった簡単な迷路を見て、自分から鉛筆で道をたどろうとしたのがきっかけでした。文字や数字を書く練習は少し面倒そうにすることもありましたが、迷路は遊びの延長として取り組めたようです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          最初は、道の途中で行き止まりになっても、そのまま鉛筆を進めてしまうこともありました。少し慣れてくると、行き止まりでいったん止まり、少し戻って別の道を探すようになりました。指で先に道をなぞってから、鉛筆を動かすこともありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          うまく進めないときに「こっちかな？」と考えている様子を見ると、答えを教えるよりも、自分で試す時間を取ることが大切だと感じます。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          続けて、できるようになったこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          以前は、行き止まりになるとすぐに困ってしまうことがありましたが、少しずつ自分で戻って別の道を探せるようになりました。また、鉛筆を動かすときも、線から大きくはみ出さないように、慎重に進めるようになったと思います。
+        </p>
+
+        <p className="leading-8 mb-4">
+          迷路は、単にゴールを見つけるだけでなく、先を考えたり、間違えたときにやり直したりする経験にもなると感じています。
+        </p>
+
+<h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           もう少し詳しく知りたい方へ
         </h2>
 
@@ -163,6 +198,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 鉛筆でうまく線が引けません。練習した方がいい？</p>
             <p className="leading-7 text-gray-700">A. 線がガタガタでも問題ありません。ゴールまでたどり着けたことを一緒に喜んであげましょう。運筆力は繰り返す中で自然に上達していきます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 行き止まりでも、そのまま進んでしまいます。</p>
+            <p className="leading-7 text-gray-700">A. 最初はよくあることです。わが家でも、行き止まりでそのまま鉛筆を進めていた時期がありました。慣れてくると、自分で止まって戻るようになりました。すぐに教えず、少し待ってみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 指でなぞってから、鉛筆を動かしてもいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 大丈夫です。わが家でも、指で先に道をなぞってから鉛筆を動かすことがありました。先を見て考える練習にもなります。</p>
           </div>
         </div>
 
@@ -191,29 +234,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年5月11日　/　最終更新日：2026年7月9日
+          公開日：2026年5月11日　/　最終更新日：2026年11月3日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4/pattern", "label": "4歳向けパターンドリルを見る", "desc": "迷路と同じように、順番や規則を考える問題。"}, {"href": "/4/nakamawake", "label": "4歳向け仲間分け", "desc": "見て考える、遊びに近い問題。"}, {"href": "/4/nazonazo", "label": "4歳向けなぞなぞ", "desc": "考えるのが楽しくなる、遊びに近い問題。"}]}
+          articles={[{"slug": "find-differences-benefits", "desc": "間違い探しで育つ力と、見つからないときの声かけ。"}, {"slug": "concentration-4year", "desc": "集中が続かないときの、時間帯と問題の選び方。"}, {"slug": "5min-study", "desc": "始める前に量を決める、5分の学習法。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🌻 今日の実践
-          </h3>
-
-          <p className="mb-3">
-            迷路と同じように、順番を考えるパターン問題にも挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/4/pattern"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            パターンドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="迷路を楽しめるドリル・ブック" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/maze-benefits" title="迷路遊びで育つ5つの力" />
         <RelatedArticles currentSlug="maze-benefits" />

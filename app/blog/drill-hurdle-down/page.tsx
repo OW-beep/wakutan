@@ -29,7 +29,7 @@ export default async function Page() {
         description="きょうだいがいる忙しい毎日の中で、家庭学習を無理なく続けるためにやめたこと・変えたことを、わくたん運営者自身の体験としてまとめました。"
         slug="drill-hurdle-down"
         datePublished="2026-09-13"
-        dateModified="2026-11-08"
+        dateModified="2026-10-24"
       />
 
       <article className="max-w-4xl mx-auto px-6 py-10">
@@ -45,7 +45,7 @@ export default async function Page() {
           </p>
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-10-24" />
 
     <ArticleSummary
       worry="家庭学習をやらせたいのに、子どもが始める前から嫌がって、続きません。"
@@ -195,7 +195,7 @@ export default async function Page() {
         />
 
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年9月13日　/　最終更新日：2026年11月8日</p>
+          <p>公開日：2026年9月13日　/　最終更新日：2026年10月24日</p>
           <p className="mt-1">
             本記事は、わくたん運営者自身の子育て・家庭学習の体験をもとにまとめています。
           </p>

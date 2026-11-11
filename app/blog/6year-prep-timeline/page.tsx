@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="小学校入学準備を月ごとに整理して解説。いつ・何をすればいいか迷う保護者向けに、無理のないタイムラインを紹介します。"
         slug="6year-prep-timeline"
         datePublished="2026-07-07"
-        dateModified="2026-07-17"
+        dateModified="2026-10-08"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-07-17" />
+    <ArticleByline dateModified="2026-10-08" />
+
+    <ArticleSummary
+      worry="入学準備を、いつから、何をすればいいのか分かりません。"
+      answer="目安は、入学の半年〜1年前から、生活面（朝の身支度・持ち物の確認・片付け）と学習面（ひらがな・数字に親しむ）を少しずつ整えることです。日程や持ち物などの手続きは、自治体や学校の公式の案内を基準にしましょう。"
+      steps={["秋ごろに届く案内（就学時健診など）を確認する", "朝の身支度・持ち物の確認・片付けを、少しずつ自分でする", "ひらがな・数字に親しみ、簡単な問題を自分で読んで考える経験を増やす", "日程・持ち物・手続きは、自治体や学校の公式の案内で確認する"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "秋ごろ：情報収集と生活リズムの見直し"}, {"id": "section-2", "text": "冬ごろ：学用品の準備を始める"}, {"id": "section-3", "text": "1〜2月ごろ：生活習慣の総仕上げ"}, {"id": "section-4", "text": "3月ごろ：学びへの土台づくり"}, {"id": "section-5", "text": "4月：入学"}, {"id": "section-6", "text": "遅れていても焦らなくて大丈夫"}, {"id": "section-7", "text": "これから意識したいこと（生活面の自立）"}, {"id": "section-8", "text": "よく聞かれること"}]}
+      items={[{"id": "section-1", "text": "秋ごろ：情報収集と生活リズムの見直し"}, {"id": "section-2", "text": "冬ごろ：学用品の準備を始める"}, {"id": "section-3", "text": "1〜2月ごろ：生活習慣の総仕上げ"}, {"id": "section-4", "text": "3月ごろ：学びへの土台づくり"}, {"id": "section-5", "text": "4月：入学"}, {"id": "section-6", "text": "遅れていても焦らなくて大丈夫"}, {"id": "section-7", "text": "これから意識したいこと（生活面の自立）"}, {"id": "section-8", "text": "入学準備を意識し始めたころ（わが家の場合）"}, {"id": "section-9", "text": "何か月前から、何をしたいと考えているか"}, {"id": "section-10", "text": "自治体・学校からの案内は、公式の情報を基準に"}, {"id": "section-11", "text": "よく聞かれること"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -140,6 +147,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          入学準備を意識し始めたころ（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          上の子が5歳になり、小学校入学が少しずつ現実的に感じられるようになってからです。それまでは、まだ先のことという感覚がありましたが、周りから入学準備の話を聞いたり、ランドセルや学校生活の話題が出たりするようになり、そろそろ考えておこうと思うようになりました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ただ、早くから特別な勉強を始めたわけではありません。まずは、今の生活の中で自分でできることを増やしたり、ひらがなや数字に触れたりすることから始めています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          何か月前から、何をしたいと考えているか
+        </h2>
+
+        <p className="leading-8 mb-4">
+          入学までの半年から1年程度を目安に、生活面と学習面を少しずつ整えていきたいと考えています。生活面では、朝の身支度や持ち物の確認、自分で片付ける習慣などです。学習面では、ひらがなや数字に親しむこと、簡単な問題を自分で読んで考えてみることを続けたいと思っています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、入学が近づいてきたら、学校までの通学路や登下校の安全についても一緒に確認したいです。ただし、すべてを月ごとの計画どおりに進めるつもりはありません。子どもの様子や家庭の予定に合わせて、できるところから取り組みたいです。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          自治体・学校からの案内は、公式の情報を基準に
+        </h2>
+
+        <p className="leading-8 mb-4">
+          入学までには、自治体や学校から案内される就学時健康診断や入学説明会などがあることは把握しています。ただ、具体的な日程や持ち物、手続きについては、自治体から届く通知や学校からの案内を確認して進める必要があると思っています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          特に、入学説明会では、必要な学用品や学校生活のルール、入学までに家庭で準備することなどを確認したいです。インターネットで情報を調べることもありますが、自治体や学校によって違う部分もあるので、最終的には公式の案内を基準にしたいと考えています。まだ分からないことも多いので、早めに情報を整理して、直前になって慌てないようにしたいです。
+        </p>
+
+<h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よく聞かれること
         </h2>
 
@@ -155,6 +198,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 生活リズムはいつ頃から整え始めるべき？</p>
             <p className="leading-7 text-gray-700">A. 入学の1〜2ヶ月前を目安に、起床・就寝時間を学校生活に合わせて整え始めると、直前の負担が少なくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 日程や持ち物は、どこで確認すればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 自治体から届く通知や、学校からの案内（就学時健康診断・入学説明会など）が基準になります。自治体や学校によって違う部分があるので、インターネットの情報は目安として、最終的には公式の案内を確認するのがおすすめです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 月ごとの目安どおりに、進められません。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、すべてを月ごとの計画どおりに進めるつもりはありません。子どもの様子や家庭の予定に合わせて、できるところから取り組んでいます。</p>
           </div>
         </div>
 
@@ -183,29 +234,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月7日　/　最終更新日：2026年7月17日
+          公開日：2026年7月7日　/　最終更新日：2026年10月8日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/6", "label": "6歳向けドリルを見る", "desc": "学びの土台づくりに、今日のドリルを取り入れてみませんか。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "ジャンルを選んで、短い時間で。"}, {"href": "/6/tokei", "label": "6歳向けとけいの問題", "desc": "時計の読み方にも、少しずつ親しんでおきたいときに。"}]}
+          articles={[{"slug": "school-checklist", "desc": "入学準備のチェックリスト。学用品と、生活面の準備。"}, {"slug": "school-preparation", "desc": "小学校入学前に身につけたい力。"}, {"slug": "nencho-katei-gakushu", "desc": "年長さんの1年間の進め方。焦らず、土台づくりを。"}, {"slug": "how-read-clock", "desc": "時計の読み方は、いつから？"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🧩 今日のチャレンジ
-          </h3>
-
-          <p className="mb-3">
-            学びの土台づくりに、今日のドリルを取り入れてみませんか？
-          </p>
-
-          <Link
-            href="/6"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            6歳向けドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="入学準備の学用品を探すときの参考に" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/6year-prep-timeline" title="小学校入学準備、いつ何をすればいい？月ごとの目安" />
         <RelatedArticles currentSlug="6year-prep-timeline" />

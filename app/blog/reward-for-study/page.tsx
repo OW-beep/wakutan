@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="幼児学習でのごほうびの使い方を、心理学の考え方もふまえて解説。やる気を長く育てる褒め方のコツを紹介します。"
         slug="reward-for-study"
         datePublished="2026-04-02"
-        dateModified="2026-06-17"
+        dateModified="2026-10-21"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-06-17" />
+    <ArticleByline dateModified="2026-10-21" />
+
+    <ArticleSummary
+      worry="ごほうびは、あげた方がいいのか、あげない方がいいのか迷います。"
+      answer="毎回ものを用意するごほうびは、続けるほど「ごほうびがないとやらない」になりやすいです。基本は「最後まで考えられたね」「自分で気づいたね」という声かけにして、シールなどは、ルール化しすぎないのがおすすめです。"
+      steps={["「自分で考えられたね」「さっきより上手になったね」など、過程を具体的に認める", "正解したときだけでなく、間違えたあとに自分で考え直したときにも声をかける", "「これをやったらお菓子」の形にしない", "シールを使う場合も、貼ること自体が目的にならないよう、ルール化しすぎない"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "ごほうび（外発的動機づけ）の効果と注意点"}, {"id": "section-2", "text": "内側から育つやる気（内発的動機づけ）"}, {"id": "section-3", "text": "ごほうびを使うなら「頻度」に注意"}, {"id": "section-4", "text": "言葉のごほうびを活用する"}, {"id": "section-5", "text": "「1週間続いたらルール」、実際にやってみると"}, {"id": "section-6", "text": "よくある疑問"}]}
+      items={[{"id": "section-1", "text": "ごほうび（外発的動機づけ）の効果と注意点"}, {"id": "section-2", "text": "内側から育つやる気（内発的動機づけ）"}, {"id": "section-3", "text": "ごほうびを使うなら「頻度」に注意"}, {"id": "section-4", "text": "言葉のごほうびを活用する"}, {"id": "section-5", "text": "「1週間続いたらルール」、実際にやってみると"}, {"id": "section-6", "text": "わが家で、基本にしていること・ルール化しなかったこと"}, {"id": "section-7", "text": "ごほうびで、うまくいかなかったこと"}, {"id": "section-8", "text": "わが家でよく使う、認める言葉"}, {"id": "section-9", "text": "よくある疑問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -120,6 +127,47 @@ export default async function Page() {
         </p>
 
         <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家で、基本にしていること・ルール化しなかったこと
+        </h2>
+
+        <div className="grid sm:grid-cols-2 gap-4 my-6">
+          <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">💬 基本にしていること</p>
+            <p className="leading-7">特別なおもちゃやお菓子を、毎回のごほうびにはしていません。「最後まで考えられたね」「自分で気づいたね」といった声かけを、ごほうびの代わりにしています。</p>
+          </div>
+          <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">🌟 ルール化しなかったこと</p>
+            <p className="leading-7">以前、シールを使ってみました。取り組んだ日にシールを貼るのは楽しそうでしたが、貼ること自体が目的になることもあったので、今はあまりルール化していません。</p>
+          </div>
+        </div>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ごほうびで、うまくいかなかったこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「これをやったらお菓子をあげる」という形にすると、お菓子がない日は取り組む気持ちになりにくいことがありました。また、シールを集めることに夢中になって、問題の内容よりも、何枚もらえるかを気にすることもありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ごほうびが悪いわけではありませんが、毎回何かを用意しないと勉強しなくなるのは避けたいと思いました。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家でよく使う、認める言葉
+        </h2>
+
+        <ul className="list-disc ml-6 space-y-2 leading-8 mb-4">
+          <li>「自分で考えられたね」</li>
+          <li>「さっきより上手になったね」</li>
+          <li>「最後までやってみたね」</li>
+        </ul>
+
+        <p className="leading-8 mb-4">
+          正解したときだけでなく、間違えたあとに自分で考え直したときにも、声をかけるようにしています。答えが合っていたかどうかだけでなく、考えた過程や挑戦したことも見てあげたいと思っています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある疑問
         </h2>
 
@@ -135,6 +183,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 一度始めたごほうび制度、途中でやめてもいい？</p>
             <p className="leading-7 text-gray-700">A. 問題ありません。「ごほうびを気にしすぎているな」と感じたタイミングで見直すのは自然なことです。やめるときは、代わりに言葉のごほうびを増やすと切り替えがスムーズです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 毎回ごほうびを用意しないと、やらなくなりませんか？</p>
+            <p className="leading-7 text-gray-700">A. 「これをやったらお菓子」の形にすると、お菓子がない日に取り組む気持ちになりにくいことがありました。わが家では、毎回何かを用意しなくても続くように、声かけを中心にしています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. シールを使うのは、よくないですか？</p>
+            <p className="leading-7 text-gray-700">A. 悪いわけではありません。わが家でも、シールを貼るのは楽しそうでした。ただ、貼ることが目的になったり、何枚もらえるかを気にしたりすることもあったので、今はあまりルール化していません。</p>
           </div>
         </div>
 
@@ -163,29 +219,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年4月2日　/　最終更新日：2026年6月17日
+          公開日：2026年4月2日　/　最終更新日：2026年10月21日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/5", "label": "5歳向けドリルを見る", "desc": "ごほうびの代わりに、「自分で考えられたね」と声をかけながら。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/print", "label": "印刷して使う", "desc": "取り組んだ日に、一緒に「できたね」を確認できます。"}]}
+          articles={[{"slug": "self-esteem-words", "desc": "できたことを認める、声かけの具体例。"}, {"slug": "kakekoe-collection", "desc": "勉強嫌いにならないための、声かけ集。"}, {"slug": "child-hates-study", "desc": "勉強を嫌がるときの、量と問題の選び方。"}, {"slug": "study-habit", "desc": "休んでも、また始められる。習慣づけの考え方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🧩 今日のチャレンジ
-          </h3>
-
-          <p className="mb-3">
-            褒め方を意識しながら、今日のドリルにも一緒に取り組んでみませんか？
-          </p>
-
-          <Link
-            href="/category/parent"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            保護者向け記事をもっと見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="やる気の「見える化」に使えるシール" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/reward-for-study" title="幼児にごほうびは必要？やる気を育てる上手な褒め方" />
         <RelatedArticles currentSlug="reward-for-study" />

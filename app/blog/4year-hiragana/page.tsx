@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="4歳ではじめてひらがなに触れる際の進め方を解説。何から始めればよいか、興味を持たない場合の対処法もあわせて紹介します。"
         slug="4year-hiragana"
         datePublished="2026-03-29"
-        dateModified="2026-05-16"
+        dateModified="2026-10-07"
       />
 
 
@@ -48,7 +49,13 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-05-16" />
+    <ArticleByline dateModified="2026-10-07" />
+
+    <ArticleSummary
+      worry="4歳でひらがなを始めたいけれど、どこから始めればいいか分かりません。"
+      answer="まずは自分の名前から、「読む」を先に始めましょう。「書く」は後からで大丈夫です。1日に覚える文字数は少なくてよく、興味を持たない時期は、無理せず絵本などから間口を広げます。"
+      steps={["自分の名前から始める", "「読む」を先に、「書く」は後回しにする", "1日に覚える文字数は、少なくする", "読む力が育ってから、なぞり書き→書く練習へ進む"]}
+    />
 
     <ArticleToc
       items={[{"id": "section-1", "text": "まずは自分の名前から"}, {"id": "section-2", "text": "「読む」を先に、「書く」は後で"}, {"id": "section-3", "text": "1日に覚える文字数は少なくてOK"}, {"id": "section-4", "text": "興味を持たない場合の対処"}, {"id": "section-5", "text": "書く練習に進むタイミング"}, {"id": "section-6", "text": "興味の芽を大切に"}, {"id": "section-7", "text": "「自分の名前を書きたい」がきっかけだった"}, {"id": "section-8", "text": "こんな質問もよくいただきます"}]}
@@ -194,27 +201,13 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月29日　/　最終更新日：2026年5月16日
+          公開日：2026年3月29日　/　最終更新日：2026年10月7日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
-
-          <h3 className="font-bold text-xl mb-3">
-            🎈 さっそく試してみよう
-          </h3>
-
-          <p className="mb-3">
-            今日のひらがなドリルで、身近な言葉に触れてみませんか？
-          </p>
-
-          <Link
-            href="/4/hiragana"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            4歳向けひらがなドリルを見る
-          </Link>
-
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/4/hiragana", "label": "4歳向けひらがなを見る", "desc": "絵を見て正しい言葉を選ぶ、読みの力を育てる問題。"}, {"href": "/5/hiragana", "label": "5歳向けひらがな", "desc": "読みに慣れてきたら、次のステップとして。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "hiragana-worry-5year", "desc": "5歳でひらがなが書けない・読めないときの関わり方。"}, {"slug": "when-start-hiragana", "desc": "ひらがなは何歳から？無理なく始めるタイミング。"}, {"slug": "hiragana-fun", "desc": "ひらがなを楽しく覚える方法。"}, {"slug": "unpitsu-practice", "desc": "運筆練習。線を引く力を育てる。"}]}
+        />
 
         <RakutenProducts items={products} />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />

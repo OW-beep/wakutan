@@ -30,7 +30,7 @@ export default async function Page() {
         description="4歳と6歳など、きょうだいで年齢差がある場合の家庭学習の進め方を紹介。それぞれのペースを尊重しながら両立するための工夫をまとめました。"
         slug="age-gap-siblings"
         datePublished="2026-07-24"
-        dateModified="2026-11-08"
+        dateModified="2026-11-06"
       />
 
 
@@ -50,7 +50,7 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-11-06" />
 
     <ArticleSummary
       worry="きょうだいで年齢が離れていて、同じ時間に家庭学習を進めるのが大変です。"
@@ -148,7 +148,7 @@ export default async function Page() {
         </p>
 
         <p className="leading-8 mb-4">
-          効果があったのは、下の子にも専用の紙とクレヨンを用意することです。「これはお兄ちゃんの」「こっちは自分の」と分けると、少しずつ自分のものに取り組めるようになりました。
+          効果があったのは、下の子にも専用の紙とクレヨンを用意することです。「これはお姉ちゃんの」「こっちは自分の」と分けると、少しずつ自分のものに取り組めるようになりました。
         </p>
 
 <h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
@@ -162,7 +162,7 @@ export default async function Page() {
           </div>
           <div>
             <p className="font-bold">Q. 下の子が、上の子のドリルを使いたがります。</p>
-            <p className="leading-7 text-gray-700">A. 下の子にも、専用の紙とクレヨンなど、自分の分を用意してみてください。「これはお兄ちゃんの」「こっちは自分の」と分けるだけで、取り合いが減ることがあります。</p>
+            <p className="leading-7 text-gray-700">A. 下の子にも、専用の紙とクレヨンなど、自分の分を用意してみてください。「これはお姉ちゃんの」「こっちは自分の」と分けるだけで、取り合いが減ることがあります。</p>
           </div>
           <div>
             <p className="font-bold">Q. 2歳の下の子には、いつからドリルをさせたらいいですか？</p>
@@ -198,7 +198,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月24日　/　最終更新日：2026年11月8日
+          公開日：2026年7月24日　/　最終更新日：2026年11月6日
         </div>
 
                 <ArticleNextSteps

@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +21,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("カタカナ ドリル", 3);
+  const products = await searchRakutenItems("カタカナ 絵本 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -50,8 +52,14 @@ export default async function Page() {
 
     <ArticleByline dateModified="2026-05-22" />
 
+    <ArticleSummary
+      worry="カタカナは、いつから、どう教えればいいのか分かりません。"
+      answer="ひらがなにある程度慣れてから、身近なカタカナを「一緒に読む」ところから始めるのが自然です。書く練習を急がず、まず見慣れることを大切にして、興味を持った言葉から少しずつ増やしましょう。"
+      steps={["お菓子のパッケージや絵本で、見つけたカタカナを一緒に読む", "「これ何て読むの？」と聞かれたら、一緒に確認する", "一度に全部覚えようとせず、身近な言葉から少しずつ", "似た形の文字（シ・ツ、ソ・ンなど）の混同は、よくあることとして焦らない"]}
+    />
+
     <ArticleToc
-      items={[{"id": "section-1", "text": "カタカナを始めるタイミング"}, {"id": "section-2", "text": "身近なカタカナから始める"}, {"id": "section-3", "text": "ひらがなとの形の違いに注意"}, {"id": "section-4", "text": "ひらがなと混同しやすい文字"}, {"id": "section-5", "text": "アルファベットとの違いに戸惑う場合も"}, {"id": "section-6", "text": "焦らず段階的に"}]}
+      items={[{"id": "section-1", "text": "カタカナを始めるタイミング"}, {"id": "section-2", "text": "身近なカタカナから始める"}, {"id": "section-3", "text": "ひらがなとの形の違いに注意"}, {"id": "section-4", "text": "ひらがなと混同しやすい文字"}, {"id": "section-5", "text": "アルファベットとの違いに戸惑う場合も"}, {"id": "section-6", "text": "焦らず段階的に"}, {"id": "section-7", "text": "カタカナに触れ始めたきっかけ（わが家の場合）"}, {"id": "section-8", "text": "つまずきやすかったところ"}, {"id": "section-9", "text": "家庭での工夫：書かせるより、見慣れる"}, {"id": "section-10", "text": "よくある質問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -146,7 +154,67 @@ export default async function Page() {
           カタカナは読めるようになるまでに時間がかかる子も多い文字です。ひらがなと同じように、読むことから少しずつ慣れていきましょう。
         </p>
 
-        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          カタカナに触れ始めたきっかけ（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          カタカナを意識するようになったのは、5歳ごろです。きっかけは、絵本やお菓子のパッケージなど、身近なところでカタカナを見かける機会が増えたことでした。最初から書く練習を始めたわけではなく、「これ何て読むの？」と聞かれたときに、一緒に読んでみるところから始めました。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          つまずきやすかったところ
+        </h2>
+
+        <p className="leading-8 mb-4">
+          ひらがなと形が似ている文字を混同することがありました。また、カタカナは日常生活の中で見かけても、ひらがなほど頻繁に読む機会がないので、覚えたと思っても、時間が経つと忘れていることがありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          一度に全部覚えようとすると負担になりそうだったので、身近な言葉から少しずつ触れるようにしました。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          家庭での工夫：書かせるより、見慣れる
+        </h2>
+
+        <p className="leading-8 mb-4">
+          お菓子や食品のパッケージ、絵本などに書かれたカタカナを、一緒に読むことです。例えば、本人が好きなものの名前を見つけたら、「ここに書いてあるね」と声をかけて、一緒に文字を確認します。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ドリルで何度も書かせるより、まずは見慣れることを大切にしています。興味を持った言葉から覚えていく方が、本人も楽しそうです。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ✏️ 言葉に慣れる練習に
+          </p>
+          <p>
+            <Link href="/5/hiragana" className="text-orange-600 font-bold hover:underline">5歳向けひらがなドリル</Link>や<Link href="/4/hiragana" className="text-orange-600 font-bold hover:underline">4歳向けひらがな</Link>で、言葉の読みに慣れておくと、カタカナにも進みやすくなります。
+          </p>
+        </div>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. カタカナを覚えたのに、時間が経つと忘れてしまいます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、覚えたと思っても、時間が経つと忘れていることがありました。カタカナは、日常でひらがなほど読む機会が多くないためかもしれません。身近な言葉に、繰り返し触れる機会をつくってみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. ひらがなと形が似ている文字を、混同します。</p>
+            <p className="leading-7 text-gray-700">A. わが家でもありました。一度に全部覚えようとせず、身近な言葉から少しずつ触れる方が、負担が少なく進められました。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 書く練習は、いつから始めればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、書く練習から始めず、まず「これ何て読むの？」から一緒に読むことを大切にしています。ドリルで何度も書かせるより、見慣れることを優先しています。</p>
+          </div>
+        </div>
+
+<div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫
           </p>
@@ -174,26 +242,12 @@ export default async function Page() {
           公開日：2026年5月3日　/　最終更新日：2026年5月22日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/5/hiragana", "label": "5歳向けひらがなドリルを見る", "desc": "ひらがなの読みに慣れてから、カタカナへ。言葉への理解を深める問題です。"}, {"href": "/4/hiragana", "label": "4歳向けひらがな", "desc": "絵を見て正しい言葉を選ぶ、読みの力を育てる問題。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "when-start-hiragana", "desc": "ひらがなは何歳から？無理なく始めるタイミング。"}, {"slug": "hiragana-fun", "desc": "ひらがなを楽しく覚える5つの方法。"}, {"slug": "how-5year-learn", "desc": "5歳の学び方。考える力と、先取りを急がない考え方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🧭 次にやってみること
-          </h3>
-
-          <p className="mb-3">
-            ひらがなに慣れてきたら、今日のドリルで言葉への理解も深めてみませんか？
-          </p>
-
-          <Link
-            href="/5/hiragana"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            ひらがなドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="カタカナに親しめる絵本・カード" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/katakana-start" title="カタカナはいつから教える？" />
         <RelatedArticles currentSlug="katakana-start" />

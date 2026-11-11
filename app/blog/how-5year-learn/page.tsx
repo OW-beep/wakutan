@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -54,8 +56,14 @@ export default async function Page() {
 
     <ArticleByline dateModified="2026-09-25" />
 
+    <ArticleSummary
+      worry="5歳になって、どんな学び方をすればいいのか知りたいです。"
+      answer="5歳は、答えを出すだけでなく「自分なりに考えてから答える」ことが増える時期です。先取りを急がず、遊びながら答えを見つけられる問題を中心に、今できることを繰り返しながら、少しずつ新しいことに触れるのがおすすめです。"
+      steps={["迷路・間違い探し・数字の問題など、遊びながら答えを見つけられる問題を選ぶ", "絵やイラストが入った問題から始める", "詰まっても、すぐに教えず、少し見守る", "今できる問題を繰り返しながら、少しずつ新しいことに触れる"]}
+    />
+
     <ArticleToc
-      items={[{"id": "section-1", "text": "🌱 5歳は学びが広がる時期"}, {"id": "section-2", "text": "🧠 考える力を伸ばそう"}, {"id": "section-3", "text": "🔢 数字への理解を深める"}, {"id": "section-4", "text": "✏️ 文字への興味を大切に"}, {"id": "section-5", "text": "⏰ 学習時間の目安"}, {"id": "section-6", "text": "💡 保護者が意識したいポイント"}, {"id": "section-7", "text": "🕐 5歳の1日の過ごし方（イメージ例）"}, {"id": "section-8", "text": "❓ よくある疑問"}, {"id": "section-9", "text": "🌈 まとめ"}, {"id": "section-10", "text": "🚀 今日の5さいドリルはこちら"}]}
+      items={[{"id": "section-1", "text": "🌱 5歳は学びが広がる時期"}, {"id": "section-2", "text": "🧠 考える力を伸ばそう"}, {"id": "section-3", "text": "🔢 数字への理解を深める"}, {"id": "section-4", "text": "✏️ 文字への興味を大切に"}, {"id": "section-5", "text": "⏰ 学習時間の目安"}, {"id": "section-6", "text": "💡 保護者が意識したいポイント"}, {"id": "section-7", "text": "🕐 5歳の1日の過ごし方（イメージ例）"}, {"id": "section-8", "text": "🔄 4歳のころと比べて、変わったこと"}, {"id": "section-9", "text": "🧩 5歳が興味を持つ内容・取り組みやすい問題"}, {"id": "section-10", "text": "🐢 先取りを急がなくてよかった"}, {"id": "section-11", "text": "❓ よくある疑問"}, {"id": "section-12", "text": "🌈 まとめ"}]}
     />
 
 
@@ -256,9 +264,45 @@ export default async function Page() {
 
         </section>
 
-        <section className="bg-white rounded-3xl shadow p-8 mb-8">
-
+                <section className="bg-white rounded-3xl shadow p-8 mb-8">
           <h2 id="section-8" className="text-3xl font-bold mb-6 text-indigo-600">
+            🔄 4歳のころと比べて、変わったこと
+          </h2>
+          <p className="leading-8 mb-4">
+            4歳のころと比べると、問題の答えを出すだけでなく、自分なりに考えてから答えようとすることが増えたと感じます。以前は、分からない問題があるとすぐに「これ何？」と聞いてくることが多かったのですが、最近は少し考えてから答えたり、間違えたときに自分でやり直したりすることがあります。
+          </p>
+          <p className="leading-8">
+            また、親が用意したドリルだけでなく、日常生活の中でも、数字や文字に興味を示すようになりました。
+          </p>
+        </section>
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+          <h2 id="section-9" className="text-3xl font-bold mb-6 text-indigo-600">
+            🧩 5歳が興味を持つ内容・取り組みやすい問題
+          </h2>
+          <p className="leading-8 mb-4">
+            迷路や間違い探し、数字を使った問題など、遊びながら答えを見つけられるものに興味を持っています。特に、正解が一つだけではなく、自分で試しながら進められる問題は楽しそうです。
+          </p>
+          <p className="leading-8 mb-4">
+            ひらがなや数字の練習もしますが、机に向かって書くだけの内容より、絵やイラストが入っている問題の方が取り組みやすいようです。
+          </p>
+          <p className="leading-8">
+            迷路や間違い探しの良さは、<Link href="/blog/maze-benefits" className="text-orange-600 font-bold hover:underline">迷路遊びの記事</Link>と<Link href="/blog/find-differences-benefits" className="text-orange-600 font-bold hover:underline">間違い探しの記事</Link>でも紹介しています。
+          </p>
+        </section>
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+          <h2 id="section-10" className="text-3xl font-bold mb-6 text-indigo-600">
+            🐢 先取りを急がなくてよかった
+          </h2>
+          <p className="leading-8 mb-4">
+            5歳で「これはやらなくてよかった」と思うのは、先取り学習を急ぐことです。以前は、周りの子ができていることを聞くと、うちも早く覚えさせた方がよいのかなと焦ることがありました。
+          </p>
+          <p className="leading-8">
+            でも、難しい内容を無理に進めるより、今できることを繰り返しながら、少しずつ新しいことに触れる方が、本人には合っていました。できる問題を何度も解くことも、決して無駄ではないと感じています。
+          </p>
+        </section>
+<section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 id="section-11" className="text-3xl font-bold mb-6 text-indigo-600">
             ❓ よくある疑問
           </h2>
 
@@ -275,13 +319,21 @@ export default async function Page() {
               <p className="font-bold">Q. 「勉強やだ」と言われたときはどうすればいい？</p>
               <p className="leading-7 text-gray-700">A. 正面から説得するのではなく、「今日はやりたくないんだね」と一度受け止めてみてください。量や内容を変えて様子を見るだけでも、翌日以降の取り組みやすさが変わることがあります。</p>
             </div>
+          <div>
+            <p className="font-bold">Q. 周りの子ができていると聞いて、先取りした方がいいか焦ります。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも焦ったことがあります。でも、難しい内容を無理に進めるより、今できることを繰り返しながら、少しずつ新しいことに触れる方が合っていました。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. できる問題ばかり繰り返していても大丈夫ですか？</p>
+            <p className="leading-7 text-gray-700">A. 大丈夫です。できる問題を何度も解くことも、決して無駄ではないと感じています。</p>
+          </div>
           </div>
 
         </section>
 
         <section className="bg-white rounded-3xl shadow p-8 mb-10">
 
-          <h2 id="section-9" className="text-3xl font-bold mb-6 text-indigo-600">
+          <h2 id="section-12" className="text-3xl font-bold mb-6 text-indigo-600">
             🌈 まとめ
           </h2>
 
@@ -320,22 +372,12 @@ export default async function Page() {
           </p>
         </div>
 
-        <div className="bg-indigo-100 rounded-3xl p-8 text-center">
+                <ArticleNextSteps
+          drills={[{"href": "/5", "label": "5歳向けドリルを見る", "desc": "遊びながら答えを見つけられる問題から。"}, {"href": "/5/kurabekko", "label": "5歳向けくらべっこ", "desc": "自分で試しながら考えられる、比べる問題。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "nencho-katei-gakushu", "desc": "年長さんの1年間の進め方。焦らず、土台づくりを。"}, {"slug": "how-6year-learn", "desc": "6歳の学び方。入学前の最後の準備期間に。"}, {"slug": "kodomo-hikaku-tebanasu", "desc": "周りの子が気になるときの、3つの視点。"}, {"slug": "maze-benefits", "desc": "迷路遊びで育つ力と、見守り方。"}]}
+        />
 
-          <h2 id="section-10" className="text-2xl font-bold mb-4">
-            🚀 今日の5さいドリルはこちら
-          </h2>
-
-          <Link
-            href="/5"
-            className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            5さいドリルに挑戦する →
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="5歳の家庭学習に使えるドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/how-5year-learn" title="5歳の学び方・勉強のコツ" />
         <RelatedArticles currentSlug="how-5year-learn" />

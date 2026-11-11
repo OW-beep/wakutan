@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +21,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("タブレット学習 幼児", 3);
+  const products = await searchRakutenItems("迷路 ドリル 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +30,7 @@ export default async function Page() {
         description="幼児向けのタブレット学習アプリと紙のドリル、それぞれのメリットと使い分け方を紹介します。"
         slug="tablet-vs-paper"
         datePublished="2026-08-03"
-        dateModified="2026-10-11"
+        dateModified="2026-10-19"
       />
 
 
@@ -48,10 +50,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-10-11" />
+    <ArticleByline dateModified="2026-10-19" />
+
+    <ArticleSummary
+      worry="タブレットと紙のドリル、どう使い分ければいいか迷います。"
+      answer="どちらか一方に決めず、紙のドリルを基本にして、タブレットは興味を引きたいときや親が手を離せないときに短時間、と使い分けるのがおすすめです。"
+      steps={["紙のドリルを、家庭学習の基本にする", "タブレットは、興味を引きたいときや、親が手を離せないときに短時間使う", "迷路や間違い探しなど、書き込む問題は紙で", "問題の内容や、その日の状況に合わせて選ぶ"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "タブレット学習のメリット"}, {"id": "section-2", "text": "紙のドリルのメリット"}, {"id": "section-3", "text": "画面時間とのバランスも意識したい"}, {"id": "section-4", "text": "おすすめの組み合わせ方"}, {"id": "section-5", "text": "保護者からよく届く質問"}]}
+      items={[{"id": "section-1", "text": "タブレット学習のメリット"}, {"id": "section-2", "text": "紙のドリルのメリット"}, {"id": "section-3", "text": "画面時間とのバランスも意識したい"}, {"id": "section-4", "text": "おすすめの組み合わせ方"}, {"id": "section-5", "text": "子どもの反応の違い（わが家の場合）"}, {"id": "section-6", "text": "わが家の使い分け"}, {"id": "section-7", "text": "紙のドリルならではのよさを感じた場面"}, {"id": "section-8", "text": "保護者からよく届く質問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -112,6 +120,58 @@ export default async function Page() {
         </p>
 
         <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          子どもの反応の違い（わが家の場合）
+        </h2>
+
+        <div className="grid sm:grid-cols-2 gap-4 my-6">
+          <div className="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">📱 タブレット</p>
+            <p className="leading-7">画面が動いたり、答えを選ぶと反応が返ってきたりするので、最初の興味を引きやすいと感じました。楽しそうに取り組むこともあります。</p>
+          </div>
+          <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">📄 紙のドリル</p>
+            <p className="leading-7">鉛筆で書いたり、指でなぞったり、自分のペースで進められるところがよいと思います。</p>
+          </div>
+        </div>
+
+        <p className="leading-8 mb-4">
+          ただ、長く画面を見続けるより、紙の問題も組み合わせるようにしています。
+        </p>
+
+<h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家の使い分け
+        </h2>
+
+        <p className="leading-8 mb-4">
+          特に厳密なルールはありませんが、紙のドリルを家庭学習の基本にしています。タブレットは、子どもが興味を持ったときや、親が手を離せないときに、短時間使うことがあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          どちらか一方に決めるのではなく、問題の内容やその日の状況に合わせて選ぶようにしています。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          紙のドリルならではのよさを感じた場面
+        </h2>
+
+        <p className="leading-8 mb-4">
+          迷路や間違い探しなど、鉛筆で直接書き込む問題では、紙のよさを感じます。自分で線を引いたり、間違えたところを消してやり直したりできるので、考えた跡が目に見えて残ります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、親が横から同じ紙を見ながら「ここはどう思う？」と話しやすいのも、よいところです。画面を操作することに気を取られず、問題そのものに向き合える場面も多いと思います。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            🖨️ 紙で試してみたいときは
+          </p>
+          <p>
+            <Link href="/print" className="text-orange-600 font-bold hover:underline">印刷して使うページ</Link>から、今日のドリルを印刷できます。迷路や間違い探しの良さは、<Link href="/blog/maze-benefits" className="text-orange-600 font-bold hover:underline">迷路の記事</Link>と<Link href="/blog/find-differences-benefits" className="text-orange-600 font-bold hover:underline">間違い探しの記事</Link>でも紹介しています。
+          </p>
+        </div>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           保護者からよく届く質問
         </h2>
 
@@ -127,6 +187,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 紙のドリルを嫌がる場合、タブレットだけでもいい？</p>
             <p className="leading-7 text-gray-700">A. 一時的にタブレット中心にしても問題ありません。ただ、鉛筆を持つ機会が極端に減らないよう、月齢に応じて少しずつ紙にも触れる時間を作っておくと安心です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. タブレットの方が楽しそうに取り組みます。紙は嫌がるのですが？</p>
+            <p className="leading-7 text-gray-700">A. タブレットは、画面が動いたり反応が返ってきたりするので、最初の興味を引きやすいです。わが家でも、タブレットの方が楽しそうなことがありました。ただ、長く画面を見続けるより、紙の問題も少しずつ組み合わせるようにしています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 紙で取り組むのに向いている問題は、何ですか？</p>
+            <p className="leading-7 text-gray-700">A. 迷路や間違い探しなど、鉛筆で直接書き込む問題です。線を引いたり、間違えたところを消してやり直したりできて、考えた跡が残ります。</p>
           </div>
         </div>
 
@@ -155,29 +223,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年8月3日　/　最終更新日：2026年10月11日
+          公開日：2026年8月3日　/　最終更新日：2026年10月19日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、紙で取り組めます。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "ジャンルを選んで、画面でも印刷でも使えます。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}]}
+          articles={[{"slug": "print-learning", "desc": "プリント学習のメリットと、使い方。"}, {"slug": "drill-vs-print", "desc": "市販ドリルと無料プリントの、使い分け。"}, {"slug": "maze-benefits", "desc": "紙で取り組みたい、迷路遊びで育つ力。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🖊 今日はこれに挑戦
-          </h3>
-
-          <p className="mb-3">
-            紙のドリルを試したいときは、今日のドリルを印刷して使ってみませんか？
-          </p>
-
-          <Link
-            href="/print"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            印刷して使う
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="紙で取り組める迷路・ドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/tablet-vs-paper" title="タブレット学習と紙のドリル、どう使い分ける？" />
         <RelatedArticles currentSlug="tablet-vs-paper" />

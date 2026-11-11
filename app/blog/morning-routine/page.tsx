@@ -30,7 +30,7 @@ export default async function Page() {
         description="幼児期の朝の身支度をスムーズにする工夫を紹介。保育園・幼稚園の準備で慌ただしくなりがちな朝を、少しでも穏やかに過ごすためのヒントをまとめました。"
         slug="morning-routine"
         datePublished="2026-07-06"
-        dateModified="2026-11-08"
+        dateModified="2026-10-30"
       />
 
 
@@ -50,7 +50,7 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-10-30" />
 
     <ArticleSummary
       worry="幼児の朝は、準備でバタバタして、つい「早くして！」と言ってしまいます。"
@@ -207,7 +207,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月6日　/　最終更新日：2026年11月8日
+          公開日：2026年7月6日　/　最終更新日：2026年10月30日
         </div>
 
                 <ArticleNextSteps

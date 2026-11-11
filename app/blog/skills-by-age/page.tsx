@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +30,7 @@ export default async function Page() {
         description="4歳・5歳・6歳それぞれの発達段階で伸ばしたい力の違いをまとめ、年齢に合わせた家庭学習のヒントを紹介します。"
         slug="skills-by-age"
         datePublished="2026-07-24"
-        dateModified="2026-08-15"
+        dateModified="2026-10-22"
       />
 
 
@@ -48,10 +50,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-08-15" />
+    <ArticleByline dateModified="2026-10-22" />
+
+    <ArticleSummary
+      worry="年齢ごとの目安と、わが子の様子が違って戸惑います。"
+      answer="年齢の目安は参考にしつつ、「年齢で決めすぎない」ことが大切です。数字を言えること、量が分かること、意味を使えることは、それぞれ別の力。いま本人がどこまで分かって、どこで迷っているのかを見て、その時期に自然に出てきている力を大切にしましょう。"
+      steps={["遊びながら自分で考える経験（迷路・間違い探し・積み木など）を増やす", "年齢だけで判断せず、本人がどこまで分かり、どこで迷っているかを見る", "先取りより、自分で考えて行動する力を大切にする", "新しいことに出会ったとき、嫌がらずに試してみる気持ちを育てる"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "4歳ごろ：好奇心と数への興味"}, {"id": "section-2", "text": "5歳ごろ：考える力とルール理解"}, {"id": "section-3", "text": "6歳ごろ：学習習慣と自信"}, {"id": "section-4", "text": "焦らず、その子のペースを大切に"}, {"id": "section-5", "text": "年齢ごとの具体的な目安"}, {"id": "section-6", "text": "最近「ここ成長したな」と感じた瞬間"}, {"id": "section-7", "text": "よくある質問"}]}
+      items={[{"id": "section-1", "text": "4歳ごろ：好奇心と数への興味"}, {"id": "section-2", "text": "5歳ごろ：考える力とルール理解"}, {"id": "section-3", "text": "6歳ごろ：学習習慣と自信"}, {"id": "section-4", "text": "焦らず、その子のペースを大切に"}, {"id": "section-5", "text": "年齢ごとの具体的な目安"}, {"id": "section-6", "text": "最近「ここ成長したな」と感じた瞬間"}, {"id": "section-7", "text": "4歳のころに、やっておいてよかったこと（わが家の場合）"}, {"id": "section-8", "text": "年齢の目安と、実際の様子が違って戸惑ったこと"}, {"id": "section-9", "text": "6歳に向けて、いま伸ばしたいこと"}, {"id": "section-10", "text": "よくある質問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -151,6 +159,50 @@ export default async function Page() {
         </p>
 
         <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          4歳のころに、やっておいてよかったこと（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          4歳のころに、迷路や間違い探し、積み木など、遊びながら自分で考える経験を増やしておいてよかったと思います。当時は、ひらがなや数字をどんどん覚えさせることよりも、まずは問題を見て、自分なりに答えを探してみることを大切にしていました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          例えば、迷路で行き止まりになったときに、すぐ答えを教えず「ほかの道はあるかな？」と声をかけるようにしていました。5歳になった今は、一度間違えても、自分で戻って考え直すことがあります。また、生活の中で数を数えたり、積み木を比べたりする経験も役立っていると感じます。
+        </p>
+
+        <p className="leading-8 mb-4">
+          机に向かう勉強だけでなく、日常の遊びの中で考える機会をつくっておいてよかったです。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          年齢の目安と、実際の様子が違って戸惑ったこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          特に数字やひらがなは、年齢の目安と実際の様子が必ずしも一致しないと感じました。数字を順番に言えるようになっても、目の前にある積み木を一つずつ数えたり、3個と5個のどちらが多いか判断したりすることは、すぐにはできませんでした。ひらがなについても、見たことのある文字は分かっていても、似た形の文字を間違えることがあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          最初は「もう5歳なのに、まだ難しいのかな」と気になることもありましたが、文字を読めること、書けること、意味を理解して使えることは、それぞれ違う力なのだと考えるようになりました。今は、年齢だけで判断せず、本人がどこまで分かっていて、どこで迷っているのかを見るようにしています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          6歳に向けて、いま伸ばしたいこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          今は、文字や数字の先取りよりも、自分で考えて行動する力を伸ばしたいと思っています。例えば、分からない問題があったときに、すぐに答えを聞くのではなく、もう一度問題を見たり、別の方法を試したりすることです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、小学校生活を意識すると、自分の持ち物を準備することや、話を聞いてから行動すること、自分が困っているときに「分からない」「手伝って」と伝えることも大切だと感じます。勉強面では、ひらがなや数字に少しずつ親しみながら、迷路やパズルなどで考える経験も続けたいです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          6歳になるまでに何でもできるようにするというより、新しいことに出会ったときに、嫌がらずに試してみる気持ちを育てていきたいと思っています。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -166,6 +218,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 下の子が上の子の真似ばかりします。問題ない？</p>
             <p className="leading-7 text-gray-700">A. 全く問題ありません。きょうだいの様子を見て真似することも、その子にとって大切な学びの一つです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 年齢の目安と、うちの子の様子が違って不安です。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、数字やひらがなは、年齢の目安と実際の様子が必ずしも一致しませんでした。文字を読める、書ける、意味を理解して使えるは、それぞれ違う力です。年齢だけで判断せず、本人がどこまで分かって、どこで迷っているかを見るようにしています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 6歳に向けて、何を優先すればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、文字や数字の先取りよりも、自分で考えて行動する力を優先したいと考えています。分からないときにもう一度問題を見る、持ち物を準備する、困ったときに「手伝って」と伝える、といったことです。</p>
           </div>
         </div>
 
@@ -194,29 +254,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月24日　/　最終更新日：2026年8月15日
+          公開日：2026年7月24日　/　最終更新日：2026年10月22日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "考える力を育てる問題を、ジャンル別に。"}, {"href": "/6", "label": "6歳向けドリルを見る", "desc": "入学が近づいたら、次のステップとして。"}]}
+          articles={[{"slug": "how-4year-learn", "desc": "4歳の学び方。勉強はどこまで？"}, {"slug": "how-5year-learn", "desc": "5歳の学び方。考える力と、先取りを急がない考え方。"}, {"slug": "how-6year-learn", "desc": "6歳の学び方。入学前の最後の準備期間に。"}, {"slug": "nencho-katei-gakushu", "desc": "年長さんの1年間の進め方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
-          </h3>
-
-          <p className="mb-3">
-            お子さんの年齢に合わせた、今日のドリルを試してみませんか？
-          </p>
-
-          <Link
-            href="/articles"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            年齢別の記事をもっと見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="年齢に合わせて選べるドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/skills-by-age" title="4歳・5歳・6歳の発達段階別 「今」伸ばしたい力" />
         <RelatedArticles currentSlug="skills-by-age" />

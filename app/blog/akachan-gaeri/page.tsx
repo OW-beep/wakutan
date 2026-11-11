@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +30,7 @@ export default async function Page() {
         description="下の子が生まれてから、上の子の赤ちゃん返りが気になる方へ。よくあることだと知っておきたい理由と、無理なく関わるための3つのポイントを、運営者の実体験とともに紹介します。"
         slug="akachan-gaeri"
         datePublished="2026-09-22"
-        dateModified="2026-09-22"
+        dateModified="2026-10-31"
       />
 
       <article className="max-w-4xl mx-auto">
@@ -47,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-09-22" />
+    <ArticleByline dateModified="2026-10-31" />
+
+    <ArticleSummary
+      worry="下の子が生まれてから、上の子が急に甘えるようになって、戸惑っています。"
+      answer="赤ちゃん返りは、「自分も見てほしい」という自然な気持ちの表れです。長い時間は作れなくても、5分でも上の子だけと向き合う時間と、「終わったら一緒にやろうね」という具体的な伝え方が助けになります。"
+      steps={["赤ちゃんが寝ている間などに、5分だけ上の子と絵本を読む・話を聞く", "頼まれたら、「あとでね」ではなく、「今は赤ちゃんのお世話中。終わったら一緒にやろうね」と伝える", "「やって」と言われた日は、「今日はやってほしいんだな」と受け止める"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "① 赤ちゃん返りはよくあること"}, {"id": "section-2", "text": "② 「上の子」を甘えさせる時間も作る"}, {"id": "section-3", "text": "③ 無理にお兄ちゃん・お姉ちゃん扱いしない"}, {"id": "section-4", "text": "焦らなくて大丈夫"}, {"id": "section-5", "text": "よくある質問"}]}
+      items={[{"id": "section-1", "text": "① 赤ちゃん返りはよくあること"}, {"id": "section-2", "text": "② 「上の子」を甘えさせる時間も作る"}, {"id": "section-3", "text": "③ 無理にお兄ちゃん・お姉ちゃん扱いしない"}, {"id": "section-4", "text": "焦らなくて大丈夫"}, {"id": "section-5", "text": "わが家で、赤ちゃん返りを感じた場面"}, {"id": "section-6", "text": "いちばん困ったこと"}, {"id": "section-7", "text": "効果があった関わり方"}, {"id": "section-8", "text": "よくある質問"}]}
     />
 
 
@@ -153,6 +161,51 @@ export default async function Page() {
         </p>
 
         <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家で、赤ちゃん返りを感じた場面
+        </h2>
+
+        <p className="leading-8 mb-4">
+          下の子が生まれてから、上の子が以前より甘えるようになったと感じることがありました。特に、親が赤ちゃんのお世話をしているときに、「こっちに来て」「抱っこして」と言うことが増えました。自分でできていた着替えなども、急に「やって」と頼んでくることがありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          普段はお姉ちゃんらしく振る舞っていても、まだ甘えたい気持ちがあるのだと思いました。
+        </p>
+
+<h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          いちばん困ったこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          赤ちゃんのお世話と、上の子への対応が重なったときです。例えば、授乳やミルクをあげている最中に、上の子から遊びに誘われたり、抱っこを求められたりすることがありました。どちらにも応えたいのですが、同時には難しいので、どうしても待ってもらう場面が出てきます。
+        </p>
+
+        <p className="leading-8 mb-4">
+          上の子の要求に応えられないときに、寂しい思いをさせていないかと、気になることもありました。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          効果があった関わり方
+        </h2>
+
+        <p className="leading-8 mb-4">
+          意識するようになったのは、短い時間でも、上の子だけと向き合う時間を作ることです。赤ちゃんが寝ている間などに、5分でも一緒に絵本を読んだり、話を聞いたりするようにしました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、何かを頼まれたときに、すぐに「あとでね」と返すのではなく、「今は赤ちゃんのお世話をしているから、終わったら一緒にやろうね」と具体的に伝えるようにしています。長い時間を確保するのは難しくても、自分のことを見てもらえていると感じられる時間は大切だと思っています。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            🌟 上の子だけの5分に
+          </p>
+          <p>
+            絵本のほかに、ドリルを1問だけ一緒に取り組むのもひとつの方法です。<Link href="/5" className="text-orange-600 font-bold hover:underline">5歳向けドリル</Link>や、<Link href="/print" className="text-orange-600 font-bold hover:underline">印刷して使うページ</Link>から、1枚だけ選んでみてください。
+          </p>
+        </div>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -169,6 +222,14 @@ export default async function Page() {
             <p className="font-bold">Q. 上の子に強く当たってしまうことがあります。</p>
             <p className="leading-7 text-gray-700">A. 誰にでもあることです。強く言ってしまった後は、「さっきは強く言いすぎたね」と一言伝えるだけでも十分です。完璧を目指さなくて大丈夫です。</p>
           </div>
+          <div>
+            <p className="font-bold">Q. 授乳中に「遊んで」と言われたら、どうすればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. どちらにも同時には応えられないので、待ってもらう場面は出てきます。わが家では、「今は赤ちゃんのお世話をしているから、終わったら一緒にやろうね」と具体的に伝えるようにしています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 上の子と向き合う時間が取れません。</p>
+            <p className="leading-7 text-gray-700">A. 長い時間でなくて大丈夫です。わが家では、赤ちゃんが寝ている間などに、5分でも一緒に絵本を読んだり、話を聞いたりするようにしています。</p>
+          </div>
         </div>
 
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
@@ -176,7 +237,7 @@ export default async function Page() {
             🏠 わくたん運営者のわが家での工夫
           </p>
           <p className="leading-7">
-            わが家も、5歳の上の子と2歳・0歳のきょうだいがいます。「お兄ちゃんなんだから」は、
+            わが家も、5歳の上の子と2歳・0歳のきょうだいがいます。「お姉ちゃんなんだから」は、
             正直今でも言いそうになります。ただ、「今は下の子も使いたいみたい。どうする？」と
             状況を伝える形に変えてから、上の子が自分で考えて譲ってくれることが増えたように感じます。
             我慢させることより、選ばせることの方が、結果的にうまくいくことが多いのかもしれません。
@@ -199,29 +260,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年9月22日　/　最終更新日：2026年9月22日
+          公開日：2026年9月22日　/　最終更新日：2026年10月31日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/print", "label": "印刷して使う", "desc": "上の子だけの5分に、1枚だけ一緒に。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "1問だけ一緒に取り組むのも、おすすめです。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}]}
+          articles={[{"slug": "self-time-childcare", "desc": "自分の時間が全然ないと感じたときの、3つの視点。"}, {"slug": "age-gap-siblings", "desc": "きょうだいで年齢が離れているときの、家庭学習の進め方。"}, {"slug": "morning-routine", "desc": "朝のバタバタを減らす工夫。上の子に任せることの決め方。"}, {"slug": "busy-parent-5min", "desc": "忙しい日でも続けやすい、1日5分の進め方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🍭 今日のごほうびドリル
-          </h3>
-
-          <p className="mb-3">
-            上の子だけの時間として、1問だけ一緒に取り組んでみませんか？
-          </p>
-
-          <Link
-            href="/print"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            印刷して使う
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="きょうだいで読みたい絵本" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/akachan-gaeri" title="赤ちゃん返りが心配になったら知ってほしい3つ" />
         <RelatedArticles currentSlug="akachan-gaeri" />

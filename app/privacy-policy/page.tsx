@@ -122,7 +122,7 @@ export default function Page() {
         <p className="mt-10 text-sm text-gray-500">
           運営者：わくたん運営者（個人運営）
           <br />
-          最終改定日：2026年11月8日
+          最終改定日：2026年11月11日
         </p>
       </article>
     </main>

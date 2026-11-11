@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育ドリル 幼児", 3);
+  const products = await searchRakutenItems("迷路 ドリル 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +29,7 @@ export default async function Page() {
         description="子どもにとって「ちょっと頑張ればできる」難易度を見極めるコツを紹介。発達心理学の考え方をふまえ、無理なく力を伸ばす問題の選び方を解説します。"
         slug="almost-can-do"
         datePublished="2026-07-06"
-        dateModified="2026-08-18"
+        dateModified="2026-11-01"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-08-18" />
+    <ArticleByline dateModified="2026-11-01" />
+
+    <ArticleSummary
+      worry="どの程度の難しさの問題が、ちょうどいいのか分かりません。"
+      answer="「少しヒントがあれば、自分で進められる」くらいがちょうどいい目安です。答えを教えず、考える方向を示す程度に手助けして、難しすぎたら、前にできた問題に戻りましょう。"
+      steps={["迷っているときは、すぐ答えを教えず、見守る", "手助けは、考える方向を示す程度にする（「どこで行き止まりになったかな？」など）", "それでも難しそうなら、最初の1か所だけ一緒にやって、あとは任せる", "初めての問題は少し簡単なものから。難しすぎたら、前にできた問題に戻る"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "「発達の最近接領域」という考え方"}, {"id": "section-2", "text": "見極めのサイン①：時間をかければ自力で解ける"}, {"id": "section-3", "text": "見極めのサイン②：ヒントで一気に理解が進む"}, {"id": "section-4", "text": "難しすぎるサイン・簡単すぎるサイン"}, {"id": "section-5", "text": "正解不正解より「反応」を見る"}, {"id": "section-6", "text": "「待ってよかった」が形になった瞬間"}, {"id": "section-7", "text": "もう少し詳しく知りたい方へ"}]}
+      items={[{"id": "section-1", "text": "「発達の最近接領域」という考え方"}, {"id": "section-2", "text": "見極めのサイン①：時間をかければ自力で解ける"}, {"id": "section-3", "text": "見極めのサイン②：ヒントで一気に理解が進む"}, {"id": "section-4", "text": "難しすぎるサイン・簡単すぎるサイン"}, {"id": "section-5", "text": "正解不正解より「反応」を見る"}, {"id": "section-6", "text": "「待ってよかった」が形になった瞬間"}, {"id": "section-7", "text": "「あと少しでできそう」と感じた場面（わが家の場合）"}, {"id": "section-8", "text": "手助けは、どの程度？"}, {"id": "section-9", "text": "見極めを間違えて、難しすぎたとき"}, {"id": "section-10", "text": "もう少し詳しく知りたい方へ"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -124,6 +131,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「あと少しでできそう」と感じた場面（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          迷路や点つなぎのような問題で、最初はうまくできなくても、少しヒントを出すと自分で進められるようになったときです。例えば、迷路で何度も同じ場所に進んでしまうことがありました。そこで「一度、行き止まりまで戻ってみようか」と声をかけると、自分で別の道を探し始めました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          その様子を見て、問題そのものが難しいというより、どう考えればよいかがまだ分かっていなかったのだと感じました。子どもが少し迷いながらも、考え続けているときは、すぐに答えを教えずに見守るようにしています。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          手助けは、どの程度？
+        </h2>
+
+        <p className="leading-8 mb-4">
+          最初から答えを教えるのではなく、考える方向を示す程度にしています。例えば、迷路なら「どこで行き止まりになったかな？」と聞いたり、点つなぎなら「次の数字はどこにあるかな？」と一緒に探したりします。それでも難しそうな場合は、最初の1か所だけ一緒にやってみます。その後は、本人に続きを任せるようにしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          全部を手伝ってしまうと、本人が考える機会がなくなってしまいますし、反対に何も手伝わないと嫌になってしまうこともあります。少し手助けすれば自分で進められるくらいのところを探すようにしています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          見極めを間違えて、難しすぎたとき
+        </h2>
+
+        <p className="leading-8 mb-4">
+          本人が少し難しい問題にも挑戦できるようになってきたと思い、以前より複雑な迷路や数字の問題を用意したことがありました。ところが、実際に始めてみると、どこから考えればよいか分からず、何度も間違えてしまいました。最初は頑張っていましたが、だんだん返事が少なくなり、最後には「もうやらない」と言われてしまいました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          親としては少し背伸びをしてほしいと思っていましたが、本人にとっては難しすぎたのだと思います。それ以来、初めての問題は少し簡単なものから始め、様子を見ながら難易度を上げるようにしています。できなかったときは、無理に続けず、前にできた問題に戻ることもあります。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           もう少し詳しく知りたい方へ
         </h2>
 
@@ -139,6 +182,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. きょうだいで「待つ」対応を変える必要はある？</p>
             <p className="leading-7 text-gray-700">A. 年齢や性格によって調整して大丈夫です。年齢が低い子には「できるかどうか」より「やってみること」自体を優先し、待つことにこだわりすぎないのもひとつの考え方です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. どのくらい手助けすればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、答えを教えず、考える方向を示す程度にしています。迷路なら「どこで行き止まりになったかな？」と聞き、それでも難しそうなら、最初の1か所だけ一緒にやって、あとは本人に任せます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 難しすぎる問題を出してしまいました。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、少し背伸びをしてほしくて複雑な迷路を用意し、「もうやらない」と言われたことがありました。今は、初めての問題は少し簡単なものから始め、できなかったときは前にできた問題に戻っています。</p>
           </div>
         </div>
 
@@ -167,29 +218,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月6日　/　最終更新日：2026年8月18日
+          公開日：2026年7月6日　/　最終更新日：2026年11月1日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "ジャンルを選んで、ちょうどいい難しさを探せます。"}, {"href": "/print", "label": "印刷して使う", "desc": "難しすぎたら、別のプリントに切り替えられます。"}]}
+          articles={[{"slug": "maze-benefits", "desc": "迷路遊びで育つ力と、見守り方。"}, {"slug": "dot-to-dot-benefits", "desc": "点つなぎ遊びの効果と、つまずいたときの関わり方。"}, {"slug": "study-mistakes", "desc": "家庭学習で、つい続けさせてしまうときの考え方。"}, {"slug": "kakekoe-collection", "desc": "勉強嫌いにならない声かけ集。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🎪 遊びながら試そう
-          </h3>
-
-          <p className="mb-3">
-            お子さんに合った難易度か、今日のドリルで確認してみませんか？
-          </p>
-
-          <Link
-            href="/4"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            今日のドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="段階を選べる迷路・ドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/almost-can-do" title="「あと少しでできそう」を見極めるコツ" />
         <RelatedArticles currentSlug="almost-can-do" />

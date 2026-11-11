@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="間違い探しは観察力や集中力、考える力を育てる知育遊びです。4〜6歳向けに間違い探しの効果や、年齢別の難易度調整の仕方を紹介します。"
         slug="find-differences-benefits"
         datePublished="2026-04-20"
-        dateModified="2026-07-01"
+        dateModified="2026-11-05"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-07-01" />
+    <ArticleByline dateModified="2026-11-05" />
+
+    <ArticleSummary
+      worry="間違い探しで見つからなかったり、嫌になったりしたとき、どう声をかければいいか知りたいです。"
+      answer="答えをすぐ教えず、「このあたりを比べてみようか」と見る場所を絞るのが効果的です。嫌になったら無理に続けず、全部見つけることより、嫌な気持ちのまま終わらないことを大切にしましょう。"
+      steps={["見つからないときは、「もう一度よく見て」ではなく、見る場所を少し絞る", "見つけたら、「どこが違った？」と理由を聞く", "嫌になったら、「今日はここまでにしようか」と切り上げる", "少し時間を置いて、親も一緒に絵を見ると、また探し始めることも"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "観察力が育つ"}, {"id": "section-2", "text": "集中力が育つ"}, {"id": "section-3", "text": "比較する力が育つ"}, {"id": "section-4", "text": "年齢別の難易度調整"}, {"id": "section-5", "text": "親子で一緒に取り組む楽しさ"}, {"id": "section-6", "text": "達成感が自信になる"}, {"id": "section-7", "text": "見つからずに困っているときの声かけ"}, {"id": "section-8", "text": "Q&Aでチェック"}]}
+      items={[{"id": "section-1", "text": "観察力が育つ"}, {"id": "section-2", "text": "集中力が育つ"}, {"id": "section-3", "text": "比較する力が育つ"}, {"id": "section-4", "text": "年齢別の難易度調整"}, {"id": "section-5", "text": "親子で一緒に取り組む楽しさ"}, {"id": "section-6", "text": "達成感が自信になる"}, {"id": "section-7", "text": "見つからずに困っているときの声かけ"}, {"id": "section-8", "text": "間違い探しを使うタイミング（わが家の場合）"}, {"id": "section-9", "text": "見つけるのが早いとき・なかなか見つからないときの声かけ"}, {"id": "section-10", "text": "「もうやらない」と言ったとき"}, {"id": "section-11", "text": "Q&Aでチェック"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -132,6 +139,45 @@ export default async function Page() {
         </p>
 
         <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          間違い探しを使うタイミング（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          ドリルに取り組む時間があまり取れないときや、少し気分転換をしたいときに使っています。文字を書く問題が続いたあとに間違い探しを出すと、気分が変わるようです。机に向かってじっくり取り組むというより、親子で一緒に絵を見ながら楽しむこともあります。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          見つけるのが早いとき・なかなか見つからないときの声かけ
+        </h2>
+
+        <div className="grid sm:grid-cols-2 gap-4 my-6">
+          <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">⚡ 早く見つけたとき</p>
+            <p className="leading-7">「よく見つけたね」で終わらせず、「どこが違った？」と理由を聞くことがあります。</p>
+          </div>
+          <div className="bg-rose-50 border border-rose-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">🔍 なかなか見つからないとき</p>
+            <p className="leading-7">「もう一度よく見て」と繰り返すのではなく、「このあたりを比べてみようか」と、見る場所を少し絞ります。</p>
+          </div>
+        </div>
+
+        <p className="leading-8 mb-4">
+          答えをすぐに教えるよりも、自分で気づけるようにヒントを出すことを意識しています。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「もうやらない」と言ったとき
+        </h2>
+
+        <p className="leading-8 mb-4">
+          以前、最後の1つがなかなか見つからず、途中で「もうやらない」と言ったことがありました。そのときは無理に続けさせず、「今日はここまでにしようか」と声をかけました。少し時間を置いてから、親が一緒に絵を見ていると、本人もまた興味を持って探し始めることがありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          全部見つけることよりも、嫌な気持ちのまま終わらないことを大切にしています。
+        </p>
+
+<h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           Q&Aでチェック
         </h2>
 
@@ -147,6 +193,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 全然見つけられず、すぐに諦めてしまいます。どうすれば？</p>
             <p className="leading-7 text-gray-700">A. 難易度が合っていない可能性があります。違いの数が少なく、はっきりしたものから始めて、「見つかった」成功体験を積み重ねると、少しずつ粘れるようになっていきます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 途中で「もうやらない」と言ったら、どうすればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 無理に続けさせず、「今日はここまでにしようか」と切り上げて大丈夫です。わが家では、少し時間を置いて親が一緒に絵を見ると、また探し始めることがありました。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 見つけるのが早いときは、どう声をかければいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 「よく見つけたね」に加えて、「どこが違った？」と理由を聞いてみてください。違いを言葉にする機会になります。</p>
           </div>
         </div>
 
@@ -175,29 +229,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年4月20日　/　最終更新日：2026年7月1日
+          公開日：2026年4月20日　/　最終更新日：2026年11月5日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4/nakamawake", "label": "4歳向け仲間分けを見る", "desc": "比べる力を活かせる、遊びに近い問題。"}, {"href": "/4/nakamahazure", "label": "4歳向けなかまはずれ", "desc": "絵を見て、仲間はずれを探す問題。"}, {"href": "/4/kurabekko", "label": "4歳向けくらべっこ", "desc": "大小・多い少ないを比べる問題。"}]}
+          articles={[{"slug": "maze-benefits", "desc": "迷路遊びで育つ力と、見守り方。"}, {"slug": "concentration-4year", "desc": "集中が続かないときの、時間帯と問題の選び方。"}, {"slug": "5min-study", "desc": "始める前に量を決める、5分の学習法。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            📖 今日の学びにつなげよう
-          </h3>
-
-          <p className="mb-3">
-            比べる力を活かして、今日のなかまわけ問題にも挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/4/nakamawake"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            なかまわけドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="親子で楽しめる間違い探しの本" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/find-differences-benefits" title="間違い探しの効果｜観察力・集中力・考える力が育つ" />
         <RelatedArticles currentSlug="find-differences-benefits" />

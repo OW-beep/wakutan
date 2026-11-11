@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +21,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育玩具 幼児", 3);
+  const products = await searchRakutenItems("葉っぱ 図鑑 子ども", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +30,7 @@ export default async function Page() {
         description="スーパーや公園などのお出かけ先で、自然に数や言葉に親しめる声かけ・ゲームのアイデアを紹介します。"
         slug="outing-learning-games"
         datePublished="2026-07-23"
-        dateModified="2026-08-08"
+        dateModified="2026-10-30"
       />
 
 
@@ -48,10 +50,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-08-08" />
+    <ArticleByline dateModified="2026-10-30" />
+
+    <ArticleSummary
+      worry="お出かけ中に、自然に学べる遊びをしたいけれど、何をすればいいか分かりません。"
+      answer="特別な教材はいりません。目に入ったものを使った簡単なクイズや、拾った葉っぱを並べて比べるだけで十分です。ただ、何でも学びにつなげようとせず、子どもが興味を持ったものに一緒に注目することを大切にしましょう。"
+      steps={["電車や買い物中に、「同じ色の野菜を探してみよう」など簡単なクイズを出す", "公園で拾った葉っぱや木の実を並べて、大きさや形を比べる", "急いでいるときや、静かにしてほしい場面では、クイズを出さない", "質問を続けすぎず、子どもが興味を持ったものに一緒に注目する"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "スーパーでできること"}, {"id": "section-2", "text": "公園でできること"}, {"id": "section-3", "text": "移動中にできること"}, {"id": "section-4", "text": "大切なのは「気づき」を大切にすること"}, {"id": "section-5", "text": "長い車移動・電車移動での工夫"}, {"id": "section-6", "text": "年齢別の声かけの工夫"}, {"id": "section-7", "text": "図書館・博物館・エレベーターも学びの場に"}, {"id": "section-8", "text": "Q&Aでチェック"}]}
+      items={[{"id": "section-1", "text": "スーパーでできること"}, {"id": "section-2", "text": "公園でできること"}, {"id": "section-3", "text": "移動中にできること"}, {"id": "section-4", "text": "大切なのは「気づき」を大切にすること"}, {"id": "section-5", "text": "長い車移動・電車移動での工夫"}, {"id": "section-6", "text": "年齢別の声かけの工夫"}, {"id": "section-7", "text": "図書館・博物館・エレベーターも学びの場に"}, {"id": "section-8", "text": "わが家でよくやる声かけ・ゲーム"}, {"id": "section-9", "text": "反応がよかった場面：落ち葉の比べっこ"}, {"id": "section-10", "text": "やりすぎたかも、と感じたこと"}, {"id": "section-11", "text": "Q&Aでチェック"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -155,6 +163,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家でよくやる声かけ・ゲーム
+        </h2>
+
+        <p className="leading-8 mb-4">
+          移動中や買い物中に、目に入ったものを使って簡単なクイズを出すことがあります。例えば、電車に乗っているときは「次の駅はどこかな？」「電車の中に丸いものはあるかな？」と聞いてみたり、買い物中は「同じ色の野菜を探してみよう」と声をかけたりします。公園では、どんぐりや葉っぱを見つけて、大きさや形を比べることもあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          特別な教材を持ち歩かなくても、周りにあるものを使えば遊びになります。ただ、移動中に静かにしてほしい場面や、急いでいるときは、無理にクイズを出さないようにしています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          反応がよかった場面：落ち葉の比べっこ
+        </h2>
+
+        <p className="leading-8 mb-4">
+          公園で落ち葉を拾っていたときに、「この葉っぱとこっちの葉っぱ、どちらが大きいかな？」と聞いたことがあります。最初は見た目だけで答えていましたが、2枚を並べて比べると、葉っぱの形が違うことにも気づきました。その後は、自分から別の葉っぱを探してきて、「こっちのほうが大きい」と見せてくれました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ドリルの中で大きさを比べる問題を解くよりも、実際に拾ったものを比べる方が、本人にとって分かりやすかったようです。こうした経験から、学びは机に向かっている時間だけではないと感じています。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          やりすぎたかも、と感じたこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          お出かけ先で見つけたものを、何でも学びにつなげようとしてしまったことがあります。看板を見れば文字を読ませようとしたり、数字を見つければ数を聞いたりしていました。親としてはよかれと思っていましたが、子どもがただ景色を見たり、自由に遊んだりしたいときもあります。質問を続けているうちに、返事が少なくなったこともありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          それ以来、お出かけ中は、親が問題を出すことより、子どもが興味を持ったものに一緒に注目することを意識しています。せっかくの外出なので、学びにしなければと考えすぎず、本人が楽しんでいる時間を大切にしたいと思っています。
+        </p>
+
+<h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           Q&Aでチェック
         </h2>
 
@@ -170,6 +214,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. お出かけ先での学びを、家庭学習に活かす方法はありますか？</p>
             <p className="leading-7 text-gray-700">A. 特別なことをする必要はありません。出先で気づいたことを帰宅後に「今日見たあれ、面白かったね」と振り返るだけでも、記憶や興味の定着につながります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. お出かけ先で、質問ばかりしてしまいます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、何でも学びにつなげようとして、質問を続けるうちに返事が少なくなったことがありました。今は、親が問題を出すより、子どもが興味を持ったものに一緒に注目するようにしています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 急いでいるときや、静かにしたい場面ではどうすればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 無理にクイズを出さなくて大丈夫です。わが家でも、移動中に静かにしてほしい場面や、急いでいるときは出さないようにしています。</p>
           </div>
         </div>
 
@@ -198,29 +250,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月23日　/　最終更新日：2026年8月8日
+          公開日：2026年7月23日　/　最終更新日：2026年10月30日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4/kurabekko", "label": "4歳向けくらべっこ", "desc": "落ち葉の「どっちが大きい？」の延長で、大きさや数を比べる問題。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/print", "label": "印刷して使う", "desc": "帰宅後に、今日のドリルを1枚だけ。"}]}
+          articles={[{"slug": "rainy-day-play", "desc": "雨の日に、家でできる遊びのアイデア。"}, {"slug": "shopping-play-benefits", "desc": "買い物ごっこで育つ力。数とやり取りに親しむ。"}, {"slug": "chiiku-otoshiana", "desc": "知育を頑張りすぎて疲れたときの、3つの落とし穴。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            📖 今日の学びにつなげよう
-          </h3>
-
-          <p className="mb-3">
-            お出かけの合間に、おうちでは今日のドリルにも挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/category/parent"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            保護者向け記事をもっと見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="拾った葉っぱ・木の実を調べられる図鑑" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/outing-learning-games" title="お出かけ先で自然に学べる声かけ＆ゲーム" />
         <RelatedArticles currentSlug="outing-learning-games" />

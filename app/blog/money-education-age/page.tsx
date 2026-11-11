@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="子どものお金の教育を始める年齢の目安を、公的な資料もふまえて解説。幼児期に家庭でできる金銭教育のはじめ方を紹介します。"
         slug="money-education-age"
         datePublished="2026-08-02"
-        dateModified="2026-08-22"
+        dateModified="2026-10-13"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-08-22" />
+    <ArticleByline dateModified="2026-10-13" />
+
+    <ArticleSummary
+      worry="お金の教育は、何歳から、何を伝えればいいのか分かりません。"
+      answer="幼児期は、難しい説明より、「お金を払うと、その代わりに商品をもらえる」「使える金額には限りがある」を、買い物の中で伝えることから始めましょう。複雑な計算や、貯蓄・投資の仕組みは、まだ早くて大丈夫です。"
+      steps={["買い物で、お金を払う場面を見せ、「お金を払うと商品をもらえるんだよ」と伝える", "欲しいものが複数あるときは、「今日はどれを買う？」と一緒に選ぶ", "「高いから買えない」ではなく、「今日はこれを選ぼうね」と話す", "商品を作る人・売る人のことも、少し話してみる"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "幼児期は「見せる」ことから"}, {"id": "section-2", "text": "硬貨に触れる経験も大切"}, {"id": "section-3", "text": "本格的な金銭管理は小学生から"}, {"id": "section-4", "text": "お金の話をタブーにしない"}, {"id": "section-5", "text": "「これ買ったらお金なくなる？」への答え方"}, {"id": "section-6", "text": "よく聞かれること"}]}
+      items={[{"id": "section-1", "text": "幼児期は「見せる」ことから"}, {"id": "section-2", "text": "硬貨に触れる経験も大切"}, {"id": "section-3", "text": "本格的な金銭管理は小学生から"}, {"id": "section-4", "text": "お金の話をタブーにしない"}, {"id": "section-5", "text": "「これ買ったらお金なくなる？」への答え方"}, {"id": "section-6", "text": "子どもの質問で印象に残っていること（わが家の場合）"}, {"id": "section-7", "text": "意識して伝えていること"}, {"id": "section-8", "text": "「まだ早い」と思って、控えていること"}, {"id": "section-9", "text": "よく聞かれること"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -116,6 +123,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          子どもの質問で印象に残っていること（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          買い物をしているときに、「これを買ったら、お金はなくなっちゃうの？」と聞かれたことが印象に残っています。子どもにとっては、お金を払うということが、手元にあったものがなくなるという感覚につながっていたようです。そこで、「お金を払うと、その代わりに商品をもらえるんだよ」と説明しました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          まだお金の価値や、どうして商品によって値段が違うのかまでは分かっていませんが、買い物の仕組みに興味を持っていることが分かりました。大人にとって当たり前のことでも、子どもにとっては不思議なことがたくさんあるのだと感じました。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          意識して伝えていること
+        </h2>
+
+        <p className="leading-8 mb-4">
+          まずは、お金は何かを買うときに使うもので、使える金額には限りがあるということを伝えています。買い物で欲しいものが複数あったときには、「今日はどれを買う？」と一緒に考えることがあります。すべてを買えるわけではないことや、欲しいものがあっても今回は買わないという選択があることを、少しずつ知ってほしいと思っています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、買い物をするときには、商品を作ったり、お店で売ったりしてくれる人がいることも話すようにしています。まだ難しい説明はしていませんが、お金を使うことだけでなく、物を大切にすることにもつなげていきたいです。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「まだ早い」と思って、控えていること
+        </h2>
+
+        <p className="leading-8 mb-4">
+          まだ早いと思っているのは、複雑な計算や、投資・貯蓄の仕組みなどを詳しく教えることです。もちろん、お金を貯めることや増やすことは大切ですが、今の年齢では、まずお金を使う基本的な場面を理解することが先だと思っています。また、家計の事情や商品の価格を、細かく説明しすぎることも控えています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          「高いから買えない」とだけ伝えるのではなく、「今日はこれを選ぼうね」と、子どもにも分かりやすい言葉で話すようにしています。年齢に合った経験を重ねながら、少しずつお金の使い方を考えられるようになってほしいです。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よく聞かれること
         </h2>
 
@@ -131,6 +174,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. キャッシュレス決済だと、お金の実感が持ちにくいのでは？</p>
             <p className="leading-7 text-gray-700">A. その通りです。現金で支払う場面をあえて見せる、買い物のレシートを一緒に見るなど、意識的にお金が動く様子を見せる工夫が今の時代はより大切になっています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 家計のことや値段を、どこまで説明すればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、家計の事情や商品の価格を細かく説明しすぎないようにしています。「高いから買えない」とだけ伝えず、「今日はこれを選ぼうね」と、子どもにも分かりやすい言葉で話しています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 貯金や投資のことは、教えた方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、今の年齢では、まずお金を使う基本的な場面を理解することが先だと考えて、複雑な計算や投資・貯蓄の仕組みを詳しく教えることは控えています。</p>
           </div>
         </div>
 
@@ -159,29 +210,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年8月2日　/　最終更新日：2026年8月22日
+          公開日：2026年8月2日　/　最終更新日：2026年10月13日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4/okane", "label": "4歳向けおかね問題を見る", "desc": "硬貨を数える感覚を、今日のおかね問題でも。"}, {"href": "/5/okane", "label": "5歳向けおかね問題", "desc": "お買い物のたし算・おつりの問題。"}, {"href": "/6/okane", "label": "6歳向けおかね問題", "desc": "ひきざんを学んだあとの、おつりの練習に。"}]}
+          articles={[{"slug": "allowance-timing", "desc": "お小遣いは、いつから？日常の買い物でできる準備。"}, {"slug": "shopping-play-benefits", "desc": "買い物ごっこで育つ力。数とやり取りに親しむ。"}, {"slug": "outing-learning-games", "desc": "お出かけ先での学び。何でも学びにしすぎない関わり方。"}, {"slug": "number-play", "desc": "準備いらずで、生活の中でできる数遊び。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🎵 今日のステップ
-          </h3>
-
-          <p className="mb-3">
-            硬貨を数える感覚を、今日のおかね問題でも試してみませんか？
-          </p>
-
-          <Link
-            href="/4/okane"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            おかね問題を見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="お金に親しめるおもちゃ・貯金箱" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/money-education-age" title="子どものお金の教育は何歳から？" />
         <RelatedArticles currentSlug="money-education-age" />

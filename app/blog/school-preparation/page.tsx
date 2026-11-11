@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="小学校入学前の勉強・準備で身につけたい力を解説。文字や計算だけではない、本当に大切な力とは？"
         slug="school-preparation"
         datePublished="2026-04-02"
-        dateModified="2026-07-21"
+        dateModified="2026-10-12"
       />
 
 
@@ -57,10 +58,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-07-21" />
+    <ArticleByline dateModified="2026-10-12" />
+
+    <ArticleSummary
+      worry="小学校入学前に、何を身につけておけばいいのか不安です。"
+      answer="入学前に本当に大切なのは、先取り学習よりも、話を聞く力・自分で考える力・分からないときに伝える力といった土台です。朝の準備を少しずつ自分でする、絵本を読む、「まず自分で考えてみる」時間をつくるところから始めましょう。"
+      steps={["朝の着替えや準備を、できる範囲で自分でする", "毎日絵本を読み、人の話を最後まで聞く習慣をつくる", "分からないときは「分からない」と言う練習をする", "文字や数字は完璧を求めず、自分で考える機会を増やす"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "🌱 学力よりも大切な土台"}, {"id": "section-2", "text": "👂 話を聞く力"}, {"id": "section-3", "text": "🧠 自分で考える力"}, {"id": "section-4", "text": "✏️ 文字や数字はどこまで必要？"}, {"id": "section-5", "text": "⏰ 集中する力"}, {"id": "section-6", "text": "🙋 自分のことを伝える力"}, {"id": "section-7", "text": "💬 「困った」を言葉にする練習"}, {"id": "section-8", "text": "✅ 今すでにやっていること・まだやっていないこと"}, {"id": "section-9", "text": "💡 家庭でできる入学準備"}, {"id": "section-10", "text": "❓ よく聞かれること"}, {"id": "section-11", "text": "🌈 まとめ"}, {"id": "section-12", "text": "🎯 考える力を育てるドリルはこちら"}]}
+      items={[{"id": "section-1", "text": "🌱 学力よりも大切な土台"}, {"id": "section-2", "text": "👂 話を聞く力"}, {"id": "section-3", "text": "🧠 自分で考える力"}, {"id": "section-4", "text": "✏️ 文字や数字はどこまで必要？"}, {"id": "section-5", "text": "⏰ 集中する力"}, {"id": "section-6", "text": "🙋 自分のことを伝える力"}, {"id": "section-7", "text": "💬 「困った」を言葉にする練習"}, {"id": "section-8", "text": "✅ 今すでにやっていること・まだやっていないこと"}, {"id": "section-9", "text": "💡 家庭でできる入学準備"}, {"id": "section-10", "text": "❓ よく聞かれること"}, {"id": "section-11", "text": "🌈 まとめ"}]}
     />
 
 
@@ -383,26 +390,16 @@ export default async function Page() {
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年4月2日　/　最終更新日：2026年7月21日</p>
+          <p>公開日：2026年4月2日　/　最終更新日：2026年10月12日</p>
           <p className="mt-1">
             本記事はわくたん運営者が、家庭学習に関する一般的な考え方をもとにまとめています。
           </p>
         </div>
 
-        <div className="bg-green-100 rounded-3xl p-8 text-center">
-
-          <h2 id="section-12" className="text-2xl font-bold mb-4">
-            🎯 考える力を育てるドリルはこちら
-          </h2>
-
-          <Link
-            href="/6"
-            className="inline-block bg-green-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            6さいドリルに挑戦する →
-          </Link>
-
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/6", "label": "6歳向けドリルを見る", "desc": "考える力を育てる問題を、毎日更新しています。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "ジャンルを選んで、短い時間で。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "nencho-katei-gakushu", "desc": "年長さんの1年間の進め方。焦らず、土台づくりを。"}, {"slug": "school-checklist", "desc": "入学準備のチェックリスト。"}, {"slug": "6year-prep-timeline", "desc": "入学準備、いつ何をすればいい？月ごとの目安。"}, {"slug": "kodomo-hikaku-tebanasu", "desc": "周りの子が気になるときの、3つの視点。"}]}
+        />
 
         <RakutenProducts items={products} />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />

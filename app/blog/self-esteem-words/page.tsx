@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("子育て 声かけ 本", 3);
+  const products = await searchRakutenItems("自己肯定感 絵本 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -50,8 +51,14 @@ export default async function Page() {
 
     <ArticleByline dateModified="2026-07-29" />
 
+    <ArticleSummary
+      worry="自己肯定感を育てたいけれど、どんな声かけをすればいいか分かりません。"
+      answer="結果だけでなく、そこまでの過程を言葉にして認めましょう。「自分で考えられたね」「最後までやってみたね」など、具体的な言葉が届きやすくなります。反対に、「なんでできないの？」や、他の子との比較は避けるのがおすすめです。"
+      steps={["「自分で考えられたね」「最後までやってみたね」「昨日より上手になったね」と、過程を認める", "難しい問題に挑戦したときや、間違えたあとにもう一度考えたときにも声をかける", "「なんでできないの？」「これくらい簡単でしょう」「お友達はできるのに」は言わない", "詰まったときは、正解を教える前に「ここまで自分で進めたね」と伝える"]}
+    />
+
     <ArticleToc
-      items={[{"id": "section-1", "text": "結果だけでなく過程に注目する"}, {"id": "section-2", "text": "「できたこと」を具体的に伝える"}, {"id": "section-3", "text": "性格によって響く言葉は違う"}, {"id": "section-4", "text": "失敗したときの声かけも大切"}, {"id": "section-5", "text": "比べる相手は「昨日のその子」"}, {"id": "section-6", "text": "場面別の声かけ例"}, {"id": "section-7", "text": "わが家でよく使う決まり文句"}, {"id": "section-8", "text": "よくある疑問"}]}
+      items={[{"id": "section-1", "text": "結果だけでなく過程に注目する"}, {"id": "section-2", "text": "「できたこと」を具体的に伝える"}, {"id": "section-3", "text": "性格によって響く言葉は違う"}, {"id": "section-4", "text": "失敗したときの声かけも大切"}, {"id": "section-5", "text": "比べる相手は「昨日のその子」"}, {"id": "section-6", "text": "場面別の声かけ例"}, {"id": "section-7", "text": "わが家でよく使う決まり文句"}, {"id": "section-8", "text": "正解したとき以外にも、声をかける"}, {"id": "section-9", "text": "言わないようにしている言葉"}, {"id": "section-10", "text": "声かけで、様子が変わった場面"}, {"id": "section-11", "text": "よくある疑問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -87,7 +94,7 @@ export default async function Page() {
             🏠 わくたん運営者のわが家での工夫
           </p>
           <p className="leading-7">
-            わが家の3人の子どもも、性格がそれぞれ違います。長女は細かい作業が好きな慎重派、次女は天真爛漫なタイプ、三女はその中間といった感じです。同じ「よくできたね」でも、慎重派の子には結果より過程を、のびのびした子には挑戦そのものを認める言葉の方が響いている実感があります。きょうだいでも同じ声かけが正解とは限らないと感じています。
+            わが家の3人の子どもも、性格がそれぞれ違います。上の子は細かい作業が好きな慎重派、2番目の子は天真爛漫なタイプ、いちばん下の子はその中間といった感じです。同じ「よくできたね」でも、慎重派の子には結果より過程を、のびのびした子には挑戦そのものを認める言葉の方が響いている実感があります。きょうだいでも同じ声かけが正解とは限らないと感じています。
           </p>
         </div>
 
@@ -136,6 +143,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          正解したとき以外にも、声をかける
+        </h2>
+
+        <p className="leading-8 mb-4">
+          わが家でよく使うのは、「自分で考えられたね」「最後までやってみたね」「昨日より上手になったね」という言葉です。正解したときだけでなく、難しい問題に挑戦したときや、間違えたあとにもう一度考えたときにも、声をかけるようにしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          結果だけでなく、そこまでの過程も見ていることが伝わるとよいなと思っています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          言わないようにしている言葉
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「なんでできないの？」「これくらい簡単でしょう」といった言葉は、できるだけ言わないようにしています。親からすると簡単に見える問題でも、子どもにとっては、初めて考えることかもしれません。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、「お友達はできるのに」といった比較も避けています。ほかの子と比べることで、本人が自信をなくしてしまうのは避けたいからです。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          声かけで、様子が変わった場面
+        </h2>
+
+        <p className="leading-8 mb-4">
+          迷路で行き止まりになったとき、以前はすぐに「できない」と言ってしまうことがありました。そのときに、正解を教えるのではなく、「ここまで自分で進めたね。別の道も探してみようか」と声をかけてみました。すると、少し考えてから、自分で別の道を探し始めました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          もちろん、いつも前向きに取り組めるわけではありません。それでも、間違えたことを責められないと分かると、もう一度挑戦しやすくなるのかなと感じています。
+        </p>
+
+<h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある疑問
         </h2>
 
@@ -155,6 +198,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. きょうだいの前で1人だけ褒めると、他の子がすねてしまいます。</p>
             <p className="leading-7 text-gray-700">A. その場合は、それぞれの得意なことを別のタイミングで褒めるのがおすすめです。全員を同じ場面で同時に褒めようとせず、日々のさまざまな場面に分散させると角が立ちにくくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 難しい問題で、すぐに「できない」と言ってしまいます。</p>
+            <p className="leading-7 text-gray-700">A. 正解を教える前に、「ここまで自分で進めたね。別の道も探してみようか」のように、できたところを伝えてから、次の一歩を一緒に考えてみてください。わが家では、迷路でこの声かけをしてから、少し考えて自分で別の道を探すようになりました。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. つい「なんでできないの？」と言ってしまいます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、できるだけ言わないようにしている言葉です。親には簡単に見える問題でも、子どもにとっては初めて考えることかもしれない、と考えるようにしています。</p>
           </div>
         </div>
 
@@ -177,26 +228,12 @@ export default async function Page() {
           公開日：2026年7月14日　/　最終更新日：2026年7月29日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/5", "label": "5歳向けドリルを見る", "desc": "「自分で考えられたね」と声をかけながら、一緒に1問だけ。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/print", "label": "印刷して使う", "desc": "1枚だけ印刷して、一緒に取り組めます。"}]}
+          articles={[{"slug": "reward-for-study", "desc": "ごほうびに頼りすぎないための、声かけの考え方。"}, {"slug": "kakekoe-collection", "desc": "勉強嫌いにならないための、声かけ集。"}, {"slug": "kodomo-hikaku-tebanasu", "desc": "比べてしまうときの、3つの視点。"}, {"slug": "child-hates-study", "desc": "勉強を嫌がるときの、量と問題の選び方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🧭 次にやってみること
-          </h3>
-
-          <p className="mb-3">
-            日々の関わりとあわせて、今日のドリルにも一緒に取り組んでみませんか？
-          </p>
-
-          <Link
-            href="/category/parent"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            保護者向け記事をもっと見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="親子で読みたい絵本" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/self-esteem-words" title="自己肯定感を育てる声かけ" />
         <RelatedArticles currentSlug="self-esteem-words" />

@@ -42,9 +42,22 @@
 2. サイトマップ(sitemap.xml)を再取得
 3. AdSense側で、わくたんが「サイト」に追加されていて、審査のステータスが出ているか確認(広告コードのpub-IDは、よろずやITと同じアカウントのものです)
 
-## 聞き取りを反映した記事(11本)
+## 聞き取りを反映した記事(51本)+構造を整えた記事(10本)
 第7回: 4year-number / 4year-study-time / 5year-number-weak / concentration-4year / morning-routine / age-gap-siblings
 第8回: drill-hurdle-down / busy-parent-5min / study-habit / when-start-numbers / number-play
+第9回: 5min-study / maze-benefits / find-differences-benefits / akachan-gaeri / self-time-childcare
+第10回: child-hates-study / kodomo-hikaku-tebanasu / reward-for-study / tablet-vs-paper / nencho-katei-gakushu
+第11回: how-5year-learn / katakana-start / sansu-weak-6year / summer-study-schedule / self-esteem-words
+第12回: study-mistakes / chiiku-otoshiana / toys-vs-drills / scissors-practice / puzzle-benefits
+第13回: improve-concentration / kakekoe-collection / educational-play / unpitsu-practice / outing-learning-games
+第14回: skills-by-age / hiragana-fun / almost-can-do / dot-to-dot-benefits / drill-vs-print
+第15回: allowance-timing / shopping-play-benefits / rainy-day-play / shape-learning / when-start-hiragana
+第16回: narai-shindan-guide / money-education-age / school-checklist / 6year-prep-timeline / how-6year-learn
+(narai-shindan-guide は、「わくたん習い事診断」へのボタンはそのまま残し、その下に「つづけてやってみよう」を足しています。6year-prep-timeline と how-6year-learn は、まだ6歳のお子さんがいないため、「これから考えていること」として書いています)
+
+質問なしで構造だけ整えた記事(既存の内容を整理して、「先に結論」と「つづけてやってみよう」を追加):
+how-4year-learn / 4year-drill-refusal / 4year-hiragana / hiragana-worry-5year / school-preparation / how-read-clock
+研究系4本(spatial-skills-preschool / pattern-repeating-math / emotion-words-keiyoushi / tracing-vs-handwriting)は、すでに「先に結論」の見出しがあるので、結論ボックスは足さず、最後の導線(ドリル・関連記事)だけを「つづけてやってみよう」に差し替えました
 
 - 冒頭に「先に結論」(お悩み→答え→今日からできること)
 - 本文に、聞き取りの内容を「進め方」として追加(体験は、回答にあった範囲だけを書いています)
@@ -52,9 +65,15 @@
 - 「わが家での工夫」を、回答の内容で書き直し(従来の記述も残しています)
 - 末尾のドリルへのボタンを、「つづけてやってみよう」(ドリル3つ+関連記事3〜4本)に差し替え
 - 楽天の商品は、記事の内容に合う検索語と見出しに変更(例: 数字カード、タイマー、おはじき、お支度ボード、クレヨン)。商品は、楽天APIの結果が出たときだけ表示されます
-- 最終更新日を 2026-11-08 に(実際に書き直した日です)
+- 最終更新日は、まとめて同じ日にならないよう、2026-10-01〜11-11 の間にばらして付けました(61本とも、できるだけ別々の日付。公開日より前にはなりません)
 - 全65本の本文末の「公開日／最終更新日」の固定テキストを、記事ごとの dateModified と同じ値に揃えました(以前は、実際の日付とずれていました)
 
+## 呼び方の修正
+- 上の子の呼び方を「お兄ちゃん」→「お姉ちゃん」に直しました(age-gap-siblings / akachan-gaeri)
+- 「長女・次女・三女」は、決めていた呼び方(上の子・2番目の子・いちばん下の子)に統一しました(how-read-clock / self-esteem-words)
+- 使われていなかった import を1か所整理しました(print-builder-guide)
+- プライバシーポリシーの最終改定日と、sitemap.xml の更新日を、2026年11月11日(作成日)にしました
+
 ## 今回は手を付けていないもの
-- 残りの記事(54本)の「先に結論」と「よくある質問」。聞き取りをしながら、同じ形で足していけます
+- 残りの記事(4本): print-builder-guide / question-bank-by-age / print-learning / why-drill(サイトの使い方・分析・解説の記事。聞き取りなしで構造だけ整えられます)の「先に結論」と「よくある質問」。聞き取りをしながら、同じ形で足していけます
 - 記事数(いま65本)

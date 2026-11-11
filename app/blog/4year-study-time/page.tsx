@@ -29,7 +29,7 @@ export default async function Page() {
         description="4歳の家庭学習はどれくらいの時間が理想なのか解説。無理なく続けられる学習時間の目安と、時間配分の工夫を紹介します。"
         slug="4year-study-time"
         datePublished="2026-03-02"
-        dateModified="2026-11-08"
+        dateModified="2026-10-26"
       />
 
 
@@ -49,7 +49,7 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-10-26" />
 
     <ArticleSummary
       worry="4歳の家庭学習は、1回何分くらいが目安なのか分かりません。"
@@ -237,7 +237,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月2日　/　最終更新日：2026年11月8日
+          公開日：2026年3月2日　/　最終更新日：2026年10月26日
         </div>
 
                 <ArticleNextSteps

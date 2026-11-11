@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育ドリル 幼児", 3);
+  const products = await searchRakutenItems("迷路 パズル 幼児 知育", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -50,8 +51,14 @@ export default async function Page() {
 
     <ArticleByline dateModified="2026-08-17" />
 
+    <ArticleSummary
+      worry="夏休み、家庭学習をどう進めればいいか分かりません。"
+      answer="夏休みだからといって、学習量を増やす必要はありません。午前中の落ち着いた時間に5〜10分、外出や来客のある日は無理せず、家でゆっくりできる日に少しだけ。予定を詰め込みすぎないのがコツです。"
+      steps={["午前中の落ち着いている時間に、5〜10分だけ取り組む", "外出や予定のある日は、無理に取り組まない", "親が予定を決めすぎず、その日の気分で選べるようにする", "何もしない日を、最初から作っておく"]}
+    />
+
     <ArticleToc
-      items={[{"id": "section-1", "text": "夏休みの学習で大切にしたいこと"}, {"id": "section-2", "text": "1週間のスケジュール例"}, {"id": "section-3", "text": "印刷してまとめて用意しておく"}, {"id": "section-4", "text": "長期休みだからこそできることも"}, {"id": "section-5", "text": "途中でリズムが崩れてしまったら"}, {"id": "section-6", "text": "こんな質問もよくいただきます"}]}
+      items={[{"id": "section-1", "text": "夏休みの学習で大切にしたいこと"}, {"id": "section-2", "text": "1週間のスケジュール例"}, {"id": "section-3", "text": "印刷してまとめて用意しておく"}, {"id": "section-4", "text": "長期休みだからこそできることも"}, {"id": "section-5", "text": "途中でリズムが崩れてしまったら"}, {"id": "section-6", "text": "わが家の夏休みのスケジュール"}, {"id": "section-7", "text": "うまくいかなかったこと"}, {"id": "section-8", "text": "来年の夏に向けて、変えたいこと"}, {"id": "section-9", "text": "こんな質問もよくいただきます"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -128,6 +135,44 @@ export default async function Page() {
         </p>
 
         <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家の夏休みのスケジュール
+        </h2>
+
+        <p className="leading-8 mb-4">
+          夏休みは、毎日決まった時間に長く勉強するというより、午前中の比較的落ち着いている時間に、5〜10分程度取り組むことを意識しました。内容は、ひらがなや数字のドリル、迷路、間違い探しなどです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          外出する日や予定がある日は無理に取り組まず、家でゆっくり過ごせる日に少し取り組む形にしました。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          うまくいかなかったこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          最初は、夏休みだから普段より少し多めに取り組めるかな、と思っていました。ところが、実際には、外出や来客、下の子たちの生活リズムなどもあり、思ったように時間を確保できませんでした。また、親が予定を決めすぎると、子どもがその日の気分で取り組めないこともありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          夏休みだからといって、学習量を増やす必要はなく、普段と同じくらいの短い時間でも十分だと感じました。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          来年の夏に向けて、変えたいこと
+        </h2>
+
+        <ul className="list-disc ml-6 space-y-2 leading-8 mb-4">
+          <li>教材をあらかじめ何種類か用意しておく（文字や数字だけでなく、迷路やパズルのような内容も）</li>
+          <li>その日の気分に合わせて選べるようにする</li>
+          <li>予定を詰め込みすぎず、何もしない日を最初から作っておく</li>
+        </ul>
+
+        <p className="leading-8 mb-4">
+          夏休みは、勉強だけでなく、遊びや家族で過ごす時間も大切にしたいと思っています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           こんな質問もよくいただきます
         </h2>
 
@@ -143,6 +188,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. きょうだいで学年が違う場合、同じスケジュールでいい？</p>
             <p className="leading-7 text-gray-700">A. 完全に同じにする必要はありません。取り組む時間帯だけ揃えて、内容やペースはそれぞれに合わせるのがおすすめです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 夏休みは、普段より学習量を増やした方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 増やす必要はありません。わが家でも、普段より多めにできると思っていましたが、外出や来客などで思ったように時間を確保できませんでした。普段と同じくらいの短い時間で十分だと感じました。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 親が予定を決めすぎてしまいます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、予定を決めすぎると、子どもがその日の気分で取り組めないことがありました。何種類か教材を用意して、その日の気分で選べるようにしておくのがおすすめです。</p>
           </div>
         </div>
 
@@ -174,26 +227,12 @@ export default async function Page() {
           公開日：2026年7月22日　/　最終更新日：2026年8月17日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/print", "label": "印刷して使う", "desc": "数日分をまとめて印刷しておくと、外出先でも取り組めます。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "ジャンルを選んで、その日の気分で。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}]}
+          articles={[{"slug": "busy-parent-5min", "desc": "忙しい日でも続けやすい、1日5分の進め方。"}, {"slug": "study-habit", "desc": "休んでも、また始められる。習慣づけの考え方。"}, {"slug": "drill-hurdle-down", "desc": "「1問だけでもいい」と考えて、続けやすくした話。"}, {"slug": "5min-study", "desc": "始める前に量を決める、5分の学習法。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🌟 実践してみよう
-          </h3>
-
-          <p className="mb-3">
-            夏休み用に、今日のドリルを数日分まとめて印刷してみませんか？
-          </p>
-
-          <Link
-            href="/print"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            印刷して使う
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="夏休みに用意しておきたい迷路・パズル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/summer-study-schedule" title="夏休みの家庭学習スケジュール例" />
         <RelatedArticles currentSlug="summer-study-schedule" />

@@ -30,7 +30,7 @@ export default async function Page() {
         description="数字はいつから教え始めるとよいのか、年齢ごとの目安と教え方のコツを、データも交えて解説します。"
         slug="when-start-numbers"
         datePublished="2026-04-01"
-        dateModified="2026-11-08"
+        dateModified="2026-10-27"
       />
 
 
@@ -50,7 +50,7 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-10-27" />
 
     <ArticleSummary
       worry="数字を教え始めるのは、何歳からがいいのか迷っています。"
@@ -228,7 +228,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年4月1日　/　最終更新日：2026年11月8日
+          公開日：2026年4月1日　/　最終更新日：2026年10月27日
         </div>
 
                 <ArticleNextSteps

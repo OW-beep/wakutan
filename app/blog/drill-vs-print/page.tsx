@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="市販ドリルと無料プリント、どちらがいいか迷う方へ。それぞれのメリット・デメリットと、わが家での上手な使い分け方を紹介します。"
         slug="drill-vs-print"
         datePublished="2026-07-22"
-        dateModified="2026-09-25"
+        dateModified="2026-10-03"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-09-25" />
+    <ArticleByline dateModified="2026-10-03" />
+
+    <ArticleSummary
+      worry="市販ドリルと無料プリント、どちらを使えばいいか迷います。"
+      answer="どちらか一方に決めず、使い分けるのがおすすめです。まとまった内容に取り組みたいときは市販ドリル、その日の興味や理解度に合わせたいときは無料プリント。一冊を終わらせることより、本人に合うページを選んで使いましょう。"
+      steps={["まとまった内容（例：ひらがな）に取り組むときは、市販ドリルを使う", "その日の興味や理解度に合わせたいとき（例：迷路・間違い探し）は、無料プリントを使う", "一冊を使い切ろうとせず、本人に合うページを選ぶ", "無料でも、その日に使う分だけ印刷する"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "市販ドリルのメリット"}, {"id": "section-2", "text": "無料プリントのメリット"}, {"id": "section-3", "text": "こんな使い分けがおすすめ"}, {"id": "section-4", "text": "一番大切なのは続けやすさ"}, {"id": "section-5", "text": "Q&Aでチェック"}]}
+      items={[{"id": "section-1", "text": "市販ドリルのメリット"}, {"id": "section-2", "text": "無料プリントのメリット"}, {"id": "section-3", "text": "こんな使い分けがおすすめ"}, {"id": "section-4", "text": "一番大切なのは続けやすさ"}, {"id": "section-5", "text": "市販ドリルで、よかった点・困った点（わが家の場合）"}, {"id": "section-6", "text": "無料プリントを使う場面"}, {"id": "section-7", "text": "わが家なりの使い分けルール"}, {"id": "section-8", "text": "Q&Aでチェック"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -124,6 +131,46 @@ export default async function Page() {
         </p>
 
         <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          市販ドリルで、よかった点・困った点（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          市販ドリルのよいところは、問題の順番や難易度がある程度整理されていて、親が一から内容を考えなくても取り組めることです。迷路や数字、ひらがななど、テーマごとにまとまっているので、今日は何をしようかと迷ったときにも使いやすいです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          一方で、本人が今やりたい内容と、ドリルに掲載されている順番が合わないこともあります。簡単すぎてすぐ終わってしまうページもあれば、急に難しく感じるページもありました。また、一冊買うと最後まで使い切りたいという気持ちが出てしまい、子どもがあまり興味を持っていない問題まで取り組ませそうになることもありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          今は、一冊を全部終わらせることより、本人に合うページを選んで使うようにしています。
+        </p>
+
+<h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          無料プリントを使う場面
+        </h2>
+
+        <p className="leading-8 mb-4">
+          無料プリントは、今取り組みたい内容を少しだけ試したいときによく使います。例えば、迷路に興味を持っているときは迷路のプリントを、数字に触れる機会を増やしたいときは簡単な数の問題を選びます。市販ドリルを一冊買うほどではないけれど、数問だけ取り組みたいというときにも便利です。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、子どもの反応を見ながら、難易度を変えやすいのも助かっています。難しすぎた場合は、別のプリントに切り替えられますし、気に入った問題なら印刷してもう一度使うこともできます。ただ、無料だからといって大量に印刷するのではなく、その日に使う分だけ用意するようにしています。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家なりの使い分けルール
+        </h2>
+
+        <p className="leading-8 mb-4">
+          市販ドリルは、ある程度まとまった内容に取り組みたいときに使い、無料プリントは、その日の興味や理解度に合わせて内容を選びたいときに使っています。例えば、ひらがなを少し練習したいときは市販ドリルを使い、迷路や間違い探しをしたいときは無料プリントから選ぶことがあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ただし、どちらを使う場合も、毎日必ず何ページ進めるというルールは決めていません。5〜10分程度を目安にし、本人が嫌がるときは休むこともあります。教材の値段や量よりも、今の子どもに合っているかどうかを優先しています。市販ドリルと無料プリントを組み合わせることで、無理なく続けやすくなったと感じています。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           Q&Aでチェック
         </h2>
 
@@ -139,6 +186,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 無料プリントだけで基礎は身につく？</p>
             <p className="leading-7 text-gray-700">A. 十分身につきますが、体系的な順序で進めたい場合は市販ドリルと組み合わせるとより安心です。どちらが優れているというより、目的に応じた使い分けが大切です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 市販ドリルを買ったら、最後まで使い切るべきですか？</p>
+            <p className="leading-7 text-gray-700">A. 使い切る必要はありません。わが家でも、一冊買うと使い切りたい気持ちが出て、興味のない問題まで取り組ませそうになることがありました。今は、一冊を終わらせることより、本人に合うページを選んで使っています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 無料プリントは、たくさん印刷しておいた方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、無料だからといって大量に印刷せず、その日に使う分だけ用意しています。難しすぎたら別のプリントに切り替えられるのも、便利なところです。</p>
           </div>
         </div>
 
@@ -167,29 +222,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月22日　/　最終更新日：2026年9月25日
+          公開日：2026年7月22日　/　最終更新日：2026年10月3日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/print", "label": "印刷して使う", "desc": "今日使う分だけ、1〜2枚。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "その日の興味に合わせて、ジャンルを選べます。"}]}
+          articles={[{"slug": "print-learning", "desc": "プリント学習のメリットと、使い方。"}, {"slug": "why-drill", "desc": "なぜドリル学習が効果的？"}, {"slug": "study-habit", "desc": "休んでも、また始められる。習慣づけの考え方。"}, {"slug": "busy-parent-5min", "desc": "忙しい日でも続けやすい、1日5分の進め方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
-          </h3>
-
-          <p className="mb-3">
-            まずは無料で、今日のドリルから気軽に試してみませんか？
-          </p>
-
-          <Link
-            href="/4"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            無料ドリルを試してみる
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="迷路・数字・ひらがなが一冊にまとまったドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/drill-vs-print" title="市販ドリル vs 無料プリント どっちがいい？" />
         <RelatedArticles currentSlug="drill-vs-print" />

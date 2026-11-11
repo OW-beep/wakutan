@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("幼児 パズル", 3);
+  const products = await searchRakutenItems("パズル 幼児 ピース 知育", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +29,7 @@ export default async function Page() {
         description="パズル遊びが育てる力を解説。考える力・集中力・空間認識力を伸ばすパズルの選び方や取り入れ方も紹介します。"
         slug="puzzle-benefits"
         datePublished="2026-05-03"
-        dateModified="2026-08-25"
+        dateModified="2026-10-07"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-08-25" />
+    <ArticleByline dateModified="2026-10-07" />
+
+    <ArticleSummary
+      worry="パズルを始める時期や、難しくて嫌がったときの関わり方が知りたいです。"
+      answer="3歳ごろ、ピースの少ない簡単なものから始めましょう。難しくて嫌がったら、全部を完成させず、角や端のピースだけ一緒に探すのがおすすめです。完成させることより、「またやってみたい」と思えることを大切にしてください。"
+      steps={["最初は、ピースの少ない簡単な絵合わせから", "難しいときは、角・端のピースだけ一緒に探す", "親が先に完成させず、「この絵の続きはどこかな？」と声をかける", "途中で片付けてもOK。またやってみたいと思えることを優先する"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "空間認識力が育つ"}, {"id": "section-2", "text": "試行錯誤する力が育つ"}, {"id": "section-3", "text": "集中力が育つ"}, {"id": "section-4", "text": "年齢に合わせたピース数の目安"}, {"id": "section-5", "text": "完成の達成感を大切に"}, {"id": "section-6", "text": "保護者からよく届く質問"}]}
+      items={[{"id": "section-1", "text": "空間認識力が育つ"}, {"id": "section-2", "text": "試行錯誤する力が育つ"}, {"id": "section-3", "text": "集中力が育つ"}, {"id": "section-4", "text": "年齢に合わせたピース数の目安"}, {"id": "section-5", "text": "完成の達成感を大切に"}, {"id": "section-6", "text": "パズルを始めた時期と、様子の変化（わが家の場合）"}, {"id": "section-7", "text": "難しくて嫌がったとき"}, {"id": "section-8", "text": "保護者からよく届く質問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -132,6 +139,34 @@ export default async function Page() {
         </p>
 
         <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          パズルを始めた時期と、様子の変化（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          パズルに興味を持ったのは、3歳ごろです。最初は、ピースの少ない簡単な絵合わせのようなものから始めました。絵が完成すると嬉しそうにしていて、何度も繰り返し遊んでいました。4歳になるころには、少しピース数の多いものにも挑戦するようになりました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          印象に残っているのは、最初は絵の一部分だけを見てピースを置いていたのが、少しずつ全体の絵を見ながら探すようになったことです。以前は、形が合いそうな場所に何となく置いてみることが多かったのですが、慣れてくると、絵柄やピースの形を確認してから置くようになりました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、合わないピースを何度か試したあと、自分で別の場所を探すことも増えました。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          難しくて嫌がったとき
+        </h2>
+
+        <p className="leading-8 mb-4">
+          難しいパズルを選んでしまい、途中で「もうできない」と言ったことがありました。そのときは、全部を完成させようとせず、角のピースや端の部分だけ一緒に探すようにしました。親が先に完成させてしまうのではなく、「この絵の続きはどこかな？」と声をかけながら、少しだけ手助けします。
+        </p>
+
+        <p className="leading-8 mb-4">
+          それでも難しそうなときは、途中で片付けることもあります。パズルもドリルと同じで、最後まで完成させることより、またやってみたいと思えることを大切にしています。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           保護者からよく届く質問
         </h2>
 
@@ -147,6 +182,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 同じパズルばかり繰り返してもいい？</p>
             <p className="leading-7 text-gray-700">A. 問題ありません。同じパズルを繰り返すことで「次はどこに何が来るか」を覚え、スピードや手順を工夫するようになるので、それも立派な学びです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 難しいパズルで「もうできない」と言われたら、どうすればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、全部を完成させようとせず、角のピースや端の部分だけ一緒に探しました。親が先に完成させず、「この絵の続きはどこかな？」と声をかけながら、少しだけ手助けします。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 途中で片付けてもいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 大丈夫です。わが家でも、難しそうなときは途中で片付けることがあります。最後まで完成させることより、またやってみたいと思えることを大切にしています。</p>
           </div>
         </div>
 
@@ -175,29 +218,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年5月3日　/　最終更新日：2026年8月25日
+          公開日：2026年5月3日　/　最終更新日：2026年10月7日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/5/pattern", "label": "5歳向けパターンドリルを見る", "desc": "パズルで育った、考える力をためす問題。"}, {"href": "/4/pattern", "label": "4歳向けパターンドリル", "desc": "順番や規則を考える問題。"}, {"href": "/4/tsumiki", "label": "4歳向けつみき問題", "desc": "形を組み合わせて考える問題。"}]}
+          articles={[{"slug": "spatial-skills-preschool", "desc": "空間認識力とは？パズル・図形遊びと算数の関係（研究まとめ）。"}, {"slug": "toys-vs-drills", "desc": "知育玩具とドリル、どう使い分ける？"}, {"slug": "maze-benefits", "desc": "迷路遊びで育つ力と、見守り方。"}, {"slug": "find-differences-benefits", "desc": "間違い探しで育つ力と、見つからないときの声かけ。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🖊 今日はこれに挑戦
-          </h3>
-
-          <p className="mb-3">
-            パズルで育った考える力を、今日のパターン問題でも試してみませんか？
-          </p>
-
-          <Link
-            href="/5/pattern"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            パターンドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="年齢に合わせて選べるパズル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/puzzle-benefits" title="パズル遊びの効果｜考える力・集中力・空間認識力が育つ" />
         <RelatedArticles currentSlug="puzzle-benefits" />

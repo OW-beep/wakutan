@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育ドリル 幼児", 3);
+  const products = await searchRakutenItems("迷路 ドリル 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +29,7 @@ export default async function Page() {
         description="幼児の集中力を伸ばす方法を、年齢別の目安データとあわせて解説。家庭で今日から取り入れられる具体的な工夫を紹介します。"
         slug="improve-concentration"
         datePublished="2026-04-27"
-        dateModified="2026-07-04"
+        dateModified="2026-11-04"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-07-04" />
+    <ArticleByline dateModified="2026-11-04" />
+
+    <ArticleSummary
+      worry="うちの子は集中力が続かない気がして、どう伸ばせばいいか知りたいです。"
+      answer="集中力は、訓練よりも「環境」と「問題の選び方」で変わります。机の上は、使うドリルと鉛筆だけにして、迷路や間違い探しなど、自分で答えを探す問題から始めましょう。切れたら「ここまでにする？」と聞いて、また次に取り組める状態で終わるのがおすすめです。"
+      steps={["机の上に、そのとき使うドリルと鉛筆だけを置く", "迷路や間違い探しなど、自分で答えを探す問題から始める", "余裕のある時間に、5〜10分で終わる量にする", "切れたら「ちょっと休憩する？」「ここまでにする？」と聞く"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "年齢別の集中力の目安"}, {"id": "section-2", "text": "環境を整える"}, {"id": "section-3", "text": "量を区切って取り組む"}, {"id": "section-4", "text": "集中している時は見守る"}, {"id": "section-5", "text": "好きなことから始める"}, {"id": "section-6", "text": "集中が切れてしまったときの対応"}, {"id": "section-7", "text": "よくある疑問"}]}
+      items={[{"id": "section-1", "text": "年齢別の集中力の目安"}, {"id": "section-2", "text": "環境を整える"}, {"id": "section-3", "text": "量を区切って取り組む"}, {"id": "section-4", "text": "集中している時は見守る"}, {"id": "section-5", "text": "好きなことから始める"}, {"id": "section-6", "text": "集中が切れてしまったときの対応"}, {"id": "section-7", "text": "集中が伸びたと感じた場面（わが家の場合）"}, {"id": "section-8", "text": "集中が切れたときの声かけ"}, {"id": "section-9", "text": "下の子がいるときの環境づくり"}, {"id": "section-10", "text": "よくある疑問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -124,6 +131,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          集中が伸びたと感じた場面（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          以前は、ドリルを始めても、途中で鉛筆を置いたり、周りのおもちゃが気になったりすることがよくありました。ところが、迷路や間違い探しなど、自分で答えを探す問題では、思ったより長く取り組むことがあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          特に印象に残っているのは、迷路で行き止まりになったときです。以前ならすぐに「できない」と言っていたのに、最近は一度戻って別の道を探すようになりました。正解するまでの時間よりも、自分で考え直している姿を見て、少しずつ集中して取り組めるようになってきたと感じています。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          集中が切れたときの声かけ
+        </h2>
+
+        <p className="leading-8 mb-4">
+          以前は「あと少しだから頑張ろう」と声をかけていましたが、それでかえって嫌になってしまうことがありました。今は「ちょっと休憩する？」「ここまでにする？」と聞くようにしています。本人が続けたいと言えば再開しますし、もうやりたくないと言えば、そこで終わりにします。
+        </p>
+
+        <p className="leading-8 mb-4">
+          集中できなかったことを注意するよりも、また次に取り組める状態で終わることを大切にしています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          下の子がいるときの環境づくり
+        </h2>
+
+        <p className="leading-8 mb-4">
+          下の子が2人いるので、いつも静かな環境をつくれるわけではありません。下の子が近くにいるときは、上の子にはドリル、下の子には別の紙とクレヨンを渡すこともあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、夕方は疲れていたり、下の子の世話で落ち着かなかったりするので、無理に取り組ませません。できれば、比較的余裕のある時間に、5〜10分程度で終わる量にしています。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある疑問
         </h2>
 
@@ -139,6 +182,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 集中力を伸ばすために、何か特別な訓練が必要？</p>
             <p className="leading-7 text-gray-700">A. 特別な訓練は必要ありません。年齢に合った時間と環境で、興味のあることに取り組む経験を積み重ねることが、一番自然な形で集中力を育てます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 集中が切れたとき、どう声をかければいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、「あと少しだから頑張ろう」がかえって嫌になるきっかけになったので、今は「ちょっと休憩する？」「ここまでにする？」と聞いています。続けたいと言えば再開、やりたくないと言えば終わりにします。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 集中が続かないときは、どんな問題を選べばいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、迷路や間違い探しなど、自分で答えを探す問題の方が、思ったより長く取り組むことがありました。</p>
           </div>
         </div>
 
@@ -167,29 +218,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年4月27日　/　最終更新日：2026年7月4日
+          公開日：2026年4月27日　/　最終更新日：2026年11月4日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/4/nakamawake", "label": "4歳向け仲間分け", "desc": "自分で答えを探す、遊びに近い問題。"}, {"href": "/print", "label": "印刷して使う", "desc": "机の上に、1枚だけ置いて始められます。"}]}
+          articles={[{"slug": "concentration-4year", "desc": "集中が続かないときの、時間帯と問題の選び方。"}, {"slug": "5min-study", "desc": "始める前に量を決める、5分の学習法。"}, {"slug": "maze-benefits", "desc": "迷路遊びで育つ力と、見守り方。"}, {"slug": "find-differences-benefits", "desc": "間違い探しで育つ力と、見つからないときの声かけ。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🎪 遊びながら試そう
-          </h3>
-
-          <p className="mb-3">
-            年齢に合った分量で、今日のドリルにチャレンジしてみませんか？
-          </p>
-
-          <Link
-            href="/4"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            今日のドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="集中して取り組みやすい迷路・ドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/improve-concentration" title="幼児の集中力を伸ばす方法｜家庭で今日からできるコツ" />
         <RelatedArticles currentSlug="improve-concentration" />

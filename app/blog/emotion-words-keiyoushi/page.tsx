@@ -1,8 +1,8 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -24,7 +24,7 @@ export default function Page() {
         description="「うれしい」「くやしい」「さびしい」など気持ちを表すことばについて、幼稚園教育要領（領域「言葉」）と、小学生を対象にした研究（Beck 2012、Kumschick 2014）を原文で確認して整理。わかっていることと限界を分けて紹介します。"
         slug="emotion-words-keiyoushi"
         datePublished="2026-10-08"
-        dateModified="2026-10-08"
+        dateModified="2026-11-10"
       />
 
       <article className="max-w-4xl mx-auto">
@@ -38,7 +38,7 @@ export default function Page() {
           </p>
         </div>
 
-    <ArticleByline dateModified="2026-10-08" />
+    <ArticleByline dateModified="2026-11-10" />
 
     <ArticleToc
       items={[{"id": "section-1", "text": "先に結論"}, {"id": "section-2", "text": "幼稚園教育要領では"}, {"id": "section-3", "text": "研究①：言語の力と、感情に関する力の関係（Beck ら 2012）"}, {"id": "section-4", "text": "研究②：感情を描いた本を読んで話し合う（Kumschick ら 2014）"}, {"id": "section-5", "text": "家庭で試せる、気持ちのことばの声かけ"}, {"id": "section-6", "text": "「ぴったりことば」の設計について"}, {"id": "section-7", "text": "よくある質問"}, {"id": "section-8", "text": "参考文献"}]}
@@ -203,19 +203,13 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年10月8日　/　最終更新日：2026年10月8日
+          公開日：2026年10月8日　/　最終更新日：2026年11月10日
         </div>
 
-        <div className="mt-8 bg-yellow-50 border rounded-2xl p-6">
-          <h3 className="font-bold text-xl mb-3">🎵 今日のステップ</h3>
-          <p className="mb-3">絵とおはなしを見て、ぴったりのことばをなぞって書く問題です。印刷もできます。</p>
-          <Link
-            href="/5/keiyoushi"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            「ぴったりことば」をやってみる
-          </Link>
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/5/keiyoushi", "label": "「ぴったりことば」をやってみる", "desc": "絵とおはなしを見て、ぴったりのことばをなぞって書く問題です。印刷もできます。"}, {"href": "/4/keiyoushi", "label": "4歳向けぴったりことば", "desc": "4歳向けの問題。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "kakekoe-collection", "desc": "勉強嫌いにならない声かけ集。"}, {"slug": "self-esteem-words", "desc": "自己肯定感を育てる声かけと、言わないようにしている言葉。"}, {"slug": "hiragana-worry-5year", "desc": "5歳でひらがなが書けない・読めないときの関わり方。"}]}
+        />
 
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/emotion-words-keiyoushi" title="気持ちやようすのことば（形容詞）を増やすと？語彙と感情理解の研究と声かけのコツ" />

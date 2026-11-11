@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +30,7 @@ export default async function Page() {
         description="同年代の子と比べて「うちの子は遅いのかな」と感じたときに大切にしたい3つの視点を、運営者の実体験とともに紹介します。"
         slug="kodomo-hikaku-tebanasu"
         datePublished="2026-09-26"
-        dateModified="2026-09-26"
+        dateModified="2026-10-18"
       />
 
       <article className="max-w-4xl mx-auto">
@@ -47,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-09-26" />
+    <ArticleByline dateModified="2026-10-18" />
+
+    <ArticleSummary
+      worry="よその子と比べてしまって、焦ったり不安になったりします。"
+      answer="比べる気持ちは、消さなくて大丈夫です。気づいたら、少し前のわが子と比べて、できるようになったことを思い出してみましょう。成長に目を向けると、焦る気持ちが少し落ち着きます。"
+      steps={["「少し前まで難しかったこと」を思い出す（迷路を自分で解ける、数を数えられる、など）", "自分で考えたこと・最後まで取り組んだことを認める", "親が先回りせず、子どものペースに合わせて一緒に取り組む"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "① 成長のスピードは一人ひとりちがう"}, {"id": "section-2", "text": "② 「先月のわが子」と比べてみる"}, {"id": "section-3", "text": "③ できたことを一緒に喜ぶ"}, {"id": "section-4", "text": "よくある質問"}]}
+      items={[{"id": "section-1", "text": "① 成長のスピードは一人ひとりちがう"}, {"id": "section-2", "text": "② 「先月のわが子」と比べてみる"}, {"id": "section-3", "text": "③ できたことを一緒に喜ぶ"}, {"id": "section-4", "text": "わが家で、比べてしまった場面"}, {"id": "section-5", "text": "気持ちを切り替えるために、していること"}, {"id": "section-6", "text": "比べないことで、変わったこと"}, {"id": "section-7", "text": "よくある質問"}]}
     />
 
 
@@ -140,6 +148,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-4" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家で、比べてしまった場面
+        </h2>
+
+        <p className="leading-8 mb-4">
+          同じくらいの年齢の子が、ひらがなをすらすら読んだり、自分の名前を書いたりしている話を聞いたときです。そういう話を聞くと、うちの子はまだできないことがあるけれど大丈夫かな、と気になることがありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          特に、小学校入学が近づくことを意識すると、周りの子がどのくらいできているのかが気になってしまうことがあります。
+        </p>
+
+<h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          気持ちを切り替えるために、していること
+        </h2>
+
+        <p className="leading-8 mb-4">
+          以前と比べて、できるようになったことを思い出すようにしています。例えば、少し前までは難しかった迷路を自分で解けるようになったり、数字を使っておもちゃの数を数えられるようになったりしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          他の子と比べると、どうしても足りない部分に目が向いてしまいますが、本人の成長に目を向けると、焦る気持ちが少し落ち着きます。
+        </p>
+
+<h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          比べないことで、変わったこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          以前よりも、できたことを素直に喜べるようになったと思います。前は、つい「もう少し頑張ればできるのに」と考えてしまうことがありましたが、今は、本人が自分で考えたり、最後まで取り組んだりしたことを認めるようにしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          親が焦って先回りするより、子どものペースに合わせて一緒に取り組む方が、家庭学習の時間も穏やかになりました。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -155,6 +199,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 記録をつけた方がいいですか？</p>
             <p className="leading-7 text-gray-700">A. 必須ではありません。「前は親がやっていたことを、今は自分でできるようになった」というような変化に、その都度気づければ十分です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 入学が近づくと、周りの子ができていることが気になります。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、小学校入学が近づくと、周りの子がどのくらいできているのか気になることがあります。そんなときは、少し前のわが子と比べて、できるようになったことを思い出すようにしています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 焦って、つい先回りしてしまいます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、「もう少し頑張ればできるのに」と考えてしまうことがありました。今は、本人が自分で考えたことや最後まで取り組んだことを認めて、子どものペースに合わせるようにしています。</p>
           </div>
         </div>
 
@@ -185,29 +237,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年9月26日　/　最終更新日：2026年9月26日
+          公開日：2026年9月26日　/　最終更新日：2026年10月18日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/5", "label": "5歳向けドリルを見る", "desc": "「前よりできるようになった」を見つけやすい、ジャンル別のドリルです。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日は1問だけ。「できた」を一緒に見つけに。"}]}
+          articles={[{"slug": "self-esteem-words", "desc": "できたことを認める、声かけの具体例。"}, {"slug": "nencho-katei-gakushu", "desc": "年長さんの1年間の進め方。焦らず、土台づくりを。"}, {"slug": "6year-prep-timeline", "desc": "入学準備が気になるときに。月ごとの目安。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🍭 今日のごほうびドリル
-          </h3>
-
-          <p className="mb-3">
-            「できた」を一緒に見つけに、今日は1問だけ取り組んでみませんか？
-          </p>
-
-          <Link
-            href="/print"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            印刷して使う
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="「前よりできた」を見つけやすいドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/kodomo-hikaku-tebanasu" title="「よそのお子さんと比べてしまう」を手放す3つの視点" />
         <RelatedArticles currentSlug="kodomo-hikaku-tebanasu" />

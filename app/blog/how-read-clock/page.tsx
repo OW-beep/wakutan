@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="幼児期の時計の読み方の教え方を解説。何歳ごろから始めるとよいか、つまずきやすいポイントと、ステップごとの練習方法を紹介します。"
         slug="how-read-clock"
         datePublished="2026-05-27"
-        dateModified="2026-06-18"
+        dateModified="2026-10-18"
       />
 
 
@@ -48,7 +49,13 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-06-18" />
+    <ArticleByline dateModified="2026-10-18" />
+
+    <ArticleSummary
+      worry="時計の読み方は、いつから、どう教えればいいのか分かりません。"
+      answer="5歳ごろから少しずつ触れ始めるのが目安です。生活の中で時計を意識する声かけから始めて、「なんじ」→「なんじはん」→「5分刻み」の順に進めましょう。つまずいても、焦らず繰り返し確認すれば大丈夫です。"
+      steps={["生活の中で、時計を意識する声かけから始める", "「なんじ」から始める", "「なんじはん」→「5分刻み」の順に進める", "つまずいたら、焦らず繰り返し確認する"]}
+    />
 
     <ArticleToc
       items={[{"id": "section-1", "text": "何歳から始めるのが目安？"}, {"id": "section-2", "text": "ステップ①：生活の中で時計に触れる"}, {"id": "section-3", "text": "ステップ②：「なんじ」から始める"}, {"id": "section-4", "text": "ステップ③：5分刻みへ"}, {"id": "section-5", "text": "つまずきやすいポイント"}, {"id": "section-6", "text": "時計クイズを日常に取り入れる"}, {"id": "section-7", "text": "気になる疑問Q&A"}]}
@@ -140,7 +147,7 @@ export default async function Page() {
             🏠 わくたん運営者のわが家での工夫
           </p>
           <p className="leading-7">
-            最初は「3時」と「3時半」の違いがかなり難しかったです。短い針だけを見て「3」と答えてしまうこともありました。そこで、「今は何時？」だけでなく、「長い針はどこにある？」と分けて聞くようにしました。ある日、こちらが何も言っていないのに時計を見て、「もうすぐお風呂の時間だよ」と言ったことがあり、そこで初めて「時計を読める」というのは、数字を覚えることだけじゃなく、生活の中で時間を意識することなんだなと感じました。わが家の長女は、計算問題は得意な一方、時計を読むのは今でも少し苦手です。同じ子でも、分野によって得意・不得意がはっきり分かれることを実感しています。計算ができるからといって時計もすぐ読めるとは限らないので、「これは別のスキル」と割り切って、焦らず個別に付き合うようにしています。
+            最初は「3時」と「3時半」の違いがかなり難しかったです。短い針だけを見て「3」と答えてしまうこともありました。そこで、「今は何時？」だけでなく、「長い針はどこにある？」と分けて聞くようにしました。ある日、こちらが何も言っていないのに時計を見て、「もうすぐお風呂の時間だよ」と言ったことがあり、そこで初めて「時計を読める」というのは、数字を覚えることだけじゃなく、生活の中で時間を意識することなんだなと感じました。わが家の上の子は、計算問題は得意な一方、時計を読むのは今でも少し苦手です。同じ子でも、分野によって得意・不得意がはっきり分かれることを実感しています。計算ができるからといって時計もすぐ読めるとは限らないので、「これは別のスキル」と割り切って、焦らず個別に付き合うようにしています。
           </p>
         </div>
 
@@ -187,27 +194,13 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年5月27日　/　最終更新日：2026年6月18日
+          公開日：2026年5月27日　/　最終更新日：2026年10月18日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
-
-          <h3 className="font-bold text-xl mb-3">
-            🎁 今日のおすすめ
-          </h3>
-
-          <p className="mb-3">
-            時計の感覚とあわせて、今日のドリルで数への理解も深めてみませんか？
-          </p>
-
-          <Link
-            href="/6"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            6歳向けドリルを見る
-          </Link>
-
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/6/tokei", "label": "6歳向けとけいの問題を見る", "desc": "なんじ・なんじはん・分の読み方を、毎日更新しています。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "ジャンルを選んで、短い時間で。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "morning-routine", "desc": "朝のバタバタを減らす工夫。上の子に任せることの決め方。"}, {"slug": "school-preparation", "desc": "小学校入学前に身につけたい力。"}, {"slug": "6year-prep-timeline", "desc": "入学準備、いつ何をすればいい？月ごとの目安。"}, {"slug": "study-habit", "desc": "休んでも、また始められる。習慣づけの考え方。"}]}
+        />
 
         <RakutenProducts items={products} />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />

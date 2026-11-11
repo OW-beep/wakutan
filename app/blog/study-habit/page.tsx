@@ -29,7 +29,7 @@ export default async function Page() {
         description="幼児の家庭学習が続かないと悩む保護者向け。無理なく習慣化する方法と、勉強嫌いを防ぐコツを紹介します。"
         slug="study-habit"
         datePublished="2026-03-20"
-        dateModified="2026-11-08"
+        dateModified="2026-10-28"
       />
 
 
@@ -51,7 +51,7 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-10-28" />
 
     <ArticleSummary
       worry="家庭学習が続きません。習慣にするには、どうすればいいですか？"
@@ -401,7 +401,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月20日　/　最終更新日：2026年11月8日
+          公開日：2026年3月20日　/　最終更新日：2026年10月28日
         </div>
 
                 <ArticleNextSteps

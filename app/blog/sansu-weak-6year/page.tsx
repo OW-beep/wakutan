@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +21,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("さんすう ドリル 幼児", 3);
+  const products = await searchRakutenItems("おはじき 算数 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -50,8 +52,14 @@ export default async function Page() {
 
     <ArticleByline dateModified="2026-10-08" />
 
+    <ArticleSummary
+      worry="入学前の子の算数が苦手そうで、小学校でつまずかないか心配です。"
+      answer="数字だけを見せて答えを求めず、積み木やおもちゃなど、実際に触れるものを使って、一緒に比べたり数えたりしましょう。日常生活の中で数に触れることが、苦手意識を減らす近道になります。"
+      steps={["3個と5個の積み木を並べて、「どっちが多いかな？」と一緒に比べる", "答えが違っても、すぐに教えず、一緒に数え直す", "おやつを配る・片付けで個数を確認するなど、生活の中で数を使う", "「算数が苦手」と決めつけず、問題の出し方でも反応が変わると考える"]}
+    />
+
     <ArticleToc
-      items={[{"id": "section-1", "text": "計算より先に「数の感覚」を育てる"}, {"id": "section-2", "text": "指を使って数えてもOK"}, {"id": "section-3", "text": "間違いを責めない"}, {"id": "section-4", "text": "毎日少しずつの積み重ねが力になる"}, {"id": "section-5", "text": "くり上がりのつまずきには「10のかたまり」"}, {"id": "section-6", "text": "文章題は「絵に描く」練習から"}]}
+      items={[{"id": "section-1", "text": "計算より先に「数の感覚」を育てる"}, {"id": "section-2", "text": "指を使って数えてもOK"}, {"id": "section-3", "text": "間違いを責めない"}, {"id": "section-4", "text": "毎日少しずつの積み重ねが力になる"}, {"id": "section-5", "text": "くり上がりのつまずきには「10のかたまり」"}, {"id": "section-6", "text": "文章題は「絵に描く」練習から"}, {"id": "section-7", "text": "数で迷う場面と、決めつけないこと（わが家の場合）"}, {"id": "section-8", "text": "実物を使った関わり方"}, {"id": "section-9", "text": "いちばん効果があったのは、生活の中で数に触れること"}, {"id": "section-10", "text": "よくある質問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -137,17 +145,67 @@ export default async function Page() {
           も、この力を養う練習になります。
         </p>
 
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          数で迷う場面と、決めつけないこと（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          わが家の上の子（5歳）は、数字を順番に言うことはできても、数の大小を比べたり、いくつかの物を分けたりするときに、少し時間がかかることがあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ただ、こうした様子だけで、算数が苦手だと決めつけないようにしています。まだ経験している途中なので、問題の出し方によっても、反応は変わると思います。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          実物を使った関わり方
+        </h2>
+
+        <p className="leading-8 mb-4">
+          数字だけを見せて答えを求めるのではなく、積み木やおもちゃなど、実際に触れるものを使うようにしました。例えば、3個と5個の積み木を並べて、「どっちが多いかな？」と一緒に比べます。
+        </p>
+
+        <p className="leading-8 mb-4">
+          答えが違っていても、すぐに正解を教えるのではなく、一緒に数え直すようにしています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          いちばん効果があったのは、生活の中で数に触れること
+        </h2>
+
+        <p className="leading-8 mb-4">
+          おやつを配るときに数えたり、おもちゃを片付けるときに個数を確認したり、勉強として構えずに、数字を使う機会を作っています。ドリルだけで正解できるようにするより、実際の生活の中で数が役立つことを感じてもらう方が、本人にとっても分かりやすいようです。
+        </p>
+
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
           <p className="font-bold mb-2">
-            ❓ よくある疑問
+            ✏️ 「どっちが多い？」の練習に
           </p>
           <p>
-            <span className="font-bold">Q. 小学校入学までに何ができればいい？</span><br />
-            A. 完璧な計算力よりも、「わからないときに自分で工夫して考えようとする姿勢」の方が大切だといわれています。指で数える、絵に描く、声に出すなど、自分なりの方法を持っていること自体が土台になります。
+            <Link href="/5/kurabekko" className="text-orange-600 font-bold hover:underline">5歳向けくらべっこ</Link>で、数の比べ方を練習できます。入学が近づいたら、<Link href="/6/sansu" className="text-orange-600 font-bold hover:underline">6歳向け算数ドリル</Link>へ。
           </p>
         </div>
 
-        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 小学校入学までに何ができればいい？</p>
+            <p className="leading-7 text-gray-700">A. 完璧な計算力よりも、「わからないときに自分で工夫して考えようとする姿勢」の方が大切だといわれています。指で数える、絵に描く、声に出すなど、自分なりの方法を持っていること自体が土台になります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 数字は言えるのに、大小を比べるのに時間がかかります。</p>
+            <p className="leading-7 text-gray-700">A. わが家の5歳の子にも、そういう場面があります。数字だけを見せるのではなく、積み木などを並べて、「どっちが多いかな？」と一緒に比べてみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 間違えたとき、すぐに正解を教えた方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. すぐに教えず、一緒に数え直してみてください。わが家では、答えが違っていても、すぐに正解を教えず、一緒に数え直すようにしています。</p>
+          </div>
+        </div>
+
+<div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫
           </p>
@@ -175,26 +233,12 @@ export default async function Page() {
           公開日：2026年6月13日　/　最終更新日：2026年10月8日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/6/sansu", "label": "6歳向け算数ドリルを見る", "desc": "基礎から少しずつ。たし算・ひきざんの基礎を毎日30問。"}, {"href": "/5/kurabekko", "label": "5歳向けくらべっこ", "desc": "数の大小・差を、比べて考える問題。"}, {"href": "/5/sansu", "label": "5歳向け算数ドリル", "desc": "数の理解や、たし算の基礎を毎日30問。"}]}
+          articles={[{"slug": "5year-number-weak", "desc": "数字は読めるのに量がわからない、と感じたときの関わり方。"}, {"slug": "4year-number", "desc": "数が合わないときの、3個から始める数え方。"}, {"slug": "number-play", "desc": "準備いらずで、生活の中でできる数遊び。"}, {"slug": "when-start-numbers", "desc": "数字をいつから教えるか、迷っているときに。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🐣 はじめの一歩
-          </h3>
-
-          <p className="mb-3">
-            基礎から少しずつ取り組める、わくたんの算数ドリルを試してみませんか？
-          </p>
-
-          <Link
-            href="/6/sansu"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            6歳向け算数ドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="具体物で数える練習に使えるグッズ" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/sansu-weak-6year" title="6歳で算数が苦手でも大丈夫！小学校でつまずかない土台の作り方" />
         <RelatedArticles currentSlug="sansu-weak-6year" />

@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +21,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育ドリル 幼児", 3);
+  const products = await searchRakutenItems("タイマー 子供 知育", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +30,7 @@ export default async function Page() {
         description="幼児の家庭学習は長時間より継続が大切。毎日5分の学習が、集中力や学習習慣を育てる理由と、続けるコツを解説します。"
         slug="5min-study"
         datePublished="2026-05-25"
-        dateModified="2026-07-28"
+        dateModified="2026-11-04"
       />
 
 
@@ -50,10 +52,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-07-28" />
+    <ArticleByline dateModified="2026-11-04" />
+
+    <ArticleSummary
+      worry="毎日5分の家庭学習で、本当に意味があるのか、どう進めればいいのか知りたいです。"
+      answer="5分の目的は、短く打ち切ることではなく、始めるハードルを下げることです。始める前に量（1〜2問、迷路1枚など）を決めて、必要な分だけ机に出すと、親も子も「全部やらなければ」と思わずにすみます。"
+      steps={["始める前に量を決める（ドリルなら1〜2問、迷路なら1枚）", "必要な分だけ机に出す。最初から何ページも出さない", "間違いは、5分の間に全部直さない。考えたこと自体を認める", "本人が楽しんでいれば、追加してもOK。「今日はここまで」の日があってもOK"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "なぜ5分でいいの？"}, {"id": "section-2", "text": "習慣化しやすい"}, {"id": "section-3", "text": "集中力が育つ"}, {"id": "section-4", "text": "自信につながる"}, {"id": "section-5", "text": "勉強嫌いを防ぎやすい"}, {"id": "section-6", "text": "わくたんの考え方"}, {"id": "section-7", "text": "続けてきて変わったこと"}, {"id": "section-8", "text": "よくある疑問"}]}
+      items={[{"id": "section-1", "text": "なぜ5分でいいの？"}, {"id": "section-2", "text": "習慣化しやすい"}, {"id": "section-3", "text": "集中力が育つ"}, {"id": "section-4", "text": "自信につながる"}, {"id": "section-5", "text": "勉強嫌いを防ぎやすい"}, {"id": "section-6", "text": "わくたんの考え方"}, {"id": "section-7", "text": "続けてきて変わったこと"}, {"id": "section-8", "text": "5分で終わらせるための、わが家のルール"}, {"id": "section-9", "text": "同じ5分でも、長く感じる日・あっという間の日"}, {"id": "section-10", "text": "5分のあとに「もう1枚やりたい」と言われたら"}, {"id": "section-11", "text": "よくある疑問"}]}
     />
 
 
@@ -238,6 +246,58 @@ export default async function Page() {
         </p>
 
         <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          5分で終わらせるための、わが家のルール
+        </h2>
+
+        <p className="leading-8 mb-4">
+          一番意識しているのは、始める前に取り組む量を決めておくことです。例えば、ドリルなら1〜2問、迷路なら1枚というように、短時間で終わる量だけを用意します。最初から何ページも机に出してしまうと、子どもも親も「全部やらなければ」という気持ちになってしまうので、必要な分だけ出すようにしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、答えが間違っていても、5分の間に全部直させようとはしません。考えたこと自体を大切にして、時間が来たら一区切りにします。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          同じ5分でも、長く感じる日・あっという間の日
+        </h2>
+
+        <div className="grid sm:grid-cols-2 gap-4 my-6">
+          <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">⚡ あっという間に感じる</p>
+            <p className="leading-7">迷路や、絵を見て考える問題など、自分から興味を持てるもの。</p>
+          </div>
+          <div className="bg-rose-50 border border-rose-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">🐢 長く感じる</p>
+            <p className="leading-7">文字や数字を繰り返し書くような問題。疲れている日だと、数分でも長く感じることがあります。</p>
+          </div>
+        </div>
+
+        <p className="leading-8 mb-4">
+          同じ5分でも、子どもが「やらされている」と感じるか、「自分でやってみたい」と感じるかで違うのだと思います。その日の気分や疲れ具合を見て、問題の種類を選ぶようにしています。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          5分のあとに「もう1枚やりたい」と言われたら
+        </h2>
+
+        <p className="leading-8 mb-4">
+          迷路や間違い探しなど、本人が楽しんでいる問題では、「もう1枚やりたい」と言うことがあります。そういうときは、無理に止めず、本人の様子を見ながら追加することもあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ただし、毎回追加するわけではありません。「今日はここまでにしよう」と終える日もあります。5分という目安は、必ず5分で打ち切るためではなく、取り組み始めるハードルを下げるために使っています。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ✏️ 5分で取り組みやすい問題
+          </p>
+          <p>
+            <Link href="/blog/maze-benefits" className="text-orange-600 font-bold hover:underline">迷路</Link>や<Link href="/blog/find-differences-benefits" className="text-orange-600 font-bold hover:underline">間違い探し</Link>のように、見て考える問題は、5分で取り組みやすいです。ドリルなら、<Link href="/4/nakamawake" className="text-orange-600 font-bold hover:underline">4歳向け仲間分け</Link>もおすすめです。
+          </p>
+        </div>
+
+<h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある疑問
         </h2>
 
@@ -253,6 +313,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 親が横について見ている方がいいですか？</p>
             <p className="leading-7 text-gray-700">A. 最初は横についても構いませんが、慣れてきたら少しずつ「プリントを渡して自分で読んでもらう」場面を増やすと、自分で考える力が育ちやすくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 5分の間に、間違いは全部直させた方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 全部直させなくて大丈夫です。わが家では、考えたこと自体を大切にして、時間が来たら一区切りにしています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 5分たったら、必ず終わりにした方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 必ず打ち切る必要はありません。本人が楽しんでいて「もう1枚やりたい」と言うときは、様子を見て追加することもあります。5分は、始めるハードルを下げるための目安です。</p>
           </div>
         </div>
 
@@ -282,29 +350,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年5月25日　/　最終更新日：2026年7月28日
+          公開日：2026年5月25日　/　最終更新日：2026年11月4日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/5", "label": "5歳向けドリルを見る", "desc": "始める前に量を決めて、1〜2問だけ。ジャンルを選んで取り組めます。"}, {"href": "/4/nakamawake", "label": "4歳向け仲間分け", "desc": "見て考える、遊びに近い問題。"}, {"href": "/4/kurabekko", "label": "4歳向けくらべっこ", "desc": "直感的に取り組みやすく、1問ごとの達成感も得やすい問題。"}]}
+          articles={[{"slug": "busy-parent-5min", "desc": "忙しい日でも続けやすい、1日5分の進め方。"}, {"slug": "drill-hurdle-down", "desc": "「1問だけでもいい」と考えて、続けやすくした話。"}, {"slug": "maze-benefits", "desc": "迷路遊びで育つ力と、見守り方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🖊 今日はこれに挑戦
-          </h3>
-
-          <p className="mb-3">
-            5分だけ、タイマーをセットして挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/5"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            5さいドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="5分を目で見て終われるタイマー" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/5min-study" title="毎日5分学習の効果" />
         <RelatedArticles currentSlug="5min-study" />

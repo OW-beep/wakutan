@@ -1,8 +1,8 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -24,7 +24,7 @@ export default function Page() {
         description="なぞり書きだけでは足りないの？ 4〜5歳の子ども15人の脳画像の研究（James & Engelhardt 2012）を原文で確認して紹介し、なぞり書きと自分で書く経験の違い、研究の限界、わくたんのドリルの設計の考え方を説明します。"
         slug="tracing-vs-handwriting"
         datePublished="2026-10-08"
-        dateModified="2026-10-08"
+        dateModified="2026-10-12"
       />
 
       <article className="max-w-4xl mx-auto">
@@ -38,7 +38,7 @@ export default function Page() {
           </p>
         </div>
 
-    <ArticleByline dateModified="2026-10-08" />
+    <ArticleByline dateModified="2026-10-12" />
 
     <ArticleToc
       items={[{"id": "section-1", "text": "先に結論"}, {"id": "section-2", "text": "研究：手書き・タイピング・なぞり書きの比較"}, {"id": "section-3", "text": "なぞり書きの使いどころ"}, {"id": "section-4", "text": "わくたんのドリルでの考え方"}, {"id": "section-5", "text": "よくある質問"}, {"id": "section-6", "text": "参考文献"}]}
@@ -165,19 +165,13 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年10月8日　/　最終更新日：2026年10月8日
+          公開日：2026年10月8日　/　最終更新日：2026年10月12日
         </div>
 
-        <div className="mt-8 bg-yellow-50 border rounded-2xl p-6">
-          <h3 className="font-bold text-xl mb-3">🎵 今日のステップ</h3>
-          <p className="mb-3">ひらがなを読む・書く練習ができます。印刷もできます。</p>
-          <Link
-            href="/4/hiragana"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            ひらがなのドリルをやってみる
-          </Link>
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/4/hiragana", "label": "ひらがなのドリルをやってみる", "desc": "ひらがなを読む・書く練習ができます。印刷もできます。"}, {"href": "/5/hiragana", "label": "5歳向けひらがな", "desc": "読みに慣れてきたら、次のステップとして。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、鉛筆で取り組めます。"}]}
+          articles={[{"slug": "unpitsu-practice", "desc": "運筆練習。線を引く力を育てる。"}, {"slug": "4year-hiragana", "desc": "4歳ではじめてのひらがな。どこから始める？"}, {"slug": "hiragana-worry-5year", "desc": "5歳でひらがなが書けない・読めないときの関わり方。"}, {"slug": "scissors-practice", "desc": "はさみの練習。手先を使う遊びの始め方。"}]}
+        />
 
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/tracing-vs-handwriting" title="なぞり書きだけで大丈夫？手で書く経験と文字学習の研究から考える" />

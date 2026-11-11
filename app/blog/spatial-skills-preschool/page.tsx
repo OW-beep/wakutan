@@ -1,8 +1,8 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -24,7 +24,7 @@ export default function Page() {
         description="図形を頭の中で回したり、見る向きを変えて考えたりする「空間スキル」について、パズル遊び（Levine ら 2012）、訓練の効果（Uttal ら 2013）、算数への効果（Hawes ら 2022）などの研究を、出典つきで整理。わかっていることと限界を分けて紹介します。"
         slug="spatial-skills-preschool"
         datePublished="2026-10-08"
-        dateModified="2026-10-08"
+        dateModified="2026-11-02"
       />
 
       <article className="max-w-4xl mx-auto">
@@ -38,7 +38,7 @@ export default function Page() {
           </p>
         </div>
 
-    <ArticleByline dateModified="2026-10-08" />
+    <ArticleByline dateModified="2026-11-02" />
 
     <ArticleToc
       items={[{"id": "section-1", "text": "先に結論"}, {"id": "section-2", "text": "空間スキルってなに？"}, {"id": "section-3", "text": "研究①：家庭でのパズル遊びと、4歳半の空間スキル"}, {"id": "section-4", "text": "研究②：空間スキルは伸ばせる"}, {"id": "section-5", "text": "研究③：算数の成績まで伸びるのか"}, {"id": "section-6", "text": "おうちで試せる、空間の力にふれる遊び"}, {"id": "section-7", "text": "よくある質問"}, {"id": "section-8", "text": "参考文献"}]}
@@ -231,19 +231,13 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年10月8日　/　最終更新日：2026年10月8日
+          公開日：2026年10月8日　/　最終更新日：2026年11月2日
         </div>
 
-        <div className="mt-8 bg-yellow-50 border rounded-2xl p-6">
-          <h3 className="font-bold text-xl mb-3">🎵 今日のステップ</h3>
-          <p className="mb-3">立体を上や横から見たらどう見えるかを考える問題です。印刷もできます。</p>
-          <Link
-            href="/5/mikata"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            「どこからみる？」をやってみる
-          </Link>
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/5/mikata", "label": "「どこからみる？」をやってみる", "desc": "立体を上や横から見たらどう見えるかを考える問題です。印刷もできます。"}, {"href": "/4/tsumiki", "label": "4歳向けつみき問題", "desc": "ならんだタワーの立方体をかぞえる、空間認識のドリル。"}, {"href": "/4/pattern", "label": "4歳向けパターンドリル", "desc": "順番や規則を考える問題。"}]}
+          articles={[{"slug": "puzzle-benefits", "desc": "パズル遊びで育つ力と、難しくて嫌がったときの関わり方。"}, {"slug": "toys-vs-drills", "desc": "知育玩具とドリル、どう使い分ける？"}, {"slug": "pattern-repeating-math", "desc": "くりかえしパターンと算数の関係（研究まとめ）。"}]}
+        />
 
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/spatial-skills-preschool" title="空間認識力とは？幼児期のパズル・図形遊びと算数の関係【研究まとめ】" />

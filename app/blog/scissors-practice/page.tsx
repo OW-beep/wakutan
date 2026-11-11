@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("幼児 はさみ 練習", 3);
+  const products = await searchRakutenItems("子ども用はさみ 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +29,7 @@ export default async function Page() {
         description="4〜6歳向けに、はさみの練習を始めるタイミングと安全な進め方を紹介。手先の器用さを育てるコツと、安全対策も解説します。"
         slug="scissors-practice"
         datePublished="2026-04-21"
-        dateModified="2026-07-21"
+        dateModified="2026-10-11"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-07-21" />
+    <ArticleByline dateModified="2026-10-11" />
+
+    <ArticleSummary
+      worry="はさみの練習は、いつから、どう始めればいいのか分かりません。"
+      answer="3歳後半〜4歳ごろ、子どもが「切ってみたい」と言い出したタイミングで、子ども用はさみを使って始めましょう。最初は細長い紙を短く切るところから。必ず大人がそばで見守ります。"
+      steps={["幼児向けの子ども用はさみを用意し、大人がそばについているときだけ使う", "まずは、細長い紙を短く切る", "紙を反対の手で押さえることを、少しずつ伝える", "上手に切れることより、「切って作る楽しさ」を優先する"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "始める目安は3〜4歳ごろから"}, {"id": "section-2", "text": "安全に始めるための準備"}, {"id": "section-3", "text": "ステップ①：一回切り"}, {"id": "section-4", "text": "ステップ②：連続切り・曲線切り"}, {"id": "section-5", "text": "はさみ以外の手先トレーニング"}, {"id": "section-6", "text": "誤飲・怪我を防ぐ収納の工夫"}, {"id": "section-7", "text": "何から始めて、どう上達したか"}, {"id": "section-8", "text": "保護者からよく届く質問"}]}
+      items={[{"id": "section-1", "text": "始める目安は3〜4歳ごろから"}, {"id": "section-2", "text": "安全に始めるための準備"}, {"id": "section-3", "text": "ステップ①：一回切り"}, {"id": "section-4", "text": "ステップ②：連続切り・曲線切り"}, {"id": "section-5", "text": "はさみ以外の手先トレーニング"}, {"id": "section-6", "text": "誤飲・怪我を防ぐ収納の工夫"}, {"id": "section-7", "text": "何から始めて、どう上達したか"}, {"id": "section-8", "text": "はさみを使い始めたきっかけ（わが家の場合）"}, {"id": "section-9", "text": "最初に難しそうだったこと"}, {"id": "section-10", "text": "家庭でしたはさみ遊び・工作"}, {"id": "section-11", "text": "保護者からよく届く質問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -159,6 +166,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          はさみを使い始めたきっかけ（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          はさみを使い始めたのは、3歳後半から4歳ごろです。きっかけは、紙を切って遊びたがるようになったことでした。工作や折り紙に興味を持ち始め、自分でも切ってみたいと言うようになりました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          最初は安全性を考えて、幼児向けの子ども用はさみを用意し、必ず大人がそばについているときだけ使うようにしました。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          最初に難しそうだったこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          最初は、はさみを正しい向きで持つことと、紙を反対の手で押さえながら切ることが難しそうでした。はさみを開いたり閉じたりする動きに集中すると、紙がずれてしまうこともありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          いきなり複雑な形を切るのではなく、まずは細長い紙を短く切るところから始めました。少しずつ慣れてくると、自分で紙を動かしながら切ろうとするようになりました。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          家庭でしたはさみ遊び・工作
+        </h2>
+
+        <p className="leading-8 mb-4">
+          最初は、細長い紙を短く切って、切った紙を箱に入れる遊びをしていました。慣れてからは、折り紙を切って貼り絵を作ったり、色紙をいくつかの形に切って飾りを作ったりしました。上手に形を切ることよりも、自分で切って何かを作る楽しさを大切にしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          はさみを使うときは、必ず大人が近くで見守り、使い終わったら決めた場所に片付けるようにしています。安全に使うことも、工作と同じくらい大切だと思っています。
+        </p>
+
+<h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           保護者からよく届く質問
         </h2>
 
@@ -174,6 +217,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 曲線がうまく切れません。コツはありますか？</p>
             <p className="leading-7 text-gray-700">A. はさみを動かすより、紙の方を回しながら切ると曲線が切りやすくなります。「紙を回してみようか」と声をかけてあげると、コツをつかみやすくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 紙を押さえる手が、うまく使えません。</p>
+            <p className="leading-7 text-gray-700">A. 最初は難しそうでした。わが家では、いきなり複雑な形を切らず、細長い紙を短く切るところから始めて、少しずつ慣れていきました。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. はさみを使うおすすめの遊びはありますか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、細長い紙を切って箱に入れる遊びから、折り紙を切って貼り絵にする工作へ進みました。上手に切れることより、切って何かを作る楽しさを大切にしています。</p>
           </div>
         </div>
 
@@ -202,29 +253,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年4月21日　/　最終更新日：2026年7月21日
+          公開日：2026年4月21日　/　最終更新日：2026年10月11日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4", "label": "4歳向けドリルを見る", "desc": "はさみ遊びとあわせて、今日のドリルにも。"}, {"href": "/print", "label": "印刷して使う", "desc": "工作の合間に、1枚だけ。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "ジャンルを選んで、短い時間で。"}]}
+          articles={[{"slug": "rainy-day-play", "desc": "雨の日に、家でできる遊び。折り紙・工作のアイデア。"}, {"slug": "toys-vs-drills", "desc": "知育玩具とドリル、どう使い分ける？"}, {"slug": "tracing-vs-handwriting", "desc": "手を動かす練習の、考え方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🍭 今日のごほうびドリル
-          </h3>
-
-          <p className="mb-3">
-            手先を使う練習とあわせて、今日のドリルにも挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/4"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            4歳向けドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="幼児向けの子ども用はさみ" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/scissors-practice" title="はさみの練習はいつから？4〜6歳向けの始め方" />
         <RelatedArticles currentSlug="scissors-practice" />

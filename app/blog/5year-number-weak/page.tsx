@@ -30,7 +30,7 @@ export default async function Page() {
         description="5歳の子どもが数を苦手にしているときの対処法を解説。数の意味の理解を育てる家庭での関わり方を紹介します。"
         slug="5year-number-weak"
         datePublished="2026-07-06"
-        dateModified="2026-11-08"
+        dateModified="2026-11-01"
       />
 
 
@@ -50,7 +50,7 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-11-01" />
 
     <ArticleSummary
       worry="5歳の子が、数字は読めるのに、数の「多い・少ない」が分からず止まってしまいます。"
@@ -213,7 +213,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月6日　/　最終更新日：2026年11月8日
+          公開日：2026年7月6日　/　最終更新日：2026年11月1日
         </div>
 
                 <ArticleNextSteps

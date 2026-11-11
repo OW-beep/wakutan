@@ -30,7 +30,7 @@ export default async function Page() {
         description="4歳児が数字を覚えるための具体的なコツを紹介。発達の段階をふまえた、無理のない数字学習の進め方を解説します。"
         slug="4year-number"
         datePublished="2026-04-19"
-        dateModified="2026-11-08"
+        dateModified="2026-10-22"
       />
 
 
@@ -50,7 +50,7 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-10-22" />
 
     <ArticleSummary
       worry="4歳の子が、数字は言えるのに、ものを数えると数が合いません。"
@@ -217,7 +217,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年4月19日　/　最終更新日：2026年11月8日
+          公開日：2026年4月19日　/　最終更新日：2026年10月22日
         </div>
 
                 <ArticleNextSteps

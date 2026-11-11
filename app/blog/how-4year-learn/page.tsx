@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -27,7 +29,7 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
         description="4歳の勉強はどこまで進めればいい？遊びを通して学ぶ関わり方、やる気を引き出すコツ、数や論理の練習法、1日の学習時間の目安、よくある質問をまとめました。"
         slug="how-4year-learn"
         datePublished="2026-04-21"
-        dateModified="2026-10-17"
+        dateModified="2026-10-23"
       />
 
 
@@ -53,10 +55,16 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
 
     </div>
 
-    <ArticleByline dateModified="2026-10-17" />
+    <ArticleByline dateModified="2026-10-23" />
+
+    <ArticleSummary
+      worry="4歳の勉強は、どこまでやればいいのか、どう教えればいいのか分かりません。"
+      answer="4歳は「勉強を始める時期」ではなく「学ぶことを好きになる時期」です。遊びを中心に、短い時間で、正解よりも考えた過程を認めながら、「またやってみよう」と思える終わり方を大切にしましょう。"
+      steps={["遊びと学習を分けすぎず、子どもの好奇心を大切にする", "毎日少しずつ、短い時間で続ける", "正解よりも、考えた過程を褒める", "他の子と比べず、「またやってみよう」と思える終わり方にする"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "🌱 4歳はどんな時期？"}, {"id": "section-2", "text": "🎨 遊びこそ最高の学習"}, {"id": "section-3", "text": "🔥 やる気を引き出すコツ"}, {"id": "section-4", "text": "🔢 数に親しむコツ"}, {"id": "section-5", "text": "🧩 論理力を育てよう"}, {"id": "section-6", "text": "⏰ 学習時間はどれくらい？"}, {"id": "section-7", "text": "🕐 4歳の1日の過ごし方（イメージ例）"}, {"id": "section-8", "text": "📏 4歳の勉強は「どこまで」？幼稚園教育要領の考え方"}, {"id": "section-9", "text": "❓ よくある質問"}, {"id": "section-10", "text": "💡 保護者が意識したいポイント"}, {"id": "section-11", "text": "🌈 まとめ"}, {"id": "section-12", "text": "🎯 今日のドリルはこちら"}]}
+      items={[{"id": "section-1", "text": "🌱 4歳はどんな時期？"}, {"id": "section-2", "text": "🎨 遊びこそ最高の学習"}, {"id": "section-3", "text": "🔥 やる気を引き出すコツ"}, {"id": "section-4", "text": "🔢 数に親しむコツ"}, {"id": "section-5", "text": "🧩 論理力を育てよう"}, {"id": "section-6", "text": "⏰ 学習時間はどれくらい？"}, {"id": "section-7", "text": "🕐 4歳の1日の過ごし方（イメージ例）"}, {"id": "section-8", "text": "📏 4歳の勉強は「どこまで」？幼稚園教育要領の考え方"}, {"id": "section-9", "text": "❓ よくある質問"}, {"id": "section-10", "text": "💡 保護者が意識したいポイント"}, {"id": "section-11", "text": "🌈 まとめ"}]}
     />
 
 
@@ -416,26 +424,16 @@ return ( <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-orange
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年4月21日　/　最終更新日：2026年10月17日</p>
+          <p>公開日：2026年4月21日　/　最終更新日：2026年10月23日</p>
           <p className="mt-1">
             本記事は、わくたん運営者が4歳向けの問題を作りながら日々感じていることをもとにまとめています。
           </p>
         </div>
 
-        <div className="bg-yellow-100 rounded-3xl p-8 text-center">
-
-          <h2 id="section-12" className="text-2xl font-bold mb-4">
-            🎯 今日のドリルはこちら
-          </h2>
-
-          <Link
-            href="/4"
-            className="inline-block bg-orange-500 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            4さいドリルに挑戦する →
-          </Link>
-
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/4/nakamawake", "label": "4歳向け仲間分け", "desc": "分類する力を育てる、遊びに近い問題。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "4year-study-time", "desc": "4歳の1回の長さは何分くらい？目安と、続かない日の考え方。"}, {"slug": "4year-drill-refusal", "desc": "4歳がドリルを嫌がるときの対処法。"}, {"slug": "concentration-4year", "desc": "集中が続かないときの、時間帯と問題の選び方。"}, {"slug": "how-5year-learn", "desc": "5歳になったら？考える力と、先取りを急がない考え方。"}]}
+        />
 
         <RakutenProducts items={products} />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />

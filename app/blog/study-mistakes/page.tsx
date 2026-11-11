@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育ドリル 幼児", 3);
+  const products = await searchRakutenItems("タイマー 子供 知育", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +29,7 @@ export default async function Page() {
         description="幼児期の家庭学習でありがちな失敗パターンを5つ紹介し、それぞれの改善のヒントをまとめました。"
         slug="study-mistakes"
         datePublished="2026-07-20"
-        dateModified="2026-10-01"
+        dateModified="2026-10-09"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-10-01" />
+    <ArticleByline dateModified="2026-10-09" />
+
+    <ArticleSummary
+      worry="家庭学習で、やってはいけない関わり方を知りたいです。つい続けさせてしまいます。"
+      answer="「子どもの様子」より「ドリルを終わらせること」を優先してしまうのが、いちばん多い失敗です。集中が切れてきたら、問題が残っていても一度終わりにして、「また元気なときにやろうね」と伝えましょう。"
+      steps={["返事が減る・鉛筆を置く・別のことを始める、を「終わりのサイン」と考える", "問題が残っていても、「今日はここまでにしようか」と終える", "「あと少しだから」と続けさせない", "次の日も、嫌がらずに取り組めることを優先する"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "① 長時間やらせすぎる"}, {"id": "section-2", "text": "② 間違いを強く指摘しすぎる"}, {"id": "section-3", "text": "③ 他の子と比べる"}, {"id": "section-4", "text": "④ ごほうびに頼りすぎる"}, {"id": "section-5", "text": "⑤ 保護者がイライラしながら付き合う"}, {"id": "section-6", "text": "年齢によって気をつけたいポイントも変わる"}, {"id": "section-7", "text": "気になる疑問Q&A"}]}
+      items={[{"id": "section-1", "text": "① 長時間やらせすぎる"}, {"id": "section-2", "text": "② 間違いを強く指摘しすぎる"}, {"id": "section-3", "text": "③ 他の子と比べる"}, {"id": "section-4", "text": "④ ごほうびに頼りすぎる"}, {"id": "section-5", "text": "⑤ 保護者がイライラしながら付き合う"}, {"id": "section-6", "text": "年齢によって気をつけたいポイントも変わる"}, {"id": "section-7", "text": "わが家の後悔：最後まで終わらせようとしたこと"}, {"id": "section-8", "text": "そのときの子どもの様子（終わりのサイン）"}, {"id": "section-9", "text": "今のわが家の関わり方"}, {"id": "section-10", "text": "気になる疑問Q&A"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -169,6 +176,45 @@ export default async function Page() {
         </p>
 
         <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家の後悔：最後まで終わらせようとしたこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          一番後悔しているのは、子どもが疲れているのに、予定していた問題を最後まで終わらせようとしたことです。最初は機嫌よく取り組んでいても、途中から集中力が落ちていることがありました。それでも「あと少しだから」と続けさせてしまったことがあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          親としては、せっかく始めたのだから最後までやってほしいという気持ちがありましたが、今思うと、子どもの様子よりも、ドリルを終わらせることを優先していたと思います。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          そのときの子どもの様子（終わりのサイン）
+        </h2>
+
+        <ul className="list-disc ml-6 space-y-2 leading-8 mb-4">
+          <li>最初は答えていたのに、だんだん返事が少なくなる</li>
+          <li>鉛筆を置いたまま、動かなくなる</li>
+          <li>「もうやりたくない」と言う</li>
+          <li>別のおもちゃで遊び始める</li>
+        </ul>
+
+        <p className="leading-8 mb-4">
+          その様子を見て、これでは学習が楽しいものではなく、親に言われて仕方なくやるものになってしまうと感じました。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          今のわが家の関わり方
+        </h2>
+
+        <p className="leading-8 mb-4">
+          子どもの集中が切れてきたら、問題が残っていても、一度終わりにするようにしています。「今日はここまでにしようか」「また元気なときにやろうね」と声をかけて、無理に続けさせないようにしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          以前は最後まで終わらせることにこだわっていましたが、今は、次の日も嫌がらずに取り組めることの方が大切だと思っています。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           気になる疑問Q&A
         </h2>
 
@@ -184,6 +230,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. ごほうびをやめたら、やる気がなくなってしまいました。どうすれば？</p>
             <p className="leading-7 text-gray-700">A. 急にやめるのではなく、物のごほうびを少しずつ言葉のごほうびに置き換えていくのがおすすめです。「できたね」の一言を、物のごほうびと同じくらいの熱量で伝えることを意識してみてください。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 問題が残っているのに、途中でやめてもいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 大丈夫です。わが家では、集中が切れてきたら、問題が残っていても一度終わりにして、「また元気なときにやろうね」と声をかけています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 「あと少しだから」と、つい続けさせてしまいます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でもありました。今思うと、子どもの様子よりドリルを終わらせることを優先していたと思います。返事が減る、鉛筆を置く、といった様子が見えたら、終わりのサインと考えるようにしています。</p>
           </div>
         </div>
 
@@ -203,29 +257,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月20日　/　最終更新日：2026年10月1日
+          公開日：2026年7月20日　/　最終更新日：2026年10月9日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "今日は「ここまで」と決めて、短く。"}, {"href": "/print", "label": "印刷して使う", "desc": "1問だけ、「ここまで」を決めて印刷しておけます。"}]}
+          articles={[{"slug": "child-hates-study", "desc": "勉強を嫌がるときの、量と問題の選び方。"}, {"slug": "drill-hurdle-down", "desc": "「1問だけでもいい」と考えて、続けやすくした話。"}, {"slug": "5min-study", "desc": "始める前に量を決める、5分の学習法。"}, {"slug": "concentration-4year", "desc": "集中が続かないときの、時間帯と問題の選び方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            📖 今日の学びにつなげよう
-          </h3>
-
-          <p className="mb-3">
-            無理のないペースで、今日のドリルから始めてみませんか？
-          </p>
-
-          <Link
-            href="/category/parent"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            保護者向け記事をもっと見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="「ここまで」を見える化するタイマー" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/study-mistakes" title="幼児の家庭学習でやってはいけないこと5つ" />
         <RelatedArticles currentSlug="study-mistakes" />

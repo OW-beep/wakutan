@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育玩具 幼児", 3);
+  const products = await searchRakutenItems("積み木 ブロック 知育 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +29,7 @@ export default async function Page() {
         description="雨の日や室内で過ごす時間が増える日におすすめの、考える力を伸ばす室内遊びのアイデアを10個紹介します。"
         slug="rainy-day-play"
         datePublished="2026-07-10"
-        dateModified="2026-07-21"
+        dateModified="2026-11-08"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-07-21" />
+    <ArticleByline dateModified="2026-11-08" />
+
+    <ArticleSummary
+      worry="雨の日、家の中で何をして過ごせばいいか分からず、子どもも退屈そうです。"
+      answer="特別な遊びを用意しなくて大丈夫です。普段のおもちゃ（積み木やブロック、パズル、迷路、お絵描き）を組み合わせるだけで十分。準備が簡単で、片付けも楽な遊びが、続けやすくておすすめです。"
+      steps={["積み木やブロック、紙とクレヨンなど、普段のものを組み合わせる", "完成形を決めすぎず、途中で別の遊びに変わってもOKにする", "きょうだいがいるときは、それぞれが遊べるものを用意する", "細かいパーツは、大人の目が届くところで使う（小さい子の誤飲に注意）"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "① 積み木・ブロック遊び"}, {"id": "section-2", "text": "② お絵かき・ぬりえ"}, {"id": "section-3", "text": "③ かくれんぼ（おうちバージョン）"}, {"id": "section-4", "text": "④ しりとり・なぞなぞ"}, {"id": "section-5", "text": "⑤ 折り紙"}, {"id": "section-6", "text": "⑥ パズル"}, {"id": "section-7", "text": "⑦ ままごと・ごっこ遊び"}, {"id": "section-8", "text": "⑧ 新聞紙遊び"}, {"id": "section-9", "text": "⑨ 間違い探し・迷路"}, {"id": "section-10", "text": "⑩ 絵本の読み聞かせ"}, {"id": "section-11", "text": "⑪ おうち宝物探し"}, {"id": "section-12", "text": "よく聞かれること"}]}
+      items={[{"id": "section-1", "text": "① 積み木・ブロック遊び"}, {"id": "section-2", "text": "② お絵かき・ぬりえ"}, {"id": "section-3", "text": "③ かくれんぼ（おうちバージョン）"}, {"id": "section-4", "text": "④ しりとり・なぞなぞ"}, {"id": "section-5", "text": "⑤ 折り紙"}, {"id": "section-6", "text": "⑥ パズル"}, {"id": "section-7", "text": "⑦ ままごと・ごっこ遊び"}, {"id": "section-8", "text": "⑧ 新聞紙遊び"}, {"id": "section-9", "text": "⑨ 間違い探し・迷路"}, {"id": "section-10", "text": "⑩ 絵本の読み聞かせ"}, {"id": "section-11", "text": "⑪ おうち宝物探し"}, {"id": "section-12", "text": "雨の日に、わが家でよくやる遊び"}, {"id": "section-13", "text": "下の子たちがいるときの困りごとと工夫"}, {"id": "section-14", "text": "反応がいまひとつだった遊び"}, {"id": "section-15", "text": "よく聞かれること"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -160,6 +167,46 @@ export default async function Page() {
         </p>
 
         <h2 id="section-12" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          雨の日に、わが家でよくやる遊び
+        </h2>
+
+        <p className="leading-8 mb-4">
+          雨の日は、積み木やブロック、パズル、迷路など、家の中でできる遊びが中心です。特に積み木やブロックは、何かを作るだけでなく、途中で形を変えたり、壊して作り直したりできるので、長く遊んでいることがあります。また、紙とクレヨンがあれば、お絵描きや簡単な迷路もできます。
+        </p>
+
+        <p className="leading-8 mb-4">
+          雨の日だからといって特別な遊びを用意するのではなく、普段使っているおもちゃやプリントを組み合わせています。
+        </p>
+
+<h2 id="section-13" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          下の子たちがいるときの困りごとと工夫
+        </h2>
+
+        <p className="leading-8 mb-4">
+          一番困るのは、上の子が作っているものを下の子が触ってしまうことです。上の子が時間をかけてブロックを組み立てていても、2歳の下の子が興味を持って崩してしまうことがあります。上の子が怒ってしまうこともあり、遊びを続けるのが難しくなる場面があります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          そのため、細かいパーツを使う遊びは、できるだけ大人が見ているところで行うようにしています。0歳の子がいるので、誤飲につながる小さな部品を床に置いたままにしないことも、気をつけています。また、上の子にはブロック、下の子には大きめの積み木やお絵描きなど、それぞれが遊べるものを用意することもあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          もちろん、毎回うまくいくわけではありません。取り合いになったときは、一度遊びを中断して、別のものに切り替えることもあります。
+        </p>
+
+<h2 id="section-14" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          反応がいまひとつだった遊び
+        </h2>
+
+        <p className="leading-8 mb-4">
+          親が時間をかけて準備した工作や、手順が決まっている遊びは、思ったほど反応がよくないことがありました。例えば、材料をそろえて作り方を説明しても、途中で別のことに興味が移ってしまうことがあります。せっかく準備したので最後まで作ってほしいと思ったこともありますが、子どもにとっては、作ることより、自由に材料を触ったり組み合わせたりする方が楽しい場合もあるようです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          今は、完成形を決めすぎず、途中で別の遊びに変わってもよいことにしています。準備が簡単で、片付けにも時間がかからない遊びの方が、親としても続けやすいです。
+        </p>
+
+<h2 id="section-15" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よく聞かれること
         </h2>
 
@@ -175,6 +222,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 何をして過ごせばいいか思いつかない日はどうすれば？</p>
             <p className="leading-7 text-gray-700">A. 「今日はどうやって時間をつぶそう」と思う日があって当然です。ここで紹介したアイデアを1つ試してみるだけでも、子どもと一緒に遊びを考えるうちに、自然と過ごし方が見つかっていきます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 上の子が作ったものを、下の子が崩してしまいます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、よくあることです。上の子にはブロック、下の子には大きめの積み木やお絵描きなど、それぞれが遊べるものを用意しています。取り合いになったときは、一度遊びを中断して、別のものに切り替えます。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 準備した工作に、乗ってきません。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、準備に時間をかけた工作や、手順が決まっている遊びは、思ったほど反応がよくないことがありました。完成形を決めすぎず、途中で別の遊びに変わってもよいことにしています。</p>
           </div>
         </div>
 
@@ -204,29 +259,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月10日　/　最終更新日：2026年7月21日
+          公開日：2026年7月10日　/　最終更新日：2026年11月8日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4", "label": "4歳向けドリルを見る", "desc": "室内遊びの合間に、今日のドリルも。"}, {"href": "/4/tsumiki", "label": "4歳向けつみき問題", "desc": "積み木遊びが好きな子に。ならんだタワーの立方体をかぞえる問題。"}, {"href": "/print", "label": "印刷して使う", "desc": "雨の日に、1枚だけ印刷して取り組めます。"}]}
+          articles={[{"slug": "educational-play", "desc": "幼児におすすめの知育遊び。準備いらずのものから。"}, {"slug": "toys-vs-drills", "desc": "知育玩具とドリル、どう使い分ける？"}, {"slug": "maze-benefits", "desc": "迷路遊びで育つ力と、見守り方。"}, {"slug": "age-gap-siblings", "desc": "きょうだいで年齢が離れているときの、家庭学習の進め方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🎨 一緒にやってみよう
-          </h3>
-
-          <p className="mb-3">
-            室内遊びの合間に、今日のドリルにもチャレンジしてみませんか？
-          </p>
-
-          <Link
-            href="/4"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            今日のドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="雨の日に長く遊べる積み木・ブロック" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/rainy-day-play" title="雨の日・室内遊びで考える力を伸ばす10のアイデア" />
         <RelatedArticles currentSlug="rainy-day-play" />

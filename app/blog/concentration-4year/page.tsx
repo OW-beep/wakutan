@@ -30,7 +30,7 @@ export default async function Page() {
         description="4歳の子がすぐに飽きてしまう、集中が続かないと悩む保護者向けに、1日5分から始められる集中力の育て方を紹介します。"
         slug="concentration-4year"
         datePublished="2026-06-29"
-        dateModified="2026-11-08"
+        dateModified="2026-10-23"
       />
 
 
@@ -50,7 +50,7 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-10-23" />
 
     <ArticleSummary
       worry="4歳の子が、ドリルを始めてもすぐ席を立って、集中が続きません。"
@@ -240,7 +240,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月29日　/　最終更新日：2026年11月8日
+          公開日：2026年6月29日　/　最終更新日：2026年10月23日
         </div>
 
                 <ArticleNextSteps

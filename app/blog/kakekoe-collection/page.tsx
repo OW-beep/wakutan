@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="幼児期に勉強嫌いにならないための声かけのポイントと具体例を紹介。「頑張れ」以外の伝え方のヒントをまとめました。"
         slug="kakekoe-collection"
         datePublished="2026-06-27"
-        dateModified="2026-10-06"
+        dateModified="2026-10-16"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-10-06" />
+    <ArticleByline dateModified="2026-10-16" />
+
+    <ArticleSummary
+      worry="勉強嫌いにならないために、どんな声かけをすればいいか知りたいです。"
+      answer="答えを教える声かけより、本人が考え直せる声かけに変えましょう。「どこから来たんだっけ？」「ほかの道も見てみようか」と聞き、正解したときも、取り組んだ過程を言葉にして伝えるのがおすすめです。"
+      steps={["答えを教えず、「どこから来たんだっけ？」「ほかの道も見てみようか」と聞く", "「すごいね」だけで終わらせず、「最後まで自分で考えたね」と過程を伝える", "「あと1問だけ頑張って」より、「1問だけやってみる？」と量を一緒に考える", "きょうだいを比べず、その子自身の取り組みを認める"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "結果よりも過程に注目する"}, {"id": "section-2", "text": "比較ではなく、その子自身の成長を伝える"}, {"id": "section-3", "text": "間違えた時こそ前向きな言葉を"}, {"id": "section-4", "text": "「やらせる」より「一緒にやる」姿勢を"}, {"id": "section-5", "text": "シーン別・声かけの言い換え例"}]}
+      items={[{"id": "section-1", "text": "結果よりも過程に注目する"}, {"id": "section-2", "text": "比較ではなく、その子自身の成長を伝える"}, {"id": "section-3", "text": "間違えた時こそ前向きな言葉を"}, {"id": "section-4", "text": "「やらせる」より「一緒にやる」姿勢を"}, {"id": "section-5", "text": "シーン別・声かけの言い換え例"}, {"id": "section-6", "text": "声かけを変えて、反応が変わった言葉"}, {"id": "section-7", "text": "使わなくなった言葉"}, {"id": "section-8", "text": "きょうだいがいるときの声かけ"}, {"id": "section-9", "text": "よくある質問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -151,7 +158,62 @@ export default async function Page() {
           <p className="text-green-700 mt-1">OK例：「今日はここまで。明日もあるから楽しみにしようね」</p>
         </div>
 
-        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+        <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          声かけを変えて、反応が変わった言葉
+        </h2>
+
+        <p className="leading-8 mb-4">
+          迷路で行き止まりになったとき、以前は「違うよ、こっちじゃない？」と答えを教えてしまうことがありました。今は「どこから来たんだっけ？」「ほかの道も見てみようか」と、本人が考え直せるような声かけにしています。すると、すぐに答えを聞こうとするのではなく、自分で線を戻して別の道を探すことが増えました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、正解したときも「すごいね」だけで終わらせず、「最後まで自分で考えたね」「さっきのところ、よく見つけたね」と、取り組んだ過程を伝えるようにしています。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          使わなくなった言葉
+        </h2>
+
+        <p className="leading-8 mb-4">
+          「あと1問だけ頑張って」「これくらい簡単でしょう」という言葉は、なるべく使わなくなりました。親としては少しでも進めてほしい気持ちがありましたが、子どもが疲れているときに言っても、あまりよい結果にはなりませんでした。返事が少なくなったり、鉛筆を置いてしまったりすることもありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          今は「今日はここまでにしようか」「1問だけやってみる？」と、本人が取り組める量を一緒に考えています。特に「これくらい簡単でしょう」は、できないときに子どもを追い詰めてしまう可能性があるので、使わないように意識しています。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          きょうだいがいるときの声かけ
+        </h2>
+
+        <p className="leading-8 mb-4">
+          下の子の前では、上の子だけを褒めすぎたり、下の子と比べたりしないようにしています。例えば、上の子がドリルを終えたときに「お姉ちゃんはできるね」と言うよりも、「最後まで考えられたね」と、その子自身の取り組みを認めるようにしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          下の子が同じことをしたがった場合は、年齢に合わせて、紙に絵を描いたり、シールを貼ったりしてもらいます。上の子には「あなたはあなたのペースで大丈夫」と伝え、下の子にも無理に同じことをさせないようにしています。きょうだいでできることが違うのは自然なことなので、比べずに、それぞれの成長を見るようにしています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 行き止まりで止まったとき、つい答えを教えてしまいます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、以前は「違うよ、こっちじゃない？」と教えてしまうことがありました。今は「どこから来たんだっけ？」「ほかの道も見てみようか」と聞くようにしたら、自分で線を戻して別の道を探すことが増えました。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 疲れているときに、「あと1問だけ」と言ってしまいます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも使っていた言葉ですが、疲れているときは、あまりよい結果になりませんでした。今は「今日はここまでにしようか」「1問だけやってみる？」と、取り組める量を一緒に考えています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. きょうだいで、声かけに差が出てしまいます。</p>
+            <p className="leading-7 text-gray-700">A. 上の子だけを褒めすぎたり、下の子と比べたりしないようにしています。「あなたはあなたのペースで大丈夫」と伝えて、それぞれの成長を見るようにしています。</p>
+          </div>
+        </div>
+
+<div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家でよく使う声かけ
           </p>
@@ -176,29 +238,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月27日　/　最終更新日：2026年10月6日
+          公開日：2026年6月27日　/　最終更新日：2026年10月16日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/5", "label": "5歳向けドリルを見る", "desc": "「最後まで自分で考えたね」と声をかけながら、1問だけ。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/print", "label": "印刷して使う", "desc": "1枚だけ印刷して、一緒に取り組めます。"}]}
+          articles={[{"slug": "self-esteem-words", "desc": "自己肯定感を育てる声かけと、言わないようにしている言葉。"}, {"slug": "reward-for-study", "desc": "ごほうびに頼りすぎないための、声かけの考え方。"}, {"slug": "child-hates-study", "desc": "勉強を嫌がるときの、量と問題の選び方。"}, {"slug": "kodomo-hikaku-tebanasu", "desc": "比べてしまうときの、3つの視点。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🍭 今日のごほうびドリル
-          </h3>
-
-          <p className="mb-3">
-            声かけの工夫と合わせて、今日のドリルにも一緒に挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/category/parent"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            保護者向け記事をもっと見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="声かけのヒントになる本" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/kakekoe-collection" title="勉強嫌いにならないための声かけ集" />
         <RelatedArticles currentSlug="kakekoe-collection" />

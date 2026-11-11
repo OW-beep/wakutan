@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育玩具 幼児", 3);
+  const products = await searchRakutenItems("積み木 知育 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +29,7 @@ export default async function Page() {
         description="4歳〜6歳の子どもにおすすめの知育遊びを10個紹介。おうちにあるものでできる遊びから、考える力を育てる遊びまでわかりやすく解説します。"
         slug="educational-play"
         datePublished="2026-06-07"
-        dateModified="2026-08-11"
+        dateModified="2026-10-06"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-08-11" />
+    <ArticleByline dateModified="2026-10-06" />
+
+    <ArticleSummary
+      worry="知育遊びがたくさんあって、何を選べばいいか分かりません。"
+      answer="特別な教材はいりません。家にある積み木やブロック、お風呂で数える、同じ色のものを探すなど、準備のいらない遊びで十分です。反応がいまひとつなら、別の遊びに切り替えて大丈夫です。"
+      steps={["積み木やブロックなど、家にあるもので始める", "お風呂で数える・同じ色のものを探すなど、準備のいらない遊びを、思いついたときに少し取り入れる", "夢中で遊んでいるときは、そのまま自由に遊ばせる", "反応がいまひとつなら、別の遊びに切り替える"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "1. 仲間分けごっこ"}, {"id": "section-2", "text": "2. しりとり"}, {"id": "section-3", "text": "3. 数字探し"}, {"id": "section-4", "text": "4. パターン積み木"}, {"id": "section-5", "text": "5. 間違い探し"}, {"id": "section-6", "text": "6. なぞなぞ・クイズ"}, {"id": "section-7", "text": "7. 折り紙"}, {"id": "section-8", "text": "8. お店やさんごっこ"}, {"id": "section-9", "text": "9. カルタ・カードゲーム"}, {"id": "section-10", "text": "10. 迷路遊び"}, {"id": "section-11", "text": "お手伝いも立派な知育遊び"}, {"id": "section-12", "text": "気になる疑問Q&A"}]}
+      items={[{"id": "section-1", "text": "1. 仲間分けごっこ"}, {"id": "section-2", "text": "2. しりとり"}, {"id": "section-3", "text": "3. 数字探し"}, {"id": "section-4", "text": "4. パターン積み木"}, {"id": "section-5", "text": "5. 間違い探し"}, {"id": "section-6", "text": "6. なぞなぞ・クイズ"}, {"id": "section-7", "text": "7. 折り紙"}, {"id": "section-8", "text": "8. お店やさんごっこ"}, {"id": "section-9", "text": "9. カルタ・カードゲーム"}, {"id": "section-10", "text": "10. 迷路遊び"}, {"id": "section-11", "text": "お手伝いも立派な知育遊び"}, {"id": "section-12", "text": "わが家でいちばん続いている遊び"}, {"id": "section-13", "text": "準備がいらない遊び"}, {"id": "section-14", "text": "反応がいまひとつだった遊び"}, {"id": "section-15", "text": "気になる疑問Q&A"}]}
     />
 
 
@@ -168,6 +175,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-12" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家でいちばん続いている遊び
+        </h2>
+
+        <p className="leading-8 mb-4">
+          いちばん続いているのは、積み木やブロックを使った遊びです。特別なルールを決めなくても、家にあるもので始められます。高く積んでみたり、同じ形を集めたり、どちらが多いか比べたりしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          以前、積み木を高く積んでいる途中で、何度も崩れてしまったことがありました。最初はそのまま積み直していましたが、途中から土台を広くしてみたり、置く向きを変えたりするようになりました。遊びながら形や大きさを考えたり、失敗したときにやり方を変えたりできるので、わが家では自然と続いています。
+        </p>
+
+<h2 id="section-13" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          準備がいらない遊び
+        </h2>
+
+        <p className="leading-8 mb-4">
+          お風呂で数を数えたり、家の中で同じ色のものを探したりする遊びです。例えば「赤いものを見つけてみよう」「ここにあるおもちゃはいくつかな？」と声をかけるだけなので、教材を用意する必要がありません。買い物に行くときも、「同じ形のものはあるかな？」と探してみることがあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ただし、いつも問題を出しているわけではありません。子どもが遊びに夢中になっているときは、そのまま自由に遊ばせています。日常の中で思いついたときに、少し取り入れるくらいがちょうどよいと感じています。
+        </p>
+
+<h2 id="section-14" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          反応がいまひとつだった遊び
+        </h2>
+
+        <p className="leading-8 mb-4">
+          カードを使って同じ絵を探したり、仲間分けをしたりする遊びは、最初は興味を持っても、何度か繰り返すうちに飽きてしまうことがありました。また、親があらかじめ準備して、遊び方を説明してから始めるようなものは、準備に時間がかかるわりに、本人が乗り気にならないこともありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          せっかく用意したからと最後までやらせようとしたこともありますが、あまり楽しそうではありませんでした。今は、反応がいまひとつなら別の遊びに切り替えています。知育遊びだからといって、何でも子どもに合うわけではないと感じています。
+        </p>
+
+<h2 id="section-15" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           気になる疑問Q&A
         </h2>
 
@@ -183,6 +226,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 遊びと学習、時間配分の目安はありますか？</p>
             <p className="leading-7 text-gray-700">A. 明確な配分の正解はありません。幼児期は遊びの中にすでに多くの学びが含まれているので、ドリルの時間を無理に増やすより、日常の遊びやお手伝いを大切にする方が結果的にバランスが取れることが多いです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 準備した遊びに、乗ってきません。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、準備に時間をかけたのに、本人が乗り気にならないことがありました。せっかく用意したからと続けさせず、別の遊びに切り替えています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 知育遊びは、毎日やった方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 毎日問題を出す必要はありません。わが家では、子どもが遊びに夢中なときは自由に遊ばせて、日常の中で思いついたときに、少し取り入れるくらいにしています。</p>
           </div>
         </div>
 
@@ -211,29 +262,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月7日　/　最終更新日：2026年8月11日
+          公開日：2026年6月7日　/　最終更新日：2026年10月6日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4/nakamawake", "label": "4歳向け仲間分けを見る", "desc": "仲間分けごっこの延長で。"}, {"href": "/4/pattern", "label": "4歳向けパターンドリル", "desc": "パターン積み木の延長で。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}]}
+          articles={[{"slug": "toys-vs-drills", "desc": "知育玩具とドリル、どう使い分ける？"}, {"slug": "number-play", "desc": "準備いらずで、生活の中でできる数遊び。"}, {"slug": "chiiku-otoshiana", "desc": "知育を頑張りすぎて疲れたときの、3つの落とし穴。"}, {"slug": "maze-benefits", "desc": "迷路遊びで育つ力と、見守り方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🎈 さっそく試してみよう
-          </h3>
-
-          <p className="mb-3">
-            遊びの延長として、わくたんの今日のドリルにもチャレンジしてみましょう。
-          </p>
-
-          <Link
-            href="/4"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            年齢別ドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="家にあっても使いやすい積み木" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/educational-play" title="幼児におすすめの知育遊び10選" />
         <RelatedArticles currentSlug="educational-play" />

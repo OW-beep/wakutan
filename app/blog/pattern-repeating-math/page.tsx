@@ -1,8 +1,8 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -24,7 +24,7 @@ export default function Page() {
         description="「りんご・ぶどう・りんご」のようなくりかえしパターンの力は、幼児期の算数の知識と関連するのか。Rittle-Johnson ら（2019）の研究を原文で確認して整理し、数字を使わずに取り組める理由と、わくたんがパターン問題を絵に変えた背景も説明します。"
         slug="pattern-repeating-math"
         datePublished="2026-10-08"
-        dateModified="2026-10-08"
+        dateModified="2026-10-27"
       />
 
       <article className="max-w-4xl mx-auto">
@@ -38,7 +38,7 @@ export default function Page() {
           </p>
         </div>
 
-    <ArticleByline dateModified="2026-10-08" />
+    <ArticleByline dateModified="2026-10-27" />
 
     <ArticleToc
       items={[{"id": "section-1", "text": "先に結論"}, {"id": "section-2", "text": "パターン（くりかえし）ってなに？"}, {"id": "section-3", "text": "研究：くりかえしパターンの力と、算数の知識"}, {"id": "section-4", "text": "パターンは算数で大事？議論もあります"}, {"id": "section-5", "text": "わくたんがパターン問題を「絵」にした理由"}, {"id": "section-6", "text": "おうちで試せる、パターン遊び"}, {"id": "section-7", "text": "よくある質問"}, {"id": "section-8", "text": "参考文献"}]}
@@ -181,19 +181,13 @@ export default function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年10月8日　/　最終更新日：2026年10月8日
+          公開日：2026年10月8日　/　最終更新日：2026年10月27日
         </div>
 
-        <div className="mt-8 bg-yellow-50 border rounded-2xl p-6">
-          <h3 className="font-bold text-xl mb-3">🎵 今日のステップ</h3>
-          <p className="mb-3">絵のくりかえしを見つけて、次にくるものを考える問題です。印刷もできます。</p>
-          <Link
-            href="/4/pattern"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            パターン問題をやってみる
-          </Link>
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/4/pattern", "label": "パターン問題をやってみる", "desc": "絵のくりかえしを見つけて、次にくるものを考える問題です。印刷もできます。"}, {"href": "/5/pattern", "label": "5歳向けパターンドリル", "desc": "4歳の問題に慣れてきたら、次のステップとして。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "spatial-skills-preschool", "desc": "空間認識力と算数の関係（研究まとめ）。"}, {"slug": "puzzle-benefits", "desc": "パズル遊びで育つ力と、嫌がったときの関わり方。"}, {"slug": "educational-play", "desc": "準備いらずの知育遊び。"}]}
+        />
 
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/pattern-repeating-math" title="くりかえしパターンは算数の土台？数字がわからなくても取り組める理由【研究】" />

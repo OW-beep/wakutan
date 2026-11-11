@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +20,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育玩具 幼児", 3);
+  const products = await searchRakutenItems("積み木 ブロック 知育 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +29,7 @@ export default async function Page() {
         description="知育玩具とドリル、幼児期にはどちらが良いか悩む保護者向けに、それぞれのメリット・デメリットと使い分け方を解説します。"
         slug="toys-vs-drills"
         datePublished="2026-06-12"
-        dateModified="2026-07-06"
+        dateModified="2026-10-10"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-07-06" />
+    <ArticleByline dateModified="2026-10-10" />
+
+    <ArticleSummary
+      worry="知育玩具とドリル、どちらを与えればいいのか迷います。"
+      answer="どちらか一方に決めず、遊び（積み木やブロック）とドリルを、それぞれ楽しめる形で併用するのがおすすめです。毎回関連づける必要はなく、「ドリルはドリル、遊びは遊び」で大丈夫です。"
+      steps={["積み木・ブロックなど、遊び方が決まっていないおもちゃを用意する", "ドリルは短時間で、その日の気分に合わせて選ぶ", "ドリルのあとに、積み木で一緒に数えるなど、つなげる日があってもOK（毎回でなくていい）", "おもちゃは、種類ごとに戻す場所を決める"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "知育玩具のメリット"}, {"id": "section-2", "text": "ドリルのメリット"}, {"id": "section-3", "text": "年齢による使い分けの目安"}, {"id": "section-4", "text": "両方を組み合わせるのがおすすめ"}, {"id": "section-5", "text": "実際にハマった玩具・すぐ飽きた玩具"}, {"id": "section-6", "text": "こんな質問もよくいただきます"}]}
+      items={[{"id": "section-1", "text": "知育玩具のメリット"}, {"id": "section-2", "text": "ドリルのメリット"}, {"id": "section-3", "text": "年齢による使い分けの目安"}, {"id": "section-4", "text": "両方を組み合わせるのがおすすめ"}, {"id": "section-5", "text": "実際にハマった玩具・すぐ飽きた玩具"}, {"id": "section-6", "text": "遊びの中で「学びになっている」と感じたおもちゃ"}, {"id": "section-7", "text": "ドリルとおもちゃの組み合わせ方"}, {"id": "section-8", "text": "おもちゃが散らかって困ったとき"}, {"id": "section-9", "text": "こんな質問もよくいただきます"}]}
     />
 
 
@@ -159,6 +166,42 @@ export default async function Page() {
         </div>
 
         <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          遊びの中で「学びになっている」と感じたおもちゃ
+        </h2>
+
+        <p className="leading-8 mb-4">
+          わが家では、積み木やブロックです。自由に組み立てているだけでも、形や大きさを比べたり、どうすれば倒れないか考えたりしています。また、同じ形を集めたり、色ごとに分けたりすることもあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          親が問題を出さなくても、自分で考えながら遊んでいる様子を見ると、こうした遊びも大切な学びの時間なのだと感じます。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          ドリルとおもちゃの組み合わせ方
+        </h2>
+
+        <p className="leading-8 mb-4">
+          ドリルで数字や形に触れたあと、積み木やブロックで実際に遊ぶことがあります。例えば、ドリルで数を数えたあとに、積み木を何個か並べて一緒に数えてみます。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ただし、毎回必ず関連づけているわけではありません。ドリルはドリル、遊びは遊びとして、それぞれ楽しめればよいと思っています。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          おもちゃが散らかって困ったとき
+        </h2>
+
+        <p className="leading-8 mb-4">
+          おもちゃを全部きれいに片付けることを毎回求めるのではなく、種類ごとに戻す場所を決めています。ブロックはこの箱、積み木はこの箱というように分けておくと、子どもも片付けやすくなりました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ただ、下の子が途中で別のおもちゃを出したり、上の子がまだ遊びたがったりすることもあります。そんなときは、今使っていないものから片付けるようにしています。親が全部片付けるのではなく、少しずつ自分で戻せるようになれば十分だと考えています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           こんな質問もよくいただきます
         </h2>
 
@@ -174,6 +217,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. ドリルと知育玩具、どちらを先に始めるべき？</p>
             <p className="leading-7 text-gray-700">A. 順番にこだわる必要はありません。多くの家庭では、まず知育玩具で自由に遊ぶ習慣ができてから、短時間のドリルを少しずつ取り入れる流れが無理なく進めやすいようです。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. ドリルとおもちゃは、毎回関連づけた方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 毎回関連づける必要はありません。わが家では、ドリルで数を数えたあとに積み木で一緒に数える日もありますが、ドリルはドリル、遊びは遊びとして、それぞれ楽しめればよいと思っています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. おもちゃが散らかって困ります。</p>
+            <p className="leading-7 text-gray-700">A. 全部きれいに片付けることを毎回求めず、種類ごとに戻す場所を決めてみてください。わが家では、ブロックはこの箱、積み木はこの箱、と分けています。</p>
           </div>
         </div>
 
@@ -202,29 +253,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月12日　/　最終更新日：2026年7月6日
+          公開日：2026年6月12日　/　最終更新日：2026年10月10日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4", "label": "4歳向けドリルを見る", "desc": "遊びの合間の「ちょっとした挑戦」に。"}, {"href": "/4/tsumiki", "label": "4歳向けつみき問題", "desc": "積み木遊びが好きな子に。ならんだタワーの立方体をかぞえる問題。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "ジャンルを選んで、短い時間で。"}]}
+          articles={[{"slug": "puzzle-benefits", "desc": "パズル遊びで育つ力と、難しくて嫌がったときの関わり方。"}, {"slug": "chiiku-otoshiana", "desc": "知育を頑張りすぎて疲れたときの、3つの落とし穴。"}, {"slug": "number-play", "desc": "準備いらずで、生活の中でできる数遊び。"}, {"slug": "tablet-vs-paper", "desc": "タブレットと紙のドリルの、使い分け。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🎨 一緒にやってみよう
-          </h3>
-
-          <p className="mb-3">
-            まずは5〜10分、わくたんの今日のドリルから始めてみませんか？
-          </p>
-
-          <Link
-            href="/4"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            年齢別ドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="長く遊べる積み木・ブロック" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/toys-vs-drills" title="知育玩具とドリルどっち？" />
         <RelatedArticles currentSlug="toys-vs-drills" />

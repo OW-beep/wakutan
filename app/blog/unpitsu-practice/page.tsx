@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="文字を書く前段階として重要な運筆練習について解説。線を引く練習がなぜ文字の上達につながるのか、家庭でできる練習法を紹介します。"
         slug="unpitsu-practice"
         datePublished="2026-04-28"
-        dateModified="2026-06-25"
+        dateModified="2026-10-01"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-06-25" />
+    <ArticleByline dateModified="2026-10-01" />
+
+    <ArticleSummary
+      worry="鉛筆の持ち方や筆圧が気になるけれど、どう練習すればいいか分かりません。"
+      answer="最初から文字を書かせず、自由に線を引く・丸を描く・迷路の道をたどるところから始めましょう。持ち方は、細かく注意しすぎず、気になったときに軽く持ち直すよう促す程度で十分です。"
+      steps={["自由に線や丸を描く、迷路の道をなぞるなど、お絵描きの延長で始める", "持ち方は、気になったときに軽く持ち直すよう促す程度にする", "きれいな線を求めず、「最後まで描けた」を認める", "書き取りだけを繰り返さず、線を引くこと自体を楽しめる遊びと組み合わせる"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "なぜ運筆練習が大切なのか"}, {"id": "section-2", "text": "家庭でできる運筆練習"}, {"id": "section-3", "text": "年齢別の運筆のめやす"}, {"id": "section-4", "text": "鉛筆の持ち方も少しずつ"}, {"id": "section-5", "text": "市販の運筆ドリルとの付き合い方"}, {"id": "section-6", "text": "運筆からひらがなへ"}]}
+      items={[{"id": "section-1", "text": "なぜ運筆練習が大切なのか"}, {"id": "section-2", "text": "家庭でできる運筆練習"}, {"id": "section-3", "text": "年齢別の運筆のめやす"}, {"id": "section-4", "text": "鉛筆の持ち方も少しずつ"}, {"id": "section-5", "text": "市販の運筆ドリルとの付き合い方"}, {"id": "section-6", "text": "運筆からひらがなへ"}, {"id": "section-7", "text": "運筆を始めたころの様子（わが家の場合）"}, {"id": "section-8", "text": "持ち方・筆圧で気になったこと"}, {"id": "section-9", "text": "よく使っている遊び・ドリル"}, {"id": "section-10", "text": "よくある質問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -146,7 +153,62 @@ export default async function Page() {
           線を引く力が育ってきたら、ひらがなの練習に進みましょう。運筆で慣れた「とめ・はね」の感覚が、文字を書くときにも活きてきます。
         </p>
 
-        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+        <h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          運筆を始めたころの様子（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          鉛筆を持つ練習は、3歳後半から4歳ごろに、絵を描いたり、簡単な迷路に取り組んだりする中で始めました。最初から文字を書く練習をしたわけではありません。自由に線を引いたり、丸を描いたり、迷路の道を指や鉛筆でたどったりするところから始めました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          本人が絵を描きたがることも多かったので、最初は勉強というより、お絵描きの延長として取り入れていました。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          持ち方・筆圧で気になったこと
+        </h2>
+
+        <p className="leading-8 mb-4">
+          最初は、鉛筆を強く握りすぎたり、紙に強い力で線を引いたりすることがありました。反対に、力が弱くて線が薄くなることもありました。持ち方についても、毎回きれいな形になるわけではありません。書いているうちに握り方が変わってしまうこともあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          そのたびに細かく注意すると、書くこと自体が嫌になりそうだったので、気になったときに軽く持ち直すよう促す程度にしています。まずは、鉛筆を持って、自分で線を描くことに慣れてもらうのを優先しています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よく使っている遊び・ドリル
+        </h2>
+
+        <p className="leading-8 mb-4">
+          迷路や、点と点を線でつなぐ問題、波線や曲線をなぞるようなドリルを使うことがあります。特に迷路は、本人が楽しみながら鉛筆を動かせるので、取り入れやすいです。道からはみ出してしまうこともありますが、最初からきれいに線を引くことを求めてはいません。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ほかには、紙に丸や線を自由に描いたり、簡単な絵を描いたりすることもあります。書き取りだけを繰り返すより、線を引くこと自体を楽しめる遊びを組み合わせるようにしています。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 鉛筆を、強く握りすぎます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でもありました。細かく注意すると、書くこと自体が嫌になりそうだったので、気になったときに軽く持ち直すよう促す程度にしています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 線を引くとき、力が弱くて薄くなります。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、力が弱くて線が薄くなることがありました。まずは、鉛筆を持って、自分で線を描くことに慣れることを優先しています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 運筆の練習には、何を使えばいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、迷路や、点と点を線でつなぐ問題、波線や曲線をなぞるドリルを使っています。迷路は、本人が楽しみながら鉛筆を動かせるので、取り入れやすいです。</p>
+          </div>
+        </div>
+
+<div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫
           </p>
@@ -171,29 +233,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年4月28日　/　最終更新日：2026年6月25日
+          公開日：2026年4月28日　/　最終更新日：2026年10月1日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4/hiragana", "label": "4歳向けひらがなドリルを見る", "desc": "運筆に慣れてきたら、ひらがなの読みの問題へ。"}, {"href": "/5/hiragana", "label": "5歳向けひらがな", "desc": "読みに慣れてから、書く練習へ進む流れに。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、鉛筆で取り組めます。"}]}
+          articles={[{"slug": "tracing-vs-handwriting", "desc": "なぞり書きと、自分で書く経験の研究。"}, {"slug": "maze-benefits", "desc": "迷路遊びで育つ力と、見守り方。"}, {"slug": "scissors-practice", "desc": "はさみの練習。手先を使う遊びの始め方。"}, {"slug": "4year-hiragana", "desc": "4歳ではじめてのひらがな。どこから始める？"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🧩 今日のチャレンジ
-          </h3>
-
-          <p className="mb-3">
-            運筆に慣れてきたら、今日のひらがなドリルにも挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/4/hiragana"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            ひらがなドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="楽しく鉛筆を動かせる運筆ドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/unpitsu-practice" title="運筆練習が文字上達の近道になる理由" />
         <RelatedArticles currentSlug="unpitsu-practice" />

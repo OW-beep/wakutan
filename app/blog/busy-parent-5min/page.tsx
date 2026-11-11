@@ -30,7 +30,7 @@ export default async function Page() {
         description="仕事や家事で忙しい保護者向けに、無理なく続けられる1日5分の家庭学習ルーティンの作り方を紹介します。"
         slug="busy-parent-5min"
         datePublished="2026-06-26"
-        dateModified="2026-11-08"
+        dateModified="2026-11-02"
       />
 
 
@@ -50,7 +50,7 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-11-02" />
 
     <ArticleSummary
       worry="忙しくて、家庭学習の時間がなかなか取れません。"
@@ -241,7 +241,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月26日　/　最終更新日：2026年11月8日
+          公開日：2026年6月26日　/　最終更新日：2026年11月2日
         </div>
 
                 <ArticleNextSteps

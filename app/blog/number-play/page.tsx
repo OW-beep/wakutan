@@ -30,7 +30,7 @@ export default async function Page() {
         description="4〜6歳向けの数字遊びを紹介。お買い物ごっこやサイコロ遊びなど、日常の中で自然に数の感覚を育てる方法を解説します。"
         slug="number-play"
         datePublished="2026-05-28"
-        dateModified="2026-11-08"
+        dateModified="2026-11-07"
       />
 
 
@@ -50,7 +50,7 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-11-08" />
+    <ArticleByline dateModified="2026-11-07" />
 
     <ArticleSummary
       worry="数字遊びをさせたいけれど、何をすればいいか分かりません。"
@@ -247,7 +247,7 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年5月28日　/　最終更新日：2026年11月8日
+          公開日：2026年5月28日　/　最終更新日：2026年11月7日
         </div>
 
                 <ArticleNextSteps

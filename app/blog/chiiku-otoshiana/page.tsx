@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +21,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育ドリル 幼児", 3);
+  const products = await searchRakutenItems("積み木 知育 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +30,7 @@ export default async function Page() {
         description="「できないと怒ってしまう」「みんな同じを求めてしまう」「結果ばかり見てしまう」。わかっていてもつい陥りがちな、知育・家庭学習の3つの落とし穴を、運営者の実体験とともに紹介します。"
         slug="chiiku-otoshiana"
         datePublished="2026-09-21"
-        dateModified="2026-09-21"
+        dateModified="2026-10-06"
       />
 
       <article className="max-w-4xl mx-auto">
@@ -47,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-09-21" />
+    <ArticleByline dateModified="2026-10-06" />
+
+    <ArticleSummary
+      worry="知育を頑張りすぎて、親も子も疲れてしまっている気がします。"
+      answer="何でも学習につなげようとしなくて大丈夫です。毎日少しだけ考える時間があり、あとは自由に遊べれば十分。教材も、準備のいらない、家にあるもので足ります。"
+      steps={["遊びの時間を、学習につなげすぎない", "準備が必要な教材より、すぐ使える積み木やおもちゃを活かす", "ドリルは5〜10分、あとは遊びや絵本でOK", "子どもが興味を持ったことを、一緒に楽しむ"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "① 「できないと」つい怒ってしまう"}, {"id": "section-2", "text": "② 「みんな同じ」を求めてしまう"}, {"id": "section-3", "text": "③ 「結果」ばかり見てしまう"}, {"id": "section-4", "text": "3つに共通していること"}, {"id": "section-5", "text": "よくある質問"}]}
+      items={[{"id": "section-1", "text": "① 「できないと」つい怒ってしまう"}, {"id": "section-2", "text": "② 「みんな同じ」を求めてしまう"}, {"id": "section-3", "text": "③ 「結果」ばかり見てしまう"}, {"id": "section-4", "text": "3つに共通していること"}, {"id": "section-5", "text": "わが家の「やりすぎたかも」"}, {"id": "section-6", "text": "買ったけれど、あまり使わなかった教材"}, {"id": "section-7", "text": "いま、「これで十分」と思っていること"}, {"id": "section-8", "text": "よくある質問"}]}
     />
 
 
@@ -163,6 +171,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-5" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家の「やりすぎたかも」
+        </h2>
+
+        <p className="leading-8 mb-4">
+          子どものためになると思い、家庭学習の時間を増やしたり、遊びの中にも数字や文字を取り入れようとしたりしていた時期がありました。積み木で遊んでいるときにも数を聞いたり、絵本を読んでいるときにも文字を確認したりしていました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          でも、子どもにとっては、ただ遊びたいだけの時間もあります。何でも学習につなげようとすると、親も疲れますし、子どもも自由に遊びにくくなってしまうと感じました。
+        </p>
+
+<h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          買ったけれど、あまり使わなかった教材
+        </h2>
+
+        <p className="leading-8 mb-4">
+          知育に役立ちそうだと思って購入したカード教材がありましたが、最初に何度か使っただけで、あまり出番がありませんでした。カードを並べたり、問題を出したりする準備が必要で、忙しい日にはなかなか使えなかったのです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          一方で、家にある積み木やおもちゃは、特別な準備をしなくても自然に遊び始められます。高価な教材を買うことより、普段の生活の中で使いやすいものを活用する方が、わが家には合っていました。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          いま、「これで十分」と思っていること
+        </h2>
+
+        <p className="leading-8 mb-4">
+          毎日少しだけ考える時間があり、あとは自由に遊べることです。ドリルを5〜10分程度取り組んだり、積み木やパズルで遊んだり、絵本を読んだりするだけでも、子どもにとっては十分な経験になると思っています。何種類もの教材をそろえたり、毎日決まったメニューをこなしたりする必要はありません。
+        </p>
+
+        <p className="leading-8 mb-4">
+          子どもが興味を持ったことを一緒に楽しみ、分からないことがあれば少し手助けする。それくらいの関わり方が、今のわが家にはちょうどよいです。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある質問
         </h2>
 
@@ -178,6 +222,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. きょうだいで進み方が全然違います。大丈夫でしょうか？</p>
             <p className="leading-7 text-gray-700">A. よくあることです。同じ家庭で育っていても、興味を持つ分野や習得のペースは一人ひとり違います。それぞれのペースで見てあげるのが一番の近道です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 遊びの中でも、数字や文字を教えた方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 何でも学習につなげる必要はありません。わが家でも、積み木で遊んでいるときに数を聞いたり、絵本で文字を確認したりしていた時期がありましたが、子どもが自由に遊びにくくなると感じました。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 高価な知育教材は、買った方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、準備が必要なカード教材はあまり使わず、家にある積み木やおもちゃの方が、自然に遊び始められました。普段の生活の中で使いやすいものを活用する方が、わが家には合っていました。</p>
           </div>
         </div>
 
@@ -209,29 +261,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年9月21日　/　最終更新日：2026年9月21日
+          公開日：2026年9月21日　/　最終更新日：2026年10月6日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/print", "label": "印刷して使う", "desc": "準備いらずの、今日のドリル。1問だけでも十分です。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "遊びの合間に、5〜10分だけ。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}]}
+          articles={[{"slug": "toys-vs-drills", "desc": "知育玩具とドリル、どう使い分ける？"}, {"slug": "study-mistakes", "desc": "家庭学習で、つい続けさせてしまうときの考え方。"}, {"slug": "kodomo-hikaku-tebanasu", "desc": "比べてしまうときの、3つの視点。"}, {"slug": "busy-parent-5min", "desc": "忙しい日でも続けやすい、1日5分の進め方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🍭 今日のごほうびドリル
-          </h3>
-
-          <p className="mb-3">
-            結果より、取り組む過程を見てみませんか？今日は1問だけでも十分です。
-          </p>
-
-          <Link
-            href="/print"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            印刷して使う
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="準備いらずで遊べる積み木" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/chiiku-otoshiana" title="9割の親がやりがちな、知育の落とし穴3つ" />
         <RelatedArticles currentSlug="chiiku-otoshiana" />

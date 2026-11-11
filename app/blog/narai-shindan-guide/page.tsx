@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +30,7 @@ export default async function Page() {
         description="4〜6歳の習い事選びは「人気ランキング」より「何を大切にしたいか」から考えるのがおすすめです。目的・子どもの興味・家庭の条件の整理の仕方と、無料の習い事診断ツールを紹介します。"
         slug="narai-shindan-guide"
         datePublished="2026-09-12"
-        dateModified="2026-09-12"
+        dateModified="2026-10-13"
       />
 
       <article className="max-w-4xl mx-auto px-6 py-10">
@@ -45,10 +47,16 @@ export default async function Page() {
           </p>
         </div>
 
-    <ArticleByline dateModified="2026-09-12" />
+    <ArticleByline dateModified="2026-10-13" />
+
+    <ArticleSummary
+      worry="習い事を、何を基準に選べばいいのか迷っています。"
+      answer="人気や周りの流れより、「本人が楽しんで、また行きたいと思えるか」を基準にしましょう。そのうえで、先生との相性・教室の雰囲気・通いやすさ・費用、そして家族全体で無理なく通えるかを確認すると、続けやすくなります。"
+      steps={["本人が興味を持っていること・「また行きたい」と思えるかを、いちばんに見る", "習い事の数は、増やしすぎない", "先生との相性、教室の雰囲気、通いやすさ、費用を確認する", "送迎・待ち時間・下の子の予定も含めて、家族全体で無理のない形を探す"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "人気ランキングだけで選ぶと起こりがちなこと"}, {"id": "section-2", "text": "習い事選びを整理する4つの視点"}, {"id": "section-3", "text": "親の希望と子どもの興味がズレることもある"}, {"id": "section-4", "text": "🧭 わくたん習い事診断で整理してみる"}]}
+      items={[{"id": "section-1", "text": "人気ランキングだけで選ぶと起こりがちなこと"}, {"id": "section-2", "text": "習い事選びを整理する4つの視点"}, {"id": "section-3", "text": "親の希望と子どもの興味がズレることもある"}, {"id": "section-4", "text": "いま、わが家で考えていること"}, {"id": "section-5", "text": "いちばん大切にしたい基準"}, {"id": "section-6", "text": "3人きょうだいで、難しさを感じること"}, {"id": "section-7", "text": "よくある質問"}, {"id": "section-8", "text": "🧭 わくたん習い事診断で整理してみる"}]}
     />
 
 
@@ -145,7 +153,62 @@ export default async function Page() {
           </p>
         </section>
 
-        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+                <section className="bg-white rounded-3xl shadow p-8 mb-8">
+          <h2 id="section-4" className="text-3xl font-bold mb-6 text-orange-600">
+            いま、わが家で考えていること
+          </h2>
+          <p className="leading-8 mb-4">
+            今は、上の子にどんな習い事が合うのかを考えています。本人が興味を持つことを経験させてあげたい気持ちはありますが、習い事の数を増やしすぎるのは避けたいと思っています。
+          </p>
+          <p className="leading-8 mb-4">
+            5歳になり、以前より自分の好きなことや、やってみたいことを言葉にするようになってきました。一方で、興味を持ったことでも、実際に始めてみるとイメージと違っていた、ということもあります。
+          </p>
+          <p className="leading-8">
+            また、小学校入学が近づいているので、今から新しい習い事を始めるのがよいのか、生活リズムが変わってから考える方がよいのかも迷っています。親がよいと思うものを選ぶのではなく、本人が楽しんで続けられるものを探したいです。
+          </p>
+        </section>
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+          <h2 id="section-5" className="text-3xl font-bold mb-6 text-orange-600">
+            いちばん大切にしたい基準
+          </h2>
+          <p className="leading-8 mb-4">
+            一番大切にしたいのは、本人が楽しんで通えることです。将来役に立ちそうだから、周りの子が始めているから、という理由だけで選ぶのではなく、本人が「また行きたい」と思えるかどうかを重視したいです。そのうえで、先生との相性や教室の雰囲気、通いやすさ、費用も確認したいと思っています。
+          </p>
+          <p className="leading-8">
+            特に、親の送迎や下の子たちとの予定もあるので、無理なく通える場所であることは大切です。内容が魅力的でも、毎回の送迎が大きな負担になると、続けるのが難しくなります。
+          </p>
+        </section>
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+          <h2 id="section-6" className="text-3xl font-bold mb-6 text-orange-600">
+            3人きょうだいで、難しさを感じること
+          </h2>
+          <p className="leading-8 mb-4">
+            上の子の習い事に付き添うとき、下の子2人をどうするかが大きな課題です。2歳の下の子は、じっと待つことが難しい場面もありますし、0歳の子は授乳や昼寝などの生活リズムもあります。上の子の予定だけで動けるわけではありません。また、上の子だけに時間を使うことに対して、下の子たちが寂しい思いをしないかも気になります。
+          </p>
+          <p className="leading-8">
+            そのため、習い事を選ぶときは、内容だけでなく、通う曜日や時間、待ち時間、送迎方法なども含めて考えたいです。3人それぞれに同じことをさせる必要はないと思っています。まずは上の子の興味を大切にしながら、家族全体に無理のない形を探していきたいです。
+          </p>
+        </section>
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+          <h2 id="section-7" className="text-3xl font-bold mb-6 text-orange-600">
+            よくある質問
+          </h2>
+          <div className="space-y-4">
+          <div>
+            <p className="font-bold">Q. 小学校入学が近いですが、今から新しい習い事を始めてもいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、今から始めるか、生活リズムが変わってから考えるか、迷っています。習い事の数を増やしすぎないこと、本人が楽しんで続けられそうかを大切にしたいと考えています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 興味を持った習い事が、始めてみるとイメージと違っていたときは？</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、興味を持ったことでも、実際に始めてみるとイメージと違っていた、ということがあります。親がよいと思うものではなく、本人が楽しんで続けられるものを探したいと思っています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 下の子がいると、送迎や付き添いが大変です。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、上の子の習い事に付き添うとき、下の子をどうするかが大きな課題です。内容だけでなく、通う曜日や時間、待ち時間、送迎方法も含めて考えたいと思っています。</p>
+          </div>
+          </div>
+        </section>
+<div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">🏠 わくたん運営者のわが家での工夫</p>
           <p className="leading-7">
             わが家でも、習い事を検討する際に「これが人気らしいから」で候補を決めかけたことがありました。
@@ -158,7 +221,7 @@ export default async function Page() {
         </div>
 
         <div className="bg-yellow-100 rounded-3xl p-8 text-center mb-8">
-          <h2 id="section-4" className="text-2xl font-bold mb-4">
+          <h2 id="section-8" className="text-2xl font-bold mb-4">
             🧭 わくたん習い事診断で整理してみる
           </h2>
 
@@ -175,14 +238,19 @@ export default async function Page() {
           </Link>
         </div>
 
+                <ArticleNextSteps
+          drills={[{"href": "/5", "label": "5歳向けドリルを見る", "desc": "習い事とのバランスを見ながら、家庭学習は短い時間で。"}, {"href": "/4", "label": "4歳向けドリルを見る", "desc": "ジャンル別に、1回のプリントで終わる分量の問題を毎日更新しています。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "skills-by-age", "desc": "4歳・5歳・6歳の発達段階別「今」伸ばしたい力。"}, {"slug": "toys-vs-drills", "desc": "知育玩具とドリル、どう使い分ける？"}, {"slug": "kodomo-hikaku-tebanasu", "desc": "周りの子が気になるときの、3つの視点。"}, {"slug": "school-preparation", "desc": "小学校入学前に身につけたい力。"}]}
+        />
+
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年9月12日　/　最終更新日：2026年9月12日</p>
+          <p>公開日：2026年9月12日　/　最終更新日：2026年10月13日</p>
           <p className="mt-1">
             本記事は、わくたん運営者が家庭での習い事選びを検討する中で感じたことをもとにまとめています。
           </p>
         </div>
 
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="おうちで試せる知育グッズ" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/narai-shindan-guide" title="習い事は何を基準に選ぶ？4〜6歳の習い事選びで大切にしたい考え方" />
         <RelatedArticles currentSlug="narai-shindan-guide" />

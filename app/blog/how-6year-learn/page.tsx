@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="6歳・年長さんの勉強・学び方のコツを解説。小学校入学前に育てたい力や、おすすめの家庭学習のポイントを紹介します。"
         slug="how-6year-learn"
         datePublished="2026-05-03"
-        dateModified="2026-10-17"
+        dateModified="2026-10-25"
       />
 
 
@@ -57,10 +58,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-10-17" />
+    <ArticleByline dateModified="2026-10-25" />
+
+    <ArticleSummary
+      worry="6歳に向けて、家庭学習をどう変えていけばいいのか知りたいです。"
+      answer="学習時間を長くする必要はありません。短い時間のまま、「親が選んで一つずつ説明する」学び方から、「まず自分で問題を見て考えてみる」学び方へ、少しずつ移していきましょう。遊びの時間も残したままで大丈夫です。"
+      steps={["学習時間は長くせず、短い時間で続ける", "親が全部説明せず、まず自分で問題を見て考える時間をつくる", "鉛筆を用意する、できるところから始める、など自分で始める経験を増やす", "シールやごほうびではなく、解けたこと・自分でできたこと自体を認める"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "🌱 6歳は学習習慣を作る時期"}, {"id": "section-2", "text": "🧠 考える力を伸ばそう"}, {"id": "section-3", "text": "🔢 数の理解を深める"}, {"id": "section-4", "text": "✏️ 文字を使う楽しさを知る"}, {"id": "section-5", "text": "👂 人の話を聞く力"}, {"id": "section-6", "text": "🌟 6歳になったら意識したいこと"}, {"id": "section-7", "text": "❓ こんな質問もよくいただきます"}, {"id": "section-8", "text": "💡 保護者が意識したいポイント"}, {"id": "section-9", "text": "🌈 まとめ"}, {"id": "section-10", "text": "🎓 今日の6さいドリルはこちら"}]}
+      items={[{"id": "section-1", "text": "🌱 6歳は学習習慣を作る時期"}, {"id": "section-2", "text": "🧠 考える力を伸ばそう"}, {"id": "section-3", "text": "🔢 数の理解を深める"}, {"id": "section-4", "text": "✏️ 文字を使う楽しさを知る"}, {"id": "section-5", "text": "👂 人の話を聞く力"}, {"id": "section-6", "text": "🌟 6歳になったら意識したいこと"}, {"id": "section-7", "text": "🔄 6歳に向けて、変えたいと思っていること"}, {"id": "section-8", "text": "🌱 5歳のいまの学びを、6歳につなげたいこと"}, {"id": "section-9", "text": "🎓 6歳になったら「卒業」したいこと"}, {"id": "section-10", "text": "❓ こんな質問もよくいただきます"}, {"id": "section-11", "text": "💡 保護者が意識したいポイント"}, {"id": "section-12", "text": "🌈 まとめ"}]}
     />
 
 
@@ -209,9 +216,42 @@ export default async function Page() {
 
         </section>
 
-        <section className="bg-white rounded-3xl shadow p-8 mb-8">
-
+                <section className="bg-white rounded-3xl shadow p-8 mb-8">
           <h2 id="section-7" className="text-3xl font-bold mb-6 text-purple-600">
+            🔄 6歳に向けて、変えたいと思っていること
+          </h2>
+          <p className="leading-8 mb-4">
+            今までは、迷路や間違い探し、数字など、遊びに近い問題を中心に取り組んできました。6歳に向けては、少しずつ自分で問題を読んで、何をすればよいのか考える機会を増やしたいと思っています。
+          </p>
+          <p className="leading-8">
+            ただ、学習時間を長くするつもりはありません。今までどおり5〜10分程度を目安にしながら、本人が興味を持てる内容を選びたいです。また、親が隣で全部説明するのではなく、まずは自分で問題を見て考えてみる時間もつくりたいと思っています。
+          </p>
+        </section>
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+          <h2 id="section-8" className="text-3xl font-bold mb-6 text-purple-600">
+            🌱 5歳のいまの学びを、6歳につなげたいこと
+          </h2>
+          <p className="leading-8 mb-4">
+            5歳の今は、数字やひらがなを覚えることだけでなく、自分で考えて答えを探す経験を大切にしています。例えば、迷路で行き止まりになったときに自分で戻って別の道を探すことや、数字の問題で分からないときに積み木を使って考えることです。こうした経験を、6歳になってからも続けていきたいです。
+          </p>
+          <p className="leading-8">
+            小学校では、初めて見る問題や、自分だけではすぐに答えが出ないこともあると思います。そのときに、すぐに諦めるのではなく、もう一度考えたり、先生に質問したりできるようになってほしいです。知識を先取りすることよりも、分からないことに向き合う姿勢を育てていきたいと思っています。
+          </p>
+        </section>
+        <section className="bg-white rounded-3xl shadow p-8 mb-8">
+          <h2 id="section-9" className="text-3xl font-bold mb-6 text-purple-600">
+            🎓 6歳になったら「卒業」したいこと
+          </h2>
+          <p className="leading-8 mb-4">
+            6歳になったからといって、今までの遊びを卒業させる必要はないと思っています。ただ、親が問題を選んで、隣で一つずつ説明しないと進められない状態からは、少しずつ卒業していきたいです。例えば、ドリルを始めるときに、自分で鉛筆を用意して、問題を見て、できるところから取り組むようになってほしいです。もちろん、分からないときは手伝いますし、まだ親と一緒にやりたいと言うこともあると思います。
+          </p>
+          <p className="leading-8">
+            また、シールやごほうびを目的に取り組むのではなく、問題を解くことや、自分でできたこと自体を楽しめるようになってほしいです。親が管理して進める学習から、本人が少しずつ自分で選んで取り組める学習に変えていくことが、6歳に向けた目標です。
+          </p>
+        </section>
+<section className="bg-white rounded-3xl shadow p-8 mb-8">
+
+          <h2 id="section-10" className="text-3xl font-bold mb-6 text-purple-600">
             ❓ こんな質問もよくいただきます
           </h2>
 
@@ -228,13 +268,21 @@ export default async function Page() {
               <p className="font-bold">Q. 小学校入学後、家庭学習はどう変えればいい？</p>
               <p className="leading-7 text-gray-700">A. 急に大きく変える必要はありません。入学前に積み重ねてきた「毎日少し取り組む」習慣を、そのまま宿題や学校の学習に置き換えていくイメージで十分です。</p>
             </div>
+          <div>
+            <p className="font-bold">Q. 6歳になったら、学習時間は長くした方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、学習時間を長くするつもりはなく、今までどおり5〜10分程度を目安に、本人が興味を持てる内容を選びたいと考えています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 親が隣で説明しなくても、進められるようになりますか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、親が全部説明するのではなく、まず自分で問題を見て考えてみる時間をつくりたいと考えています。分からないときは手伝いますし、まだ親と一緒にやりたいと言うこともあると思っています。</p>
+          </div>
           </div>
 
         </section>
 
         <section className="bg-gradient-to-r from-purple-100 to-violet-100 rounded-3xl p-8 shadow-lg mb-8">
 
-          <h2 id="section-8" className="text-3xl font-bold mb-6 text-purple-700">
+          <h2 id="section-11" className="text-3xl font-bold mb-6 text-purple-700">
             💡 保護者が意識したいポイント
           </h2>
 
@@ -250,7 +298,7 @@ export default async function Page() {
 
         <section className="bg-white rounded-3xl shadow p-8 mb-10">
 
-          <h2 id="section-9" className="text-3xl font-bold mb-6 text-purple-600">
+          <h2 id="section-12" className="text-3xl font-bold mb-6 text-purple-600">
             🌈 まとめ
           </h2>
 
@@ -280,26 +328,16 @@ export default async function Page() {
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-sm text-gray-500">
-          <p>公開日：2026年5月3日　/　最終更新日：2026年10月17日</p>
+          <p>公開日：2026年5月3日　/　最終更新日：2026年10月25日</p>
           <p className="mt-1">
             本記事は、わくたん運営者が6歳・就学前の子どもたちの様子を見ながら考えたことをもとにまとめています。
           </p>
         </div>
 
-        <div className="bg-purple-100 rounded-3xl p-8 text-center">
-
-          <h2 id="section-10" className="text-2xl font-bold mb-4">
-            🎓 今日の6さいドリルはこちら
-          </h2>
-
-          <Link
-            href="/6"
-            className="inline-block bg-purple-600 text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            6さいドリルに挑戦する →
-          </Link>
-
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/6", "label": "6歳向けドリルを見る", "desc": "自分で問題を見て、できるところから。"}, {"href": "/6/sansu", "label": "6歳向け算数ドリル", "desc": "たし算・ひきざんの基礎を毎日30問。"}, {"href": "/6/tokei", "label": "6歳向けとけいの問題", "desc": "なんじ・なんじはん・分の読み方を、毎日更新しています。"}]}
+          articles={[{"slug": "how-5year-learn", "desc": "5歳の学び方。考える力と、先取りを急がない考え方。"}, {"slug": "nencho-katei-gakushu", "desc": "年長さんの1年間の進め方。焦らず、土台づくりを。"}, {"slug": "school-preparation", "desc": "小学校入学前に身につけたい力。"}, {"slug": "6year-prep-timeline", "desc": "入学準備、いつ何をすればいい？月ごとの目安。"}]}
+        />
 
         <RakutenProducts items={products} />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />

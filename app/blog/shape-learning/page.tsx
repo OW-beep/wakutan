@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="図形遊びや図形模写（お手本を見て同じ形を描く遊び）は、空間認識力や図形感覚、考える力を育てる知育遊びです。4〜6歳向けに図形遊びのメリットと、小学校の学習へのつながりを紹介します。"
         slug="shape-learning"
         datePublished="2026-03-01"
-        dateModified="2026-09-25"
+        dateModified="2026-11-06"
       />
 
 
@@ -48,10 +49,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-09-25" />
+    <ArticleByline dateModified="2026-11-06" />
+
+    <ArticleSummary
+      worry="図形遊びは、どう始めればいいのか、何を教えればいいのか知りたいです。"
+      answer="図形の名前を覚えさせる必要はありません。積み木やパズル、折り紙で、形を見る・向きを変える・組み合わせる経験を増やすのがいちばんです。つまずいたら、正解を教えず、「向きを変えたらどうかな？」と声をかけましょう。"
+      steps={["積み木やブロックで、同じ形を集める、向きを変えて組み合わせる", "身の回りの「丸いね」「四角いね」を、遊びの中で自然に言葉にする", "パズルは、絵の色だけでなく、形や辺も見られるように声をかける", "うまくいかないときは、角や端のピースだけ一緒に探す"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "図形感覚が育つ"}, {"id": "section-2", "text": "図形模写のやり方"}, {"id": "section-3", "text": "空間認識力が育つ"}, {"id": "section-4", "text": "身の回りの図形を探すゲーム"}, {"id": "section-5", "text": "積み木・折り紙での図形遊び"}, {"id": "section-6", "text": "図形はドリルとも相性が良い"}, {"id": "section-7", "text": "小学校の図形学習へのつながり"}, {"id": "section-8", "text": "年齢別の関わり方の目安"}, {"id": "section-9", "text": "よくある疑問"}]}
+      items={[{"id": "section-1", "text": "図形感覚が育つ"}, {"id": "section-2", "text": "図形模写のやり方"}, {"id": "section-3", "text": "空間認識力が育つ"}, {"id": "section-4", "text": "身の回りの図形を探すゲーム"}, {"id": "section-5", "text": "積み木・折り紙での図形遊び"}, {"id": "section-6", "text": "図形はドリルとも相性が良い"}, {"id": "section-7", "text": "小学校の図形学習へのつながり"}, {"id": "section-8", "text": "年齢別の関わり方の目安"}, {"id": "section-9", "text": "図形に興味を持ったきっかけ（わが家の場合）"}, {"id": "section-10", "text": "図形の感覚が育ったと感じた場面"}, {"id": "section-11", "text": "図形でつまずいたとき"}, {"id": "section-12", "text": "よくある疑問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -152,6 +159,46 @@ export default async function Page() {
         </p>
 
         <h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          図形に興味を持ったきっかけ（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          最初は、積み木やブロックで遊んでいるときだったと思います。四角いブロックを並べたり、三角形のパーツを組み合わせたりする中で、形の違いに気づくようになりました。また、絵本や家の中にあるものを見て、「これは丸いね」「こっちは四角いね」と話すこともありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          図形の名前を覚えさせようとして始めたわけではなく、遊びの中で形に触れる機会が自然と増えていった感じです。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          図形の感覚が育ったと感じた場面
+        </h2>
+
+        <p className="leading-8 mb-4">
+          積み木で形を作っているときに、同じ形のパーツを集めたり、向きを変えて組み合わせたりするようになったことです。例えば、積み木を並べて家のような形を作ろうとしたとき、最初はうまく組み合わず、何度か向きを変えていました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          パズルでも、絵の一部だけでなく、ピースの形や周りとのつながりを見ながら置くことが、少しずつ増えました。折り紙は、折ったあとにできる形を見たり、開いたときに模様ができることを楽しんだりしています。こうした遊びを通じて、形を見たり、向きを変えたり、組み合わせたりする経験が増えたと感じています。
+        </p>
+
+<h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          図形でつまずいたとき
+        </h2>
+
+        <p className="leading-8 mb-4">
+          平面で見た形と、積み木のように立体になった形を結びつけるのが難しそうなことがありました。また、パズルでは、絵の色や模様だけを見てピースを合わせようとして、形が合わずに何度も置き直すこともありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          そのときは、すぐに正しい場所を教えるのではなく、「向きを変えたらどうかな？」「こっちの辺は合いそうかな？」と声をかけています。難しそうな場合は、角や端のピースだけ一緒に探すこともあります。
+        </p>
+
+        <p className="leading-8 mb-4">
+          図形は、名前を覚えるだけではなく、実際に触って動かしてみる経験が大切だと感じています。うまくできないときも、遊びながら少しずつ慣れていければよいと思っています。
+        </p>
+
+<h2 id="section-12" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           よくある疑問
         </h2>
 
@@ -167,6 +214,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 図形遊びとドリルの図形問題、どちらを優先すべき？</p>
             <p className="leading-7 text-gray-700">A. 順番としては、まず遊びの中で図形に親しんでから、ドリルで理解を確認する流れがおすすめです。遊びの経験が土台になっていると、ドリルの図形問題にも抵抗なく取り組みやすくなります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 積み木のような立体の形と、紙の上の形が結びつかないようです。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、平面で見た形と、立体になった形を結びつけるのが難しそうなことがありました。名前を教えるよりも、実際に触って動かしてみる経験を増やしています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. パズルで、色や模様だけを見て、何度も置き直します。</p>
+            <p className="leading-7 text-gray-700">A. わが家でもありました。すぐに正しい場所を教えず、「向きを変えたらどうかな？」「こっちの辺は合いそうかな？」と声をかけ、難しそうなら角や端のピースだけ一緒に探します。</p>
           </div>
         </div>
 
@@ -195,29 +250,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年3月1日　/　最終更新日：2026年9月25日
+          公開日：2026年3月1日　/　最終更新日：2026年11月6日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4/pattern", "label": "4歳向けパターンドリルを見る", "desc": "図形の感覚を活かして、今日のパターン問題にも。"}, {"href": "/4/onajikatachi", "label": "4歳向けおなじかたち", "desc": "お手本と同じ形を見つける問題。図形模写に近い感覚で。"}, {"href": "/4/tsumiki", "label": "4歳向けつみき問題", "desc": "形を組み合わせて考える問題。"}]}
+          articles={[{"slug": "puzzle-benefits", "desc": "パズル遊びで育つ力と、難しくて嫌がったときの関わり方。"}, {"slug": "toys-vs-drills", "desc": "知育玩具とドリル、どう使い分ける？"}, {"slug": "spatial-skills-preschool", "desc": "空間認識力と算数の関係（研究まとめ）。"}, {"slug": "dot-to-dot-benefits", "desc": "点つなぎ遊びの効果と、つまずいたときの関わり方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🌻 今日の実践
-          </h3>
-
-          <p className="mb-3">
-            図形の感覚を活かして、今日のパターン問題にも挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/4/pattern"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            パターンドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="図形に親しめるパズル・ブロック" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/shape-learning" title="図形遊びの効果｜図形感覚・空間認識力を育てよう" />
         <RelatedArticles currentSlug="shape-learning" />

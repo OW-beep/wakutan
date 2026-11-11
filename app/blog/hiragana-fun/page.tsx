@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +21,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("ひらがな 練習 ドリル", 3);
+  const products = await searchRakutenItems("ひらがな カルタ 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +30,7 @@ export default async function Page() {
         description="4〜6歳向けに、ひらがなを遊びながら覚える5つの方法を紹介。日常生活の中で楽しく文字に親しむコツと、つまずいたときの対応も解説します。"
         slug="hiragana-fun"
         datePublished="2026-05-23"
-        dateModified="2026-06-25"
+        dateModified="2026-10-09"
       />
 
 
@@ -48,10 +50,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-06-25" />
+    <ArticleByline dateModified="2026-10-09" />
+
+    <ArticleSummary
+      worry="ひらがなを、嫌がらずに覚えてもらうにはどうすればいいか知りたいです。"
+      answer="机で書く練習だけにせず、身近な言葉の中から「知っているひらがなを探す」遊びから始めましょう。同じ文字を何度も書かせたり、たくさんの文字を一度に教えたりせず、本人が興味を持った文字を少しずつ取り上げるのがおすすめです。"
+      steps={["絵本やお菓子のパッケージで、「この文字、知っているね」と探す", "同じ文字を、何度も書かせない", "まだ形を覚えていない文字を、一度にたくさん教えない", "知っている文字を見つけたら、「本当だね、よく見つけたね」と一緒に楽しむ"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "① 絵本の読み聞かせ"}, {"id": "section-2", "text": "② カルタ遊び"}, {"id": "section-3", "text": "③ 名前探しゲーム"}, {"id": "section-4", "text": "④ お手紙ごっこ"}, {"id": "section-5", "text": "⑤ なぞり書き→自分で書く"}, {"id": "section-6", "text": "好きなキャラクターを活用する"}, {"id": "section-7", "text": "つまずいたときの対応"}]}
+      items={[{"id": "section-1", "text": "① 絵本の読み聞かせ"}, {"id": "section-2", "text": "② カルタ遊び"}, {"id": "section-3", "text": "③ 名前探しゲーム"}, {"id": "section-4", "text": "④ お手紙ごっこ"}, {"id": "section-5", "text": "⑤ なぞり書き→自分で書く"}, {"id": "section-6", "text": "好きなキャラクターを活用する"}, {"id": "section-7", "text": "つまずいたときの対応"}, {"id": "section-8", "text": "いちばん反応がよかった遊び：知っているひらがな探し（わが家の場合）"}, {"id": "section-9", "text": "反応がいまひとつだった方法"}, {"id": "section-10", "text": "覚えた文字を、生活の中でどう使っているか"}, {"id": "section-11", "text": "よくある質問"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -154,7 +162,71 @@ export default async function Page() {
           焦りは禁物です。興味のタイミングは子どもによって本当にさまざまです。
         </p>
 
-        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
+        <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          いちばん反応がよかった遊び：知っているひらがな探し（わが家の場合）
+        </h2>
+
+        <p className="leading-8 mb-4">
+          わが家で反応がよかったのは、身近な言葉の中から知っているひらがなを探す遊びです。上の子が自分の名前を書きたいと言ったことが、ひらがなに興味を持つきっかけでした。ただ、最初から名前を手本にして書く練習をしたわけではありません。まずは、本人がすでに知っている文字を見つけたり、読んだりするところから始めました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          絵本やお菓子のパッケージなどを見ながら、「この文字、知っているね」「ここにも同じ文字があるよ」と話すと、興味を持ってくれました。プリントだけで覚えようとするより、普段見ているものの中で文字を見つける方が、遊びとして取り組みやすかったようです。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          反応がいまひとつだった方法
+        </h2>
+
+        <p className="leading-8 mb-4">
+          同じ文字を何度も書く練習は、あまり長続きしませんでした。最初は、ひらがなを覚えるには繰り返し書くことが必要だと思い、同じ文字を何回か書くようにしていました。しかし、何度も続けているうちに飽きてしまい、途中で鉛筆を置くことがありました。また、まだ形を覚えていない文字を一度にたくさん教えようとしても、混乱してしまうことがありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          今は、本人が興味を持った文字を少しずつ取り上げています。書く練習だけにこだわらず、見つける、読む、声に出すなど、いろいろな形で触れるようにしています。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          覚えた文字を、生活の中でどう使っているか
+        </h2>
+
+        <p className="leading-8 mb-4">
+          絵本や看板、お菓子のパッケージなどで、知っている文字を見つけることがあります。例えば、絵本を読んでいるときに、知っている文字を指さして教えてくれることがあります。そういうときは、こちらから次々に問題を出すのではなく、「本当だね、よく見つけたね」と一緒に楽しむようにしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、自分の名前を書きたいという気持ちがあるので、名前を書く場面でもひらがなに触れています。覚えた文字をすぐに全部読めるようにすることより、生活の中で文字に気づき、自分から使ってみようとすることを大切にしています。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ✏️ ドリルは、読みから
+          </p>
+          <p>
+            <Link href="/4/hiragana" className="text-orange-600 font-bold hover:underline">4歳向けひらがな</Link>は、絵を見て正しい言葉を選ぶ、読みの力を育てる問題です。遊びで親しんだ文字を、ドリルでも見つけてみてください。
+          </p>
+        </div>
+
+<h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          よくある質問
+        </h2>
+
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="font-bold">Q. 同じ文字を、何度も書かせた方がいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、同じ文字を何度も書く練習はあまり長続きせず、途中で鉛筆を置くことがありました。今は、書く練習だけにこだわらず、見つける、読む、声に出すなど、いろいろな形で触れています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. たくさんの文字を、一度に教えてもいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、まだ形を覚えていない文字を一度にたくさん教えようとして、混乱してしまうことがありました。本人が興味を持った文字を、少しずつ取り上げています。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 知っている文字を見つけたとき、どう声をかければいいですか？</p>
+            <p className="leading-7 text-gray-700">A. 次々に問題を出さず、「本当だね、よく見つけたね」と一緒に楽しむようにしています。</p>
+          </div>
+        </div>
+
+<div className="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-2xl my-8">
           <p className="font-bold mb-2">
             🏠 わくたん運営者のわが家での工夫
           </p>
@@ -179,29 +251,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年5月23日　/　最終更新日：2026年6月25日
+          公開日：2026年5月23日　/　最終更新日：2026年10月9日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4/hiragana", "label": "4歳向けひらがなを見る", "desc": "絵を見て正しい言葉を選ぶ、読みの力を育てる問題。"}, {"href": "/5/hiragana", "label": "5歳向けひらがな", "desc": "読みに慣れてきたら、次のステップとして。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "4year-hiragana", "desc": "4歳ではじめてのひらがな。どこから始める？"}, {"slug": "hiragana-worry-5year", "desc": "5歳でひらがなが書けない・読めないときの関わり方。"}, {"slug": "when-start-hiragana", "desc": "ひらがなは何歳から？無理なく始めるタイミング。"}, {"slug": "katakana-start", "desc": "カタカナはいつから？一緒に読むところから。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🌟 実践してみよう
-          </h3>
-
-          <p className="mb-3">
-            遊びで親しんだひらがなを、今日のドリルでも試してみませんか？
-          </p>
-
-          <Link
-            href="/4/hiragana"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            ひらがなドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="ひらがなに親しめるカルタ・ブック" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/hiragana-fun" title="ひらがなを楽しく覚える5つの方法" />
         <RelatedArticles currentSlug="hiragana-fun" />

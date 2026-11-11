@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleSummary from "@/app/components/ArticleSummary";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -19,7 +21,7 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const products = await searchRakutenItems("知育ドリル 幼児", 3);
+  const products = await searchRakutenItems("迷路 ドリル 幼児", 3);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white p-6">
@@ -28,7 +30,7 @@ export default async function Page() {
         description="子どもが勉強を嫌がる理由と、無理なく学習を続けるための5つのコツを解説。動機づけの考え方もふまえて紹介します。"
         slug="child-hates-study"
         datePublished="2026-05-28"
-        dateModified="2026-07-31"
+        dateModified="2026-10-25"
       />
 
 
@@ -48,10 +50,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-07-31" />
+    <ArticleByline dateModified="2026-10-25" />
+
+    <ArticleSummary
+      worry="子どもが勉強を嫌がって、机に向かってくれません。"
+      answer="嫌がっているときに「あと1問だけ」と続けさせようとすると、かえってドリル自体を嫌がることがあります。量を1問に減らして、遊びに近い問題を混ぜ、始めるときの負担を小さくするのがおすすめです。"
+      steps={["嫌がりやすい時間帯（夕方の疲れている時間など）を避ける", "取り組む量を、1問だけでもいいことにする", "文字を書く問題ばかりにせず、迷路や間違い探しなど遊びに近い問題も混ぜる", "「今日はやりたくない気分かな？別の日にしようか」と、無理せず切り上げる"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "① 難易度が合っていないのかも"}, {"id": "section-2", "text": "② タイミングが合っていないのかも"}, {"id": "section-3", "text": "③ 「やらされている」感覚があるのかも"}, {"id": "section-4", "text": "④ 成功体験が不足しているのかも"}, {"id": "section-5", "text": "⑤ 完璧を求めすぎているのかも"}, {"id": "section-6", "text": "場面別の声かけ例"}, {"id": "section-7", "text": "「1問だけ」以外に効果があった切り替え方"}, {"id": "section-8", "text": "気になる疑問Q&A"}]}
+      items={[{"id": "section-1", "text": "① 難易度が合っていないのかも"}, {"id": "section-2", "text": "② タイミングが合っていないのかも"}, {"id": "section-3", "text": "③ 「やらされている」感覚があるのかも"}, {"id": "section-4", "text": "④ 成功体験が不足しているのかも"}, {"id": "section-5", "text": "⑤ 完璧を求めすぎているのかも"}, {"id": "section-6", "text": "場面別の声かけ例"}, {"id": "section-7", "text": "「1問だけ」以外に効果があった切り替え方"}, {"id": "section-8", "text": "わが家で、嫌がったのはどんな場面？"}, {"id": "section-9", "text": "「あと1問だけ」が効かなかったとき"}, {"id": "section-10", "text": "嫌がらなくなった、いちばんのきっかけ"}, {"id": "section-11", "text": "気になる疑問Q&A"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -140,6 +148,54 @@ export default async function Page() {
         </p>
 
         <h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          わが家で、嫌がったのはどんな場面？
+        </h2>
+
+        <div className="grid sm:grid-cols-2 gap-4 my-6">
+          <div className="bg-rose-50 border border-rose-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">😣 嫌がることが多かった</p>
+            <p className="leading-7">夕方の疲れている時間帯。保育園などから帰って、少し休んだあとにドリルを出しても、なかなか机に向かおうとしませんでした。</p>
+          </div>
+          <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5">
+            <p className="font-bold mb-2">😕 苦手そうだった</p>
+            <p className="leading-7">ひらがなを書く練習など、同じことを何度も繰り返す問題。最初は取り組んでいても、途中から鉛筆を置いてしまうことがありました。</p>
+          </div>
+        </div>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          「あと1問だけ」が効かなかったとき
+        </h2>
+
+        <p className="leading-8 mb-4">
+          最初は「あと1問だけ頑張ってみよう」と声をかけていました。ただ、本人がすでに嫌がっているときにそう言っても、あまり効果はありませんでした。むしろ、親が続けさせようとするほど、ドリルそのものを嫌がるようになってしまうこともありました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          今は「今日はやりたくない気分かな？じゃあ、別の日にしようか」と声をかけることもあります。
+        </p>
+
+<h2 id="section-10" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          嫌がらなくなった、いちばんのきっかけ
+        </h2>
+
+        <p className="leading-8 mb-4">
+          一番大きかったのは、取り組む量を減らしたことです。以前は何ページか進めることを考えていましたが、今は1問だけでもよいことにしています。また、文字を書く問題ばかりではなく、迷路や間違い探しなど、遊びに近い問題も取り入れるようにしました。
+        </p>
+
+        <p className="leading-8 mb-4">
+          ドリルを始めるときの負担が小さくなったことで、以前ほど嫌がらなくなったと感じています。
+        </p>
+
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-xl my-6">
+          <p className="font-bold mb-2">
+            ✏️ 負担の小さい問題から
+          </p>
+          <p>
+            <Link href="/4/nakamawake" className="text-orange-600 font-bold hover:underline">4歳向け仲間分け</Link>のように見て考える問題や、<Link href="/blog/maze-benefits" className="text-orange-600 font-bold hover:underline">迷路</Link>・<Link href="/blog/find-differences-benefits" className="text-orange-600 font-bold hover:underline">間違い探し</Link>は、始めやすい問題です。量の決め方は<Link href="/blog/drill-hurdle-down" className="text-orange-600 font-bold hover:underline">「1問だけでもいい」の記事</Link>も参考にしてください。
+          </p>
+        </div>
+
+<h2 id="section-11" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           気になる疑問Q&A
         </h2>
 
@@ -155,6 +211,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 毎日のように嫌がられると、こちらも疲れてしまいます。</p>
             <p className="leading-7 text-gray-700">A. 保護者の負担が大きい時期は、無理に毎日続けようとしなくて大丈夫です。数日休んでも、また「今日はどっちからやる？」から再開すれば十分です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 「あと1問だけ」と言っても、嫌がります。</p>
+            <p className="leading-7 text-gray-700">A. すでに嫌がっているときは、あまり効果がないことがあります。わが家でも、続けさせようとするほど、ドリル自体を嫌がるようになったことがありました。その日は切り上げて、別の日に仕切り直すのもひとつの方法です。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 同じことを繰り返す問題を、嫌がります。</p>
+            <p className="leading-7 text-gray-700">A. わが家では、ひらがなを書く練習のように同じことを繰り返す問題で、途中から鉛筆を置くことがありました。量を減らしたり、迷路や間違い探しなど遊びに近い問題を混ぜたりして、負担を小さくしてみてください。</p>
           </div>
         </div>
 
@@ -183,29 +247,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年5月28日　/　最終更新日：2026年7月31日
+          公開日：2026年5月28日　/　最終更新日：2026年10月25日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/4", "label": "4歳向けドリルを見る", "desc": "遊びに近いジャンルから、1問だけ選んでみてください。"}, {"href": "/4/nakamawake", "label": "4歳向け仲間分け", "desc": "見て考えて答える問題。"}, {"href": "/print", "label": "印刷して使う", "desc": "1問だけ印刷して、机に置いておけます。"}]}
+          articles={[{"slug": "drill-hurdle-down", "desc": "「1問だけでもいい」と考えて、続けやすくした話。"}, {"slug": "concentration-4year", "desc": "集中が続かないときの、時間帯と問題の選び方。"}, {"slug": "study-habit", "desc": "休んでも、また始められる。習慣づけの考え方。"}, {"slug": "reward-for-study", "desc": "ごほうびに頼りすぎないための、声かけの考え方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🧭 次にやってみること
-          </h3>
-
-          <p className="mb-3">
-            無理のないペースで、今日のドリルから少しずつ試してみませんか？
-          </p>
-
-          <Link
-            href="/category/parent"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            保護者向け記事をもっと見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="遊びに近い問題から始められる迷路・ドリル" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/child-hates-study" title="子どもが勉強を嫌がるときは？無理なく続ける5つのコツ" />
         <RelatedArticles currentSlug="child-hates-study" />

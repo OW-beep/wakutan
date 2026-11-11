@@ -2,7 +2,6 @@ import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
-import ArticleToc from "@/app/components/ArticleToc";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
 import FavoriteButton from "@/app/components/FavoriteButton";

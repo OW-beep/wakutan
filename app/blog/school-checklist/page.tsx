@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +30,7 @@ export default async function Page() {
         description="小学校入学に必要なものは何？入学前に確認しておきたい準備を、学用品一覧・生活習慣・学習面の3つの観点からチェックリスト形式で紹介します。"
         slug="school-checklist"
         datePublished="2026-06-04"
-        dateModified="2026-10-17"
+        dateModified="2026-10-21"
       />
 
 
@@ -48,10 +50,16 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-10-17" />
+    <ArticleByline dateModified="2026-10-21" />
+
+    <ArticleSummary
+      worry="入学準備で、何から手をつければいいのか分からず焦ります。"
+      answer="学用品の準備と同じくらい、持ち物の管理や身支度など、毎日の生活を自分で回す力が大切です。一度に全部やろうとせず、「今すぐ必要なこと」と「入学までに少しずつ慣れればよいこと」を分けて考えましょう。"
+      steps={["学用品は、学校の案内（入学説明会）を確認して、早めに準備する", "持ち物の管理（片付ける・元の場所に戻す・翌日の持ち物を確認する）を練習する", "身支度や着替えを、自分で進める経験を増やす", "「今すぐ必要なこと」と「少しずつ慣れればよいこと」を分けて考え、完璧を求めない"]}
+    />
 
     <ArticleToc
-      items={[{"id": "section-1", "text": "① 学用品・持ち物の準備【一覧】"}, {"id": "section-2", "text": "② 生活リズムの準備"}, {"id": "section-3", "text": "③ 学びへの土台づくり"}, {"id": "section-4", "text": "④ 心の準備"}, {"id": "section-5", "text": "焦らず、できることから"}, {"id": "section-6", "text": "気になる疑問Q&A"}]}
+      items={[{"id": "section-1", "text": "① 学用品・持ち物の準備【一覧】"}, {"id": "section-2", "text": "② 生活リズムの準備"}, {"id": "section-3", "text": "③ 学びへの土台づくり"}, {"id": "section-4", "text": "④ 心の準備"}, {"id": "section-5", "text": "焦らず、できることから"}, {"id": "section-6", "text": "いま、わが家で意識していること"}, {"id": "section-7", "text": "意外と大事だと感じた項目：持ち物の管理と身支度"}, {"id": "section-8", "text": "準備を進めるうえで、気持ちを楽にしていること"}, {"id": "section-9", "text": "気になる疑問Q&A"}]}
     />
 
         <p className="text-lg leading-8 mb-6">
@@ -165,6 +173,42 @@ export default async function Page() {
         </p>
 
         <h2 id="section-6" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          いま、わが家で意識していること
+        </h2>
+
+        <p className="leading-8 mb-4">
+          今は、勉強面だけでなく、小学校生活に必要な生活習慣を少しずつ意識しています。例えば、自分の持ち物を片付けること、使ったものを元の場所に戻すこと、翌日に必要なものを一緒に確認することなどです。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、ひらがなや数字についても、本人のペースで触れる機会をつくっています。ただし、小学校に入る前にすべてできるようにしなければいけないとは考えていません。気になっているのは、先生の話を聞いて行動することや、困ったときに自分から伝えられることです。
+        </p>
+
+<h2 id="section-7" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          意外と大事だと感じた項目：持ち物の管理と身支度
+        </h2>
+
+        <p className="leading-8 mb-4">
+          入学準備というと、ひらがなや数字、時計の読み方など、勉強面を考えがちでした。でも、実際の学校生活では、持ち物を準備したり、使ったものを片付けたり、次に何をするのか確認したりする場面がたくさんあると思います。家でも、靴下や服を自分で用意してもらったり、使ったおもちゃを片付けてもらったりしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          もちろん、まだ親の手助けが必要なことも多いですが、少しずつ自分でできることを増やしていきたいです。
+        </p>
+
+<h2 id="section-8" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
+          準備を進めるうえで、気持ちを楽にしていること
+        </h2>
+
+        <p className="leading-8 mb-4">
+          一度に全部やろうとしないことです。入学準備の情報を見ていると、必要なことがたくさんあるように感じて、少し焦ることがあります。そこで、今すぐ必要なことと、入学までに少しずつ慣れていけばよいことを分けて考えるようにしています。
+        </p>
+
+        <p className="leading-8 mb-4">
+          また、毎日決まった時間に勉強させるようなルールも設けていません。迷路を1問だけやる日もあれば、何もしない日もあります。下の子たちの世話や家事もあるので、親が無理をしないことも大切です。入学までに完璧に仕上げるというより、親子で少しずつ準備していく気持ちで進めたいと思っています。
+        </p>
+
+<h2 id="section-9" className="text-2xl font-bold mt-10 mb-4 bg-yellow-100 border-l-8 border-orange-400 p-3 rounded-r-xl">
           気になる疑問Q&A
         </h2>
 
@@ -180,6 +224,14 @@ export default async function Page() {
           <div>
             <p className="font-bold">Q. 人見知りが強い子でも大丈夫？</p>
             <p className="leading-7 text-gray-700">A. 心配な気持ちは自然なことです。「分からないことは聞いていい」と伝えておくこと、そして家庭で「自分の気持ちを言葉にする」練習を積んでおくことが、少しずつ安心感につながります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 入学準備の情報が多くて、焦ってしまいます。</p>
+            <p className="leading-7 text-gray-700">A. わが家でも、必要なことがたくさんあるように感じて、焦ることがあります。今すぐ必要なことと、入学までに少しずつ慣れていけばよいことを分けて考えると、気持ちが楽になります。</p>
+          </div>
+          <div>
+            <p className="font-bold">Q. 勉強面と生活面、どちらを優先すればいいですか？</p>
+            <p className="leading-7 text-gray-700">A. わが家では、勉強の準備ばかりに目が向きがちでしたが、持ち物の管理や身支度など、毎日の生活を自分で進める力も大切だと感じています。</p>
           </div>
         </div>
 
@@ -208,29 +260,15 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月4日　/　最終更新日：2026年10月17日
+          公開日：2026年6月4日　/　最終更新日：2026年10月21日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
+                <ArticleNextSteps
+          drills={[{"href": "/6", "label": "6歳向けドリルを見る", "desc": "学びへの土台づくりに、今日のドリルを取り入れてみませんか。"}, {"href": "/5", "label": "5歳向けドリルを見る", "desc": "ジャンルを選んで、短い時間で。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "6year-prep-timeline", "desc": "入学準備、いつ何をすればいい？月ごとの目安。"}, {"slug": "school-preparation", "desc": "小学校入学前に身につけたい力。"}, {"slug": "nencho-katei-gakushu", "desc": "年長さんの1年間の進め方。焦らず、土台づくりを。"}, {"slug": "morning-routine", "desc": "朝のバタバタを減らす工夫。上の子に任せることの決め方。"}]}
+        />
 
-          <h3 className="font-bold text-xl mb-3">
-            🎁 今日のおすすめ
-          </h3>
-
-          <p className="mb-3">
-            学びへの土台づくりに、わくたんの今日のドリルを取り入れてみませんか？
-          </p>
-
-          <Link
-            href="/6"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            6歳向けドリルを見る
-          </Link>
-
-        </div>
-
-        <RakutenProducts items={products} />
+        <RakutenProducts items={products} title="入学準備の学用品を探すときの参考に" />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />
         <FavoriteButton href="/blog/school-checklist" title="小学校入学準備チェックリスト" />
         <RelatedArticles currentSlug="school-checklist" />

@@ -1,8 +1,9 @@
-import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +29,7 @@ export default async function Page() {
         description="4歳児がドリルを嫌がるときの理由と対処法を解説。この年齢ならではの発達的な背景と、無理なく取り組める工夫を紹介します。"
         slug="4year-drill-refusal"
         datePublished="2026-07-21"
-        dateModified="2026-09-26"
+        dateModified="2026-11-03"
       />
 
 
@@ -48,7 +49,13 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-09-26" />
+    <ArticleByline dateModified="2026-11-03" />
+
+    <ArticleSummary
+      worry="4歳の子がドリルを嫌がって、取り組んでくれません。"
+      answer="4歳の「イヤ」には、集中できる時間の短さ、「できない」経験への抵抗、気分の切り替えの苦手さが関わっています。嫌がる日は無理せず休み、1問からのスモールスタートで大丈夫です。"
+      steps={["難しい問題が続いたら、簡単な問題を挟んで「できた」を作る", "遊びからの切り替えは、事前に予告する", "嫌がる日は、無理せず休む", "1問からのスモールスタートにする"]}
+    />
 
     <ArticleToc
       items={[{"id": "section-1", "text": "4歳ならではの理由①：集中できる時間がまだ短い"}, {"id": "section-2", "text": "4歳ならではの理由②：「できない」経験への抵抗"}, {"id": "section-3", "text": "4歳ならではの理由③：気分の切り替えが苦手"}, {"id": "section-4", "text": "無理に続けさせない選択も大切"}, {"id": "section-5", "text": "1問からのスモールスタート"}, {"id": "section-6", "text": "よくある質問"}]}
@@ -163,27 +170,13 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年7月21日　/　最終更新日：2026年9月26日
+          公開日：2026年7月21日　/　最終更新日：2026年11月3日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
-
-          <h3 className="font-bold text-xl mb-3">
-            🚀 今日のドリルに挑戦しよう
-          </h3>
-
-          <p className="mb-3">
-            1問だけでも、今日のドリルに挑戦してみませんか？
-          </p>
-
-          <Link
-            href="/4"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            4歳向けドリルを見る
-          </Link>
-
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/4", "label": "4歳向けドリルを見る", "desc": "今日は1問だけ。ジャンルを選んで、気楽に。"}, {"href": "/4/nakamawake", "label": "4歳向け仲間分け", "desc": "見て考えて答える、遊びに近い問題。"}, {"href": "/print", "label": "印刷して使う", "desc": "1問だけ印刷して、机に置いておけます。"}]}
+          articles={[{"slug": "child-hates-study", "desc": "勉強を嫌がるときの、量と問題の選び方。"}, {"slug": "drill-hurdle-down", "desc": "「1問だけでもいい」と考えて、続けやすくした話。"}, {"slug": "study-mistakes", "desc": "家庭学習で、つい続けさせてしまうときの考え方。"}, {"slug": "4year-study-time", "desc": "4歳の1回の長さは何分くらい？"}]}
+        />
 
         <RakutenProducts items={products} />
         <AdUnit slot={IN_ARTICLE_AD_SLOT} className="my-8" />

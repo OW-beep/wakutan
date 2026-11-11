@@ -3,6 +3,8 @@ import RelatedArticles from "@/app/components/RelatedArticles";
 import ArticleSchema from "@/app/components/ArticleSchema";
 import ArticleByline from "@/app/components/ArticleByline";
 import ArticleToc from "@/app/components/ArticleToc";
+import ArticleNextSteps from "@/app/components/ArticleNextSteps";
+import ArticleSummary from "@/app/components/ArticleSummary";
 import FavoriteButton from "@/app/components/FavoriteButton";
 import AdUnit from "@/app/components/AdUnit";
 import { IN_ARTICLE_AD_SLOT } from "@/app/data/adSlots";
@@ -28,7 +30,7 @@ export default async function Page() {
         description="5歳でひらがなが読めない・書けないと不安なときに、「読めない」と「書けない」を分けて考えるコツと、遊びの中で無理なく文字に触れる方法を紹介します。"
         slug="hiragana-worry-5year"
         datePublished="2026-06-01"
-        dateModified="2026-10-17"
+        dateModified="2026-11-07"
       />
 
 
@@ -48,7 +50,13 @@ export default async function Page() {
 
         </div>
 
-    <ArticleByline dateModified="2026-10-17" />
+    <ArticleByline dateModified="2026-11-07" />
+
+    <ArticleSummary
+      worry="5歳でひらがなが書けない・読めないので、焦っています。"
+      answer="5歳でひらがなが完璧である必要はありません。「読めない」と「書けない」は分けて考えて、まず「読む」から、遊びの中で自然に文字に触れる機会を増やしましょう。他の子と比べず、その子のペースを大切にしてください。"
+      steps={["「読む」と「書く」を分けて考える", "まずは「読む」から始める", "遊びの中で、文字に触れる機会を増やす", "他の子と比べず、その子のペースを大切にする"]}
+    />
 
     <ArticleToc
       items={[{"id": "section-1", "text": "焦る前に知っておきたいこと"}, {"id": "section-2", "text": "「読めない」と「書けない」は分けて考える"}, {"id": "section-3", "text": "まずは「読む」から始める"}, {"id": "section-4", "text": "遊びの中でひらがなに触れる"}, {"id": "section-5", "text": "調査からわかること：ひらがなの読み書きの個人差"}, {"id": "section-6", "text": "比べすぎないことが一番大切"}, {"id": "section-7", "text": "気になることが続くときは"}, {"id": "section-8", "text": "よく聞かれること"}]}
@@ -237,27 +245,13 @@ export default async function Page() {
         </div>
 
         <div className="text-xs text-gray-400 mt-4 text-right">
-          公開日：2026年6月1日　/　最終更新日：2026年10月17日
+          公開日：2026年6月1日　/　最終更新日：2026年11月7日
         </div>
 
-        <div className="mt-10 bg-yellow-50 border rounded-2xl p-6">
-
-          <h3 className="font-bold text-xl mb-3">
-            🖊 今日はこれに挑戦
-          </h3>
-
-          <p className="mb-3">
-            遊び感覚で取り組める、わくたんのひらがなドリルを試してみませんか？
-          </p>
-
-          <Link
-            href="/5/hiragana"
-            className="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition wt-btn-pop"
-          >
-            5歳向けひらがなドリルを見る
-          </Link>
-
-        </div>
+                <ArticleNextSteps
+          drills={[{"href": "/5/hiragana", "label": "5歳向けひらがなを見る", "desc": "読みの力を育てる問題を、毎日更新しています。"}, {"href": "/4/hiragana", "label": "4歳向けひらがな", "desc": "もっとやさしい問題に戻りたいときに。"}, {"href": "/print", "label": "印刷して使う", "desc": "今日のドリルを印刷して、机で取り組めます。"}]}
+          articles={[{"slug": "4year-hiragana", "desc": "4歳ではじめてのひらがな。どこから始める？"}, {"slug": "katakana-start", "desc": "カタカナはいつから？一緒に読むところから。"}, {"slug": "when-start-hiragana", "desc": "ひらがなは何歳から？無理なく始めるタイミング。"}, {"slug": "kodomo-hikaku-tebanasu", "desc": "周りの子が気になるときの、3つの視点。"}]}
+        />
 
         <RakutenProducts items={products} />
         <div className="bg-white rounded-2xl p-5 text-sm text-gray-700 my-8">
